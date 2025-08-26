@@ -1,0 +1,146 @@
+[
+  {
+    "n": 1,
+    "title": "Course Introduction and Objectives",
+    "math": "Set Theory",
+    "note": "Introduce the course structure, organize content into discrete, non-overlapping modules using set theory, and explain learning outcomes and progression paths."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up the React Environment",
+    "math": "None",
+    "note": "Teach how to install Node.js, npm, and scaffold a new React application with Create React App or Vite. Emphasize the importance of proper environment setup for React development."
+  },
+  {
+    "n": 3,
+    "title": "JavaScript Essentials for React",
+    "math": "Logical Operators",
+    "note": "Review core JavaScript syntax, data types, if-else statements, and logical operators as foundational tools for React development. Demonstrate how logic gates are implemented in code."
+  },
+  {
+    "n": 4,
+    "title": "Modern ES6 Syntax",
+    "math": "Function Mapping",
+    "note": "Teach ES6 features such as arrow functions, destructuring, and modules. Explain function mapping concepts and how these features support concise code in React components."
+  },
+  {
+    "n": 5,
+    "title": "Introduction to JSX Syntax",
+    "math": "Symbolic Representation",
+    "note": "Introduce JSX as a syntax extension that allows writing HTML-like code inside JavaScript. Compare JSX to symbolic math representations and explain how expressions are embedded."
+  },
+  {
+    "n": 6,
+    "title": "Functional and Class Components",
+    "math": "Modular Systems",
+    "note": "Explain the difference between functional and class-based components in React. Relate modular programming concepts to mathematical modular systems to illustrate component reusability."
+  },
+  {
+    "n": 7,
+    "title": "Props and One-Way Data Flow",
+    "math": "Functions as Parameters",
+    "note": "Describe how props transfer data from parent to child components, relating to the concept of functions as parameterized mappings. Teach the unidirectional data flow model."
+  },
+  {
+    "n": 8,
+    "title": "Local State and useState Hook",
+    "math": "State Variables",
+    "note": "Instruct how to declare and update component state with the useState hook. Relate state storage to mathematical variables and model state transitions."
+  },
+  {
+    "n": 9,
+    "title": "Component Lifecycle and useEffect",
+    "math": "Finite State Machines",
+    "note": "Explain how useEffect manages side effects corresponding to component mount, update, and unmount stages. Use finite state machine concepts to represent lifecycle transitions."
+  },
+  {
+    "n": 10,
+    "title": "Conditional Rendering in React",
+    "math": "Boolean Algebra",
+    "note": "Teach strategies for rendering elements based on logical conditions using if statements, ternary operators, and &&. Reinforce Boolean algebra through practical JSX conditions."
+  },
+  {
+    "n": 11,
+    "title": "Rendering Lists and Keys",
+    "math": "Mapping Functions",
+    "note": "Demonstrate how to generate dynamic lists from arrays using .map() and how to assign unique keys, connecting to mathematical mapping and uniqueness principles."
+  },
+  {
+    "n": 12,
+    "title": "Handling Events and User Input",
+    "math": "Predicate Logic",
+    "note": "Teach event handlers (clicks, changes) as functions triggered by specific predicates. Relate event-driven behavior to predicate logic for interactive UIs."
+  },
+  {
+    "n": 13,
+    "title": "Controlled and Uncontrolled Forms",
+    "math": "Predicate Logic and Validation",
+    "note": "Explain the difference between controlled and uncontrolled input elements. Model form validation using predicate logic to check input conditions."
+  },
+  {
+    "n": 14,
+    "title": "Component Styling Approaches",
+    "math": "Property-Value Mapping",
+    "note": "Cover inline styles, CSS modules, Styled Components, and utility libraries. Explain CSS as a mapping from property names to values, drawing parallels to mathematical functions."
+  },
+  {
+    "n": 15,
+    "title": "React Router for SPA Navigation",
+    "math": "Graph Theory",
+    "note": "Teach navigation among views using React Router. Model the routing structure as a graph, with nodes representing routes and edges actions or navigation links."
+  },
+  {
+    "n": 16,
+    "title": "State Management with Context API",
+    "math": "Tree Traversal",
+    "note": "Introduce React's Context API for sharing state across components. Relate data propagation to tree traversal in graphs, modeling the component hierarchy."
+  },
+  {
+    "n": 17,
+    "title": "Global State with Redux",
+    "math": "Finite State Machines",
+    "note": "Explain Redux state management using actions, reducers, and store concepts. Use finite state machines to illustrate transitions and global state synchronization."
+  },
+  {
+    "n": 18,
+    "title": "Asynchronous Programming and Fetching Data",
+    "math": "Temporal Logic",
+    "note": "Teach async/await, Promises, and the Fetch API for retrieving external data. Model asynchronous flows with temporal logic to represent event sequencing."
+  },
+  {
+    "n": 19,
+    "title": "Error Handling and Debugging",
+    "math": "Computational Complexity",
+    "note": "Cover techniques for fault tolerance and debugging, including the use of React Error Boundaries and performance profiling. Explore computational complexity in bug detection."
+  },
+  {
+    "n": 20,
+    "title": "Performance Optimization and Memoization",
+    "math": "Dynamic Programming",
+    "note": "Teach optimization strategies like React.memo, useMemo, and useCallback to reduce unnecessary re-renders. Introduce memoization as a dynamic programming technique."
+  },
+  {
+    "n": 21,
+    "title": "Testing React Code",
+    "math": "Assertion Logic",
+    "note": "Introduce Jest and React Testing Library for component testing. Use logic and formal assertion principles to evaluate component correctness."
+  },
+  {
+    "n": 22,
+    "title": "Final Project: Capstone",
+    "math": "Planning and Modular Decomposition",
+    "note": "Guide students in planning and building a moderately complex React application, decomposing into modules and applying principles of modularization and dependency management."
+  },
+  {
+    "n": 23,
+    "title": "Deployment Strategies",
+    "math": "Network Theory",
+    "note": "Teach how to deploy a React application using Netlify, Vercel, or AWS. Model deployment pipelines and DNS as practical cases of network theory."
+  },
+  {
+    "n": 24,
+    "title": "Course Wrap-Up and Advanced Topics",
+    "math": "Recursion and Knowledge Mapping",
+    "note": "Review all concepts, introduce recursion in React (e.g., recursive components), and help students map out further learning pathways or advanced React features."
+  }
+]
