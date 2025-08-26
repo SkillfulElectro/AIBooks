@@ -1,0 +1,212 @@
+[
+  {
+    "n": 1,
+    "title": "Getting Started: Python Environment Setup",
+    "math": "Number Systems",
+    "note": "Teach how to check for Python installation and perform installation across Windows, macOS, Linux, mobile, or web platforms. Include a discussion of version numbering, sequential versioning, and digital number systems as encountered in version control and binary computing."
+  },
+  {
+    "n": 2,
+    "title": "Python Interactive Modes and Development Tools",
+    "math": "Discrete Mathematics",
+    "note": "Guide on using Python in different interfaces (IDLE, Jupyter, Colab, command line). Explain how interactive shells rely on discrete event loops and set theory when executing code snippets sequentially and in isolated computational environments."
+  },
+  {
+    "n": 3,
+    "title": "Variables and Data Types in Python",
+    "math": "Type Systems",
+    "note": "Teach declaration and usage of Python variables as symbolic names for objects. Cover core data types (int, float, bool, string, complex) and their dynamic assignment. Introduce the mathematical idea of type systems and dynamic versus static typing."
+  },
+  {
+    "n": 4,
+    "title": "Operators in Python",
+    "math": "Arithmetic and Logic",
+    "note": "Introduce arithmetic, logical, comparison, assignment, identity, and membership operators. Contextualize operator precedence and their correspondence to operations in algebra and logic."
+  },
+  {
+    "n": 5,
+    "title": "Control Flow: Conditional Statements",
+    "math": "Boolean Algebra",
+    "note": "Show how to make decisions in Python using if, elif, else blocks. Teach construction and evaluation of Boolean expressions, moving from simple conditions to compound logical statements in code, with mathematical underpinnings in Boolean algebra."
+  },
+  {
+    "n": 6,
+    "title": "Control Flow: Loops and Loop Control",
+    "math": "Sequences and Iteration",
+    "note": "Cover for and while loops, including nested structures and range(). Address mathematical principles of iteration through sequences, indices, and the application of logical control within loops."
+  },
+  {
+    "n": 7,
+    "title": "Functions: Definition and Usage",
+    "math": "Function Mapping",
+    "note": "Teach function declaration, arguments, return values, and calls. Draw explicit parallels to mathematical functions where input maps to output, including the concept of parameterization and value mapping."
+  },
+  {
+    "n": 8,
+    "title": "Modules and the Import System",
+    "math": "Logical Encapsulation",
+    "note": "Explain importing built-in and third-party modules, and the role of namespaces. Discuss logical encapsulation and modularity as applied both in software and mathematical abstraction."
+  },
+  {
+    "n": 9,
+    "title": "Working with Numbers: Python's Math Module",
+    "math": "Mathematical functions and constants",
+    "note": "Provide practice with core math functions: pi, e, square roots, trigonometric, factorial, power, logarithmic calculations. Teach corresponding mathematical concepts and the influence of floating-point limitations."
+  },
+  {
+    "n": 10,
+    "title": "Working with Strings and Text Data",
+    "math": "Symbolic Manipulation",
+    "note": "Teach string operations, formatting, searching, and basic regular expressions. Discuss the relation to symbolic mathematics and manipulation of algebraic expressions."
+  },
+  {
+    "n": 11,
+    "title": "Data Structures I: Lists in Python",
+    "math": "Sequences and Indexing",
+    "note": "Cover list creation, indexing, slicing, appending, removing, and iterating. Relate to mathematical sequences and ordered data, emphasizing position-based access and dynamic resizing."
+  },
+  {
+    "n": 12,
+    "title": "Data Structures II: Tuples and Sets",
+    "math": "Immutable Sequences & Set Theory",
+    "note": "Teach tuple creation and immutability, and set operations (union, intersection, difference, membership). Associate with mathematical concepts of immutable ordered collections and set theory operations."
+  },
+  {
+    "n": 13,
+    "title": "Data Structures III: Dictionaries and Mappings",
+    "math": "Key-Value Pair Logic",
+    "note": "Introduce dictionaries as unordered key-value mappings. Explain fast lookups, updates, and the mathematical underpinnings of mappings and functions from domain to codomain."
+  },
+  {
+    "n": 14,
+    "title": "File Input and Output",
+    "math": "Finite Automata and Data Encoding",
+    "note": "Demonstrate reading/writing files, context managers, and error handling. Teach elementary concepts in data encoding, the storage of sequences, and automata involved in reading/write process."
+  },
+  {
+    "n": 15,
+    "title": "Exception Handling and Program Robustness",
+    "math": "Logic and Error Correction",
+    "note": "Teach try-except-else-finally blocks, with practical exercises for common error types. Relate to logic in error correction and fail-safe computation methods in mathematics."
+  },
+  {
+    "n": 16,
+    "title": "Object-Oriented Programming: Classes and Instances",
+    "math": "Abstraction and Encapsulation",
+    "note": "Introduce class definitions, instance creation, attributes, methods, and inheritance. Cover abstraction and encapsulation as both programming and mathematical modeling techniques."
+  },
+  {
+    "n": 17,
+    "title": "Using Python's Built-in Data Structures in Algorithms",
+    "math": "Algorithmic Complexity",
+    "note": "Apply lists, dictionaries, sets, and tuples to sort, search, and aggregate. Teach students to compare time and memory complexity for standard algorithmic use cases, with mathematical notation for Big O analysis."
+  },
+  {
+    "n": 18,
+    "title": "Exploring NumPy: Multi-dimensional Arrays",
+    "math": "Linear Algebra Basics",
+    "note": "Teach creation of NumPy arrays from Python sequences, 1D/2D/3D structures, and array dtype specification. Discuss the translation of mathematical vectors, matrices, and tensors into array structures."
+  },
+  {
+    "n": 19,
+    "title": "Vectorization and Broadcasting in NumPy",
+    "math": "Element-wise and Matrix Operations",
+    "note": "Show how vectorized operations replace loops, enabling fast, element-wise computation. Teach broadcasting rules for arithmetic, and align with vector/matrix operation concepts in linear algebra."
+  },
+  {
+    "n": 20,
+    "title": "Matrix Operations and Linear Algebra with NumPy",
+    "math": "Matrix Algebra",
+    "note": "Introduce dot product, matrix multiplication (matmul), transpose, inverse, and determinant. Relate these directly to applications in linear equations, transformations, and modeling in the mathematical sciences."
+  },
+  {
+    "n": 21,
+    "title": "NumPy: Mathematical Functions and Statistics",
+    "math": "Descriptive and Inferential Statistics",
+    "note": "Use NumPy to compute means, medians, standard deviations, variance, min/max, and aggregation along axes. Teach descriptive statistics and their computational realization for data analysis."
+  },
+  {
+    "n": 22,
+    "title": "pandas Fundamentals: Series and DataFrames",
+    "math": "Tabular Data Structures",
+    "note": "Teach construction and manipulation of pandas Series and DataFrames, emphasizing labeling, heterogeneous data, and alignment. Connect to the mathematical concept of labeled matrices and tables."
+  },
+  {
+    "n": 23,
+    "title": "Data Selection and Slicing in pandas",
+    "math": "Indexing and Projection",
+    "note": "Explore access patterns using .loc, .iloc, boolean masks, and slicing. Relate these to selection and projection operations in coordinate geometry and database systems."
+  },
+  {
+    "n": 24,
+    "title": "Data Cleaning and Handling Missing Data with pandas",
+    "math": "Imputation and Null Value Treatment",
+    "note": "Demonstrate handling NaN values, using fillna(), dropna(), and interpolation. Teach the mathematical impact of missing data and common imputation strategies in statistics."
+  },
+  {
+    "n": 25,
+    "title": "Data Aggregation and Grouping: pandas groupby",
+    "math": "Statistical Aggregation and Partitioning",
+    "note": "Show grouping data by keys, computing mean, sum, count, and multi-level aggregates. Relate to mathematical data partitioning and aggregation, including group-wise normalization."
+  },
+  {
+    "n": 26,
+    "title": "Data Visualization with pandas and Matplotlib",
+    "math": "Statistical Graphs and Charts",
+    "note": "Teach line plots, bar charts, box plots, histograms, scatter plots using pandas’ plot API (powered by Matplotlib). Connect with the mathematical interpretation of visualizing distributions and trends."
+  },
+  {
+    "n": 27,
+    "title": "Reading and Writing Data: CSV, Excel, and External Sources",
+    "math": "Tabular Data Representation",
+    "note": "Show how to read data from CSV and Excel files, and write processed data back. Discuss parsing and structuring of tabular data for computational and mathematical analysis."
+  },
+  {
+    "n": 28,
+    "title": "Data Normalization and Feature Engineering",
+    "math": "Standardization, Scaling, and Transformation",
+    "note": "Cover techniques such as mean imputation, min-max scaling, standardization (z-score), and one-hot encoding using pandas and NumPy. Teach the role of these operations in preparing datasets for statistical modeling and machine learning."
+  },
+  {
+    "n": 29,
+    "title": "Integrating NumPy and pandas Workflows",
+    "math": "Data Interoperability and Matrix Conversion",
+    "note": "Teach conversion between NumPy arrays and pandas DataFrames/Series, selecting columns for transformation, and structured data reshaping. Relate to mathematical transformations between different representations of data."
+  },
+  {
+    "n": 30,
+    "title": "Working with Google Colab for Computational Experiments",
+    "math": "Computational Precision and Resource Allocation",
+    "note": "Teach the essentials of using Google Colab notebooks for cloud-based Python coding, GPU/TPU acceleration, and reproducibility. Discuss how floating-point precision, computation resources, and random seeds impact experimental outcomes in code and math."
+  },
+  {
+    "n": 31,
+    "title": "PyTorch Fundamentals: Creating and Manipulating Tensors",
+    "math": "Tensor Algebra",
+    "note": "Introduce PyTorch tensors as generalizations of vectors and matrices, covering creation, indexing, reshaping, and combining. Teach the correspondence with mathematical concepts of scalars, vectors, matrices, and higher-dimensional arrays."
+  },
+  {
+    "n": 32,
+    "title": "PyTorch: Elementary Tensor Operations and Automatic Differentiation",
+    "math": "Calculus – Derivatives and Chain Rule",
+    "note": "Teach element-wise operations, matrix multiplication, broadcasting, and reshaping in PyTorch. Explain how autograd traces computation graphs to compute gradients automatically for scalar outputs, reinforcing the concept of partial derivatives as in calculus."
+  },
+  {
+    "n": 33,
+    "title": "Building a Basic Neural Network with PyTorch",
+    "math": "Optimization (Gradient Descent)",
+    "note": "Guide the creation of neural networks using torch.nn.Module, basic network layers, and activation functions. Teach the principle of weight initialization, forward passes, and loss calculation, integrating gradient descent as an optimization method."
+  },
+  {
+    "n": 34,
+    "title": "Training Neural Networks in PyTorch on Google Colab",
+    "math": "Gradient Descent and Backpropagation",
+    "note": "Show training of a neural network by compiling data into batches, using forward and backward passes, and updating weights using optimizers (e.g., SGD, Adam). Explain the mathematics of the backpropagation algorithm and its operationalization in PyTorch and Colab."
+  },
+  {
+    "n": 35,
+    "title": "Saving, Loading, and Deploying PyTorch Models",
+    "math": "Model Serialization and Memory Representation",
+    "note": "Teach how to persist trained neural network models to disk and restore them. Explain the significance of memory storage, serialization, and the reproducibility of model weights in both computational and mathematical contexts."
+  }
+]
