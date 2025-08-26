@@ -1,0 +1,164 @@
+[
+  {
+    "n": 1,
+    "title": "Rust Language Overview",
+    "math": "No explicit math; logical reasoning",
+    "note": "Introduce Rust as a modern systems programming language focusing on safety, performance, and reliability. Learners explore Rust’s target use cases and its place among other languages. Key features such as memory safety, ownership, and zero-cost abstractions are discussed, establishing a cognitive foundation for logical and computational thinking in programming."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up the Rust Environment",
+    "math": "No explicit math; procedural setup",
+    "note": "Guide learners through installing Rust via rustup, configuring the toolchain, and preparing an editor or IDE such as VSCode or JetBrains RustRover. Cargo, the Rust package manager and build system, is introduced for project scaffolding. This section includes hands-on validation steps to ensure the compilation pipeline is functional before proceeding."
+  },
+  {
+    "n": 3,
+    "title": "First Steps: Hello, World!",
+    "math": "String processing, program flow",
+    "note": "Teach students to write, compile, and run their first Rust program—a simple 'Hello, World!' output. This helps learners grasp the program lifecycle and introduces basic notions of string formatting and sequential logic, which underlie all higher-order computational structures."
+  },
+  {
+    "n": 4,
+    "title": "Variables and Data Types",
+    "math": "Types, variable scope, basic arithmetic",
+    "note": "Explore the concept of variables, constants, mutability, and primitive data types in Rust (integers, floats, booleans, characters). Emphasize arithmetic operations, type inference, and explicit type annotations. This section connects computation with mathematical types and models the building blocks for further mathematical programming."
+  },
+  {
+    "n": 5,
+    "title": "Arithmetic and Mathematical Operators",
+    "math": "Basic algebra, arithmetic operations",
+    "note": "Cover Rust’s syntax for addition, subtraction, multiplication, division, modulo, and exponentiation. Learners implement and understand operator precedence and associativity, reinforcing programming’s direct link to algebraic expression evaluation and computation."
+  },
+  {
+    "n": 6,
+    "title": "Control Flow: if, else, and match",
+    "math": "Conditionals, logic, case analysis",
+    "note": "Instruct on the use of conditional logic through if/else and the powerful match expression. Students learn to encode mathematical logic and case analysis in code, using boolean expressions and pattern matching, thereby improving accuracy in algorithmic decision-making."
+  },
+  {
+    "n": 7,
+    "title": "Loops: while, loop, for",
+    "math": "Iteration, sequences, discrete mathematics",
+    "note": "Teach Rust’s loop constructs, focusing on while, loop (infinite loop with break), and for (with ranges). Students relate programming loops to sequences, summations, and mathematical induction, implementing basic iterative algorithms like factorial or Fibonacci series."
+  },
+  {
+    "n": 8,
+    "title": "Functions and Modularization",
+    "math": "Function definition, recursion, parameter passing",
+    "note": "Explain function declaration, signature, return types, and function calling conventions in Rust. Discuss recursion, mathematical function mapping, and the role of modularization in breaking down problems—a core tenet in both computer science and mathematics."
+  },
+  {
+    "n": 9,
+    "title": "Working with Collections: Arrays, Vectors, Slices",
+    "math": "Lists, arrays, indexing, sequences",
+    "note": "Detail differences between fixed-size arrays, dynamically sized vectors, and slices in Rust. Cover indexing, iteration, and basic manipulations, enabling learners to implement statistical measures (sum, mean, median) and sequence operations found throughout applied mathematics."
+  },
+  {
+    "n": 10,
+    "title": "Ownership and Borrowing",
+    "math": "Resource allocation, invariants",
+    "note": "Introduce Rust's unique concepts of ownership and borrowing for resource management. Use mathematical invariants to reason about valid/invalid states and connect ownership trees to resource graphs. Learners practice moving values, borrowing mutably/immutably, and understanding compiler enforcement of memory safety."
+  },
+  {
+    "n": 11,
+    "title": "Lifetimes",
+    "math": "Temporal scope, reference validity",
+    "note": "Delve into lifetime annotations and their necessity for tracking reference validity in function signatures and data structures. Connect this with the mathematical concept of temporal reasoning, ensuring that operations are performed within valid time frames, and relate it to graph lifetimes and dependency analysis."
+  },
+  {
+    "n": 12,
+    "title": "Structs and Enums: Custom Data Types",
+    "math": "Algebraic data types, set theory, combinatorics",
+    "note": "Teach struct and enum definitions to model complex data, supporting both mathematical and real-world domains. Relate to set theory (unions, products) and combinatorial data modeling, with exercises on representing rational numbers, points in space, or custom types."
+  },
+  {
+    "n": 13,
+    "title": "Pattern Matching: match and destructuring",
+    "math": "Cases, partitioning sets",
+    "note": "Expand on the power of pattern matching in Rust, allowing students to decompose structs, enums, and collections. Connect to mathematical partitioning of sets and case analysis, an essential tool in writing clear and bug-free code."
+  },
+  {
+    "n": 14,
+    "title": "Error Handling with Result and Option",
+    "math": "Error propagation, possibility theory, handling absence",
+    "note": "Present Rust’s idiomatic error handling with Option (for absence of value) and Result (for error-prone calculations). Demonstrate propagating errors and recovering from them using pattern matching. Tie in the mathematical frameworks for dealing with nullability and partial functions."
+  },
+  {
+    "n": 15,
+    "title": "Testing and Debugging",
+    "math": "Logic, assertion, proof by example",
+    "note": "Introduce unit testing using Rust’s built-in test framework. Teach students to write assertions, test edge cases, and debug using print statements and IDE tools. Draw parallels with proof by example, falsification, and logical guarantees."
+  },
+  {
+    "n": 16,
+    "title": "Traits and Generics: Abstraction and Reusability",
+    "math": "Abstraction, polymorphism, parameterized types",
+    "note": "Explore how traits and generics enable polymorphic functions and structures. Concepts relate to mathematical abstraction, category theory, and type parametrization, such as defining a generic mean for any numeric collection."
+  },
+  {
+    "n": 17,
+    "title": "Standard Library and Cargo Crates",
+    "math": "Modularity, external resource use",
+    "note": "Instruct on leveraging the Rust standard library for common utilities, and adding external crates (libraries) using Cargo. Emphasize modular thinking and external resource management, analogous to mathematical reference frameworks."
+  },
+  {
+    "n": 18,
+    "title": "Numerical Integration and Differentiation in Rust",
+    "math": "Calculus: numerical integration and differentiation",
+    "note": "Teach the implementation of numerical calculus (such as the trapezoidal rule for integration and the finite difference method for differentiation) using Rust. This section bridges applied mathematics with computational practice, emphasizing accuracy, step size, and the impact of numerical techniques on results."
+  },
+  {
+    "n": 19,
+    "title": "Advanced Collections: HashMaps, Sets",
+    "math": "Associative arrays, hashing, set operations",
+    "note": "Introduce hash maps and sets as tools for storing and searching data efficiently. Teach related algorithms found in discrete mathematics, such as building frequency tables, set union/intersection, and mapping between domains."
+  },
+  {
+    "n": 20,
+    "title": "Project: Implementing Basic Statistical Functions",
+    "math": "Statistics: mean, median, mode, variance",
+    "note": "Guide students in building a simple Rust library for computing basic statistics on data sets using vectors and iterator methods. Reinforce concepts from earlier sections and integrate mathematical theory on measures of central tendency and dispersion."
+  },
+  {
+    "n": 21,
+    "title": "Concurrency in Rust: Threads and Message Passing",
+    "math": "Parallelism, synchronization, combinatorics",
+    "note": "Introduce basic concurrency using threads and message passing (channels), demonstrating how Rust’s safety mechanisms prevent data races. Mathematical insights include parallel task decomposition, finite state machines, and simple combinatorics for task permutations."
+  },
+  {
+    "n": 22,
+    "title": "Project: CLI Calculator",
+    "math": "Expression parsing, algebraic evaluation",
+    "note": "Guide development of a command-line calculator capable of handling user input, parsing expressions, and evaluating results. Covers parsing trees, operator precedence, and input validation, providing a bridge between programming, algebra, and language theory."
+  },
+  {
+    "n": 23,
+    "title": "Working with Files and Serialization",
+    "math": "Data persistence, encoding, and decoding",
+    "note": "Teach file I/O in Rust for reading and writing data, and serialization for encoding Rust data structures into formats like JSON. Explain practical applications in data analysis and archiving, with mathematical structure in the form of encoding/decoding schemes."
+  },
+  {
+    "n": 24,
+    "title": "Project: Numerical Methods Library",
+    "math": "Numerical methods, iterative algorithms",
+    "note": "Have students design a small Rust library for solving numerical problems: root-finding (e.g., Newton’s method), approximation techniques, and custom integration routines. Emphasize iterative convergence, step size tuning, and method selection, integrating programming and numerical analysis."
+  },
+  {
+    "n": 25,
+    "title": "Testing and Continuous Integration with Git/GitHub",
+    "math": "Automation, reproducibility, process validation",
+    "note": "Instruct on setting up automated testing and continuous integration (CI) workflows using GitHub Actions. Discuss test-driven development, reproducible builds, and validation strategies, with a mathematical analogue in proof verification and reproducibility."
+  },
+  {
+    "n": 26,
+    "title": "Project: Rust in Embedded and Real-Time Systems",
+    "math": "Timing, hardware interaction, control systems",
+    "note": "Introduce Rust’s role in embedded and real-time systems, using crates like cortex-m/embedded-hal. Students build a simple blinking LED or sensor logger on a microcontroller, linking programming with timing analysis and control theory."
+  },
+  {
+    "n": 27,
+    "title": "Course Wrap-Up and Capstone Project",
+    "math": "Integration and application of multiple principles",
+    "note": "Summarize key concepts, provide guidance for independent project selection, and require learners to design and implement a complete application or library that demonstrates cumulative skills—combining Rust programming, mathematical reasoning, problem-solving, and personal interests."
+  }
+]
