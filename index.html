@@ -5,145 +5,57 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Books by AI</title>
 
-    <!-- Bootstrap CSS (cdnjs) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
-      crossorigin="anonymous"
-    />
     <!-- Font Awesome (cdnjs) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       crossorigin="anonymous"
     />
-
-    <style>
-      /* Avoid loading any external or special monospace fonts (fixes Liberation Mono request issue).
-       Use only system UI fonts so no blocked font requests occur. */
-      :root {
-        --bg: #071428;
-        --card: #0b1220;
-        --muted: #9aa4b2;
-        --accent: #7c3aed;
-        --title-light: #e8f4ff;
-      }
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        background: linear-gradient(180deg, #051426 0%, #071227 70%);
-        /* system font stack only - no Liberation Mono or other web fonts */
-        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, "Noto Sans", "Microsoft YaHei", sans-serif;
-        color: #e6eef8;
-      }
-      .hero {
-        padding: 28px 0;
-      }
-      .lead {
-        color: var(--muted);
-      }
-      .card-lesson {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.02),
-          rgba(255, 255, 255, 0.01)
-        );
-        border: 0;
-      }
-      .note {
-        color: #d2dceb;
-        font-size: 0.95rem;
-        white-space: pre-wrap;
-      }
-      .math {
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-      .checkbox-wrap {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .badge-accent {
-        background: linear-gradient(90deg, #6d28d9, #7c3aed);
-        color: white;
-        padding: 6px 10px;
-        border-radius: 999px;
-      }
-      .btn-search {
-        background: linear-gradient(90deg, #2563eb, #7c3aed);
-        border: 0;
-      }
-      .btn-study {
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.06);
-        color: #dbeafe;
-      }
-      .small-muted {
-        color: var(--muted);
-        font-size: 0.85rem;
-      }
-      .controls .btn {
-        min-width: 120px;
-      }
-      a.link-ghost {
-        color: inherit;
-        text-decoration: none;
-      }
-      .card:hover {
-        transform: translateY(-4px);
-        transition: transform 0.18s ease;
-      }
-      .js-error {
-        background: #ffefef;
-        color: #7c0d0d;
-        padding: 12px;
-        border-radius: 8px;
-        margin-bottom: 12px;
-      }
-      .book-btn.active {
-        box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
-      }
-      h5.lesson-title {
-        color: var(--title-light);
-      }
-      @media (max-width: 720px) {
-        .d-flex-lg {
-          display: block !important;
-        }
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
   </head>
-  <body>
-    <div class="container py-4">
-      <header class="d-flex align-items-start gap-3 hero">
-        <div class="me-3">
-          <div class="badge-accent">AIBooks</div>
+  <body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-4">
+      <header class="flex items-start gap-3 py-8">
+        <div class="mr-3">
+          <div class="bg-purple-600 text-white px-4 py-2 rounded-lg">
+            AIBooks
+          </div>
         </div>
-        <div class="flex-fill">
-          <h1 class="mb-1">Books By AI</h1>
+        <div class="flex-1">
+          <h1 class="text-3xl font-bold mb-1">Books By AI</h1>
         </div>
       </header>
 
-      <section class="mb-3 controls d-flex gap-2 align-items-center flex-wrap">
-        <div id="booksArea" class="d-flex gap-2 align-items-center flex-wrap">
+      <section class="mb-3 flex gap-2 items-center flex-wrap">
+        <div id="booksArea" class="flex gap-2 items-center flex-wrap">
           <!-- Book buttons inserted here after fetching /books.json -->
-          <div class="small-muted">Loading books...</div>
+          <div class="text-gray-400">Loading books...</div>
         </div>
-        <div class="ms-auto d-flex gap-2">
-          <button id="selectAll" class="btn btn-primary">Select All</button>
-          <button id="clearAll" class="btn btn-outline-light">Clear All</button>
-          <button id="exportMD" class="btn btn-secondary">Export .md</button>
+        <div class="ml-auto flex gap-2">
+          <button
+            id="selectAll"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Select All
+          </button>
+          <button
+            id="clearAll"
+            class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+          >
+            Clear All
+          </button>
         </div>
       </section>
 
-      <div id="jsErrorPlaceholder" style="display: none" class="js-error"></div>
+      <div
+        id="jsErrorPlaceholder"
+        style="display: none"
+        class="bg-red-200 text-red-800 p-3 rounded-lg mb-4"
+      ></div>
 
-      <main id="list" class="row g-3" aria-live="polite"></main>
+      <main id="list" class="grid grid-cols-1 gap-4"></main>
 
-      <footer class="mt-4 small-muted">
+      <footer class="mt-4 text-gray-400 text-sm">
         Server schema notes: <code>/books.json</code> must list books like
         <code
           >{"books": [{"name":"AI and ML
@@ -158,330 +70,6 @@
       </footer>
     </div>
 
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        const BOOKS_INDEX = "./books.json"; // server endpoint to list books
-        const booksArea = document.getElementById("booksArea");
-        const listEl = document.getElementById("list");
-        const jsError = document.getElementById("jsErrorPlaceholder");
-        let booksIndex = []; // [{name,file}]
-        let currentBook = null; // {name,file,data}
-
-        function showError(msg) {
-          jsError.style.display = "block";
-          jsError.textContent = msg;
-        }
-        function clearError() {
-          jsError.style.display = "none";
-          jsError.textContent = "";
-        }
-
-        function saveProgress(map, fileKey) {
-          localStorage.setItem(
-            "ai_ml_tour_progress_v1::" + fileKey,
-            JSON.stringify(map)
-          );
-        }
-        function loadProgress(fileKey) {
-          try {
-            return JSON.parse(
-              localStorage.getItem("ai_ml_tour_progress_v1::" + fileKey) || "{}"
-            );
-          } catch (e) {
-            return {};
-          }
-        }
-
-        function makeQueryUrl(note, mode) {
-          const base = "https://chatgpt.com/";
-          const q = encodeURIComponent(note || "");
-          const hints = mode === "search" ? "search" : "study";
-          return `${base}?q=${q}&hints=${hints}&ref=ext`;
-        }
-
-        async function fetchJsonSafe(url) {
-          const res = await fetch(url, { cache: "no-store" });
-          if (!res.ok)
-            throw new Error(
-              "Failed to fetch " +
-                url +
-                " — " +
-                res.status +
-                " " +
-                res.statusText
-            );
-          return res.json();
-        }
-
-        function renderBookButtons() {
-          booksArea.innerHTML = "";
-          if (!booksIndex || booksIndex.length === 0) {
-            booksArea.innerHTML =
-              '<div class="small-muted">No books found on server.</div>';
-            return;
-          }
-          booksIndex.forEach((b, idx) => {
-            const btn = document.createElement("button");
-            btn.className = "btn btn-outline-light btn-sm book-btn";
-            btn.textContent = b.name || "Book " + (idx + 1);
-            btn.dataset.file = b.file || b.filename || b.path || "";
-            btn.title = b.file || "";
-            btn.addEventListener("click", () => {
-              selectBook(b, btn);
-            });
-            booksArea.appendChild(btn);
-          });
-        }
-
-        async function selectBook(book, btnEl) {
-          clearError();
-          document
-            .querySelectorAll(".book-btn")
-            .forEach((x) => x.classList.remove("active"));
-          btnEl.classList.add("active");
-
-          try {
-            const filePath = book.file || book.path || book.filename;
-            if (!filePath) throw new Error("Book entry has no file path");
-            listEl.innerHTML =
-              '<div class="col-12"><div class="card p-3"><div class="spinner-border spinner-border-sm me-2" role="status"></div> Loading book... (' +
-              filePath +
-              ")</div></div>";
-            const bookData = await fetchJsonSafe(filePath);
-            currentBook = { name: book.name, file: filePath, data: bookData };
-            renderTopics(bookData, filePath);
-          } catch (err) {
-            console.error(err);
-            showError("Unable to load book: " + (err.message || err));
-            listEl.innerHTML = "";
-          }
-        }
-
-        function topicsFrom(bookData) {
-          return Array.isArray(bookData)
-            ? bookData
-            : bookData.topics || bookData.items || [];
-        }
-
-        function renderTopics(bookData, fileKey) {
-          const topics = topicsFrom(bookData);
-          if (!Array.isArray(topics)) {
-            showError(
-              "Book JSON format not recognized (expected array or {topics:[]})"
-            );
-            return;
-          }
-
-          listEl.innerHTML = "";
-          const encodedKey = encodeURIComponent(fileKey);
-          const progress = loadProgress(encodedKey);
-
-          topics.forEach((t) => {
-            const num = t.n || t.id || t.index || "";
-            const key = "t" + num;
-            const checked = !!progress[key];
-
-            const col = document.createElement("div");
-            col.className = "col-12";
-            const card = document.createElement("div");
-            card.className = "card card-lesson p-3 shadow-sm";
-
-            const row = document.createElement("div");
-            row.className = "d-flex align-items-start gap-3";
-
-            const left = document.createElement("div");
-            left.style.width = "62px";
-            left.className = "text-center";
-            const cbWrap = document.createElement("div");
-            cbWrap.className = "checkbox-wrap";
-            const cb = document.createElement("input");
-            cb.type = "checkbox";
-            cb.id = "cb-" + num;
-            cb.checked = checked;
-            cb.className = "form-check-input";
-            cb.setAttribute("aria-label", "Mark lesson completed");
-            cb.addEventListener("change", (e) => {
-              const p = loadProgress(encodedKey);
-              p[key] = e.target.checked;
-              saveProgress(p, encodedKey);
-            });
-            const numEl = document.createElement("div");
-            numEl.className = "mt-2 small-muted";
-            numEl.textContent = num;
-            cbWrap.appendChild(cb);
-            left.appendChild(cbWrap);
-            left.appendChild(numEl);
-
-            const right = document.createElement("div");
-            right.className = "flex-fill";
-            const h = document.createElement("div");
-            h.className =
-              "d-flex align-items-center justify-content-between flex-wrap";
-            const titleWrap = document.createElement("div");
-            const title = document.createElement("h5");
-            title.className = "mb-1 lesson-title";
-            title.textContent = t.title || "Untitled";
-            titleWrap.appendChild(title);
-            const math = document.createElement("div");
-            math.className = "math ms-3";
-            math.textContent = t.math || "";
-            h.appendChild(titleWrap);
-            h.appendChild(math);
-
-            const note = document.createElement("div");
-            note.className = "note mt-2";
-            note.textContent = t.note || "";
-
-            const actions = document.createElement("div");
-            actions.className = "mt-3 d-flex gap-2 d-flex-lg";
-
-            function openAndCheck(url) {
-              try {
-                const p = loadProgress(encodedKey);
-                p[key] = true;
-                saveProgress(p, encodedKey);
-                const el = document.getElementById("cb-" + num);
-                if (el) el.checked = true;
-              } catch (e) {
-                console.error(e);
-              }
-              window.open(url, "_blank", "noopener");
-            }
-
-            const searchBtn = document.createElement("button");
-            searchBtn.className = "btn btn-search btn-sm text-white";
-            searchBtn.innerHTML =
-              '<i class="fa-solid fa-magnifying-glass me-2"></i> Searcher';
-            searchBtn.title = "Open ChatGPT search with this lesson note";
-            searchBtn.addEventListener("click", () =>
-              openAndCheck(makeQueryUrl(t.note || "", "search"))
-            );
-
-            const studyBtn = document.createElement("button");
-            studyBtn.className = "btn btn-outline-light btn-sm";
-            studyBtn.innerHTML =
-              '<i class="fa-solid fa-book-open me-2"></i> Study';
-            studyBtn.title = "Open ChatGPT study session with this lesson note";
-            studyBtn.addEventListener("click", () =>
-              openAndCheck(makeQueryUrl(t.note || "", "study"))
-            );
-
-            const copyBtn = document.createElement("button");
-            copyBtn.className = "btn btn-sm btn-secondary";
-            copyBtn.innerHTML =
-              '<i class="fa-regular fa-clipboard me-1"></i>Copy note';
-            copyBtn.addEventListener("click", () => {
-              navigator.clipboard.writeText(t.note || "").then(() => {
-                copyBtn.innerHTML =
-                  '<i class="fa-solid fa-check me-1"></i>Copied';
-                setTimeout(() => {
-                  copyBtn.innerHTML =
-                    '<i class="fa-regular fa-clipboard me-1"></i>Copy note';
-                }, 1200);
-              });
-            });
-
-            actions.appendChild(searchBtn);
-            actions.appendChild(studyBtn);
-            actions.appendChild(copyBtn);
-
-            right.appendChild(h);
-            right.appendChild(note);
-            right.appendChild(actions);
-
-            row.appendChild(left);
-            row.appendChild(right);
-            card.appendChild(row);
-            col.appendChild(card);
-            listEl.appendChild(col);
-          });
-
-          // attach controls behavior scoped to current book
-          const selectAllBtn = document.getElementById("selectAll");
-          const clearAllBtn = document.getElementById("clearAll");
-          const exportBtn = document.getElementById("exportMD");
-
-          selectAllBtn.onclick = () => {
-            const p = {};
-            topicsFrom(bookData).forEach((t) => {
-              const id = t.n || t.id || t.index || "";
-              if (id) p["t" + id] = true;
-            });
-            saveProgress(p, encodedKey);
-            renderTopics(bookData, fileKey);
-          };
-          clearAllBtn.onclick = () => {
-            saveProgress({}, encodedKey);
-            renderTopics(bookData, fileKey);
-          };
-          exportBtn.onclick = () => {
-            const p = loadProgress(encodedKey);
-            const NL = "";
-            const lines = topicsFrom(bookData).map((t) => {
-              const id = t.n || t.id || t.index || "";
-              const key = "t" + id;
-              const checked = !!p[key];
-              const box = checked ? "x" : " ";
-              return (
-                '["' +
-                box +
-                '"] ' +
-                (id || "") +
-                ". " +
-                (t.title || "") +
-                " , math needed for it: " +
-                (t.math || "") +
-                " , note for teacher : " +
-                (t.note || "")
-              );
-            });
-            const md = lines.join(NL + NL);
-            const blob = new Blob([md], { type: "text/markdown" });
-            const url = URL.createObjectURL(blob);
-            const safeName =
-              currentBook && currentBook.name
-                ? currentBook.name.split(" ").filter(Boolean).join("_")
-                : "book";
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = safeName + "_toc.md";
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-          };
-        }
-
-        (async function init() {
-          try {
-            clearError();
-            booksArea.innerHTML =
-              '<div class="spinner-border spinner-border-sm me-2" role="status"></div> Loading books...';
-            const idx = await fetchJsonSafe(BOOKS_INDEX);
-            booksIndex = Array.isArray(idx)
-              ? idx
-              : idx.books || idx.items || [];
-            if (!booksIndex || booksIndex.length === 0) {
-              booksArea.innerHTML =
-                '<div class="small-muted">No books found on server (empty index).</div>';
-              return;
-            }
-            renderBookButtons();
-          } catch (err) {
-            console.error(err);
-            showError("Unable to fetch books index: " + (err.message || err));
-            booksArea.innerHTML =
-              '<div class="small-muted">Failed to load books.</div>';
-          }
-        })();
-      });
-    </script>
-
-    <!-- Bootstrap JS bundle (cdnjs) -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
-
-
