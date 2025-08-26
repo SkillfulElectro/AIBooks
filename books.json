@@ -6,9 +6,11 @@
     { "name": "React Js Tour", "file": "./books/reactjs.json" },
     { "name": "React Native Tour", "file": "./books/react_native.json" },
     { "name": "Golang Tour", "file": "./books/golang.json" },
-    { "name": "Rust Tour", "file": "./books/rust.json" }
+    { "name": "Rust Tour", "file": "./books/rust.json" },
+    { "name": "Web Dev Tour", "file": "./books/webdev.json" }
   ]
 }
+
 
 
 
