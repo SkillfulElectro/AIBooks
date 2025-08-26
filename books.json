@@ -1,5 +1,6 @@
 {
   "books": [
-    { "name": "AI and ML Tour", "file": "/books/ai_ml_tour.json" }
+    { "name": "AI and ML Tour", "file": "./books/ai_ml_tour.json" }
   ]
 }
+
