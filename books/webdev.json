@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to the Web and Internet Architecture",
+    "math": "Number systems and information theory",
+    "note": "Teach the fundamental structure of the web (clients, servers, DNS, HTTP) and internet protocols. Explain binary and hexadecimal representations, bit/byte concepts, and how data is transmitted digitally. Students will learn number systems (binary, decimal, hex), information encoding basics, and relate these to URL encoding and IP address formats."
+  },
+  {
+    "n": 2,
+    "title": "Essential Tools: Text Editors, Browsers, and Version Control",
+    "math": "Basic logic and sequences",
+    "note": "Introduce standard development tools (text editors, browsers), including setting up a local project and using the terminal. Teach the basics of version control with Git—committing changes, branching. Math focus: sequencing steps in development, understanding logs and change history through ordered lists, and fundamental logical operations (e.g., commit history as a directed graph)."
+  },
+  {
+    "n": 3,
+    "title": "HTML Fundamentals: Document Structure and Elements",
+    "math": "Hierarchies and tree structures",
+    "note": "Build foundational knowledge of HTML—the backbone of web page content. Cover tags, attributes, nesting, hierarchical document object model (DOM). Math: Teach tree data structures, parent-child relationships, and traversing nodes, relating HTML structure to tree diagrams and recursion."
+  },
+  {
+    "n": 4,
+    "title": "Styling with CSS: Selectors, Properties, and Cascading Order",
+    "math": "Sets, functions, and order of operations",
+    "note": "Introduce CSS for visual design—selectors, rules, specificity, inline vs. external stylesheets. Math: Reinforce sets (collections of elements), functions (mapping properties), and how the cascade determines order of execution (order of operations)."
+  },
+  {
+    "n": 5,
+    "title": "CSS Layout Systems: Box Model, Flexbox, and Grid",
+    "math": "Geometry—areas and coordinate systems",
+    "note": "Teach the CSS box model and modern layout systems (Flexbox, Grid). Cover content, padding, borders, margins, and spatial arrangement. Math: Teach basic geometric calculations (perimeter, area), coordinate grids, and proportional layout using fractions (CSS Grid tracks) and ratios (responsive columns)."
+  },
+  {
+    "n": 6,
+    "title": "Responsive Web Design",
+    "math": "Proportions, percentages, and scaling",
+    "note": "Explore mobile-first design, media queries, and adaptive layouts. Students learn to use percentages, relative units (em, rem, vw, vh), and breakpoints. Math: Apply scaling, ratios, and proportions to dynamically adjust layouts across devices."
+  },
+  {
+    "n": 7,
+    "title": "Accessibility and Inclusive Design",
+    "math": "Set theory and logical conditions",
+    "note": "Teach WCAG standards, semantic HTML, ARIA roles, keyboard navigation. Math: Discuss sets (user groups), logic (if condition, then accessible outcome), and Venn diagrams for overlap between needs of different accessibility categories."
+  },
+  {
+    "n": 8,
+    "title": "Introduction to JavaScript: Syntax, Variables, and Data Types",
+    "math": "Variables and basic algebraic expressions",
+    "note": "Introduce JavaScript as the language of interactivity. Cover variable definitions, assignment, data types (string, number, boolean, object). Math: Explain variables, operations, order of operations (PEMDAS/BODMAS), and data typing as mathematical classification."
+  },
+  {
+    "n": 9,
+    "title": "Control Flow: Conditionals, Loops, and Logical Operators",
+    "math": "Logic—truth tables and boolean algebra",
+    "note": "Focus on if-else statements, switch, for/while loops, and logical operators (AND, OR, NOT). Math: Build logical reasoning through truth tables, boolean expressions, and constructing algorithms as logical decision trees."
+  },
+  {
+    "n": 10,
+    "title": "Functions and Scope in JavaScript",
+    "math": "Functional relationships and domain/range",
+    "note": "Teach function declaration, parameters, return values, and scope rules. Math: Discuss mathematical functions (input-output relationships), mapping input domain to output range, and relating nested/local/global scope to function composition."
+  },
+  {
+    "n": 11,
+    "title": "Arrays and Objects: Storing and Working with Data",
+    "math": "Sequences, lists, and mappings",
+    "note": "Introduce data structures—arrays (ordered data, index-based) and objects (key-value pairs). Math: Model arrays as sequences and objects as mappings from a set of keys to values; perform basic operations like add, remove, search."
+  },
+  {
+    "n": 12,
+    "title": "DOM Manipulation and Event Handling",
+    "math": "Tree traversing and event probability",
+    "note": "Learn to dynamically alter HTML using JavaScript, traversing the DOM tree, selecting elements, and responding to user-driven events. Math: Reinforce tree traversal (pathfinding), count nodes, and introduce basic probability (likelihood of events, e.g., click or hover events)."
+  },
+  {
+    "n": 13,
+    "title": "Form Validation and User Input",
+    "math": "Input validation and set membership",
+    "note": "Teach building and validating forms, using JS for client-side checks. Math: Discuss input domains, set membership (valid values), and write simple validation algorithms using conditional logic."
+  },
+  {
+    "n": 14,
+    "title": "Modern CSS: Animations, Transitions, and Transformations",
+    "math": "Geometry—angles, translation, and interpolation",
+    "note": "Explore CSS transitions, animations, and transforms (rotate, scale, skew, translate). Math: Apply geometric concepts—angles for rotation, pixels as distance units, linear interpolation for smooth animations, and basic trigonometry in transformations."
+  },
+  {
+    "n": 15,
+    "title": "CSS Preprocessors and Utility-First Frameworks",
+    "math": "Abstraction and modularization",
+    "note": "Introduce preprocessors (SASS/LESS)—variables, nesting, mixins—and utility-first frameworks (e.g., Tailwind CSS). Math: Model code modularization as abstraction, relate DRY (Don’t Repeat Yourself) goals to mathematical factoring."
+  },
+  {
+    "n": 16,
+    "title": "Debugging and Browser Developer Tools",
+    "math": "Error analysis and state inspection",
+    "note": "Teach use of browser developer tools, inspecting DOM, network requests, console logging, and debugging strategies. Math: Introduce systematic error checking, hypothesis testing, and step-by-step logical error tracing."
+  },
+  {
+    "n": 17,
+    "title": "Version Control with Git and Collaborative Workflows",
+    "math": "Graphs and network theory",
+    "note": "Deepen Git skills—branches, merges, resolving conflicts, collaborating via GitHub. Math: Model commit histories as directed graphs, exploring connectivity, merges, and branching structures."
+  },
+  {
+    "n": 18,
+    "title": "Front-End Build Tools: Bundlers and Transpilers",
+    "math": "Dependency graphs and transformations",
+    "note": "Introduce module bundlers (Webpack, Parcel), preprocessors, transpiling (ES6+ to ES5). Math: Visualize module dependencies as directed graphs, discuss graph traversal, and transformation functions."
+  },
+  {
+    "n": 19,
+    "title": "Single-Page Applications and Routing",
+    "math": "State machines and finite automata",
+    "note": "Teach basic SPA concepts (routing, client-side navigation). Math: Model page navigation as a state machine, describe finite automata, and relate URL paths to state transitions."
+  },
+  {
+    "n": 20,
+    "title": "Front-End Frameworks: React Basics",
+    "math": "Component composition and tree recursion",
+    "note": "Introduce React: components, props, state, UI tree rendering. Math: Link to recursive structures and tree traversal in composite functions, and combinatorial explosion of UI states."
+  },
+  {
+    "n": 21,
+    "title": "State Management and Redux Principles",
+    "math": "Pure functions and sequence of updates",
+    "note": "Cover predictable state containers (Redux/Context), immutability, and action dispatching. Math: Teach pure functions, function composition, and update sequences as ordered operations."
+  },
+  {
+    "n": 22,
+    "title": "Back-End Basics: HTTP, RESTful API Design",
+    "math": "Sets, relations, and idempotence",
+    "note": "Teach fundamentals of server-side logic, API endpoints, HTTP methods (GET, POST, PUT, DELETE), and REST principles. Math: Discuss relations (mapping endpoints to resources), idempotent operations, and basic set theory."
+  },
+  {
+    "n": 23,
+    "title": "Node.js and Express: Building the Server Layer",
+    "math": "Functions, asynchronous programming, and runtime complexity",
+    "note": "Introduce Node.js, setting up servers, routing, middleware. Math: Teach callback chains, asynchronous flow as state diagrams, and discuss time complexity of server-side operations."
+  },
+  {
+    "n": 24,
+    "title": "Databases: SQL Concepts and Relational Algebra",
+    "math": "Relations, tables, and set operations",
+    "note": "Teach basic SQL syntax (SELECT, INSERT, UPDATE, DELETE), schema design, normalization. Math: Relate to relational algebra (tables as sets, JOIN as a set operation), and uniqueness/constraints."
+  },
+  {
+    "n": 25,
+    "title": "NoSQL Databases and Document Modeling",
+    "math": "Graphs, trees, and document mapping",
+    "note": "Introduce NoSQL (MongoDB/Firebase)—documents, collections, querying. Math: Discuss data as trees/graphs, mapping object properties, and relationships vs. references."
+  },
+  {
+    "n": 26,
+    "title": "Authentication and Authorization",
+    "math": "Logic and set partitioning",
+    "note": "Cover user authentication (sessions, JWT, OAuth), access control, and permissions. Math: Teach partitioning sets (roles/groups), logical checks (access control expressions), and truth tables for permission evaluation."
+  },
+  {
+    "n": 27,
+    "title": "Testing: Unit, Integration, and E2E",
+    "math": "Assertions, logic, and probability",
+    "note": "Teach basics of software testing—writing and running unit tests, integration, end-to-end. Math: Formulate assertions, explore logical equivalencies, and introduce the probability of error detection."
+  },
+  {
+    "n": 28,
+    "title": "Continuous Integration and Automated Deployment",
+    "math": "Sequences and workflow automation",
+    "note": "Introduce CI/CD concepts, pipelines, and automation using GitHub Actions or similar tools. Math: Model deployment workflows as sequences, evaluate state changes, and discuss algorithmic efficiency."
+  },
+  {
+    "n": 29,
+    "title": "Web Security Fundamentals: Best Practices and Threats",
+    "math": "Set difference, logic, and equivalence",
+    "note": "Discuss cybersecurity (XSS, CSRF, authentication, HTTPS), secure coding. Math: Use logic to model threat vectors, set difference to show protected vs. vulnerable data, and equivalence to model expected vs. actual system behavior."
+  },
+  {
+    "n": 30,
+    "title": "Performance Optimization and Core Web Vitals",
+    "math": "Statistics—medians, means, and percentiles",
+    "note": "Analyze site speed, metrics (LCP, FID, CLS), code splitting, lazy loading, image optimization. Math: Teach basics of statistics (averages, medians), percentiles, and performance distribution graphs."
+  },
+  {
+    "n": 31,
+    "title": "Progressive Web Apps (PWA) and Service Workers",
+    "math": "Probability and event-driven models",
+    "note": "Teach PWA fundamentals, service workers, caching strategies, offline functionality. Math: Discuss event probabilities (cache hits/misses), conditional execution, and state diagrams."
+  },
+  {
+    "n": 32,
+    "title": "Advanced JavaScript: Asynchronous Programming and Promises",
+    "math": "Time diagrams and function composition",
+    "note": "Delve deeper into promises, async/await, callback hell, chaining. Math: Model async operations with time diagrams, waterfall charts, and function composition (chain of transformations)."
+  },
+  {
+    "n": 33,
+    "title": "UX/UI Design Principles and Prototyping",
+    "math": "Spatial reasoning and proportions",
+    "note": "Explore design thinking—visual hierarchy, color theory, prototyping with Figma/AdobeXD. Math: Use spatial reasoning (layout, grids), the golden ratio, and proportional analysis in aesthetic design."
+  },
+  {
+    "n": 34,
+    "title": "Animations and Data Visualization",
+    "math": "Graphs, interpolation, and coordinate systems",
+    "note": "Teach JavaScript/CSS animations, SVG, Canvas, charting libraries (Chart.js, D3). Math: Model animations with coordinate transformations, interpolate data, and design graphs for data visualization."
+  },
+  {
+    "n": 35,
+    "title": "Mobile and Cross-Platform Development",
+    "math": "Ratios, scaling, and responsive breakpoints",
+    "note": "Cover mobile-first best practices, hybrid apps, adaptive layouts. Math: Apply ratios for different screen dimensions, discuss responsive breakpoints, and model scaling for device densities."
+  },
+  {
+    "n": 36,
+    "title": "Monitoring, Logging, and Analytics",
+    "math": "Descriptive statistics and event aggregation",
+    "note": "Introduce site monitoring tools (New Relic, Google Analytics), custom event logging. Math: Teach aggregation, descriptive statistics (mean, mode, distribution), and event frequency analysis."
+  },
+  {
+    "n": 37,
+    "title": "DevOps and Cloud Deployment",
+    "math": "Resource allocation and optimization",
+    "note": "Teach deploying to cloud platforms (AWS, GCP, Azure, Netlify, Vercel), environment management, and scaling. Math: Discuss resource constraints, allocation, and simple optimization for cost/usage."
+  },
+  {
+    "n": 38,
+    "title": "WebSockets and Real-Time Communication",
+    "math": "Graphs and message flow models",
+    "note": "Explore real-time data via WebSockets, SignalR, Socket.io. Math: Model message passing in bipartite graphs, flow diagrams, and event-driven architecture."
+  },
+  {
+    "n": 39,
+    "title": "Internationalization (i18n) and Localization",
+    "math": "Unicode sets and mappings",
+    "note": "Teach principles of i18n/l10n, encoding (UTF-8), pluralization, formatting currencies/dates. Math: Explore character sets, mapping translations, and logic for plural/singular rules."
+  },
+  {
+    "n": 40,
+    "title": "Portfolio Project Development and Review",
+    "math": "Evaluation metrics and project management",
+    "note": "Capstone module where students build, test, and present a functional web project that demonstrates integration of the learned web development stack. Math: Introduce formal evaluation metrics (scoring rubrics), project iteration cycles, and time/resource estimation methods."
+  }
+]
