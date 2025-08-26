@@ -1,0 +1,164 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Cisco Packet Tracer",
+    "math": "None",
+    "note": "Teach students how to download, install, and navigate Cisco Packet Tracer. Include steps to create a free Cisco Networking Academy account and locate Packet Tracer within the portal. Discuss the purpose and capabilities of Packet Tracer in simulating routers, switches, and network topologies for CCNA study. No math topic is covered in this section."
+  },
+  {
+    "n": 2,
+    "title": "Basic Number Systems for Networking",
+    "math": "Overview of Binary and Hexadecimal",
+    "note": "Introduce the binary and hexadecimal numbering systems as used in networking. Explain the necessity for binary in IPv4 addressing and hexadecimal in IPv6 and MAC addresses. No prerequisites needed; set the stage for binary operations in later modules."
+  },
+  {
+    "n": 3,
+    "title": "Binary to Decimal Conversion",
+    "math": "Binary to Decimal Conversion",
+    "note": "Teach how to convert binary octets to decimal values using positional notation (e.g., 11000000 = 128 + 64 = 192). Provide step-by-step exercises for converting any 8-bit binary to decimal, reinforcing the core skill behind IP addressing."
+  },
+  {
+    "n": 4,
+    "title": "Decimal to Binary Conversion",
+    "math": "Decimal to Binary Conversion",
+    "note": "Instruct learners on converting decimal numbers (0–255) to their 8-bit binary equivalents by successive subtraction or division-by-two/remainders. Ensure every student can independently convert IPv4 octet values into binary for future subnetting work."
+  },
+  {
+    "n": 5,
+    "title": "IPv4 Address Structure and Classes",
+    "math": "Bit Pattern Identification",
+    "note": "Explain the IPv4 address structure as 32 bits divided into four octets and classified based on leading bits (Class A: 0xxxxxxx, B: 10xxxxxx, etc.). Teach students to recognize class by binary patterns, relating it to range and function."
+  },
+  {
+    "n": 6,
+    "title": "Subnet Masks and CIDR Notation",
+    "math": "Bit-Length Notation",
+    "note": "Introduce the concept of a subnet mask as a 32-bit number, and explain CIDR (/8, /16, /24) as a count of network bits. Teach conversion between dotted decimal and CIDR notations and the impact on valid host and network calculations."
+  },
+  {
+    "n": 7,
+    "title": "Hands-On: Configuring a Simple LAN Topology in Packet Tracer",
+    "math": "None",
+    "note": "Guide students to construct a simple LAN using Packet Tracer: add switches, PCs, routers, and connect them with correct cables. This exercise is self-contained and focuses on using the simulation environment and verifying basic connectivity using ping."
+  },
+  {
+    "n": 8,
+    "title": "Subnetting in Binary (Theory)",
+    "math": "Power of Two Calculations",
+    "note": "Demonstrate subnetting logic using binary: explain borrowing host bits for subnets, show how 2^n yields the number of subnets, and apply binary masks to derive boundaries. Lead students through calculating four subnets from a /24 block by toggling mask bits."
+  },
+  {
+    "n": 9,
+    "title": "Subnetting a Network: Decimal and Binary Methods",
+    "math": "Subnet Calculation Using Magic Numbers",
+    "note": "Compare binary and shortcut (magic number) subnetting techniques. Teach students to use magic numbers to quickly identify increment and ranges for subnets. Focus on practicing both approaches independently of routing or device configuration."
+  },
+  {
+    "n": 10,
+    "title": "Calculating Usable Host Addresses in a Subnet",
+    "math": "Host Calculation Formula",
+    "note": "Explain and drill the formula 2^(32 - subnet bits) - 2 to compute usable hosts per subnet. Provide several worked examples, ensuring mastery of handling different subnet masks and avoiding network/broadcast address assignment."
+  },
+  {
+    "n": 11,
+    "title": "Packet Tracer Lab: Assigning and Testing IPv4 Addresses",
+    "math": "Subnet ID, Range, Broadcast Calculation",
+    "note": "Walk students through assigning calculated IP addresses to devices in Packet Tracer, pinging to test connectivity, and using 'show running-config' and 'show ip interface' to verify correct subnet, host, and broadcast addressing. This lab reinforces manual calculations with real configuration."
+  },
+  {
+    "n": 12,
+    "title": "VLAN Concepts and VLAN ID Ranges",
+    "math": "VLAN ID Numbering",
+    "note": "Introduce the concept of VLANs, their purpose for segmentation, and the valid ID range (1–4094), including reserved and default VLANs. Emphasize how to determine valid VLAN assignment and demonstrate in Packet Tracer via port assignment."
+  },
+  {
+    "n": 13,
+    "title": "VLAN Configuration and Verification in Packet Tracer",
+    "math": "VLAN IDs and Trunking",
+    "note": "Guide students in creating VLANs, assigning ports to VLANs, configuring trunks, and testing VLAN isolation. Teach students to verify VLAN assignments, display VLAN tables, and solve basic trunking math and tag/untagged frame concepts."
+  },
+  {
+    "n": 14,
+    "title": "IPv6 Address Structure and Hexadecimal Notation",
+    "math": "IPv6 and Hexadecimal Conversion",
+    "note": "Introduce the 128-bit structure of IPv6 addresses, hexadecimal representation (0-9, A-F), and the relationship between 4-bit binary groups and a single hex digit. Include exercises converting decimal and binary to hexadecimal."
+  },
+  {
+    "n": 15,
+    "title": "Calculating IPv6 Prefix Lengths and Host Counts",
+    "math": "IPv6 Prefix Calculations",
+    "note": "Explain prefix length in IPv6 (e.g., /64), how each group of 4 hex digits represents 16 bits, and compute the number of hosts for a given prefix. Lead students in breaking down an IPv6 address and practicing subnet prefix creation."
+  },
+  {
+    "n": 16,
+    "title": "Packet Tracer Lab: Configuring IPv6 Addresses",
+    "math": "Hexadecimal to Binary Conversion",
+    "note": "Walk through placing IPv6 addresses on devices using Packet Tracer. Practice segmenting the network using different /64, /56, /48 prefixes and testing connectivity. Emphasize error checking in hexadecimal to binary conversion for prefix calculation."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to Routing Protocol Metrics (OSPF)",
+    "math": "OSPF Cost Calculation",
+    "note": "Introduce OSPF metrics, explain the cost formula (Cost = Reference Bandwidth / Interface Bandwidth), and demonstrate calculation steps. Practice with different interface speeds and clarify why lower cost is preferred for shortest-path routing."
+  },
+  {
+    "n": 18,
+    "title": "OSPF Configuration and Metric Visualization in Packet Tracer",
+    "math": "Cost Assignment and Routing Decision",
+    "note": "Configure OSPF in Packet Tracer, assign interface costs, and use 'show ip ospf interface' to display and interpret calculated costs. Experiment with bandwidth settings and observe changes in the routing table, reinforcing cost calculation logic."
+  },
+  {
+    "n": 19,
+    "title": "Routing Protocol Metrics (EIGRP)",
+    "math": "Bandwidth and Delay Calculations",
+    "note": "Explain EIGRP’s composite metric formula: [(10^7 / Bandwidth) + Delay] * 256. Guide students step-by-step through computing bandwidth (in kbps to metric units) and delay for given interfaces. Emphasize each metric property and its role in path selection."
+  },
+  {
+    "n": 20,
+    "title": "EIGRP Metric Configuration and Analysis in Packet Tracer",
+    "math": "Metric Computation and Path Verification",
+    "note": "Practice EIGRP setup in Packet Tracer. Assign bandwidth and delay values to interfaces, view computed metrics, and verify route selection logic. Guide students in modifying interface parameters and observing metric-driven routing changes."
+  },
+  {
+    "n": 21,
+    "title": "Binary Logic in Access Control and Wildcard Masks",
+    "math": "Binary Bitmask Matching",
+    "note": "Teach conversion of subnet masks to wildcard masks and demonstrate the binary logic behind access-list configuration. Provide exercises matching given IP addresses using wildcard masks and practice calculating which addresses match specific ACLs."
+  },
+  {
+    "n": 22,
+    "title": "Packet Tracer Lab: Implementing ACLs",
+    "math": "Wildcard Mask Calculation",
+    "note": "Build ACLs in Packet Tracer using standard and extended rules. Calculate and apply wildcard masks, test traffic flow, and interpret results with show commands. Each lab instance is independent of prior ACL configuration learning."
+  },
+  {
+    "n": 23,
+    "title": "Switching and MAC Address Table Fundamentals",
+    "math": "MAC Table Calculations",
+    "note": "Teach how switches learn and maintain MAC address tables, how frames are forwarded, and the calculation logic for frame switching. Simulate MAC learning and aging in Packet Tracer, and read table entries for troubleshooting communication."
+  },
+  {
+    "n": 24,
+    "title": "Assessment: Binary and Subnetting Math Quiz",
+    "math": "Mixed Math Review",
+    "note": "Provide a robust, focused assessment on binary to decimal, decimal to binary, subnet calculations, VLSM, and class/range recognition. Each question is designed so students can attempt it without prior modules, verifying independent mastery."
+  },
+  {
+    "n": 25,
+    "title": "Packet Tracer Simulation Mode and Packet Flow Analysis",
+    "math": "None",
+    "note": "Instruct students on using Packet Tracer’s simulation mode to visualize and analyze packet flow, explore protocol stacks, and debug connectivity issues. Focus on protocol tracing and troubleshooting without math computations."
+  },
+  {
+    "n": 26,
+    "title": "Building and Assessing Custom Labs in Packet Tracer",
+    "math": "Lab IP Planning and Subnet Math",
+    "note": "Guide learners to design their own lab scenarios, including subnet planning, address assignment, and topology verification. Emphasize how to independently plan subnets and address blocks before configuration."
+  },
+  {
+    "n": 27,
+    "title": "Evaluating CCNA Skills with Practical and Theoretical Tasks",
+    "math": "Mixed, as applicable from prior modules",
+    "note": "Describe techniques for skill assessment in networking: simulation-based quizzes, hands-on configuration checks, and speed/accuracy in performing binary and subnet calculations. Labs and quizzes should reinforce that each tested item is independent of scenario context."
+  }
+]
