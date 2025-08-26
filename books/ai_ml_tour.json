@@ -1,0 +1,152 @@
+[
+  {
+    "n": 1,
+    "title": "Python Programming & Environment (PyTorch on Google Colab)",
+    "math": "Basic algebra",
+    "note": "Teach Python fundamentals (variables, data types, control flow) and use of the PyTorch library. Instruct on setting up Google Colab (browser-based, GPU support). Include hands-on exercises: importing PyTorch, running simple tensor computations, and using libraries like NumPy and pandas."
+  },
+  {
+    "n": 2,
+    "title": "Linear Algebra Foundations",
+    "math": "Algebra",
+    "note": "Cover vectors, matrices, and matrix operations (addition, multiplication). Teach eigenvalues/eigenvectors and singular value decomposition (SVD). Emphasize applications to ML (e.g., Principal Component Analysis for dimensionality reduction) and how linear systems and transformations appear in models (e.g. weights in neural nets)."
+  },
+  {
+    "n": 3,
+    "title": "Calculus (Single & Multivariate)",
+    "math": "Algebra, trigonometry",
+    "note": "Teach derivatives and integrals for single-variable functions, then extend to multivariable calculus (partial derivatives, gradients). Explain how gradients are used to optimize ML models (gradient descent) and the chain rule for backpropagation in neural networks. Use examples of differentiating functions and optimizing loss functions."
+  },
+  {
+    "n": 4,
+    "title": "Probability and Statistics",
+    "math": "Algebra, basic combinatorics",
+    "note": "Cover probability theory (discrete and continuous distributions, Bayes’ theorem) and basic statistics (mean, variance, standard deviation). Teach common distributions (Gaussian, Bernoulli, etc.) and Bayesian reasoning. Emphasize statistical inference and likelihood (hypothesis testing, confidence intervals) used in ML models."
+  },
+  {
+    "n": 5,
+    "title": "Data Structures & Algorithms",
+    "math": "Basic logic",
+    "note": "Introduce core data structures (arrays, lists, dictionaries/hash maps, trees, graphs) and basic algorithms (searching, sorting, recursion, graph traversal). Explain algorithmic complexity (Big O notation). This ensures efficient implementation of ML algorithms and understanding of data handling."
+  },
+  {
+    "n": 6,
+    "title": "Data Analysis and Visualization",
+    "math": "Statistics",
+    "note": "Teach data loading (CSV, databases) and preprocessing (cleaning missing data, normalization, encoding categorical features). Use NumPy and pandas for data manipulation. Cover exploratory data analysis and visualization (histograms, scatter plots, heatmaps) with Matplotlib/Seaborn. Emphasize understanding data distributions before modeling."
+  },
+  {
+    "n": 7,
+    "title": "Supervised Learning: Regression",
+    "math": "Linear algebra, statistics",
+    "note": "Cover linear regression models (simple and multiple). Teach least squares and cost functions, and how to minimize them (analytically or with gradient descent). Include polynomial regression. Emphasize model evaluation (R², residual plots) and overfitting prevention (regularization)."
+  },
+  {
+    "n": 8,
+    "title": "Supervised Learning: Classification",
+    "math": "Statistics, linear algebra",
+    "note": "Teach classification algorithms such as logistic regression (binary and multiclass), k-nearest neighbors, and support vector machines. Explain decision boundaries, activation functions (sigmoid), and cross-entropy loss. Cover evaluation metrics (confusion matrix, accuracy, precision/recall, ROC curve, AUC)."
+  },
+  {
+    "n": 9,
+    "title": "Unsupervised Learning: Clustering & PCA",
+    "math": "Linear algebra, statistics",
+    "note": "Cover clustering methods (k-means, hierarchical clustering, DBSCAN). Teach Principal Component Analysis (PCA) using eigenvectors/SVD for dimensionality reduction. Explain how to preprocess data (scaling) and interpret clusters or principal components."
+  },
+  {
+    "n": 10,
+    "title": "Decision Trees & Ensemble Methods",
+    "math": "Statistics, probability",
+    "note": "Cover decision tree learning (e.g. ID3, CART) and splitting criteria (information gain/entropy, Gini index). Teach ensemble methods: random forests (bagging) and boosting (AdaBoost, gradient boosting, XGBoost). Explain how ensembles reduce variance and improve accuracy. Include hands-on examples of building and tuning these models."
+  },
+  {
+    "n": 11,
+    "title": "Neural Networks (Multilayer Perceptrons)",
+    "math": "Linear algebra, calculus",
+    "note": "Introduce the artificial neuron model and feedforward MLPs. Teach activation functions (sigmoid, ReLU, etc.) and network architectures. Explain backpropagation algorithm and stochastic gradient descent for training. Discuss hyperparameters (learning rate, epochs, batch size) and regularization (dropout, weight decay). Include PyTorch examples training a simple MLP on classification or regression tasks."
+  },
+  {
+    "n": 12,
+    "title": "Convolutional Neural Networks (CNNs)",
+    "math": "Linear algebra",
+    "note": "Teach convolution and pooling operations for image data. Cover popular CNN architectures (e.g. LeNet, AlexNet, ResNet). Explain how CNNs exploit spatial hierarchy in images. Include hands-on: build and train CNNs on image datasets (e.g. MNIST, CIFAR-10) using PyTorch."
+  },
+  {
+    "n": 13,
+    "title": "Recurrent Networks & Transformers (RNNs/Transformers)",
+    "math": "Linear algebra, probability",
+    "note": "Cover sequence models: RNNs, LSTMs, and GRUs for time-series/text. Teach gradient issues (vanishing/exploding). Then introduce attention mechanisms and Transformer architectures (e.g. BERT, GPT). Emphasize state-of-the-art performance on NLP tasks. Include projects using PyTorch or Hugging Face Transformers (e.g. text classification, translation)."
+  },
+  {
+    "n": 14,
+    "title": "Probabilistic Graphical Models",
+    "math": "Probability, statistics",
+    "note": "Teach Bayesian networks and Markov random fields. Explain how to represent joint distributions with graphs, and how to perform inference (exact and approximate). Cover algorithms like belief propagation and Gibbs sampling. Use examples (e.g. Hidden Markov Models) to illustrate parameter learning and inference."
+  },
+  {
+    "n": 15,
+    "title": "Reinforcement Learning",
+    "math": "Probability, statistics, calculus",
+    "note": "Introduce RL fundamentals: agents, environments, rewards, and Markov Decision Processes. Teach dynamic programming (value iteration), temporal-difference learning (Q-learning, SARSA), and policy gradient methods. Include deep RL (DQN, PPO) and projects with OpenAI Gym. Discuss exploration vs. exploitation."
+  },
+  {
+    "n": 16,
+    "title": "Generative Models (GANs, VAEs, Diffusion)",
+    "math": "Probability, linear algebra",
+    "note": "Cover generative modeling: Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs). Explain encoder-decoder architecture and latent spaces. Describe GAN training (generator/discriminator). Introduce recent diffusion models for image/text generation. Include examples generating images from models."
+  },
+  {
+    "n": 17,
+    "title": "Graph Neural Networks (GNNs)",
+    "math": "Graph theory, linear algebra",
+    "note": "Teach graph-based deep learning: graph convolutions and message passing networks. Explain how to represent relational data (e.g. social networks, molecules). Cover tasks like node classification and link prediction. Include hands-on with libraries (e.g. PyTorch Geometric, DGL)."
+  },
+  {
+    "n": 18,
+    "title": "Optimization for Machine Learning",
+    "math": "Calculus, linear algebra",
+    "note": "Deepen understanding of optimization: discuss gradient descent variants (momentum, Adam, RMSprop) and convergence. Cover convex optimization basics and examples of convex cost functions. Explain techniques for hyperparameter tuning (grid search, random search, Bayesian optimization). Include practice tuning models on validation sets."
+  },
+  {
+    "n": 19,
+    "title": "Ethics, Fairness, and Responsible AI",
+    "math": "Statistics",
+    "note": "Discuss ethical considerations in AI: algorithmic bias, fairness metrics, and data privacy. Introduce concepts of transparency and accountability. Teach techniques to mitigate bias (e.g. reweighting, adversarial debiasing). Cover legal and societal implications (GDPR, data security)."
+  },
+  {
+    "n": 20,
+    "title": "AI Systems and MLOps",
+    "math": "Statistics",
+    "note": "Cover end-to-end ML system development: version control (Git), containerization (Docker), and cloud deployment. Teach continuous integration/continuous deployment (CI/CD) for ML pipelines. Introduce monitoring and maintenance of models in production, as well as tools like MLflow or Kubeflow."
+  },
+  {
+    "n": 21,
+    "title": "Natural Language Processing (NLP) Applications",
+    "math": "Statistics, probability",
+    "note": "Teach text preprocessing (tokenization, stemming), word embeddings (Word2Vec, GloVe), and transformer-based models for language. Cover NLP tasks: sentiment analysis, machine translation, text summarization. Include hands-on projects with state-of-the-art libraries (e.g. Hugging Face Transformers)."
+  },
+  {
+    "n": 22,
+    "title": "Computer Vision (CV) Applications",
+    "math": "Linear algebra",
+    "note": "Cover computer vision tasks: object detection (e.g. YOLO, SSD), image segmentation (e.g. U-Net), and image generation (GANs). Teach feature extraction techniques (SIFT, HOG) and how to use pretrained CNNs for transfer learning (e.g. for facial recognition or medical imaging). Include OpenCV or PIL for image processing pipelines."
+  },
+  {
+    "n": 23,
+    "title": "Classical AI Methods (Search & Planning)",
+    "math": "Discrete math, logic",
+    "note": "Introduce traditional AI techniques: state-space search (BFS, DFS, A*), adversarial search (minimax for games), and constraint satisfaction. Teach knowledge representation and reasoning with logic (propositional, predicate logic). Discuss planning algorithms (STRIPS, PDDL) and compare symbolic AI vs. statistical learning."
+  },
+  {
+    "n": 24,
+    "title": "Robotics and Autonomous Systems",
+    "math": "Geometry, calculus",
+    "note": "Cover robotics fundamentals: robot kinematics, dynamics, and control theory. Teach sensor integration (e.g. cameras, LIDAR) and perception (SLAM). Include projects with robot simulators or platforms (e.g. ROS) to apply machine learning in autonomous navigation or manipulation."
+  },
+  {
+    "n": 25,
+    "title": "Research Methods & Emerging Topics",
+    "math": "Mathematical reasoning",
+    "note": "Teach how to read and interpret AI/ML research papers and perform literature reviews. Cover experimental design, evaluation methodology, and reproducibility in research. Discuss emerging topics (AutoML, meta-learning, quantum ML, causal inference, etc.) and critical thinking about future trends."
+  }
+]
