@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to JavaScript and ES6+ Syntax",
+    "math": "Algebraic expressions and variable manipulation",
+    "note": "Teach the basics of JavaScript, focusing on ES6+ features such as let/const, arrow functions, template literals, destructuring, and classes. Integrate the concept of algebraic expressions by coding variables, expressions, and basic equation-solving in JavaScript to reinforce algebraic thinking."
+  },
+  {
+    "n": 2,
+    "title": "Functional Programming Principles in JavaScript",
+    "math": "Functions as first-class objects; set theory concepts",
+    "note": "Introduce functional programming, higher-order functions, map, reduce, filter, and pure functions in JavaScript. Emphasize the set-theoretic roots by demonstrating how array transforms mirror set operations and how functions operate on collections."
+  },
+  {
+    "n": 3,
+    "title": "Algebraic Foundations in Programming",
+    "math": "Variables, equations, evaluation, and algebraic manipulation",
+    "note": "Discuss variables, constants, and evaluating/solving equations programmatically. Write sample apps, such as a calculator, that implement addition, subtraction, multiplication, division, and order of operations using algebraic logic in code."
+  },
+  {
+    "n": 4,
+    "title": "Coordinate Geometry for UI Layout",
+    "math": "Cartesian coordinates, scaling, and transformations",
+    "note": "Teach the principles of UI layout using Flexbox and the coordinate-based approach native to React Native. Demonstrate how positions and sizes of components are defined using x, y coordinates and how transformations such as translation, scaling, and rotation can be applied. Use mathematical exercises that involve placing elements at specific coordinates and resizing proportionally."
+  },
+  {
+    "n": 5,
+    "title": "Discrete Mathematics and Data Structures",
+    "math": "Sets, lists, arrays, trees, and graphs",
+    "note": "Introduce discrete mathematics fundamentals: sets, arrays, stacks, queues, and tree structures. Relate these structures to common tasks in React Native such as managing lists, navigation stacks, and tree traversals. Teach the mathematical logic behind these data structures, including recursion and traversal algorithms."
+  },
+  {
+    "n": 6,
+    "title": "React and JSX Fundamentals",
+    "math": "Compositional functions and logic",
+    "note": "Cover React's core ideas: components, props, and JSX syntax. Incorporate mathematical concepts of function composition and logical expressions by building UI blocks programmatically and composing them using props and children, reflecting mathematical function application."
+  },
+  {
+    "n": 7,
+    "title": "State Management and Hooks",
+    "math": "State machines, function closures, and logic",
+    "note": "Teach the use of React hooks (useState, useEffect) and basic state management patterns. Use finite state machines to explain how state transitions occur in applications and demonstrate closures in functional programming. Relate this to logical functions and transition graphs."
+  },
+  {
+    "n": 8,
+    "title": "Introduction to React Native Architecture",
+    "math": "Modular decomposition and systems theory",
+    "note": "Provide an overview of React Native's architecture: JavaScript bridge, JSI, TurboModules, and Fabric renderer. Explain the theoretical underpinnings of modular system design and the correspondence to modular algebra and system-of-equations thinking in mathematics."
+  },
+  {
+    "n": 9,
+    "title": "React Native Core Components and Styling",
+    "math": "Box model geometry and proportional calculations",
+    "note": "Deep dive into core components such as View, Text, Image, TextInput, ScrollView, and StyleSheet. Teach how to control dimensions, positioning, and responsive layouts using geometry, proportional calculations, and CSS-like rules. Emphasize the use of arithmetic in layout and style computations."
+  },
+  {
+    "n": 10,
+    "title": "Navigation Patterns in React Native",
+    "math": "Trees, graphs, traversal algorithms",
+    "note": "Introduce navigation principles using React Navigation: stack, tab, and drawer navigators. Explain the mathematical concepts behind managing navigation history as a stack, implementing trees/graphs for nested navigations, and using traversal algorithms."
+  },
+  {
+    "n": 11,
+    "title": "Handling User Input and Forms",
+    "math": "Regular expressions, logical conditions, and validation algorithms",
+    "note": "Teach handling of user input through TextInput, Button, and form components. Cover input validation using regular expressions, logical operations, and the formulation of validation algorithms. Emphasize discrete math concepts for form validation and error handling."
+  },
+  {
+    "n": 12,
+    "title": "Asynchronous Programming and API Integration",
+    "math": "State machines and dependency graphs",
+    "note": "Explore asynchronous programming using Promises, async/await, and Fetch/Axios. Model asynchronous control flows using state machines and dependency graphs to teach sequencing and handling of concurrent events."
+  },
+  {
+    "n": 13,
+    "title": "Algorithmic Thinking and Performance Optimization",
+    "math": "Big O notation and algorithm complexity",
+    "note": "Introduce algorithmic thinking for common React Native tasks: list rendering, sorting, searching. Teach Big O notation, complexity analysis, and practical strategies for optimizing app performance. Relate this to mathematical analysis of time and space requirements."
+  },
+  {
+    "n": 14,
+    "title": "Debugging and Testing in React Native",
+    "math": "Error states, set theory, and logical assertions",
+    "note": "Present debugging tools such as React Native DevTools, LogBox, Flipper, and profilers. Train students to represent error states mathematically, use set theory to identify test coverage, and formulate logical assertions for snapshot and unit testing."
+  },
+  {
+    "n": 15,
+    "title": "Deployment and Distribution of React Native Apps",
+    "math": "Number theory, cryptography, and digital signatures",
+    "note": "Guide learners through the deployment pipeline for React Native apps, including APK/AAB generation, signing keys, and publishing to app stores. Link this process to mathematical concepts of number theory, digital signatures, RSA cryptography, and modular arithmetic."
+  }
+]
