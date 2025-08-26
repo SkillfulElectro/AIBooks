@@ -6,7 +6,7 @@ https://skillfulelectro.github.io/AIBooks/
 ## How to add your book
 - fork repo
 - add your book to books.json
-- and add your book content table like below
+- and add json file like below for your book content table
 ```json
 [
   {
