@@ -1,0 +1,212 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to C Programming and Integer Arithmetic",
+    "math": "Integer Arithmetic",
+    "note": "Introduce fundamental C programming concepts, basic syntax, data types (int, char, float, double), variable declaration, input/output, and control structures. Provide hands-on exercises with integer arithmetic (addition, subtraction, multiplication, division, modulus) in C. Teach mathematical foundations by manually computing and verifying arithmetic operations and examining integer overflow and underflow, discussing their significance in low-level programming."
+  },
+  {
+    "n": 2,
+    "title": "The C Memory Model and Pointer Arithmetic",
+    "math": "Integer Arithmetic",
+    "note": "Explain the memory layout of a C program and the role of pointers in managing memory. Demonstrate how pointers reference memory locations and how pointer arithmetic enables navigation through arrays and data structures. Use practical exercises to teach integer arithmetic in pointer manipulation, such as incrementing, decrementing, and finding the difference between pointers. Instruct on the mathematical implications of pointer calculations, datatype sizes, and address computation."
+  },
+  {
+    "n": 3,
+    "title": "Arrays, Structures, and Linear Indexing",
+    "math": "Linear Indexing",
+    "note": "Cover declaration, initialization, and traversal of arrays in C. Introduce structures (struct), accessing fields, and practical use cases. Teach linear indexing both programmatically (array[i]) and mathematically (mapping indices to memory locations). Include exercises where students calculate memory offsets for array elements and structure members, reinforcing linear indexing principles."
+  },
+  {
+    "n": 4,
+    "title": "Multidimensional Arrays and Matrix Access",
+    "math": "Array Indexing and Matrix Coordinates",
+    "note": "Introduce 2D and 3D arrays, matrix-style element access, and nested traversal using loops. Teach mathematical matrix indexing, relating C’s row-major order to linear algebraic concepts. Instruct how to compute the memory location of any element in a multidimensional array and how to perform operations like summing rows, finding diagonals, and matrix transposition."
+  },
+  {
+    "n": 5,
+    "title": "Bitwise Operations and Boolean Algebra in C",
+    "math": "Boolean Algebra",
+    "note": "Explain how bitwise operators (&, |, ^, ~, <<, >>) manipulate binary representations of integers in C. Use live code and truth tables to connect bitwise logic to Boolean algebra. Teach foundational Boolean concepts, including logical AND, OR, XOR, NOT, and their role in practical programming, such as flags, masks, and control registers."
+  },
+  {
+    "n": 6,
+    "title": "Endianness and Integer Representation",
+    "math": "Base Conversion and Endianness",
+    "note": "Demonstrate how integers are stored in little-endian and big-endian formats and why endianness matters in systems programming and networking. Teach conversion between different bases (binary, decimal, hexadecimal) and explain how the order of bytes affects cross-platform data interchange. Provide code examples to detect system endianness and exercises to manually convert integer representations."
+  },
+  {
+    "n": 7,
+    "title": "C++ Fundamentals: Classes, Objects, and Member Functions",
+    "math": "Object Modeling",
+    "note": "Introduce the basics of C++ programming, including class definitions, object instantiation, access specifiers, and methods. Show how object-oriented modeling reflects mathematical set and function mappings. Use UML or pseudo-math diagrams to relate classes and their relationships to mathematical abstractions such as sets and mappings. Instruct on constructors, destructors, and the practical value of encapsulation."
+  },
+  {
+    "n": 8,
+    "title": "Introduction to Computer Networks and Binary Addressing",
+    "math": "Binary Representation",
+    "note": "Explain the basics of digital networking, IP addresses, ports, and binary addressing. Teach students how IP addresses (IPv4) are represented in binary and how subnets and masks work. Provide exercises in converting IP addresses between decimal and binary, and demonstrate how binary math is critical in network calculations and partitioning."
+  },
+  {
+    "n": 9,
+    "title": "OSI Model and TCP/IP Architecture",
+    "math": "Graph Theory",
+    "note": "Teach the seven layers of the OSI model and the four layers of the TCP/IP model. Utilize graph theory to visualize how data propagates through network layers and nodes, with each layer and device as a node and dataflow as edges. Access real-world analogies to illustrate the modular and hierarchical nature of protocol stacks."
+  },
+  {
+    "n": 10,
+    "title": "Socket API Overview in C and C++",
+    "math": "Set Theory",
+    "note": "Introduce basic concepts of sockets as communication endpoints. Describe how the IP address and port pair forms unique communication sets. Use set theory (e.g., Venn diagrams) to represent sets of open sockets, endpoint uniqueness, and the relationship between server and client sets in a network."
+  },
+  {
+    "n": 11,
+    "title": "TCP vs UDP: Message Boundaries and Reliability",
+    "math": "Boolean Algebra",
+    "note": "Distinguish between TCP (connection-oriented, reliable, stream-based) and UDP (connectionless, best-effort, packet-based) sockets. Use Boolean expressions to teach how flags and protocol options encode and control connection states. Illustrate, on a per-bit basis, how TCP headers use flag bits for handshake and control."
+  },
+  {
+    "n": 12,
+    "title": "Socket Creation and File Descriptors in C",
+    "math": "Function Mapping",
+    "note": "Walk through the creation of a socket using socket(). Introduce file descriptors as integer handles to resources. Use mathematical mappings to represent how socket() takes domain, type, and protocol as input and outputs a file descriptor. Provide code and exercises to map function parameters to outcomes."
+  },
+  {
+    "n": 13,
+    "title": "Binding a Socket to an Address and Port: Structures and Memory Layout",
+    "math": "Linear Indexing",
+    "note": "Demonstrate assigning sockets to specific local IPs and ports using bind(), explaining sockaddr_in structures. Teach how memory layout and structure offset calculations underpin correct binding. Use exercises in structure member offsetting, memory mapping, and visualizations of the process."
+  },
+  {
+    "n": 14,
+    "title": "Listening for Incoming Connections and the Backlog Queue",
+    "math": "Probability and Queue Theory",
+    "note": "Explain the listen() call, the concept of passive sockets, and the backlog parameter as a queue. Use probability to model connection requests and events such as dropped or refused connections due to a full queue. Teach queueing theory basics and analyze the expected behavior under load."
+  },
+  {
+    "n": 15,
+    "title": "Accepting New Client Sockets",
+    "math": "Memory Model",
+    "note": "Introduce accept(), and how it extracts incoming connections, returning new socket descriptors and populating sockaddr structures. Teach pointer manipulation and the significance of passing pointer arguments for output parameters. Use diagrams to show how client addresses and sockets are delivered and manipulated in memory."
+  },
+  {
+    "n": 16,
+    "title": "Sending and Receiving Data over Sockets",
+    "math": "Integer Arithmetic",
+    "note": "Cover send() and recv() for transmitting and receiving data through sockets. Reinforce buffer management, specifying buffer size, and pointer arithmetic for buffer navigation. Use integer arithmetic to teach buffer sizing, offset management, and calculation of actual data transferred."
+  },
+  {
+    "n": 17,
+    "title": "Closing Socket Connections and Resource Management",
+    "math": "None",
+    "note": "Explain the importance of releasing resources promptly using close(). Teach the impact of connection teardown on both resource limits and protocol state. No advanced math is involved, but reinforce diligent tracking of opened and closed file descriptors in programming practice."
+  },
+  {
+    "n": 18,
+    "title": "Client Socket Creation and Connect Functionality",
+    "math": "Pointer Arithmetic",
+    "note": "Guide students through client socket creation, server address setup, and connecting with connect(). Use pointer arithmetic to demonstrate the manipulation and transmission of address structs and dynamic memory buffers in the connect process."
+  },
+  {
+    "n": 19,
+    "title": "Endianness in Network Byte Order Conversions",
+    "math": "Integer Representation and Base Conversion",
+    "note": "Teach the necessity of converting host to network byte order using htons(), htonl(), ntohs(), and ntohl(). Provide practical exercises and mathematical demonstrations with integers to clarify the difference between little-endian and big-endian formats and the effects on network transfers. Discuss protocol compliance and cross-platform compatibility using explicit conversions."
+  },
+  {
+    "n": 20,
+    "title": "Integrated Example: Building a Basic TCP Server",
+    "math": "Sequence and Order",
+    "note": "Present a step-by-step example implementing a TCP server using socket(), bind(), listen(), accept(), recv(), send(), and close(). Emphasize the logical and mathematical sequence required for correct execution, and model the process as an ordered set of operations (permutation)."
+  },
+  {
+    "n": 21,
+    "title": "Integrated Example: Building a Basic TCP Client",
+    "math": "Inverse Functions",
+    "note": "Guide through the construction of a simple TCP client using socket(), connect(), send(), recv(), and close(). Compare and contrast the flow of the client with the server, modeling the client’s actions as inverse functions of the server’s. Highlight symmetry and communication balance."
+  },
+  {
+    "n": 22,
+    "title": "Message Exchange: Server-Client Communication",
+    "math": "Bitwise Operations",
+    "note": "Provide a full example of two-way message exchange between server and client, showing use of send() and recv(). Teach the storage and manipulation of control codes or flags using bitwise logic, including the use of SO_REUSEADDR and other options that leverage bitwise AND, OR for runtime socket configuration."
+  },
+  {
+    "n": 23,
+    "title": "Troubleshooting Socket Programming: errno and Failure Probability",
+    "math": "Probability and Error Analysis",
+    "note": "Introduce error handling for socket programming, focusing on the errno variable and error-code analysis. Teach techniques to calculate and estimate failure probabilities for common errors such as address in use, connection refused, or binding failures, especially under high-load conditions."
+  },
+  {
+    "n": 24,
+    "title": "Blocking vs Non-Blocking Sockets",
+    "math": "Finite State Machines",
+    "note": "Teach blocking and non-blocking socket operation modes. Model the IO operation and socket states as states in a finite state machine, mapping transitions as a result of system calls or events. Demonstrate how to configure sockets to be non-blocking and handle EAGAIN or EWOULDBLOCK errors in an event-driven design."
+  },
+  {
+    "n": 25,
+    "title": "Socket Multiplexing with select() and poll()",
+    "math": "Boolean Logic and Set Operations",
+    "note": "Cover the use of select() and poll() for monitoring multiple sockets. Teach about fd_set and pollfd arrays, mapping their membership and readiness with set and Boolean logic. Provide hands-on coding exercises to build small-scale event loops with select(), practicing binary masking and conditional logic."
+  },
+  {
+    "n": 26,
+    "title": "State Machines for Server–Client Design Patterns",
+    "math": "State Transition Diagrams",
+    "note": "Model typical client-server communication patterns as state machines, illustrating possible transitions (listening, connecting, communicating, closing) with diagrams. Use these models to instruct students how to plan and debug multi-part interactions, especially for persistent or protocol-driven connections."
+  },
+  {
+    "n": 27,
+    "title": "Data Serialization, Deserialization, and Buffer Management",
+    "math": "Data Representation and Encoding",
+    "note": "Teach the process of serializing complex data structures into byte streams suitable for network transmission and reconstructing them on the receiving end (deserialization). Demonstrate common data encoding methods (e.g., ASCII, binary packing, and endianness-aware formats) and manage send/recv buffers using pointers and arithmetic to avoid overflow or data corruption."
+  },
+  {
+    "n": 28,
+    "title": "HTTP Server-Client Interaction over TCP",
+    "math": "Buffer Indexing",
+    "note": "Extend socket examples to implement simple HTTP request/response exchanges over TCP. Teach students to parse HTTP headers and bodies using pointer arithmetic and linear indexing of buffers. Reinforce the importance of proper parsing, buffer boundaries, and string handling in protocol implementation."
+  },
+  {
+    "n": 29,
+    "title": "Multiplexing with select() and poll() in Practice",
+    "math": "Combinatorics",
+    "note": "Deepen understanding of select() and poll() by working with multiple concurrent connections. Teach students to analyze the possible combinations of socket readiness using combinatorial logic, and how multiplexed servers improve resource efficiency compared to iterative or single-socket designs."
+  },
+  {
+    "n": 30,
+    "title": "Multi-threaded Socket Programming using POSIX Threads",
+    "math": "Probability and Concurrency Models",
+    "note": "Introduce multithreaded server design with POSIX Threads (pthreads). Cover the creation and management of threads, race conditions, and mutexes. Teach concurrency concepts and probability of thread collision, exploring event-driven models versus thread-per-connection architectures."
+  },
+  {
+    "n": 31,
+    "title": "Synchronization and Race Condition Avoidance in Multi-threading",
+    "math": "Synchronization and Event Timing",
+    "note": "Demonstrate thread synchronization techniques, including pthread_join, mutexes, and semaphores, and teach students to analyze thread schedules and event timing mathematically. Address the probability and practical examples of race conditions and deadlocks in network servers."
+  },
+  {
+    "n": 32,
+    "title": "Thread Pools and Efficient Client Handling",
+    "math": "Queue Theory and Performance Analysis",
+    "note": "Teach the implementation of thread pools for scalable handling of many simultaneous clients. Model the producer-consumer relationship between the main server and worker threads using queue theory. Analyze throughput and latency, and demonstrate how thread pools outscale thread-per-request models."
+  },
+  {
+    "n": 33,
+    "title": "Cross-Platform Socket Programming: Windows vs Linux",
+    "math": "Comparative Operations",
+    "note": "Compare the APIs and behaviors of socket programming between Windows (Winsock) and Linux systems. Teach mathematical equivalence and divergence by using comparison operators (==, !=) to highlight semantic and performance distinctions in setup, calling conventions, select/poll event handling, and resource management."
+  },
+  {
+    "n": 34,
+    "title": "Error Handling, errno, and Failure Probability in Depth",
+    "math": "Probability and Set Theory",
+    "note": "Explore advanced error handling mechanisms for sockets, including inspection of errno, strerror, and platform-specific error reporting. Model errors as sets of return codes and analyze the likelihood of failure scenarios, simulating or calculating expected error rates and their impact on application robustness."
+  },
+  {
+    "n": 35,
+    "title": "Building a Complete TCP Server–Client Application",
+    "math": "Function Composition and State Machines",
+    "note": "Consolidate all preceding sections with the design, implementation, and execution of a fully functional TCP server–client pair. Teach modular design using function composition, with each functional unit (socket handling, communication, error recovery) as a mathematical mapping. Use state machine models to ensure coverage of all possible interaction transitions and robust error management."
+  }
+]
