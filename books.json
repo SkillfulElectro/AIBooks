@@ -7,9 +7,12 @@
     { "name": "React Native Tour", "file": "./books/react_native.json" },
     { "name": "Golang Tour", "file": "./books/golang.json" },
     { "name": "Rust Tour", "file": "./books/rust.json" },
-    { "name": "Web Dev Tour", "file": "./books/webdev.json" }
+    { "name": "Web Dev Tour", "file": "./books/webdev.json" },
+    { "name": "Python Tour", "file": "./books/python.json" },
+    { "name": "Socket Programming C/C++ Tour", "file": "./books/socket_programming.json" }
   ]
 }
+
 
 
 
