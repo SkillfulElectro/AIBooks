@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Course Orientation and Packet Tracer Setup",
+    "math": "Introductory logic (procedural thinking)",
+    "note": "Teach learners how to install and navigate Packet Tracer. Orient them to the simulated hardware, network diagramming, and basic device connections. Establish logic flow necessary for configuring devices and running initial simulations. Reinforce the logical steps in building reproducible labs."
+  },
+  {
+    "n": 2,
+    "title": "IPv4 Addressing and Subnetting Fundamentals",
+    "math": "Binary arithmetic, place value, powers of two",
+    "note": "Explain how IPv4 addresses are constructed and how subnetting is performed. Teach binary to decimal conversion, subnet mask application, and the calculation of host and network ranges. Use Packet Tracer to assign networks to routers and PCs. Emphasize binary calculations as the foundation for network planning."
+  },
+  {
+    "n": 3,
+    "title": "Designing IPv6 Addressing Plans",
+    "math": "Hexadecimal arithmetic, binary-to-hex conversion",
+    "note": "Introduce IPv6 structure, address types, and prefix notation. Teach how to convert numbers between hexadecimal and binary, and how to determine prefix lengths. Use Packet Tracer to set up IPv6 networks and demonstrate unique features of IPv6 addressing. Reinforce arithmetic skills in non-decimal bases."
+  },
+  {
+    "n": 4,
+    "title": "Basic Device Configuration and Command-Line Interfaces",
+    "math": "Order of operations, set theory (categorizing commands)",
+    "note": "Show how to access Cisco CLI in Packet Tracer, perform basic hostname, password, and interface configurations. Teach the logic and order of configuration commands and how settings impact device roles. Introduce set theory by grouping configuration commands and identifying relationships."
+  },
+  {
+    "n": 5,
+    "title": "Implementing VLANs and VLAN Trunking",
+    "math": "Grouping & set theory, logical segmentation",
+    "note": "Teach the principles of VLAN segmentation—how port assignments group users and devices into logical segments. Discuss the math of grouping (set membership) and demonstrate VLAN creation and trunking configuration in Packet Tracer. Include a hands-on lab for verifying traffic isolation and trunk operation."
+  },
+  {
+    "n": 6,
+    "title": "Spanning Tree Protocol and Redundancy Mechanisms",
+    "math": "Tree topology, graph traversal",
+    "note": "Introduce Spanning Tree Protocol (STP), covering the concept of network loops and redundancy. Use STP to explain mathematical tree structures and how the protocol blocks ports to prevent loops. Simulate redundant switch connections in Packet Tracer and observe port states. Reinforce understanding of tree and graph theory."
+  },
+  {
+    "n": 7,
+    "title": "Layer 2 EtherChannel Configuration",
+    "math": "Combinatorics, logical bundling",
+    "note": "Discuss link aggregation and load balancing. Teach how logically bundling multiple links (EtherChannel) increases bandwidth and redundancy. Show combinatorial reasoning behind port grouping. Configure static and dynamic EtherChannel in Packet Tracer."
+  },
+  {
+    "n": 8,
+    "title": "Static and Default Routing Concepts",
+    "math": "Graph theory (pathfinding), cost calculation",
+    "note": "Teach the structure and purpose of static routing and default routes. Use mathematical concepts of graph edges and nodes, path selection, and basic cost calculations. Configure static routes in Packet Tracer and verify connectivity."
+  },
+  {
+    "n": 9,
+    "title": "Dynamic Routing Protocols: RIP, EIGRP, OSPF Overview",
+    "math": "Metric comparison, shortest path algorithms",
+    "note": "Introduce dynamic routing protocol metrics and their decision processes. Emphasize the math behind protocol metrics (hop count, cost, composite metrics) and shortest path algorithms. Use Packet Tracer to configure and compare RIP, EIGRP, and OSPF."
+  },
+  {
+    "n": 10,
+    "title": "Deep Dive into OSPF: Areas and Metric Calculation",
+    "math": "Dijkstra’s algorithm, addition and division in cost calculation",
+    "note": "Teach OSPF’s use of Dijkstra’s Shortest Path First algorithm for route calculation. Explain how link costs are computed using arithmetic operations. Configure multi-area OSPF in Packet Tracer and analyze the impact of cost and area design."
+  },
+  {
+    "n": 11,
+    "title": "EIGRP Route Selection and Load Balancing",
+    "math": "Composite metrics, proportionality",
+    "note": "Discuss how EIGRP uses bandwidth and delay to calculate composite metrics. Show the role of proportional relationships and arithmetic operations in route selection and load balancing logic. Configure and observe EIGRP behavior in simulated topologies in Packet Tracer."
+  },
+  {
+    "n": 12,
+    "title": "Border Gateway Protocol (BGP) Concepts and Configuration",
+    "math": "Set operations, prefix matching, logical filtering",
+    "note": "Introduce BGP as the interdomain routing protocol. Teach prefix lists, route maps, and set operations used for route selection and filtering. Configure basic BGP peering and policies in Packet Tracer, illustrating logical reasoning behind internet-scale routing."
+  },
+  {
+    "n": 13,
+    "title": "First Hop Redundancy Protocols (HSRP, VRRP)",
+    "math": "Priority comparison, selection algorithms",
+    "note": "Discuss network gateway redundancy using HSRP and VRRP. Teach how devices use priorities and selection logic to provide failover. Simulate failover and test gateway selection in Packet Tracer, illustrating simple arithmetic and logical operations."
+  },
+  {
+    "n": 14,
+    "title": "Network Address Translation (NAT and PAT)",
+    "math": "One-to-one and many-to-one mapping, address pool calculations",
+    "note": "Explain NAT, focusing on translation between private and public addresses, and PAT, with port mapping. Teach the arithmetic of available pool, mapping logic, and simultaneous sessions. Configure and test NAT and PAT in Packet Tracer."
+  },
+  {
+    "n": 15,
+    "title": "DHCP and IP Address Allocation",
+    "math": "Randomization, range selection, pool subdivision",
+    "note": "Cover DHCP’s role in automating address allocation. Discuss randomization within address pools and range calculation. Configure DHCP services in Packet Tracer and experiment with dynamic and static address reservation."
+  },
+  {
+    "n": 16,
+    "title": "Wireless LANs: Design and Configuration",
+    "math": "Signal propagation, decibel (dB) calculations",
+    "note": "Introduce wireless fundamentals, including access point modes and RF concepts. Teach dB arithmetic for power and signal calculation. Use Packet Tracer to simulate wireless deployments, adjusting channel and power settings."
+  },
+  {
+    "n": 17,
+    "title": "Implementing and Securing SNMP",
+    "math": "Indexing, authentication sequences",
+    "note": "Discuss SNMP for device monitoring. Explore the concept of indexed data and authentication process logic. Set up SNMP on devices in Packet Tracer and use simulated monitoring tools."
+  },
+  {
+    "n": 18,
+    "title": "Access Control Lists (ACLs) and Packet Filtering",
+    "math": "Boolean logic, logical expressions",
+    "note": "Teach the creation and application of standard and extended ACLs. Emphasize Boolean AND/OR logic for packet matching. Demonstrate ACL filtering effects using Packet Tracer, visualizing logical rules in action."
+  },
+  {
+    "n": 19,
+    "title": "Port Security and Layer 2 Security Features",
+    "math": "Counting and threshold logic, set uniqueness",
+    "note": "Introduce port security, maximum MAC count, and security violations. Teach counting (thresholds) and set uniqueness. Configure and test port security scenarios in Packet Tracer."
+  },
+  {
+    "n": 20,
+    "title": "Dynamic ARP Inspection and DHCP Snooping",
+    "math": "State machines, mapping and verification logic",
+    "note": "Discuss Layer 2 security with DAI and DHCP snooping. Explore the logic of state verification and mapping tables. Simulate attack scenarios and defense mechanisms in Packet Tracer."
+  },
+  {
+    "n": 21,
+    "title": "QoS Principles and Policy Implementation",
+    "math": "Class assignment, marking, priority queuing (fairness)",
+    "note": "Explain QoS basics, traffic classification, marking, and queue assignment. Discuss arithmetic for marking/queuing and fairness algorithms. Configure QoS policies in Packet Tracer to observe differential treatment."
+  },
+  {
+    "n": 22,
+    "title": "Virtual Routing and Forwarding (VRF) and Path Virtualization",
+    "math": "Table partitioning, logical separation",
+    "note": "Introduce VRF to demonstrate routing table segmentation. Discuss the math of partitioning and logical separation. Configure and verify VRFs in Packet Tracer."
+  },
+  {
+    "n": 23,
+    "title": "Tunneling Protocols: GRE, IPsec, and VPN Concepts",
+    "math": "Encapsulation logic, protocol stack layering",
+    "note": "Cover GRE and IPsec tunneling concepts, explaining encapsulation and protocol layering. Use Packet Tracer to configure GRE tunnels and basic IPsec settings. Focus on understanding encapsulation logic."
+  },
+  {
+    "n": 24,
+    "title": "Monitoring and Network Assurance Tools: Ping, Traceroute, Debugs",
+    "math": "Sequence, roundtrip time calculation",
+    "note": "Teach basic network monitoring with ping, traceroute, and debug. Emphasize the arithmetic of roundtrip calculation, TTL, and sequence numbering. Use Packet Tracer to troubleshoot connectivity."
+  },
+  {
+    "n": 25,
+    "title": "NetFlow and Traffic Analysis",
+    "math": "Data sampling, statistical aggregation",
+    "note": "Introduce NetFlow for network traffic monitoring. Teach sampling, counting flows, and aggregating statistics. Configure NetFlow features in Packet Tracer and interpret traffic patterns."
+  },
+  {
+    "n": 26,
+    "title": "SPAN, RSPAN, and ERSPAN: Traffic Mirroring",
+    "math": "Mapping rules, traffic replication logic",
+    "note": "Discuss SPAN/RSPAN/ERSPAN for capturing network traffic. Teach mapping and selection logic for replicated traffic. Simulate mirrored sessions in Packet Tracer."
+  },
+  {
+    "n": 27,
+    "title": "Flexible NetFlow and IP SLA: Performance Monitoring",
+    "math": "Scheduling, timing, threshold setting",
+    "note": "Cover advanced NetFlow and IP SLA for performance and SLA monitoring. Explain scheduling, measuring, and threshold arithmetic. Configure these protocols and analyze results in Packet Tracer."
+  },
+  {
+    "n": 28,
+    "title": "Cisco DNA Center Workflows (Intro)",
+    "math": "Workflow logic, sequence modeling",
+    "note": "Introduce Cisco DNA Center workflows conceptually. Teach the logic of automation workflows and sequence of actions. (Note: DNA Center emulation is limited in Packet Tracer; focus on concepts and logical sequencing.)"
+  },
+  {
+    "n": 29,
+    "title": "Device Access Control: Authentication and Authorization (AAA)",
+    "math": "Decision trees, rule evaluation",
+    "note": "Discuss AAA frameworks for device access security. Teach decision tree logic for access evaluation. Configure local AAA in Packet Tracer and test user access scenarios."
+  },
+  {
+    "n": 30,
+    "title": "Infrastructure Security: CoPP and Secure Management",
+    "math": "Rate limiting, threshold calculations",
+    "note": "Explain Control Plane Policing (CoPP) and secure management protocols (SSH, HTTPS). Teach arithmetic of rate limiting and threshold logic. Configure CoPP and secure management in Packet Tracer."
+  },
+  {
+    "n": 31,
+    "title": "Wireless Security: EAP, WebAuth, and PSK",
+    "math": "Handshakes, process sequence logic",
+    "note": "Introduce different wireless authentication mechanisms (EAP, WebAuth, PSK). Demonstrate handshake and sequence logic in authentication flows. Simulate wireless security setups in Packet Tracer."
+  },
+  {
+    "n": 32,
+    "title": "Threat Defense: Next-Generation Firewalls and TrustSec",
+    "math": "Classification, policy enforcement logic",
+    "note": "Describe NGFWs and security group tagging (TrustSec). Focus on the logic of traffic classification and symbolic policy enforcement. Use Packet Tracer to illustrate firewall basics and security policies."
+  },
+  {
+    "n": 33,
+    "title": "Network Access Control: 802.1X and Port-Based Security",
+    "math": "Authentication logic, state machine modeling",
+    "note": "Teach port-based access control using 802.1X. Explain the logic of authentication state machines. Configure basic wired 802.1X scenarios in Packet Tracer."
+  },
+  {
+    "n": 34,
+    "title": "Automation Fundamentals: Python Scripting",
+    "math": "Algorithmic logic, variables, control flow",
+    "note": "Introduce network automation and programmability concepts using Python. Teach algorithmic logic, control structures, and their application to network configuration. Demonstrate simple network task scripts."
+  },
+  {
+    "n": 35,
+    "title": "Constructing and Validating JSON Data Files",
+    "math": "Data modeling, key-value mapping",
+    "note": "Teach how to construct JSON data for automation and API interactions. Discuss key-value pairs and object structure. Have learners create and validate sample JSON files used in network programmability."
+  },
+  {
+    "n": 36,
+    "title": "YANG Data Modeling and NETCONF/RESTCONF Fundamentals",
+    "math": "Hierarchical structures, tree traversal",
+    "note": "Introduce YANG data modeling for configuration management, and the role of NETCONF and RESTCONF APIs. Teach hierarchical tree structures as used in YANG models. Review basic NETCONF/RESTCONF XML/JSON payloads."
+  },
+  {
+    "n": 37,
+    "title": "Using APIs: Cisco DNA Center and vManage",
+    "math": "Input-output mapping, request/response logic",
+    "note": "Explain principles of leveraging APIs (REST) in network management. Teach logic of API requests and interpreting responses. Simulate API calls using sample data and explain their mapping to configuration commands."
+  },
+  {
+    "n": 38,
+    "title": "REST API Security and Response Codes",
+    "math": "Status code enumeration, mapping logic",
+    "note": "Discuss REST API authentication, token usage, and security best practices. Teach the enumeration and mapping of HTTP status codes to error/success logic. Analyze example API responses."
+  },
+  {
+    "n": 39,
+    "title": "Embedded Event Manager (EEM) Applets for Automation",
+    "math": "Event-driven programming, conditional logic",
+    "note": "Cover Cisco Embedded Event Manager (EEM) for automating network operations. Teach event detection and action logic, with conditional statements. Demonstrate creating simple EEM applets in emulator."
+  },
+  {
+    "n": 40,
+    "title": "Comparing Agent vs. Agentless Orchestration Tools",
+    "math": "Comparison tables, Boolean attributes",
+    "note": "Summarize the differences between agent-based (Puppet, Chef) and agentless (Ansible) automation. Teach comparison logic using Boolean decision tables. Discuss integration scenarios for orchestration tools."
+  }
+]
