@@ -291,4 +291,42 @@
     "n": 49,
     "title": "Styling Widgets with Qt Style Sheets (QSS)",
     "math": "String parsing, Cascading logic",
-    "note": "T
+    "note": "Teach how to customize the appearance of Qt Widgets using Qt Style Sheets, a syntax similar to CSS. Demonstrate how to set properties like color, background-color, and border on widgets using selectors for type, object name, or property. This lesson uses C++ with the Qt 5.15 Widgets module."
+  },
+  {
+    "n": 50,
+    "title": "Internationalization and Localization with tr()",
+    "math": "Key-value mapping",
+    "note": "Explain the process of making a Qt application translatable. Show how to wrap all user-visible strings in the 'tr()' macro. Use Qt's 'lupdate' and 'Linguist' tools to generate and edit translation files (.ts), and load them at runtime with QTranslator. This is for C++ Qt 5.15 applications."
+  },
+  {
+    "n": 51,
+    "title": "Basic Database Interaction with Qt SQL",
+    "math": "Relational algebra, Set theory",
+    "note": "Introduce the Qt SQL module for database connectivity. Demonstrate how to add and configure a database driver (like SQLite), connect to a database using QSqlDatabase, and execute SQL queries using QSqlQuery to retrieve and modify data. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 52,
+    "title": "Unit Testing with the QTest Framework",
+    "math": "Boolean logic, Formal verification",
+    "note": "Introduce the basics of unit testing for Qt applications. Show how to create a test class that inherits from QObject, write private slot functions for individual tests, and use QTest macros like 'QCOMPARE' and 'QVERIFY' to assert conditions. This lesson uses C++ and the Qt 5.15 Test module."
+  },
+  {
+    "n": 53,
+    "title": "Managing Application States with QStateMachine",
+    "math": "Finite automata, Graph theory",
+    "note": "Introduce Qt's State Machine Framework. Demonstrate how to model an application's behavior as a set of states (QState) and transitions (QSignalTransition). Show how to define transitions that are triggered by signals from UI elements or other objects. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 54,
+    "title": "Building Qt Projects with CMake",
+    "math": "Dependency graphs",
+    "note": "Provide an introduction to using CMake as an alternative build system to qmake. Explain the basic syntax of a 'CMakeLists.txt' file for a Qt project, including how to find Qt packages, set C++ standards, and define executables with their source files. This lesson uses Qt 5.15 with CMake in Qt Creator."
+  },
+  {
+    "n": 55,
+    "title": "Deploying Qt Applications on Windows",
+    "math": "File system paths",
+    "note": "Explain the process of creating a distributable package for a Windows application. Demonstrate using the 'windeployqt' tool to automatically gather the required Qt DLLs, plugins, and other dependencies into a folder alongside the application executable. The context is deploying a C++ application built with Qt 5.15."
+  }
+]
