@@ -1,0 +1,362 @@
+[
+  {
+    "n": 1,
+    "title": "TensorFlow Installation and Setup",
+    "math": "None",
+    "note": "Install TensorFlow 2.x using pip, verify GPU support with CUDA/cuDNN, set up virtual environment, and test installation by importing tf and checking version. Create first tensor using tf.constant() in TensorFlow."
+  },
+  {
+    "n": 2,
+    "title": "Tensor Fundamentals",
+    "math": "Linear algebra, matrix operations",
+    "note": "Create tensors using tf.constant(), tf.Variable(), tf.zeros(), tf.ones(). Understand tensor ranks (scalar=0, vector=1, matrix=2), shapes, and dtypes (float32, int32). Demonstrate tensor indexing and slicing in TensorFlow."
+  },
+  {
+    "n": 3,
+    "title": "Basic Tensor Operations",
+    "math": "Element-wise operations, broadcasting rules",
+    "note": "Perform element-wise operations (tf.add, tf.multiply, tf.subtract, tf.divide) on tensors. Understand broadcasting rules when tensors have different shapes. Use tf.reduce_sum(), tf.reduce_mean() for aggregation in TensorFlow."
+  },
+  {
+    "n": 4,
+    "title": "Matrix Operations",
+    "math": "Matrix multiplication, transpose, inverse",
+    "note": "Execute matrix multiplication using tf.matmul(), transpose with tf.transpose(), find inverse using tf.linalg.inv(). Calculate dot products and matrix determinants using TensorFlow's linear algebra operations."
+  },
+  {
+    "n": 5,
+    "title": "Eager Execution Mode",
+    "math": "None",
+    "note": "Enable eager execution (default in TF 2.x), execute operations immediately without building graphs. Use tf.config.run_functions_eagerly() and understand debugging advantages. Compare with graph mode performance in TensorFlow."
+  },
+  {
+    "n": 6,
+    "title": "Automatic Differentiation",
+    "math": "Derivatives, chain rule, gradients",
+    "note": "Use tf.GradientTape() to record operations for automatic differentiation. Calculate gradients of scalar functions, understand gradient flow, and compute higher-order derivatives in TensorFlow."
+  },
+  {
+    "n": 7,
+    "title": "tf.function and Graph Optimization",
+    "math": "Computational graphs",
+    "note": "Convert Python functions to TensorFlow graphs using @tf.function decorator. Understand tracing, retracing, and performance benefits. Handle Python side effects and control flow in TensorFlow graphs."
+  },
+  {
+    "n": 8,
+    "title": "Variables and State Management",
+    "math": "None",
+    "note": "Create trainable variables using tf.Variable(), understand variable initialization, assignment with .assign(), and tracking for gradients. Manage variable scope and naming in TensorFlow models."
+  },
+  {
+    "n": 9,
+    "title": "Dataset API Basics",
+    "math": "None",
+    "note": "Create datasets using tf.data.Dataset.from_tensor_slices(), apply transformations with .map(), .batch(), .shuffle(). Load data efficiently using .prefetch() and .cache() in TensorFlow pipelines."
+  },
+  {
+    "n": 10,
+    "title": "Data Preprocessing Pipelines",
+    "math": "Normalization, standardization",
+    "note": "Build preprocessing pipelines using tf.data.Dataset operations. Apply normalization (min-max scaling), standardization (z-score), and one-hot encoding using TensorFlow's preprocessing functions."
+  },
+  {
+    "n": 11,
+    "title": "Dense Layers Implementation",
+    "math": "Linear transformation, affine functions",
+    "note": "Implement dense layers using tf.keras.layers.Dense(). Understand weight matrix multiplication (Wx + b), weight initialization methods (glorot_uniform, he_normal), and output shape calculation in TensorFlow."
+  },
+  {
+    "n": 12,
+    "title": "Activation Functions",
+    "math": "Non-linear transformations, sigmoid, ReLU",
+    "note": "Apply activation functions: tf.nn.relu(), tf.nn.sigmoid(), tf.nn.tanh(), tf.nn.softmax(). Understand mathematical properties, derivatives, and use cases for each activation in TensorFlow neural networks."
+  },
+  {
+    "n": 13,
+    "title": "Sequential Model Building",
+    "math": "Function composition",
+    "note": "Build neural networks using tf.keras.Sequential() API. Stack layers sequentially, understand input_shape specification for first layer, and compile model with optimizer and loss in TensorFlow."
+  },
+  {
+    "n": 14,
+    "title": "Functional API",
+    "math": "Directed acyclic graphs",
+    "note": "Create complex architectures using tf.keras.Model and functional API. Build models with multiple inputs/outputs, shared layers, and non-sequential connections. Define custom forward pass in TensorFlow."
+  },
+  {
+    "n": 15,
+    "title": "Subclassing API",
+    "math": "Object-oriented programming concepts",
+    "note": "Create custom models by subclassing tf.keras.Model. Override __init__() and call() methods, implement custom forward pass logic, and manage layer creation in TensorFlow classes."
+  },
+  {
+    "n": 16,
+    "title": "Loss Functions",
+    "math": "Cross-entropy, mean squared error",
+    "note": "Implement loss functions: tf.keras.losses.SparseCategoricalCrossentropy() for classification, tf.keras.losses.MeanSquaredError() for regression. Calculate custom losses using TensorFlow operations."
+  },
+  {
+    "n": 17,
+    "title": "Optimizers",
+    "math": "Gradient descent, momentum, adaptive learning",
+    "note": "Configure optimizers: tf.keras.optimizers.SGD(), Adam(), RMSprop(). Set learning rates, momentum, decay parameters. Understand update rules and convergence properties in TensorFlow training."
+  },
+  {
+    "n": 18,
+    "title": "Metrics and Evaluation",
+    "math": "Accuracy, precision, recall, F1-score",
+    "note": "Track training metrics using tf.keras.metrics.Accuracy(), Precision(), Recall(), AUC(). Create custom metrics by subclassing tf.keras.metrics.Metric. Update and reset metric states in TensorFlow."
+  },
+  {
+    "n": 19,
+    "title": "Model Compilation",
+    "math": "None",
+    "note": "Compile models using model.compile() with optimizer, loss, and metrics specification. Configure run_eagerly, steps_per_execution parameters. Set up distributed training strategy in TensorFlow."
+  },
+  {
+    "n": 20,
+    "title": "Training with fit()",
+    "math": "Backpropagation algorithm",
+    "note": "Train models using model.fit() with training data, batch_size, epochs, validation_data. Understand backpropagation flow, weight updates, and gradient accumulation in TensorFlow training loops."
+  },
+  {
+    "n": 21,
+    "title": "Callbacks",
+    "math": "None",
+    "note": "Implement callbacks: ModelCheckpoint() for saving, EarlyStopping() for regularization, ReduceLROnPlateau() for learning rate scheduling. Create custom callbacks by subclassing tf.keras.callbacks.Callback in TensorFlow."
+  },
+  {
+    "n": 22,
+    "title": "Custom Training Loops",
+    "math": "Gradient computation and application",
+    "note": "Write training loops using tf.GradientTape(), manually compute losses, calculate gradients with tape.gradient(), apply updates with optimizer.apply_gradients(). Control training flow explicitly in TensorFlow."
+  },
+  {
+    "n": 23,
+    "title": "Validation and Testing",
+    "math": "Statistical validation, holdout method",
+    "note": "Implement validation using model.evaluate(), split data into train/validation/test sets. Monitor validation metrics, detect overfitting, and perform k-fold cross-validation in TensorFlow."
+  },
+  {
+    "n": 24,
+    "title": "Regularization Techniques",
+    "math": "L1/L2 norms, penalty terms",
+    "note": "Apply L1/L2 regularization using kernel_regularizer in layers. Implement dropout with tf.keras.layers.Dropout(), batch normalization with BatchNormalization(). Understand regularization mathematics in TensorFlow."
+  },
+  {
+    "n": 25,
+    "title": "Batch Normalization",
+    "math": "Mean and variance normalization",
+    "note": "Add BatchNormalization layers to normalize inputs across batch dimension. Configure momentum, epsilon parameters, understand training vs inference behavior with moving averages in TensorFlow."
+  },
+  {
+    "n": 26,
+    "title": "Dropout Layers",
+    "math": "Probabilistic regularization, Bernoulli distribution",
+    "note": "Implement dropout using tf.keras.layers.Dropout() with dropout rate. Understand training vs inference behavior, inverted dropout scaling, and spatial dropout variants in TensorFlow."
+  },
+  {
+    "n": 27,
+    "title": "Convolutional Layers",
+    "math": "Convolution operation, kernels, filters",
+    "note": "Build Conv2D layers with filters, kernel_size, strides, padding parameters. Understand convolution mathematics, receptive fields, and parameter sharing in TensorFlow convolutional networks."
+  },
+  {
+    "n": 28,
+    "title": "Pooling Operations",
+    "math": "Max/average aggregation, downsampling",
+    "note": "Apply MaxPooling2D() and AveragePooling2D() layers with pool_size and strides. Implement global pooling operations, understand spatial dimension reduction in TensorFlow CNNs."
+  },
+  {
+    "n": 29,
+    "title": "CNN Architectures",
+    "math": "Feature hierarchies, spatial pyramids",
+    "note": "Build complete CNN architectures combining Conv2D, pooling, and dense layers. Implement LeNet, AlexNet patterns, understand feature extraction and classification stages in TensorFlow."
+  },
+  {
+    "n": 30,
+    "title": "Transfer Learning",
+    "math": "Feature reuse, fine-tuning",
+    "note": "Load pretrained models (VGG, ResNet, EfficientNet) from tf.keras.applications. Freeze base layers, add custom heads, implement fine-tuning strategies in TensorFlow transfer learning."
+  },
+  {
+    "n": 31,
+    "title": "Data Augmentation",
+    "math": "Affine transformations, image processing",
+    "note": "Apply augmentation using tf.keras.layers.RandomFlip(), RandomRotation(), RandomZoom(). Create augmentation pipelines with tf.image operations for training data enhancement in TensorFlow."
+  },
+  {
+    "n": 32,
+    "title": "RNN Fundamentals",
+    "math": "Recurrent connections, hidden states",
+    "note": "Implement SimpleRNN layers with units, activation, return_sequences parameters. Understand hidden state evolution, backpropagation through time (BPTT) in TensorFlow recurrent networks."
+  },
+  {
+    "n": 33,
+    "title": "LSTM Networks",
+    "math": "Gates, cell states, long-term dependencies",
+    "note": "Build LSTM layers using tf.keras.layers.LSTM(). Understand forget, input, output gates, cell state updates. Configure return_states, stateful parameters in TensorFlow sequence models."
+  },
+  {
+    "n": 34,
+    "title": "GRU Networks",
+    "math": "Reset and update gates",
+    "note": "Implement GRU layers with tf.keras.layers.GRU(). Compare with LSTM architecture, understand reset/update gate mechanisms, computational efficiency advantages in TensorFlow."
+  },
+  {
+    "n": 35,
+    "title": "Bidirectional RNNs",
+    "math": "Forward and backward processing",
+    "note": "Wrap RNN/LSTM/GRU layers with tf.keras.layers.Bidirectional(). Process sequences in both directions, concatenate or sum outputs, handle variable-length sequences in TensorFlow."
+  },
+  {
+    "n": 36,
+    "title": "Sequence-to-Sequence Models",
+    "math": "Encoder-decoder architecture",
+    "note": "Build encoder-decoder architectures for sequence tasks. Implement encoder LSTM, decoder LSTM with teacher forcing, handle input/output sequence lengths in TensorFlow."
+  },
+  {
+    "n": 37,
+    "title": "Attention Mechanisms",
+    "math": "Attention weights, query-key-value",
+    "note": "Implement attention using tf.keras.layers.Attention(). Calculate attention scores with dot product, apply softmax weights, combine value vectors in TensorFlow sequence models."
+  },
+  {
+    "n": 38,
+    "title": "Transformer Architecture",
+    "math": "Multi-head attention, positional encoding",
+    "note": "Build transformer blocks with MultiHeadAttention(), positional encoding, feed-forward networks. Stack encoder and decoder layers, implement masked attention in TensorFlow."
+  },
+  {
+    "n": 39,
+    "title": "Embeddings",
+    "math": "Vector representations, embedding spaces",
+    "note": "Create embedding layers using tf.keras.layers.Embedding() with vocabulary_size, embedding_dim. Train word embeddings, load pretrained embeddings (Word2Vec, GloVe) in TensorFlow."
+  },
+  {
+    "n": 40,
+    "title": "Text Preprocessing",
+    "math": "Tokenization, vocabulary mapping",
+    "note": "Tokenize text using tf.keras.preprocessing.text.Tokenizer(). Convert text to sequences, pad sequences with pad_sequences(), handle out-of-vocabulary tokens in TensorFlow."
+  },
+  {
+    "n": 41,
+    "title": "Custom Layers",
+    "math": "Forward and backward pass implementation",
+    "note": "Create custom layers by subclassing tf.keras.layers.Layer. Override build(), call() methods, implement custom computations, manage trainable weights in TensorFlow."
+  },
+  {
+    "n": 42,
+    "title": "Custom Loss Functions",
+    "math": "Objective function design",
+    "note": "Define custom loss functions using TensorFlow operations. Handle sample weights, implement focal loss, contrastive loss, or domain-specific objectives in TensorFlow training."
+  },
+  {
+    "n": 43,
+    "title": "Custom Metrics",
+    "math": "Performance measurement formulas",
+    "note": "Create custom metrics by subclassing tf.keras.metrics.Metric. Implement update_state(), result(), reset_state() methods for stateful metric computation in TensorFlow."
+  },
+  {
+    "n": 44,
+    "title": "Model Checkpointing",
+    "math": "None",
+    "note": "Save model checkpoints using tf.train.Checkpoint() or ModelCheckpoint callback. Configure save frequency, monitor metrics, restore training state from checkpoints in TensorFlow."
+  },
+  {
+    "n": 45,
+    "title": "SavedModel Format",
+    "math": "None",
+    "note": "Export models using tf.saved_model.save() in SavedModel format. Include signatures, custom objects, serving functions. Load models with tf.saved_model.load() for deployment in TensorFlow."
+  },
+  {
+    "n": 46,
+    "title": "TensorFlow Lite Conversion",
+    "math": "Quantization, model compression",
+    "note": "Convert models to TFLite using tf.lite.TFLiteConverter. Apply post-training quantization, optimize for mobile/edge devices, reduce model size while maintaining accuracy in TensorFlow."
+  },
+  {
+    "n": 47,
+    "title": "TensorFlow.js Deployment",
+    "math": "None",
+    "note": "Convert models for browser deployment using tensorflowjs_converter. Load and run models in JavaScript with tf.loadLayersModel(), handle input preprocessing in TensorFlow.js."
+  },
+  {
+    "n": 48,
+    "title": "TensorFlow Serving",
+    "math": "None",
+    "note": "Deploy models using TensorFlow Serving with REST/gRPC APIs. Configure model versions, batching, create Docker containers for production model serving in TensorFlow."
+  },
+  {
+    "n": 49,
+    "title": "Distributed Training",
+    "math": "Data and model parallelism",
+    "note": "Implement distributed training using tf.distribute.Strategy. Configure MirroredStrategy for multi-GPU, TPUStrategy for TPUs, handle gradient aggregation across devices in TensorFlow."
+  },
+  {
+    "n": 50,
+    "title": "Mixed Precision Training",
+    "math": "Floating-point precision, numerical stability",
+    "note": "Enable mixed precision with tf.keras.mixed_precision.Policy('mixed_float16'). Use float16 computations with float32 master weights, implement loss scaling for gradient stability in TensorFlow."
+  },
+  {
+    "n": 51,
+    "title": "XLA Compilation",
+    "math": "Graph optimization, fusion",
+    "note": "Enable XLA (Accelerated Linear Algebra) compilation with tf.config.optimizer.set_jit(). Optimize computation graphs, fuse operations, improve performance on GPUs/TPUs in TensorFlow."
+  },
+  {
+    "n": 52,
+    "title": "TensorBoard Visualization",
+    "math": "None",
+    "note": "Log metrics, histograms, graphs using tf.summary.create_file_writer(). Visualize training progress, model architecture, embeddings with TensorBoard. Create custom scalar and image summaries in TensorFlow."
+  },
+  {
+    "n": 53,
+    "title": "Profiling and Debugging",
+    "math": "Performance analysis",
+    "note": "Profile model performance using tf.profiler. Identify bottlenecks, memory usage, operation timing. Debug with tf.debugging assertions and numeric checks in TensorFlow."
+  },
+  {
+    "n": 54,
+    "title": "Autoencoders",
+    "math": "Dimensionality reduction, reconstruction loss",
+    "note": "Build autoencoders with encoder and decoder networks. Implement bottleneck layers, reconstruction loss (MSE), train for compression and denoising tasks in TensorFlow."
+  },
+  {
+    "n": 55,
+    "title": "Variational Autoencoders",
+    "math": "KL divergence, reparameterization trick",
+    "note": "Implement VAE with probabilistic encoder outputting mean/variance. Apply reparameterization trick for backpropagation, combine reconstruction and KL divergence losses in TensorFlow."
+  },
+  {
+    "n": 56,
+    "title": "Generative Adversarial Networks",
+    "math": "Min-max optimization, Nash equilibrium",
+    "note": "Build GAN with generator and discriminator networks. Implement adversarial loss, alternate training steps, handle mode collapse and training instabilities in TensorFlow."
+  },
+  {
+    "n": 57,
+    "title": "Object Detection Models",
+    "math": "Bounding box regression, IoU",
+    "note": "Implement object detection using pretrained models (YOLO, SSD, Faster R-CNN). Handle bounding box predictions, class probabilities, non-maximum suppression in TensorFlow."
+  },
+  {
+    "n": 58,
+    "title": "Semantic Segmentation",
+    "math": "Pixel-wise classification, upsampling",
+    "note": "Build segmentation models with encoder-decoder architecture. Implement U-Net pattern, transposed convolutions for upsampling, pixel-wise cross-entropy loss in TensorFlow."
+  },
+  {
+    "n": 59,
+    "title": "Graph Neural Networks",
+    "math": "Graph theory, message passing",
+    "note": "Implement GNN layers for graph-structured data. Process node features, edge information, aggregate neighbor messages using tf.keras custom layers in TensorFlow."
+  },
+  {
+    "n": 60,
+    "title": "Federated Learning",
+    "math": "Distributed optimization, privacy",
+    "note": "Implement federated learning using TensorFlow Federated (TFF). Train models on decentralized data, aggregate updates while preserving privacy, handle non-IID data distributions in TensorFlow."
+  }
+]
