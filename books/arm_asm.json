@@ -1,0 +1,278 @@
+[
+  {
+    "n": 1,
+    "title": "ARM Architecture Overview",
+    "math": "Computer Architecture",
+    "note": "Introduces the evolution of the ARM architecture, its RISC principles, and the distinctions among A-Profile, R-Profile, and M-Profile. Discusses use cases from embedded microcontrollers to server CPUs. Students learn the significance of ARM's prevalence in mobile devices, IoT, and cloud, establishing context for low-level optimization and ML edge deployment."
+  },
+  {
+    "n": 2,
+    "title": "ARM Processor Modes and States",
+    "math": "Finite State Machines",
+    "note": "Explains ARM processor modes including User, System, Supervisor, FIQ, IRQ, Abort, and Undefined. Describes context switching and banked registers. Application: Context switching for interrupt-driven ML kernels and secure boot flows."
+  },
+  {
+    "n": 3,
+    "title": "ARM Register Set: General and Special",
+    "math": "Binary and Boolean Algebra",
+    "note": "Details R0-R12 general-purpose registers, R13 (SP), R14 (LR), R15 (PC), and status registers CPSR/SPSR. Emphasizes how special-purpose registers support stack, branching, and status tracking for ARM Assembly routines, e.g., managing execution state during matrix multiplication in PyTorch."
+  },
+  {
+    "n": 4,
+    "title": "ARM Pipelining and Execution Model",
+    "math": "Instruction Scheduling",
+    "note": "Describes ARM’s classic 3-stage (Fetch, Decode, Execute) and deeper pipeline variants (Cortex-A, Cortex-M). Covers pipeline hazards, branch prediction, and their impact on real-time processing in deeply nested control flows, as encountered in signal processing with TensorFlow."
+  },
+  {
+    "n": 5,
+    "title": "ARM Instruction Set Syntax and Formats",
+    "math": "Formal Languages",
+    "note": "Teaches assembly syntax, mnemonics, operands, addressing modes. Distinguishes A32, T32 (Thumb), and A64 (64-bit). Analyzes operand types, encoding, and practical development in custom neural network operator optimizations."
+  },
+  {
+    "n": 6,
+    "title": "Immediate, Register, and Shifted Operands",
+    "math": "Bit Manipulation",
+    "note": "Explores how ARM instructions operate with immediate, register, and shifted register operands. Shows how to use these for efficient data indexing, e.g., dynamic offset calculation in batch matrix operations for ML."
+  },
+  {
+    "n": 7,
+    "title": "Data Movement: MOV, MVN, LDR, STR",
+    "math": "Assignment, Memory Addressing",
+    "note": "Covers register-to-register moves (MOV, MVN), and single value memory loads and stores (LDR, STR). Application: Setting up neural network weights in models or initializing tensors in memory for inference."
+  },
+  {
+    "n": 8,
+    "title": "Addressing Modes in ARM Assembly",
+    "math": "Addition, Binary Arithmetic",
+    "note": "Demonstrates offset, pre-indexed, post-indexed, register, scaled register, and PC-relative addressing. Students apply different modes for struct/tensor element access and efficient memory traversals in ML data structures."
+  },
+  {
+    "n": 9,
+    "title": "Bulk Data Transfers: LDM, STM, PUSH/POP",
+    "math": "Array Access",
+    "note": "Explains load/store multiple instructions for bulk register saves/restores and automatic stack handling with PUSH/POP, crucial for fast function prologue/epilogue and deep recursion in AI inference workloads."
+  },
+  {
+    "n": 10,
+    "title": "Arithmetic Operations: ADD, SUB, ADC, SBC",
+    "math": "Integer Arithmetic",
+    "note": "Covers addition, subtraction, add/sub with carry, and reverse subtract. Shows usage in implementing accumulators for batched matrix multiply, e.g., kernel dot products in PyTorch."
+  },
+  {
+    "n": 11,
+    "title": "Multiple-Operand Arithmetic: MLA, MUL, UMULL, SMULL",
+    "math": "Multiplication, Dot Product",
+    "note": "Introduces multiplication, multiply-accumulate, and 64-bit multiplication instructions. Application: High-performance matrix multiplication inner loops for custom deep learning kernels."
+  },
+  {
+    "n": 12,
+    "title": "Logical Operations: AND, ORR, EOR, BIC",
+    "math": "Boolean Algebra",
+    "note": "Explores logical operations: AND, OR, XOR, bit clear. Teaches bitmasking, blending, and flag manipulation, required for activation function masking or conditional tensor updates."
+  },
+  {
+    "n": 13,
+    "title": "Bitwise Manipulation: LSL, LSR, ASR, ROR",
+    "math": "Bitwise Shifts",
+    "note": "Details logical/arithmetic shifts and rotates. Shows application in scaling, alignment, and quantized representation packing, e.g., handling fixed-point representations for efficient edge AI inference."
+  },
+  {
+    "n": 14,
+    "title": "Condition Flags and Comparison: CMP, CMN, TST, TEQ",
+    "math": "Boolean Logic",
+    "note": "Explains how instructions set N, Z, C, V flags. Demonstrates comparison and testing, enabling conditionally optimized code paths in ML pipeline branches."
+  },
+  {
+    "n": 15,
+    "title": "Conditional Execution in ARM",
+    "math": "Boolean Logic",
+    "note": "Teaches conditional suffixes (EQ, NE, LT, GT, etc.) and their mapping to CPSR bits. Enables efficient branching and ‘if-then-else’ structures in assembly-optimized inference engines."
+  },
+  {
+    "n": 16,
+    "title": "Control Flow: Branch, Link, and Exchange",
+    "math": "Control Theory",
+    "note": "Discusses B, BL, BX, BLX instructions for jumps, function calls, and instruction set switching. Application: Layered control flow and function dispatch in multi-framework AI workloads (e.g., choosing between NEON and scalar kernels)."
+  },
+  {
+    "n": 17,
+    "title": "Looping Constructs and Unrolling",
+    "math": "Combinatorics",
+    "note": "Illustrates implementing loops with branches, compares manual unrolling for improved throughput. Use case: Matrix and tensor iteration for batch operations in TensorFlow/CNN workloads."
+  },
+  {
+    "n": 18,
+    "title": "Stack Operations and Stack Frame Layout",
+    "math": "Memory Management",
+    "note": "Explains fundamentals of stack usage, PUSH/POP, stack alignment and frame setup. Key for deep recursion, function nesting, and context state in model execution."
+  },
+  {
+    "n": 19,
+    "title": "Function Calls and ARM Calling Conventions",
+    "math": "Stack Operations",
+    "note": "Covers ARM Procedure Call Standard (AAPCS): parameter passing (R0–R3), callee/caller-saved registers, stack alignment. Application: Efficient function composition in C/Assembly hybrid PyTorch/TensorFlow operators."
+  },
+  {
+    "n": 20,
+    "title": "Prologue and Epilogue Patterns in Assembly",
+    "math": "Stack Operations",
+    "note": "Describes constructing proper entry/exit code: saving LR, FP setup, aligning stack, restoring context. Applies to secure coding for runtime state preservation during exceptions or interrupts."
+  },
+  {
+    "n": 21,
+    "title": "Interfacing C and ARM Assembly",
+    "math": "Data Layouts",
+    "note": "Explains symbol linkage, name decoration, and argument mapping. Demonstrates how to call C from Assembly and vice-versa, including handling composite structures and multi-word types, essential for custom operator integration in PyTorch or TensorFlow."
+  },
+  {
+    "n": 22,
+    "title": "Handling Structures and Composite Types",
+    "math": "Alignment and Size Mapping",
+    "note": "Shows decomposition and memory alignment rules for passing structs, arrays, and tensors. Important for passing parameter blocks or weights to MM kernels in DL model assembly extensions."
+  },
+  {
+    "n": 23,
+    "title": "ARM Exception and Interrupt Handling",
+    "math": "State Machines",
+    "note": "Describes ARM exception levels, vector tables, and interrupt priorities (NVIC). Covers context save/restore on ISR entry/exit. Use cases: Real-time event triggers and signal interrupts in sensor-fused ML applications."
+  },
+  {
+    "n": 24,
+    "title": "Debugging with GDB: Basic Techniques",
+    "math": "Digital Signals and Binary Protocols",
+    "note": "Teaches using GDB to step through ARM assembly, inspect registers, set breakpoints, and watch memory. Practical: Debugging custom matrix multiplication operators or kernel crashes in ARM-based frameworks."
+  },
+  {
+    "n": 25,
+    "title": "Profiling and Performance Analysis",
+    "math": "Statistics",
+    "note": "Covers using hardware counters (CYCCNT), ITM, DWT, and sampling profilers for performance metrics. Applies to benchmarking custom ML kernels (e.g., measuring average/best/worst inference times in TensorFlow edge deployments)."
+  },
+  {
+    "n": 26,
+    "title": "Introduction to Floating-Point and FPU Usage",
+    "math": "IEEE 754 Float Arithmetic",
+    "note": "Explains single/double-precision registers, floating-point instructions, and exception handling. Demonstrates use in matrix operations, essential for ML tasks like batch normalization in PyTorch/TensorFlow."
+  },
+  {
+    "n": 27,
+    "title": "VFP and NEON SIMD Overview",
+    "math": "Matrix Algebra",
+    "note": "Presents VFP and NEON coprocessors, their register files, and instruction syntax. Sets foundation for parallel and accelerated ML and signal processing workloads."
+  },
+  {
+    "n": 28,
+    "title": "Vector Algebra and NEON Programming",
+    "math": "Vector Algebra",
+    "note": "Covers NEON register usage, vector types, lane addressing, and packed operations. Students optimize parallel pixel transformations or tensor updates in ML."
+  },
+  {
+    "n": 29,
+    "title": "NEON Arithmetic and Data Movement",
+    "math": "Matrix Operations",
+    "note": "Demonstrates arithmetic (VADD, VSUB, VMUL), fused multiply-accumulate (VFMA), and data movement (VLDn, VSTn). Application: Accelerating convolution, pooling, or GEMM in PyTorch/TensorFlow."
+  },
+  {
+    "n": 30,
+    "title": "NEON Shift, Permute, and Rearrangement",
+    "math": "Permutation Techniques",
+    "note": "Explains reordering, shuffling (VTRN, VUZP, VTBL), and shift/saturate for fixed-point operations. Use case: Efficient quantization/dequantization in edge inference models."
+  },
+  {
+    "n": 31,
+    "title": "NEON Intrinsics and Cross-Platform Coding",
+    "math": "Compiler Optimization",
+    "note": "Shows using C intrinsics (float32x4_t, vmlaq_f32, etc.), platform-conditional macros, and cross-compilation. Useful for writing architecture-agnostic ML kernels."
+  },
+  {
+    "n": 32,
+    "title": "SME2 and SVE2: Scalable Vector Extensions",
+    "math": "Linear Algebra, Matrix Operations",
+    "note": "Introduces SME2/SVE2 ISA: tile-based processing, streaming vector length, FMOPA and SMOPA matrix ops. Application: High-throughput matrix-matrix multiply for transformers (e.g., attention layers in TensorFlow)."
+  },
+  {
+    "n": 33,
+    "title": "SME2 Assembly Matrix Multiplication",
+    "math": "Matrix Multiplication",
+    "note": "Teaches SME2-optimized assembly for matrix multiply. Covers preprocessing, outer product accumulation, and how to benchmark against intrinsic/C versions. Used for ultra-fast GEMM as in LIBXSMM for PyTorch."
+  },
+  {
+    "n": 34,
+    "title": "Streaming Mode and ZA Tile State",
+    "math": "Matrix Computation, Computer Architecture",
+    "note": "Details __arm_streaming and __arm_inout(\"za\") attributes to enable efficient streaming tile memory manipulation. Applies to tiled GEMM for LLM inference acceleration."
+  },
+  {
+    "n": 35,
+    "title": "Integration of SME2 Assembly in C",
+    "math": "Function Interfacing",
+    "note": "Shows how SME2 assembly routines (preprocess_l_asm, matmul_asm_impl) are tied to C wrappers, enabling runtime selection between reference and accelerated kernels for benchmarking/validation."
+  },
+  {
+    "n": 36,
+    "title": "Benchmarking and Validation of Matrix Kernels",
+    "math": "Performance Analysis",
+    "note": "Covers setting up benchmarks, measuring iterations, calculating min/max/mean times, and validating matrix output for correctness. Essential for deploying ARM-optimized ML operators in production pipelines."
+  },
+  {
+    "n": 37,
+    "title": "Security Features: Introduction to TrustZone",
+    "math": "Access Control and Cryptographic Arithmetic",
+    "note": "Introduces TrustZone technology, distinctions between secure/non-secure worlds, and the logic of system partitioning. Application: Protecting weights and activation buffers in ML models running on secure IoT devices."
+  },
+  {
+    "n": 38,
+    "title": "Memory Protection Unit (MPU) and Secure Partitioning",
+    "math": "Bitmasking, Logical Operations",
+    "note": "Details configuring MPU/SAU to separate memory for secure/non-secure regions. Provides real-world example of ARM Cortex-M33 e-book reader, highlighting controlled access to display buffers after secure DRM decryption."
+  },
+  {
+    "n": 39,
+    "title": "Transitioning Across Security Domains",
+    "math": "Computational Logic, Flow Control",
+    "note": "Describes secure gateway (SG) instructions, entry/return transitions, and non-secure callable veneers. Application: Secure function calls for model inference and secure decryption before releasing data to the UI."
+  },
+  {
+    "n": 40,
+    "title": "Interrupts, Exception Priorities and Context Save/Restore",
+    "math": "Priority Queuing and Stack Tracing",
+    "note": "Explores NVIC configuration, tail-chaining, late-arriving preemption, fault handling, and system registers (ICSR, AIRCR). Students analyze context switching for real-time signal processing in ARM-optimized ML models."
+  },
+  {
+    "n": 41,
+    "title": "Debug and Trace: ITM, DWT, ETM",
+    "math": "Input-Output Systems",
+    "note": "Presents ARM debugging and trace infrastructure: Instrumentation Trace Macrocell, Data Watchpoint/Trace, Embedded Trace Macrocell. Demonstrates profiling matrix/tensor computation loops using hardware events and trace utilities."
+  },
+  {
+    "n": 42,
+    "title": "Development Toolchains and Workflow",
+    "math": "Compiler Construction",
+    "note": "Guides learners through setting up projects in Keil MDK, ARM GCC toolchain, linker scripts, scatter files, and using IDEs for Assembly/C hybrid workflows. Application in creating reproducible builds for ARM-embedded ML modules."
+  },
+  {
+    "n": 43,
+    "title": "Assembly Optimization Techniques",
+    "math": "Algorithmic Complexity",
+    "note": "Covers hand unrolling, branch minimization, tight loop techniques, register allocation strategies, and inlining. Students optimize a neural net forward pass for lower latency and higher throughput."
+  },
+  {
+    "n": 44,
+    "title": "Atomic Operations and Synchronization Barriers",
+    "math": "Concurrency Control",
+    "note": "Explains usage of LDREX/STREX and DMB/DSB/ISB instructions for implementing mutexes and ensuring memory consistency across threads. Application: Safe multithreaded inference where layers may update shared tensors."
+  },
+  {
+    "n": 45,
+    "title": "ARM Assembly in Embedded Systems",
+    "math": "State Machines",
+    "note": "Examines real-time requirements, hardware interfacing (GPIO, timers, serial), and power-optimized coding with low-power instructions. Students build ML micro-kernels for event-driven embedded sensors using ARM Cortex-M."
+  },
+  {
+    "n": 46,
+    "title": "Porting and Migrating Assembly Between ARM ISA Variants",
+    "math": "Formal Languages, Data Layout",
+    "note": "Discusses instruction set differences among ARMv7, ARMv8-A, ARMv8-M, A32/T32/A64, and compatibility issues. Prepares students to adapt PyTorch custom kernels for deployment on a range of ARM platforms."
+  }
+]
