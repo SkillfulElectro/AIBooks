@@ -1,0 +1,320 @@
+[
+  {
+    "n": 1,
+    "title": "LPIC-2 Certification Overview",
+    "math": ["Certification structure", "Exam requirements"],
+    "note": "This lesson introduces LPIC-2 certification, its role in validating advanced Linux administration skills for managing small/medium mixed networks. Discusses the need for an active LPIC-1, outlines the two exams (201-450 and 202-450), their format (multiple choice/fill-in-the-blank), topics covered (kernel, storage, networking, security), and the certification’s 5-year validity period."
+  },
+  {
+    "n": 2,
+    "title": "Capacity Planning Fundamentals",
+    "math": ["CPU usage analysis", "Memory utilization assessment"],
+    "note": "Learn to measure hardware and network resource usage to identify performance bottlenecks. Covers basic concepts of monitoring CPU, RAM, disk, and network throughput, helping predict needs and avoid outages. Use case: determining if a system can run matrix multiplication workloads in TensorFlow without bottlenecks."
+  },
+  {
+    "n": 3,
+    "title": "Using iostat for System Metrics",
+    "math": ["CPU statistics", "I/O activity rates"],
+    "note": "Introduces the iostat tool to report CPU and disk utilization. Teaches common options (e.g., iostat -c, -d, -p sda, -o JSON) to collect and interpret statistics, supporting decisions on optimizing I/O for tasks such as high-volume file ingestion in PyTorch data loaders."
+  },
+  {
+    "n": 4,
+    "title": "Disk I/O Monitoring with iotop",
+    "math": ["Disk usage tracking", "I/O performance analysis"],
+    "note": "Demonstrates real-time disk I/O monitoring using iotop. Users learn to identify processes causing disk contention, beneficial in scenarios like diagnosing slow dataset loading or checkpoint saving in machine learning workflows."
+  },
+  {
+    "n": 5,
+    "title": "Virtual Memory Assessment via vmstat",
+    "math": ["Virtual memory", "Process statistics"],
+    "note": "Teaches use of vmstat to report on system memory, swap, process states, and CPU activity. Students learn to diagnose issues like excessive swapping, common in RAM-intensive workloads such as PyTorch model training."
+  },
+  {
+    "n": 6,
+    "title": "mpstat for Multi-Processor Stats",
+    "math": ["Processor utilization", "CPU balancing"],
+    "note": "Focuses on using mpstat to analyze per-CPU performance and identify CPU load imbalances. Especially useful for multi-core computation, as in distributed matrix operations or data preprocessing pipelines."
+  },
+  {
+    "n": 7,
+    "title": "Network Analysis: netstat and ss",
+    "math": ["Network connections", "Socket filtering"],
+    "note": "Covers network traffic monitoring via netstat and ss. Learners analyze network throughput, open connections, and route tables, helping troubleshoot slow dataset downloads or distributed training traffic."
+  },
+  {
+    "n": 8,
+    "title": "IP Traffic Monitoring Tools",
+    "math": ["Bandwidth usage", "Interface activity"],
+    "note": "Introduces iptraf and similar tools for monitoring real-time IP LAN usage. Explains selecting interfaces to measure bandwidth, crucial for optimizing network-intensive tasks like distributed training in PyTorch."
+  },
+  {
+    "n": 9,
+    "title": "User Session and Process Tracking",
+    "math": ["Login sessions", "Process trees"],
+    "note": "Focuses on 'w' for current users and session monitoring, 'pstree' for visualizing process hierarchy. Helps identify resource drains from idle sessions or zombie processes that could affect compute jobs."
+  },
+  {
+    "n": 10,
+    "title": "System Activity Reporting with sar",
+    "math": ["CPU", "Memory", "Disk", "Network metrics"],
+    "note": "Explains the sar utility for historical system activity reporting, including CPU bottlenecks or I/O issues. Use case: identifying slowdowns in long model training periods by reviewing historical system metrics."
+  },
+  {
+    "n": 11,
+    "title": "File Usage and Descriptors: lsof",
+    "math": ["Open file handles", "Networked files"],
+    "note": "Teaches lsof for listing open files, network sockets, and identifying file descriptor leaks or NFS usage. Useful for debugging issues caused by excessive open files in large-scale data pipelines."
+  },
+  {
+    "n": 12,
+    "title": "CIFS and NFS File Usage Monitoring",
+    "math": ["CIFS/NFS I/O statistics"],
+    "note": "Learn to use cifsiostat and nfsiostat for monitoring Samba (CIFS) and NFS filesystems. Enables diagnosis of latency in network-attached storage, such as slow loading of training datasets."
+  },
+  {
+    "n": 13,
+    "title": "Advanced System Monitoring with top",
+    "math": ["Process CPU usage", "Memory consumption"],
+    "note": "Covers the top command for detailed, live resource usage per process. Students interpret process priorities, states, and CPU/memory impacts—vital for optimizing multi-process matrix operations."
+  },
+  {
+    "n": 14,
+    "title": "Forecasting Resource Usage",
+    "math": ["Capacity growth", "Trend analysis"],
+    "note": "Teaches resource usage forecasting using tools like Nagios, MRTG, and Cacti. Learners practice predicting CPU, disk, or network exhaustion—crucial for scaling out systems for larger deep learning models."
+  },
+  {
+    "n": 15,
+    "title": "Linux Kernel Structure",
+    "math": ["Kernel image types", "Compression formats"],
+    "note": "Summarizes the structure of Linux kernels (zImage, bzImage), kernel compression, and the /usr/src/linux directory. Use case: selecting and understanding appropriate kernel image types for custom hardware."
+  },
+  {
+    "n": 16,
+    "title": "Compiling the Linux Kernel",
+    "math": ["Kernel build process", "Module installation"],
+    "note": "Guides through building a custom Linux kernel, configuring kernel options for performance, and deploying new kernels. Includes kernel module support for enhanced storage or networking drivers for HPC workloads."
+  },
+  {
+    "n": 17,
+    "title": "Kernel Runtime Management",
+    "math": ["Module loading", "udev rules"],
+    "note": "Explains managing kernel modules at runtime using modprobe, lsmod, insmod, and sysctl. Covers troubleshooting using udev for device detection and custom udev rules for device initialization."
+  },
+  {
+    "n": 18,
+    "title": "Customizing System Startup",
+    "math": ["systemd targets", "SysV init levels"],
+    "note": "Teaches modifying Linux boot behavior using systemd and SysV init scripts. Covers enabling/disabling services, customizing runlevels/targets, and managing dependencies for reliable server initialization."
+  },
+  {
+    "n": 19,
+    "title": "System Recovery Techniques",
+    "math": ["Bootloader troubleshooting", "Rescue mode"],
+    "note": "Covers recovering from boot failures using GRUB2/Legacy, rescue modes, and emergency shells. Includes fsck for filesystem repair and re-mount strategies—critical for servers hosting sensitive computations."
+  },
+  {
+    "n": 20,
+    "title": "Alternate Bootloaders and PXE Boot",
+    "math": ["PXE", "SYSLINUX", "systemd-boot"],
+    "note": "Introduces bootloader alternatives (SYSLINUX, PXELINUX, systemd-boot), focusing on remote and network boot scenarios. Explains configuring PXE for deploying clusters used in distributed PyTorch jobs."
+  },
+  {
+    "n": 21,
+    "title": "Linux Filesystem Management",
+    "math": ["Mounting", "UUID usage"],
+    "note": "Focuses on mounting filesystems, using /etc/fstab, and handling UUIDs for consistent device mapping. Essential for reliably mounting storage used in data-intensive machine learning workflows."
+  },
+  {
+    "n": 22,
+    "title": "Filesystem Maintenance and Health",
+    "math": ["Filesystem formats", "SMART diagnostics"],
+    "note": "Guides the use of mkfs, fsck, tune2fs, and smartctl to maintain Ext2/3/4, XFS, or Btrfs filesystems. Covers disk health diagnostics for proactive prevention of failures during long computation runs."
+  },
+  {
+    "n": 23,
+    "title": "Automount and File Encryption",
+    "math": ["AutoFS", "dm-crypt", "LUKS"],
+    "note": "Describes automatic device mounting with AutoFS and basic encrypted storage via dm-crypt and LUKS. Use case: securely storing sensitive models or datasets in PyTorch research environments."
+  },
+  {
+    "n": 24,
+    "title": "Software RAID Concepts",
+    "math": ["RAID levels 0,1,5", "mdadm management"],
+    "note": "Explains configuring software RAID (0/1/5) with mdadm, including partitioning, monitoring, and status checks with /proc/mdstat. Discusses use cases for performance or redundancy in large model checkpoints."
+  },
+  {
+    "n": 25,
+    "title": "Advanced Device Access",
+    "math": ["DMA tuning", "iSCSI", "NVMe"],
+    "note": "Details device performance tuning with hdparm and sdparm, configuring iSCSI block devices, and support for NVMe/SATA. Useful for maximizing throughput in NVMe-backed SSD storage for data analytics."
+  },
+  {
+    "n": 26,
+    "title": "Logical Volume Management (LVM)",
+    "math": ["Volume creation", "Snapshotting", "Resizing"],
+    "note": "Teaches LVM concepts, managing physical/volume groups, creating logical volumes, snapshots, and resizing operations. Use case: expanding capacity for growing model datasets without downtime."
+  },
+  {
+    "n": 27,
+    "title": "Basic Network Configuration",
+    "math": ["IPv4 setup", "IPv6 setup"],
+    "note": "Covers network interface management using ip, ifconfig, and route. Details both wired and wireless setup, addressing, and troubleshooting—key for distributed computing clusters."
+  },
+  {
+    "n": 28,
+    "title": "Advanced Networking and Routing",
+    "math": ["Routing tables", "tcpdump analysis"],
+    "note": "Covers advanced topics such as routing management, analyzing live traffic with tcpdump, and basic use of nmap. Includes strategies for debugging distributed networked PyTorch jobs."
+  },
+  {
+    "n": 29,
+    "title": "Network Troubleshooting",
+    "math": ["Traceroute", "Ping", "Log analysis"],
+    "note": "Introduces troubleshooting tools (traceroute, ping, hostname, system logs) to identify connectivity issues, DNS problems, or service interruptions affecting distributed model training."
+  },
+  {
+    "n": 30,
+    "title": "Building from Source",
+    "math": ["make", "configure scripts"],
+    "note": "Covers unpacking, patching, and building Linux software from source using make and configure scripts. Includes use of tar, gzip, and patch, with focus on compiling custom PyTorch or TensorFlow extensions."
+  },
+  {
+    "n": 31,
+    "title": "Backup Strategies and Integrity",
+    "math": ["rsync", "dd", "Tape backups"],
+    "note": "Teaches manual and scripted backup approaches using rsync, dd, and tape device operations. Explains verifying backup integrity before/after large compute runs, or before kernel upgrades."
+  },
+  {
+    "n": 32,
+    "title": "System User Notifications",
+    "math": ["wall", "shutdown messaging"],
+    "note": "Explains notifying users via wall, motd, or pre-shutdown scripts. Covers scheduling downtime and messaging users—important in shared research clusters running long-term PyTorch jobs."
+  },
+  {
+    "n": 33,
+    "title": "BIND DNS Server Configuration",
+    "math": ["Recursive DNS", "Caching-only DNS"],
+    "note": "Guides through installing and configuring BIND9 as either recursive/caching-only DNS. Covers key files (named.conf), tools (rndc, named-checkconf), and alternatives. Use case: setting up internal DNS for a cluster."
+  },
+  {
+    "n": 34,
+    "title": "DNS Zone Files: Forward and Reverse",
+    "math": ["Zone file syntax", "PTR/A/MX/CNAME records"],
+    "note": "Teaches creating and editing forward and reverse DNS zone files, understanding SOA, NS, MX, A, PTR, CNAME records. Applies to delegating subdomains for cluster nodes in research labs."
+  },
+  {
+    "n": 35,
+    "title": "Securing DNS Services",
+    "math": ["TSIG", "DNSSEC", "Chroot DNS"],
+    "note": "Focuses on securing BIND with TSIG, running under a non-root user/chroot, and describing basics of DNSSEC and DANE. Use case: protecting integrity of DNS records for cluster name resolution."
+  },
+  {
+    "n": 36,
+    "title": "Apache HTTP Server Setup",
+    "math": ["Virtual Host", "Client authentication"],
+    "note": "Detailed setup of Apache 2.4, configuring virtual hosts, .htaccess files, and client authentication. Covers scripting language modules (PHP, mod_perl) for web-based model monitoring dashboards."
+  },
+  {
+    "n": 37,
+    "title": "Apache HTTPS and SSL/TLS",
+    "math": ["SSL certificates", "Cipher suites"],
+    "note": "Teaches enabling HTTPS using openssl-generated self-signed or CA certificates, configuring SSLEngine, SSLProtocol, and best practices for web security. Use case: encrypting web access to training dashboards."
+  },
+  {
+    "n": 38,
+    "title": "Squid Proxy Server Configuration",
+    "math": ["Access control lists", "Caching"],
+    "note": "Explains installing and configuring Squid proxy for caching and access control. Discusses setting up ACLs for user or subnet-based restrictions. Relevant for providing internet access in research networks."
+  },
+  {
+    "n": 39,
+    "title": "Nginx Web Server and Reverse Proxy",
+    "math": ["Nginx setup", "Reverse proxy"],
+    "note": "Covers basic and advanced configuration of Nginx as HTTP server and reverse proxy. Use case: fronting TensorBoard dashboards or high-performance model inference services."
+  },
+  {
+    "n": 40,
+    "title": "Samba Server Configuration",
+    "math": ["CIFS shares", "AD Integration"],
+    "note": "Teaches standalone and AD-integrated Samba file sharing. Detailed setup of smbd, nmbd, and client mounting with smbclient/mount.cifs. Applies to sharing datasets across Windows and Linux nodes in a lab."
+  },
+  {
+    "n": 41,
+    "title": "NFS Server for File Sharing",
+    "math": ["NFS export", "Access restrictions"],
+    "note": "Configures NFS server for sharing filesystems. Covers exportfs, /etc/exports, NFSv3/v4, mount options, and client access controls. Important for large shared datasets in SLURM or other HPC environments."
+  },
+  {
+    "n": 42,
+    "title": "DHCP Server Design and Management",
+    "math": ["Static/dynamic leases", "Relay agent"],
+    "note": "Guides through installation, subnet/range definition, static assignments, and use of a relay agent in dhcpd.conf. Use case: automating IP assignment for ephemeral compute nodes in cloud or lab clusters."
+  },
+  {
+    "n": 43,
+    "title": "PAM Authentication and SSSD",
+    "math": ["SSSD", "Password modules", "LDAP integration"],
+    "note": "Explains Linux Pluggable Authentication Modules (PAM), configuring pam.conf and /etc/pam.d/, and using sssd for LDAP authentication. Illustrates enforcing strong policies for user logins in secure clusters."
+  },
+  {
+    "n": 44,
+    "title": "LDAP Client Management",
+    "math": ["User queries", "Password updates"],
+    "note": "Shows querying and updating directory user info via ldapsearch, ldapadd, ldapdelete, and ldappasswd. Applies to user management and mapping researchers to compute node access rights."
+  },
+  {
+    "n": 45,
+    "title": "OpenLDAP Server Basics",
+    "math": ["LDIF syntax", "Access controls"],
+    "note": "Teaches configuring OpenLDAP server, handling LDIF files, access controls, object classes, and commands like slapadd, slapcat. Useful for creating lab-wide user directories for authentication and authorization."
+  },
+  {
+    "n": 46,
+    "title": "Email Services with Postfix",
+    "math": ["Aliases", "TLS", "Relays"],
+    "note": "Covers configuring Postfix for email delivery, including TLS encryption, local/remote aliases, relay permissions, and logging. Used for automated notification in job scheduling or system monitoring pipelines."
+  },
+  {
+    "n": 47,
+    "title": "Email Filtering Mechanisms",
+    "math": ["Sieve", "Procmail"],
+    "note": "Focuses on Sieve mail filter rules (used with Dovecot) for automating mail sorting, discards, and vacation messages. Explains concepts in the context of system update alerts and job completion emails."
+  },
+  {
+    "n": 48,
+    "title": "POP3 and IMAP Server Configuration",
+    "math": ["Mailbox access", "TLS setup"],
+    "note": "Shows installing and configuring Dovecot for POP3/IMAP services, enabling TLS, setting mailbox formats, and user management. Practice includes receiving system-generated reports for cron jobs."
+  },
+  {
+    "n": 49,
+    "title": "Network Router and NAT Configuration",
+    "math": ["IP forwarding", "Packet filtering"],
+    "note": "Explains iptables rules for configuring Linux as a router, IP forwarding, NAT, and port forwarding. Details for securing model inference services accessible only within designated subnets."
+  },
+  {
+    "n": 50,
+    "title": "FTP Server Deployment",
+    "math": ["Anonymous uploads", "Passive/active transfers"],
+    "note": "Details the setup of FTP servers (vsftpd, Pure-FTPd), configuration for anonymous/public access, transfer modes, and security implications. Applied to hosting open-access datasets for deep learning."
+  },
+  {
+    "n": 51,
+    "title": "OpenSSH Daemon Security",
+    "math": ["Key-based login", "X11 forwarding"],
+    "note": "Teaches configuring sshd_config for OpenSSH, managing key-based authentication, disabling password/root login, enabling X11 forwarding for GUI apps. Recommended for secure remote job submission environments."
+  },
+  {
+    "n": 52,
+    "title": "System Security Monitoring",
+    "math": ["Port scanning", "IDS deployment"],
+    "note": "Covers nmap use for port scanning, fail2ban for intrusion prevention, and deploying IDS solutions (e.g., Snort, OpenVAS). Practice securing job queues against unauthorized access in a multi-user PyTorch cluster."
+  },
+  {
+    "n": 53,
+    "title": "Virtual Private Network (VPN) Setup",
+    "math": ["OpenVPN", "Point-to-point tunnels"],
+    "note": "Introduces OpenVPN configuration for secure, encrypted site-to-site and point-to-point connections. Explains creating and distributing client configuration for off-site researcher access to internal resources."
+  }
+]
