@@ -1,0 +1,362 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to NGINX and Web Server Architecture",
+    "math": "Basic statistics for performance metrics",
+    "note": "Teach the history and origin of NGINX, its role as HTTP server and reverse proxy. Cover the fundamental architecture, event-driven model, and master-worker process structure. Include comparison with Apache's threading model and explain why NGINX excels at handling high concurrency with low memory usage."
+  },
+  {
+    "n": 2,
+    "title": "NGINX vs Apache: Architectural Differences",
+    "math": "Complexity analysis (Big O notation)",
+    "note": "Deep dive into architectural differences between NGINX and Apache. Teach event-driven vs process-driven models, memory consumption patterns, and connection handling mechanisms. Include performance benchmarking concepts and when to choose each server."
+  },
+  {
+    "n": 3,
+    "title": "Cloud Infrastructure Setup for NGINX",
+    "math": "Basic cloud resource calculations",
+    "note": "Teach how to provision cloud instances on AWS, Azure, or GCP for NGINX deployment. Cover instance sizing, network configuration, security groups, and SSH access setup. Include hands-on exercises for creating Ubuntu and CentOS virtual machines."
+  },
+  {
+    "n": 4,
+    "title": "Installing NGINX on Ubuntu via Package Manager",
+    "math": "Version numbering systems",
+    "note": "Teach installation of NGINX using apt package manager on Ubuntu. Cover repository configuration, package verification, and initial service management. Include systemctl commands, checking installation status, and verifying default configuration."
+  },
+  {
+    "n": 5,
+    "title": "Installing NGINX on CentOS via EPEL Repository",
+    "math": "Repository priority calculations",
+    "note": "Teach NGINX installation on CentOS/RHEL systems using EPEL repository. Cover yum/dnf package management, SELinux considerations, and firewall configuration. Include troubleshooting common installation issues."
+  },
+  {
+    "n": 6,
+    "title": "Building NGINX from Source Code",
+    "math": "Binary size optimization calculations",
+    "note": "Teach compilation of NGINX from source code. Cover downloading source, configuring build options, selecting modules, and optimization flags. Include hands-on exercises for custom builds with specific modules enabled or disabled."
+  },
+  {
+    "n": 7,
+    "title": "Configuring NGINX as a System Service",
+    "math": "Process priority and scheduling",
+    "note": "Teach how to register NGINX as a system service using systemd. Cover service file creation, auto-start configuration, and service dependency management. Include exercises for start, stop, reload, and status checking operations."
+  },
+  {
+    "n": 8,
+    "title": "Network Protocols and OSI Model",
+    "math": "Port number ranges and subnetting",
+    "note": "Teach fundamental networking concepts including TCP/IP, UDP, and the OSI model layers. Cover how NGINX operates at different layers and protocol-specific configurations. Include practical examples of protocol selection for different use cases."
+  },
+  {
+    "n": 9,
+    "title": "HTTP Protocol Working Model",
+    "math": "HTTP version numbering (1.0, 1.1, 2.0)",
+    "note": "Teach the HTTP request-response cycle, methods (GET, POST, PUT, DELETE), and headers. Cover stateless nature of HTTP, persistent connections, and pipelining. Include hands-on analysis of HTTP traffic using developer tools."
+  },
+  {
+    "n": 10,
+    "title": "HTTP Request Elements and Headers",
+    "math": "Header size calculations",
+    "note": "Teach detailed structure of HTTP requests including request line, headers, and body. Cover important headers like Host, User-Agent, Accept, and Content-Type. Include exercises for crafting and analyzing custom HTTP requests."
+  },
+  {
+    "n": 11,
+    "title": "HTTP Response Status Codes",
+    "math": "Status code categorization (1xx-5xx)",
+    "note": "Teach all HTTP response status codes categories and their meanings. Cover common codes like 200, 301, 404, 500, and 502. Include practical examples of triggering and handling different status codes in NGINX configurations."
+  },
+  {
+    "n": 12,
+    "title": "NGINX Configuration File Structure",
+    "math": "Hierarchical tree structures",
+    "note": "Teach NGINX configuration syntax including directives, contexts, and blocks. Cover main context, events context, http context, and server context. Include exercises for writing and validating basic configuration files."
+  },
+  {
+    "n": 13,
+    "title": "NGINX Configuration Terminology and Directives",
+    "math": "Regular expression patterns",
+    "note": "Teach core NGINX directives and their scopes. Cover inheritance rules, directive parameters, and configuration best practices. Include practical examples of commonly used directives like listen, server_name, and root."
+  },
+  {
+    "n": 14,
+    "title": "Creating Virtual Hosts in NGINX",
+    "math": "Domain name resolution basics",
+    "note": "Teach how to configure multiple virtual hosts on single NGINX instance. Cover server blocks, port-based and name-based virtual hosting. Include hands-on creation of multiple websites with different domains on same server."
+  },
+  {
+    "n": 15,
+    "title": "Serving Static Content",
+    "math": "File size and bandwidth calculations",
+    "note": "Teach configuration for serving static files like HTML, CSS, JavaScript, and images. Cover root and alias directives, index files, and directory listing. Include optimization techniques for static content delivery."
+  },
+  {
+    "n": 16,
+    "title": "Location Block Context Configuration",
+    "math": "Pattern matching algorithms",
+    "note": "Teach location block matching rules including exact, prefix, and regex matching. Cover location priority and selection algorithm. Include complex examples with multiple location blocks and their precedence."
+  },
+  {
+    "n": 17,
+    "title": "NGINX Variables and Built-in Variables",
+    "math": "String interpolation concepts",
+    "note": "Teach usage of NGINX variables including built-in variables like $host, $uri, $args. Cover custom variable definition and manipulation. Include practical examples of dynamic configuration using variables."
+  },
+  {
+    "n": 18,
+    "title": "Rewrite and Return Directives",
+    "math": "URL pattern matching with regex",
+    "note": "Teach URL rewriting and redirection techniques. Cover rewrite rules, flags, and return directive for redirections. Include exercises for implementing SEO-friendly URLs and handling legacy URL structures."
+  },
+  {
+    "n": 19,
+    "title": "Try_files Directive and Request Processing",
+    "math": "Sequential search algorithms",
+    "note": "Teach the try_files directive for efficient file serving and fallback mechanisms. Cover request processing order and internal redirects. Include practical examples for single-page applications and CMS configurations."
+  },
+  {
+    "n": 20,
+    "title": "NGINX Access and Error Logging",
+    "math": "Log rotation size calculations",
+    "note": "Teach logging configuration including access logs and error logs. Cover log formats, custom log formats, and conditional logging. Include exercises for creating specialized logs for debugging and monitoring."
+  },
+  {
+    "n": 21,
+    "title": "Custom Access Log Formats",
+    "math": "Data parsing and formatting",
+    "note": "Teach creation of custom log formats for specific monitoring needs. Cover log variables, JSON formatting, and structured logging. Include integration examples with log analysis tools."
+  },
+  {
+    "n": 22,
+    "title": "Dynamic Request Handling with Upstream",
+    "math": "Request distribution algorithms",
+    "note": "Teach how NGINX handles dynamic requests to application servers. Cover FastCGI, uWSGI, and proxy_pass configurations. Include setup of PHP-FPM, Python, and Node.js application backends."
+  },
+  {
+    "n": 23,
+    "title": "NGINX Performance Tuning - Worker Processes",
+    "math": "CPU core utilization calculations",
+    "note": "Teach optimization of worker processes and connections. Cover worker_processes, worker_connections, and multi_accept directives. Include performance testing and benchmarking techniques."
+  },
+  {
+    "n": 24,
+    "title": "NGINX Performance Tuning - Buffer Settings",
+    "math": "Memory allocation optimization",
+    "note": "Teach buffer size optimization for various scenarios. Cover client_body_buffer_size, client_header_buffer_size, and other buffer-related directives. Include memory usage monitoring and optimization strategies."
+  },
+  {
+    "n": 25,
+    "title": "Adding and Managing NGINX Modules",
+    "math": "Module dependency resolution",
+    "note": "Teach how to add dynamic and static modules to NGINX. Cover module compilation, loading, and configuration. Include examples of popular third-party modules like ModSecurity and PageSpeed."
+  },
+  {
+    "n": 26,
+    "title": "Introduction to Reverse Proxy Architecture",
+    "math": "Network latency calculations",
+    "note": "Teach reverse proxy concepts and benefits. Cover the difference between forward and reverse proxies, use cases, and architectural patterns. Include diagrams and real-world scenarios."
+  },
+  {
+    "n": 27,
+    "title": "Configuring NGINX as Reverse Proxy",
+    "math": "Request routing algorithms",
+    "note": "Teach proxy_pass configuration and related directives. Cover header manipulation, timeouts, and buffering settings. Include hands-on setup of reverse proxy for various application servers."
+  },
+  {
+    "n": 28,
+    "title": "X-Real-IP and X-Forwarded Headers",
+    "math": "IP address notation and subnetting",
+    "note": "Teach proper handling of client IP addresses in reverse proxy setup. Cover X-Real-IP, X-Forwarded-For, and X-Forwarded-Proto headers. Include security considerations and IP spoofing prevention."
+  },
+  {
+    "n": 29,
+    "title": "Client-Side Caching Configuration",
+    "math": "Cache expiration time calculations",
+    "note": "Teach browser caching strategies using Cache-Control and Expires headers. Cover cache validation with ETags and Last-Modified. Include practical examples for different content types."
+  },
+  {
+    "n": 30,
+    "title": "Gzip Compression Configuration",
+    "math": "Compression ratio calculations",
+    "note": "Teach enabling and configuring gzip compression. Cover gzip_types, gzip_comp_level, and gzip_vary directives. Include performance impact analysis and optimal compression settings."
+  },
+  {
+    "n": 31,
+    "title": "NGINX Microcaching - Basic Setup",
+    "math": "Cache hit ratio calculations",
+    "note": "Teach microcaching concept for dynamic content. Cover proxy_cache configuration, cache keys, and cache zones. Include setup for short-duration caching of dynamic responses."
+  },
+  {
+    "n": 32,
+    "title": "NGINX Microcaching - Advanced Configuration",
+    "math": "Cache invalidation strategies",
+    "note": "Teach advanced caching techniques including cache bypass, cache purging, and conditional caching. Cover cache locking and stale content serving. Include real-world caching strategies."
+  },
+  {
+    "n": 33,
+    "title": "SSL/TLS and HTTPS Configuration",
+    "math": "Cryptographic key sizes",
+    "note": "Teach SSL/TLS certificate installation and HTTPS configuration. Cover certificate generation, cipher suites, and SSL protocols. Include Let's Encrypt automation and certificate renewal."
+  },
+  {
+    "n": 34,
+    "title": "HTTP/2 Protocol Implementation",
+    "math": "Multiplexing and stream priorities",
+    "note": "Teach enabling and configuring HTTP/2 in NGINX. Cover benefits, requirements, and compatibility considerations. Include performance comparisons and server push configuration."
+  },
+  {
+    "n": 35,
+    "title": "Rate Limiting and DDoS Protection",
+    "math": "Request rate calculations",
+    "note": "Teach rate limiting techniques to prevent abuse. Cover limit_req_zone, limit_conn_zone, and burst parameters. Include practical examples of protecting against various attack patterns."
+  },
+  {
+    "n": 36,
+    "title": "Load Balancing Fundamentals",
+    "math": "Load distribution algorithms",
+    "note": "Teach load balancing concepts and algorithms. Cover round-robin, least connections, IP hash, and weighted distribution. Include architectural patterns and high availability considerations."
+  },
+  {
+    "n": 37,
+    "title": "Configuring Basic Load Balancer",
+    "math": "Server weight calculations",
+    "note": "Teach upstream server configuration for load balancing. Cover server directives, backup servers, and failure handling. Include hands-on setup of multi-server load balancing."
+  },
+  {
+    "n": 38,
+    "title": "Health Checks - Passive Monitoring",
+    "math": "Failure rate statistics",
+    "note": "Teach passive health checking based on request failures. Cover max_fails and fail_timeout parameters. Include monitoring and alerting strategies for backend server health."
+  },
+  {
+    "n": 39,
+    "title": "Health Checks - Active Monitoring",
+    "math": "Health check interval optimization",
+    "note": "Teach active health checking configuration (NGINX Plus feature). Cover health check URIs, expected responses, and check intervals. Include implementation alternatives for NGINX OSS."
+  },
+  {
+    "n": 40,
+    "title": "HTTP Cache Architecture",
+    "math": "Cache storage calculations",
+    "note": "Teach comprehensive caching architecture in NGINX. Cover cache hierarchies, cache zones, and inactive timers. Include cache storage planning and performance considerations."
+  },
+  {
+    "n": 41,
+    "title": "Cache Control Headers - Request Side",
+    "math": "Header precedence rules",
+    "note": "Teach handling of client cache control headers. Cover Cache-Control directives like no-cache, no-store, and max-age. Include debugging techniques for cache behavior."
+  },
+  {
+    "n": 42,
+    "title": "Cache Control Headers - Response Side",
+    "math": "Cache lifetime calculations",
+    "note": "Teach setting appropriate cache headers for responses. Cover public vs private caching, revalidation, and vary headers. Include CDN integration considerations."
+  },
+  {
+    "n": 43,
+    "title": "Conditional Requests and Cache Validation",
+    "math": "Timestamp comparisons",
+    "note": "Teach If-Modified-Since and If-None-Match conditional requests. Cover 304 Not Modified responses and bandwidth savings. Include implementation of efficient cache validation strategies."
+  },
+  {
+    "n": 44,
+    "title": "IP-Based Access Control",
+    "math": "CIDR notation and subnet masks",
+    "note": "Teach IP whitelisting and blacklisting techniques. Cover allow and deny directives, geo module usage. Include examples of geographic restrictions and internal network access."
+  },
+  {
+    "n": 45,
+    "title": "Authentication and Authorization",
+    "math": "Hash function basics",
+    "note": "Teach basic HTTP authentication setup. Cover htpasswd file creation, auth_basic directive, and authorization strategies. Include integration with external authentication systems."
+  },
+  {
+    "n": 46,
+    "title": "NGINX Plus API and Live Monitoring",
+    "math": "Real-time metrics calculations",
+    "note": "Teach NGINX Plus monitoring API features. Cover status zones, live activity monitoring, and metrics collection. Include dashboard setup and custom monitoring solutions."
+  },
+  {
+    "n": 47,
+    "title": "Dynamic Configuration with NGINX Plus API",
+    "math": "Configuration versioning",
+    "note": "Teach dynamic upstream server management via API. Cover adding/removing servers, adjusting weights without reload. Include automation examples and CI/CD integration."
+  },
+  {
+    "n": 48,
+    "title": "Web Application Firewall Integration",
+    "math": "Rule scoring algorithms",
+    "note": "Teach ModSecurity or similar WAF integration. Cover OWASP Core Rule Set, custom rules, and false positive handling. Include security testing and rule tuning procedures."
+  },
+  {
+    "n": 49,
+    "title": "WebSocket Proxying Configuration",
+    "math": "Connection upgrade protocols",
+    "note": "Teach WebSocket support configuration in NGINX. Cover connection upgrade headers, timeout settings, and load balancing WebSocket connections. Include real-time application examples."
+  },
+  {
+    "n": 50,
+    "title": "Container Deployment with Docker",
+    "math": "Container resource limits",
+    "note": "Teach NGINX deployment using Docker containers. Cover Dockerfile creation, volume mounting for configurations, and container networking. Include Docker Compose multi-container setups."
+  },
+  {
+    "n": 51,
+    "title": "Monitoring Integration - Prometheus and Grafana",
+    "math": "Time series data aggregation",
+    "note": "Teach metrics export to Prometheus and visualization in Grafana. Cover nginx-vts-exporter, custom metrics, and dashboard creation. Include alerting rules and SLA monitoring."
+  },
+  {
+    "n": 52,
+    "title": "Log Analysis and Processing",
+    "math": "Log parsing regular expressions",
+    "note": "Teach log analysis using tools like GoAccess, ELK stack, or AWStats. Cover log shipping, centralized logging, and real-time analysis. Include security event detection from logs."
+  },
+  {
+    "n": 53,
+    "title": "High Availability and Failover",
+    "math": "Availability percentage calculations",
+    "note": "Teach high availability configurations with keepalived or similar tools. Cover active-passive and active-active setups, VRRP configuration. Include disaster recovery planning."
+  },
+  {
+    "n": 54,
+    "title": "Performance Testing and Benchmarking",
+    "math": "Statistical analysis of results",
+    "note": "Teach load testing with tools like Apache Bench, wrk, or JMeter. Cover metrics interpretation, bottleneck identification, and capacity planning. Include creating realistic load test scenarios."
+  },
+  {
+    "n": 55,
+    "title": "Security Best Practices",
+    "math": "Security scoring metrics",
+    "note": "Teach comprehensive security hardening for NGINX. Cover hiding version numbers, secure headers, file upload restrictions. Include security scanning and vulnerability assessment."
+  },
+  {
+    "n": 56,
+    "title": "Troubleshooting Common Issues",
+    "math": "Error rate analysis",
+    "note": "Teach systematic troubleshooting approach for NGINX issues. Cover debugging techniques, common error patterns, and resolution strategies. Include tools like strace, tcpdump for deep debugging."
+  },
+  {
+    "n": 57,
+    "title": "Configuration Management and Version Control",
+    "math": "Configuration diff algorithms",
+    "note": "Teach configuration management using Git, configuration templating, and automated deployment. Cover rollback procedures and configuration testing. Include Infrastructure as Code practices."
+  },
+  {
+    "n": 58,
+    "title": "Migration Strategies from Apache",
+    "math": "Performance comparison metrics",
+    "note": "Teach migration planning and execution from Apache to NGINX. Cover .htaccess conversion, rewrite rule translation, and module equivalents. Include rollback planning and gradual migration strategies."
+  },
+  {
+    "n": 59,
+    "title": "Advanced Use Cases and Architecture Patterns",
+    "math": "Scalability calculations",
+    "note": "Teach complex architectural patterns using NGINX. Cover microservices routing, API gateway patterns, and edge computing scenarios. Include case studies from large-scale deployments."
+  },
+  {
+    "n": 60,
+    "title": "Future Trends and NGINX Ecosystem",
+    "math": "Technology adoption curves",
+    "note": "Teach emerging features and future directions of NGINX. Cover QUIC/HTTP3 support, service mesh integration, and cloud-native deployments. Include career development paths and certification preparation."
+  }
+]
