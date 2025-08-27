@@ -1,0 +1,242 @@
+[
+  {
+    "n": 1,
+    "title": "Development Environment Setup for FFmpeg",
+    "math": "None",
+    "note": "Teach installation of FFmpeg libraries on different platforms (Windows, Linux, macOS). Cover setting up build tools including CMake, GCC/Clang compilers, and pkg-config. Include hands-on exercises for verifying FFmpeg installation using command line tools and creating a basic CMake project structure."
+  },
+  {
+    "n": 2,
+    "title": "C/C++ Prerequisites and Memory Management",
+    "math": "Basic arithmetic and pointer arithmetic",
+    "note": "Review essential C/C++ concepts including pointers, memory allocation/deallocation, structures, and function pointers. Teach pointer arithmetic concepts. Cover memory management best practices specific to multimedia programming and introduce RAII concepts for C++ wrapper classes."
+  },
+  {
+    "n": 3,
+    "title": "Digital Video Fundamentals",
+    "math": "Matrix operations and color space transformations",
+    "note": "Teach video basics including pixels, frames, resolution, and frame rates. Cover color spaces (RGB, YUV) and their mathematical transformations. Explain concepts of luminance and chrominance, subsampling (4:2:0, 4:2:2, 4:4:4), and bit depth."
+  },
+  {
+    "n": 4,
+    "title": "Digital Audio Fundamentals",
+    "math": "Fourier transforms and sampling theory",
+    "note": "Cover audio concepts including sampling rate, bit depth, channels, and PCM data. Teach Nyquist theorem and sampling theory mathematics. Explain audio formats, interleaved vs planar data layouts, and basic digital signal processing concepts."
+  },
+  {
+    "n": 5,
+    "title": "Codecs and Compression Theory",
+    "math": "Information theory and entropy coding",
+    "note": "Explain codec fundamentals, difference between lossy and lossless compression. Teach entropy coding basics, Huffman coding principles. Cover common video codecs (H.264, H.265, VP9, AV1) and audio codecs (AAC, MP3, Opus) with their characteristics."
+  },
+  {
+    "n": 6,
+    "title": "Container Formats and Multiplexing",
+    "math": "None",
+    "note": "Teach container format concepts (MP4, MKV, WebM, TS). Explain multiplexing and demultiplexing of audio/video streams. Cover metadata storage, subtitle tracks, and container-specific features. Include exercises on identifying container properties."
+  },
+  {
+    "n": 7,
+    "title": "FFmpeg Library Architecture Overview",
+    "math": "None",
+    "note": "Introduce FFmpeg library components: libavformat, libavcodec, libavutil, libavfilter, libswscale, libswresample. Explain the relationship between libraries and their specific purposes. Cover the data flow pipeline from input file to decoded frames."
+  },
+  {
+    "n": 8,
+    "title": "AVFormatContext and File Operations",
+    "math": "None",
+    "note": "Teach AVFormatContext structure and its role as container abstraction. Cover avformat_open_input(), avformat_find_stream_info(), and avformat_close_input(). Include exercises for opening media files and extracting format information."
+  },
+  {
+    "n": 9,
+    "title": "AVStream and Stream Discovery",
+    "math": "None",
+    "note": "Explain AVStream structure representing audio/video/subtitle streams. Teach stream enumeration, identifying stream types, and extracting stream parameters. Cover av_find_best_stream() function and stream selection strategies."
+  },
+  {
+    "n": 10,
+    "title": "AVCodec and Codec Context",
+    "math": "None",
+    "note": "Teach AVCodec structure and AVCodecContext initialization. Cover avcodec_find_decoder(), avcodec_alloc_context3(), avcodec_parameters_to_context(). Include exercises for setting up decoder contexts for different stream types."
+  },
+  {
+    "n": 11,
+    "title": "AVPacket Handling and Reading",
+    "math": "None",
+    "note": "Explain AVPacket as compressed data container. Teach av_read_frame() for reading packets, packet allocation/deallocation with av_packet_alloc() and av_packet_free(). Cover packet properties including pts, dts, duration, and stream_index."
+  },
+  {
+    "n": 12,
+    "title": "Decoding Video Frames",
+    "math": "None",
+    "note": "Teach video decoding process using avcodec_send_packet() and avcodec_receive_frame(). Explain AVFrame structure for uncompressed video data. Cover frame properties including width, height, format, and data pointers."
+  },
+  {
+    "n": 13,
+    "title": "Decoding Audio Frames",
+    "math": "Signal processing basics",
+    "note": "Cover audio decoding specifics, handling different audio formats and channel layouts. Teach signal processing basics relevant to audio. Explain planar vs interleaved audio data access patterns and sample format conversions."
+  },
+  {
+    "n": 14,
+    "title": "Pixel Format Conversions with SwScale",
+    "math": "Color space conversion matrices",
+    "note": "Teach libswscale for pixel format conversion and scaling. Cover sws_getContext(), sws_scale(), and context cleanup. Include color space conversion mathematics. Practice converting between RGB, YUV, and other pixel formats."
+  },
+  {
+    "n": 15,
+    "title": "Audio Resampling with SwResample",
+    "math": "Digital signal processing and interpolation",
+    "note": "Explain libswresample for audio format conversion and resampling. Teach DSP concepts including interpolation and decimation. Cover swr_alloc_set_opts(), swr_init(), swr_convert() for sample rate and format conversions."
+  },
+  {
+    "n": 16,
+    "title": "Time Base and Timestamp Handling",
+    "math": "Rational number arithmetic",
+    "note": "Explain time_base as rational numbers for timestamp precision. Teach PTS/DTS concepts and their calculations using rational arithmetic. Cover av_rescale_q() for timestamp conversions between different time bases."
+  },
+  {
+    "n": 17,
+    "title": "Seeking and Frame Navigation",
+    "math": "Binary search algorithms",
+    "note": "Teach av_seek_frame() and avformat_seek_file() for seeking operations. Explain binary search principles in seeking. Cover keyframe concepts, seeking flags, and accurate frame seeking strategies."
+  },
+  {
+    "n": 18,
+    "title": "Memory Management in libav",
+    "math": "None",
+    "note": "Cover FFmpeg memory allocation functions (av_malloc, av_free). Explain reference counting for frames and packets. Teach proper cleanup patterns and avoiding memory leaks in multimedia applications."
+  },
+  {
+    "n": 19,
+    "title": "Error Handling and Logging",
+    "math": "None",
+    "note": "Teach FFmpeg error codes and av_strerror() for error messages. Cover logging system with av_log() and log levels. Include debugging techniques and common error patterns in libav programming."
+  },
+  {
+    "n": 20,
+    "title": "Basic Video Player Implementation",
+    "math": "Frame timing and synchronization",
+    "note": "Build a simple video player combining previous concepts. Teach frame timing calculations and presentation timestamps. Cover basic playback loop, frame display timing, and audio-video synchronization basics."
+  },
+  {
+    "n": 21,
+    "title": "Encoding Fundamentals",
+    "math": "Rate control mathematics",
+    "note": "Introduce encoding concepts with avcodec_find_encoder(). Teach bitrate control, quality settings, and rate control mathematics. Cover encoder context setup and parameter configuration for different codecs."
+  },
+  {
+    "n": 22,
+    "title": "Encoding Video Frames",
+    "math": "None",
+    "note": "Teach video encoding workflow with avcodec_send_frame() and avcodec_receive_packet(). Cover frame preparation, setting frame properties, and handling encoder delay. Include exercises encoding raw frames to compressed packets."
+  },
+  {
+    "n": 23,
+    "title": "Encoding Audio Samples",
+    "math": "None",
+    "note": "Cover audio encoding specifics, frame size requirements for audio codecs. Teach audio frame preparation and buffering strategies. Include exercises for encoding PCM audio to compressed formats."
+  },
+  {
+    "n": 24,
+    "title": "Muxing and Output Files",
+    "math": "None",
+    "note": "Teach avformat_alloc_output_context2() for output format contexts. Cover stream creation, header writing with avformat_write_header(), and trailer writing. Include packet interleaving and muxing strategies."
+  },
+  {
+    "n": 25,
+    "title": "Remuxing Implementation",
+    "math": "None",
+    "note": "Build a complete remuxer changing container format without re-encoding. Teach stream copying, timestamp adjustment, and bitstream filtering. Cover practical use cases like MP4 to MKV conversion."
+  },
+  {
+    "n": 26,
+    "title": "Basic Transcoding Pipeline",
+    "math": "None",
+    "note": "Implement transcoding combining decoding and encoding. Teach format negotiation between decoder and encoder. Cover handling of different frame rates, resolutions, and codec parameters."
+  },
+  {
+    "n": 27,
+    "title": "AVFilter Basics",
+    "math": "Digital filter theory",
+    "note": "Introduce libavfilter for video/audio processing. Teach filter graph concepts and basic digital filter theory. Cover filter chain creation with simple filters like scale, crop, and overlay."
+  },
+  {
+    "n": 28,
+    "title": "Complex Filter Graphs",
+    "math": "Graph theory basics",
+    "note": "Teach complex filter graph construction with multiple inputs/outputs. Cover graph theory concepts applicable to filter chains. Include examples like picture-in-picture, crossfade, and audio mixing."
+  },
+  {
+    "n": 29,
+    "title": "Video Effects and Transitions",
+    "math": "Linear algebra for transformations",
+    "note": "Implement video effects using filters (blur, rotate, color adjustment). Teach transformation matrices for geometric effects. Cover transition effects between video segments using filter graphs."
+  },
+  {
+    "n": 30,
+    "title": "Audio Processing and Effects",
+    "math": "Digital signal processing",
+    "note": "Cover audio filters for volume, equalizer, and effects. Teach DSP concepts for audio filtering. Include implementations of fade-in/fade-out, normalization, and audio mixing."
+  },
+  {
+    "n": 31,
+    "title": "Hardware Acceleration Basics",
+    "math": "None",
+    "note": "Introduce hardware acceleration concepts (VAAPI, NVDEC, QSV). Teach hardware context creation and device selection. Cover the benefits and limitations of hardware-accelerated decoding/encoding."
+  },
+  {
+    "n": 32,
+    "title": "CUDA/NVENC Integration",
+    "math": "Parallel computing basics",
+    "note": "Teach NVIDIA hardware acceleration setup for FFmpeg. Cover parallel computing concepts relevant to GPU processing. Include practical examples using NVDEC for decoding and NVENC for encoding."
+  },
+  {
+    "n": 33,
+    "title": "Streaming and Network Protocols",
+    "math": "Network bandwidth calculations",
+    "note": "Cover streaming protocols (RTMP, HLS, DASH) with FFmpeg. Teach bandwidth calculations and adaptive bitrate concepts. Include examples of live streaming and receiving network streams."
+  },
+  {
+    "n": 34,
+    "title": "Adaptive Bitrate Streaming",
+    "math": "Rate adaptation algorithms",
+    "note": "Implement multi-bitrate encoding for adaptive streaming. Teach rate adaptation mathematics and algorithms. Cover manifest file generation for HLS/DASH and segment creation."
+  },
+  {
+    "n": 35,
+    "title": "Subtitle and Metadata Handling",
+    "math": "None",
+    "note": "Teach subtitle stream processing (SRT, ASS, WebVTT). Cover metadata reading and writing in containers. Include exercises for subtitle extraction, conversion, and burning into video."
+  },
+  {
+    "n": 36,
+    "title": "Multi-threading in FFmpeg",
+    "math": "Concurrent programming theory",
+    "note": "Cover FFmpeg's threading capabilities for codecs and filters. Teach concurrent programming concepts and thread safety. Include frame-level and slice-level parallelism configuration."
+  },
+  {
+    "n": 37,
+    "title": "Custom I/O and Protocols",
+    "math": "None",
+    "note": "Teach custom I/O context creation with avio_alloc_context(). Cover implementing custom protocols and data sources. Include examples reading from memory buffers or custom streaming sources."
+  },
+  {
+    "n": 38,
+    "title": "Performance Optimization",
+    "math": "Complexity analysis",
+    "note": "Cover profiling and optimization techniques for libav applications. Teach algorithmic complexity analysis for multimedia operations. Include buffer management, zero-copy techniques, and codec-specific optimizations."
+  },
+  {
+    "n": 39,
+    "title": "Building Cross-platform Applications",
+    "math": "None",
+    "note": "Teach cross-platform compilation strategies for FFmpeg applications. Cover platform-specific considerations and build systems. Include packaging and deployment strategies for different operating systems."
+  },
+  {
+    "n": 40,
+    "title": "Complete Video Editor Project",
+    "math": "None",
+    "note": "Build a comprehensive video editing application combining all concepts. Implement features like cutting, concatenation, effects, and format conversion. Include GUI integration considerations and user interaction patterns."
+  }
+]
