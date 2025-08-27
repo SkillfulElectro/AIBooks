@@ -1,0 +1,294 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Qt and its Ecosystem",
+    "math": "Set theory",
+    "note": "Provide a high-level overview of the Qt framework, its history, and cross-platform capabilities. Explain the distinction between the Qt Widgets and Qt Quick modules. Discuss the open-source (LGPL) and commercial licensing models. The context is the Qt 5.15 framework used with the C++ language."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up the Qt Development Environment",
+    "math": "Boolean logic",
+    "note": "Guide through the installation of the Qt 5.15 SDK, including Qt Creator IDE and compilers (e.g., MinGW on Windows, Clang on macOS). Demonstrate how to configure a toolkit (a 'Kit') by associating a Qt version, a compiler, and a debugger. This setup is for C++ development with Qt 5.15."
+  },
+  {
+    "n": 3,
+    "title": "Creating a \"Hello, World!\" Widgets Application",
+    "math": "Basic arithmetic",
+    "note": "Create a new Qt Widgets Application project from a template in Qt Creator. Explain the purpose of the main.cpp, mainwindow.h, mainwindow.cpp, and mainwindow.ui files. Build and run the application to show a basic empty window. This lesson uses the Qt 5.15 framework with C++."
+  },
+  {
+    "n": 4,
+    "title": "Understanding qmake Project Files (.pro)",
+    "math": "Set theory, String manipulation",
+    "note": "Introduce the qmake build system and the structure of a .pro file. Explain key variables like QT, TARGET, TEMPLATE, SOURCES, and HEADERS. Show how to add files to a project and include Qt modules like 'widgets' or 'network'. The context is managing C++ project builds with qmake for Qt 5.15."
+  },
+  {
+    "n": 5,
+    "title": "The QObject and Parent-Child Hierarchy",
+    "math": "Tree data structures",
+    "note": "Explain the role of QObject as the base class for most Qt classes. Teach the concept of parent-child relationships for automatic memory management, where deleting a parent QObject also deletes its children. This core concept is demonstrated using C++ within the Qt 5.15 framework."
+  },
+  {
+    "n": 6,
+    "title": "Introduction to Signals and Slots",
+    "math": "Graph theory",
+    "note": "Explain Qt's core mechanism for type-safe, decoupled object communication: signals and slots. Demonstrate how to define a signal and a slot in a C++ class header, and how to connect them using the QObject::connect syntax. This lesson uses the Qt 5.15 framework with C++."
+  },
+  {
+    "n": 7,
+    "title": "The Meta-Object Compiler (moc)",
+    "math": "Code generation algorithms",
+    "note": "Explain the purpose of the Meta-Object Compiler (moc) and the Q_OBJECT macro. Describe how 'moc' processes C++ headers containing the Q_OBJECT macro to generate additional C++ code that enables signals, slots, and other introspection features. This is a fundamental concept of the Qt 5.15 C++ framework."
+  },
+  {
+    "n": 8,
+    "title": "Event Handling and the Event Loop",
+    "math": "Queueing theory",
+    "note": "Introduce the Qt event system and the central role of QCoreApplication's event loop. Explain how user interactions (mouse clicks, key presses) and other events are placed in an event queue and dispatched to the target QObject. Show how to reimplement an event handler like 'mousePressEvent'. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 9,
+    "title": "Layout Management with Box Layouts",
+    "math": "Linear geometry",
+    "note": "Teach how to arrange widgets in a window using QHBoxLayout (horizontal) and QVBoxLayout (vertical). Demonstrate adding widgets, spacers, and stretches to create flexible and resizing user interfaces. This lesson uses the visual UI Designer in Qt Creator for a Qt 5.15 Widgets application."
+  },
+  {
+    "n": 10,
+    "title": "Layout Management with Grid and Form Layouts",
+    "math": "Matrix algebra, Coordinate geometry",
+    "note": "Demonstrate how to arrange widgets in a two-dimensional grid using QGridLayout. Introduce QFormLayout as a specialized two-column layout for creating input forms (e.g., label-field pairs). This lesson uses the visual UI Designer in Qt Creator for a Qt 5.15 Widgets application."
+  },
+  {
+    "n": 11,
+    "title": "Basic Input Widgets: QPushButton and QLineEdit",
+    "math": "Boolean logic",
+    "note": "Introduce two fundamental widgets for user interaction. Show how to use QPushButton to trigger actions via its 'clicked()' signal. Demonstrate QLineEdit for single-line text input and how to retrieve its content. This lesson uses C++ and Qt Designer within a Qt 5.15 Widgets application."
+  },
+  {
+    "n": 12,
+    "title": "Display Widgets: QLabel and QTextEdit",
+    "math": "String manipulation",
+    "note": "Teach how to display static and rich text using QLabel, including how to display images. Introduce QTextEdit for multi-line plain or rich text display and editing. This lesson uses C++ and Qt Designer within a Qt 5.15 Widgets application."
+  },
+  {
+    "n": 13,
+    "title": "Selection Widgets: QCheckBox and QRadioButton",
+    "math": "Boolean algebra",
+    "note": "Explain how to use QCheckBox for non-exclusive on/off options and how to check its state. Demonstrate QRadioButton for creating groups of mutually exclusive options, using a layout or QButtonGroup to manage the exclusivity. This lesson uses Qt 5.15 Widgets with C++."
+  },
+  {
+    "n": 14,
+    "title": "Choice Widgets: QComboBox and QSlider",
+    "math": "Set theory, Linear interpolation",
+    "note": "Teach how to use QComboBox to present a drop-down list of items for user selection. Introduce QSlider for selecting a value from a defined integer range. Show how to connect to signals to react to value changes. This lesson uses Qt 5.15 Widgets with C++."
+  },
+  {
+    "n": 15,
+    "title": "Container Widgets: QGroupBox and QTabWidget",
+    "math": "Set theory",
+    "note": "Demonstrate how to visually group related widgets using QGroupBox with a title. Teach how to organize a user interface into a series of pages using QTabWidget, where the user can switch between tabs. This lesson uses Qt Designer for a Qt 5.15 Widgets application."
+  },
+  {
+    "n": 16,
+    "title": "Building a Main Window with QMainWindow",
+    "math": "Spatial reasoning",
+    "note": "Explain the structure of a QMainWindow, which provides a standard application window framework. Identify its main components: a central widget, menu bar, toolbars, dock widgets, and a status bar. This lesson uses the Qt 5.15 framework and C++."
+  },
+  {
+    "n": 17,
+    "title": "Menus, Toolbars, and Status Bars",
+    "math": "Tree data structures",
+    "note": "Show how to create a menu bar (QMenuBar) and toolbars (QToolBar) within a QMainWindow. Demonstrate how to add menus, sub-menus, and actions. Explain how to display temporary or permanent messages on a QStatusBar. This lesson is within the context of a Qt 5.15 Widgets C++ application."
+  },
+  {
+    "n": 18,
+    "title": "Reusable UI Logic with QAction",
+    "math": "Boolean logic",
+    "note": "Introduce QAction as an abstract user interface action that can be inserted into menus and toolbars. Show how to define an action with text, an icon, a shortcut, and a tooltip, and connect its 'triggered()' signal to a slot. This lesson uses the C++ Qt 5.15 framework."
+  },
+  {
+    "n": 19,
+    "title": "Standard Dialogs: QMessageBox and QFileDialog",
+    "math": "Decision theory",
+    "note": "Teach how to use pre-built dialogs for common tasks. Demonstrate creating informational, question, and warning pop-ups with static functions of QMessageBox. Show how to use QFileDialog to prompt the user to select a file to open or a location to save a file. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to the 2D Painter Framework",
+    "math": "Cartesian coordinate systems",
+    "note": "Provide an overview of Qt's 2D graphics system. Introduce the three main components: QPainter (the drawing tool), QPaintDevice (the surface to draw on, like a QWidget or QImage), and QPaintEngine (the backend that does the drawing). This lesson is a conceptual introduction within the Qt 5.15 C++ framework."
+  },
+  {
+    "n": 21,
+    "title": "Using QPainter, QPen, and QBrush",
+    "math": "Geometry, Color theory",
+    "note": "Demonstrate how to perform basic drawing operations. Teach how to use QPen to control the style, width, and color of lines and outlines. Explain how to use QBrush to define the fill color and pattern for shapes. Show how to draw lines, rectangles, and ellipses. This lesson uses a C++ QWidget and Qt 5.15."
+  },
+  {
+    "n": 22,
+    "title": "Coordinate Systems and Transformations",
+    "math": "Linear algebra, Matrix transformations",
+    "note": "Explain the 2D Cartesian coordinate system used by QPainter, where the origin is the top-left corner. Teach how to apply affine transformations like translation (QPainter::translate), scaling (QPainter::scale), and rotation (QPainter::rotate) to the painter's state. This lesson uses a C++ QWidget with Qt 5.15."
+  },
+  {
+    "n": 23,
+    "title": "Creating Custom Widgets by Reimplementing paintEvent",
+    "math": "Geometry",
+    "note": "Teach how to create a fully custom widget by subclassing QWidget and reimplementing its 'paintEvent(QPaintEvent *)' virtual function. All custom drawing code using QPainter for the widget must be placed inside this event handler. This lesson uses C++ and the Qt 5.15 Widgets module."
+  },
+  {
+    "n": 24,
+    "title": "Introduction to Graphics View Framework",
+    "math": "Graph theory",
+    "note": "Explain the architecture of the Graphics View Framework for managing large numbers of 2D graphical items. Introduce its three main classes: QGraphicsScene (manages items), QGraphicsView (a viewport widget for the scene), and QGraphicsItem (the base class for all items). This is a conceptual lesson using Qt 5.15 and C++."
+  },
+  {
+    "n": 25,
+    "title": "Working with QGraphicsScene and QGraphicsItem",
+    "math": "Set theory, Geometry",
+    "note": "Demonstrate how to create a QGraphicsScene, add pre-defined items like QGraphicsRectItem and QGraphicsEllipseItem to it, and display the scene using a QGraphicsView. Show how to create a custom item by subclassing QGraphicsItem. This lesson uses C++ and the Qt 5.15 framework."
+  },
+  {
+    "n": 26,
+    "title": "Essential Qt Container Classes",
+    "math": "Data structures, Algorithmic complexity",
+    "note": "Introduce Qt's implicitly shared container classes as an alternative to the C++ STL. Cover the basics of QVector, QList, and QMap, explaining their performance characteristics and common use cases. This lesson focuses on C++ data handling within the Qt 5.15 framework."
+  },
+  {
+    "n": 27,
+    "title": "String Manipulation with QString",
+    "math": "String algorithms",
+    "note": "Explain the features of QString, Qt's powerful Unicode string class. Demonstrate common operations like concatenation, splitting, searching, replacing, and converting to and from numbers. Emphasize its robust handling of international text. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 28,
+    "title": "File I/O with QFile and QTextStream",
+    "math": "Data serialization",
+    "note": "Teach how to read from and write to text files. Demonstrate using QFile to open a file device and wrapping it with a QTextStream to easily handle text and numbers. Cover file opening modes and error checking. This lesson is taught using C++ within the Qt 5.15 framework."
+  },
+  {
+    "n": 29,
+    "title": "Saving Application Settings with QSettings",
+    "math": "Key-value pair data structures",
+    "note": "Demonstrate how to persist application settings (like window size or last-opened file) across sessions using QSettings. Explain how it provides a platform-independent abstraction over the Windows Registry, macOS property lists, and INI files on Linux. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 30,
+    "title": "The Model-View-Controller (MVC) Paradigm",
+    "math": "Set theory",
+    "note": "Introduce the Model-View-Controller design pattern as implemented in Qt's Model/View architecture. Explain the separation of roles: the Model holds the data, the View displays it, and the Delegate renders it. This is a conceptual lesson about data handling in Qt 5.15."
+  },
+  {
+    "n": 31,
+    "title": "Using Standard Views: QListView and QTableView",
+    "math": "Data structures (Lists, Tables)",
+    "note": "Demonstrate how to use two standard view widgets. QListView is used for displaying a single column of data (a list). QTableView is used for displaying data in a multi-column table or grid. Show how to attach a model to these views. This lesson uses C++ and the Qt 5.15 framework."
+  },
+  {
+    "n": 32,
+    "title": "Using Standard Models: QStringListModel",
+    "math": "Array data structures",
+    "note": "Introduce one of Qt's simplest pre-built models, QStringListModel. Demonstrate how to instantiate it with a QStringList, set it on a QListView, and observe how the view automatically updates when the underlying string list is modified. This lesson uses C++ and the Qt 5.15 framework."
+  },
+  {
+    "n": 33,
+    "title": "Creating a Custom Read-Only List Model",
+    "math": "Indexing, Abstract algebra",
+    "note": "Teach the fundamentals of creating a custom data model. Subclass QAbstractListModel and implement the required pure virtual functions: 'rowCount()' and 'data()'. This custom model will then be used to provide data to a QListView. This lesson is a core C++ skill for Qt 5.15 development."
+  },
+  {
+    "n": 34,
+    "title": "Customizing Item Appearance with Delegates",
+    "math": "Geometry, Logic",
+    "note": "Explain the role of a delegate in rendering items in a view. Subclass QStyledItemDelegate and reimplement the 'paint()' and 'sizeHint()' methods to create a completely custom visual representation for items in a QListView or QTableView. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 35,
+    "title": "Introduction to QML and Declarative UIs",
+    "math": "Declarative programming principles",
+    "note": "Introduce QML as a declarative language for designing user interfaces, contrasting it with the imperative approach of C++ Widgets. Explain its JSON-like syntax and how it describes a scene graph of visual items. This is a conceptual lesson within the Qt 5.15/Qt Quick ecosystem."
+  },
+  {
+    "n": 36,
+    "title": "Basic QML Syntax and Core Elements",
+    "math": "Tree data structures",
+    "note": "Teach the fundamental syntax of QML, including defining objects, setting properties, and using property bindings. Introduce basic visual elements like 'Item', 'Rectangle', 'Text', and 'Image'. This lesson uses the QML editor in Qt Creator with the Qt 5.15 framework."
+  },
+  {
+    "n": 37,
+    "title": "Layouts in QML using Anchors",
+    "math": "Relative positioning, Constraint logic",
+    "note": "Explain the anchor-based layout system in QML for creating flexible and scalable UIs. Demonstrate how to position items relative to their parent or siblings using anchors like 'anchors.left', 'anchors.right', 'anchors.fill', and 'anchors.centerIn'. This lesson uses the Qt 5.15/Qt Quick framework."
+  },
+  {
+    "n": 38,
+    "title": "Handling User Input with MouseArea",
+    "math": "Event-driven programming",
+    "note": "Teach how to make non-interactive QML elements, like a Rectangle, responsive to mouse input. Demonstrate using the 'MouseArea' element to handle signals like 'onClicked', 'onPressed', and 'onPositionChanged'. This lesson uses the Qt 5.15/Qt Quick framework."
+  },
+  {
+    "n": 39,
+    "title": "QML States and Transitions for Dynamic UIs",
+    "math": "Finite state machines, Interpolation",
+    "note": "Introduce the concept of states to manage different UI configurations. Demonstrate how to define states using the 'State' element and change property values within each state. Add 'Transition' elements to animate property changes between states smoothly. This lesson uses the Qt 5.15/Qt Quick framework."
+  },
+  {
+    "n": 40,
+    "title": "Introduction to Qt Quick Controls 2",
+    "math": "Component-based architecture",
+    "note": "Introduce the Qt Quick Controls 2 module, which provides a set of ready-to-use UI controls like 'Button', 'TextField', 'Slider', and 'ComboBox'. Demonstrate how to import the module and use these controls to build a functional user interface in QML. This lesson uses the Qt 5.15/Qt Quick framework."
+  },
+  {
+    "n": 41,
+    "title": "Exposing C++ Classes to QML",
+    "math": "Type systems",
+    "note": "Teach how to make a C++ class available for instantiation within QML. This involves subclassing QObject, using the 'qmlRegisterType' function in main.cpp, and then importing and using the C++ type directly as a QML element. This lesson bridges C++ and QML in the Qt 5.15 framework."
+  },
+  {
+    "n": 42,
+    "title": "Exposing C++ Properties and Methods to QML",
+    "math": "Function mapping",
+    "note": "Demonstrate how to expose C++ class members to the QML engine. Use the 'Q_PROPERTY' macro to create properties accessible from QML and the 'Q_INVOKABLE' macro to make a C++ member function callable from QML. This lesson uses C++ and QML within the Qt 5.15 framework."
+  },
+  {
+    "n": 43,
+    "title": "Using Signals and Slots Between C++ and QML",
+    "math": "Graph theory",
+    "note": "Show how to achieve two-way communication between C++ and QML. Demonstrate emitting a signal from C++ (defined with 'Q_SIGNAL') and handling it in QML with an 'onSignalName' handler. Show how QML signals (e.g., a Button's 'onClicked') can be connected to C++ slots. This lesson uses the Qt 5.15 framework."
+  },
+  {
+    "n": 44,
+    "title": "Making HTTP Requests with QNetworkAccessManager",
+    "math": "Asynchronous programming models",
+    "note": "Teach how to fetch data from a web API using Qt's networking classes. Demonstrate creating a QNetworkAccessManager, building a QNetworkRequest, making an HTTP GET request, and processing the result asynchronously by connecting to the 'finished(QNetworkReply*)' signal. This lesson uses C++ and the Qt 5.15 Network module."
+  },
+  {
+    "n": 45,
+    "title": "Parsing JSON Data with Qt's JSON Classes",
+    "math": "Tree data structures",
+    "note": "Teach how to parse JSON data, commonly received from web APIs. Demonstrate using QJsonDocument to parse a raw bytestream, and then use QJsonObject and QJsonArray to navigate the data structure and extract values. This lesson uses C++ and the Qt 5.15 Core module."
+  },
+  {
+    "n": 46,
+    "title": "Introduction to Multithreading with QThread",
+    "math": "Concurrency theory",
+    "note": "Explain the need for multithreading to keep the GUI responsive during long-running tasks. Introduce QThread as Qt's low-level threading primitive. Show how to subclass QThread and reimplement its 'run()' method to execute code in a separate thread. This lesson is for C++ development with Qt 5.15."
+  },
+  {
+    "n": 47,
+    "title": "The Worker-Object Pattern for Safe Threading",
+    "math": "Resource management",
+    "note": "Teach the modern, recommended approach to threading in Qt. Demonstrate how to create a worker QObject, move it to a separate QThread using 'moveToThread()', and trigger its work via signals and slots, ensuring thread safety. This lesson uses C++ with the Qt 5.15 framework."
+  },
+  {
+    "n": 48,
+    "title": "High-Level Concurrency with QtConcurrent",
+    "math": "Parallel algorithms, Functional programming",
+    "note": "Introduce the QtConcurrent framework for easily parallelizing tasks without manual thread management. Demonstrate using 'QtConcurrent::run' to execute a function in a separate thread from a managed thread pool. This is a high-level lesson using the C++ Qt 5.15 framework."
+  },
+  {
+    "n": 49,
+    "title": "Styling Widgets with Qt Style Sheets (QSS)",
+    "math": "String parsing, Cascading logic",
+    "note": "T
