@@ -13,9 +13,12 @@
     { "name": "FFmpeg C/C++ Tour", "file": "./books/ffmpeg.json" },
     { "name": "Nginx Tour", "file": "./books/nginx.json" },
     { "name": "TensorFlow Tour", "file": "./books/tensorflow.json" },
-    { "name": "x86 Assembly Tour", "file": "./books/x86asm.json" }
+    { "name": "x86 Assembly Tour", "file": "./books/x86asm.json" },
+    { "name": "LPIC-2 Tour", "file": "./books/LPIC2.json" },
+    { "name": "ARM Assembly Tour", "file": "./books/arm_asm.json" }
   ]
 }
+
 
 
 
