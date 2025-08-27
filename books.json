@@ -15,9 +15,13 @@
     { "name": "TensorFlow Tour", "file": "./books/tensorflow.json" },
     { "name": "x86 Assembly Tour", "file": "./books/x86asm.json" },
     { "name": "LPIC-2 Tour", "file": "./books/LPIC2.json" },
-    { "name": "ARM Assembly Tour", "file": "./books/arm_asm.json" }
+    { "name": "ARM Assembly Tour", "file": "./books/arm_asm.json" },
+    { "name": "Network+ Tour", "file": "./books/networkplus.json" },
+    { "name": "Qt 5.15 C++ Tour", "file": "./books/qt5_15.json" },
+    { "name": "LPIC-1 Tour", "file": "./books/LPIC1.json" }
   ]
 }
+
 
 
 
