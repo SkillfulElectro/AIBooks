@@ -1,0 +1,212 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Arch Linux Philosophy",
+    "math": "Set Theory, Boolean Logic",
+    "note": "This lesson introduces the core principles of Arch Linux known as 'The Arch Way': simplicity, modernity, pragmatism, user-centrality, and versatility. It explains the concept of a rolling-release distribution versus a point-release model and what a minimal base system implies. The context is purely theoretical, using diagrams to explain concepts like package groups (Set Theory) and the KISS (Keep It Simple, Stupid) principle (Logic)."
+  },
+  {
+    "n": 2,
+    "title": "Downloading the Arch Linux ISO",
+    "math": "Checksum Algorithms (SHA256)",
+    "note": "This lesson provides step-by-step instructions for navigating to the official Arch Linux download page and selecting a suitable mirror for downloading the ISO file. [4] It covers the critical process of verifying the integrity of the downloaded file using its PGP signature or SHA256 checksum to prevent using a corrupted or malicious image. [4] The context is a web browser on any existing operating system."
+  },
+  {
+    "n": 3,
+    "title": "Creating Bootable Installation Media",
+    "math": "Data Writing (Block-level copy)",
+    "note": "This lesson teaches how to create a bootable USB drive from the downloaded Arch Linux ISO file. [3] It will demonstrate using the `dd` command on Linux/macOS and a GUI tool like Rufus or Etcher on Windows, explaining the concept of writing an image file directly to a block device. [6, 34]"
+  },
+  {
+    "n": 4,
+    "title": "Booting the Live Environment",
+    "math": "System Boot Process (BIOS/UEFI)",
+    "note": "This lesson explains how to boot a computer from the newly created USB media. It covers accessing the BIOS/UEFI boot menu and selecting the correct device. [6] It also addresses the need to disable Secure Boot for the installation medium to be recognized. [4]"
+  },
+  {
+    "n": 5,
+    "title": "Initial Console and Network Setup",
+    "math": "Keyboard Mapping, Network Protocols (DHCP)",
+    "note": "Within the Archiso live environment, this lesson covers setting the console keyboard layout with `loadkeys` to match the user's physical keyboard. [4] It then guides through verifying and establishing an internet connection, covering both wired Ethernet (plug-and-play) and Wi-Fi using `iwctl`. [4]"
+  },
+  {
+    "n": 6,
+    "title": "Understanding Disk Partitioning",
+    "math": "Set Theory (Disk as a whole set, partitions as subsets)",
+    "note": "This lesson explains the fundamental concepts of disk partitioning for a Linux system, including the purpose of the root (`/`) partition and the EFI System Partition (ESP) for UEFI systems. [6] It introduces partitioning tools available in the live environment like `fdisk` or `cfdisk`. [32]"
+  },
+  {
+    "n": 7,
+    "title": "Partitioning Disks for a UEFI System",
+    "math": "Geometry (Sizing partitions)",
+    "note": "This lesson provides a practical, step-by-step guide to partitioning a disk for a modern UEFI-based system using `cfdisk`. It covers creating an EFI System Partition (e.g., 512MB), a swap partition, and a root partition, and setting their types correctly. [6, 35]"
+  },
+  {
+    "n": 8,
+    "title": "Formatting and Mounting Partitions",
+    "math": "File System Structures (ext4, FAT32)",
+    "note": "After partitioning, this lesson teaches how to format the created partitions with appropriate filesystems. It covers using `mkfs.ext4` for the root partition, `mkfs.fat -F32` for the EFI partition, and `mkswap` for the swap partition. [35] It concludes by showing how to mount them correctly using `mount` and `swapon`. [25]"
+  },
+  {
+    "n": 9,
+    "title": "Installing the Base System",
+    "math": "Dependency Graphs",
+    "note": "This lesson focuses on the `pacstrap` script, the command used to install the core Arch Linux system onto the newly mounted root partition. [32] It explains the essential packages to include, such as `base`, `linux`, and `linux-firmware`, and optionally `base-devel` for building packages. [32]"
+  },
+  {
+    "n": 10,
+    "title": "Configuring the System with fstab",
+    "math": "Data Structures (Tables)",
+    "note": "This lesson covers the generation of the `fstab` (file system table) file using `genfstab`. This file defines how disk partitions and other block devices are mounted into the filesystem. The context is the live environment, just after running `pacstrap`."
+  },
+  {
+    "n": 11,
+    "title": "Entering the New System with chroot",
+    "math": "Directory Trees, Rooting a Tree",
+    "note": "This lesson explains the concept of `chroot` (change root) and demonstrates how to use `arch-chroot` to enter the newly installed system. This allows running commands as if booted into the new system, which is necessary for configuration. The context is transitioning from the live environment to the installed system for setup."
+  },
+  {
+    "n": 12,
+    "title": "Setting Time Zone and Locale",
+    "math": "Character Sets (UTF-8), Time Standards (UTC)",
+    "note": "Inside the chroot environment, this lesson guides the user through setting the system's time zone by creating a symbolic link in `/etc/localtime`. [22] It also covers configuring the system language (locale) by editing `/etc/locale.gen`, running `locale-gen`, and setting the `LANG` variable in `/etc/locale.conf`. [32]"
+  },
+  {
+    "n": 13,
+    "title": "Network Configuration and Hostname",
+    "math": "Network Addressing",
+    "note": "This lesson covers setting a persistent hostname for the new system by creating the `/etc/hostname` file. It also involves installing and enabling `NetworkManager` to ensure network connectivity after the first boot. The context is the chroot environment."
+  },
+  {
+    "n": 14,
+    "title": "Setting the Root Password",
+    "math": "Cryptography (Password Hashing)",
+    "note": "A critical security step, this lesson demonstrates how to set the password for the root (administrator) account using the `passwd` command within the chroot environment. It briefly explains the importance of a strong password."
+  },
+  {
+    "n": 15,
+    "title": "Installing a Bootloader (systemd-boot)",
+    "math": "Bootstrapping, Pointers",
+    "note": "This lesson teaches how to install and configure a bootloader, which is essential for the system to start. It focuses on `systemd-boot` for UEFI systems, covering the `bootctl install` command and creating a basic loader entry file to point to the Linux kernel. [35, 36]"
+  },
+  {
+    "n": 16,
+    "title": "Finalizing Installation and Rebooting",
+    "math": "State Machines (Exiting chroot, unmounting)",
+    "note": "This lesson covers the final steps before using the new system: exiting the chroot environment, unmounting all partitions with `umount -R /mnt`, and finally rebooting the machine. It emphasizes removing the installation media to boot into the new Arch Linux system."
+  },
+  {
+    "n": 17,
+    "title": "Post-Install: Creating a User Account",
+    "math": "Access Control Lists",
+    "note": "After the first boot, this lesson explains why running as root is insecure for daily tasks. [43] It guides through creating a new non-root user with `useradd` and setting their password with `passwd`. [16] The context is the newly installed Arch Linux system, logged in as root."
+  },
+  {
+    "n": 18,
+    "title": "Configuring Sudo Privileges",
+    "math": "Group Theory (wheel group)",
+    "note": "This lesson teaches how to grant administrative privileges to the newly created user. It involves installing the `sudo` package and editing the `sudoers` file with `visudo` to uncomment the line that allows members of the `wheel` group to execute any command. [19] The user is then added to the `wheel` group. [16]"
+  },
+  {
+    "n": 19,
+    "title": "Introduction to Pacman Package Manager",
+    "math": "Database Synchronization",
+    "note": "This lesson introduces `pacman`, Arch Linux's package manager. [33] It covers the most fundamental operations: synchronizing package databases and upgrading all system packages using `sudo pacman -Syu`. [1] The context is a newly installed system with a sudo-enabled user."
+  },
+  {
+    "n": 20,
+    "title": "Searching and Installing Packages with Pacman",
+    "math": "Querying, Dependency Resolution",
+    "note": "This lesson expands on `pacman` usage, teaching how to search for packages in the repositories (`pacman -Ss <term>`) and how to install a specific package (`sudo pacman -S <package_name>`). [1] It explains that pacman automatically handles dependency resolution. [7]"
+  },
+  {
+    "n": 21,
+    "title": "Removing Packages and Cleaning Cache",
+    "math": "Orphaned Node Removal (in a dependency graph)",
+    "note": "This lesson covers package removal with `pacman -R <package>`. It introduces the `-ns` flags (`pacman -Rns <package>`) to remove a package along with its dependencies that are not required by any other package. [1] It also shows how to clean the package cache to save disk space using `paccache`. [33]"
+  },
+  {
+    "n": 22,
+    "title": "Installing a Display Server (Xorg)",
+    "math": "Client-Server Model",
+    "note": "To have a graphical interface, a display server is needed. This lesson explains the role of Xorg as the display server and shows how to install it using `sudo pacman -S xorg-server`. The context is a command-line-only Arch system."
+  },
+  {
+    "n": 23,
+    "title": "Installing a Desktop Environment (e.g., KDE Plasma)",
+    "math": "Modular Systems",
+    "note": "This lesson explains that a desktop environment provides the graphical user interface (GUI). It guides the user through installing a complete desktop environment, using KDE Plasma (`plasma` group) as an example. [5] The context is an Arch system with a display server installed."
+  },
+  {
+    "n": 24,
+    "title": "Installing and Enabling a Display Manager (SDDM)",
+    "math": "Service Management",
+    "note": "A display manager (or login manager) provides a graphical login screen. This lesson covers installing SDDM (recommended for KDE Plasma) and enabling its `systemd` service (`sudo systemctl enable sddm`) so the graphical login appears on boot. [5] The context is an Arch system with a desktop environment installed."
+  },
+  {
+    "n": 25,
+    "title": "Introduction to the Arch User Repository (AUR)",
+    "math": "Community-driven development models",
+    "note": "This lesson explains what the Arch User Repository (AUR) is: a vast, community-driven repository for user-submitted packages. [1] It discusses the role of `PKGBUILD` scripts and the need for an AUR helper to automate the process of building and installing these packages."
+  },
+  {
+    "n": 26,
+    "title": "Installing an AUR Helper (yay)",
+    "math": "Build Automation",
+    "note": "This lesson provides a step-by-step guide to manually installing an AUR helper, using `yay` as the example. This involves cloning its Git repository, and then using `makepkg -si` to build and install it. [15] This is the one package that must be built manually before an AUR helper can be used. The context is a functional Arch system with `base-devel` and `git` installed."
+  },
+  {
+    "n": 27,
+    "title": "Using an AUR Helper",
+    "math": "Command-line Interface (CLI) Abstraction",
+    "note": "This lesson demonstrates how to use `yay` to search for and install packages from the AUR. It highlights that `yay` uses a `pacman`-like syntax (e.g., `yay -S <package_name>`) and can also be used to update official repository packages, effectively acting as a wrapper for `pacman`. [15]"
+  },
+  {
+    "n": 28,
+    "title": "Managing System Services with systemd",
+    "math": "Finite State Machines (start, stop, enable, disable)",
+    "note": "This lesson provides a deeper look into `systemd`, the system and service manager. [9] It teaches the essential `systemctl` commands to `start`, `stop`, `enable`, `disable`, and check the `status` of services (daemons). [43] The context is general system administration on a running Arch Linux system."
+  },
+  {
+    "n": 29,
+    "title": "Viewing Logs with journalctl",
+    "math": "Logarithmic Time (for filtering logs by time)",
+    "note": "This lesson introduces `journalctl`, the tool for querying and viewing logs from the systemd journal. It covers basic usage, filtering logs by a specific service (`-u <service>`), and following logs in real-time (`-f`). The context is troubleshooting and system monitoring."
+  },
+  {
+    "n": 30,
+    "title": "Basic Firewall Setup with UFW",
+    "math": "Rule-based Systems, Set Theory (allow/deny rules)",
+    "note": "This lesson explains the importance of a firewall for network security. [14] It guides the user through installing UFW (Uncomplicated Firewall), setting default deny-incoming/allow-outgoing policies, allowing specific services (like SSH), and enabling the firewall service. [2]"
+  },
+  {
+    "n": 31,
+    "title": "Introduction to Kernel Management",
+    "math": "Modular Architecture (Kernel Modules)",
+    "note": "This lesson explains that the Linux kernel is a package that can be managed like any other. [24] It introduces the concept of different kernel versions available in Arch, such as the stable (`linux`), long-term support (`linux-lts`), and hardened (`linux-hardened`) kernels. [2]"
+  },
+  {
+    "n": 32,
+    "title": "Installing and Switching Kernels",
+    "math": "Configuration Management",
+    "note": "This lesson demonstrates how to install an alternative kernel (e.g., `sudo pacman -S linux-lts`) and its headers. [26] It then explains that the bootloader configuration must be updated to provide an option to boot into the new kernel, ensuring the system remains bootable. [24]"
+  },
+  {
+    "n": 33,
+    "title": "System Hardening: Locking the Root Account",
+    "math": "Security Models (Principle of Least Privilege)",
+    "note": "This lesson covers a common security practice: locking the root account to prevent direct logins. [2] It demonstrates how to achieve this using `passwd -l root`, forcing all administrative tasks to be performed via a regular user account with `sudo`. [17] The context is enhancing system security."
+  },
+  {
+    "n": 34,
+    "title": "Advanced: Creating a Custom systemd Service",
+    "math": "State Transition Diagrams",
+    "note": "This lesson teaches how to automate a custom script or application at boot by creating a custom `systemd` service file. It covers the basic structure of a unit file (`[Unit]`, `[Service]`, `[Install]` sections) and where to place it (`/etc/systemd/system/`). [9, 38]"
+  },
+  {
+    "n": 35,
+    "title": "Advanced: Filesystem Snapshots with Btrfs",
+    "math": "Copy-on-Write (CoW) principle",
+    "note": "This lesson introduces the Btrfs filesystem and its snapshot capabilities as a powerful backup and recovery tool. It explains how to set up a system with Btrfs during installation and how to manually create and restore read-only snapshots. The context is advanced filesystem management and system resilience."
+  }
+]
