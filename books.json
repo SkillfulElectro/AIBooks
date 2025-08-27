@@ -10,9 +10,11 @@
     { "name": "Web Dev Tour", "file": "./books/webdev.json" },
     { "name": "Python Tour", "file": "./books/python.json" },
     { "name": "Socket Programming C/C++ Tour", "file": "./books/socket_programming.json" },
-    { "name": "FFmpeg C/C++ Tour", "file": "./books/ffmpeg.json" }
+    { "name": "FFmpeg C/C++ Tour", "file": "./books/ffmpeg.json" },
+    { "name": "Nginx Tour", "file": "./books/nginx.json" }
   ]
 }
+
 
 
 
