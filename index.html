@@ -84,36 +84,29 @@
           </div>
           <div
             id="search-provider-selector"
-            class="flex items-center justify-center gap-4 my-4"
+            class="flex items-center justify-center gap-2 my-4"
           >
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input
-                type="radio"
-                name="search-provider"
-                value="chatgpt"
-                class="form-radio bg-gray-700 text-purple-500"
-                checked
-              />
-              <span class="text-white">ChatGPT</span>
-            </label>
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input
-                type="radio"
-                name="search-provider"
-                value="perplexity"
-                class="form-radio bg-gray-700 text-purple-500"
-              />
-              <span class="text-white">Perplexity</span>
-            </label>
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input
-                type="radio"
-                name="search-provider"
-                value="copilot"
-                class="form-radio bg-gray-700 text-purple-500"
-              />
-              <span class="text-white">Copilot</span>
-            </label>
+            <button
+              data-provider="chatgpt"
+              class="provider-btn bg-purple-600 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition-all duration-300"
+            >
+              <i class="fas fa-brain"></i>
+              <span>ChatGPT</span>
+            </button>
+            <button
+              data-provider="perplexity"
+              class="provider-btn bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition-all duration-300"
+            >
+              <i class="fas fa-atom"></i>
+              <span>Perplexity</span>
+            </button>
+            <button
+              data-provider="copilot"
+              class="provider-btn bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg flex items-center gap-2 transition-all duration-300"
+            >
+              <i class="fas fa-robot"></i>
+              <span>Copilot</span>
+            </button>
           </div>
 
           <div

@@ -37,14 +37,22 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function getSelectedProvider() {
-    const selector = document.querySelector(
-      'input[name="search-provider"]:checked'
-    );
-    return selector ? selector.value : "chatgpt";
+    const selector = document.querySelector(".provider-btn.bg-purple-600");
+    return selector ? selector.dataset.provider : "chatgpt";
   }
 
-  function makeQueryUrl(note, mode, provider) {
-    const q = encodeURIComponent(note || "");
+  function makeQueryUrl(topic, mode, provider) {
+    const title = topic.title || "";
+    const math = topic.math || "";
+    const note = topic.note || "";
+
+    let query = `You are a teacher and going to teach '${title}'`;
+    if (math) {
+      query += ` and you must teach '${math}' alongside it`;
+    }
+    query += ` . here is a note describing exactly what you have to teach and focus on : "${note}"`;
+
+    const q = encodeURIComponent(query);
     switch (provider) {
       case "perplexity":
         return `https://www.perplexity.ai/search?q=${q}`;
@@ -52,8 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
         return `https://www.bing.com/search?q=${q}&showconv=1`;
       case "chatgpt":
       default:
-        const hints = mode === "search" ? "search" : "study";
-        return `https://chatgpt.com/?q=${q}&hints=${hints}&ref=ext`;
+        return `https://chatgpt.com/?q=${q}&ref=ext`;
     }
   }
 
@@ -242,7 +249,7 @@ window.addEventListener("DOMContentLoaded", () => {
       searchBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i> Search`;
       searchBtn.title = `Open ${providerName} search with this lesson note`;
       searchBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t.note || "", "search", provider))
+        openAndCheck(makeQueryUrl(t, "search", provider))
       );
 
       const studyBtn = document.createElement("button");
@@ -250,7 +257,7 @@ window.addEventListener("DOMContentLoaded", () => {
       studyBtn.innerHTML = `<i class="fa-solid fa-book-open"></i> Study`;
       studyBtn.title = `Open ${providerName} study session with this lesson note`;
       studyBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t.note || "", "study", provider))
+        openAndCheck(makeQueryUrl(t, "study", provider))
       );
 
       const copyBtn = document.createElement("button");
@@ -317,6 +324,7 @@ window.addEventListener("DOMContentLoaded", () => {
       clearError();
       booksArea.innerHTML =
         '<div class="spinner-border spinner-border-sm me-2" role="status"></div> Loading books...';
+      console.log("Fetching books index...");
       const idx = await fetchJsonSafe(BOOKS_INDEX);
       booksIndex = Array.isArray(idx) ? idx : idx.books || idx.items || [];
       if (!booksIndex || booksIndex.length === 0) {
@@ -350,20 +358,25 @@ window.addEventListener("DOMContentLoaded", () => {
             b.classList.add("bg-gray-800");
           });
       });
-      document
-        .querySelectorAll('input[name="search-provider"]')
-        .forEach((radio) => {
-          radio.addEventListener("change", () => {
-            if (currentBook) {
-              renderTopics(
-                currentBook.data,
-                currentBook.file,
-                currentBook.name,
-                searchTopicsInput.value
-              );
-            }
+      document.querySelectorAll(".provider-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".provider-btn").forEach((b) => {
+            b.classList.remove("bg-purple-600");
+            b.classList.add("bg-gray-700", "hover:bg-gray-600");
           });
+          btn.classList.remove("bg-gray-700", "hover:bg-gray-600");
+          btn.classList.add("bg-purple-600");
+
+          if (currentBook) {
+            renderTopics(
+              currentBook.data,
+              currentBook.file,
+              currentBook.name,
+              searchTopicsInput.value
+            );
+          }
         });
+      });
       window.addEventListener("scroll", handleScroll);
       scrollTopBtn.addEventListener("click", scrollToTop);
     } catch (err) {
@@ -374,4 +387,3 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   })();
 });
-      
