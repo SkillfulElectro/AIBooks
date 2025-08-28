@@ -1,0 +1,260 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction and OpenCV Setup",
+    "math": "None",
+    "note": "Install the required Python environment, including the OpenCV and NumPy libraries using the pip package manager. Verify the installation by executing a Python script that imports `cv2` and prints its version number to the console."
+  },
+  {
+    "n": 2,
+    "title": "Loading, Displaying, and Saving Images",
+    "math": "Matrix representation, Coordinate systems",
+    "note": "Within a Python script, use `cv2.imread()` to load an image from a file into a NumPy array. Display this image in a window using `cv2.imshow()` and `cv2.waitKey()`. Save the NumPy array back to a file using `cv2.imwrite()`."
+  },
+  {
+    "n": 3,
+    "title": "Handling Video from Files and Cameras",
+    "math": "Sequences, Frame rates",
+    "note": "Use the `cv2.VideoCapture()` object in a Python script to open and read from either a video file or a live webcam feed. Implement a loop to read frames one by one, display each frame using `cv2.imshow()`, and properly release the capture resources."
+  },
+  {
+    "n": 4,
+    "title": "Accessing and Manipulating Pixels",
+    "math": "Matrix indexing, Color channels (BGR)",
+    "note": "Explain that images in OpenCV are represented as NumPy arrays with a BGR (Blue, Green, Red) channel order. In a Python script, access the color value of a specific pixel using its (y, x) coordinates and modify it by assigning a new BGR value."
+  },
+  {
+    "n": 5,
+    "title": "Image Properties and Regions of Interest (ROI)",
+    "math": "Matrix dimensions, Slicing",
+    "note": "In Python, retrieve the height, width, and number of channels of an image by accessing the `.shape` attribute of its NumPy array. Select a rectangular Region of Interest (ROI) by using NumPy's array slicing syntax."
+  },
+  {
+    "n": 6,
+    "title": "Basic Drawing Functions",
+    "math": "Cartesian coordinates, Line equations, Geometric primitives",
+    "note": "Within a Python script, draw on a NumPy array (image) using built-in OpenCV functions. This includes drawing lines with `cv2.line()`, rectangles with `cv2.rectangle()`, circles with `cv2.circle()`, and adding text with `cv2.putText()`."
+  },
+  {
+    "n": 7,
+    "title": "Color Space Conversion",
+    "math": "Vector spaces, Color theory (RGB, HSV, Grayscale)",
+    "note": "In Python, convert an image from the default BGR color space to other spaces like Grayscale, HSV (Hue, Saturation, Value), or LAB using the `cv2.cvtColor()` function and specifying the appropriate conversion code."
+  },
+  {
+    "n": 8,
+    "title": "Splitting and Merging Color Channels",
+    "math": "Matrix decomposition and composition",
+    "note": "Using Python, separate a multi-channel image (e.g., BGR) into individual single-channel arrays using `cv2.split()`. Conversely, combine multiple single-channel arrays back into a multi-channel image using `cv2.merge()`."
+  },
+  {
+    "n": 9,
+    "title": "Image Arithmetic and Bitwise Operations",
+    "math": "Matrix addition/subtraction, Boolean algebra (AND, OR, NOT, XOR)",
+    "note": "Perform pixel-wise addition and subtraction on two images using `cv2.add()` and `cv2.subtract()`. In a Python script, use bitwise operations like `cv2.bitwise_and()`, `cv2.bitwise_or()`, and `cv2.bitwise_not()` for masking tasks."
+  },
+  {
+    "n": 10,
+    "title": "Resizing, Scaling, and Interpolation",
+    "math": "Linear interpolation, Scaling transformations",
+    "note": "In a Python script, change the dimensions of an image using the `cv2.resize()` function. Explain and compare different interpolation methods such as `INTER_NEAREST`, `INTER_LINEAR`, and `INTER_CUBIC` for quality versus speed."
+  },
+  {
+    "n": 11,
+    "title": "Image Translation",
+    "math": "Vector addition, Affine transformation matrices",
+    "note": "Shift an image's position by creating a 2x3 translation matrix with NumPy. In Python, apply this matrix to the image using the `cv2.warpAffine()` function to achieve the horizontal and vertical shift."
+  },
+  {
+    "n": 12,
+    "title": "Image Rotation",
+    "math": "Trigonometry, 2D rotation matrices",
+    "note": "Rotate an image around a specified center point. In Python, generate the required 2x3 rotation matrix using `cv2.getRotationMatrix2D()` and then apply the transformation to the image with `cv2.warpAffine()`."
+  },
+  {
+    "n": 13,
+    "title": "Affine and Perspective Transformations",
+    "math": "Linear algebra, Homography, Matrix multiplication",
+    "note": "In Python, perform an affine transformation using `cv2.getAffineTransform()` from three pairs of corresponding points. For correcting perspective distortion, use `cv2.getPerspectiveTransform()` with four pairs of points and apply it with `cv2.warpPerspective()`."
+  },
+  {
+    "n": 14,
+    "title": "Simple Image Thresholding",
+    "math": "Step functions, Set theory",
+    "note": "Convert a grayscale image to a binary (black and white) image. In Python, use the `cv2.threshold()` function, which assigns pixel values based on whether they are above or below a specified global threshold value."
+  },
+  {
+    "n": 15,
+    "title": "Adaptive Thresholding",
+    "math": "Local statistics (mean, median), Weighted averages",
+    "note": "Apply thresholding to an image with varying lighting conditions. In Python, use `cv2.adaptiveThreshold()`, which calculates the threshold for small regions of the image independently, using either a mean or Gaussian method."
+  },
+  {
+    "n": 16,
+    "title": "Color-Based Thresholding and Masking",
+    "math": "Range operations, Set intervals",
+    "note": "Isolate objects of a specific color. In Python, first convert the image to the HSV color space, then define a lower and upper color bound. Use `cv2.inRange()` to create a binary mask that isolates pixels within that color range."
+  },
+  {
+    "n": 17,
+    "title": "Image Smoothing and Blurring",
+    "math": "Convolution, Kernel operations, Gaussian function",
+    "note": "Reduce noise and detail in an image using various filtering techniques in Python. Cover averaging (`cv2.blur()`), Gaussian blurring (`cv2.GaussianBlur()`), median blurring (`cv2.medianBlur()`), and edge-preserving bilateral filtering (`cv2.bilateralFilter()`)."
+  },
+  {
+    "n": 18,
+    "title": "Morphological Operations: Erosion and Dilation",
+    "math": "Set theory, Minkowski operations",
+    "note": "Modify the structure of foreground objects in a binary image. In Python, use `cv2.erode()` to shrink objects and remove small noise, and `cv2.dilate()` to expand objects and fill small gaps, both requiring a structuring element (kernel)."
+  },
+  {
+    "n": 19,
+    "title": "Morphological Operations: Opening and Closing",
+    "math": "Combinations of set operations",
+    "note": "Perform advanced noise removal on binary images. In Python, use `cv2.morphologyEx()` with the `MORPH_OPEN` flag (erosion followed by dilation) to remove small specks, and `MORPH_CLOSE` (dilation followed by erosion) to fill small holes."
+  },
+  {
+    "n": 20,
+    "title": "Image Gradients: Sobel and Scharr",
+    "math": "Calculus (first-order derivatives), Vector gradients",
+    "note": "Calculate the intensity gradient of an image to detect edges. In a Python script, use the `cv2.Sobel()` and `cv2.Scharr()` functions to compute the x and y derivatives, highlighting horizontal and vertical edges."
+  },
+  {
+    "n": 21,
+    "title": "Laplacian Operator for Edge Detection",
+    "math": "Calculus (second-order derivatives)",
+    "note": "Find edges in an image by detecting zero-crossings in the second derivative. In Python, apply the Laplacian operator using the `cv2.Laplacian()` function on a grayscale image."
+  },
+  {
+    "n": 22,
+    "title": "Canny Edge Detection",
+    "math": "Gaussian filtering, Non-maximum suppression, Hysteresis thresholding",
+    "note": "Implement a robust multi-stage edge detection algorithm. In Python, use the single function `cv2.Canny()`, which internally performs noise reduction, gradient calculation, non-maximum suppression, and hysteresis thresholding to find strong edges."
+  },
+  {
+    "n": 23,
+    "title": "Finding and Drawing Contours",
+    "math": "Topology, Curve representation",
+    "note": "Identify and extract the boundaries of objects in a binary image. In a Python script, use `cv2.findContours()` to get a list of all contours, and then visualize them on the original image using `cv2.drawContours()`."
+  },
+  {
+    "n": 24,
+    "title": "Contour Properties and Features",
+    "math": "Geometry (area, perimeter), Image moments, Centroids",
+    "note": "After finding contours, analyze their geometric properties in Python. Calculate the area with `cv2.contourArea()`, perimeter with `cv2.arcLength()`, and image moments with `cv2.moments()` to determine the contour's centroid (center of mass)."
+  },
+  {
+    "n": 25,
+    "title": "Bounding Shapes around Contours",
+    "math": "Coordinate geometry, Geometric fitting",
+    "note": "Fit simple geometric shapes around detected contours in Python. Use `cv2.boundingRect()` for an upright rectangle, `cv2.minEnclosingCircle()` for a circle, and `cv2.minAreaRect()` for a rotated rectangle that encloses the contour."
+  },
+  {
+    "n": 26,
+    "title": "Contour Approximation and Convex Hull",
+    "math": "Polygon approximation, Convex sets",
+    "note": "Simplify the shape of a contour by reducing its number of vertices. In Python, use `cv2.approxPolyDP()` for this approximation. Find the convex hull, the smallest convex polygon containing the contour, using `cv2.convexHull()`."
+  },
+  {
+    "n": 27,
+    "title": "Calculating and Plotting Histograms",
+    "math": "Statistics (frequency distribution, probability density)",
+    "note": "Analyze the tonal distribution of an image. In Python, use `cv2.calcHist()` to compute the pixel intensity histogram. Visualize the resulting data as a bar chart using an external library like Matplotlib."
+  },
+  {
+    "n": 28,
+    "title": "Histogram Equalization",
+    "math": "Cumulative distribution functions, Probability theory",
+    "note": "Improve image contrast by stretching out the intensity range. In Python, apply global histogram equalization to a grayscale image using the `cv2.equalizeHist()` function to redistribute pixel values more evenly."
+  },
+  {
+    "n": 29,
+    "title": "CLAHE for Contrast Enhancement",
+    "math": "Local statistics, Clipping functions",
+    "note": "Apply an adaptive method of histogram equalization to enhance local contrast without amplifying noise. In Python, create a CLAHE (Contrast Limited Adaptive Histogram Equalization) object using `cv2.createCLAHE()` and apply it to an image."
+  },
+  {
+    "n": 30,
+    "title": "Template Matching",
+    "math": "Cross-correlation, Sum of Squared Differences",
+    "note": "Search for a small template image within a larger source image. In Python, use the `cv2.matchTemplate()` function with a specified comparison method. Find the location of the best match using `cv2.minMaxLoc()`."
+  },
+  {
+    "n": 31,
+    "title": "Harris Corner Detection",
+    "math": "Matrix eigenvalues, Second moment matrix",
+    "note": "Detect corners in an image, which are points with strong intensity changes in all directions. In a Python script, use the `cv2.cornerHarris()` function to find these features and mark them on the image."
+  },
+  {
+    "n": 32,
+    "title": "Shi-Tomasi Corner Detection",
+    "math": "Matrix eigenvalues, Feature quality metrics",
+    "note": "Identify the strongest corners in an image, often for tracking purposes. In Python, use the `cv2.goodFeaturesToTrack()` function, which provides more control over the number and quality of corners detected compared to Harris."
+  },
+  {
+    "n": 33,
+    "title": "Feature Detection with ORB",
+    "math": "FAST keypoint detection, BRIEF descriptor",
+    "note": "Detect and compute robust local features that are invariant to scale and rotation. In Python, use the ORB (Oriented FAST and Rotated BRIEF) algorithm by creating an instance with `cv2.ORB_create()` and using its `detectAndCompute()` method."
+  },
+  {
+    "n": 34,
+    "title": "Brute-Force Feature Matching",
+    "math": "Distance metrics (Hamming, Euclidean L2)",
+    "note": "Match feature descriptors between two different images. In Python, create a `cv2.BFMatcher()` (Brute-Force Matcher) object and use its `match()` or `knnMatch()` method to find corresponding keypoints. Visualize the matches with `cv2.drawMatches()`."
+  },
+  {
+    "n": 35,
+    "title": "FLANN Based Feature Matching",
+    "math": "k-d trees, Approximate nearest neighbor search",
+    "note": "Perform fast and efficient feature matching, especially for large datasets. In Python, set up the FLANN (Fast Library for Approximate Nearest Neighbors) matcher and use it to find correspondences between descriptors from two images."
+  },
+  {
+    "n": 36,
+    "title": "Optical Flow: Lucas-Kanade Method",
+    "math": "Image gradients, Least squares approximation",
+    "note": "Track the motion of a sparse set of feature points between two consecutive video frames. In Python, use the `cv2.calcOpticalFlowPyrLK()` function to implement the Lucas-Kanade optical flow algorithm."
+  },
+  {
+    "n": 37,
+    "title": "Dense Optical Flow: Farneback Method",
+    "math": "Polynomial expansion, Vector fields",
+    "note": "Calculate the motion vector for every pixel in the frame to create a dense flow field. In Python, use `cv2.calcOpticalFlowFarneback()` to compute the flow and then visualize the motion using color to represent direction and magnitude."
+  },
+  {
+    "n": 38,
+    "title": "Background Subtraction",
+    "math": "Gaussian Mixture Models (GMM), Statistical modeling",
+    "note": "Isolate moving objects (foreground) from a static background in a video. In Python, use `cv2.createBackgroundSubtractorMOG2()` to build a statistical model of the background and generate a foreground mask for each frame."
+  },
+  {
+    "n": 39,
+    "title": "Object Tracking with CamShift",
+    "math": "Probability density, Mean shift algorithm, Centroid tracking",
+    "note": "Track an object in a video based on its color histogram. In Python, use the Continuously Adaptive Mean-Shift (CamShift) algorithm, which adapts the search window size as the object's scale changes, implemented via `cv2.CamShift()`."
+  },
+  {
+    "n": 40,
+    "title": "Face Detection with Haar Cascades",
+    "math": "Haar-like features, Integral images, AdaBoost classification",
+    "note": "Perform real-time object detection using a pre-trained cascade classifier. In Python, load a pre-trained Haar cascade XML file using `cv2.CascadeClassifier()` and use its `detectMultiScale()` method to find and draw rectangles around faces in an image."
+  },
+  {
+    "n": 41,
+    "title": "Introduction to OpenCV's DNN Module",
+    "math": "Neural network architecture, Forward propagation",
+    "note": "Run inference using pre-trained deep learning models within OpenCV. In Python, use the `cv2.dnn.readNet()` function to load a model and its configuration from formats like Caffe, TensorFlow, or ONNX."
+  },
+  {
+    "n": 42,
+    "title": "DNN Object Detection with SSD",
+    "math": "Convolutional Neural Networks, Bounding box regression",
+    "note": "Perform object detection using a pre-trained Single Shot Detector (SSD) model. In Python, load the model using `cv2.dnn.readNet()`, prepare the input image as a blob, perform a forward pass with `net.forward()`, and parse the output to draw bounding boxes."
+  },
+  {
+    "n": 43,
+    "title": "K-Means Clustering for Color Quantization",
+    "math": "Centroid-based clustering, Euclidean distance, Vector quantization",
+    "note": "Reduce the number of unique colors in an image. In Python, reshape the image into a list of pixels and apply `cv2.kmeans()` to group the pixel colors into K clusters, then create a new image using the cluster centers as the new color palette."
+  }
+]
