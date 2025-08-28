@@ -1,0 +1,134 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Pandas",
+    "math": "Data structures",
+    "note": "This section introduces Pandas as an essential Python library for data manipulation and analysis. It covers the two primary data structures: the `Series` (1D, labeled) and the `DataFrame` (2D, labeled), and their role in the Python data science ecosystem."
+  },
+  {
+    "n": 2,
+    "title": "Installing and Using Pandas",
+    "math": "Logic",
+    "note": "Provides a guide on how to install the Pandas library using pip and how to import it into a Python script, conventionally with the alias `pd`. The context is a local Python development environment."
+  },
+  {
+    "n": 3,
+    "title": "The Pandas Series",
+    "math": "Set theory",
+    "note": "Explains the Pandas `Series` object, a one-dimensional labeled array capable of holding any data type. The lesson covers creating a Series from lists and dictionaries, and the importance of its index."
+  },
+  {
+    "n": 4,
+    "title": "The Pandas DataFrame",
+    "math": "Matrix algebra",
+    "note": "This lesson introduces the `DataFrame`, a two-dimensional labeled data structure with columns of potentially different types, similar to a spreadsheet or SQL table. It covers creating a DataFrame from various sources, such as dictionaries and NumPy arrays."
+  },
+  {
+    "n": 5,
+    "title": "Reading and Writing Data: CSV Files",
+    "math": "File I/O",
+    "note": "Explains how to read data from and write data to the most common file format, CSV. The lesson focuses on the powerful `pd.read_csv()` function and its key parameters, and `DataFrame.to_csv()` for saving data."
+  },
+  {
+    "n": 6,
+    "title": "Reading and Writing Data: Excel and Other Formats",
+    "math": "File I/O",
+    "note": "Expands on data I/O by covering how to read from and write to other common formats, such as Excel files (`.xlsx`), JSON, and SQL databases, using Pandas functions."
+  },
+  {
+    "n": 7,
+    "title": "Selection and Indexing: `loc` and `iloc`",
+    "math": "Coordinate geometry",
+    "note": "This section covers the primary ways to select data from a Pandas DataFrame. It explains the use of `.loc` for label-based indexing and `.iloc` for integer-position-based indexing, for both rows and columns."
+  },
+  {
+    "n": 8,
+    "title": "Conditional Selection",
+    "math": "Boolean algebra",
+    "note": "Explains how to filter a DataFrame based on one or more conditions. The lesson demonstrates how to use boolean masks to select rows that meet certain criteria, a fundamental skill for data analysis in Pandas."
+  },
+  {
+    "n": 9,
+    "title": "Adding and Deleting Columns",
+    "math": "Matrix algebra",
+    "note": "This lesson covers how to add new columns to a DataFrame, either based on existing columns or new data. It also explains how to remove columns using the `.drop()` method."
+  },
+  {
+    "n": 10,
+    "title": "Descriptive Statistics",
+    "math": "Statistics",
+    "note": "Explains how to get quick insights into a dataset using descriptive statistics. The lesson covers the `.describe()` method for a summary of numerical columns and functions like `.mean()`, `.median()`, and `.value_counts()`."
+  },
+  {
+    "n": 11,
+    "title": "Handling Missing Data",
+    "math": "Statistics",
+    "note": "This lesson covers techniques for dealing with missing data (represented as `NaN`). It explains how to identify missing values with `.isnull()` and how to either drop them (`.dropna()`) or fill them in (`.fillna()`)."
+  },
+  {
+    "n": 12,
+    "title": "The `groupby` Operation",
+    "math": "Data aggregation",
+    "note": "Introduces the powerful `groupby()` method for splitting data into groups based on some criteria, applying an aggregate function to each group, and combining the results. This is a cornerstone of data analysis in Pandas."
+  },
+  {
+    "n": 13,
+    "title": "Merging, Joining, and Concatenating",
+    "math": "Set theory",
+    "note": "This section explains how to combine multiple DataFrames. It covers `pd.concat()` for stacking DataFrames, and `pd.merge()` for database-style joins (inner, left, right, outer) based on common columns."
+  },
+  {
+    "n": 14,
+    "title": "Applying Functions with `.apply()`",
+    "math": "Functional programming",
+    "note": "Explains how to apply a custom function along an axis of a DataFrame using the `.apply()` method. This is useful for performing complex transformations on your data that are not covered by built-in functions."
+  },
+  {
+    "n": 15,
+    "title": "Sorting Data",
+    "math": "Sorting algorithms",
+    "note": "Covers how to sort a DataFrame by its index or by its values using `.sort_index()` and `.sort_values()`. The lesson demonstrates sorting by single or multiple columns."
+  },
+  {
+    "n": 16,
+    "title": "Working with Text Data",
+    "math": "String theory",
+    "note": "Introduces the powerful string methods available through the `.str` accessor on a Pandas Series. The lesson demonstrates how to perform common string operations like splitting, replacing, and pattern matching."
+  },
+  {
+    "n": 17,
+    "title": "Working with Time Series Data",
+    "math": "Time series analysis",
+    "note": "This section explains how to work with date and time data in Pandas. It covers converting columns to datetime objects, setting a datetime index, and performing time-based selections and resampling."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to Plotting",
+    "math": "Data visualization",
+    "note": "Provides an introduction to the built-in plotting capabilities of Pandas, which use the Matplotlib library. The lesson demonstrates how to create basic plots like line charts, bar charts, and histograms directly from a DataFrame."
+  },
+  {
+    "n": 19,
+    "title": "Multi-Index DataFrames",
+    "math": "Data structures",
+    "note": "This lesson introduces the concept of a multi-level or hierarchical index on a DataFrame. It explains how to create and work with a `MultiIndex` to handle higher-dimensional data in a 2D format."
+  },
+  {
+    "n": 20,
+    "title": "Pivot Tables",
+    "math": "Data aggregation",
+    "note": "Explains how to create spreadsheet-style pivot tables in Pandas using the `pivot_table()` method. The lesson demonstrates how this can be used to reshape and summarize data from a different perspective."
+  },
+  {
+    "n": 21,
+    "title": "Categorical Data",
+    "math": "Set theory",
+    "note": "This section introduces the `category` data type in Pandas. It explains how using categorical data can save memory and improve performance for columns with a limited number of unique values, and is essential for some statistical models."
+  },
+  {
+    "n": 22,
+    "title": "Optimizing Pandas Performance",
+    "math": "Optimization",
+    "note": "This final section provides tips and techniques for writing more efficient Pandas code. The lesson covers topics like choosing appropriate data types (`dtypes`), using vectorized operations instead of loops, and being aware of memory usage to improve performance."
+  }
+]

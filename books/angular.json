@@ -1,0 +1,194 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Angular",
+    "math": "Component-based architecture",
+    "note": "This section introduces Angular as a comprehensive platform and framework for building single-page client applications using HTML and TypeScript. It covers the key features, the component-based architecture, and the Angular ecosystem. The context is modern web development."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up the Angular Environment",
+    "math": "Logic",
+    "note": "Provides a step-by-step guide on how to set up a local development environment for Angular. This includes installing Node.js and the Angular CLI, which is the primary tool for creating and managing Angular projects."
+  },
+  {
+    "n": 3,
+    "title": "Creating an Angular Application",
+    "math": "Command-line interface",
+    "note": "Explains how to create a new Angular application using the Angular CLI command `ng new`. The lesson also covers the file structure of a new project, explaining the purpose of key files and directories like `src`, `angular.json`, and `package.json`."
+  },
+  {
+    "n": 4,
+    "title": "Understanding Angular Components",
+    "math": "Component-based architecture",
+    "note": "Introduces components as the fundamental building blocks of an Angular UI. The lesson covers the three main parts of a component: the TypeScript class, the HTML template, and the CSS styles, all defined in the `@Component` decorator."
+  },
+  {
+    "n": 5,
+    "title": "Template Syntax: Interpolation and Property Binding",
+    "math": "Logic",
+    "note": "This lesson explains how to bind data from the component's class to its template. It covers interpolation `{{ }}` for displaying component properties, and property binding `[ ]` for setting properties of HTML elements."
+  },
+  {
+    "n": 6,
+    "title": "Template Syntax: Event Binding",
+    "math": "Event-driven programming",
+    "note": "Covers event binding `( )` for listening to user events (like clicks or keyboard input) in the template and calling a method in the component's class in response."
+  },
+  {
+    "n": 7,
+    "title": "Template Syntax: Two-Way Binding",
+    "math": "Logic",
+    "note": "Explains two-way data binding `[(ngModel)]` for creating a live synchronization of data between the template and the component class. This is commonly used with form inputs and requires the `FormsModule`."
+  },
+  {
+    "n": 8,
+    "title": "Structural Directives: *ngIf",
+    "math": "Boolean algebra",
+    "note": "Introduces the `*ngIf` structural directive for conditionally adding or removing an element from the DOM based on a boolean expression. The lesson also covers the `else` block with `ng-template`."
+  },
+  {
+    "n": 9,
+    "title": "Structural Directives: *ngFor",
+    "math": "Iteration",
+    "note": "Explains the `*ngFor` structural directive for rendering a list of items from an array. The lesson covers iterating over a collection and accessing the index and other local variables."
+  },
+  {
+    "n": 10,
+    "title": "Structural Directives: *ngSwitch",
+    "math": "Logic",
+    "note": "Covers the `*ngSwitch` directive for displaying one of several possible elements based on a switch value, similar to a traditional `switch` statement in programming."
+  },
+  {
+    "n": 11,
+    "title": "Attribute Directives: NgClass and NgStyle",
+    "math": "Set theory",
+    "note": "This lesson introduces attribute directives, which change the appearance or behavior of an element. It focuses on `[ngClass]` for dynamically adding and removing CSS classes, and `[ngStyle]` for applying inline styles."
+  },
+  {
+    "n": 12,
+    "title": "Component Interaction with @Input",
+    "math": "Graph theory",
+    "note": "Explains how a parent component can pass data down to a child component using the `@Input()` decorator. This is the primary way to share data in a component hierarchy."
+  },
+  {
+    "n": 13,
+    "title": "Component Interaction with @Output",
+    "math": "Event-driven programming",
+    "note": "Covers how a child component can send data up to its parent using the `@Output()` decorator and an `EventEmitter`. This allows child components to notify parents of events."
+  },
+  {
+    "n": 14,
+    "title": "Component Lifecycle Hooks",
+    "math": "Event-driven programming",
+    "note": "This lesson covers the lifecycle of an Angular component and the hooks that allow you to tap into key moments, such as `ngOnInit` (initialization), `ngOnChanges` (input property changes), and `ngOnDestroy` (cleanup)."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to Services",
+    "math": "Object-oriented programming",
+    "note": "Introduces services as a way to share data and business logic across different components. The lesson explains the benefits of using services for creating more maintainable and testable applications."
+  },
+  {
+    "n": 16,
+    "title": "Dependency Injection (DI) in Angular",
+    "math": "Object-oriented programming",
+    "note": "Explains Angular's hierarchical dependency injection system. The lesson demonstrates how to provide a service and inject it into a component's constructor to make it available for use."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to Routing",
+    "math": "Graph theory",
+    "note": "This section covers the Angular Router for enabling navigation between different views (components) in a single-page application. It explains how to configure routes and use the `<router-outlet>` component."
+  },
+  {
+    "n": 18,
+    "title": "Router Links and Navigation",
+    "math": "Graph theory",
+    "note": "Explains how to create navigation links using the `routerLink` directive and how to navigate programmatically from within a component class by injecting the `Router` service."
+  },
+  {
+    "n": 19,
+    "title": "Route Parameters",
+    "math": "Logic",
+    "note": "This lesson covers how to pass parameters in a route (e.g., for a product ID) and how to retrieve those parameters in the destination component using the `ActivatedRoute` service."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Angular Forms",
+    "math": "Logic",
+    "note": "Provides an overview of the two approaches to building forms in Angular: template-driven forms and reactive forms. The lesson discusses the pros and cons of each to help choose the right approach."
+  },
+  {
+    "n": 21,
+    "title": "Template-Driven Forms",
+    "math": "Logic",
+    "note": "Explains how to build forms using the template-driven approach, where most of the logic is in the template. The lesson covers using `ngModel` for two-way data binding and handling form submission and basic validation."
+  },
+  {
+    "n": 22,
+    "title": "Reactive Forms",
+    "math": "Logic",
+    "note": "This lesson introduces the reactive forms approach, which is more scalable and testable. It covers `FormControl`, `FormGroup`, and `FormBuilder` for creating and managing form controls programmatically in the component class."
+  },
+  {
+    "n": 23,
+    "title": "Form Validation in Reactive Forms",
+    "math": "Logic",
+    "note": "Covers how to implement both built-in and custom validators in a reactive form. The lesson demonstrates how to display validation messages to the user based on the state of the form controls."
+  },
+  {
+    "n": 24,
+    "title": "Making HTTP Requests",
+    "math": "Asynchronous programming",
+    "note": "Covers how to use the `HttpClient` module to communicate with a backend server. The lesson demonstrates making GET and POST requests to a REST API from an Angular application."
+  },
+  {
+    "n": 25,
+    "title": "Introduction to RxJS and Observables",
+    "math": "Reactive programming",
+    "note": "This section introduces RxJS (Reactive Extensions for JavaScript) and the Observable pattern, which is used extensively by Angular, especially for handling HTTP requests and other async operations. It covers subscribing to an observable to get data."
+  },
+  {
+    "n": 26,
+    "title": "RxJS Operators",
+    "math": "Reactive programming",
+    "note": "Explains how to use RxJS operators (like `map`, `filter`, and `tap`) to transform and manipulate data within an observable stream. The lesson demonstrates how to use the `pipe()` method to chain operators together."
+  },
+  {
+    "n": 27,
+    "title": "Pipes in Angular",
+    "math": "Functional programming",
+    "note": "Explains how to use Angular's built-in pipes (e.g., `DatePipe`, `UpperCasePipe`, `JsonPipe`) to transform data directly in the template for display purposes. The lesson also covers how to create custom pipes."
+  },
+  {
+    "n": 28,
+    "title": "Angular Modules (NgModule)",
+    "math": "Set theory",
+    "note": "Explains the concept of `NgModule` for organizing an Angular application into cohesive blocks of functionality. The lesson covers the root module, feature modules, and the `declarations`, `imports`, and `exports` arrays."
+  },
+  {
+    "n": 29,
+    "title": "Lazy Loading Feature Modules",
+    "math": "Optimization",
+    "note": "This section introduces lazy loading as a technique for loading feature modules on demand when a user navigates to their routes. This improves the initial load time and performance of an Angular application."
+  },
+  {
+    "n": 30,
+    "title": "Route Guards",
+    "math": "Logic",
+    "note": "Covers the use of route guards like `CanActivate` to protect routes from unauthorized access. The lesson demonstrates how to implement a guard to check for a user's authentication status before allowing navigation."
+  },
+  {
+    "n": 31,
+    "title": "Introduction to Angular Animations",
+    "math": "Animation",
+    "note": "This lesson provides an introduction to Angular's powerful animation system. It explains how to create simple transitions between states (e.g., `open` and `closed`) for components using the `trigger`, `state`, `style`, and `transition` functions."
+  },
+  {
+    "n": 32,
+    "title": "Unit Testing in Angular",
+    "math": "Logic",
+    "note": "This final section gives an overview of the testing tools and strategies for Angular applications. It introduces unit testing components and services with Jasmine and Karma, which are all integrated into the Angular CLI workflow."
+  }
+]

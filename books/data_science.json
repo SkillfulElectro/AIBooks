@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Data Science",
+    "math": "Statistics",
+    "note": "This section provides a high-level overview of data science as an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data. It covers the data science lifecycle, from business understanding to deployment. The context is a general data analysis environment."
+  },
+  {
+    "n": 2,
+    "title": "The Data Science Toolkit: Python",
+    "math": "Logic",
+    "note": "Introduces Python as the dominant programming language for data science. This lesson covers why Python is so popular and provides an overview of the core libraries in the Python data science ecosystem: NumPy, Pandas, Matplotlib, and Scikit-learn."
+  },
+  {
+    "n": 3,
+    "title": "Data Wrangling with Pandas",
+    "math": "Data transformation",
+    "note": "Explains data wrangling (or data munging) as the process of cleaning, transforming, and enriching raw data into a desired format for better analysis. The lesson focuses on using the Pandas library in Python for these tasks."
+  },
+  {
+    "n": 4,
+    "title": "Exploratory Data Analysis (EDA)",
+    "math": "Statistics",
+    "note": "This lesson introduces Exploratory Data Analysis (EDA), the critical process of performing initial investigations on data to discover patterns, spot anomalies, and test hypotheses. It covers using descriptive statistics and data visualization."
+  },
+  {
+    "n": 5,
+    "title": "Data Visualization with Matplotlib and Seaborn",
+    "math": "Data visualization",
+    "note": "Covers the fundamentals of data visualization in Python. The lesson introduces Matplotlib for basic plotting and Seaborn for creating more statistically sophisticated and aesthetically pleasing visualizations like heatmaps and pair plots."
+  },
+  {
+    "n": 6,
+    "title": "Introduction to Machine Learning",
+    "math": "Machine learning",
+    "note": "Provides an introduction to the core concepts of machine learning. The lesson explains the difference between supervised learning (classification, regression), unsupervised learning (clustering), and reinforcement learning."
+  },
+  {
+    "n": 7,
+    "title": "The Machine Learning Workflow with Scikit-Learn",
+    "math": "Machine learning",
+    "note": "This section introduces Scikit-learn, the primary machine learning library in Python. It covers the standard workflow: splitting data into training and testing sets, training a model, and evaluating its performance."
+  },
+  {
+    "n": 8,
+    "title": "Supervised Learning: Regression",
+    "math": "Linear regression",
+    "note": "Focuses on regression, a supervised learning task for predicting a continuous numerical value. The lesson covers Linear Regression as a fundamental regression algorithm and how to evaluate its performance with metrics like Mean Squared Error."
+  },
+  {
+    "n": 9,
+    "title": "Supervised Learning: Classification",
+    "math": "Classification models",
+    "note": "This lesson introduces classification, a supervised learning task for predicting a categorical label. It covers Logistic Regression and K-Nearest Neighbors (KNN) as fundamental classification algorithms."
+  },
+  {
+    "n": 10,
+    "title": "Model Evaluation for Classification",
+    "math": "Statistics",
+    "note": "Explains how to evaluate the performance of a classification model. The lesson covers key concepts like the confusion matrix, accuracy, precision, recall, and the F1-score."
+  },
+  {
+    "n": 11,
+    "title": "Advanced Supervised Learning Models",
+    "math": "Decision trees",
+    "note": "Introduces more advanced and powerful supervised learning models, such as Decision Trees, Random Forests, and Gradient Boosting Machines (like XGBoost). The lesson provides a high-level overview of how these models work."
+  },
+  {
+    "n": 12,
+    "title": "Unsupervised Learning: Clustering",
+    "math": "Cluster analysis",
+    "note": "This section introduces clustering, an unsupervised learning task for finding natural groupings in data. It covers the most popular clustering algorithm, K-Means, and how to determine the optimal number of clusters."
+  },
+  {
+    "n": 13,
+    "title": "Feature Engineering",
+    "math": "Data transformation",
+    "note": "Explains the crucial process of feature engineering, which involves creating new features from existing data to improve machine learning model performance. The lesson covers techniques like one-hot encoding for categorical variables and feature scaling."
+  },
+  {
+    "n": 14,
+    "title": "Dimensionality Reduction",
+    "math": "Linear algebra",
+    "note": "This lesson introduces dimensionality reduction as a technique for reducing the number of features in a dataset while retaining as much information as possible. It covers Principal Component Analysis (PCA) as a common method."
+  },
+  {
+    "n": 15,
+    "title": "Communicating Data Science Results",
+    "math": "Communication theory",
+    "note": "This final section emphasizes the importance of effectively communicating the results of a data science project. It covers the art of data storytelling and how to present findings to both technical and non-technical audiences using tools like Jupyter Notebooks or dedicated dashboarding software."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Cybersecurity",
+    "math": "Logic",
+    "note": "This section provides a high-level overview of cybersecurity as the practice of protecting systems, networks, and programs from digital attacks. It covers the core principles of the CIA Triad: Confidentiality, Integrity, and Availability. The context is the modern digital landscape."
+  },
+  {
+    "n": 2,
+    "title": "Common Cyber Threats and Attack Vectors",
+    "math": "Game theory",
+    "note": "Introduces the common types of cyber threats that organizations and individuals face. The lesson covers malware (viruses, ransomware), phishing, denial-of-service (DoS) attacks, and social engineering."
+  },
+  {
+    "n": 3,
+    "title": "Cryptography Fundamentals",
+    "math": "Cryptography",
+    "note": "Explains the basics of cryptography, the science of secure communication. This lesson covers the difference between symmetric (private key) and asymmetric (public key) encryption and the concept of hashing."
+  },
+  {
+    "n": 4,
+    "title": "Authentication and Authorization",
+    "math": "Access control",
+    "note": "This section covers the critical concepts of authentication (verifying who a user is) and authorization (determining what they are allowed to do). It introduces different authentication factors and the principle of least privilege."
+  },
+  {
+    "n": 5,
+    "title": "Network Security Fundamentals",
+    "math": "Network theory",
+    "note": "Provides an introduction to securing computer networks. The lesson covers the role of firewalls, Virtual Private Networks (VPNs) for secure remote access, and Intrusion Detection Systems (IDS)."
+  },
+  {
+    "n": 6,
+    "title": "Web Application Security: The OWASP Top 10",
+    "math": "Web security",
+    "note": "Introduces the OWASP Top 10, a standard awareness document for web application security. This lesson provides an overview of the most critical security risks to web applications."
+  },
+  {
+    "n": 7,
+    "title": "Web Security: SQL Injection (SQLi)",
+    "math": "Logic",
+    "note": "Explains one of the most common web application vulnerabilities, SQL Injection. The lesson demonstrates how an attacker can manipulate SQL queries and discusses mitigation techniques like using prepared statements."
+  },
+  {
+    "n": 8,
+    "title": "Web Security: Cross-Site Scripting (XSS)",
+    "math": "Logic",
+    "note": "Covers Cross-Site Scripting (XSS), a vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. The lesson explains the different types of XSS and how to prevent them with proper output encoding."
+  },
+  {
+    "n": 9,
+    "title": "Security Operations (SecOps)",
+    "math": "Operations research",
+    "note": "This lesson introduces the role of a Security Operations Center (SOC). It covers the functions of monitoring, detection, and response to security incidents using tools like SIEM (Security Information and Event Management)."
+  },
+  {
+    "n": 10,
+    "title": "Penetration Testing and Ethical Hacking",
+    "math": "Game theory",
+    "note": "Explains the practice of penetration testing (pen testing), where ethical hackers simulate attacks on a system to identify vulnerabilities before malicious actors do. The lesson covers the different phases of a penetration test."
+  },
+  {
+    "n": 11,
+    "title": "Cloud Security",
+    "math": "Distributed systems",
+    "note": "This section provides an introduction to the unique security challenges of cloud computing. It covers the shared responsibility model (between the cloud provider and the customer) and key security considerations for IaaS, PaaS, and SaaS."
+  },
+  {
+    "n": 12,
+    "title": "Identity and Access Management (IAM)",
+    "math": "Access control",
+    "note": "Covers Identity and Access Management (IAM) as a framework for managing digital identities. The lesson explains concepts like Single Sign-On (SSO) and Multi-Factor Authentication (MFA) for enhancing security."
+  },
+  {
+    "n": 13,
+    "title": "Endpoint Security",
+    "math": "Network theory",
+    "note": "Explains the importance of securing endpoints like laptops, desktops, and mobile devices. The lesson covers the role of antivirus software, endpoint detection and response (EDR) tools, and device management."
+  },
+  {
+    "n": 14,
+    "title": "Security Policies and Compliance",
+    "math": "Regulatory compliance",
+    "note": "This lesson discusses the importance of having clear security policies and procedures within an organization. It also introduces common regulatory compliance frameworks like GDPR, HIPAA, and PCI DSS."
+  },
+  {
+    "n": 15,
+    "title": "Incident Response",
+    "math": "Crisis management",
+    "note": "This final section covers the process of responding to a cybersecurity incident. It explains the typical phases of an incident response plan: preparation, identification, containment, eradication, recovery, and lessons learned."
+  }
+]

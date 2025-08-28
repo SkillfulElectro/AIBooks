@@ -1,0 +1,194 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Databases and SQL",
+    "math": "Set theory",
+    "note": "This section introduces the concept of a database and a Relational Database Management System (RDBMS). It explains the role of SQL (Structured Query Language) as the standard language for communicating with relational databases. The context is a generic RDBMS environment."
+  },
+  {
+    "n": 2,
+    "title": "SQL Syntax and Data Types",
+    "math": "Syntax analysis",
+    "note": "Covers the basic syntax rules of SQL, such as the use of semicolons and case insensitivity for keywords. It also provides an overview of common data types like `VARCHAR`, `INT`, `DECIMAL`, `DATE`, and `BOOLEAN`."
+  },
+  {
+    "n": 3,
+    "title": "The SELECT Statement",
+    "math": "Set theory",
+    "note": "Explains the fundamental `SELECT` statement for retrieving data from a database table. The lesson covers selecting all columns (`*`) and specific columns from a single table."
+  },
+  {
+    "n": 4,
+    "title": "The DISTINCT Keyword",
+    "math": "Set theory",
+    "note": "This lesson introduces the `DISTINCT` keyword, used with `SELECT` to return only unique (different) values from a column, effectively removing duplicates from the result set."
+  },
+  {
+    "n": 5,
+    "title": "The WHERE Clause for Filtering",
+    "math": "Boolean algebra",
+    "note": "Introduces the `WHERE` clause to filter records and retrieve only those that fulfill a specified condition. It covers the use of comparison operators (`=`, `!=`, `<`, `>`)."
+  },
+  {
+    "n": 6,
+    "title": "Combining Conditions with AND, OR, NOT",
+    "math": "Boolean algebra",
+    "note": "Explains how to use the `AND`, `OR`, and `NOT` logical operators within a `WHERE` clause to combine multiple conditions for more complex filtering of records."
+  },
+  {
+    "n": 7,
+    "title": "The ORDER BY Clause for Sorting",
+    "math": "Sorting algorithms",
+    "note": "Explains how to sort the result set of a query in ascending (`ASC`) or descending (`DESC`) order using the `ORDER BY` clause. The lesson demonstrates sorting by one or more columns."
+  },
+  {
+    "n": 8,
+    "title": "Data Manipulation: INSERT INTO",
+    "math": "Set theory",
+    "note": "This section covers the `INSERT INTO` statement for adding new records (rows) to a database table. It explains the syntax for inserting data into all columns or only specific columns."
+  },
+  {
+    "n": 9,
+    "title": "Data Manipulation: UPDATE",
+    "math": "Logic",
+    "note": "Explains how to modify existing records in a table using the `UPDATE` statement. The lesson emphasizes the critical importance of the `WHERE` clause to specify which records to update."
+  },
+  {
+    "n": 10,
+    "title": "Data Manipulation: DELETE",
+    "math": "Logic",
+    "note": "This lesson covers the `DELETE` statement for removing records from a database table. It again highlights the critical role of the `WHERE` clause to avoid accidentally deleting all records."
+  },
+  {
+    "n": 11,
+    "title": "SQL Aggregate Functions",
+    "math": "Statistics",
+    "note": "Introduces the common SQL aggregate functions: `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX`. The lesson demonstrates how to perform a calculation on a set of values and return a single summary value."
+  },
+  {
+    "n": 12,
+    "title": "The GROUP BY Clause",
+    "math": "Data aggregation",
+    "note": "This section explains the `GROUP BY` clause, used with aggregate functions to group rows that have the same values in specified columns into summary rows. The context is on data analysis and reporting."
+  },
+  {
+    "n": 13,
+    "title": "The HAVING Clause",
+    "math": "Boolean algebra",
+    "note": "Explains the `HAVING` clause, which is used to filter the results of a `GROUP BY` query based on the result of the aggregate function. It clarifies the difference between `WHERE` (filters rows) and `HAVING` (filters groups)."
+  },
+  {
+    "n": 14,
+    "title": "SQL Aliases",
+    "math": "Algebra",
+    "note": "This lesson covers the use of SQL aliases (`AS`) to give a temporary, more readable name to a table or a column in a query. This is particularly useful for complex queries and joins."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to Joins",
+    "math": "Set theory",
+    "note": "Introduces the concept of joins for combining rows from two or more tables based on a related column. This foundational lesson focuses on the `INNER JOIN`, which returns records that have matching values in both tables."
+  },
+  {
+    "n": 16,
+    "title": "Outer Joins: LEFT and RIGHT",
+    "math": "Set theory",
+    "note": "Expands on joins by introducing `LEFT JOIN` (or `LEFT OUTER JOIN`) and `RIGHT JOIN`. The lesson demonstrates how to retrieve all records from one table and only the matched records from the other."
+  },
+  {
+    "n": 17,
+    "title": "The FULL OUTER JOIN",
+    "math": "Set theory",
+    "note": "This lesson covers the `FULL OUTER JOIN`, which returns all records when there is a match in either the left or the right table. It's useful for finding all data from both tables, with `NULL` values where there is no match."
+  },
+  {
+    "n": 18,
+    "title": "The Self Join",
+    "math": "Graph theory",
+    "note": "Explains the concept of a self join, where a table is joined with itself. This technique is useful for querying hierarchical data or comparing rows within the same table."
+  },
+  {
+    "n": 19,
+    "title": "The UNION Operator",
+    "math": "Set theory",
+    "note": "Covers the `UNION` operator for combining the result sets of two or more `SELECT` statements. The lesson explains that `UNION` only selects distinct values, while `UNION ALL` includes duplicates."
+  },
+  {
+    "n": 20,
+    "title": "The CASE Statement",
+    "math": "Logic",
+    "note": "Introduces the `CASE` statement, which allows you to add if-then-else logic to your queries. This is useful for creating conditional output in your result set."
+  },
+  {
+    "n": 21,
+    "title": "Data Definition: CREATE DATABASE/TABLE",
+    "math": "Logic",
+    "note": "This section covers Data Definition Language (DDL). It explains how to use the `CREATE DATABASE` command to create a new database and `CREATE TABLE` to define a new table with its columns and data types."
+  },
+  {
+    "n": 22,
+    "title": "Data Definition: ALTER TABLE",
+    "math": "Logic",
+    "note": "Explains the `ALTER TABLE` statement for modifying an existing table's structure. The lesson covers adding, deleting, or modifying columns in a table."
+  },
+  {
+    "n": 23,
+    "title": "Data Definition: DROP TABLE/DATABASE",
+    "math": "Logic",
+    "note": "Covers the `DROP TABLE` and `DROP DATABASE` commands for permanently deleting tables and databases. The lesson emphasizes the irreversible nature of these commands."
+  },
+  {
+    "n": 24,
+    "title": "SQL Constraints",
+    "math": "Logic",
+    "note": "This lesson provides a comprehensive overview of SQL constraints, which are rules enforced on data columns. It covers `NOT NULL`, `UNIQUE`, `PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, and `DEFAULT`."
+  },
+  {
+    "n": 25,
+    "title": "Introduction to Indexes",
+    "math": "Data structures",
+    "note": "Introduces database indexes as a way to speed up the retrieval of records from a database. The lesson explains the concept of creating an index on a column to improve query performance."
+  },
+  {
+    "n": 26,
+    "title": "Subqueries",
+    "math": "Set theory",
+    "note": "This section introduces subqueries (or nested queries), which are `SELECT` statements embedded within another SQL query. The lesson demonstrates how subqueries can be used in the `WHERE` clause, `FROM` clause, and `SELECT` list."
+  },
+  {
+    "n": 27,
+    "title": "Common Table Expressions (CTEs)",
+    "math": "Set theory",
+    "note": "Explains Common Table Expressions (CTEs), defined with the `WITH` clause, as a way to create a temporary, named result set. CTEs can make complex queries, especially those with multiple subqueries, more readable and organized."
+  },
+  {
+    "n": 28,
+    "title": "Introduction to Window Functions",
+    "math": "Data analysis",
+    "note": "Provides an introduction to window functions, which perform a calculation across a set of table rows that are somehow related to the current row. This lesson covers the `OVER()` clause and basic functions like `ROW_NUMBER()`."
+  },
+  {
+    "n": 29,
+    "title": "Advanced Window Functions",
+    "math": "Data analysis",
+    "note": "Dives deeper into window functions, exploring functions like `LEAD`, `LAG`, `RANK`, and `DENSE_RANK`. The lesson demonstrates how to use them for advanced data analysis tasks like calculating running totals and period-over-period comparisons."
+  },
+  {
+    "n": 30,
+    "title": "Views in SQL",
+    "math": "Set theory",
+    "note": "Explains how to create and use views, which are virtual tables based on the result-set of an SQL statement. The lesson demonstrates how views can be used to simplify complex queries, encapsulate logic, and enhance security."
+  },
+  {
+    "n": 31,
+    "title": "Transactions and Concurrency",
+    "math": "ACID properties",
+    "note": "Covers the concept of database transactions, which are sequences of operations performed as a single logical unit of work. The lesson introduces `BEGIN TRANSACTION`, `COMMIT`, and `ROLLBACK` for managing data consistency."
+  },
+  {
+    "n": 32,
+    "title": "Introduction to Database Normalization",
+    "math": "Database design",
+    "note": "This final section provides a conceptual introduction to the principles of database normalization. It explains the importance of organizing columns and tables to minimize data redundancy and improve data integrity, with a focus on the first three normal forms (1NF, 2NF, 3NF)."
+  }
+]

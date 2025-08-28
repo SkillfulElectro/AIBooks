@@ -1,0 +1,158 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to jQuery",
+    "math": "Logic",
+    "note": "This section introduces jQuery as a fast, small, and feature-rich JavaScript library. It covers the 'write less, do more' philosophy, its benefits for simplifying DOM manipulation, event handling, and AJAX. The context is a standard web browser environment."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up jQuery",
+    "math": "Logic",
+    "note": "Explains how to include the jQuery library in a web page, either by downloading it locally or by using a public CDN (Content Delivery Network). The lesson also introduces the document ready function `$(document).ready()`."
+  },
+  {
+    "n": 3,
+    "title": "jQuery Selectors",
+    "math": "Set theory",
+    "note": "Explains how to use jQuery's powerful selectors, which use CSS selector syntax, to find and select HTML elements. The lesson covers selecting elements by tag name, ID, class, and other attributes."
+  },
+  {
+    "n": 4,
+    "title": "Advanced Selectors and Filters",
+    "math": "Set theory",
+    "note": "This lesson explores some of the more advanced selectors and filters available in jQuery, such as `:first`, `:last`, `:even`, `:odd`, and attribute filters. It demonstrates how to make very specific selections in the DOM."
+  },
+  {
+    "n": 5,
+    "title": "jQuery Events",
+    "math": "Event-driven programming",
+    "note": "Covers how to handle user events with jQuery's event methods. The lesson focuses on the `.on()` method for attaching event handlers and demonstrates common events like `click`, `mouseenter`, and `keydown`."
+  },
+  {
+    "n": 6,
+    "title": "The Event Object in jQuery",
+    "math": "Event-driven programming",
+    "note": "This section explains the event object that jQuery passes to event handlers. It demonstrates how to use this object to get information about the event and to control its behavior with methods like `preventDefault()`."
+  },
+  {
+    "n": 7,
+    "title": "Event Delegation",
+    "math": "Graph theory",
+    "note": "Explains the concept of event delegation in jQuery using the `.on()` method. This powerful technique allows you to attach a single event listener to a parent element that will handle events for all of its descendants, including those added to the DOM later."
+  },
+  {
+    "n": 8,
+    "title": "Getting and Setting Content",
+    "math": "Graph theory",
+    "note": "Explains how to use jQuery to get and set the content of HTML elements. The lesson covers the `.html()`, `.text()`, and `.val()` methods for working with HTML content, text content, and form values."
+  },
+  {
+    "n": 9,
+    "title": "Manipulating Attributes and Properties",
+    "math": "Key-value pairs",
+    "note": "This lesson covers how to get and set HTML attributes and DOM properties using the `.attr()` and `.prop()` methods. It explains the important distinction between attributes and properties."
+  },
+  {
+    "n": 10,
+    "title": "Adding and Removing DOM Elements",
+    "math": "Graph theory",
+    "note": "Explains how to dynamically add new elements to the DOM with methods like `.append()`, `.prepend()`, `.before()`, and `.after()`. The lesson also covers how to remove elements with `.remove()`."
+  },
+  {
+    "n": 11,
+    "title": "Manipulating CSS with jQuery",
+    "math": "Set theory",
+    "note": "Covers how to get and set CSS properties of elements using the `.css()` method. This lesson also introduces the methods for adding, removing, and toggling CSS classes (`.addClass()`, `.removeClass()`, `.toggleClass()`)."
+  },
+  {
+    "n": 12,
+    "title": "Basic Effects: Hide, Show, and Toggle",
+    "math": "Boolean algebra",
+    "note": "This section introduces jQuery's basic effects for hiding and showing elements. It covers the `.hide()`, `.show()`, and `.toggle()` methods to control the visibility of elements with a simple animation."
+  },
+  {
+    "n": 13,
+    "title": "Fading and Sliding Effects",
+    "math": "Animation",
+    "note": "Explains how to create fading effects (`.fadeIn()`, `.fadeOut()`) and sliding effects (`.slideDown()`, `.slideUp()`, `.slideToggle()`) to add smooth visual effects to elements in a web browser."
+  },
+  {
+    "n": 14,
+    "title": "The `animate()` Method",
+    "math": "Calculus",
+    "note": "Explains the powerful `.animate()` method for creating custom animations. The lesson shows how to animate any CSS property that accepts numeric values, and how to use callback functions to execute code after an animation completes."
+  },
+  {
+    "n": 15,
+    "title": "Stopping and Delaying Animations",
+    "math": "Animation",
+    "note": "This lesson covers how to control animations with the `.stop()` method to prevent animation buildup, and the `.delay()` method to create pauses in an animation queue."
+  },
+  {
+    "n": 16,
+    "title": "jQuery Chaining",
+    "math": "Logic",
+    "note": "Introduces the concept of chaining in jQuery, which allows multiple methods to be called on the same jQuery object in a single statement. It demonstrates how chaining can make code more concise and readable."
+  },
+  {
+    "n": 17,
+    "title": "Traversing the DOM: Ancestors",
+    "math": "Graph theory",
+    "note": "This lesson explains how to navigate up the DOM tree from a selected element. It covers methods like `.parent()`, `.parents()`, and `.closest()` to find ancestor elements."
+  },
+  {
+    "n": 18,
+    "title": "Traversing the DOM: Descendants and Siblings",
+    "math": "Graph theory",
+    "note": "Explains how to navigate down and across the DOM tree. The lesson covers finding descendants with `.children()` and `.find()`, and finding siblings with `.siblings()`, `.next()`, and `.prev()`."
+  },
+  {
+    "n": 19,
+    "title": "Introduction to AJAX with jQuery",
+    "math": "Asynchronous programming",
+    "note": "Provides an introduction to using AJAX (Asynchronous JavaScript and XML) with jQuery to load data from a server without a full page reload. This lesson focuses on the simple `.load()` method for injecting HTML from a file."
+  },
+  {
+    "n": 20,
+    "title": "AJAX with `.get()` and `.post()`",
+    "math": "Asynchronous programming",
+    "note": "This section delves deeper into jQuery's AJAX capabilities, covering the `$.get()` and `$.post()` methods for making GET and POST requests to a server. The context is on sending and receiving data (like JSON) from a server."
+  },
+  {
+    "n": 21,
+    "title": "The `$.ajax()` Method",
+    "math": "Asynchronous programming",
+    "note": "Explains the underlying `$.ajax()` method, which is the most powerful and configurable way to make AJAX requests in jQuery. The lesson covers its various options for handling complex scenarios."
+  },
+  {
+    "n": 22,
+    "title": "Working with JSON Data",
+    "math": "Set theory",
+    "note": "Explains how to work with JSON data received from a server via an AJAX call. The lesson demonstrates how to parse the JSON and use it to dynamically update a web page in the browser."
+  },
+  {
+    "n": 23,
+    "title": "jQuery UI Introduction",
+    "math": "Set theory",
+    "note": "Provides an introduction to jQuery UI, a curated set of user interface interactions, effects, widgets, and themes built on top of jQuery. The lesson shows how to add a simple widget like a sortable list or a datepicker to a web page."
+  },
+  {
+    "n": 24,
+    "title": "Creating a Custom jQuery Plugin",
+    "math": "Software architecture",
+    "note": "This advanced lesson explains the basics of how to create your own custom jQuery plugin. It covers the pattern for extending the jQuery prototype to add new methods, promoting code reusability."
+  },
+  {
+    "n": 25,
+    "title": "jQuery No-Conflict Mode",
+    "math": "Logic",
+    "note": "Explains how to use jQuery's no-conflict mode to avoid conflicts with other JavaScript libraries that might also use the `$` symbol. The context is on ensuring compatibility in a complex web project."
+  },
+  {
+    "n": 26,
+    "title": "jQuery Performance Best Practices",
+    "math": "Optimization",
+    "note": "This final section covers best practices for writing efficient jQuery code. It discusses topics like caching jQuery objects, using specific selectors, and leveraging event delegation to improve the performance of a web application."
+  }
+]

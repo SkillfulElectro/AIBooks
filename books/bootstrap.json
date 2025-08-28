@@ -1,0 +1,182 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Bootstrap",
+    "math": "Set theory",
+    "note": "This section introduces Bootstrap as a popular, free front-end framework for developing responsive, mobile-first websites. It covers the advantages of using Bootstrap, such as its pre-built components and powerful grid system. The context is modern web development."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up Bootstrap",
+    "math": "Logic",
+    "note": "Explains the different ways to include Bootstrap in a project: using the official CDN for quick setup, or downloading the source files for local development and customization. The context is a standard HTML project."
+  },
+  {
+    "n": 3,
+    "title": "Bootstrap Starter Template",
+    "math": "HTML",
+    "note": "Provides a basic HTML starter template that includes the necessary Bootstrap CSS and JavaScript files, along with the required meta tags (like the viewport tag) for responsive behavior in a web browser."
+  },
+  {
+    "n": 4,
+    "title": "The Grid System: Containers",
+    "math": "Geometry",
+    "note": "Introduces the foundation of Bootstrap's layout system: containers. This lesson explains the difference between the standard `.container` (fixed-width) and `.container-fluid` (full-width)."
+  },
+  {
+    "n": 5,
+    "title": "The Grid System: Rows and Columns",
+    "math": "Matrix algebra",
+    "note": "Explains how to build layouts with Bootstrap's 12-column grid system. The lesson covers how to use `.row` to group columns and how to create basic column structures (e.g., `.col-md-6`) for medium-sized devices."
+  },
+  {
+    "n": 6,
+    "title": "Responsive Grid Breakpoints",
+    "math": "Geometry",
+    "note": "This lesson delves into Bootstrap's responsive breakpoints (sm, md, lg, xl, xxl). It demonstrates how to create complex layouts that adapt to different screen sizes by using different column classes for each breakpoint."
+  },
+  {
+    "n": 7,
+    "title": "Grid Alignment and Ordering",
+    "math": "Linear algebra",
+    "note": "Covers advanced grid features, including vertical and horizontal alignment of columns, and how to reorder columns visually using ordering classes (`.order-` classes)."
+  },
+  {
+    "n": 8,
+    "title": "Typography",
+    "math": "Typography",
+    "note": "Explains Bootstrap's classes for styling HTML typography. The lesson covers headings, display headings, lead paragraphs, and other text elements for creating clean and readable content."
+  },
+  {
+    "n": 9,
+    "title": "Images and Figures",
+    "math": "Geometry",
+    "note": "This section covers how to style images with Bootstrap, including creating responsive images (`.img-fluid`), thumbnails, and aligning images. It also introduces the `.figure` component for displaying images with captions."
+  },
+  {
+    "n": 10,
+    "title": "Styling Tables",
+    "math": "Matrix algebra",
+    "note": "Explains how to use Bootstrap's classes to style HTML tables. The lesson covers basic table styling, striped rows, bordered tables, and creating responsive tables that scroll horizontally on small screens."
+  },
+  {
+    "n": 11,
+    "title": "Buttons and Button Groups",
+    "math": "User interface design",
+    "note": "Covers the wide range of button styles in Bootstrap. The lesson demonstrates different colors, sizes, and states (active, disabled), as well as how to group buttons together in a toolbar."
+  },
+  {
+    "n": 12,
+    "title": "Alerts",
+    "math": "User interface design",
+    "note": "This lesson introduces the alert component for providing contextual feedback messages (e.g., success, danger, warning). It also covers how to create dismissible alerts with a small amount of JavaScript."
+  },
+  {
+    "n": 13,
+    "title": "Badges and Pills",
+    "math": "User interface design",
+    "note": "Explains how to use badges to add small count and labeling components to your site. The lesson also covers how to create pill-shaped badges and use them within other components like buttons."
+  },
+  {
+    "n": 14,
+    "title": "Cards",
+    "math": "Set theory",
+    "note": "Covers the flexible card component, a container for content that can include headers, footers, images, and text. Cards are a fundamental building block for modern UIs created with Bootstrap."
+  },
+  {
+    "n": 15,
+    "title": "Navigation (Navs)",
+    "math": "Graph theory",
+    "note": "This lesson introduces the `nav` component for creating navigation menus. It covers base navigation, tabs, and pills for building user-friendly site navigation."
+  },
+  {
+    "n": 16,
+    "title": "The Navbar",
+    "math": "Graph theory",
+    "note": "Explains how to build a powerful and responsive navigation header with the `navbar` component. The lesson covers branding, navigation links, forms, and the collapsible behavior for mobile devices."
+  },
+  {
+    "n": 17,
+    "title": "Breadcrumbs and Pagination",
+    "math": "Graph theory",
+    "note": "Covers two important navigation components: breadcrumbs for indicating the current page's location within a site hierarchy, and pagination for splitting content across multiple pages."
+  },
+  {
+    "n": 18,
+    "title": "Modals",
+    "math": "Event-driven programming",
+    "note": "This section explains how to use Bootstrap's modal component to create dialog boxes that appear on top of the page content. It covers triggering modals with buttons and customizing their content and behavior via JavaScript."
+  },
+  {
+    "n": 19,
+    "title": "Carousel (Image Slider)",
+    "math": "Animation",
+    "note": "Explains how to create a responsive slideshow or carousel for cycling through a series of images or other content. The lesson covers adding slides, controls, and indicators to the carousel."
+  },
+  {
+    "n": 20,
+    "title": "Collapse and Accordion",
+    "math": "Logic",
+    "note": "This lesson covers the collapse plugin for showing and hiding content with a button click. It also demonstrates how to build an accordion, a vertically stacked set of collapsible panels, using the card and collapse components."
+  },
+  {
+    "n": 21,
+    "title": "Dropdowns",
+    "math": "Set theory",
+    "note": "Explains how to create toggleable, contextual menus for displaying lists of links and other content. The lesson covers the necessary HTML structure and JavaScript for dropdowns to function correctly."
+  },
+  {
+    "n": 22,
+    "title": "Tooltips and Popovers",
+    "math": "Event-driven programming",
+    "note": "Covers how to add custom tooltips (which appear on hover) and popovers (which appear on click) to elements. The lesson explains how to initialize and customize these components, which rely on JavaScript."
+  },
+  {
+    "n": 23,
+    "title": "Forms",
+    "math": "Logic",
+    "note": "This lesson explains how to style HTML forms with Bootstrap's form controls and layout options. It covers creating organized and responsive forms with proper spacing, labels, and input styles."
+  },
+  {
+    "n": 24,
+    "title": "Input Groups",
+    "math": "Set theory",
+    "note": "Explains how to use input groups to extend form controls by adding text, buttons, or button groups on either side of a text-based input."
+  },
+  {
+    "n": 25,
+    "title": "Form Validation",
+    "math": "Logic",
+    "note": "Covers Bootstrap's classes for displaying validation feedback on form fields. The lesson demonstrates how to show success and error states based on user input, using both browser default and custom validation messages."
+  },
+  {
+    "n": 26,
+    "title": "Bootstrap Utility Classes",
+    "math": "Set theory",
+    "note": "Provides an overview of Bootstrap's vast library of utility classes. This lesson focuses on spacing utilities (margin and padding), which are essential for fine-tuning layouts."
+  },
+  {
+    "n": 27,
+    "title": "Color and Background Utilities",
+    "math": "Color theory",
+    "note": "Explores the utility classes for applying text and background colors from Bootstrap's theme color palette. The lesson demonstrates how to quickly style elements with contextual colors."
+  },
+  {
+    "n": 28,
+    "title": "Display and Flex Utilities",
+    "math": "Linear algebra",
+    "note": "This section covers the responsive display utilities for toggling the visibility of elements, and the powerful flexbox utilities for creating custom layouts and alignments without writing custom CSS."
+  },
+  {
+    "n": 29,
+    "title": "Customizing Bootstrap with Sass",
+    "math": "Algebra",
+    "note": "This lesson provides an introduction to customizing Bootstrap by using its Sass source files. It explains how to set up a Sass build process and override default variables to change colors, fonts, and other global properties."
+  },
+  {
+    "n": 30,
+    "title": "Theming Bootstrap",
+    "math": "Color theory",
+    "note": "Dives deeper into customization by explaining how to theme a Bootstrap project. The lesson covers modifying the theme color map, using Sass mixins, and creating custom components that fit within the Bootstrap ecosystem."
+  }
+]

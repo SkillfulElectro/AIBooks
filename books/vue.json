@@ -1,0 +1,170 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Vue.js",
+    "math": "Component-based architecture",
+    "note": "This section introduces Vue.js as a progressive, approachable, and versatile JavaScript framework for building user interfaces. It covers the core concepts of Vue, its reactive data model, and its component-based architecture. The context is modern front-end web development."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up a Vue Project",
+    "math": "Logic",
+    "note": "Provides a guide on how to set up a new project using the Vue CLI. The lesson covers installing the CLI, creating a new project, and understanding the project structure, including single-file components (`.vue` files)."
+  },
+  {
+    "n": 3,
+    "title": "The Vue Instance and Template Syntax",
+    "math": "Object-oriented programming",
+    "note": "This lesson explains the Vue instance, which is the root of a Vue application. It covers Vue's declarative template syntax, including text interpolation (`{{ }}`) and binding raw HTML with the `v-html` directive."
+  },
+  {
+    "n": 4,
+    "title": "Attribute Bindings",
+    "math": "Key-value pairs",
+    "note": "Explains how to bind HTML attributes to the data in a Vue instance using the `v-bind` directive, or its shorthand `:`. This is fundamental for creating dynamic attributes like `id`, `class`, and `href`."
+  },
+  {
+    "n": 5,
+    "title": "Conditional Rendering",
+    "math": "Boolean algebra",
+    "note": "This lesson covers how to conditionally render elements in Vue using the `v-if`, `v-else-if`, `v-else`, and `v-show` directives. It explains the difference between `v-if` (which adds/removes from DOM) and `v-show` (which toggles CSS display)."
+  },
+  {
+    "n": 6,
+    "title": "List Rendering with v-for",
+    "math": "Iteration",
+    "note": "Covers how to render a list of items from an array using the `v-for` directive. The lesson also explains the importance of using the `key` attribute for performance and state management when rendering lists."
+  },
+  {
+    "n": 7,
+    "title": "Event Handling",
+    "math": "Event-driven programming",
+    "note": "This section explains how to listen to DOM events and run JavaScript code using the `v-on` directive (or its shorthand `@`). It covers calling methods in response to events and using event modifiers like `.prevent` and `.stop`."
+  },
+  {
+    "n": 8,
+    "title": "Form Input Bindings with v-model",
+    "math": "Logic",
+    "note": "Explains how to create two-way data bindings on form input elements using the `v-model` directive. The lesson covers its use with text inputs, checkboxes, radio buttons, and select dropdowns, simplifying form state management."
+  },
+  {
+    "n": 9,
+    "title": "Computed Properties",
+    "math": "Reactive programming",
+    "note": "Introduces computed properties for creating reactive data that depends on other data. The lesson explains how computed properties are cached based on their reactive dependencies, making them more efficient than methods for derived data."
+  },
+  {
+    "n": 10,
+    "title": "Watchers",
+    "math": "Reactive programming",
+    "note": "This lesson covers watchers, which provide a way to react to data changes. It explains when to use a watcher over a computed property, particularly for performing asynchronous or expensive operations in response to data changes."
+  },
+  {
+    "n": 11,
+    "title": "Class and Style Binding",
+    "math": "Set theory",
+    "note": "Explains how to dynamically bind CSS classes and inline styles to elements using `:class` and `:style`. The lesson demonstrates how to change an element's appearance based on the component's state in a Vue application."
+  },
+  {
+    "n": 12,
+    "title": "Introduction to Vue Components",
+    "math": "Component-based architecture",
+    "note": "This lesson introduces the concept of components as reusable, self-contained units in Vue. It covers creating, registering, and using components to build a modular and maintainable application."
+  },
+  {
+    "n": 13,
+    "title": "Component Communication: Props",
+    "math": "Graph theory",
+    "note": "Explains how a parent component can pass data down to a child component using props. The lesson covers defining props, specifying their types, and setting default values."
+  },
+  {
+    "n": 14,
+    "title": "Component Communication: Custom Events",
+    "math": "Event-driven programming",
+    "note": "Covers how a child component can send data up to its parent by emitting a custom event with `$emit`. This allows child components to notify parents of actions or state changes."
+  },
+  {
+    "n": 15,
+    "title": "Component Slots",
+    "math": "Set theory",
+    "note": "This section introduces slots, a mechanism for content distribution in Vue components. It covers default slots for passing single content fragments, and named slots for more complex component layouts."
+  },
+  {
+    "n": 16,
+    "title": "Dynamic and Async Components",
+    "math": "Asynchronous programming",
+    "note": "Explains how to switch between components dynamically using the `<component>` element with the `:is` attribute. The lesson also introduces asynchronous components for code-splitting and lazy loading."
+  },
+  {
+    "n": 17,
+    "title": "Vue Lifecycle Hooks",
+    "math": "Event-driven programming",
+    "note": "Explains the lifecycle of a Vue instance and the hooks that allow you to run code at specific stages, such as `created`, `mounted`, `updated`, and `unmounted`. The context is on managing side effects and resources."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to Vue Router",
+    "math": "Graph theory",
+    "note": "Covers the official Vue Router for creating single-page applications with client-side routing. The lesson explains how to define routes, map them to components, and use `<router-link>` and `<router-view>`."
+  },
+  {
+    "n": 19,
+    "title": "Dynamic Routes and Navigation",
+    "math": "Graph theory",
+    "note": "Dives deeper into Vue Router by explaining how to create dynamic routes with params (e.g., `/users/:id`), how to access route params in a component, and how to navigate programmatically."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to State Management with Pinia",
+    "math": "State machines",
+    "note": "This lesson provides an introduction to centralized state management in Vue using Pinia, the official state management library. It explains the concept of a global store for managing application-wide state that can be accessed by any component."
+  },
+  {
+    "n": 21,
+    "title": "Pinia: State, Getters, and Actions",
+    "math": "State machines",
+    "note": "Explains the core concepts of a Pinia store: `state` for the data, `getters` for computed derived state, and `actions` for methods that can mutate the state."
+  },
+  {
+    "n": 22,
+    "title": "Transitions and Animations",
+    "math": "Animation",
+    "note": "This section covers how to use Vue's `<transition>` and `<transition-group>` wrapper components to apply enter/leave and list animations. It demonstrates how to use CSS transitions and animations to enhance the user experience."
+  },
+  {
+    "n": 23,
+    "title": "Custom Directives",
+    "math": "Logic",
+    "note": "Explains how to create your own custom directives in Vue for when you need low-level DOM access on an element. The lesson covers the directive hooks and their arguments for creating reusable DOM manipulations."
+  },
+  {
+    "n": 24,
+    "title": "Introduction to the Composition API",
+    "math": "Functional programming",
+    "note": "This lesson introduces the Composition API as an alternative to the Options API for organizing component logic. It explains the motivation behind it and covers the `setup` function as the entry point."
+  },
+  {
+    "n": 25,
+    "title": "Composition API: Reactivity",
+    "math": "Reactive programming",
+    "note": "Dives into the core of the Composition API's reactivity system. The lesson covers the `ref` function for creating reactive primitives and the `reactive` function for creating reactive objects."
+  },
+  {
+    "n": 26,
+    "title": "Composition API: Lifecycle and Watchers",
+    "math": "Reactive programming",
+    "note": "Explains how to use lifecycle hooks and watchers within the Composition API. The lesson covers the `onMounted` hook and the `watch` and `watchEffect` functions for reacting to data changes."
+  },
+  {
+    "n": 27,
+    "title": "Reusable Composables",
+    "math": "Functional programming",
+    "note": "This advanced lesson demonstrates the main benefit of the Composition API: creating reusable 'composables'. It shows how to extract and reuse stateful logic across multiple components, improving code organization and reusability."
+  },
+  {
+    "n": 28,
+    "title": "Building and Deploying a Vue Application",
+    "math": "Logic",
+    "note": "This final section covers the process of building a Vue application for production using the Vue CLI (`npm run build`). It also discusses common deployment strategies for single-page applications, such as hosting on a static file server like Netlify or Vercel."
+  }
+]

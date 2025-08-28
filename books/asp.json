@@ -1,0 +1,140 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to ASP.NET Core",
+    "math": "Software architecture",
+    "note": "This section introduces ASP.NET Core as a modern, open-source, and cross-platform framework for building web applications and APIs. It covers the key features, performance benefits, and the unified model for building MVC apps and Web APIs. The context is the .NET ecosystem."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up the .NET Environment",
+    "math": "Logic",
+    "note": "Provides a guide on how to set up a local development environment. This includes installing the .NET SDK, a code editor like Visual Studio Code, and the C# extension. The lesson covers creating a new project using the `dotnet` CLI."
+  },
+  {
+    "n": 3,
+    "title": "Application Startup and Middleware",
+    "math": "Pipeline processing",
+    "note": "Explains the request processing pipeline in ASP.NET Core. The lesson covers the `Program.cs` file, how middleware components are configured to handle requests and responses, and the importance of middleware order."
+  },
+  {
+    "n": 4,
+    "title": "Routing in ASP.NET Core",
+    "math": "Graph theory",
+    "note": "This section covers how ASP.NET Core maps incoming URLs to application logic. It explains both conventional routing (the default MVC pattern) and attribute-based routing for more explicit control over URLs."
+  },
+  {
+    "n": 5,
+    "title": "Introduction to MVC: Controllers and Actions",
+    "math": "Model-View-Controller (MVC)",
+    "note": "Introduces the Controller part of the MVC pattern. The lesson explains how Controller classes handle incoming requests and how Action methods within a controller execute logic and return a result, such as a View."
+  },
+  {
+    "n": 6,
+    "title": "Introduction to MVC: Views and Razor",
+    "math": "Model-View-Controller (MVC)",
+    "note": "Covers the View part of MVC. This lesson introduces Razor, the templating engine for creating dynamic HTML views. It explains Razor syntax for embedding C# code in HTML to render dynamic content."
+  },
+  {
+    "n": 7,
+    "title": "Passing Data to Views",
+    "math": "Model-View-Controller (MVC)",
+    "note": "Explains the different ways to pass data from a Controller action to a View. The lesson covers using strongly-typed models (the recommended approach), `ViewData`, and `ViewBag`."
+  },
+  {
+    "n": 8,
+    "title": "Layouts and Partial Views",
+    "math": "Set theory",
+    "note": "This lesson covers how to create consistent layouts for a website using a shared layout file (`_Layout.cshtml`). It also introduces partial views for creating reusable UI components."
+  },
+  {
+    "n": 9,
+    "title": "Tag Helpers",
+    "math": "Syntax analysis",
+    "note": "Introduces Tag Helpers, a feature that enables server-side C# code to participate in creating and rendering HTML elements in Razor files. This provides a more HTML-friendly way to write server-side logic in views."
+  },
+  {
+    "n": 10,
+    "title": "Introduction to Entity Framework Core",
+    "math": "Relational algebra",
+    "note": "Provides an introduction to Entity Framework (EF) Core, the official object-relational mapper (ORM) for .NET. It explains how EF Core allows developers to work with a database using C# objects, abstracting away the database provider."
+  },
+  {
+    "n": 11,
+    "title": "Creating a Data Model and DbContext",
+    "math": "Relational algebra",
+    "note": "This lesson covers how to create entity classes that represent the tables in your database, and how to create a `DbContext` class that represents a session with the database and allows you to query and save data."
+  },
+  {
+    "n": 12,
+    "title": "EF Core Migrations",
+    "math": "Logic",
+    "note": "Covers how to use EF Core migrations to manage changes to the database schema over time. It explains how to use the `dotnet ef` CLI commands to create and apply migrations, keeping the database in sync with the data models."
+  },
+  {
+    "n": 13,
+    "title": "CRUD Operations with EF Core",
+    "math": "Relational algebra",
+    "note": "Explains how to perform Create, Read, Update, and Delete (CRUD) operations on a database using EF Core. The lesson demonstrates how to query data with LINQ, and how to add, update, and remove entities through the `DbContext`."
+  },
+  {
+    "n": 14,
+    "title": "Handling Forms and Model Binding",
+    "math": "Logic",
+    "note": "This lesson covers how to handle HTML form submissions in ASP.NET Core. It explains model binding, the process by which ASP.NET Core automatically maps incoming form data to the parameters of an action method."
+  },
+  {
+    "n": 15,
+    "title": "Validation with Data Annotations",
+    "math": "Logic",
+    "note": "Explains how to use Data Annotation attributes (like `[Required]` and `[StringLength]`) on model properties to enforce validation rules. The lesson covers both server-side and client-side validation."
+  },
+  {
+    "n": 16,
+    "title": "Dependency Injection",
+    "math": "Object-oriented programming",
+    "note": "This section covers the built-in dependency injection (DI) container in ASP.NET Core. It explains the concept of DI for promoting loose coupling and demonstrates how to register services and inject them into controllers."
+  },
+  {
+    "n": 17,
+    "title": "Configuration",
+    "math": "Key-value pairs",
+    "note": "Explains how to manage application configuration from various sources, such as `appsettings.json` files, user secrets, and environment variables. The lesson demonstrates how to access configuration values using the Options pattern."
+  },
+  {
+    "n": 18,
+    "title": "Building a Web API",
+    "math": "API design",
+    "note": "Explains how to build a RESTful Web API with ASP.NET Core. The lesson covers creating API controllers that return JSON data, using HTTP verb attributes (`[HttpGet]`, `[HttpPost]`), and handling status codes."
+  },
+  {
+    "n": 19,
+    "title": "Introduction to Authentication",
+    "math": "Access control",
+    "note": "Provides an introduction to authentication concepts in ASP.NET Core. The lesson explains the difference between authentication and authorization and introduces ASP.NET Core Identity as the framework for managing users."
+  },
+  {
+    "n": 20,
+    "title": "Implementing Authentication with Identity",
+    "math": "Access control",
+    "note": "This lesson demonstrates how to scaffold the ASP.NET Core Identity UI into a project to quickly add user registration, login, and management features to an application."
+  },
+  {
+    "n": 21,
+    "title": "Authorization",
+    "math": "Access control",
+    "note": "Covers how to implement authorization to restrict access to parts of an application. The lesson explains how to use the `[Authorize]` attribute on controllers and actions, and introduces policy-based authorization for more complex scenarios."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Razor Pages",
+    "math": "Component-based architecture",
+    "note": "This lesson introduces Razor Pages as an alternative, page-based model for building web UIs in ASP.NET Core. It explains how Razor Pages can simplify the development of page-focused applications compared to the full MVC pattern."
+  },
+  {
+    "n": 23,
+    "title": "Deploying an ASP.NET Core Application",
+    "math": "Logic",
+    "note": "This final section covers the process of deploying an ASP.NET Core application. It discusses publishing the application and hosting it on different platforms, such as IIS on Windows, or using a reverse proxy like Nginx on Linux, and on cloud services like Azure App Service."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to MySQL and RDBMS",
+    "math": "Set theory",
+    "note": "This section introduces MySQL as a popular open-source Relational Database Management System (RDBMS). It covers the client-server architecture of MySQL, its role in the LAMP stack, and its primary use cases. The context is a standard server environment."
+  },
+  {
+    "n": 2,
+    "title": "Installing and Setting up MySQL Server",
+    "math": "Logic",
+    "note": "Provides a guide on how to install MySQL on different operating systems (Windows, macOS, Linux). The lesson covers the initial setup, including running the secure installation script and starting the MySQL server process."
+  },
+  {
+    "n": 3,
+    "title": "The MySQL Command-Line Client",
+    "math": "Command-line interface",
+    "note": "This lesson introduces the `mysql` command-line client as the primary tool for interacting with the MySQL server. It covers connecting to the server, executing basic commands, and exiting the client in a terminal environment."
+  },
+  {
+    "n": 4,
+    "title": "Creating and Managing Databases",
+    "math": "Set theory",
+    "note": "Explains how to create new databases using `CREATE DATABASE` and how to select a database to work with using `USE`. The lesson also covers `SHOW DATABASES` to list existing databases and `DROP DATABASE` to delete them."
+  },
+  {
+    "n": 5,
+    "title": "MySQL Data Types",
+    "math": "Set theory",
+    "note": "This section provides a detailed overview of the various data types available in MySQL, categorized into numeric, string, and date/time types. It explains the importance of choosing the right data type and size for each column."
+  },
+  {
+    "n": 6,
+    "title": "Creating Tables",
+    "math": "Relational algebra",
+    "note": "Covers the `CREATE TABLE` statement for defining the structure of a new table. The lesson explains how to specify column names, data types, and attributes like `NOT NULL`, `DEFAULT`, and `AUTO_INCREMENT`."
+  },
+  {
+    "n": 7,
+    "title": "Primary Keys and Foreign Keys",
+    "math": "Relational algebra",
+    "note": "Explains the fundamental concepts of primary keys for uniquely identifying rows and foreign keys for establishing relationships between tables. The lesson covers the syntax for defining these constraints in MySQL."
+  },
+  {
+    "n": 8,
+    "title": "Other Constraints (UNIQUE, CHECK)",
+    "math": "Logic",
+    "note": "This lesson covers other important constraints, such as `UNIQUE` to ensure all values in a column are different, and `CHECK` to enforce a specific condition on the values in a column."
+  },
+  {
+    "n": 9,
+    "title": "Inserting Data into Tables",
+    "math": "Set theory",
+    "note": "Explains the `INSERT INTO` statement for adding new rows of data to a MySQL table. The lesson covers inserting single rows, multiple rows, and inserting data into specific columns."
+  },
+  {
+    "n": 10,
+    "title": "Querying Data with SELECT",
+    "math": "Set theory",
+    "note": "This section focuses on the `SELECT` statement to retrieve data from MySQL tables. It covers selecting all columns or specific columns and using the `WHERE` clause to filter the results based on conditions."
+  },
+  {
+    "n": 11,
+    "title": "Updating and Deleting Data",
+    "math": "Logic",
+    "note": "Covers the `UPDATE` and `DELETE` statements for modifying and removing data from a MySQL table. The lesson emphasizes the importance of the `WHERE` clause to target the correct rows."
+  },
+  {
+    "n": 12,
+    "title": "Pattern Matching with LIKE",
+    "math": "String theory",
+    "note": "Explains how to use the `LIKE` operator in a `WHERE` clause for pattern matching in string data. The lesson covers the use of wildcard characters: `%` (matches any sequence of characters) and `_` (matches a single character)."
+  },
+  {
+    "n": 13,
+    "title": "Sorting and Limiting Results",
+    "math": "Sorting algorithms",
+    "note": "Explains how to use the `ORDER BY` clause to sort query results and the `LIMIT` clause to restrict the number of rows returned, which is useful for pagination."
+  },
+  {
+    "n": 14,
+    "title": "MySQL Aggregate Functions",
+    "math": "Statistics",
+    "note": "This lesson introduces the standard SQL aggregate functions (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`) as implemented in MySQL. It demonstrates how to perform calculations on data sets within a MySQL database."
+  },
+  {
+    "n": 15,
+    "title": "Grouping Data with GROUP BY",
+    "math": "Data aggregation",
+    "note": "Explains the `GROUP BY` clause for summarizing data in MySQL. The lesson demonstrates how to use `GROUP BY` with aggregate functions to create reports and analyze data."
+  },
+  {
+    "n": 16,
+    "title": "Joins in MySQL",
+    "math": "Set theory",
+    "note": "This section covers how to combine data from multiple tables using `INNER JOIN`, `LEFT JOIN`, and `RIGHT JOIN`. It explains the logic of these joins for querying related data in a MySQL relational database."
+  },
+  {
+    "n": 17,
+    "title": "MySQL Views",
+    "math": "Set theory",
+    "note": "Explains how to create and use views in MySQL to encapsulate complex queries and provide a simplified interface to the data. The context is on improving security and reusability."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to Indexes",
+    "math": "Data structures",
+    "note": "This section covers the concept of indexes in MySQL for improving query performance. It explains how to create and manage indexes on tables and discusses different index types like B-Tree."
+  },
+  {
+    "n": 19,
+    "title": "MySQL Storage Engines (InnoDB vs. MyISAM)",
+    "math": "Database design",
+    "note": "Explains the concept of storage engines in MySQL. The lesson contrasts the two most common engines, InnoDB (which supports transactions and foreign keys) and MyISAM, and discusses their respective use cases."
+  },
+  {
+    "n": 20,
+    "title": "MySQL User Management",
+    "math": "Access control",
+    "note": "Explains how to create and manage user accounts in MySQL. The lesson covers `CREATE USER`, `GRANT`, and `REVOKE` statements to control user access to databases and tables, a key aspect of MySQL security."
+  },
+  {
+    "n": 21,
+    "title": "Backup and Restore",
+    "math": "Logic",
+    "note": "This lesson introduces the `mysqldump` utility for creating logical backups of a MySQL database. It also covers how to restore a database from a backup file, a critical skill for any MySQL administrator."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Stored Procedures",
+    "math": "Procedural programming",
+    "note": "Provides an introduction to stored procedures in MySQL. The lesson explains how to create simple procedures that encapsulate a series of SQL statements for reuse, improving performance and security."
+  },
+  {
+    "n": 23,
+    "title": "Introduction to Triggers",
+    "math": "Event-driven programming",
+    "note": "Explains how to create triggers, which are stored programs that are automatically executed in response to specific events (e.g., `INSERT`, `UPDATE`) on a table. Triggers are useful for maintaining data integrity."
+  },
+  {
+    "n": 24,
+    "title": "Full-Text Search",
+    "math": "Search algorithms",
+    "note": "This lesson introduces MySQL's full-text search capabilities. It explains how to create a `FULLTEXT` index and use `MATCH() ... AGAINST()` syntax to perform more natural language searches on text data."
+  },
+  {
+    "n": 25,
+    "title": "MySQL Workbench (GUI)",
+    "math": "Graphical user interface",
+    "note": "This final section provides an overview of MySQL Workbench, a graphical tool for database design, development, and administration. It demonstrates how to perform common tasks through a user-friendly interface, as an alternative to the command-line client."
+  }
+]

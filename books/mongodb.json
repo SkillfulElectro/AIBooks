@@ -1,0 +1,134 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to MongoDB and NoSQL",
+    "math": "Data structures",
+    "note": "This section introduces MongoDB as a leading NoSQL, document-oriented database. It covers the key concepts of documents (BSON), collections, and the benefits of a flexible schema compared to traditional relational databases. The context is modern application development."
+  },
+  {
+    "n": 2,
+    "title": "Installing and Setting up MongoDB",
+    "math": "Logic",
+    "note": "Provides a guide on how to install MongoDB Community Server on different operating systems and how to start the MongoDB server process. The lesson also introduces the MongoDB Shell (`mongosh`) as the primary interface for interaction."
+  },
+  {
+    "n": 3,
+    "title": "Databases, Collections, and Documents",
+    "math": "Set theory",
+    "note": "Explains the basic structure of data storage in MongoDB. The lesson covers creating databases and collections implicitly, and the structure of a document as a set of key-value pairs."
+  },
+  {
+    "n": 4,
+    "title": "CRUD: Inserting Documents",
+    "math": "Set theory",
+    "note": "Covers how to insert documents into a MongoDB collection. The lesson explains the `insertOne()` method for a single document and the `insertMany()` method for multiple documents, using the MongoDB Shell."
+  },
+  {
+    "n": 5,
+    "title": "CRUD: Querying Documents with `find()`",
+    "math": "Query languages",
+    "note": "This section explains how to retrieve documents from a collection using the `find()` method. It covers creating a query filter document to find documents that match specific criteria."
+  },
+  {
+    "n": 6,
+    "title": "Query Operators",
+    "math": "Logic",
+    "note": "Explores the query operators used for more advanced filtering. The lesson covers comparison operators (`$gt`, `$lt`, `$in`) and logical operators (`$and`, `$or`) to build complex query filters."
+  },
+  {
+    "n": 7,
+    "title": "Querying Embedded Documents and Arrays",
+    "math": "Graph theory",
+    "note": "This lesson demonstrates how to query based on fields within embedded documents and elements within arrays, using dot notation and other array-specific query operators."
+  },
+  {
+    "n": 8,
+    "title": "Projection: Returning Specific Fields",
+    "math": "Set theory",
+    "note": "Explains how to use projection in a `find()` query to specify which fields to include or exclude from the returned documents. This is useful for optimizing network traffic and query performance."
+  },
+  {
+    "n": 9,
+    "title": "CRUD: Updating Documents",
+    "math": "Logic",
+    "note": "Explains how to modify existing documents in a MongoDB collection. The lesson covers the `updateOne()` and `updateMany()` methods and the various update operators like `$set`, `$inc`, `$unset`, and `$push`."
+  },
+  {
+    "n": 10,
+    "title": "Upserts and Replacements",
+    "math": "Logic",
+    "note": "Covers two important update concepts: 'upsert', which inserts a document if no match is found for the update, and document replacement using `replaceOne()`, which overwrites an entire document."
+  },
+  {
+    "n": 11,
+    "title": "CRUD: Deleting Documents",
+    "math": "Logic",
+    "note": "This lesson covers how to remove documents from a collection using the `deleteOne()` and `deleteMany()` methods. It emphasizes the importance of the filter document to specify which documents to delete."
+  },
+  {
+    "n": 12,
+    "title": "Indexing in MongoDB",
+    "math": "Data structures",
+    "note": "This section explains the critical importance of indexes for improving query performance. It covers creating single-field and compound indexes, and how to view existing indexes on a collection."
+  },
+  {
+    "n": 13,
+    "title": "The Aggregation Framework",
+    "math": "Data aggregation",
+    "note": "Introduces MongoDB's powerful Aggregation Framework for performing multi-stage data processing and analysis. The lesson explains the concept of a pipeline and covers common stages like `$match`, `$group`, `$sort`, and `$project`."
+  },
+  {
+    "n": 14,
+    "title": "Aggregation Pipeline Examples",
+    "math": "Data aggregation",
+    "note": "Walks through several practical examples of using the aggregation pipeline to perform complex data analysis, such as calculating averages, grouping by categories, and reshaping documents."
+  },
+  {
+    "n": 15,
+    "title": "Data Modeling: Embedded Documents",
+    "math": "Data structures",
+    "note": "This lesson discusses the embedded data model, where related data is stored inside a single parent document. It covers the benefits of this approach for read performance and data atomicity."
+  },
+  {
+    "n": 16,
+    "title": "Data Modeling: References",
+    "math": "Data structures",
+    "note": "Explains the normalized data model using references (similar to foreign keys), where related data is stored in separate collections. The lesson discusses when to use this approach and how to perform application-level joins."
+  },
+  {
+    "n": 17,
+    "title": "MongoDB Compass (GUI)",
+    "math": "Graphical user interface",
+    "note": "Provides an introduction to MongoDB Compass, the official graphical user interface for MongoDB. It demonstrates how to connect to a database, visually explore data, run queries, and build aggregation pipelines."
+  },
+  {
+    "n": 18,
+    "title": "User Authentication and Authorization",
+    "math": "Access control",
+    "note": "This section covers how to secure a MongoDB deployment by enabling authentication. It explains how to create users and assign built-in roles to control access to different databases and collections."
+  },
+  {
+    "n": 19,
+    "title": "Replication",
+    "math": "Distributed systems",
+    "note": "Introduces replication as a key feature for high availability and redundancy. The lesson explains the concept of a replica set, with a primary and secondary nodes, and how it provides automatic failover for production deployments."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Sharding",
+    "math": "Distributed systems",
+    "note": "This lesson provides a high-level overview of sharding for horizontal scaling. It explains how sharding distributes data across multiple servers (a 'sharded cluster') to handle very large datasets and high throughput."
+  },
+  {
+    "n": 21,
+    "title": "Transactions",
+    "math": "ACID properties",
+    "note": "Explains how to use multi-document ACID transactions in MongoDB (on replica sets). The lesson covers starting a session and using `withTransaction` to perform a series of operations as a single, atomic unit."
+  },
+  {
+    "n": 22,
+    "title": "Connecting to MongoDB with a Driver",
+    "math": "API design",
+    "note": "This final section explains how to connect to a MongoDB database from an application using an official driver (e.g., for Node.js or Python). It covers the basic steps of establishing a connection and performing CRUD operations programmatically."
+  }
+]

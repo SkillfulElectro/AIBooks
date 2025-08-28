@@ -1,0 +1,146 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to R and RStudio",
+    "math": "Statistics",
+    "note": "This section introduces R as a powerful language and environment for statistical computing and graphics. It covers the history of R and its primary use cases in data analysis. It also introduces RStudio as the standard Integrated Development Environment (IDE) for R."
+  },
+  {
+    "n": 2,
+    "title": "Installing R and RStudio",
+    "math": "Logic",
+    "note": "Provides a guide on how to install R and the RStudio IDE on different operating systems. The lesson covers the basic layout of the RStudio interface, including the console, script editor, environment pane, and plots pane."
+  },
+  {
+    "n": 3,
+    "title": "Basic Syntax and Variables",
+    "math": "Algebra",
+    "note": "Explains the basic syntax of the R language, including comments and variable assignment using the `<-` operator. The lesson covers the rules for creating and naming variables to store data in the R environment."
+  },
+  {
+    "n": 4,
+    "title": "R Data Types",
+    "math": "Set theory",
+    "note": "This lesson introduces the fundamental data types in R: `numeric` (numbers), `integer`, `character` (strings), and `logical` (boolean). It demonstrates how to create and check the type of variables using functions like `class()`."
+  },
+  {
+    "n": 5,
+    "title": "Data Structures: Vectors",
+    "math": "Linear algebra",
+    "note": "Explains the vector as the most basic data structure in R, where all elements must be of the same type. The lesson covers creating vectors with `c()`, performing vectorized operations, and accessing elements using indexing."
+  },
+  {
+    "n": 6,
+    "title": "Data Structures: Matrices",
+    "math": "Matrix algebra",
+    "note": "This section introduces matrices for storing 2-dimensional homogeneous data. It covers creating a matrix with the `matrix()` function and performing basic matrix operations in the R language."
+  },
+  {
+    "n": 7,
+    "title": "Data Structures: Lists",
+    "math": "Set theory",
+    "note": "Explains lists as a versatile data structure in R that can hold a collection of elements of different types. The lesson demonstrates how to create, name, and access elements within a list."
+  },
+  {
+    "n": 8,
+    "title": "Data Structures: Data Frames",
+    "math": "Data structures",
+    "note": "This lesson introduces the data frame, the most important data structure for storing datasets in R, similar to a table in a database. It explains how to create a data frame, access its columns (`$`) and rows, and inspect its structure with `str()` and `summary()`."
+  },
+  {
+    "n": 9,
+    "title": "Data Structures: Factors",
+    "math": "Set theory",
+    "note": "Covers factors, a data type in R used to handle categorical variables. It explains how to create factors, order their levels, and why they are important for statistical modeling and plotting in R."
+  },
+  {
+    "n": 10,
+    "title": "Importing Data from CSV Files",
+    "math": "File I/O",
+    "note": "Covers how to read data from external files into an R data frame. The lesson focuses on reading comma-separated values (CSV) files using the `read.csv()` function, a common task in data analysis with R."
+  },
+  {
+    "n": 11,
+    "title": "Control Flow",
+    "math": "Logic",
+    "note": "Explains how to use conditional statements (`if...else`) and loops (`for`, `while`) to control the flow of execution in an R script. The context is on writing more complex programs in the R language."
+  },
+  {
+    "n": 12,
+    "title": "Functions in R",
+    "math": "Functional programming",
+    "note": "This lesson covers how to write your own functions in R to create reusable pieces of code. It explains function definition, arguments (including default values), and how to return values from a function."
+  },
+  {
+    "n": 13,
+    "title": "R Packages",
+    "math": "Software architecture",
+    "note": "Explains the concept of R packages as collections of functions, data, and documentation that extend R's capabilities. The lesson covers how to find, install (`install.packages()`), and load (`library()`) packages from CRAN."
+  },
+  {
+    "n": 14,
+    "title": "Introduction to the Tidyverse",
+    "math": "Data science",
+    "note": "Introduces the Tidyverse, an opinionated collection of R packages designed for data science that share an underlying design philosophy. This lesson provides an overview of the core Tidyverse packages."
+  },
+  {
+    "n": 15,
+    "title": "Data Wrangling with `dplyr`",
+    "math": "Data transformation",
+    "note": "This section introduces the `dplyr` package for data manipulation. It covers the five key verbs: `select()` (pick columns), `filter()` (pick rows), `arrange()` (reorder rows), `mutate()` (create new columns), and `summarise()` (collapse values down to a summary)."
+  },
+  {
+    "n": 16,
+    "title": "The Pipe Operator `|>`",
+    "math": "Functional programming",
+    "note": "Explains the native R pipe operator `|>` (and the similar `%>%` from the `magrittr` package) for chaining multiple `dplyr` operations together. This makes data manipulation code much more readable and intuitive."
+  },
+  {
+    "n": 17,
+    "title": "Tidy Data with `tidyr`",
+    "math": "Data modeling",
+    "note": "Introduces the concept of 'tidy data' and the `tidyr` package for reshaping data into this format. The lesson covers the key functions `pivot_longer()` and `pivot_wider()` for making datasets easier to work with."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to Data Visualization with `ggplot2`",
+    "math": "Data visualization",
+    "note": "Provides an introduction to `ggplot2`, the premier data visualization package in R. The lesson explains the 'grammar of graphics' and how to build plots layer by layer, starting with aesthetics (`aes()`) and geoms (e.g., `geom_point`)."
+  },
+  {
+    "n": 19,
+    "title": "Common Geoms in `ggplot2`",
+    "math": "Data visualization",
+    "note": "Explores some of the most common geometric objects (geoms) in `ggplot2` for creating different types of plots, such as `geom_bar` for bar charts, `geom_line` for line charts, and `geom_boxplot` for box plots."
+  },
+  {
+    "n": 20,
+    "title": "Customizing `ggplot2` Plots",
+    "math": "Data visualization",
+    "note": "This section delves into customizing `ggplot2` plots. It covers how to change titles, labels, colors, and themes to create publication-quality graphics in R."
+  },
+  {
+    "n": 21,
+    "title": "Basic Statistics in R",
+    "math": "Statistics",
+    "note": "Explains how to perform basic statistical analysis in R. The lesson covers descriptive statistics (mean, median, standard deviation) and basic hypothesis testing, such as t-tests and chi-squared tests, using built-in R functions."
+  },
+  {
+    "n": 22,
+    "title": "Linear Regression",
+    "math": "Linear regression",
+    "note": "This lesson introduces how to build and interpret linear regression models in R using the `lm()` function. It covers model fitting, examining the model summary with `summary()`, and making predictions."
+  },
+  {
+    "n": 23,
+    "title": "Introduction to R Markdown",
+    "math": "Literate programming",
+    "note": "Introduces R Markdown as a framework for creating dynamic, reproducible reports that combine code, its output (like plots and tables), and narrative text. The lesson shows how to create a simple report and render it to HTML."
+  },
+  {
+    "n": 24,
+    "title": "Building an Interactive Web App with Shiny",
+    "math": "User interface design",
+    "note": "This final section provides a brief introduction to the Shiny package for building interactive web applications directly from R. It covers the basic structure of a Shiny app, with a UI (user interface) and a server component, to share data analysis results interactively."
+  }
+]

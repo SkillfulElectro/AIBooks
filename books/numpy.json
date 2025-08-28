@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to NumPy",
+    "math": "Linear algebra",
+    "note": "This section introduces NumPy as the fundamental package for numerical computing in Python. It covers the powerful N-dimensional array object (`ndarray`) and its advantages in performance and functionality over standard Python lists. The context is a Python data science environment."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up and Importing NumPy",
+    "math": "Logic",
+    "note": "Provides a guide on how to install NumPy using pip and how to import it into a Python script, conventionally with the alias `np`. The context is a local Python development environment."
+  },
+  {
+    "n": 3,
+    "title": "Creating NumPy Arrays",
+    "math": "Matrix algebra",
+    "note": "Explains various ways to create NumPy arrays, including from Python lists, and using built-in functions like `np.array()`, `np.zeros()`, `np.ones()`, `np.arange()`, and `np.linspace()`."
+  },
+  {
+    "n": 4,
+    "title": "Array Attributes",
+    "math": "Matrix algebra",
+    "note": "This lesson covers the key attributes of a NumPy array for inspecting its properties, such as `.ndim` (number of dimensions), `.shape` (the size of each dimension), `.size` (total number of elements), and `.dtype` (the data type)."
+  },
+  {
+    "n": 5,
+    "title": "Basic Indexing and Slicing",
+    "math": "Coordinate geometry",
+    "note": "Explains how to access and modify elements of a NumPy array using indexing for single elements and slicing for creating subarrays. The lesson covers both one-dimensional and multi-dimensional arrays."
+  },
+  {
+    "n": 6,
+    "title": "Boolean Array Indexing",
+    "math": "Boolean algebra",
+    "note": "This section introduces boolean indexing, a powerful technique for selecting elements from an array based on a condition. It demonstrates how to use boolean masks to filter data, which is fundamental for data analysis."
+  },
+  {
+    "n": 7,
+    "title": "Fancy Indexing",
+    "math": "Set theory",
+    "note": "Explains fancy indexing, which allows you to select elements using an array of indices. The lesson shows how to use this technique to access multiple, non-contiguous elements from a NumPy array."
+  },
+  {
+    "n": 8,
+    "title": "Array Arithmetic",
+    "math": "Arithmetic",
+    "note": "Explains how to perform basic arithmetic operations (`+`, `-`, `*`, `/`) on NumPy arrays. The lesson demonstrates that these operations are applied element-wise, which is a key feature for efficient numerical computation."
+  },
+  {
+    "n": 9,
+    "title": "Universal Functions (ufuncs)",
+    "math": "Functional programming",
+    "note": "This lesson introduces NumPy's universal functions, which perform fast element-wise operations on arrays. It covers common mathematical functions like `np.sqrt()`, `np.exp()`, and trigonometric functions."
+  },
+  {
+    "n": 10,
+    "title": "Broadcasting",
+    "math": "Linear algebra",
+    "note": "Introduces broadcasting, a powerful mechanism that allows NumPy to perform operations on arrays of different shapes. It explains the rules of broadcasting and how it simplifies code and avoids unnecessary copying of data."
+  },
+  {
+    "n": 11,
+    "title": "Array Manipulation: Reshaping",
+    "math": "Matrix algebra",
+    "note": "Covers how to change the shape of a NumPy array without changing its data, using the `.reshape()` method and the `.T` attribute for transposing."
+  },
+  {
+    "n": 12,
+    "title": "Array Manipulation: Stacking and Splitting",
+    "math": "Matrix algebra",
+    "note": "This lesson explains how to combine multiple arrays into one using stacking functions like `np.vstack()`, `np.hstack()`, and `np.concatenate()`. It also covers how to split a single array into multiple smaller arrays."
+  },
+  {
+    "n": 13,
+    "title": "Copies vs. Views",
+    "math": "Memory management",
+    "note": "Explains the important distinction between a copy and a view of a NumPy array. The lesson clarifies which operations return a view (a new object that looks at the same data) and which return a copy (a new object with new data)."
+  },
+  {
+    "n": 14,
+    "title": "Aggregate Functions",
+    "math": "Statistics",
+    "note": "Explains how to use aggregate functions like `.sum()`, `.mean()`, `.std()`, `.min()`, and `.max()` to perform calculations on entire arrays or along a specific axis. The context is on data analysis with NumPy."
+  },
+  {
+    "n": 15,
+    "title": "Sorting Arrays",
+    "math": "Sorting algorithms",
+    "note": "This lesson covers how to sort NumPy arrays using `np.sort()` (which returns a copy) and the `.sort()` method (which performs an in-place sort). It demonstrates sorting multi-dimensional arrays along a specific axis."
+  },
+  {
+    "n": 16,
+    "title": "Linear Algebra with `np.linalg`",
+    "math": "Linear algebra",
+    "note": "Introduces the `linalg` module in NumPy for performing linear algebra operations. The lesson covers matrix multiplication (`@` operator), finding the determinant, inverse, and solving systems of linear equations."
+  },
+  {
+    "n": 17,
+    "title": "Random Number Generation",
+    "math": "Probability",
+    "note": "This section explains how to generate random numbers and arrays using NumPy's `random` module. It covers creating arrays with random values from different distributions, such as uniform, normal, and integer."
+  },
+  {
+    "n": 18,
+    "title": "Structured Arrays",
+    "math": "Data structures",
+    "note": "Explains how to create and work with structured arrays in NumPy, which allow you to have columns with different data types, similar to a spreadsheet or a C struct. This is useful for handling heterogeneous data."
+  },
+  {
+    "n": 19,
+    "title": "Reading and Writing Files",
+    "math": "File I/O",
+    "note": "This lesson covers how to save NumPy arrays to disk and load them back. It demonstrates using `np.save()` and `np.load()` for NumPy's efficient binary format, and `np.savetxt()` and `np.loadtxt()` for text files."
+  },
+  {
+    "n": 20,
+    "title": "Integration with Pandas",
+    "math": "Data structures",
+    "note": "This final section explains the relationship between NumPy and the Pandas library. It demonstrates how a Pandas DataFrame is built on top of NumPy arrays and how to efficiently move data between these two powerful data science libraries in Python."
+  }
+]
