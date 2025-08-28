@@ -261,4 +261,42 @@
     "n": 44,
     "title": "Advanced Lighting: Gamma Correction",
     "math": "Power functions (exponentiation)",
-    "note": "Explain why lighting calculations should be done in linear space, but output must be gamma-corrected for most monitors (which operate in sRGB space). Teach how t
+    "note": "Explain why lighting calculations should be done in linear space, but output must be gamma-corrected for most monitors (which operate in sRGB space). Teach how to enable automatic gamma correction for the output framebuffer with `glEnable(GL_FRAMEBUFFER_SRGB)`. Show how to correctly load textures by specifying their format as sRGB."
+  },
+  {
+    "n": 45,
+    "title": "Advanced Lighting: Normal Mapping",
+    "math": "Tangent space, TBN matrix, Gram-Schmidt process",
+    "note": "Introduce normal mapping as a technique to add high-frequency detail to a surface without increasing polygon count. Explain the concept of tangent space. Teach how to calculate tangent and bitangent vectors for a mesh. In the shaders, show how to transform lighting vectors into tangent space and use a normal map to perturb the surface normal."
+  },
+  {
+    "n": 46,
+    "title": "Shadow Mapping Part 1: The Depth Map",
+    "math": "Light's perspective transformation",
+    "note": "Explain the theory of shadow mapping. Teach the first pass: rendering the scene from the light's point of view. This involves creating a new FBO, attaching a depth texture to it, and using an orthographic or perspective projection matrix configured for the light source to render only depth information to the texture."
+  },
+  {
+    "n": 47,
+    "title": "Shadow Mapping Part 2: Rendering Shadows",
+    "math": "Projective texture mapping, bias calculation",
+    "note": "Teach the second pass of shadow mapping. Render the scene normally from the camera's perspective. In the fragment shader, transform the fragment's world-space position into the light's clip space. Use this to sample the depth map generated in the first pass. Compare the sampled depth with the fragment's current depth to determine if it is in shadow. Introduce shadow acne and how to fix it with a bias."
+  },
+  {
+    "n": 48,
+    "title": "High Dynamic Range (HDR) and Tone Mapping",
+    "math": "Floating point numbers, logarithmic functions",
+    "note": "Explain the concept of High Dynamic Range (HDR) rendering, where lighting calculations are not clamped between 0.0 and 1.0. Teach how to use a floating-point framebuffer to store these high-range color values. Then, in a final post-processing step, apply a tone mapping algorithm (e.g., Reinhard) to map the HDR colors back to the Low Dynamic Range (LDR) of the monitor."
+  },
+  {
+    "n": 49,
+    "title": "Tessellation Shaders for Dynamic Detail",
+    "math": "Barycentric coordinates, parametric curves (Bézier)",
+    "note": "Introduce the Tessellation stage, which consists of a Tessellation Control Shader (TCS) and a Tessellation Evaluation Shader (TES). Explain how this stage can subdivide low-poly meshes on the GPU to create high-poly, smooth surfaces. Demonstrate a simple example of tessellating a quad based on its distance from the camera."
+  },
+  {
+    "n": 50,
+    "title": "Compute Shaders for General-Purpose GPU (GPGPU)",
+    "math": "Parallel algorithms",
+    "note": "Introduce Compute Shaders as a way to leverage the GPU for general-purpose parallel computation, outside of the traditional rendering pipeline. Explain the concepts of work groups and invocations. Demonstrate a simple example, such as using a compute shader to perform a parallel calculation on a large dataset stored in a Shader Storage Buffer Object (SSBO)."
+  }
+]
