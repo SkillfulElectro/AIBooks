@@ -1,402 +1,290 @@
 [
   {
     "n": 1,
-    "title": "Networking Roles and Topologies",
-    "math": "networking roles, client-server, peer-to-peer, LAN, WAN, MAN, PAN, bus, star, ring, mesh, physical topology, logical topology",
-    "note": "Explain client-server vs peer-to-peer, and compare LAN/WAN scopes and common topologies (bus, star, ring, mesh) including physical vs logical layouts. Demonstrate using Cisco Packet Tracer 8.x or GNS3 on Windows 11/Ubuntu 22.04."
+    "title": "Introduction to the OSI Model",
+    "math": "Layered models, set theory",
+    "note": "Explain the purpose of the 7-layer OSI model (Physical, Data Link, Network, Transport, Session, Presentation, Application) as a conceptual framework for understanding network communication. Each layer's function will be defined independently, using the analogy of sending a physical letter."
   },
   {
     "n": 2,
-    "title": "Binary, Hex, and Data Units",
-    "math": "binary, hexadecimal, bits, bytes, kibibyte, mebibyte, throughput, bandwidth, latency, goodput",
-    "note": "Teach binary/hex conversions and relate bits/bytes to data rates. Contrast bandwidth, latency, and goodput with simple calculations. Use Python 3.11 REPL in Windows Terminal or Ubuntu 22.04."
+    "title": "The TCP/IP Model and OSI Comparison",
+    "math": "Model mapping, comparative analysis",
+    "note": "Describe the four layers of the TCP/IP model (Network Interface, Internet, Transport, Application) and map them to the seven layers of the OSI model. The focus will be on TCP/IP as the practical model used in modern networks, contrasting its structure with the OSI theoretical model."
   },
   {
     "n": 3,
-    "title": "OSI Model Deep Dive",
-    "math": "OSI layers, encapsulation, decapsulation, PDU types, services",
-    "note": "Describe the seven OSI layers and PDU names. Map devices and protocols to layers. Use Wireshark 4 on Windows 11 to inspect a captured HTTP request and annotate each layer."
+    "title": "The Data Encapsulation Process",
+    "math": "Data structures, nested objects",
+    "note": "Illustrate the process of data encapsulation, explaining how data is wrapped with headers and trailers at each layer of the TCP/IP model as it moves down the protocol stack. Define the Protocol Data Units (PDUs): Segments, Packets, Frames, and Bits for their respective layers."
   },
   {
     "n": 4,
-    "title": "TCP/IP Model Mapping",
-    "math": "TCP/IP layers, protocol suite, OSI mapping",
-    "note": "Explain the four/five-layer TCP/IP model, core protocols, and how it maps to OSI. Use Wireshark on Ubuntu 22.04 to correlate headers to TCP/IP layers."
+    "title": "Network Types and Physical Topologies",
+    "math": "Graph theory, scale and scope",
+    "note": "Define and differentiate between Local Area Networks (LANs), Wide Area Networks (WANs), and Metropolitan Area Networks (MANs) based on geographical scope. Introduce physical network topologies including star, bus, ring, and mesh, explaining their basic structures and data flow patterns using diagrams."
   },
   {
     "n": 5,
-    "title": "Encapsulation and PDUs",
-    "math": "frames, packets, segments, encapsulation, MTU, MSS, fragmentation",
-    "note": "Show how data is encapsulated into segments, packets, and frames. Demonstrate MTU, MSS, and fragmentation using ping with DF flag in PowerShell (Windows 11) and iputils (Ubuntu 22.04)."
+    "title": "Understanding Twisted-Pair Copper Cabling",
+    "math": "Signal attenuation, frequency analysis",
+    "note": "Detail the characteristics of unshielded (UTP) and shielded (STP) twisted-pair cabling used in Ethernet LANs. Cover cable categories like Cat 5e, Cat 6, and Cat 6a, explaining their bandwidth capabilities and how twisting wires reduces electromagnetic interference and crosstalk."
   },
   {
     "n": 6,
-    "title": "Ethernet and MAC Addressing",
-    "math": "Ethernet II, MAC addressing, CSMA/CD, frame format",
-    "note": "Detail Ethernet frame fields and MAC addressing. Explain CSMA/CD and full-duplex. Build a tiny GNS3 lab with Open vSwitch and FRRouting hosts; observe frames in Wireshark."
+    "title": "Common Network Cable Connectors",
+    "math": "Pinout diagrams, modular arithmetic",
+    "note": "Identify and describe common copper cable connectors, focusing on the RJ45 for Ethernet and the RJ11 for telephone lines. Explain their pin configurations and show how to wire an RJ45 connector using the T568A and T568B wiring standards for creating straight-through and crossover cables."
   },
   {
     "n": 7,
-    "title": "IPv4 Addressing Basics",
-    "math": "IPv4 classes, private ranges, APIPA, dotted decimal",
-    "note": "Introduce IPv4 addressing, private ranges, and APIPA. Configure static IPv4 addresses on Windows 11 and Ubuntu 22.04 and verify with ipconfig and ip addr."
+    "title": "Introduction to Fiber Optic Cabling",
+    "math": "Optics, light propagation",
+    "note": "Explain the principles of fiber optic communication, detailing the components of a fiber cable (core, cladding, buffer). Differentiate between Single-Mode Fiber (SMF) for long-haul communication and Multi-Mode Fiber (MMF) for shorter distances within a campus or building."
   },
   {
     "n": 8,
-    "title": "Subnetting Fundamentals",
-    "math": "subnet masks, binary math, borrowed bits, host counts, network ID, broadcast",
-    "note": "Calculate subnets by hand: network ID, broadcast, and usable hosts. Practice with paper worksheets and validate using a short Python 3.11 script on Windows or Linux."
+    "title": "IPv4 Addressing Fundamentals",
+    "math": "Binary notation, base conversion",
+    "note": "Introduce the 32-bit structure of an IPv4 address, written in dotted-decimal notation. Explain the concept of network and host portions, and define the default address classes (A, B, C) and their corresponding default subnet masks. Practice converting 8-bit octets between binary and decimal."
   },
   {
     "n": 9,
-    "title": "CIDR and VLSM Planning",
-    "math": "CIDR notation, VLSM, summarization, supernetting",
-    "note": "Design a VLSM plan for diverse host counts and create route summaries. Use a spreadsheet template and verify with ipcalc on Ubuntu 22.04."
+    "title": "The Purpose and Function of a Subnet Mask",
+    "math": "Boolean AND operations",
+    "note": "Explain how a subnet mask is used to divide an IP address into its network and host portions. Demonstrate the binary ANDing process where a device uses its own IP address and subnet mask to determine if a destination IP is on the local network or a remote network."
   },
   {
     "n": 10,
-    "title": "IPv6 Addressing Basics",
-    "math": "IPv6 notation, zero compression, address types, scope, multicast",
-    "note": "Teach IPv6 notation (hextets, zero compression) and address scopes (global, link-local, unique-local, multicast). Configure static IPv6 on Ubuntu 22.04 and validate with ip -6 commands."
+    "title": "Fundamentals of IPv4 Subnetting",
+    "math": "Powers of two, binary arithmetic",
+    "note": "Teach the concept of subnetting as a way to divide a larger network into smaller, more efficient subnetworks. Explain how 'borrowing' bits from the host portion of an address extends the network portion, allowing for more network IDs from a single class-based network address."
   },
   {
     "n": 11,
-    "title": "IPv6 NDP and Autoconfiguration",
-    "math": "NDP, SLAAC, DHCPv6, DAD, Router Advertisement",
-    "note": "Explain NDP components, SLAAC vs DHCPv6, and duplicate address detection. In GNS3 with FRRouting, send router advertisements and inspect neighbor tables on Linux hosts."
+    "title": "Practical IPv4 Subnet Calculation with CIDR",
+    "math": "Logarithms, binary calculation",
+    "note": "Provide a step-by-step method for calculating subnets using Classless Inter-Domain Routing (CIDR) notation (e.g., /26, /27). This includes determining the network address, first and last usable host addresses, and the broadcast address for a given subnet."
   },
   {
     "n": 12,
-    "title": "Ports and Protocols",
-    "math": "TCP vs UDP, three-way handshake, connection states, well-known ports",
-    "note": "Memorize and test common ports (DNS, DHCP, HTTP/S, SSH, RDP, SNMP). Use Wireshark and netcat on Windows 11 and Ubuntu to demonstrate TCP handshakes and UDP traffic."
+    "title": "Introduction to IPv6 Addressing",
+    "math": "Hexadecimal numbering system",
+    "note": "Introduce the 128-bit structure of an IPv6 address, written in hexadecimal notation. Explain the format, including the network prefix and interface ID. Teach the two rules for abbreviating IPv6 addresses: omitting leading zeros and using a double colon (::) for a single block of consecutive zeros."
   },
   {
     "n": 13,
-    "title": "ARP and Neighbor Caches",
-    "math": "ARP, gratuitous ARP, ARP cache, IPv6 neighbor cache",
-    "note": "Describe ARP resolution, gratuitous ARP, and cache behavior; compare to IPv6 neighbor caches. Use arp -a on Windows and ip neigh/ndisc6 on Linux to observe entries."
+    "title": "Comparing TCP and UDP Protocols",
+    "math": "State machines, checksum algorithms",
+    "note": "Differentiate between the Transmission Control Protocol (TCP) and User Datagram Protocol (UDP). Explain TCP as a connection-oriented, reliable protocol using a three-way handshake and acknowledgments, and UDP as a connectionless, best-effort protocol with low overhead."
   },
   {
     "n": 14,
-    "title": "Switching Fundamentals",
-    "math": "MAC learning, flooding, CAM table, collision domains",
-    "note": "Explain MAC learning and forwarding behavior in switches. Build a three-switch lab in GNS3 with Open vSwitch and review CAM-like tables via ovs-appctl."
+    "title": "Essential Network Ports and Protocols",
+    "math": "Integer mapping",
+    "note": "Define common TCP/IP application layer protocols and their associated default port numbers. Cover HTTP (80), HTTPS (443), FTP (20, 21), SSH (22), DNS (53), DHCP (67, 68), and RDP (3389), explaining the purpose of each protocol in client-server communication."
   },
   {
     "n": 15,
-    "title": "VLANs and Trunking",
-    "math": "VLANs, 802.1Q tagging, native VLAN, access port, trunk port",
-    "note": "Create VLANs, set access/trunk ports, and configure native VLAN. Use Cisco IOSv or Open vSwitch in GNS3 and validate isolation with ping tests."
+    "title": "How Network Switches Operate",
+    "math": "Hash tables, lookup tables",
+    "note": "Explain the function of a Layer 2 switch in a LAN. Detail how a switch learns MAC addresses from incoming frames and builds a MAC address table. This table is used to make intelligent forwarding decisions, sending frames only to the destination port rather than broadcasting them."
   },
   {
     "n": 16,
-    "title": "Inter-VLAN Routing",
-    "math": "router-on-a-stick, SVIs, default gateways",
-    "note": "Route between VLANs using router-on-a-stick and switch virtual interfaces. Configure on Cisco IOSv in GNS3 and verify with traceroute and gateway checks."
+    "title": "Virtual LANs (VLANs) for Network Segmentation",
+    "math": "Set partitioning",
+    "note": "Introduce Virtual LANs (VLANs) as a method for logically segmenting a physical LAN into multiple broadcast domains on a single switch. Explain how VLANs improve security and traffic management by isolating groups of devices regardless of their physical location."
   },
   {
     "n": 17,
-    "title": "Spanning Tree Protocol",
-    "math": "STP, RSTP, BPDUs, root bridge, port roles, port states",
-    "note": "Prevent loops with STP/RSTP, choose a root bridge, and observe port roles/states. Use Cisco IOSv switches in GNS3 and show spanning-tree outputs."
+    "title": "Preventing Loops with Spanning Tree Protocol (STP)",
+    "math": "Graph algorithms (minimum spanning tree)",
+    "note": "Explain the purpose of the Spanning Tree Protocol (STP) to prevent switching loops in networks with redundant paths. Describe how STP works by electing a root bridge and blocking redundant ports to create a single, loop-free logical topology, ensuring network stability."
   },
   {
     "n": 18,
-    "title": "Link Aggregation (LACP)",
-    "math": "802.3ad, LACP, EtherChannel, hashing algorithms",
-    "note": "Bundle links with LACP for redundancy and throughput. Configure EtherChannel on Cisco IOSv in GNS3 and test failure scenarios by disabling member links."
+    "title": "The Function of a Network Router",
+    "math": "Pathfinding algorithms, longest prefix match",
+    "note": "Define the role of a router as a Layer 3 device that connects different IP networks. Explain how a router uses a routing table to examine the destination IP address of a packet and determine the best path to forward it towards its destination."
   },
   {
     "n": 19,
-    "title": "Wireless RF Basics",
-    "math": "RF, wavelength, attenuation, multipath, SNR, modulation",
-    "note": "Introduce RF concepts: path loss, multipath, and SNR. Visualize signals using Acrylic Wi-Fi Home or NetSpot on Windows 11."
+    "title": "Comparing Static and Dynamic Routing",
+    "math": "Decision theory",
+    "note": "Differentiate between static routing, where routes are manually configured by an administrator, and dynamic routing, where routers automatically learn about remote networks from other routers using a routing protocol. Discuss the use cases, advantages, and disadvantages of each."
   },
   {
     "n": 20,
-    "title": "802.11 Standards and Channels",
-    "math": "802.11 a/b/g/n/ac/ax, 2.4/5/6 GHz, channels, DFS, channel width",
-    "note": "Compare Wi-Fi standards, channel planning, DFS, and channel widths. Configure SSIDs and channels on a SOHO AP UI and validate with a Wi-Fi analyzer app."
+    "title": "Overview of Dynamic Routing Protocols",
+    "math": "Dijkstra's algorithm, vector arithmetic",
+    "note": "Provide a high-level overview of dynamic routing protocols. Compare distance-vector protocols (like RIP) which use hop count as a metric, with link-state protocols (like OSPF) which have a complete map of the network topology to make more intelligent routing decisions."
   },
   {
     "n": 21,
-    "title": "Wireless Security Practices",
-    "math": "WPA2, WPA3, PSK, 802.1X, EAP, SAE",
-    "note": "Secure WLANs using WPA2/WPA3, PSK vs Enterprise (802.1X). Configure WPA2-Enterprise with FreeRADIUS on Ubuntu 22.04 and test authentication from a Windows 11 client."
+    "title": "Understanding 802.11 Wi-Fi Standards",
+    "math": "Frequency modulation, signal-to-noise ratio",
+    "note": "Describe the evolution of the IEEE 802.11 standards for wireless networking. Cover key standards like 802.11n, ac (Wi-Fi 5), and ax (Wi-Fi 6), comparing them based on frequency bands (2.4 GHz vs. 5 GHz), maximum speed, and technologies like MIMO and MU-MIMO."
   },
   {
     "n": 22,
-    "title": "WAN Technologies Overview",
-    "math": "leased lines, packet switching, circuit switching, SLAs, latency",
-    "note": "Survey major WAN access types and their tradeoffs in cost, throughput, and latency. Use draw.io for diagrams and review real provider SLA examples."
+    "title": "Securing Wireless Networks (WPA2/WPA3)",
+    "math": "Cryptography, key exchange algorithms",
+    "note": "Explain the importance of securing wireless networks. Detail the differences between the modern security protocols WPA2 and WPA3. Explain the use of PSK (Pre-Shared Key) for personal use and Enterprise mode (using a RADIUS server for authentication) for business environments."
   },
   {
     "n": 23,
-    "title": "MPLS and Metro Ethernet",
-    "math": "MPLS labels, L3VPN, QoS classes, MetroE E-Line/E-LAN",
-    "note": "Explain provider MPLS/MetroE offerings and CE responsibilities. Simulate CE routers with FRRouting in GNS3 connected to a mock MPLS cloud."
+    "title": "Cloud Computing Models (IaaS, PaaS, SaaS)",
+    "math": "Resource allocation models",
+    "note": "Define cloud computing and its main service models. Differentiate between Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS) by explaining what the customer manages versus what the cloud provider manages in each model."
   },
   {
     "n": 24,
-    "title": "Broadband and Cellular Access",
-    "math": "DSL, DOCSIS, FTTH, LTE, 5G, CGNAT",
-    "note": "Contrast DSL, cable, fiber-to-the-home, and LTE/5G. Demonstrate CGNAT detection by comparing a public IP from a website vs your SOHO router status page."
+    "title": "Public, Private, and Hybrid Cloud Deployments",
+    "math": "Set theory (union, intersection)",
+    "note": "Compare and contrast the three primary cloud deployment models: Public Cloud (e.g., AWS, Azure), Private Cloud (on-premises resources), and Hybrid Cloud (a mix of both). Discuss the key drivers for choosing each model, such as cost, security, and control."
   },
   {
     "n": 25,
-    "title": "NAT and PAT",
-    "math": "static NAT, dynamic NAT, PAT, hairpin NAT",
-    "note": "Configure static NAT, dynamic NAT, and PAT including hairpinning. Use pfSense 2.7 in a virtual lab and verify translations with packet captures."
+    "title": "Fundamentals of Network Virtualization",
+    "math": "Abstraction layers",
+    "note": "Explain the concept of virtualization, focusing on how a hypervisor allows a single physical machine to host multiple virtual machines (VMs). Describe virtual networking components like virtual switches (vSwitch) and virtual NICs that enable communication between VMs and the physical network."
   },
   {
     "n": 26,
-    "title": "DHCP and Relay",
-    "math": "DORA, scopes, reservations, options, DHCP relay",
-    "note": "Deploy an ISC DHCP server on Ubuntu 22.04, create scopes and options, set reservations, and configure a DHCP relay on a router. Validate leases and options."
+    "title": "Network Monitoring with SNMP",
+    "math": "Data structures (Management Information Base)",
+    "note": "Introduce the Simple Network Management Protocol (SNMP) as a standard for monitoring network devices. Explain the roles of the SNMP manager, SNMP agent, and the Management Information Base (MIB). Describe basic operations like GET requests and asynchronous TRAP messages."
   },
   {
     "n": 27,
-    "title": "DNS Fundamentals",
-    "math": "A/AAAA, CNAME, MX, TXT, SRV, recursion, caching, TTL",
-    "note": "Operate BIND9 with forward and reverse zones; create A/AAAA, MX, CNAME, TXT, and SRV records. Test recursion and TTL with dig/nslookup on Windows/Linux."
+    "title": "Centralized Logging with Syslog",
+    "math": "Time-series data analysis",
+    "note": "Explain the importance of network device logging for troubleshooting and security. Describe the Syslog protocol, which allows devices to send event messages to a central Syslog server. Cover message severity levels from Emergency (0) to Debug (7)."
   },
   {
     "n": 28,
-    "title": "NTP and Time Sync",
-    "math": "NTP hierarchy, stratum, client/server, authentication",
-    "note": "Configure chrony on Ubuntu and Windows Time Service to sync with pool.ntp.org. Verify offsets and secure with NTP authentication keys."
+    "title": "Key Network Performance Metrics",
+    "math": "Statistical analysis (mean, median, jitter)",
+    "note": "Define key metrics used to measure network performance. Explain bandwidth (theoretical capacity), throughput (actual data transfer rate), latency (delay), and jitter (variation in delay). Use the analogy of highway traffic to explain the difference between them."
   },
   {
     "n": 29,
-    "title": "AAA and Directory Services",
-    "math": "RADIUS, TACACS+, LDAP, Kerberos, SSO",
-    "note": "Implement AAA using FreeRADIUS and tac_plus on Ubuntu 22.04; integrate OpenLDAP; test device authentication from a Cisco IOSv router."
+    "title": "Concepts of High Availability and Redundancy",
+    "math": "Probability, mean time between failures (MTBF)",
+    "note": "Introduce high availability (HA) as a design principle to ensure network uptime. Explain how redundancy is used to achieve HA by implementing duplicate components, such as redundant power supplies, multiple uplinks via link aggregation (LAG), or failover router pairs using VRRP."
   },
   {
     "n": 30,
-    "title": "Firewalls and ACLs",
-    "math": "stateless vs stateful, zones, rule order, implicit deny",
-    "note": "Create firewall policies on pfSense and compare with Cisco IOS extended ACLs. Test rule order, logging, and implicit deny using test hosts."
+    "title": "Disaster Recovery and Business Continuity",
+    "math": "Risk analysis, optimization",
+    "note": "Differentiate between disaster recovery (restoring IT functions after a catastrophe) and business continuity (keeping business functions operational during a disruption). Explain key concepts like Recovery Point Objective (RPO), Recovery Time Objective (RTO), and the importance of data backups."
   },
   {
     "n": 31,
-    "title": "IDS/IPS and WAF",
-    "math": "signature-based, anomaly-based, inline vs TAP, WAF rules",
-    "note": "Deploy Suricata IDS on Ubuntu; enable community rules and generate test alerts. Discuss managed WAF options using AWS WAF/Azure Front Door examples."
+    "title": "The Importance of Network Documentation",
+    "math": "Graph visualization",
+    "note": "Explain the critical role of network documentation for operations and troubleshooting. Cover the types of documents that should be maintained, including physical and logical network diagrams, IP address schemas, device configurations, and standard operating procedures (SOPs)."
   },
   {
     "n": 32,
-    "title": "Load Balancers and Proxies",
-    "math": "L4 vs L7, persistence, health checks, reverse proxy, SSL offload",
-    "note": "Configure HAProxy on Ubuntu to balance HTTP backends with health checks and sticky sessions. Validate with curl and browser tests."
+    "title": "The CIA Triad of Security",
+    "math": "Information theory",
+    "note": "Introduce the fundamental security model of the CIA Triad. Define Confidentiality (preventing unauthorized disclosure), Integrity (ensuring data is not altered), and Availability (ensuring data and services are accessible when needed). Provide a real-world example for each component."
   },
   {
     "n": 33,
-    "title": "QoS Fundamentals",
-    "math": "DSCP, CoS, queuing, policing, shaping, WRED",
-    "note": "Classify and mark traffic, apply queuing, policing, and shaping. Use Cisco IOSv in GNS3 to configure MQC policies and test with iperf3 flows."
+    "title": "Implementing Network Access Control (NAC)",
+    "math": "Policy-based logic",
+    "note": "Explain Network Access Control (NAC) as a security approach that restricts unauthorized users and devices from network access. Describe how NAC solutions can perform health checks on devices (e.g., antivirus updates, OS patches) before granting access to a quarantine or production VLAN."
   },
   {
     "n": 34,
-    "title": "High Availability Gateways",
-    "math": "HSRP, VRRP, preemption, tracking, failover",
-    "note": "Configure HSRP/VRRP on two routers and enable preemption and interface tracking. Test gateway failover using continuous pings in GNS3."
+    "title": "AAA Security Framework",
+    "math": "Access control matrices",
+    "note": "Describe the AAA framework for controlling access: Authentication (proving identity), Authorization (defining permissions), and Accounting (tracking actions). Explain how protocols like RADIUS and TACACS+ are used to centralize AAA services for network devices."
   },
   {
     "n": 35,
-    "title": "Routing Basics and Static Routes",
-    "math": "longest-prefix match, static routes, default route, admin distance",
-    "note": "Explain longest-prefix match and configure static/default routes. Use FRRouting routers and Linux hosts to verify paths with traceroute and ip route get."
+    "title": "Recognizing Common Network Attacks",
+    "math": "Game theory",
+    "note": "Provide an overview of common network-based attacks. Define Denial-of-Service (DoS) attacks, man-in-the-middle (MITM) attacks where an attacker intercepts communication, and social engineering tactics like phishing. The context is threat awareness for a network administrator."
   },
   {
     "n": 36,
-    "title": "RIP for Education",
-    "math": "RIP v2, split horizon, poison reverse, timers",
-    "note": "Enable RIP v2 in a small FRRouting topology to illustrate distance-vector metrics and convergence timers; observe route poisoning behavior."
+    "title": "Function of Firewalls and ACLs",
+    "math": "Boolean logic, ordered set processing",
+    "note": "Explain the role of a firewall as a network security device that filters traffic. Describe how firewalls use Access Control Lists (ACLs)—ordered sets of rules that permit or deny traffic based on source/destination IP, port number, and protocol—and the implicit deny principle."
   },
   {
     "n": 37,
-    "title": "OSPF Fundamentals",
-    "math": "OSPF areas, metrics, adjacencies, DR/BDR, LSAs",
-    "note": "Configure single-area OSPF with FRRouting; observe neighbor states, DR/BDR elections, and LSDB contents; change interface costs and watch route selection."
+    "title": "IDS vs. IPS for Threat Detection",
+    "math": "Pattern recognition, anomaly detection",
+    "note": "Differentiate between an Intrusion Detection System (IDS), which monitors traffic and sends alerts, and an Intrusion Prevention System (IPS), which can actively block malicious traffic. Explain signature-based (known attacks) vs. anomaly-based (unusual behavior) detection."
   },
   {
     "n": 38,
-    "title": "BGP Essentials",
-    "math": "eBGP, iBGP, ASNs, path selection, attributes",
-    "note": "Establish an eBGP peering between FRRouting routers, advertise prefixes, and influence paths with weight, local-preference, and AS-PATH prepending."
+    "title": "Understanding Virtual Private Networks (VPNs)",
+    "math": "Tunneling protocols, encryption algorithms",
+    "note": "Explain the purpose of a VPN to create a secure, encrypted tunnel over an untrusted public network. Describe remote-access VPNs for individual users and site-to-site VPNs for connecting two networks. Mention protocols like IPsec and SSL/TLS used to build these tunnels."
   },
   {
     "n": 39,
-    "title": "Route Redistribution and Filtering",
-    "math": "redistribution, route-maps, prefix-lists, tags, filtering",
-    "note": "Redistribute between OSPF and BGP in FRRouting using route-maps and prefix-lists; apply route tags to avoid feedback loops."
+    "title": "Physical Security of Network Devices",
+    "math": "Risk management",
+    "note": "Discuss the importance of physical security for protecting network infrastructure. Cover controls such as locked server rooms, equipment racks, video surveillance, and biometric access controls to prevent unauthorized physical access to routers, switches, and servers."
   },
   {
     "n": 40,
-    "title": "Segmentation with VRFs",
-    "math": "VRF, routing instances, overlapping IP, route leaking",
-    "note": "Create VRFs on Cisco IOSv or Linux network namespaces to isolate tenants; selectively leak routes for shared services and test isolation."
+    "title": "A Structured Approach to Troubleshooting",
+    "math": "Problem-solving algorithms, logical deduction",
+    "note": "Introduce the CompTIA 7-step troubleshooting methodology: 1. Identify the problem. 2. Establish a theory. 3. Test the theory. 4. Establish a plan of action. 5. Implement the solution. 6. Verify full system functionality. 7. Document findings."
   },
   {
     "n": 41,
-    "title": "SDN Concepts",
-    "math": "control plane, data plane, southbound APIs, OpenFlow, intent",
-    "note": "Introduce SDN architectures and controller roles. Use Open vSwitch with the Ryu controller on Ubuntu to push simple OpenFlow rules."
+    "title": "Using `ping` and `tracert` for Connectivity Testing",
+    "math": "Round-trip time calculation",
+    "note": "Demonstrate using the `ping` command (via ICMP) to test IP reachability and measure latency. Explain how `traceroute` (or `tracert` on Windows) is used to map the Layer 3 path a packet takes through routers to a destination by using TTL values."
   },
   {
     "n": 42,
-    "title": "SD-WAN Fundamentals",
-    "math": "overlay, underlay, control plane, path selection, policies",
-    "note": "Explain SD-WAN overlays, control policies, and dynamic path selection. Simulate dual-ISP underlays in GNS3 and observe policy-based failover."
+    "title": "Viewing IP Configuration with `ipconfig`/`ifconfig`",
+    "math": "Data querying",
+    "note": "Explain how to use `ipconfig` (Windows) and `ifconfig`/`ip` (Linux) to view the IP address, subnet mask, and default gateway of a local network adapter. Show how to use switches like `ipconfig /all` to see MAC address and DHCP server information."
   },
   {
     "n": 43,
-    "title": "Virtualization and vSwitches",
-    "math": "type 1 vs type 2, vNICs, virtual switches, SR-IOV",
-    "note": "Build a lab in VMware Workstation or VirtualBox with multiple VMs; configure Linux bridge or Open vSwitch and test inter-VM connectivity."
+    "title": "Querying DNS with `nslookup` and `dig`",
+    "math": "Hierarchical database querying",
+    "note": "Teach how to use the `nslookup` and `dig` command-line utilities to troubleshoot Domain Name System (DNS) issues. Demonstrate how to perform forward lookups (name to IP) and query specific DNS record types like A (address) and MX (mail exchanger)."
   },
   {
     "n": 44,
-    "title": "Cloud Networking Models",
-    "math": "IaaS, PaaS, SaaS, public, private, hybrid, shared responsibility",
-    "note": "Define cloud service/deployment models and shared responsibility. Use AWS and Azure portals (free tiers) to identify networking components in sample deployments."
+    "title": "Inspecting Connections with `netstat`",
+    "math": "State analysis",
+    "note": "Introduce the `netstat` command for displaying active network connections, listening ports, and routing tables on a local machine. Explain how to use flags like `-an` to show all connections with numerical addresses, which helps identify unusual network activity."
   },
   {
     "n": 45,
-    "title": "AWS VPC Networking",
-    "math": "VPC, subnets, route tables, IGW, NAT gateway, security groups, NACLs",
-    "note": "Create a VPC with public/private subnets, IGW, NAT gateway, security groups, and NACLs in AWS Console; test EC2 connectivity with ping and curl."
+    "title": "Using Hardware Tools for Troubleshooting",
+    "math": "Signal analysis",
+    "note": "Describe common hardware tools for network technicians. Explain the function of a cable crimper for making Ethernet cables, a punchdown tool for patch panels, a tone generator and probe for tracing cables, and a cable tester for verifying pinouts and connectivity."
   },
   {
     "n": 46,
-    "title": "Azure VNet Networking",
-    "math": "VNet, subnets, NSGs, UDR, peering, Bastion",
-    "note": "Deploy a VNet, subnets, NSGs, and user-defined routes in Azure; peer two VNets and validate connectivity via Azure Cloud Shell."
+    "title": "Troubleshooting Common Wired Network Problems",
+    "math": "Fault isolation",
+    "note": "Outline a systematic approach to troubleshooting common wired connectivity problems. Cover issues like bad cables or ports, speed and duplex mismatches, VLAN misconfigurations, and IP address conflicts. Use the OSI model as a framework to isolate the problem layer."
   },
   {
     "n": 47,
-    "title": "Hybrid Connectivity Options",
-    "math": "IPsec site-to-site, SSL VPN, Direct Connect, ExpressRoute",
-    "note": "Set up a site-to-site IPsec VPN between pfSense and AWS. Contrast this with Direct Connect/ExpressRoute features and typical use cases."
+    "title": "Troubleshooting Common Wireless Network Problems",
+    "math": "Signal interference analysis",
+    "note": "Discuss common issues affecting Wi-Fi networks. Cover problems like poor signal strength, radio frequency interference (RFI) from devices like microwaves, channel overlap in the 2.4 GHz band, and incorrect security key or authentication settings."
   },
   {
     "n": 48,
-    "title": "Automation Basics and APIs",
-    "math": "REST, JSON, YAML, CRUD, idempotence, API clients",
-    "note": "Explain RESTful APIs and data formats. Use Postman against a network API sandbox (Cisco DevNet) and parse JSON in Python 3.11."
-  },
-  {
-    "n": 49,
-    "title": "Ansible for Network Automation",
-    "math": "inventory, modules, playbooks, Jinja2, idempotence",
-    "note": "Install Ansible 2.15 on Ubuntu; write playbooks using network modules and Jinja2 templates to configure Cisco IOSv/Arista EOS (containerlab or GNS3)."
-  },
-  {
-    "n": 50,
-    "title": "Python Network Scripting",
-    "math": "Netmiko, Paramiko, NAPALM, loops, exceptions",
-    "note": "Create Python 3.11 scripts with Netmiko/NAPALM to gather device facts and push safe changes; add logging and exception handling. Run from Ubuntu or Windows."
-  },
-  {
-    "n": 51,
-    "title": "Terraform for Networking",
-    "math": "providers, state, plans, modules, IaC",
-    "note": "Provision AWS VPC networking with Terraform 1.x. Use providers, plans, remote state, and modules to standardize network deployments."
-  },
-  {
-    "n": 52,
-    "title": "Monitoring with SNMP and Syslog",
-    "math": "SNMP v2c/v3, OIDs, traps, syslog severities, MIBs",
-    "note": "Deploy Net-SNMP and syslog-ng on Ubuntu; poll device metrics, receive traps, and forward logs into Graylog for dashboards and alerts."
-  },
-  {
-    "n": 53,
-    "title": "Flow Analysis",
-    "math": "NetFlow, sFlow, IPFIX, exporters, collectors, top talkers",
-    "note": "Enable flow export on FRRouting/Cisco IOSv and collect with nfdump or pmacct. Analyze top talkers, applications, and conversations."
-  },
-  {
-    "n": 54,
-    "title": "Wireshark Packet Analysis",
-    "math": "capture filters, display filters, TCP analysis, follow streams",
-    "note": "Capture traffic with Wireshark 4 on Windows 11; apply capture/display filters, follow TCP streams, and use conversation statistics to identify latency and retransmissions."
-  },
-  {
-    "n": 55,
-    "title": "Troubleshooting Methodology",
-    "math": "identification, hypothesis, testing, remediation, verification, documentation",
-    "note": "Teach a structured troubleshooting process from identification to documentation with clear steps. Use GLPI or Spiceworks to track a mock ticket and actions taken."
-  },
-  {
-    "n": 56,
-    "title": "CLI Troubleshooting Tools",
-    "math": "ping, traceroute, ipconfig/ifconfig/ip, netstat, nslookup/dig, arp, mtr",
-    "note": "Demonstrate core tools on Windows and Linux to isolate DNS, gateway, routing, and ARP issues. Practice interpreting outputs and resolving simple faults."
-  },
-  {
-    "n": 57,
-    "title": "Copper Cabling and Connectors",
-    "math": "UTP/STP, Cat5e/6/6A/7/8, T568A/B, RJ-45, punchdown, patch panels",
-    "note": "Identify copper media and termination standards. Practice punching down keystones and patch panels with a lab kit and verify with a basic Fluke cable tester."
-  },
-  {
-    "n": 58,
-    "title": "Fiber and Transceivers",
-    "math": "SMF vs MMF, LC/SC/ST, SFP/SFP+/QSFP, APC vs UPC, link budget",
-    "note": "Explain fiber types and connector polish. Install SFP modules in lab switches and verify link power budgets and distances per datasheet."
-  },
-  {
-    "n": 59,
-    "title": "Cable Testing and Certification",
-    "math": "continuity, wiremap, TDR, OTDR, NEXT, return loss, certification",
-    "note": "Use a cable tester for continuity and wiremap. Discuss TDR/OTDR and interpret sample certification reports using Fluke LinkWare files."
-  },
-  {
-    "n": 60,
-    "title": "Documentation, Diagrams, and Change",
-    "math": "network diagrams, IPAM, baselines, change control, MOP, SOP",
-    "note": "Create logical/physical diagrams in draw.io or Visio. Maintain IP addressing in NetBox and write a Method of Procedure for a routine change; run a mock change review."
-  },
-  {
-    "n": 61,
-    "title": "NAC and 802.1X",
-    "math": "802.1X, EAP-TLS, PEAP, supplicant, authenticator, RADIUS, posture",
-    "note": "Deploy FreeRADIUS on Ubuntu and configure 802.1X on a switchport; test EAP-TLS/PEAP with the Windows 11 supplicant and observe RADIUS logs."
-  },
-  {
-    "n": 62,
-    "title": "Zero Trust and Microsegmentation",
-    "math": "zero trust, least privilege, microsegmentation, SDP, ZTNA",
-    "note": "Define zero trust principles and implement microsegmentation with host firewalls. Configure Windows Defender Firewall and Linux nftables policies to restrict east-west traffic."
-  },
-  {
-    "n": 63,
-    "title": "Remote Access Methods",
-    "math": "SSH, RDP, VPN clients, port forwarding, jump hosts",
-    "note": "Secure remote management with SSH and RDP over VPN. Configure OpenVPN on Windows 11, set port forwarding, and access devices via a hardened jump box."
-  },
-  {
-    "n": 64,
-    "title": "Secure Management and OOB",
-    "math": "SSH, HTTPS, SNMPv3, TACACS+, out-of-band, console servers",
-    "note": "Harden management access using SSH/HTTPS and SNMPv3. Demonstrate out-of-band management using a simulated console server and separate management network in GNS3."
-  },
-  {
-    "n": 65,
-    "title": "Network Threats and DDoS",
-    "math": "DoS, DDoS, amplification, reflection, spoofing, uRPF, RTBH",
-    "note": "Explain common network attacks and mitigations including ACLs, uRPF, and remotely triggered blackhole (RTBH). Simulate benign load with iperf3 and observe device impact."
-  },
-  {
-    "n": 66,
-    "title": "Vulnerability Scanning and Patching",
-    "math": "scanning, CVSS, remediation, patch management, exceptions",
-    "note": "Run OpenVAS or Nessus Essentials against lab hosts; prioritize findings via CVSS and apply patches using apt and Windows Update. Document remediation plans."
-  },
-  {
-    "n": 67,
-    "title": "Incident Response Basics",
-    "math": "preparation, identification, containment, eradication, recovery, lessons learned",
-    "note": "Walk through incident response phases using a mock breach. Collect volatile
+    "title": "Troubleshooting DNS and DHCP Issues",
+    "math": "Root cause analysis",
+    "note": "Explain how to diagnose common problems with core network services. For DHCP, cover client failure to obtain an IP address (APIPA) and rogue DHCP servers. For DNS, cover name resolution failures, incorrect DNS server settings, and clearing the local DNS cache."
+  }
+]
