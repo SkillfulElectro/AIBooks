@@ -22,36 +22,56 @@
           </div>
           <h1 class="text-3xl font-bold mb-1">Books By AI</h1>
         </div>
-        <div class="flex items-center gap-2">
+      </header>
+
+      <div id="book-selection-view">
+        <div class="flex items-center gap-2 mb-4">
           <input
             type="text"
-            id="search"
-            class="bg-gray-800 text-white px-3 py-2 rounded-lg"
+            id="searchBooks"
+            class="bg-gray-800 text-white px-3 py-2 rounded-lg w-full"
             placeholder="Search books..."
           />
         </div>
-      </header>
+        <section class="mb-3 flex gap-2 items-center flex-wrap">
+          <div id="booksArea" class="flex gap-2 items-center flex-wrap">
+            <!-- Book buttons inserted here after fetching /books.json -->
+            <div class="text-gray-400">Loading books...</div>
+          </div>
+        </section>
+      </div>
 
-      <section class="mb-3 flex gap-2 items-center flex-wrap">
-        <div id="booksArea" class="flex gap-2 items-center flex-wrap">
-          <!-- Book buttons inserted here after fetching /books.json -->
-          <div class="text-gray-400">Loading books...</div>
-        </div>
-        <div class="ml-auto flex gap-2">
+      <div id="topic-view" style="display: none">
+        <div class="flex items-center justify-between gap-3 py-4">
           <button
-            id="selectAll"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            id="backToBooksBtn"
+            class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
           >
-            Select All
+            <i class="fas fa-arrow-left mr-2"></i> Back to Books
           </button>
-          <button
-            id="clearAll"
-            class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
-          >
-            Clear All
-          </button>
+          <h2 id="bookTitle" class="text-2xl font-bold"></h2>
+          <div class="flex items-center gap-2">
+            <input
+              type="text"
+              id="searchTopics"
+              class="bg-gray-800 text-white px-3 py-2 rounded-lg"
+              placeholder="Search topics..."
+            />
+            <button
+              id="selectAll"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Select All
+            </button>
+            <button
+              id="clearAll"
+              class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+            >
+              Clear All
+            </button>
+          </div>
         </div>
-      </section>
+      </div>
 
       <div
         id="jsErrorPlaceholder"
