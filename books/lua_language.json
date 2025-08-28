@@ -1,0 +1,152 @@
+[
+  {
+    "n": 1,
+    "title": "Getting Started with Lua",
+    "math": "number systems",
+    "note": "Install the official Lua interpreter, set up a code editor, and run your first hello-world script from the terminal on Windows, macOS, and Linux."
+  },
+  {
+    "n": 2,
+    "title": "Variables and Types",
+    "math": "type theory basics",
+    "note": "Explain dynamic typing, literals (nil, boolean, number, string), and variable scope while experimenting in the interactive Lua REPL."
+  },
+  {
+    "n": 3,
+    "title": "Operators & Expressions",
+    "math": "boolean algebra",
+    "note": "Teach arithmetic, relational, logical, and concatenation operators; show truthy/falsy evaluation by coding small console programs."
+  },
+  {
+    "n": 4,
+    "title": "Control Flow Essentials",
+    "math": "predicate logic",
+    "note": "Demonstrate if-elseif-else, while, repeat-until, and numeric for loops using simple text-based menu programs run in the terminal."
+  },
+  {
+    "n": 5,
+    "title": "Functions & Scope",
+    "math": "lambda calculus",
+    "note": "Cover function declaration, return values, variadic arguments, and lexical scoping by writing reusable utility functions in standalone .lua files."
+  },
+  {
+    "n": 6,
+    "title": "Tables as Arrays",
+    "math": "indexing and sequences",
+    "note": "Teach table creation, numeric indexing, length operator #, and table library functions while building a command-line to-do list."
+  },
+  {
+    "n": 7,
+    "title": "Tables as Dictionaries",
+    "math": "hash maps",
+    "note": "Show key-value storage, iteration with pairs(), and nested tables by modeling a JSON-like configuration loader."
+  },
+  {
+    "n": 8,
+    "title": "Standard String Library",
+    "math": "regular expressions",
+    "note": "Explore string manipulation, patterns, gsub, and formatting to parse and reformat CSV data in plain Lua."
+  },
+  {
+    "n": 9,
+    "title": "Math & Random Libraries",
+    "math": "probability distributions",
+    "note": "Use math.*, random number generation, and basic statistics to simulate dice rolls in a Lua script executed via CLI."
+  },
+  {
+    "n": 10,
+    "title": "Metatables & Metamethods",
+    "math": "operator overloading",
+    "note": "Define __index, __add, __tostring, and other metamethods to create vector arithmetic objects in a pure Lua environment."
+  },
+  {
+    "n": 11,
+    "title": "Modules & Packages",
+    "math": "software modularity",
+    "note": "Explain require(), package.path, and how to publish a rock on LuaRocks by modularizing the earlier vector library."
+  },
+  {
+    "n": 12,
+    "title": "Error Handling",
+    "math": "exception theory",
+    "note": "Illustrate pcall, xpcall, and custom error types by building a resilient JSON parser that never crashes the host program."
+  },
+  {
+    "n": 13,
+    "title": "Coroutines for Concurrency",
+    "math": "cooperative scheduling",
+    "note": "Create producer-consumer coroutines, show yield/resume mechanics, and benchmark non-preemptive multitasking in vanilla Lua 5.4."
+  },
+  {
+    "n": 14,
+    "title": "Object-Oriented Patterns",
+    "math": "inheritance graphs",
+    "note": "Implement prototypes, classes, and single inheritance purely with tables and metatables while constructing an RPG entity system."
+  },
+  {
+    "n": 15,
+    "title": "File I/O and OS Library",
+    "math": "byte streams",
+    "note": "Read/write text and binary files, iterate directories, and manipulate environment variables to build a simple log rotator on the command line."
+  },
+  {
+    "n": 16,
+    "title": "Embedding Lua in C",
+    "math": "foreign function interfaces",
+    "note": "Compile Lua from source, initialize a Lua state in C, push values, and call Lua functions from C within a minimal Makefile project."
+  },
+  {
+    "n": 17,
+    "title": "Performance & Memory Tips",
+    "math": "big-O analysis",
+    "note": "Profile code with luac -l and collectgarbage, avoid table rehashing, and optimize algorithmic complexity in data-processing scripts."
+  },
+  {
+    "n": 18,
+    "title": "Debugging Techniques",
+    "math": "call stack analysis",
+    "note": "Use debug library, hooks, and mobdebug with ZeroBrane Studio IDE to step through coroutines and inspect closures."
+  },
+  {
+    "n": 19,
+    "title": "Game Scripting with LÖVE",
+    "math": "game loop mathematics",
+    "note": "Build a bouncing ball demo using Love2D framework, covering update/draw loops, delta time, and simple 2-D physics formulas."
+  },
+  {
+    "n": 20,
+    "title": "Roblox Lua Basics",
+    "math": "vector geometry",
+    "note": "Write a Roblox LocalScript to move a Part with user input, explaining Studio interface, services, and Vector3 operations."
+  },
+  {
+    "n": 21,
+    "title": "LuaJIT & FFI",
+    "math": "type casting",
+    "note": "Install LuaJIT, use ffi.cdef to call C standard library functions, and benchmark versus stock Lua on a Mandelbrot generator."
+  },
+  {
+    "n": 22,
+    "title": "Unit Testing with Busted",
+    "math": "assertion logic",
+    "note": "Install busted via LuaRocks, write describe-it blocks, mocks, and continuous integration setup for GitHub Actions."
+  },
+  {
+    "n": 23,
+    "title": "Concurrent Lua with Lanes",
+    "math": "parallel processes",
+    "note": "Use the Lanes library to spawn OS threads, pass data through linda channels, and measure speedup on CPU-bound tasks."
+  },
+  {
+    "n": 24,
+    "title": "Web Servers via OpenResty",
+    "math": "HTTP state machines",
+    "note": "Configure Nginx + Lua, write access-phase scripts, and build a JSON REST endpoint that interacts with Redis."
+  },
+  {
+    "n": 25,
+    "title": "Security & Sandboxing",
+    "math": "capability models",
+    "note": "Restrict global environment, remove dangerous libraries, and use setfenv/load with whitelists to safely run untrusted plugins."
+  }
+]
