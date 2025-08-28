@@ -1,0 +1,302 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to the C Language",
+    "math": "Algorithms, Logic",
+    "note": "Provide a high-level overview of the C programming language, its history, and its common use cases in systems programming. This lesson explains the role of a compiler (like GCC) in converting human-readable C code into machine-executable code within a standard command-line environment on operating systems like Linux, macOS, or Windows with MinGW."
+  },
+  {
+    "n": 2,
+    "title": "Your First Program: Hello, World!",
+    "math": "Function notation",
+    "note": "Guide through writing, compiling, and running a minimal 'Hello, World!' program. This lesson will explain the structure of the `main` function as the program's entry point, the use of the `#include <stdio.h>` directive to access standard library functions, and the `printf` function for printing formatted output to the console. The context is using a text editor and a command-line C compiler like GCC."
+  },
+  {
+    "n": 3,
+    "title": "Understanding the Compilation Process",
+    "math": "Process flow diagrams",
+    "note": "Detail the four stages of C compilation: preprocessing, compilation, assembly, and linking. Explain what happens at each stage and the intermediate files that can be generated. This will be demonstrated using command-line flags with a standard C compiler like GCC (e.g., `-E`, `-S`, `-c`)."
+  },
+  {
+    "n": 4,
+    "title": "Adding Comments to Code",
+    "math": "Notational conventions",
+    "note": "Teach the two types of comments in C: single-line `//` (from C99 onward) and multi-line `/* ... */`. Explain their purpose for code documentation and how the compiler ignores them. The context is writing readable C code compliant with the C99 standard or later, using any standard text editor."
+  },
+  {
+    "n": 5,
+    "title": "Variables and Data Types: Integers",
+    "math": "Integer arithmetic, Number systems (binary, decimal)",
+    "note": "Introduce the concept of variables for storing data in memory. This lesson focuses on integer data types: `char`, `short`, `int`, `long`, `long long`. It will cover their typical size ranges, the difference between `signed` and `unsigned` integers, and how to declare and initialize them within a C program compiled with a standard C11 compiler."
+  },
+  {
+    "n": 6,
+    "title": "Data Types: Floating-Point Numbers",
+    "math": "Floating-point arithmetic, Scientific notation",
+    "note": "Explain how to represent numbers with decimal points using floating-point data types: `float`, `double`, and `long double`. This lesson will cover their precision differences, how to declare them using literal notations (e.g., 3.14, 1.2e-5), and potential precision issues. The context is standard C11 programming on typical hardware."
+  },
+  {
+    "n": 7,
+    "title": "Constants and Literals",
+    "math": "Set theory (defining constant values)",
+    "note": "Demonstrate how to define named constants that cannot be changed during program execution. This lesson covers two methods: the `const` keyword for type-safe constants and the preprocessor `#define` directive for simple textual substitution. The context is writing robust and maintainable C code using a C11-compliant compiler."
+  },
+  {
+    "n": 8,
+    "title": "Basic Input with scanf",
+    "math": "Pattern matching",
+    "note": "Teach how to read formatted input from the user's keyboard into variables using the `scanf` function from `<stdio.h>`. This lesson covers format specifiers like `%d` for integers, `%f` for floats, and `%c` for characters, and highlights common pitfalls like handling the input buffer. The environment is an interactive console application compiled with GCC."
+  },
+  {
+    "n": 9,
+    "title": "Arithmetic Operators",
+    "math": "Arithmetic operations, Modulo arithmetic",
+    "note": "Cover the fundamental arithmetic operators in C: addition `+`, subtraction `-`, multiplication `*`, division `/`, and modulus `%`. The lesson will explain integer division versus floating-point division and the behavior of the modulus operator with integers. All examples will be within a standard C11 program."
+  },
+  {
+    "n": 10,
+    "title": "Relational and Equality Operators",
+    "math": "Boolean algebra, Relational algebra",
+    "note": "Explain how to compare values using relational operators (`>`, `<`, `>=`, `<=`) and equality operators (`==`, `!=`). The lesson will clarify that these expressions evaluate to an integer value of 1 (true) or 0 (false) in C. The context is building conditional logic in a standard C11 program."
+  },
+  {
+    "n": 11,
+    "title": "Logical Operators",
+    "math": "Boolean logic, Truth tables",
+    "note": "Teach how to combine conditional expressions using logical operators: AND (`&&`), OR (`||`), and NOT (`!`). The lesson will explain the concept of short-circuit evaluation for `&&` and `||`. The context is constructing complex conditions for control flow statements in a C11 program."
+  },
+  {
+    "n": 12,
+    "title": "Assignment and Bitwise Operators",
+    "math": "Binary arithmetic, Bit manipulation",
+    "note": "Cover the simple assignment operator `=`, compound assignment operators (`+=`, `*=`, etc.), and bitwise operators (`&`, `|`, `^`, `~`, `<<`, `>>`). The lesson will explain how bitwise operators work on the binary representation of integers. The context is performing low-level data manipulation in a C11 program."
+  },
+  {
+    "n": 13,
+    "title": "Operator Precedence and Associativity",
+    "math": "Order of operations",
+    "note": "Explain the rules of operator precedence and associativity that determine the evaluation order of complex expressions. A precedence table will be introduced, and the use of parentheses `()` to override the default order will be emphasized. The context is writing unambiguous and correct expressions in C11."
+  },
+  {
+    "n": 14,
+    "title": "The 'if' Statement",
+    "math": "Conditional logic",
+    "note": "Introduce the `if` statement for conditional execution of code. This lesson explains how a block of code is executed only if a given condition evaluates to true (a non-zero value). The syntax, including the use of curly braces for code blocks, will be covered within a standard C11 environment."
+  },
+  {
+    "n": 15,
+    "title": "The 'if-else' and 'else if' Statements",
+    "math": "Conditional logic, Set partitioning",
+    "note": "Expand on conditional logic by teaching the `if-else` construct for two-way branching and the `else if` ladder for multi-way branching. This allows a program to choose between multiple, mutually exclusive code paths. The context is building decision-making logic in a C11 program."
+  },
+  {
+    "n": 16,
+    "title": "The 'switch' Statement",
+    "math": "Case analysis",
+    "note": "Teach the `switch` statement as an alternative to long `if-else if` ladders for selecting a code path based on the value of an integer or character variable. The lesson will cover the syntax of `case` labels, the `break` statement to prevent fall-through, and the optional `default` case. This is demonstrated within a C11 program."
+  },
+  {
+    "n": 17,
+    "title": "The Ternary Conditional Operator",
+    "math": "Ternary functions",
+    "note": "Introduce the conditional operator (`? :`) as a concise, inline syntax for a simple `if-else` expression. The lesson will show how to use it to assign one of two values to a variable based on a condition. The context is writing compact conditional assignments in C11."
+  },
+  {
+    "n": 18,
+    "title": "The 'while' Loop",
+    "math": "Iteration, Pre-conditions",
+    "note": "Teach the `while` loop for repeating a block of code as long as a specified condition is true. This lesson explains its structure as a pre-test loop, where the condition is checked before each iteration. The context is implementing iterative algorithms in a standard C11 program."
+  },
+  {
+    "n": 19,
+    "title": "The 'do-while' Loop",
+    "math": "Iteration, Post-conditions",
+    "note": "Introduce the `do-while` loop, a post-test loop that guarantees the loop body is executed at least once. The condition is checked after each iteration. The lesson will compare its use cases with the `while` loop in a C11 programming context."
+  },
+  {
+    "n": 20,
+    "title": "The 'for' Loop",
+    "math": "Iteration, Series and sequences",
+    "note": "Teach the `for` loop, which is ideal for loops where the number of iterations is known beforehand. This lesson will break down its three components: initialization, condition, and post-iteration expression. The context is creating counter-controlled loops in a C11 program."
+  },
+  {
+    "n": 21,
+    "title": "Loop Control: 'break' and 'continue'",
+    "math": "Control theory",
+    "note": "Explain how to alter the normal flow of loops using the `break` statement to exit a loop prematurely and the `continue` statement to skip the rest of the current iteration and start the next one. These will be demonstrated within `for` and `while` loops in a C11 program."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Functions",
+    "math": "Function definition and invocation",
+    "note": "Introduce functions as reusable blocks of code that perform a specific task. This lesson covers function declaration (prototype), function definition (implementation), and function calling. The context is organizing C code into modular, manageable pieces within a C11 project."
+  },
+  {
+    "n": 23,
+    "title": "Function Parameters and Return Values",
+    "math": "Function domain and range",
+    "note": "Explain how to pass data to functions through parameters (arguments) and how functions can return a single value to the caller using the `return` statement. The lesson covers different data types for parameters and return values, including `void` for functions that return nothing. This is taught in the C11 standard."
+  },
+  {
+    "n": 24,
+    "title": "Variable Scope and Lifetime",
+    "math": "Set theory (scoping as nested sets)",
+    "note": "Teach the concepts of scope (where a variable is accessible) and lifetime (how long a variable exists in memory). This lesson differentiates between local variables (inside functions) and global variables (outside functions) and introduces block scope. The context is managing variables in a C11 program."
+  },
+  {
+    "n": 25,
+    "title": "Recursive Functions",
+    "math": "Recursion, Mathematical induction",
+    "note": "Introduce recursion, the technique of a function calling itself. The lesson explains the importance of a base case to prevent infinite recursion and demonstrates how to solve problems like factorials using a recursive approach. The context is implementing recursive algorithms in a C11 program."
+  },
+  {
+    "n": 26,
+    "title": "One-Dimensional Arrays",
+    "math": "Vectors, Indexed sets",
+    "note": "Teach how to declare, initialize, and access elements of a one-dimensional array, which is a collection of elements of the same data type stored in contiguous memory. This lesson covers zero-based indexing and iterating over arrays using loops. The context is data collection management in C11."
+  },
+  {
+    "n": 27,
+    "title": "Multidimensional Arrays",
+    "math": "Matrices, Tensors",
+    "note": "Explain how to create arrays of arrays, known as multidimensional arrays (e.g., 2D arrays for representing grids or matrices). The lesson will cover syntax for declaration, initialization, and accessing elements using multiple indices. The context is representing tabular data in a C11 program."
+  },
+  {
+    "n": 28,
+    "title": "Strings as Character Arrays",
+    "math": "Sequence theory",
+    "note": "Introduce strings in C as null-terminated arrays of characters. The lesson explains how the null character `\\0` marks the end of a string and how to initialize string literals. The context is basic text manipulation in C11, without using standard library functions yet."
+  },
+  {
+    "n": 29,
+    "title": "Using the String Library",
+    "math": "String operations",
+    "note": "Demonstrate common string manipulation functions from the `<string.h>` header file. This includes `strlen` (get length), `strcpy` (copy), `strcat` (concatenate), and `strcmp` (compare). The context is performing efficient and safe string operations in a C11 program."
+  },
+  {
+    "n": 30,
+    "title": "Introduction to Pointers",
+    "math": "Memory addressing as a mapping function",
+    "note": "Introduce pointers as variables that store memory addresses. This lesson covers the address-of operator `&` to get a variable's address and the dereference operator `*` to access the value at an address. The context is low-level memory concepts in a C11 environment."
+  },
+  {
+    "n": 31,
+    "title": "Pointers and Arrays",
+    "math": "Arithmetic progressions",
+    "note": "Explain the fundamental relationship between pointers and arrays in C. The lesson will demonstrate how an array name can be used as a pointer to its first element and introduce pointer arithmetic to navigate through array elements. The context is efficient array traversal in a C11 program."
+  },
+  {
+    "n": 32,
+    "title": "Passing Pointers to Functions",
+    "math": "Indirect referencing",
+    "note": "Teach how to pass pointers as arguments to functions. This allows a function to modify the original variables in the calling scope, simulating pass-by-reference behavior. The context is creating functions that can alter their input data in a C11 program."
+  },
+  {
+    "n": 33,
+    "title": "Dynamic Memory Allocation",
+    "math": "Resource management",
+    "note": "Introduce dynamic memory allocation, allowing programs to request memory from the heap at runtime. This lesson covers the `malloc`, `calloc`, and `realloc` functions for allocating memory, and the `free` function for deallocating it to prevent memory leaks. The context is managing memory for data structures of unknown size in C11 using the `<stdlib.h>` library."
+  },
+  {
+    "n": 34,
+    "title": "Function Pointers",
+    "math": "Higher-order functions",
+    "note": "Explain function pointers, which are variables that store the memory address of a function. The lesson will show how to declare, assign, and invoke functions through pointers, enabling techniques like callback functions. The context is advanced C11 programming for creating flexible and extensible code."
+  },
+  {
+    "n": 35,
+    "title": "Structures (struct)",
+    "math": "Tuple, Cartesian product of sets",
+    "note": "Teach how to define custom, composite data types using the `struct` keyword. Structures allow grouping of multiple variables of different data types into a single unit. This lesson covers defining a struct, declaring variables of that type, and accessing members using the dot operator (`.`). The context is data modeling in C11."
+  },
+  {
+    "n": 36,
+    "title": "Pointers to Structures",
+    "math": "Data structures, Graph theory",
+    "note": "Explain how to use pointers with structures. This lesson will cover declaring a pointer to a struct, allocating memory for it dynamically, and accessing its members using the arrow operator (`->`). The context is building dynamic data structures like linked lists in C11."
+  },
+  {
+    "n": 37,
+    "title": "Unions and Enumerations",
+    "math": "Set theory (unions), Ordinal numbers",
+    "note": "Introduce two other user-defined types. `union` allows storing different data types in the same memory location (but not at the same time). `enum` creates a set of named integer constants, improving code readability. The context is specialized data representation in C11."
+  },
+  {
+    "n": 38,
+    "title": "The `typedef` Keyword",
+    "math": "Aliasing, Equivalence relations",
+    "note": "Teach how to use `typedef` to create a new name (alias) for an existing data type. This is commonly used with complex types like structures and function pointers to simplify declarations and improve code clarity. The context is writing more readable and portable C11 code."
+  },
+  {
+    "n": 39,
+    "title": "Introduction to File I/O",
+    "math": "Input/output streams",
+    "note": "Introduce basic file handling in C. This lesson covers the `FILE` pointer, using `fopen` to open a file in different modes (read, write, append), and `fclose` to close it. Error checking for file operations will be emphasized. The context is interacting with the filesystem in a C11 program."
+  },
+  {
+    "n": 40,
+    "title": "Text File Operations",
+    "math": "Character stream processing",
+    "note": "Teach how to read from and write to text files. This lesson covers character-based functions (`fgetc`, `fputc`), line-based functions (`fgets`, `fputs`), and formatted I/O functions (`fscanf`, `fprintf`). The context is processing human-readable data files in C11."
+  },
+  {
+    "n": 41,
+    "title": "Binary File Operations",
+    "math": "Binary data representation",
+    "note": "Explain how to work with binary files for non-textual data. This lesson covers the `fread` and `fwrite` functions, which read and write blocks of raw data (like structs) directly from memory to a file. The context is efficient, non-portable data storage in C11."
+  },
+  {
+    "n": 42,
+    "title": "File Positioning",
+    "math": "Coordinate systems, Offsets",
+    "note": "Teach how to control the read/write position within a file. This lesson covers `fseek` to move to a specific byte location, `ftell` to get the current position, and `rewind` to reset the position to the beginning of the file. The context is random access file processing in C11."
+  },
+  {
+    "n": 43,
+    "title": "The C Preprocessor and `#define`",
+    "math": "Text substitution, Macro expansion",
+    "note": "Explain the role of the C preprocessor, which runs before the compiler. This lesson focuses on the `#define` directive for creating object-like macros (constants) and function-like macros with arguments. Pitfalls of macro expansion will be discussed. The context is code transformation prior to compilation in a C11 environment."
+  },
+  {
+    "n": 44,
+    "title": "Conditional Compilation",
+    "math": "Conditional logic",
+    "note": "Teach how to use preprocessor directives to conditionally include or exclude parts of the code from compilation. This lesson covers `#if`, `#else`, `#elif`, `#endif`, `#ifdef`, and `#ifndef`, which are commonly used for platform-specific code and debugging builds. The context is creating portable and configurable C11 code."
+  },
+  {
+    "n": 45,
+    "title": "Header Files and Include Guards",
+    "math": "Modular arithmetic, Idempotence",
+    "note": "Explain the best practices for organizing code into multiple files using header (`.h`) and source (`.c`) files. This lesson will teach how to create and use include guards (`#ifndef`/`#define`/`#endif`) to prevent problems from multiple inclusions of the same header file. The context is building modular, multi-file projects in C11."
+  },
+  {
+    "n": 46,
+    "title": "Storage Classes: `auto`, `extern`, `static`",
+    "math": "State management",
+    "note": "Detail C's storage class specifiers. `auto` is the default for local variables. `extern` declares a variable or function defined elsewhere. `static` limits the scope of a global variable or function to the file, or preserves the value of a local variable between function calls. The context is controlling the linkage and lifetime of variables in C11."
+  },
+  {
+    "n": 47,
+    "title": "Type Qualifiers: `const`, `volatile`",
+    "math": "Immutability, Asynchronous systems",
+    "note": "Explain the purpose of type qualifiers. `const` specifies that a variable cannot be modified. `volatile` tells the compiler that a variable's value may change unexpectedly (e.g., by hardware), preventing certain optimizations. The context is writing safe and correct code for systems programming in C11."
+  },
+  {
+    "n": 48,
+    "title": "Command-Line Arguments",
+    "math": "Argument parsing",
+    "note": "Teach how to make a C program accept arguments from the command line when it is executed. This lesson explains the `argc` (argument count) and `argv` (argument vector) parameters of the `main` function. The context is creating flexible command-line tools in a standard C11 environment."
+  },
+  {
+    "n": 49,
+    "title": "Error Handling with `errno` and `perror`",
+    "math": "Error propagation",
+    "note": "Introduce C's standard mechanism for error reporting in library functions. This lesson explains the global `errno` variable, which is set on error, and the `perror` and `strerror` functions for printing human-readable error messages. The context is writing robust C11 programs that handle system call failures gracefully."
+  },
+  {
+    "n": 50,
+    "title": "Building Projects with Makefiles",
+    "math": "Dependency graphs",
+    "note": "Provide an introduction to the `make` utility for automating the build process of multi-file C projects. This lesson will cover writing a basic Makefile with rules, targets, and dependencies to compile and link source files efficiently. The context is managing C projects in a typical UNIX-like development environment (Linux, macOS, or Windows with MinGW)."
+  }
+]
