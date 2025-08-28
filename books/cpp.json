@@ -1,0 +1,338 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to C++ and its Philosophy",
+    "math": "Logic and Formal Systems",
+    "note": "Provide a high-level overview of C++, its history, and its design philosophy emphasizing performance, control, and type safety. Discuss its common use cases like game development, systems programming, and finance. The context for this course is the C++20 standard, compiled with GCC 10+ or Clang 12+ on a POSIX-like system (Linux, macOS, WSL)."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up Your C++ Development Environment",
+    "math": "Graph Theory (dependency graphs)",
+    "note": "Guide through the installation of essential tools: the g++ compiler, Visual Studio Code (as the text editor), and the official Microsoft C/C++ extension. Verify the installation by running `g++ --version` in the terminal. The environment will be based on a POSIX-like system (Linux, macOS, WSL)."
+  },
+  {
+    "n": 3,
+    "title": "Your First Program: Hello, World!",
+    "math": "Formal Language Theory",
+    "note": "Write, compile, and run a minimal C++ program that prints 'Hello, World!' to the console. Explain the basic structure: the `#include <iostream>` directive, the `main` function as the entry point, the `std::cout` object for output, and the `return 0;` statement. Use the g++ compiler on the command line: `g++ main.cpp -o hello`."
+  },
+  {
+    "n": 4,
+    "title": "The Compilation and Linking Process",
+    "math": "Set Theory (union of object files)",
+    "note": "Explain the stages of building an executable from source code: preprocessing, compilation into assembly, assembly into object files, and linking object files into a final executable. Demonstrate this using `g++` command-line flags (`-E`, `-S`, `-c`) on a POSIX-like system."
+  },
+  {
+    "n": 5,
+    "title": "Variables and Fundamental Data Types",
+    "math": "Number Systems (binary representation)",
+    "note": "Introduce the concept of variables for storing data. Cover the fundamental data types: `int` for integers, `double` for floating-point numbers, `char` for single characters, and `bool` for true/false values. Demonstrate declaration and initialization. All examples use the C++20 standard."
+  },
+  {
+    "n": 6,
+    "title": "Constants and Literals",
+    "math": "Set Theory (immutable sets)",
+    "note": "Explain the importance of constants for writing safe and clear code. Introduce the `const` keyword to create runtime constants and the `constexpr` keyword for compile-time constants. Show examples of numeric (e.g., `42`, `3.14f`), character (`'A'`), and string (`\"text\"`) literals."
+  },
+  {
+    "n": 7,
+    "title": "Arithmetic and Assignment Operators",
+    "math": "Basic Arithmetic, Ring Theory",
+    "note": "Cover the standard arithmetic operators (`+`, `-`, `*`, `/`, `%`) and compound assignment operators (`+=`, `-=`, `*=`, `/=`, `%=`). Explain operator precedence and the use of parentheses to control the order of evaluation. Examples will be compiled with a C++20 compliant g++ compiler."
+  },
+  {
+    "n": 8,
+    "title": "Relational and Logical Operators",
+    "math": "Boolean Algebra",
+    "note": "Introduce operators for making comparisons and combining logical expressions. Cover relational operators (`==`, `!=`, `<`, `>`, `<=`, `>=`) and logical operators (`&&` AND, `||` OR, `!` NOT). Explain short-circuit evaluation for `&&` and `||`."
+  },
+{
+    "n": 9,
+    "title": "Bitwise Operators",
+    "math": "Binary Arithmetic, Boolean Algebra",
+    "note": "Explain how to manipulate data at the bit level using bitwise operators: AND (`&`), OR (`|`), XOR (`^`), NOT (`~`), left shift (`<<`), and right shift (`>>`). Provide use cases such as setting/clearing flags or efficient multiplication/division by powers of two."
+  },
+  {
+    "n": 10,
+    "title": "Basic Console Input with std::cin",
+    "math": "Information Theory (data streams)",
+    "note": "Teach how to read user input from the standard console using the `std::cin` object from the `<iostream>` library. Show how to read data into variables of different fundamental types and discuss potential pitfalls like input buffer issues."
+  },
+  {
+    "n": 11,
+    "title": "Conditional Logic with if-else Statements",
+    "math": "Predicate Logic",
+    "note": "Introduce the `if`, `else if`, and `else` statements to control the flow of execution based on conditions. Demonstrate how to construct simple and complex conditional blocks. All code will adhere to the C++20 standard."
+  },
+  {
+    "n": 12,
+    "title": "The Ternary Conditional Operator",
+    "math": "Logic (conditional expressions)",
+    "note": "Introduce the ternary operator (`condition ? expr_if_true : expr_if_false`) as a concise alternative to a simple if-else statement for returning a value. Discuss its use cases and readability trade-offs."
+  },
+  {
+    "n": 13,
+    "title": "The switch Statement",
+    "math": "Set Theory (partitioning a set)",
+    "note": "Explain how to use the `switch` statement for efficient multi-way branching based on the value of an integer or enum. Cover the syntax of `case`, `break`, and `default` labels. Emphasize the importance of `break` to prevent fall-through."
+  },
+  {
+    "n": 14,
+    "title": "The for Loop",
+    "math": "Series and Summations",
+    "note": "Introduce the C-style `for` loop for definite iteration (when the number of iterations is known beforehand). Break down its three components: initialization, condition, and increment/update. Provide examples of counting up and down."
+  },
+  {
+    "n": 15,
+    "title": "while and do-while Loops",
+    "math": "Recursion Theory, Iterative Methods",
+    "note": "Cover indefinite iteration using `while` loops (which check the condition before the loop body) and `do-while` loops (which check the condition after the loop body, guaranteeing at least one execution). Contrast their use cases."
+  },
+  {
+    "n": 16,
+    "title": "Range-Based for Loops",
+    "math": "Set Theory (iteration over elements)",
+    "note": "Introduce the modern C++ range-based `for` loop for iterating over all elements of a container (like an array or vector) without manual index management. Demonstrate its simple and less error-prone syntax. All examples use C++20."
+  },
+  {
+    "n": 17,
+    "title": "Loop Control: break and continue",
+    "math": "Control Theory",
+    "note": "Explain how to alter the normal flow of a loop. Use `break` to exit a loop immediately and `continue` to skip the current iteration and proceed to the next one. Provide examples within `for` and `while` loops."
+  },
+  {
+    "n": 18,
+    "title": "Defining and Calling Functions",
+    "math": "Mathematical Functions (domain, range)",
+    "note": "Teach how to modularize code by creating functions. Cover the syntax for a function definition, including the return type, name, and parameter list. Demonstrate how to call a function and use its return value."
+  },
+  {
+    "n": 19,
+    "title": "Function Parameters: Pass-by-Value",
+    "math": "Algebra (variables and substitution)",
+    "note": "Explain the default parameter-passing mechanism in C++: pass-by-value. Demonstrate that when an argument is passed by value, the function receives a copy, and any modifications inside the function do not affect the original argument."
+  },
+  {
+    "n": 20,
+    "title": "Function Parameters: Pass-by-Reference",
+    "math": "Set Theory (mappings and relations)",
+    "note": "Introduce pass-by-reference using the `&` symbol. Explain that this allows a function to directly access and modify the original argument, avoiding a potentially expensive copy. Discuss using `const` references for efficiency without modification."
+  },
+  {
+    "n": 21,
+    "title": "Function Overloading",
+    "math": "Polymorphism (ad-hoc)",
+    "note": "Teach how to define multiple functions with the same name but different parameter lists (either different types or a different number of parameters). Explain how the compiler resolves which function to call based on the arguments provided."
+  },
+  {
+    "n": 22,
+    "title": "Understanding Memory: Stack and Heap",
+    "math": "Data Structures (stacks, heaps)",
+    "note": "Provide a conceptual model of a process's memory layout. Differentiate between the stack (for automatic, local variables with a fixed lifetime) and the heap (for dynamic memory that the programmer must manage). This is a platform-agnostic, conceptual lesson."
+  },
+  {
+    "n": 23,
+    "title": "Pointers: Address-of and Dereference",
+    "math": "Discrete Mathematics (references, addresses)",
+    "note": "Introduce pointers as variables that store memory addresses. Explain the address-of operator (`&`) to get a variable's address and the dereference operator (`*`) to access the value at a stored address. Initialize pointers with `nullptr`."
+  },
+  {
+    "n": 24,
+    "title": "Dynamic Memory with new and delete",
+    "math": "Resource Management",
+    "note": "Teach how to allocate memory on the heap at runtime using the `new` keyword and how to deallocate it using the `delete` keyword to prevent memory leaks. Cover both single objects (`delete`) and arrays of objects (`delete[]`)."
+  },
+  {
+    "n": 25,
+    "title": "C-Style Arrays",
+    "math": "Linear Algebra (vectors and matrices)",
+    "note": "Introduce C-style, fixed-size arrays as contiguous blocks of memory holding elements of the same type. Explain their declaration syntax, index-based access, and their tendency to decay into pointers."
+  },
+  {
+    "n": 26,
+    "title": "References vs. Pointers",
+    "math": "Logic (aliases vs. indirections)",
+    "note": "Compare and contrast references (`&`) and pointers (`*`). Explain that references are aliases for existing variables that cannot be null and cannot be reseated, while pointers are separate variables holding an address that can be null or changed."
+  },
+  {
+    "n": 27,
+    "title": "User-Defined Types with struct",
+    "math": "Set Theory (Cartesian products)",
+    "note": "Teach how to group related variables into a single unit using the `struct` keyword. Demonstrate how to define a `struct`, create instances (objects) of it, and access its members using the dot operator (`.`)."
+  },
+  {
+    "n": 28,
+    "title": "Introduction to std::string",
+    "math": "Formal Language Theory (strings)",
+    "note": "Introduce `std::string` from the `<string>` header as the modern, safe, and powerful way to handle text in C++. Demonstrate its basic usage, including initialization, concatenation with `+`, and getting its length with the `.length()` method."
+  },
+  {
+    "n": 29,
+    "title": "Introduction to std::vector",
+    "math": "Sequence and Series",
+    "note": "Introduce `std::vector` from the `<vector>` header as a dynamic, automatically resizing array. Show how to create a vector, add elements with `.push_back()`, access elements with `[]` or `.at()`, and get its size with `.size()`."
+  },
+  {
+    "n": 30,
+    "title": "Iterators for STL Containers",
+    "math": "Discrete Mathematics (graph traversal)",
+    "note": "Explain iterators as a generalization of pointers that allow traversal of STL containers. Demonstrate how to get iterators using `.begin()` and `.end()` on a `std::vector` and use them in a traditional `for` loop to access elements."
+  },
+  {
+    "n": 31,
+    "title": "Introduction to STL Algorithms",
+    "math": "Algorithm Analysis (complexity)",
+    "note": "Showcase the power of the `<algorithm>` header by demonstrating a few common algorithms like `std::sort`, `std::find`, and `std::count`. Explain how they operate on ranges defined by pairs of iterators."
+  },
+  {
+    "n": 32,
+    "title": "From struct to class",
+    "math": "Abstract Algebra (structures with operations)",
+    "note": "Transition from C-style data structures to object-oriented programming. Explain that a `class` in C++ is nearly identical to a `struct`, with the key difference being the default member access: `private` for `class`, `public` for `struct`."
+  },
+  {
+    "n": 33,
+    "title": "Encapsulation: public and private",
+    "math": "Information Hiding Principles",
+    "note": "Introduce the core OOP principle of encapsulation. Use the `public` and `private` access specifiers to control which members of a class are accessible from the outside, separating interface from implementation."
+  },
+  {
+    "n": 34,
+    "title": "Constructors for Object Initialization",
+    "math": "Logic (axioms of object state)",
+    "note": "Teach how to define constructors, special member functions that are called automatically when an object of a class is created. Cover the default constructor (no arguments) and parameterized constructors for custom initialization."
+  },
+  {
+    "n": 35,
+    "title": "Destructors for Object Cleanup",
+    "math": "Resource Management",
+    "note": "Introduce destructors, special member functions (e.g., `~MyClass()`) that are called automatically when an object's lifetime ends. Explain their use for releasing resources like dynamically allocated memory."
+  },
+  {
+    "n": 36,
+    "title": "The `this` Pointer",
+    "math": "Set Theory (self-reference)",
+    "note": "Explain that within a non-static member function, the `this` keyword is a pointer to the current object instance. Demonstrate its use for disambiguating between member variables and parameters with the same name."
+  },
+  {
+    "n": 37,
+    "title": "Static Members",
+    "math": "Set Theory (class-level vs. instance-level properties)",
+    "note": "Introduce `static` member variables and functions. Explain that static members belong to the class itself, not to any single object instance. All objects of the class share the same static member variable."
+  },
+  {
+    "n": 38,
+    "title": "Inheritance: Base and Derived Classes",
+    "math": "Set Theory (subsets and supersets)",
+    "note": "Introduce the OOP principle of inheritance, which allows a new class (derived) to be based on an existing class (base). Explain the `class Derived : public Base` syntax and how the derived class inherits members from the base."
+  },
+  {
+    "n": 39,
+    "title": "Polymorphism with virtual Functions",
+    "math": "Type Theory (subtyping)",
+    "note": "Introduce runtime polymorphism. Explain that marking a base class function with the `virtual` keyword allows derived classes to override it. When called through a base class pointer or reference, the correct derived class version will be executed."
+  },
+  {
+    "n": 40,
+    "title": "Abstract Classes and Pure Virtual Functions",
+    "math": "Abstract Algebra (abstract structures)",
+    "note": "Teach how to create an interface by defining an abstract class. This is done by declaring at least one pure virtual function (e.g., `virtual void func() = 0;`). Abstract classes cannot be instantiated and must be implemented by derived classes."
+  },
+  {
+    "n": 41,
+    "title": "Operator Overloading",
+    "math": "Abstract Algebra (operations on user-defined sets)",
+    "note": "Explain how to define custom behavior for C++ operators when used with objects of a class. Demonstrate by overloading an arithmetic operator like `+` for a custom math vector class."
+  },
+  {
+    "n": 42,
+    "title": "The Rule of Three/Five",
+    "math": "Resource Management",
+    "note": "Explain the copy control rule. If you manually define a destructor, copy constructor, or copy assignment operator (Rule of Three), you should consider defining all three. In modern C++, this extends to the move constructor and move assignment operator (Rule of Five)."
+  },
+  {
+    "n": 43,
+    "title": "Type Inference with auto",
+    "math": "Logic (type inference systems)",
+    "note": "Introduce the `auto` keyword from modern C++ for automatic type deduction. Explain that it tells the compiler to deduce the type of a variable from its initializer, reducing verbosity and improving code readability."
+  },
+  {
+    "n": 44,
+    "title": "Lambda Expressions",
+    "math": "Lambda Calculus",
+    "note": "Teach the syntax for creating anonymous, inline functions using lambda expressions. Cover the basic syntax `[capture](params){body}` and demonstrate their common use with STL algorithms like `std::for_each` or `std::find_if`."
+  },
+  {
+    "n": 45,
+    "title": "Move Semantics and Rvalue References",
+    "math": "Resource Management",
+    "note": "Introduce rvalue references (`&&`) and `std::move`. Explain how they enable move semantics, an optimization that transfers ownership of resources (like heap memory) from one object to another instead of performing a deep copy."
+  },
+  {
+    "n": 46,
+    "title": "Smart Pointers: std::unique_ptr",
+    "math": "Resource Management (RAII)",
+    "note": "Introduce `std::unique_ptr` from the `<memory>` header as a smart pointer that provides exclusive ownership of a dynamically allocated object. It automatically calls `delete` when it goes out of scope, preventing memory leaks."
+  },
+  {
+    "n": 47,
+    "title": "Smart Pointers: std::shared_ptr",
+    "math": "Graph Theory (reference counting)",
+    "note": "Introduce `std::shared_ptr` as a smart pointer for managing shared ownership of a resource. Explain how it uses a reference count to keep the object alive until the last `shared_ptr` pointing to it is destroyed."
+  },
+  {
+    "n": 48,
+    "title": "Function Templates",
+    "math": "Universal Algebra",
+    "note": "Introduce generic programming with function templates. Teach the `template <typename T>` syntax to write a single function that can operate on arguments of various data types, letting the compiler generate specific versions as needed."
+  },
+  {
+    "n": 49,
+    "title": "Class Templates",
+    "math": "Category Theory (functors)",
+    "note": "Extend the concept of templates to classes. Show how to create a generic class, like a `Stack` or `Pair`, that can store data of any type. Demonstrate the instantiation of a class template, e.g., `Stack<int>`."
+  },
+  {
+    "n": 50,
+    "title": "Exception Handling: try, catch, throw",
+    "math": "Control Theory (handling exceptional states)",
+    "note": "Introduce C++'s mechanism for handling runtime errors. Explain how to `throw` an exception when an error occurs, and how to use a `try`/`catch` block to handle that exception and prevent the program from crashing."
+  },
+  {
+    "n": 51,
+    "title": "File I/O with fstream",
+    "math": "Information Theory (data streams)",
+    "note": "Teach how to read from and write to files using the `<fstream>` library. Cover `std::ofstream` for writing to files, `std::ifstream` for reading from files, and how to check if a file was opened successfully."
+  },
+  {
+    "n": 52,
+    "title": "Namespaces for Code Organization",
+    "math": "Set Theory (partitioning of identifiers)",
+    "note": "Explain how namespaces are used to group related code and prevent naming conflicts in large projects. Cover how to define a namespace, how to access its members with the `::` operator, and the use of the `using namespace` directive."
+  },
+  {
+    "n": 53,
+    "title": "Explicit Type Casting",
+    "math": "Type Theory (type conversion)",
+    "note": "Introduce the four C++-style casts. Explain `static_cast` for safe, compile-time conversions, `dynamic_cast` for safe downcasting in polymorphic hierarchies, `const_cast` to modify constness, and `reinterpret_cast` for low-level reinterpretation."
+  },
+  {
+    "n": 54,
+    "title": "The Preprocessor",
+    "math": "Formal Language Theory (macro expansion)",
+    "note": "Explain the role of the C++ preprocessor. Cover the most common directives: `#include` for including header files, `#define` for creating macros (and why they should often be avoided), and `#ifndef`/`#define`/`#endif` for header guards."
+  },
+  {
+    "n": 55,
+    "title": "Basic Concurrency with std::thread",
+    "math": "Concurrency Theory (process algebra)",
+    "note": "Introduce multi-threading using `std::thread` from the `<thread>` header. Show how to create a new thread to execute a function concurrently and how to use `.join()` to wait for the thread to finish its execution. This uses the C++20 standard library on a POSIX system."
+  },
+  {
+    "n": 56,
+    "title": "Introduction to Build Systems: CMake",
+    "math": "Graph Theory (dependency management)",
+    "note": "Explain why build system generators are necessary for projects with multiple files. Provide a minimal `CMakeLists.txt` file to define an executable, find libraries, and generate build files (e.g., Makefiles) for a cross-platform C++20 project."
+  }
+]
