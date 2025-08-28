@@ -19,9 +19,14 @@
     { "name": "Network+ Tour", "file": "./books/networkplus.json" },
     { "name": "Qt 5.15 C++ Tour", "file": "./books/Qt5_15.json" },
     { "name": "LPIC-1 Tour", "file": "./books/LPIC1.json" },
-    { "name": "Arch Linux Tour", "file": "./books/archlinux.json" }
+    { "name": "Arch Linux Tour", "file": "./books/archlinux.json" },
+    { "name": "Nix Tour", "file": "./books/nix.json" },
+    { "name": "Git Tour", "file": "./books/git.json" },
+    { "name": "Docker Tour", "file": "./books/docker.json" },
+    { "name": "OpenGL C/C++ Tour", "file": "./books/opengl.json" }
   ]
 }
+
 
 
 
