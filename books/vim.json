@@ -1,0 +1,302 @@
+[
+  {
+    "n": 1,
+    "title": "Set Up and Launch Vim",
+    "math": "Set theory, graph traversal of file paths",
+    "note": "Install Vim 9.1 using a package manager (macOS: brew install vim; Ubuntu/Debian: sudo apt-get install vim; Windows: winget install Vim or use WSL), verify with vim --version, and launch via vim filename from a terminal emulator (iTerm2 on macOS, Windows Terminal with WSL, or any Linux terminal). Demonstrate gVim as an optional GUI. Cover command-line flags: -u NONE, -u ~/.vimrc, -N (nocompatible), and +{cmd} to run an Ex command on startup. Explain where runtime files and user config (~/.vimrc, ~/vimfiles on Windows) live. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 2,
+    "title": "Modal Editing Mindset",
+    "math": "Modal logic, state machines",
+    "note": "Explain Vim’s modes: Normal (navigation/commands), Insert (text entry), Visual (selections), Select (GUI-like), Command-line/Ex (:), Replace (R), and Terminal-Job mode (if compiled). Practice switching: i I a A o O, Esc/Ctrl-[, v V Ctrl-v, : to enter Ex, and ZZ/ZQ to exit. Emphasize that keys act as verbs in Normal mode and as characters in Insert mode. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 3,
+    "title": "Move With Precision",
+    "math": "Coordinate systems, graph traversal",
+    "note": "Teach basic motions in Normal mode: h j k l, w W b B e E (word/WORD), 0 ^ $ (line), gg G (file), H M L (screen), Ctrl-f/Ctrl-b (page), Ctrl-d/Ctrl-u (half-page), f/F/t/T + {char}, ; and , to repeat, and % to match pairs. Show counts like 5j and 3w. Demonstrate navigation without arrow keys. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 4,
+    "title": "Open, Save, and Quit",
+    "math": "Set theory of buffers, file I/O",
+    "note": "Open files via vim myfile.txt, :e {path}, and :edit %. Save with :w, :w newname, and write-all with :wa. Quit with :q, :q!, :wq, ZZ, and handle swapfile prompts. Show :pwd, :cd, :lcd for directories and netrw path completion. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 5,
+    "title": "Insert and Replace Text",
+    "math": "String manipulation, finite-state input",
+    "note": "Practice entering text: i I a A o O, and append vs insert semantics. Use r to replace a single character and R for overtype. Show Ctrl-w/Ctrl-u in Insert to delete words/line to start. Cover backspace behavior with set backspace=indent,eol,start. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 6,
+    "title": "Delete, Change, and Yank",
+    "math": "Monoids (operator composition), string operations",
+    "note": "Introduce operators: d (delete), c (change), y (yank), with motions: dw, de, d$, dd, cw, ciw, C, yy, y$, and p/P to paste. Explain that c enters Insert mode after acting. Demonstrate counts: 3dd, 2cw. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 7,
+    "title": "Undo, Redo, and Repeat",
+    "math": "Tree structures (undo tree), idempotence",
+    "note": "Show u (undo), Ctrl-r (redo), and . (repeat last change). Explain that . repeats the last change composed from operator+motion or Insert session, and counts modify repetition (3.). Introduce g- and g+ to traverse the undo tree by time when available. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 8,
+    "title": "Counts, Ranges, and Dot Power",
+    "math": "Combinatorics of repetitions, arithmetic sequences",
+    "note": "Demonstrate using counts to scale motions and operators: 7w, 5x, 10dd, 3>>. Combine with . to accelerate repetitive edits: do once, then use . with counts. Include :{range}cmd basics like :3,10s/foo/bar/g and :% for the whole file. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 9,
+    "title": "Visual Mode Mastery",
+    "math": "Intervals, set selection",
+    "note": "Teach v (characterwise), V (linewise), and Ctrl-v (blockwise). Perform operations on selections: d, c, y, >, <, =. In blockwise, insert text across columns with I/A after selecting and pressing Esc to apply. Use o to flip selection ends and gv to reselect. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 10,
+    "title": "Search Navigation",
+    "math": "String matching, automata",
+    "note": "Use /pattern and ?pattern with n/N to move through matches. Explain magic settings (verymagic \\\\v, nomagic) briefly. Show * and # on words, g* for partial matches, and hlsearch/incsearch options for interactive feedback. Teach set ignorecase smartcase. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 11,
+    "title": "Substitute and Replace",
+    "math": "Regular languages, substitution systems",
+    "note": "Teach :s/foo/bar/ to replace in the current line, :%s/foo/bar/g for the entire file, g and c flags (global, confirm), and & to repeat the last substitute. Show ranges like :3,20s and visually selected ranges using :'<,'>s. Explain escaping slashes and using different delimiters. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 12,
+    "title": "Regex Essentials in Vim",
+    "math": "Finite automata, regular expressions",
+    "note": "Explain Vim regex tokens: . \\w \\d \\s, character classes [abc] and ranges [a-z], anchors ^ $, groups \\( \\), alternation \\|, quantifiers \\? \\* \\+ \\{m,n}. Demonstrate examples within /search and :substitute. Teach very magic (\\v) mode to simplify patterns. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 13,
+    "title": "Advanced Regex in Vim",
+    "math": "Backreferences, greedy vs lazy quantifiers",
+    "note": "Teach capturing groups and backreferences \\1, non-greedy atoms via \\{-}, look for word boundaries \\< and \\>, and conditionals like \\%V (in Visual area). Show substitution with expressions using :s//\\=submatch(1)/ and case-changing \\U \\L \\E. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 14,
+    "title": "Text Objects",
+    "math": "Context-free grouping, nested intervals",
+    "note": "Introduce text objects with operators: diw, ciw, daw; quotes di\", parentheses di), brackets, tags dat (if matchit plugin enabled). Cover a vs i semantics and apply with y/d/c across common delimiters and paragraphs (ip, ap). Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 15,
+    "title": "Marks and Jumps",
+    "math": "Graph nodes and edges, bookmarks",
+    "note": "Set marks with m{a-zA-Z}, jump with '{mark} and `{mark}, and global marks via uppercase letters across files. Use '' to return to previous jump, Ctrl-o/Ctrl-i to move backward/forward in jump list, and :marks to list. Demonstrate m. and g; for change list navigation. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 16,
+    "title": "Registers and Clipboard",
+    "math": "Stacks, named memory cells",
+    "note": "Explain registers: unnamed \", numbered 0-9, small -, named a-z, read-only %, #, :, /, and system clipboard + and *. Teach using \"{reg} with y/p/d/c, viewing with :registers, and pasting from system clipboard via \"+p (ensure +clipboard build). Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 17,
+    "title": "Macros and Automation",
+    "math": "Recurrence, finite-state transducers",
+    "note": "Record macros with q{register}, stop with q, play with @{register} and @@, and combine with counts. Use :normal to apply Normal-mode commands across ranges and :argdo, :bufdo, :windo for batch operations. Warn about idempotence and test on copies. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 18,
+    "title": "Buffers, Windows, and Tabs",
+    "math": "Set partitions, 2D tiling",
+    "note": "Differentiate buffers (in-memory files), windows (views), and tab pages (window layouts). Manage buffers with :ls, :bnext/:bprev, :bdelete. Split windows via :split, :vsplit, Ctrl-w commands, resizing, and moving. Use :tabnew, :tabnext, gt/gT for tabs. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 19,
+    "title": "Working With Multiple Files",
+    "math": "Sequences, iteration over sets",
+    "note": "Open file lists with vim *.py, navigate args with :args, :next/:prev, :argdo for batch edits, and :grep or :vimgrep to populate quickfix. Use :copen, :cnext/:cprev to jump between results. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 20,
+    "title": "File Explorer with netrw",
+    "math": "Tree traversal, graph edges",
+    "note": "Use :Ex or :e . to open netrw, navigate directories, create, rename, delete files, and open in splits (s, v). Show remote editing over scp/sftp paths like :e scp://user@host//path/file. Configure basic options: let g:netrw_banner=0 and g:netrw_liststyle=3. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 21,
+    "title": "Folding Strategies",
+    "math": "Hierarchies, tree structures",
+    "note": "Explain fold methods: manual, indent, syntax, marker. Demonstrate zf, zo/zc, zO/zC, za, zM/zR, and :set foldmethod=indent or marker with custom markers. Show saving folds with :mkview/:loadview. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 22,
+    "title": "Indentation and Formatting",
+    "math": "Grammar rules, pretty printing",
+    "note": "Configure indent: :set autoindent smartindent (or filetype plugin indent on). Reindent with =, =i{, gg=G. Use :set expandtab shiftwidth=4 tabstop=4 softtabstop=4. Run external formatters via gq motion and textwidth. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 23,
+    "title": "Spaces, Tabs, and Alignment",
+    "math": "Number systems, columnar arithmetic",
+    "note": "Display tabs and trailing spaces with :set list listchars=tab:»·,trail:·. Convert tabs↔spaces with :set expandtab/noexpandtab and :retab. Align columns using block Visual mode (Ctrl-v) with I/A and macros, or :substitute with groups. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 24,
+    "title": "Spell Check and Case",
+    "math": "Edit distance, language models (basic)",
+    "note": "Enable spell with :set spell spelllang=en_us, navigate ]s/[s, add words to dictionary with zg, mark as wrong with zw, and view suggestions with z=. Adjust case with ~, gu/gU/g~ motions and in :s using \\L, \\U. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 25,
+    "title": "Quickfix and Location Lists",
+    "math": "Queues, indexed lists",
+    "note": "Populate quickfix using :make, :grep, or :vimgrep /pat/ **/*.ext. Open with :copen, navigate :cnext/:cprev, and use :lopen for window-local lists. Show :compiler to load project-specific compiler settings. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 26,
+    "title": "Build and Compile With :make",
+    "math": "Automata pipelines, error parsing",
+    "note": "Configure :makeprg and errorformat for project builds (e.g., :set makeprg=make). Run :make to capture errors in quickfix. Demonstrate jumping to errors and correcting. Integrate with arguments and :copen for workflow. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 27,
+    "title": "Tags and Code Navigation",
+    "math": "Symbol tables, graph traversal",
+    "note": "Generate ctags with universal-ctags externally and set tags=./tags;, then use Ctrl-] to jump to definitions, Ctrl-t to pop back, :ts to list matches, and g] for a choice menu. Explain :tag and :tselect. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 28,
+    "title": "Search Project Files",
+    "math": "Set operations, pattern matching",
+    "note": "Use :vimgrep /pattern/ **/* and :grep with system tools (ripgrep/grep/ack). Configure :set grepprg=rg\\ --vimgrep\\ --smart-case. Show :copen to review results and :cn/:cp to navigate. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 29,
+    "title": "Diff and Merge",
+    "math": "Sequence alignment, Myers diff algorithm",
+    "note": "Launch vim -d file1 file2 or :diffsplit. Teach ]c/[c to move between changes, dp/do to put/get hunks, :diffupdate, and fold unchanged text. Use :Gdiffsplit if using Git plugin later, but demonstrate built-in first. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 30,
+    "title": "Terminal and External Commands",
+    "math": "Process control, I/O streams",
+    "note": "Run shell commands with :!cmd and read/write filters via :r !cmd and :w !cmd. If +terminal is available, open a terminal with :terminal, switch modes (i to enter Job mode, Ctrl-w N to Normal), and send commands. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 31,
+    "title": "Completion Essentials",
+    "math": "Trie structures, auto-completion heuristics",
+    "note": "Use Insert-mode completion: Ctrl-n/Ctrl-p (keywords), Ctrl-x Ctrl-f (files), Ctrl-x Ctrl-o (omni if available), Ctrl-x Ctrl-l (whole lines). Configure dictionary/thesaurus completion via :set dictionary= and thesaurus=. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 32,
+    "title": "Abbreviations and Snippets Basics",
+    "math": "Text substitution systems",
+    "note": "Create Insert-mode abbreviations with :iabbrev, remove with :iunabbrev, and discuss use for common boilerplate. If snippets are desired without external plugins, demonstrate simple templates using abbreviations and macros. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 33,
+    "title": "System Clipboard Mastery",
+    "math": "Memory-mapped buffers",
+    "note": "Verify +clipboard in vim --version. Use \"+y and \"+p to interact with the OS clipboard, set clipboard=unnamed or unnamedplus for default behavior, and handle WSL interop (clip.exe on Windows, xclip/xsel on Linux). Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 34,
+    "title": "Configuration and .vimrc",
+    "math": "Key-value mappings, configuration graphs",
+    "note": "Create ~/.vimrc (~/vimfiles/_vimrc on Windows). Set sensible defaults: set nocompatible, filetype plugin indent on, syntax on, number, relativenumber, mouse=a. Explain runtimepath and how to source config with :source ~/.vimrc. Keep settings minimal and documented. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 35,
+    "title": "Keymaps and Leader Keys",
+    "math": "Function composition, mapping tables",
+    "note": "Define mappings with :nmap/:nnoremap, :imap/:inoremap, :vmap/:vnoremap, avoiding recursion with nore variants. Set a leader (let mapleader=\" \"). Show examples: nnoremap <leader>w :w<CR>, xnoremap <leader>p \"_dP. Explain buffer-local maps with :nnoremap <buffer>. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 36,
+    "title": "Autocommands and Events",
+    "math": "Event-driven programming, finite automata",
+    "note": "Create autocommands with :autocmd FileType python setlocal expandtab and use augroups to manage them: augroup MyAuto | autocmd! | autocmd BufWritePre * %s/\\s\\+$//e | augroup END. List events like BufEnter, BufWritePre, InsertLeave. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 37,
+    "title": "Functions and Variables",
+    "math": "Functional abstraction, scopes",
+    "note": "Write simple Vimscript functions: function! Trim() | %s/\\s\\+$//e | endfunction and map :call Trim(). Explain variable scopes: g:, b:, w:, t:, s:, l:, a:. Use :help E121 for undefined variable errors. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 38,
+    "title": "Scripting and Vim9 Script",
+    "math": "Typed languages, modules",
+    "note": "Introduce Vim9 script style (vim9script) for faster, typed scripts. Create a plugin file in ~/.vim/pack/mylearn/start/myplugin/plugin/main.vim using vim9script, def functions, import/export, and use :profile to compare legacy vs Vim9 performance. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 39,
+    "title": "Native Packages and Plugins",
+    "math": "Dependency graphs, modularization",
+    "note": "Use native packages: ~/.vim/pack/{name}/start/{plugin} for auto-load and .../opt/{plugin} for on-demand with :packadd. Demonstrate installing a lightweight plugin by git clone. Explain runtimepath ordering and how to disable plugins. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 40,
+    "title": "Plugin Manager: vim-plug",
+    "math": "Directed acyclic graphs, version pinning",
+    "note": "Install vim-plug by placing plug.vim in autoload. In ~/.vimrc, call plug#begin('~/.vim/plugged') ... Plug 'tpope/vim-surround' ... call plug#end(). Run :PlugInstall, :PlugUpdate, and pin versions with { 'tag': 'v2.0' }. Emphasize minimalism and profiling. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 41,
+    "title": "Git Integration with Fugitive",
+    "math": "Graph theory (commits), diffs",
+    "note": "Install tpope/vim-fugitive (via packages or vim-plug). Use :Gstatus, - to stage, cc to commit, :Gdiffsplit to review changes, :Gbrowse (if configured), and :Gblame for inline blame. Teach resolving merges with diff mode hunks. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 42,
+    "title": "Linting and Formatting Workflows",
+    "math": "Pipelines, error streams",
+    "note": "Demonstrate a plugin-free approach using :make and external formatters via :%! (e.g., :%!black - for Python). Optionally wire :autocmd BufWritePre to run formatters. Explain pros/cons vs plugin linters. Keep commands portable. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 43,
+    "title": "Statusline and UI Tweaks",
+    "math": "Concatenation, state display",
+    "note": "Customize statusline with :set statusline=%f\\ %y\\ %m\\ %r\\ %=\\ %l:%c\\ %p%% and enable laststatus=2 or 3. Configure ruler, signcolumn, color scheme, and termguicolors if terminal supports truecolor. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 44,
+    "title": "Sessions and Persistence",
+    "math": "Serialization, state restoration",
+    "note": "Save and load sessions with :mksession! and vim -S Session.vim. Configure backups, swap, and persistent undo: set undofile undodir=~/.vim/undo, backupdir and directory for swap. Recover from crashes using swapfile prompts. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 45,
+    "title": "Encoding and Line Endings",
+    "math": "Information theory, character encoding",
+    "note": "Explain encoding=utf-8, fileencoding, and fileformat (unix/dos/mac). Convert files with :set ff=unix and :w. Show viewing with :set list to spot CRLF (^M). Discuss BOMs and how to detect with :set bomb/nobomb. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 46,
+    "title": "Whitespace, Trailing, and Cleanup",
+    "math": "Regular expressions, set operations",
+    "note": "Clean trailing whitespace with :%s/\\s\\+$//e and an autocommand on BufWritePre. Normalize indentation with = and :retab. Verify with :set list and listchars. Provide safe patterns and undo strategy. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 47,
+    "title": "Remote Editing Over SSH",
+    "math": "Graph traversal of networks",
+    "note": "Use netrw scp/sftp to edit remote files: :e scp://user@host//path/file. Configure ssh keys for seamless access. For large projects, mount via sshfs or run Vim inside remote shell (ssh host then launch vim). Explain latency considerations. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 48,
+    "title": "gVim and Mouse Usage",
+    "math": "Human-computer interaction, event handling",
+    "note": "Demonstrate gVim features: GUI menus, mouse selections, system clipboard integration by default, and font settings. In terminal Vim, enable mouse=a for selection and resizing splits; explain differences from GUI behavior. Context: Vim 9.1 in gVim and terminal on Linux/macOS/Windows."
+  },
+  {
+    "n": 49,
+    "title": "Help System and Discovery",
+    "math": "Information retrieval, graph traversal",
+    "note": "Use :help {topic}, CTRL-] to follow help tags, CTRL-t to jump back, :helpgrep to search docs, :h index for overview, and :h key-notation. Show :verbose set {option}? and :scriptnames to discover config sources. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  },
+  {
+    "n": 50,
+    "title": "Design Your Editing Workflow",
+    "math": "Optimization, cost functions",
+    "note": "Define a sustainable workflow: choose a small set of motions, text objects, and operators; set a leader and a handful of mappings; configure statusline and persistence; practice with macros and quickfix for batch changes; and profile startup to keep Vim fast. Deliver a sample minimal ~/.vimrc and a checklist for daily use. Context: Vim 9.1 in a terminal on Linux/macOS/Windows (WSL)."
+  }
+]
