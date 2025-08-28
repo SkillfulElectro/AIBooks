@@ -36,11 +36,25 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function makeQueryUrl(note, mode) {
-    const base = "https://chatgpt.com/";
+  function getSelectedProvider() {
+    const selector = document.querySelector(
+      'input[name="search-provider"]:checked'
+    );
+    return selector ? selector.value : "chatgpt";
+  }
+
+  function makeQueryUrl(note, mode, provider) {
     const q = encodeURIComponent(note || "");
-    const hints = mode === "search" ? "search" : "study";
-    return `${base}?q=${q}&hints=${hints}&ref=ext`;
+    switch (provider) {
+      case "perplexity":
+        return `https://www.perplexity.ai/search?q=${q}`;
+      case "copilot":
+        return `https://www.bing.com/search?q=${q}&showconv=1`;
+      case "chatgpt":
+      default:
+        const hints = mode === "search" ? "search" : "study";
+        return `https://chatgpt.com/?q=${q}&hints=${hints}&ref=ext`;
+    }
   }
 
   async function fetchJsonSafe(url) {
@@ -219,20 +233,24 @@ window.addEventListener("DOMContentLoaded", () => {
 
       const baseButtonClasses =
         "flex items-center justify-center gap-2 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 text-sm";
+      const provider = getSelectedProvider();
+      const providerName =
+        provider.charAt(0).toUpperCase() + provider.slice(1);
+
       const searchBtn = document.createElement("button");
       searchBtn.className = `${baseButtonClasses} bg-blue-600 hover:bg-blue-700 flex-1`;
       searchBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i> Search`;
-      searchBtn.title = "Open ChatGPT search with this lesson note";
+      searchBtn.title = `Open ${providerName} search with this lesson note`;
       searchBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t.note || "", "search"))
+        openAndCheck(makeQueryUrl(t.note || "", "search", provider))
       );
 
       const studyBtn = document.createElement("button");
       studyBtn.className = `${baseButtonClasses} bg-gray-700 hover:bg-gray-600 flex-1`;
       studyBtn.innerHTML = `<i class="fa-solid fa-book-open"></i> Study`;
-      studyBtn.title = "Open ChatGPT study session with this lesson note";
+      studyBtn.title = `Open ${providerName} study session with this lesson note`;
       studyBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t.note || "", "study"))
+        openAndCheck(makeQueryUrl(t.note || "", "study", provider))
       );
 
       const copyBtn = document.createElement("button");
@@ -332,6 +350,20 @@ window.addEventListener("DOMContentLoaded", () => {
             b.classList.add("bg-gray-800");
           });
       });
+      document
+        .querySelectorAll('input[name="search-provider"]')
+        .forEach((radio) => {
+          radio.addEventListener("change", () => {
+            if (currentBook) {
+              renderTopics(
+                currentBook.data,
+                currentBook.file,
+                currentBook.name,
+                searchTopicsInput.value
+              );
+            }
+          });
+        });
       window.addEventListener("scroll", handleScroll);
       scrollTopBtn.addEventListener("click", scrollToTop);
     } catch (err) {
