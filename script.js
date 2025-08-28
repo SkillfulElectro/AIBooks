@@ -3,8 +3,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const booksArea = document.getElementById("booksArea");
   const listEl = document.getElementById("list");
   const jsError = document.getElementById("jsErrorPlaceholder");
-  const searchInput = document.getElementById("search");
+  const searchBooksInput = document.getElementById("searchBooks");
+  const searchTopicsInput = document.getElementById("searchTopics");
   const scrollTopBtn = document.getElementById("scrollTopBtn");
+  const bookSelectionView = document.getElementById("book-selection-view");
+  const topicView = document.getElementById("topic-view");
+  const backToBooksBtn = document.getElementById("backToBooksBtn");
+  const bookTitle = document.getElementById("bookTitle");
 
   let booksIndex = [];
   let currentBook = null;
@@ -75,10 +80,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   async function selectBook(book, btnEl) {
     clearError();
-    document
-      .querySelectorAll(".book-btn")
-      .forEach((x) => x.classList.remove("bg-blue-600", "hover:bg-blue-700"));
-    btnEl.classList.add("bg-blue-600", "hover:bg-blue-700");
+    bookSelectionView.style.display = "none";
+    topicView.style.display = "block";
+    bookTitle.textContent = book.name;
 
     try {
       const filePath = book.file || book.path || book.filename;
@@ -86,7 +90,8 @@ window.addEventListener("DOMContentLoaded", () => {
       listEl.innerHTML = `<div class="text-white">Loading book... (${filePath})</div>`;
       const bookData = await fetchJsonSafe(filePath);
       currentBook = { name: book.name, file: filePath, data: bookData };
-      renderTopics(bookData, filePath, book.name);
+      renderTopics(bookData, filePath, book.name, "");
+      searchTopicsInput.value = "";
     } catch (err) {
       console.error(err);
       showError(`Unable to load book: ${err.message || err}`);
@@ -100,13 +105,22 @@ window.addEventListener("DOMContentLoaded", () => {
       : bookData.topics || bookData.items || [];
   }
 
-  function renderTopics(bookData, fileKey, bookName) {
-    const topics = topicsFrom(bookData);
+  function renderTopics(bookData, fileKey, bookName, filter = "") {
+    let topics = topicsFrom(bookData);
     if (!Array.isArray(topics)) {
       showError(
         "Book JSON format not recognized (expected array or {topics:[]})"
       );
       return;
+    }
+
+    if (filter) {
+      const lowerFilter = filter.toLowerCase();
+      topics = topics.filter(
+        (t) =>
+          (t.title || "").toLowerCase().includes(lowerFilter) ||
+          (t.note || "").toLowerCase().includes(lowerFilter)
+      );
     }
 
     listEl.innerHTML = "";
@@ -231,11 +245,11 @@ window.addEventListener("DOMContentLoaded", () => {
         if (id) p["t" + id] = true;
       });
       saveProgress(p, bookName);
-      renderTopics(bookData, fileKey, bookName);
+      renderTopics(bookData, fileKey, bookName, filter);
     };
     clearAllBtn.onclick = () => {
       saveProgress({}, bookName);
-      renderTopics(bookData, fileKey, bookName);
+      renderTopics(bookData, fileKey, bookName, filter);
     };
   }
 
@@ -268,9 +282,28 @@ window.addEventListener("DOMContentLoaded", () => {
         return;
       }
       renderBookButtons();
-      searchInput.addEventListener("input", (e) =>
+      searchBooksInput.addEventListener("input", (e) =>
         renderBookButtons(e.target.value)
       );
+      searchTopicsInput.addEventListener("input", (e) => {
+        if (currentBook) {
+          renderTopics(
+            currentBook.data,
+            currentBook.file,
+            currentBook.name,
+            e.target.value
+          );
+        }
+      });
+      backToBooksBtn.addEventListener("click", () => {
+        bookSelectionView.style.display = "block";
+        topicView.style.display = "none";
+        listEl.innerHTML = "";
+        currentBook = null;
+        document
+          .querySelectorAll(".book-btn.bg-blue-600")
+          .forEach((b) => b.classList.remove("bg-blue-600", "hover:bg-blue-700"));
+      });
       window.addEventListener("scroll", handleScroll);
       scrollTopBtn.addEventListener("click", scrollToTop);
     } catch (err) {
