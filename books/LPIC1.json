@@ -1,312 +1,272 @@
 [
   {
     "n": 1,
-    "title": "Introduction to System Architecture",
-    "math": "System modeling, Abstraction layers",
-    "note": "Provide a high-level overview of a standard Linux computer architecture, including the roles of the CPU, memory, storage devices, and peripherals, and how the Linux kernel interacts with this hardware. This is a conceptual lesson for a standard x86_64 PC platform."
+    "title": "System Startup: BIOS vs UEFI",
+    "math": "Hardware addressing, instruction sets",
+    "note": "Explain the roles of BIOS (Basic Input/Output System) and UEFI (Unified Extensible Firmware Interface) in the hardware initialization process. This lesson covers the Power-On Self-Test (POST), locating the bootloader, and the fundamental differences between legacy BIOS and modern UEFI systems on standard x86_64 PC hardware."
   },
   {
     "n": 2,
-    "title": "Exploring Hardware with /proc and /sys",
-    "math": "Graph theory, Directory trees",
-    "note": "Teach how to inspect system hardware by navigating the /proc and /sys pseudo-filesystems. Focus on files like /proc/cpuinfo, /proc/meminfo, and browsing device information under /sys/class. This will be demonstrated using command-line tools like `cat` and `less` on a modern Linux distribution (e.g., Debian, Fedora)."
+    "title": "The Linux Boot Sequence",
+    "math": "State machines, sequential logic",
+    "note": "Detail the sequence of events after the firmware hands off control. This includes the role of the bootloader (e.g., GRUB2), the loading of the Linux kernel and initramfs, and the handover to the init process (systemd) on a modern Linux distribution like CentOS or Ubuntu."
   },
   {
     "n": 3,
-    "title": "Listing PCI and USB Devices",
-    "math": "Set theory, Data filtering",
-    "note": "Explain how to identify and inspect hardware devices connected to the system. Teach the use of the `lspci` command to list PCI devices and the `lsusb` command for USB devices, including how to use options for verbose output. The context is a standard Linux command-line environment."
+    "title": "Interacting with GRUB2",
+    "math": "Key-value pair configuration",
+    "note": "Teach how to interact with the GRUB2 bootloader at startup to select a kernel or edit boot parameters. This lesson covers modifying the boot entry for a single boot, such as entering single-user mode, within the context of a GRUB2-based system."
   },
   {
     "n": 4,
-    "title": "Managing Kernel Modules",
-    "math": "Modular arithmetic, Dependency graphs",
-    "note": "Introduce the concept of Linux kernel modules. Teach how to list loaded modules with `lsmod`, load a module with `insmod` or `modprobe`, and unload a module with `rmmod` or `modprobe -r`. The context is managing kernel drivers on a live Linux system."
+    "title": "Configuring the GRUB2 Bootloader",
+    "math": "File parsing, scripting logic",
+    "note": "Demonstrate how to permanently modify the GRUB2 configuration by editing `/etc/default/grub` and using the `update-grub` or `grub2-mkconfig` command. Topics include changing the default boot entry, adjusting the timeout, and adding kernel parameters on Debian-based or Red Hat-based systems."
   },
   {
     "n": 5,
-    "title": "Understanding the Linux Boot Process",
-    "math": "Sequential logic, Finite-state machines",
-    "note": "Explain the sequence of events from power-on to a usable login prompt. This includes BIOS/UEFI initialization, bootloader (GRUB2) execution, kernel loading, and the init process (systemd) startup. This is a conceptual lesson applicable to most modern Linux systems."
+    "title": "Understanding systemd Targets",
+    "math": "Dependency graphs, state management",
+    "note": "Introduce the concept of systemd targets, the modern equivalent of runlevels. Teach how to view the default target, list available targets, and switch between them (e.g., multi-user.target, graphical.target) using the `systemctl` command on a systemd-based Linux distribution."
   },
   {
     "n": 6,
-    "title": "Configuring the GRUB2 Bootloader",
-    "math": "String manipulation, Variable assignment",
-    "note": "Teach how to modify the GRUB2 bootloader's behavior by editing the `/etc/default/grub` file. Cover common parameters like the default timeout and kernel boot options. Explain how to apply changes using the `update-grub` or `grub2-mkconfig` command on a system using GRUB2."
+    "title": "System Shutdown and Reboot Commands",
+    "math": "Signal handling, process management",
+    "note": "Cover the proper procedures for shutting down and rebooting a Linux system using commands like `shutdown`, `reboot`, `poweroff`, and `systemctl`. Explain how to schedule shutdowns and notify logged-in users within a multi-user server environment."
   },
   {
     "n": 7,
-    "title": "Interacting with the Bootloader",
-    "math": "Decision theory, Conditional execution",
-    "note": "Demonstrate how to interact with the GRUB2 menu at boot time to select different kernels or enter recovery mode. Explain how to add temporary kernel parameters to troubleshoot boot issues. This is a practical lesson performed during the system startup phase."
+    "title": "Disk Partitioning with fdisk",
+    "math": "Data structures, block addressing",
+    "note": "Provide a step-by-step guide on how to use the `fdisk` utility to create, modify, and delete MBR (Master Boot Record) partitions on a block device. This hands-on lesson uses a virtual disk within a Linux virtual machine to ensure a safe learning environment."
   },
   {
     "n": 8,
-    "title": "Understanding systemd Targets",
-    "math": "Set theory, State transitions",
-    "note": "Explain the concept of systemd targets, which are equivalent to traditional runlevels. Teach how to list available targets, view the default target, and understand the purpose of common targets like `multi-user.target` and `graphical.target`. The context is a systemd-based Linux distribution."
+    "title": "Disk Partitioning with gdisk",
+    "math": "GUID data types, block addressing",
+    "note": "Explain the advantages of GPT (GUID Partition Table) over MBR and demonstrate how to use the `gdisk` utility for managing partitions on larger disks. This lesson will be conducted on a virtual disk within a Linux virtual machine."
   },
   {
     "n": 9,
-    "title": "Changing systemd Targets and System State",
-    "math": "Command and control theory",
-    "note": "Teach the use of the `systemctl` command to manage the system's state. Cover `systemctl isolate` to switch to a different target, `systemctl get-default` to view the default target, and `systemctl set-default` to change it. This is a practical lesson on a running systemd-based Linux system."
+    "title": "Creating Filesystems",
+    "math": "File system theory, inode structures",
+    "note": "Teach how to format a partition with a filesystem. This lesson covers creating ext4 and XFS filesystems using the `mkfs.ext4` and `mkfs.xfs` commands, respectively, on partitions previously created within a Linux virtual machine."
   },
   {
     "n": 10,
-    "title": "Shutting Down and Rebooting the System",
-    "math": "Logic gates, Signal processing",
-    "note": "Teach the proper procedures for shutting down and rebooting a Linux system. Cover the commands `shutdown`, `reboot`, `poweroff`, and `halt`, explaining their differences and common options like scheduling a shutdown. The context is safe system administration from the command line."
+    "title": "Understanding Shared Libraries",
+    "math": "Dynamic linking, memory management",
+    "note": "Explain the concept of shared libraries and their importance for program execution. Teach how to use the `ldd` command to identify the libraries required by a binary and demonstrate how the dynamic linker (`ld.so`) finds them, within the context of a standard Linux environment."
   },
   {
     "n": 11,
-    "title": "Designing a Hard Disk Layout",
-    "math": "Set theory, Optimization",
-    "note": "Explain the principles of partitioning a hard disk for a Linux installation. Cover partition schemes (MBR vs. GPT) and the purpose of creating separate partitions for `/`, `/home`, `/boot`, and swap space. This is a conceptual lesson for planning a new Linux installation."
+    "title": "Managing Debian Packages with dpkg",
+    "math": "Database management, dependency checking",
+    "note": "Introduce the low-level Debian package manager, `dpkg`. This lesson covers installing, removing, and querying information about `.deb` packages using `dpkg` commands. The context is a Debian-based system like Debian or Ubuntu."
   },
   {
     "n": 12,
-    "title": "Using fdisk for MBR Partitioning",
-    "math": "Number theory, Geometry",
-    "note": "Provide a practical guide to using the `fdisk` utility to create and manage MBR partitions on a block device. Teach the interactive command-line interface for creating new partitions, changing partition types, and writing the partition table to the disk. The context is disk management on a Linux system."
+    "title": "Managing Packages with APT",
+    "math": "Graph theory, dependency resolution algorithms",
+    "note": "Teach how to use the high-level APT (Advanced Package Tool) toolkit. This includes using `apt-get` and `apt` to install, update, and remove software from repositories, and how it automatically handles dependencies. The context is a Debian-based system like Ubuntu."
   },
   {
     "n": 13,
-    "title": "Using gdisk for GPT Partitioning",
-    "math": "Number theory, Set algebra",
-    "note": "Provide a practical guide to using the `gdisk` utility to create and manage GPT partitions. This is the modern standard for disks larger than 2TB. Teach its interactive command-line interface, which is similar to fdisk but for GPT. The context is modern disk management on a Linux system."
+    "title": "Managing RPM Packages with rpm",
+    "math": "Database management, cryptographic signatures",
+    "note": "Introduce the low-level Red Hat Package Manager, `rpm`. This lesson covers installing, upgrading, removing, and verifying `.rpm` packages using `rpm` commands. The context is a Red Hat-based system like CentOS or Fedora."
   },
   {
     "n": 14,
-    "title": "Managing Shared Libraries",
-    "math": "Dependency graphs, Dynamic linking",
-    "note": "Explain the concept of shared libraries and their importance for program execution. Teach how to use the `ldd` command to see which libraries a program requires. The context is diagnosing program execution errors on a Linux system."
+    "title": "Managing Packages with YUM/DNF",
+    "math": "Transaction management, dependency resolution algorithms",
+    "note": "Teach how to use the high-level package managers `yum` (on older systems) and `dnf` (on modern systems). This lesson covers installing, updating, and managing software and package groups from repositories on a Red Hat-based system like CentOS."
   },
   {
     "n": 15,
-    "title": "Configuring the Dynamic Linker",
-    "math": "Search algorithms, Path finding",
-    "note": "Teach how to control where the system looks for shared libraries. This includes editing `/etc/ld.so.conf` and files in `/etc/ld.so.conf.d/`, and using the `ldconfig` command to update the linker cache. The context is installing custom software on a Linux system."
+    "title": "Working on the Command Line",
+    "math": "String manipulation, command parsing",
+    "note": "Introduce the basics of the Bash shell, including command structure (command, options, arguments), using `history`, and leveraging tab completion. The context is an interactive terminal session on any standard Linux distribution."
   },
   {
     "n": 16,
-    "title": "Debian Package Management with dpkg",
-    "math": "Database theory, Transactional logic",
-    "note": "Introduce the low-level Debian package manager, `dpkg`. Teach how to install (`-i`), remove (`-r`), purge (`-P`), and query (`-l`, `-s`) `.deb` packages directly. The context is managing individual package files on a Debian-based system like Ubuntu."
+    "title": "Processing Text Streams with Filters",
+    "math": "Data pipelines, stream processing",
+    "note": "Explain the concept of standard input, output, and error. Teach how to use filter commands like `head`, `tail`, `cut`, `sort`, `uniq`, and `wc` to process text data within a pipeline. The lesson uses standard Linux command-line utilities."
   },
   {
     "n": 17,
-    "title": "Debian Package Management with apt",
-    "math": "Graph theory, Dependency resolution algorithms",
-    "note": "Teach how to use the high-level `apt` tool to manage software from repositories. Cover `apt install`, `apt remove`, `apt update`, `apt upgrade`, and `apt search`. This is the standard software management method on Debian-based systems."
+    "title": "Basic File Management Commands",
+    "math": "File system APIs, data manipulation",
+    "note": "Cover the essential commands for file and directory manipulation: `ls`, `cp`, `mv`, `rm`, and `mkdir`. This lesson includes using common options to control behavior, like recursive operations, in a standard Bash shell environment."
   },
   {
     "n": 18,
-    "title": "RPM Package Management with rpm",
-    "math": "Database theory, Cryptographic hashing",
-    "note": "Introduce the low-level RPM package manager, `rpm`. Teach how to install (`-i`), upgrade (`-U`), remove (`-e`), and query (`-q`) `.rpm` packages directly. The context is managing individual package files on an RPM-based system like Fedora or CentOS."
+    "title": "Finding Files and Directories",
+    "math": "Tree traversal algorithms, boolean logic",
+    "note": "Teach the use of the `find` command to locate files and directories based on various criteria like name, size, type, and modification time. This lesson also introduces using the `-exec` option to perform actions on found files. This is demonstrated in a Bash shell."
   },
   {
     "n": 19,
-    "title": "RPM Package Management with dnf/yum",
-    "math": "Graph theory, Transactional integrity",
-    "note": "Teach how to use the high-level `dnf` (or `yum`) tool to manage software from repositories. Cover `dnf install`, `dnf remove`, `dnf update`, and `dnf search`. This is the standard software management method on RPM-based systems."
+    "title": "Searching Text with grep",
+    "math": "Formal language theory, regular expressions",
+    "note": "Introduce the `grep` command for searching plain-text data sets for lines that match a regular expression. This lesson covers basic regular expression syntax (e.g., `^`, `$`, `.`, `*`) and common `grep` options like `-i` and `-v`. The context is the standard GNU grep utility."
   },
   {
     "n": 20,
-    "title": "Working on the Command Line",
-    "math": "String processing, Formal grammar",
-    "note": "Introduce the basics of the Bash shell. Teach how to type commands, use simple arguments, and understand the prompt. Explain the difference between a command, options, and arguments. The context is a standard Bash shell environment."
+    "title": "Archiving and Compressing Files",
+    "math": "Data compression algorithms, file formats",
+    "note": "Teach how to create and extract archives using `tar`. This lesson covers combining `tar` with compression utilities like `gzip`, `bzip2`, and `xz` to create compressed tarballs (e.g., `.tar.gz`) on the Linux command line."
   },
   {
     "n": 21,
-    "title": "Using Command History",
-    "math": "Stack data structures, Pattern matching",
-    "note": "Teach how to efficiently reuse previous commands in the Bash shell. Cover using the Up/Down arrow keys, the `history` command, recalling commands with `!n` and `!!`, and searching history with `Ctrl+R`. The context is improving command-line efficiency."
+    "title": "Input/Output Redirection and Pipes",
+    "math": "Data streams, inter-process communication",
+    "note": "Explain how to redirect standard input, standard output, and standard error using operators like `>`, `>>`, `<`, and `2>`. Teach how to connect commands into a pipeline using the pipe operator `|`. This is demonstrated in a Bash shell environment."
   },
   {
     "n": 22,
-    "title": "Processing Text Streams with Filters",
-    "math": "Set theory, Boolean logic",
-    "note": "Introduce the concept of text filters and standard I/O streams (stdin, stdout, stderr). This is a foundational lesson for understanding how Linux commands can be chained together. The context is the command-line environment."
+    "title": "Editing Text with vi/vim",
+    "math": "Modal logic, command syntax",
+    "note": "Provide an introduction to the `vi` modal editor. This lesson covers the essential skills for survival: switching between normal and insert mode, basic navigation, saving files, and quitting the editor. The context is the Vim editor found on most Linux systems."
   },
   {
     "n": 23,
-    "title": "Using head and tail",
-    "math": "Array slicing, Pointer arithmetic",
-    "note": "Teach how to view the beginning (`head`) and end (`tail`) of text files or streams. Cover common options like `-n` to specify the number of lines and `-f` with `tail` to follow a file in real-time. The context is text file inspection from the command line."
+    "title": "Filesystem Hierarchy Standard (FHS)",
+    "math": "Hierarchical data structures, standards compliance",
+    "note": "Explain the purpose of the FHS and describe the function of key directories like `/bin`, `/etc`, `/home`, `/opt`, `/tmp`, `/usr`, and `/var`. This lesson provides a conceptual map for navigating a standard Linux filesystem."
   },
   {
     "n": 24,
-    "title": "Cutting Fields with cut",
-    "math": "String tokenization, Delimiter-based parsing",
-    "note": "Teach how to extract columns of text from a file or stream using the `cut` command. Cover specifying delimiters with `-d` and selecting fields with `-f`. The context is processing structured text data like CSV files on the command line."
+    "title": "Mounting and Unmounting Filesystems",
+    "math": "File system mounting, virtual file systems",
+    "note": "Teach how to manually attach and detach filesystems to the directory tree using the `mount` and `umount` commands. The lesson includes specifying filesystem type and viewing currently mounted filesystems with `findmnt` or `mount`."
   },
   {
     "n": 25,
-    "title": "Sorting Text with sort",
-    "math": "Comparison sort algorithms",
-    "note": "Teach how to sort lines of text using the `sort` command. Cover default alphabetical sorting, numeric sorting (`-n`), reverse order (`-r`), and removing duplicates (`-u`). The context is ordering data from files or command output."
+    "title": "Managing Mounts with /etc/fstab",
+    "math": "Configuration parsing, file system identifiers",
+    "note": "Explain the structure and purpose of the `/etc/fstab` file for persistent filesystem mounting. Teach how to add an entry to automatically mount a device at boot, using device names or UUIDs. The context is a standard Linux server or desktop."
   },
   {
     "n": 26,
-    "title": "Joining Lines with paste and join",
-    "math": "Relational algebra, Database joins",
-    "note": "Teach how to merge lines from multiple files. Explain `paste` for side-by-side merging and `join` for merging lines based on a common field, similar to a database join. The context is combining structured text files on the command line."
+    "title": "File and Directory Permissions",
+    "math": "Set theory, bitwise operations (octal notation)",
+    "note": "Detail the Linux permissions model for users, groups, and others (read, write, execute). Teach how to view permissions with `ls -l` and change them using `chmod` in both symbolic and octal notation on a standard Linux filesystem."
   },
   {
     "n": 27,
-    "title": "Counting with wc",
-    "math": "Statistics, Counting principles",
-    "note": "Teach how to count lines, words, and characters in a text file or stream using the `wc` (word count) command. Cover the `-l`, `-w`, and `-c` options. The context is basic text file analysis from the command line."
+    "title": "File Ownership",
+    "math": "Access control lists, user and group identifiers",
+    "note": "Explain the concepts of user and group ownership for files and directories. Teach how to change ownership using the `chown` command and change group ownership using the `chgrp` command. The context is a multi-user Linux system."
   },
   {
     "n": 28,
-    "title": "Translating Characters with tr",
-    "math": "Set mapping, Character encoding",
-    "note": "Teach how to substitute or delete characters using the `tr` command. Cover use cases like changing character case, deleting specific characters (`-d`), and squeezing repeated characters (`-s`). The context is text stream transformation."
+    "title": "Special Permissions: SUID, SGID, Sticky Bit",
+    "math": "Privilege escalation control, bitmasking",
+    "note": "Describe the function of special permissions. This includes `SUID` for running executables with file owner privileges, `SGID` for inheriting group ownership, and the `sticky bit` for controlling file deletion in shared directories. Use `chmod` to set these bits."
   },
   {
     "n": 29,
-    "title": "Performing Basic File Management",
-    "math": "Graph theory, Tree data structures",
-    "note": "Teach the essential commands for file and directory manipulation. Cover `cp` (copy), `mv` (move/rename), `mkdir` (make directory), and `rm` (remove). Explain the use of the `-r` option for recursive operations. The context is managing the filesystem from the command line."
+    "title": "Creating Hard and Symbolic Links",
+    "math": "Pointers, inode data structures",
+    "note": "Differentiate between hard links and symbolic (soft) links. Teach how to create both using the `ln` command and explain the practical use cases and limitations of each type within a Linux filesystem."
   },
   {
     "n": 30,
-    "title": "Using Pipes and Redirection",
-    "math": "Queueing theory, Data flow diagrams",
-    "note": "Teach the core concepts of I/O redirection. Cover redirecting stdout (`>`), appending stdout (`>>`), redirecting stderr (`2>`), and piping the output of one command to the input of another (`|`). This is a fundamental skill for using the Linux shell effectively."
+    "title": "Customizing the Shell Environment",
+    "math": "Variable scope, initialization scripts",
+    "note": "Teach how to customize the Bash shell environment by setting and exporting environment variables. This lesson covers key variables like `PATH` and explains the role of startup files like `~/.bash_profile` and `~/.bashrc`."
   },
   {
     "n": 31,
-    "title": "Creating, Monitoring, and Killing Processes",
-    "math": "Process algebra, Signal theory",
-    "note": "Explain the basics of process management. Teach how to run a command in the background (`&`), view running processes with `ps`, monitor processes in real-time with `top`, and terminate processes using the `kill` command and process signals."
+    "title": "Basic Bash Scripting",
+    "math": "Algorithmic logic, control flow",
+    "note": "Introduce the fundamentals of writing simple shell scripts. This lesson covers creating an executable script file with a shebang, using variables, command substitution, and basic conditional `if` statements within the Bash scripting language."
   },
   {
     "n": 32,
-    "title": "Modifying Process Execution Priority",
-    "math": "Integer arithmetic, Scheduling algorithms",
-    "note": "Teach how to influence the scheduling priority of processes. Cover using the `nice` command to start a process with a specific priority and the `renice` command to change the priority of a running process. The context is system performance tuning."
+    "title": "Managing User and Group Accounts",
+    "math": "Database management, user identification",
+    "note": "Cover the essential commands for user and group administration: `useradd`, `groupadd`, `usermod`, `userdel`, and `groupdel`. Explain the information stored in `/etc/passwd`, `/etc/shadow`, and `/etc/group` on a standard Linux system."
   },
   {
     "n": 33,
-    "title": "Searching Text Files Using Regular Expressions",
-    "math": "Formal language theory, Automata theory",
-    "note": "Introduce basic regular expressions (regex). Teach how to use the `grep` command to search for patterns within files. Cover basic patterns like `^` (start of line), `$` (end of line), `.` (any character), and `*` (zero or more repeats). The context is powerful text searching."
+    "title": "Automating Tasks with Cron",
+    "math": "Time-based scheduling, discrete mathematics",
+    "note": "Teach how to schedule recurring tasks using the cron daemon. This lesson explains the crontab file format and demonstrates how to edit a user's crontab with `crontab -e` to run commands at specific times or intervals."
   },
   {
     "n": 34,
-    "title": "Using Extended Regular Expressions with egrep",
-    "math": "Formal language theory, Set operations",
-    "note": "Expand on regular expressions by introducing extended syntax. Teach how to use `egrep` (or `grep -E`) for patterns involving `+` (one or more), `?` (zero or one), and `|` (alternation/OR). The context is advanced text pattern matching."
+    "title": "System Time and NTP",
+    "math": "Time synchronization protocols, clock drift",
+    "note": "Explain the importance of accurate system time and introduce the Network Time Protocol (NTP). Teach how to check the status of NTP synchronization and configure a client using services like `chronyd` or `ntpd` on a modern Linux distribution."
   },
   {
     "n": 35,
-    "title": "Basic File Editing with vi",
-    "math": "State machines, Modal logic",
-    "note": "Provide a survival guide to the `vi` (or `vim`) text editor. Teach the difference between command mode and insert mode. Cover essential commands for navigation (`h,j,k,l`), inserting text (`i, a, o`), deleting (`x, dd`), and saving/quitting (`:w`, `:q`, `:wq`)."
+    "title": "System Logging with rsyslog and journald",
+    "math": "Data logging, query languages",
+    "note": "Introduce the two primary logging systems. This covers the traditional file-based logging of `rsyslog` and its configuration in `/etc/rsyslog.conf`, as well as the modern systemd `journald`. Teach how to query the journal using `journalctl`."
   },
   {
     "n": 36,
-    "title": "Creating Partitions and Filesystems",
-    "math": "Data structures, Block allocation algorithms",
-    "note": "Teach how to create a filesystem on a partition. After creating a partition with `fdisk` or `gdisk`, explain how to format it using commands like `mkfs.ext4` for an ext4 filesystem or `mkswap` for a swap partition. The context is preparing a new disk for use."
+    "title": "Managing Log File Rotation",
+    "math": "File lifecycle management",
+    "note": "Explain the purpose of log rotation to prevent disks from filling up. Teach how to configure the `logrotate` utility by examining and creating configuration files in `/etc/logrotate.d/` on a typical Linux server."
   },
   {
     "n": 37,
-    "title": "Maintaining Filesystem Integrity",
-    "math": "Checksum algorithms, Error detection",
-    "note": "Explain the importance of filesystem health. Teach how to check and repair a Linux filesystem (like ext4) using the `fsck` command. Explain when and how to run this command safely, usually on an unmounted filesystem. The context is system maintenance."
+    "title": "TCP/IP Networking Fundamentals",
+    "math": "Network layers, protocol stacks (OSI model)",
+    "note": "Provide a high-level overview of the TCP/IP model. This lesson defines key concepts like IP addresses, netmasks, gateways, ports, and DNS. The context is foundational knowledge for any network-connected Linux system."
   },
   {
     "n": 38,
-    "title": "Mounting and Unmounting Filesystems",
-    "math": "Graph theory, Tree grafting",
-    "note": "Teach how to make a filesystem accessible to the system. Cover using the `mount` command to attach a device to a directory (mount point) and the `umount` command to detach it. The context is managing storage devices."
+    "title": "Basic Network Configuration",
+    "math": "Network interface configuration, routing tables",
+    "note": "Teach how to view and temporarily modify network interface configurations using the `ip` command (e.g., `ip addr`, `ip route`). This also covers the deprecated `ifconfig` command for comparison. The context is a command-line-only Linux environment."
   },
   {
     "n": 39,
-    "title": "Managing /etc/fstab for Automatic Mounting",
-    "math": "Database design, Configuration management",
-    "note": "Teach how to configure filesystems to be mounted automatically at boot time by editing the `/etc/fstab` file. Explain the structure of an `/etc/fstab` entry and the meaning of each field. The context is permanent storage configuration."
+    "title": "Name Resolution",
+    "math": "Distributed databases, caching algorithms",
+    "note": "Explain the process of resolving hostnames to IP addresses. This lesson covers the role of the `/etc/hosts` file, `/etc/resolv.conf`, and `/etc/nsswitch.conf` in the name resolution process on a Linux client."
   },
   {
     "n": 40,
-    "title": "Managing File Permissions and Ownership",
-    "math": "Boolean algebra, Set theory",
-    "note": "Explain the Linux file permission model (read, write, execute for user, group, and other). Teach how to view permissions with `ls -l` and change them with the `chmod` command using both symbolic and octal notation. The context is file security."
+    "title": "Network Troubleshooting Utilities",
+    "math": "Packet tracing, network diagnostics",
+    "note": "Introduce essential command-line tools for diagnosing network problems. This includes using `ping` to test connectivity, `traceroute` to map a network path, and `ss` (or `netstat`) to view active network connections and listening ports."
   },
   {
     "n": 41,
-    "title": "Changing File Ownership",
-    "math": "Access control models",
-    "note": "Teach how to change the user and group ownership of files and directories. Cover the `chown` command to change the owner and `chgrp` to change the group. The context is managing user data and access rights."
+    "title": "Managing System Security",
+    "math": "Security auditing, risk assessment",
+    "note": "Provide an overview of system security principles. This lesson teaches how to identify users with login access, find files with SUID/SGID bits, and check for open network ports as part of a basic security audit on a Linux server."
   },
   {
     "n": 42,
-    "title": "Creating and Managing Links",
-    "math": "Pointer theory, Graph theory",
-    "note": "Explain the difference between hard links and symbolic (soft) links. Teach how to create both using the `ln` command and its `-s` option. The context is creating file shortcuts and references in the filesystem."
+    "title": "Configuring sudo",
+    "math": "Access control policies, rule-based systems",
+    "note": "Explain the purpose of `sudo` for granting administrative privileges. Teach how to safely edit the sudoers file using `visudo` to allow specific users or groups to run specific commands as root on a multi-user Linux system."
   },
   {
     "n": 43,
-    "title": "Finding Files on the Filesystem",
-    "math": "Search algorithms, Tree traversal",
-    "note": "Teach two primary methods for locating files. Cover the `find` command for powerful searches based on criteria like name, size, and modification time. Also, introduce `locate` for fast lookups using a pre-built database. The context is system navigation and administration."
+    "title": "Securing Remote Access with SSH",
+    "math": "Public-key cryptography, asymmetric encryption",
+    "note": "Introduce the Secure Shell (SSH) protocol. This lesson covers the basics of password-based logins and demonstrates the more secure method of setting up key-based authentication using `ssh-keygen` and `ssh-copy-id`. The context is connecting to a remote Linux server."
   },
   {
     "n": 44,
-    "title": "Understanding the Filesystem Hierarchy Standard (FHS)",
-    "math": "Taxonomy, Information architecture",
-    "note": "Provide an overview of the FHS, the standard directory layout for Linux systems. Explain the purpose of key directories like `/bin`, `/etc`, `/home`, `/var`, `/usr`, and `/tmp`. This is a conceptual lesson for understanding where files belong on a Linux system."
+    "title": "SSH Server Configuration",
+    "math": "Configuration file syntax, security hardening",
+    "note": "Teach how to harden the SSH server by modifying its configuration file, `/etc/ssh/sshd_config`. This lesson covers key security settings, such as disabling root login and disabling password authentication, on a Linux server."
   },
   {
     "n": 45,
-    "title": "Customizing the Shell Environment",
-    "math": "Variable assignment, String concatenation",
-    "note": "Teach how to customize the Bash shell environment. Cover setting and exporting environment variables, and the purpose of key variables like `PATH`, `HOME`, and `PS1`. The context is personalizing the user's command-line experience."
-  },
-  {
-    "n": 46,
-    "title": "Understanding Shell Startup Files",
-    "math": "Procedural logic, Script execution order",
-    "note": "Explain the role of shell configuration files like `/etc/profile`, `~/.bash_profile`, `~/.bash_login`, `~/.profile`, and `~/.bashrc`. Teach which files are read for login shells versus non-login shells. The context is making persistent environment changes."
-  },
-  {
-    "n": 47,
-    "title": "Introduction to Shell Scripting",
-    "math": "Algorithm design, Formal logic",
-    "note": "Teach the fundamentals of creating a simple Bash script. Cover the shebang (`#!/bin/bash`), making a script executable with `chmod`, using variables, and command substitution with `$(command)`. The context is automating simple tasks."
-  },
-  {
-    "n": 48,
-    "title": "Using Conditional Statements in Scripts",
-    "math": "Boolean logic, Control flow",
-    "note": "Teach how to add decision-making logic to Bash scripts. Cover the `if-then-else-fi` structure and the `test` command (or `[ ]` syntax) for evaluating conditions on files, strings, and numbers. The context is creating more intelligent shell scripts."
-  },
-  {
-    "n": 49,
-    "title": "Using Loops in Scripts",
-    "math": "Iteration, Loop invariants",
-    "note": "Teach how to perform repetitive tasks in Bash scripts. Cover the `for` loop for iterating over a list of items and the `while` loop for repeating actions as long as a condition is true. The context is automating repetitive administrative tasks."
-  },
-  {
-    "n": 50,
-    "title": "Processing Command Line Arguments",
-    "math": "Array indexing, Parameter passing",
-    "note": "Teach how to make Bash scripts interactive by accepting command-line arguments. Explain the special variables `$#` (argument count), `$@` (all arguments), and `$1`, `$2`, etc., for positional parameters. The context is creating reusable command-line tools."
-  },
-  {
-    "n": 51,
-    "title": "Installing and Configuring X11",
-    "math": "Client-server architecture, Network protocols",
-    "note": "Provide a conceptual overview of the X Window System (X11). Explain the roles of the X server, X clients, and the window manager. Briefly cover the main configuration file, `xorg.conf`. The context is understanding the Linux graphical stack."
-  },
-  {
-    "n": 52,
-    "title": "Understanding Display Managers",
-    "math": "Authentication systems, Session management",
-    "note": "Explain the role of a graphical login manager (Display Manager) like GDM (GNOME) or LightDM. Describe how it au
+    "title": "Data Encryption with GPG",
+    "math": "Symmetric and asymmetric encryption, digital signatures",
+    "note": "Introduce GNU Privacy Guard (GPG) for data encryption and signing. This lesson covers generating a key pair, encrypting a file for a recipient, and decrypting a file using a private key, all performed on the Linux command line."
+  }
+]
