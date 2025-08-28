@@ -1,0 +1,264 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to OpenGL and the Graphics Pipeline",
+    "math": "None",
+    "note": "Provide a high-level overview of OpenGL as a specification and a state machine. Explain the conceptual stages of the modern programmable graphics pipeline: Vertex Shading, Tessellation, Geometry Shading, Rasterization, Fragment Shading, and Per-Sample Operations. The context is modern, core-profile OpenGL (version 3.3 and above)."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up a C++ Development Environment",
+    "math": "None",
+    "note": "Guide through setting up a C++ development environment for OpenGL. This includes installing a compiler (like GCC/Clang/MSVC), configuring a build system (like CMake), and linking necessary libraries. The core libraries to be introduced are GLFW for window and input management, and GLAD for loading OpenGL function pointers."
+  },
+  {
+    "n": 3,
+    "title": "Creating Your First Window",
+    "math": "None",
+    "note": "Teach how to initialize GLFW, configure window hints (like OpenGL version), create a window, and make its OpenGL context current. The lesson must cover the creation of a basic application skeleton in C++ that results in a blank window appearing on the screen."
+  },
+  {
+    "n": 4,
+    "title": "The Render Loop and Clearing the Screen",
+    "math": "None",
+    "note": "Introduce the concept of a render loop, a fundamental construct in graphics programming. Teach how to implement a `while` loop that continues until the window should close. Inside the loop, demonstrate how to process events with `glfwPollEvents` and how to clear the color buffer using `glClearColor` and `glClear` in each frame. The context is a C++/GLFW application."
+  },
+  {
+    "n": 5,
+    "title": "Vertex Data and Vertex Buffer Objects (VBOs)",
+    "math": "Cartesian coordinates",
+    "note": "Explain how to define 2D or 3D geometry using vertices in a C++ float array. Teach how to create a Vertex Buffer Object (VBO) to store this vertex data on the GPU's memory. This involves using `glGenBuffers` to generate a buffer ID, `glBindBuffer` to bind it, and `glBufferData` to copy the vertex data. This is done in a C++/GLAD environment."
+  },
+  {
+    "n": 6,
+    "title": "Introduction to Shaders and GLSL",
+    "math": "None",
+    "note": "Introduce the concept of shaders as small programs that run on the GPU. Explain the purpose of the Vertex Shader (processes vertices) and the Fragment Shader (colors pixels). Introduce the basic syntax of the OpenGL Shading Language (GLSL), including version declaration, `in`, `out`, `uniform` variables, and the `main` function."
+  },
+  {
+    "n": 7,
+    "title": "Compiling and Linking a Shader Program",
+    "math": "None",
+    "note": "Teach the complete process of taking GLSL source code (as C-style strings) and turning it into a usable GPU program. This includes creating shader objects (`glCreateShader`), attaching source (`glShaderSource`), compiling (`glCompileShader`), and checking for compile errors. Then, show how to create a program object (`glCreateProgram`), attach the compiled shaders, link them (`glLinkProgram`), and check for linking errors."
+  },
+  {
+    "n": 8,
+    "title": "Vertex Array Objects (VAOs) and Attribute Pointers",
+    "math": "None",
+    "note": "Explain the role of a Vertex Array Object (VAO) as an object that stores the configuration of vertex attribute pointers. Teach how to generate and bind a VAO. Then, show how to configure vertex attribute pointers using `glVertexAttribPointer` to tell OpenGL how to interpret the vertex data in the currently bound VBO for a specific vertex attribute location."
+  },
+  {
+    "n": 9,
+    "title": "Drawing Your First Triangle",
+    "math": "None",
+    "note": "Combine all previous steps to render a single, colored triangle. The lesson covers activating the shader program (`glUseProgram`), binding the correct VAO, and calling `glDrawArrays` to trigger the rendering pipeline. The final result should be a static triangle displayed in the GLFW window."
+  },
+  {
+    "n": 10,
+    "title": "Using Element Buffer Objects (EBOs) for Indexing",
+    "math": "Array indexing",
+    "note": "Introduce Element Buffer Objects (EBOs) or Index Buffers as a method for efficient rendering by reusing vertices. Teach how to define a set of unique vertices and an array of indices. Show how to create, bind, and fill an EBO with `glBufferData`. Finally, demonstrate drawing using `glDrawElements` instead of `glDrawArrays`."
+  },
+  {
+    "n": 11,
+    "title": "Passing Data to Shaders with Uniforms",
+    "math": "None",
+    "note": "Explain what uniform variables are and how they are used to pass data from the C++ application to the shaders that remains constant for a draw call. Demonstrate how to get the location of a uniform with `glGetUniformLocation` and how to set its value using the `glUniform*` family of functions, for example, to change the color of an object over time."
+  },
+  {
+    "n": 12,
+    "title": "More on Vertex Attributes and Layouts",
+    "math": "Data structures (structs/interleaving)",
+    "note": "Expand on `glVertexAttribPointer` by showing how to send more complex vertex data to the vertex shader. This includes interleaving attributes (e.g., position and color) within a single VBO and setting the `stride` and `offset` parameters correctly to describe the memory layout of the vertex data."
+  },
+  {
+    "n": 13,
+    "title": "Introduction to Textures",
+    "math": "Normalized device coordinates, linear interpolation",
+    "note": "Explain the concept of textures for adding image detail to objects. Teach how to load an image file from disk into memory using the `stb_image.h` single-header library in C++. Cover basic image properties like width, height, and number of color channels."
+  },
+  {
+    "n": 14,
+    "title": "Creating and Binding Texture Objects",
+    "math": "None",
+    "note": "Teach the OpenGL procedure for creating a texture object on the GPU. This includes generating a texture ID with `glGenTextures`, binding it with `glBindTexture`, and uploading the loaded image data from the C++ application to the GPU using `glTexImage2D`. Also, demonstrate generating mipmaps with `glGenerateMipmap`."
+  },
+  {
+    "n": 15,
+    "title": "Texture Coordinates and Sampling",
+    "math": "2D coordinate systems (UV mapping)",
+    "note": "Explain texture coordinates (UV coordinates) and how they map a texture to a mesh's vertices. Show how to add texture coordinates as a new vertex attribute. In GLSL, demonstrate how to use a `sampler2D` uniform and the `texture()` function to sample the color from the texture at the interpolated fragment coordinates."
+  },
+  {
+    "n": 16,
+    "title": "Texture Units and Multiple Textures",
+    "math": "None",
+    "note": "Explain the concept of texture units as slots for binding multiple textures simultaneously. Teach how to activate a texture unit using `glActiveTexture`, bind a different texture to it, and set the corresponding `sampler2D` uniform in the fragment shader to an integer representing that unit. This allows for blending or mixing two textures in a single draw call."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to 3D Transformations and Coordinate Systems",
+    "math": "Vector algebra, matrix algebra, Cartesian coordinate systems",
+    "note": "Introduce the core coordinate systems used in 3D graphics: Local Space, World Space, View/Eye Space, Clip Space, and Screen Space. Explain the purpose of the Model, View, and Projection (MVP) matrices for transforming vertices between these spaces. The context is conceptual, preparing for implementation using the GLM library in C++."
+  },
+  {
+    "n": 18,
+    "title": "Vectors and the GLM Library",
+    "math": "Vector addition, subtraction, scalar multiplication, normalization",
+    "note": "Introduce the OpenGL Mathematics (GLM) library as a header-only C++ library for graphics math. Teach how to declare and initialize vectors (vec2, vec3, vec4) and perform basic vector operations like addition, subtraction, dot product, cross product, and normalization using GLM functions."
+  },
+  {
+    "n": 19,
+    "title": "Translation, Rotation, and Scaling Matrices",
+    "math": "Matrix-vector multiplication, identity matrix, trigonometric functions (sin, cos)",
+    "note": "Teach how to create 4x4 transformation matrices for translation, rotation, and scaling using GLM. Demonstrate `glm::translate`, `glm::rotate`, and `glm::scale` functions. Explain how multiplying a vertex position vector by these matrices applies the corresponding transformation. This is the foundation of the Model matrix."
+  },
+  {
+    "n": 20,
+    "title": "The Model and View Matrices",
+    "math": "Matrix multiplication",
+    "note": "Show how to combine translation, rotation, and scaling matrices into a single 'Model' matrix to transform vertices from local to world space. Introduce the 'View' matrix as a way to simulate a camera. Teach how to create a view matrix using `glm::lookAt`, specifying an eye position, a target position, and an up vector."
+  },
+  {
+    "n": 21,
+    "title": "The Projection Matrix",
+    "math": "Perspective projection theory, aspect ratio",
+    "note": "Explain the purpose of the projection matrix: to transform vertices from view space to clip space, creating the illusion of depth. Teach how to create a perspective projection matrix using `glm::perspective`, defining the field of view (FOV), aspect ratio, and near/far clipping planes. Also, briefly introduce the orthographic projection using `glm::ortho`."
+  },
+  {
+    "n": 22,
+    "title": "Applying MVP Transformations in Shaders",
+    "math": "Matrix multiplication order (P * V * M)",
+    "note": "Demonstrate how to combine the Model, View, and Projection matrices in the C++ application. Teach how to pass the final MVP matrix to the vertex shader as a `mat4` uniform. In the vertex shader, show how to multiply the incoming vertex position by this MVP matrix to calculate the final clip-space position assigned to `gl_Position`."
+  },
+  {
+    "n": 23,
+    "title": "Creating a 3D Cube and Depth Testing",
+    "math": "3D Cartesian coordinates",
+    "note": "Expand the vertex data from a 2D quad to a 3D cube by defining all 36 vertices (2 triangles per face). Teach how to enable depth testing with `glEnable(GL_DEPTH_TEST)` and clear the depth buffer each frame with `glClear(GL_DEPTH_BUFFER_BIT)`. Explain how the depth buffer (or z-buffer) solves the problem of rendering objects in the correct order."
+  },
+  {
+    "n": 24,
+    "title": "Basic Lighting Theory: The Phong Model",
+    "math": "Vector reflection, dot product, normalization",
+    "note": "Introduce the theoretical components of the Phong lighting model: ambient, diffuse, and specular lighting. Explain the inputs required for this model, such as the light source's position/direction, the object's surface normal, the viewer's position, and material properties (colors)."
+  },
+  {
+    "n": 25,
+    "title": "Implementing Ambient and Diffuse Lighting",
+    "math": "Dot product, vector normalization",
+    "note": "Translate lighting theory into GLSL code. Implement ambient lighting as a simple base color. For diffuse lighting, calculate the dot product between the light direction and the surface normal to determine how much the surface is facing the light source. This requires passing normals as vertex attributes and a light position/color as uniforms."
+  },
+  {
+    "n": 26,
+    "title": "Implementing Specular Lighting",
+    "math": "Vector reflection, exponentiation",
+    "note": "Implement the specular highlight component of the Phong model in the fragment shader. This involves calculating the reflection vector of the light source around the surface normal and then calculating the dot product between this reflection vector and the view direction. Introduce a shininess factor to control the size of the highlight."
+  },
+  {
+    "n": 27,
+    "title": "Light and Material Properties",
+    "math": "RGB color model (vector representation)",
+    "note": "Structure the lighting calculations using structs in GLSL for `Material` (ambient, diffuse, specular colors, shininess) and `Light` (position, ambient, diffuse, specular components). Show how to pass these properties from the C++ application to the shaders using uniforms to create objects with different material appearances."
+  },
+  {
+    "n": 28,
+    "title": "Normal Vectors and Transformations",
+    "math": "Normal matrix (inverse transpose of model matrix)",
+    "note": "Explain why surface normals can be incorrectly skewed by non-uniform scaling transformations. Introduce the concept of the 'normal matrix', which is the inverse transpose of the upper-left 3x3 of the model matrix. Show how to calculate this matrix in C++ (using GLM) and pass it to the vertex shader to correctly transform normal vectors."
+  },
+  {
+    "n": 29,
+    "title": "Light Casters: Directional, Point, and Spotlights",
+    "math": "Vector attenuation (distance-squared falloff)",
+    "note": "Extend the lighting model to support different types of lights. Implement a directional light (constant direction, no attenuation). Implement a point light (position, with attenuation based on distance). Implement a spotlight (position, direction, and cutoff angles). Show how to manage these light types using GLSL structs and uniforms."
+  },
+  {
+    "n": 30,
+    "title": "Loading 3D Models with Assimp",
+    "math": "None",
+    "note": "Introduce the Open Asset Import Library (Assimp) for loading various 3D model formats (like .obj, .fbx). Teach how to set up and link Assimp in a C++ project. Demonstrate the basic process of loading a model file into an Assimp `Scene` object and navigating its node structure."
+  },
+  {
+    "n": 31,
+    "title": "Processing Mesh Data",
+    "math": "None",
+    "note": "Explain how to process the `aiMesh` data structures within Assimp's `Scene` object. Teach how to extract vertex positions, normals, and texture coordinates from each mesh. Show how to process mesh indices to prepare the data for rendering with `glDrawElements`."
+  },
+  {
+    "n": 32,
+    "title": "Creating a Model Class",
+    "math": "Object-oriented programming principles",
+    "note": "Guide the creation of C++ `Mesh` and `Model` classes to encapsulate the logic for handling 3D model data. The `Mesh` class will manage its own VAO, VBO, and EBO and have a `Draw` method. The `Model` class will manage a collection of `Mesh` objects and orchestrate the loading and drawing of the entire model."
+  },
+  {
+    "n": 33,
+    "title": "Depth Testing and Visualization",
+    "math": "Linear algebra (linearizing depth values)",
+    "note": "Revisit depth testing in more detail. Explain how depth values are stored in a non-linear fashion in the depth buffer. Teach how to access the depth buffer values in the fragment shader by sampling from the `gl_FragCoord.z` variable and how to linearize them for visualization or debugging purposes."
+  },
+  {
+    "n": 34,
+    "title": "Stencil Testing for Object Outlining",
+    "math": "Bitwise operations (masks)",
+    "note": "Introduce the stencil buffer and its purpose. Teach the steps for creating an object outline effect: 1) Enable stencil testing. 2) Draw the object normally, writing 1s to the stencil buffer. 3) Disable stencil writing, scale the object up slightly, and 4) Draw the scaled object only where the stencil buffer value is not 1. This is all done using `glStencilFunc`, `glStencilOp`, and `glStencilMask`."
+  },
+  {
+    "n": 35,
+    "title": "Blending for Transparency",
+    "math": "Alpha compositing (source/destination factors)",
+    "note": "Teach how to render transparent or semi-transparent objects using blending. Explain the blend equation and how to configure it with `glBlendFunc`. Demonstrate standard alpha blending (`GL_SRC_ALPHA`, `GL_ONE_MINUS_SRC_ALPHA`). Address the issue of render order by showing how to sort transparent objects from back to front before drawing."
+  },
+  {
+    "n": 36,
+    "title": "Face Culling for Performance",
+    "math": "Vector cross product, winding order",
+    "note": "Explain the concept of face culling as an optimization technique to discard back-facing triangles. Teach how to enable it with `glEnable(GL_CULL_FACE)`. Explain how OpenGL determines front-facing vs. back-facing triangles based on vertex winding order (clockwise vs. counter-clockwise) and how to configure which faces to cull with `glCullFace`."
+  },
+  {
+    "n": 37,
+    "title": "Framebuffers for Post-Processing",
+    "math": "None",
+    "note": "Introduce Framebuffer Objects (FBOs) as a way to redirect rendering output to an off-screen texture instead of the default window buffer. Teach the process of creating an FBO, creating a texture attachment for color, creating a renderbuffer object (RBO) for depth/stencil, and attaching them to the FBO."
+  },
+  {
+    "n": 38,
+    "title": "Implementing a Post-Processing Effect",
+    "math": "Color theory (inversion, grayscale)",
+    "note": "Demonstrate a full post-processing pass. First, bind the custom FBO and render the scene to its attached texture. Then, unbind the FBO, disable depth testing, bind the texture that was just rendered to, and draw a screen-filling quad. The quad's fragment shader will sample the texture and apply an effect like color inversion or grayscale."
+  },
+  {
+    "n": 39,
+    "title": "Cubemaps for Skyboxes",
+    "math": "3D direction vectors",
+    "note": "Introduce cubemaps as a special type of texture consisting of six 2D textures, one for each face of a cube. Teach how to load six individual textures and create a single cubemap texture object using `GL_TEXTURE_CUBE_MAP`. Demonstrate how to render a large cube and sample the cubemap using a direction vector in the fragment shader to create a skybox."
+  },
+  {
+    "n": 40,
+    "title": "Environment Mapping with Cubemaps",
+    "math": "Vector reflection and refraction, Snell's law",
+    "note": "Show how to use a skybox cubemap for environment mapping. In the fragment shader for an object, calculate the reflection vector (view direction reflected around the normal) or a refraction vector. Use this resulting 3D vector to sample the cubemap, making the object appear reflective or refractive of its environment."
+  },
+  {
+    "n": 41,
+    "title": "Geometry Shaders",
+    "math": "Geometric primitives (points, lines, triangles)",
+    "note": "Introduce the Geometry Shader as an optional stage in the pipeline that can process entire primitives and generate new ones. Demonstrate a simple pass-through geometry shader. Then, show a more advanced example, such as generating lines for vertex normals or exploding a model's triangles away from the center."
+  },
+  {
+    "n": 42,
+    "title": "Instanced Rendering for Efficiency",
+    "math": "None",
+    "note": "Explain instanced rendering as a technique to draw many copies of the same mesh with a single draw call. Teach how to store per-instance data (e.g., model matrices) in a VBO and use `glVertexAttribDivisor` to tell OpenGL to update this attribute once per instance instead of once per vertex. Use the `glDrawArraysInstanced` or `glDrawElementsInstanced` functions."
+  },
+  {
+    "n": 43,
+    "title": "Advanced Data: Uniform Buffer Objects (UBOs)",
+    "math": "Memory layout (std140)",
+    "note": "Introduce Uniform Buffer Objects (UBOs) as a way to store uniform data in a buffer, similar to a VBO. Explain their benefits, such as defining a set of uniforms (e.g., projection and view matrices) once and binding it to multiple shader programs. Teach how to create the buffer, define a uniform block in GLSL with `std140` layout, and link it."
+  },
+  {
+    "n": 44,
+    "title": "Advanced Lighting: Gamma Correction",
+    "math": "Power functions (exponentiation)",
+    "note": "Explain why lighting calculations should be done in linear space, but output must be gamma-corrected for most monitors (which operate in sRGB space). Teach how t
