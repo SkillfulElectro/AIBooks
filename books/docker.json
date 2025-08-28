@@ -1,0 +1,152 @@
+[
+  {
+    "n": 1,
+    "title": "Understanding Containerization vs. Virtualization",
+    "math": "Set Theory, Abstraction",
+    "note": "Explain the core concept of containerization as a lightweight OS-level virtualization method. Contrast containers with traditional virtual machines (VMs), focusing on resource efficiency by sharing the host OS kernel versus running a full guest OS. Use the 'shipping container' analogy for portable software packaging. This is a platform-agnostic conceptual lesson."
+  },
+  {
+    "n": 2,
+    "title": "Installing Docker Desktop",
+    "math": "System Configuration, Dependency Management",
+    "note": "Provide step-by-step instructions for downloading and installing Docker Desktop on Windows (using WSL 2) and macOS. After installation, verify that the Docker daemon is running by opening a terminal and executing `docker --version` and `docker run hello-world` to confirm a successful setup. The context is a local development machine."
+  },
+  {
+    "n": 3,
+    "title": "Introduction to Docker Images and Layers",
+    "math": "Directed Acyclic Graphs, Immutability",
+    "note": "Define a Docker image as a read-only template used for creating containers. Explain the concept of image layers as a series of stacked, immutable filesystems. Use the `docker history <image_name>` command on a public image like `nginx` to visualize its layers and demonstrate how each instruction in a Dockerfile creates a new layer. The context is the command-line interface (CLI) on a system with Docker installed."
+  },
+  {
+    "n": 4,
+    "title": "Finding and Pulling Images from Docker Hub",
+    "math": "Data Retrieval, Namespacing",
+    "note": "Teach how to download pre-built images from Docker Hub, the default public registry. Demonstrate the `docker pull <image>:<tag>` command, explaining the importance of image names (e.g., `ubuntu`) and version tags (e.g., `22.04`). Use the `docker images` command to list the images now stored on the local machine. The context is the Docker CLI."
+  },
+  {
+    "n": 5,
+    "title": "Running Your First Docker Container",
+    "math": "Instantiation, Process Management",
+    "note": "Explain that a container is a live, runnable instance of an image. Use the `docker run <image>` command to start a container. Differentiate between interactive mode (`-it`) for running a shell (e.g., `docker run -it ubuntu bash`) and detached mode (`-d`) for running background services. Use `docker ps` to view running containers. The context is the Docker CLI."
+  },
+  {
+    "n": 6,
+    "title": "Managing the Container Lifecycle",
+    "math": "State Machines, Process Control",
+    "note": "Teach the essential commands for managing container states. Cover `docker ps -a` to list all containers (running and stopped). Demonstrate `docker stop <container_id>`, `docker start <container_id>`, `docker restart <container_id>`, and `docker rm <container_id>` to fully manage the container lifecycle. The context is the Docker CLI."
+  },
+  {
+    "n": 7,
+    "title": "Writing a Basic Dockerfile",
+    "math": "Scripting, Declarative Instructions",
+    "note": "Introduce the Dockerfile as a text-based script of instructions for building a custom Docker image. Teach the fundamental instructions: `FROM` to specify a base image, `COPY` to add local files into the image, `RUN` to execute commands during the build process, and `CMD` to provide a default command for a running container. The context is creating a simple `Dockerfile` in a text editor for a Node.js or Python application."
+  },
+  {
+    "n": 8,
+    "title": "Building an Image from a Dockerfile",
+    "math": "Compilation, Dependency Resolution",
+    "note": "Demonstrate how to build a custom image using a Dockerfile. Use the `docker build -t <your_image_name>:<tag> .` command, explaining the `-t` flag for tagging the image with a name and version, and the `.` to specify the build context (the current directory). Verify the image was created using `docker images`. The context is the Docker CLI in a directory containing a `Dockerfile`."
+  },
+  {
+    "n": 9,
+    "title": "Exposing and Publishing Container Ports",
+    "math": "Network Address Translation, Port Forwarding",
+    "note": "Explain how to make a service running inside a container accessible from the host machine's network. Use the `-p` or `--publish` flag in the `docker run` command (e.g., `docker run -p 8080:80 nginx`) to map a host port to a container port. Verify connectivity by accessing `localhost:8080` in a web browser. The context is running a web server container via the Docker CLI."
+  },
+  {
+    "n": 10,
+    "title": "Persisting Data with Named Volumes",
+    "math": "Data Structures, State Persistence",
+    "note": "Introduce the problem of data loss when a container is removed. Explain how named volumes provide a Docker-managed mechanism for persisting data. Demonstrate creating and attaching a volume using the `-v my-data:/path/in/container` flag with `docker run`. Show that data persists by removing the container and starting a new one attached to the same volume. The context is the Docker CLI."
+  },
+  {
+    "n": 11,
+    "title": "Using Bind Mounts for Development",
+    "math": "File System Mapping, Pointers",
+    "note": "Explain bind mounts as a way to map a file or directory from the host machine directly into a container. Emphasize their utility in development for live code reloading without rebuilding the image. Demonstrate using the `-v /path/on/host:/path/in/container` syntax with `docker run`. The context is setting up a local development environment with the Docker CLI."
+  },
+  {
+    "n": 12,
+    "title": "Docker Networking Fundamentals",
+    "math": "Graph Theory, Network Topologies",
+    "note": "Describe the default `bridge` network created by Docker. Explain how containers on the same user-defined bridge network can communicate using their container names as DNS hostnames. Demonstrate this by creating a network with `docker network create my-net` and running two containers on it that can `ping` each other by name. The context is the Docker CLI."
+  },
+  {
+    "n": 13,
+    "title": "Introducing Docker Compose",
+    "math": "Declarative Configuration, System Modeling",
+    "note": "Introduce Docker Compose as a tool for defining and running multi-container applications using a single YAML file. Explain the purpose of the `docker-compose.yml` file. Create a simple YAML file defining two services (e.g., a web app and a database), a shared network, and a volume for the database. The context is a text editor and the Docker Compose CLI."
+  },
+  {
+    "n": 14,
+    "title": "Managing Stacks with Docker Compose",
+    "math": "Command and Control, State Management",
+    "note": "Teach the essential Docker Compose commands for managing the application stack defined in a `docker-compose.yml` file. Demonstrate `docker-compose up -d` to start services, `docker-compose ps` to view status, `docker-compose logs` to view output, `docker-compose exec` to run commands in a service, and `docker-compose down` to stop and remove all resources. The context is the Docker Compose CLI."
+  },
+  {
+    "n": 15,
+    "title": "Optimizing Builds with Layer Caching",
+    "math": "Caching Algorithms, Optimization",
+    "note": "Explain how Docker uses layer caching to accelerate image builds. Teach how to structure a Dockerfile to maximize cache hits by ordering instructions from least to most frequently changing. For example, copy package manager files (`package.json`) and install dependencies before copying application source code. The context is refining a Dockerfile to achieve faster subsequent builds."
+  },
+  {
+    "n": 16,
+    "title": "Creating Small Images with Multi-Stage Builds",
+    "math": "Set Operations, Reduction",
+    "note": "Introduce multi-stage builds as a technique for creating lean, production-ready images. Create a Dockerfile with multiple `FROM` instructions. Show how to compile an application (e.g., in Go, Java, or a JavaScript framework) in a 'builder' stage with all build dependencies, and then `COPY` only the necessary compiled artifacts into a minimal final runtime stage. The context is building a production-grade Docker image."
+  },
+  {
+    "n": 17,
+    "title": "Understanding ENTRYPOINT vs. CMD",
+    "math": "Function Composition, Default Parameters",
+    "note": "Clarify the distinct roles of `ENTRYPOINT` and `CMD` in a Dockerfile. Explain that `ENTRYPOINT` configures a container to run as an executable, while `CMD` provides default arguments to that executable. Demonstrate the recommended 'exec' form (e.g., `ENTRYPOINT [\"python\", \"app.py\"]`) and show how arguments in `docker run` append to `CMD` or override it. The context is authoring a flexible Dockerfile."
+  },
+  {
+    "n": 18,
+    "title": "Working with Container Registries",
+    "math": "Version Control, Data Distribution",
+    "note": "Explain the role of a container registry for storing and sharing Docker images. Demonstrate how to log in to Docker Hub using `docker login`. Teach how to tag an image with a repository name (e.g., `docker tag my-image username/my-repo:latest`) and then publish it to the registry using `docker push username/my-repo:latest`. The context is the Docker CLI and a Docker Hub account."
+  },
+  {
+    "n": 19,
+    "title": "Scanning Images for Vulnerabilities",
+    "math": "Risk Analysis, Pattern Matching",
+    "note": "Introduce the importance of container image security. Demonstrate the `docker scan <image_name>` command, which uses an integrated scanner (like Snyk) to analyze an image for known vulnerabilities (CVEs) in its base OS packages and application dependencies. Explain how to interpret the results to identify and remediate security risks. The context is the Docker CLI."
+  },
+  {
+    "n": 20,
+    "title": "Limiting Container Resources",
+    "math": "Resource Allocation, Constraint Satisfaction",
+    "note": "Explain how to constrain the CPU and memory resources a container can consume to ensure stable performance on a shared host. Demonstrate the `--memory` (e.g., `512m`) and `--cpus` (e.g., `0.5`) flags in the `docker run` command. Use the `docker stats` command to monitor the real-time resource usage of running containers. The context is the Docker CLI."
+  },
+  {
+    "n": 21,
+    "title": "Introduction to Container Orchestration",
+    "math": "Distributed Systems, Scalability Theory",
+    "note": "Present a conceptual overview of the challenges of running stateful, scalable applications with containers in production. Discuss problems like high availability, load balancing, service discovery, and self-healing. Introduce container orchestrators, primarily Kubernetes and Docker Swarm, as tools designed to solve these distributed systems problems. This is a platform-agnostic, theoretical lesson."
+  },
+  {
+    "n": 22,
+    "title": "Initializing a Docker Swarm Cluster",
+    "math": "Cluster Computing, Node Management",
+    "note": "Introduce Docker Swarm as Docker's native, user-friendly orchestration tool. Teach how to initialize a single-node swarm cluster using `docker swarm init`. Explain the roles of manager and worker nodes. Show the command output that provides the secret token required for other nodes to join the swarm as workers. The context is the Docker CLI."
+  },
+  {
+    "n": 23,
+    "title": "Deploying Services with Docker Swarm",
+    "math": "Replication, Fault Tolerance",
+    "note": "Define a 'service' in Docker Swarm as a declarative definition of a task to be executed. Demonstrate how to create a service using `docker service create --name my-web --replicas 3 -p 8080:80 nginx`. Explain how Swarm ensures the desired number of replicas are always running. Use `docker service ls` and `docker service ps my-web` to inspect the service state. The context is the Docker CLI on a Swarm manager node."
+  },
+  {
+    "n": 24,
+    "title": "Managing Container Logs",
+    "math": "Data Streaming, Information Retrieval",
+    "note": "Teach how to access the logs (standard output and standard error streams) generated by a container. Demonstrate the `docker logs <container_id>` command and its key flags: `-f` or `--follow` to stream logs in real-time and `--tail` to show a specific number of recent lines. Briefly explain the concept of logging drivers for sending logs to external systems. The context is the Docker CLI."
+  },
+  {
+    "n": 25,
+    "title": "Using Docker in a CI/CD Pipeline",
+    "math": "Automation, Directed Acyclic Graphs",
+    "note": "Explain how Docker is a cornerstone of modern CI/CD workflows. Outline the typical steps: a code push triggers the pipeline, a CI server (like GitHub Actions) runs a job to build a Docker image from a Dockerfile, the image is tested, and then the versioned image is pushed to a container registry, ready for deployment. Present a simple `workflow.yml` file for GitHub Actions as a concrete example."
+  }
+]
