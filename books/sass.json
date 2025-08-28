@@ -1,0 +1,134 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Sass",
+    "math": "Logic",
+    "note": "This section introduces Sass (Syntactically Awesome Style Sheets) as a CSS preprocessor that adds special features like variables and nested rules to CSS. It covers the benefits of using Sass for writing more maintainable and powerful stylesheets. The context is a web development environment."
+  },
+  {
+    "n": 2,
+    "title": "Sass vs. SCSS Syntax",
+    "math": "Comparative analysis",
+    "note": "Explains the two syntaxes available in Sass: the original indented syntax (`.sass`) and the more modern and widely used SCSS syntax (`.scss`), which is a superset of CSS. This course will use the SCSS syntax."
+  },
+  {
+    "n": 3,
+    "title": "Setting up a Sass Project",
+    "math": "Logic",
+    "note": "Provides a guide on how to set up a project to use Sass. The lesson covers installing a Sass compiler (e.g., the `sass` package via npm) and how to run the compiler to 'watch' for changes and generate CSS files automatically."
+  },
+  {
+    "n": 4,
+    "title": "Variables",
+    "math": "Algebra",
+    "note": "Explains how to use variables in Sass (e.g., `$primary-color: #333;`) to store and reuse values like colors, fonts, and sizes. The lesson demonstrates how variables make a stylesheet more consistent and easier to update."
+  },
+  {
+    "n": 5,
+    "title": "Nesting",
+    "math": "Graph theory",
+    "note": "This lesson introduces nesting, which allows you to nest CSS rules within one another, mirroring the structure of your HTML. It shows how nesting can make stylesheets more organized, readable, and less repetitive."
+  },
+  {
+    "n": 6,
+    "title": "The Parent Selector (`&`)",
+    "math": "Logic",
+    "note": "Explains the parent selector `&`, which is used in nested rules to refer to the outer selector. This is especially useful for styling pseudo-classes (`&:hover`) or creating BEM-style class names."
+  },
+  {
+    "n": 7,
+    "title": "Partials and Imports",
+    "math": "Set theory",
+    "note": "Explains how to split your Sass code into multiple files called partials (named with a leading underscore, e.g., `_variables.scss`) and how to import them into a main file using the `@import` rule. This is key for organizing large projects."
+  },
+  {
+    "n": 8,
+    "title": "Mixins",
+    "math": "Functional programming",
+    "note": "This section introduces mixins for creating reusable groups of CSS declarations. It covers how to define a mixin with `@mixin` and include it in a style rule with `@include` to avoid repeating code."
+  },
+  {
+    "n": 9,
+    "title": "Mixins with Arguments",
+    "math": "Functional programming",
+    "note": "Expands on mixins by explaining how to pass arguments to them, including setting default values. The lesson demonstrates how to create flexible mixins that can be customized each time they are included."
+  },
+  {
+    "n": 10,
+    "title": "The Extend/Inheritance Feature",
+    "math": "Set theory",
+    "note": "This lesson covers the `@extend` directive, which allows one selector to inherit the styles of another. It explains how this can be used to share styles between related elements and keep the generated CSS DRY (Don't Repeat Yourself)."
+  },
+  {
+    "n": 11,
+    "title": "Placeholder Selectors (`%`)",
+    "math": "Set theory",
+    "note": "Introduces placeholder selectors, which are like CSS classes that are only printed in the output when they are extended. This is a way to create rule sets for `@extend` without cluttering your CSS with unused classes."
+  },
+  {
+    "n": 12,
+    "title": "Sass Operators",
+    "math": "Arithmetic",
+    "note": "Explains how to use standard math operators like `+`, `-`, `*`, `/`, and `%` to perform calculations with values in Sass. The lesson demonstrates how this can be used for creating fluid layouts and consistent spacing."
+  },
+  {
+    "n": 13,
+    "title": "Color Functions",
+    "math": "Color theory",
+    "note": "This lesson introduces some of Sass's powerful built-in functions for manipulating colors. It covers functions like `lighten()`, `darken()`, `saturate()`, `desaturate()`, and `mix()` for creating color schemes programmatically."
+  },
+  {
+    "n": 14,
+    "title": "Other Built-in Functions",
+    "math": "Functional programming",
+    "note": "Provides an overview of other useful built-in Sass functions for working with strings, numbers, and lists. The context is on leveraging Sass's full capabilities to write more dynamic stylesheets."
+  },
+  {
+    "n": 15,
+    "title": "Control Flow: `@if` and `@else`",
+    "math": "Boolean algebra",
+    "note": "Explains how to use the `@if` and `@else` directives for conditional logic in your Sass code. This allows you to include styles only if certain conditions are met."
+  },
+  {
+    "n": 16,
+    "title": "Loops: `@for`",
+    "math": "Iteration",
+    "note": "Covers the `@for` loop for outputting styles in a loop a specified number of times. This is useful for generating classes for grids or creating complex, repetitive patterns."
+  },
+  {
+    "n": 17,
+    "title": "Loops: `@each`",
+    "math": "Iteration",
+    "note": "Explains the `@each` loop for iterating over a list or a map. The lesson demonstrates how to use `@each` to generate styles for different variations of a component, like different color themes."
+  },
+  {
+    "n": 18,
+    "title": "Sass Maps",
+    "math": "Key-value pairs",
+    "note": "This lesson introduces maps, a data type in Sass for storing key-value pairs (like a dictionary). It explains how to create maps and use them with the `@each` directive and `map-get` function to manage complex data like breakpoints or color palettes."
+  },
+  {
+    "n": 19,
+    "title": "Custom Functions",
+    "math": "Functional programming",
+    "note": "This section covers how to create your own custom functions in Sass using the `@function` directive. It demonstrates how to encapsulate complex logic into reusable functions to make stylesheets more powerful and readable."
+  },
+  {
+    "n": 20,
+    "title": "Organizing a Sass Project (7-1 Pattern)",
+    "math": "Software architecture",
+    "note": "This lesson provides guidance on how to structure a large Sass project. It introduces the popular 7-1 architectural pattern for organizing Sass files and folders into a scalable and maintainable structure."
+  },
+  {
+    "n": 21,
+    "title": "Sass and CSS Variables",
+    "math": "Algebra",
+    "note": "Discusses the relationship between Sass variables (which are compiled away) and native CSS Custom Properties (which exist in the browser). The lesson explains the differences, when to use each, and how they can be used together."
+  },
+  {
+    "n": 22,
+    "title": "Debugging in Sass",
+    "math": "Logic",
+    "note": "This final section covers techniques for debugging Sass code. It introduces the `@debug`, `@warn`, and `@error` directives for inspecting variable values, printing messages, and controlling the compilation process."
+  }
+]

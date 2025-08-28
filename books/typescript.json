@@ -1,0 +1,182 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to TypeScript",
+    "math": "Set theory",
+    "note": "This section introduces TypeScript as a typed superset of JavaScript that compiles to plain JavaScript. It covers the 'why' behind TypeScript, focusing on the benefits of static typing for building large-scale, maintainable applications. The context is modern web development."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up a TypeScript Project",
+    "math": "Logic",
+    "note": "Provides a guide on how to set up a new project with TypeScript. The lesson covers installing the TypeScript compiler (`tsc`) via npm and initializing a project with a `tsconfig.json` file to control the compilation process."
+  },
+  {
+    "n": 3,
+    "title": "Basic Types",
+    "math": "Set theory",
+    "note": "This lesson explains the fundamental data types in TypeScript, including `string`, `number`, and `boolean`. It demonstrates how to use type annotations to enforce type safety in variables and function parameters."
+  },
+  {
+    "n": 4,
+    "title": "Arrays and Tuples",
+    "math": "Set theory",
+    "note": "Covers how to define typed arrays in TypeScript. The lesson also introduces tuples, which are arrays with a fixed number of elements of known types, providing more strictness than a regular array."
+  },
+  {
+    "n": 5,
+    "title": "The `any` and `unknown` Types",
+    "math": "Logic",
+    "note": "Explains the `any` type, which opts out of type checking, and the safer alternative, `unknown`, which requires type checking before operations are performed. The lesson discusses when and why `unknown` should be preferred."
+  },
+  {
+    "n": 6,
+    "title": "Functions in TypeScript",
+    "math": "Functional programming",
+    "note": "Covers how to define functions with typed parameters and explicit return types. This lesson demonstrates how TypeScript enforces type safety at the function level, preventing common bugs."
+  },
+  {
+    "n": 7,
+    "title": "The `void` and `never` Types for Functions",
+    "math": "Functional programming",
+    "note": "Explains the `void` return type for functions that do not return a value, and the `never` type for functions that never return (e.g., they always throw an error or have an infinite loop)."
+  },
+  {
+    "n": 8,
+    "title": "Objects and the `object` Type",
+    "math": "Key-value pairs",
+    "note": "This lesson covers how to work with objects in TypeScript. It explains how to define the shape of an object using type annotations and introduces the generic `object` type."
+  },
+  {
+    "n": 9,
+    "title": "Type Aliases",
+    "math": "Algebra",
+    "note": "Introduces type aliases for creating custom names for a type. The lesson demonstrates how type aliases can make code more readable and reusable, especially for complex types like objects and unions."
+  },
+  {
+    "n": 10,
+    "title": "Union Types",
+    "math": "Set theory",
+    "note": "Explains how to use union types (`|`) to allow a variable or function parameter to have one of several types. The lesson also covers how to work with union types using type guards."
+  },
+  {
+    "n": 11,
+    "title": "Literal Types",
+    "math": "Set theory",
+    "note": "This section covers literal types, which allow you to specify the exact value a string, number, or boolean must have. This is often used with union types to create a set of allowed constant values."
+  },
+  {
+    "n": 12,
+    "title": "Enums",
+    "math": "Set theory",
+    "note": "Explains how to use enums to create a set of named constants. The lesson covers both numeric and string-based enums and their use cases for making code more readable and less error-prone."
+  },
+  {
+    "n": 13,
+    "title": "Type Assertion",
+    "math": "Logic",
+    "note": "Covers type assertion, which allows you to override TypeScript's inferred type when you have more information about a value. The lesson explains the `as` syntax and the angle-bracket syntax for type casting."
+  },
+  {
+    "n": 14,
+    "title": "Interfaces",
+    "math": "Object-oriented programming",
+    "note": "Introduces interfaces as a powerful way to define the structure of an object. The lesson covers creating and implementing interfaces for objects and classes, and the concept of 'duck typing'."
+  },
+  {
+    "n": 15,
+    "title": "Optional and Readonly Properties",
+    "math": "Object-oriented programming",
+    "note": "Expands on interfaces by explaining how to define optional properties (`?`) that may or may not exist on an object, and `readonly` properties that cannot be changed after the object is created."
+  },
+  {
+    "n": 16,
+    "title": "Classes in TypeScript",
+    "math": "Object-oriented programming",
+    "note": "This section introduces classes in TypeScript, covering constructors, properties, and methods. It demonstrates the principles of object-oriented programming in a TypeScript environment."
+  },
+  {
+    "n": 17,
+    "title": "Access Modifiers and Inheritance",
+    "math": "Object-oriented programming",
+    "note": "Dives deeper into classes by explaining access modifiers (`public`, `private`, `protected`) for encapsulation, and how to use inheritance (`extends`) to create subclasses."
+  },
+  {
+    "n": 18,
+    "title": "Abstract Classes and Interfaces for Classes",
+    "math": "Object-oriented programming",
+    "note": "Covers abstract classes, which cannot be instantiated and are meant to be inherited from. It also explains how a class can implement an interface to enforce a specific contract."
+  },
+  {
+    "n": 19,
+    "title": "Generics",
+    "math": "Set theory",
+    "note": "Introduces generics, which allow you to create reusable components (functions, classes, interfaces) that can work with a variety of types instead of a single one. This is a key feature for writing flexible and type-safe code."
+  },
+  {
+    "n": 20,
+    "title": "Generic Constraints",
+    "math": "Set theory",
+    "note": "Explains how to use generic constraints to limit the types that can be used with a generic component. This allows you to use methods and properties of the constrained type within the generic component."
+  },
+  {
+    "n": 21,
+    "title": "Utility Types",
+    "math": "Set theory",
+    "note": "This lesson introduces some of TypeScript's built-in utility types, like `Partial<T>`, `Readonly<T>`, `Pick<T, K>`, and `Omit<T, K>`. It demonstrates how these utilities can help in creating new types from existing ones."
+  },
+  {
+    "n": 22,
+    "title": "Intersection Types",
+    "math": "Set theory",
+    "note": "Explains how to use intersection types (`&`) to combine multiple types into one. This is useful for creating a new type that has all the members of the combined types."
+  },
+  {
+    "n": 23,
+    "title": "Type Guards and Narrowing",
+    "math": "Logic",
+    "note": "This section covers techniques for narrowing down the type of a variable within a conditional block. It explains type guards like `typeof` and `instanceof`, and user-defined type guards."
+  },
+  {
+    "n": 24,
+    "title": "Modules in TypeScript",
+    "math": "Set theory",
+    "note": "Explains how to organize code into modules using the `import` and `export` keywords, following the ES6 module standard. This is essential for building any non-trivial TypeScript application."
+  },
+  {
+    "n": 25,
+    "title": "Namespaces",
+    "math": "Set theory",
+    "note": "Covers TypeScript namespaces as an older way to organize code, primarily for preventing naming collisions in the global scope. The lesson contrasts namespaces with the more modern ES6 modules."
+  },
+  {
+    "n": 26,
+    "title": "Declaration Files (`.d.ts`)",
+    "math": "Logic",
+    "note": "Explains the purpose of declaration files (`.d.ts`) for describing the shape of existing JavaScript libraries to TypeScript. The lesson shows how to use and create declaration files to enable type checking for third-party code."
+  },
+  {
+    "n": 27,
+    "title": "Configuring `tsconfig.json`",
+    "math": "Logic",
+    "note": "This lesson provides a deeper dive into the `tsconfig.json` file. It covers important compiler options for strictness (`strict`), module resolution, and output generation, allowing for fine-tuned control over a project."
+  },
+  {
+    "n": 28,
+    "title": "Using TypeScript with the DOM",
+    "math": "Graph theory",
+    "note": "Covers how to interact with the Document Object Model (DOM) in a type-safe way. The lesson explains how to work with DOM elements and events while leveraging TypeScript's type system to avoid common errors."
+  },
+  {
+    "n": 29,
+    "title": "Using TypeScript with Node.js",
+    "math": "Logic",
+    "note": "This section provides an introduction to using TypeScript for server-side development with Node.js. It covers setting up a project and using type definition files from the `@types` organization for Node.js modules."
+  },
+  {
+    "n": 30,
+    "title": "Decorators",
+    "math": "Higher-order functions",
+    "note": "Introduces decorators, an experimental feature for adding annotations and meta-programming to classes and class members. The lesson explains the concept and shows examples of how decorators are used in frameworks like Angular and NestJS."
+  }
+]

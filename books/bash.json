@@ -1,0 +1,140 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to the Shell and Bash",
+    "math": "Command-line interface",
+    "note": "This section introduces the concept of a command-line shell and specifically Bash (Bourne Again SHell) as the most common shell on Linux and macOS. It covers the basic function of a shell as a command interpreter. The context is a standard terminal environment."
+  },
+  {
+    "n": 2,
+    "title": "Basic Navigation",
+    "math": "File systems",
+    "note": "Explains the most fundamental Bash commands for navigating the file system, such as `ls` (list files), `cd` (change directory), and `pwd` (print working directory). The lesson is performed entirely within a terminal."
+  },
+  {
+    "n": 3,
+    "title": "Working with Files and Directories",
+    "math": "File systems",
+    "note": "This lesson covers commands for creating, moving, copying, and deleting files and directories. It introduces `touch`, `mkdir`, `mv`, `cp`, and `rm`. It also covers how to view file contents with `cat`, `less`, and `more`."
+  },
+  {
+    "n": 4,
+    "title": "Getting Help",
+    "math": "Logic",
+    "note": "Explains how to get help for commands using the `man` (manual) pages and the `--help` flag. This is a critical skill for learning and working with the command line in any Bash environment."
+  },
+  {
+    "n": 5,
+    "title": "Input/Output Redirection",
+    "math": "Pipeline processing",
+    "note": "This section introduces I/O redirection in Bash. It covers redirecting standard output (`>`), standard error (`2>`), and appending (`>>`). It also covers redirecting standard input (`<`)."
+  },
+  {
+    "n": 6,
+    "title": "Pipes",
+    "math": "Pipeline processing",
+    "note": "Explains how to use pipes (`|`) to send the output of one command as the input to another command. The lesson demonstrates how to chain commands together to perform complex tasks, a core concept in shell scripting."
+  },
+  {
+    "n": 7,
+    "title": "Text Processing: `grep`",
+    "math": "Regular expressions",
+    "note": "Introduces `grep`, a powerful utility for searching plain-text data sets for lines that match a regular expression. The lesson covers basic pattern matching and common flags."
+  },
+  {
+    "n": 8,
+    "title": "Text Processing: `sed` and `awk`",
+    "math": "String theory",
+    "note": "This lesson provides an introduction to more advanced text-processing utilities: `sed` (the stream editor) for performing text transformations, and `awk` for pattern scanning and processing."
+  },
+  {
+    "n": 9,
+    "title": "Environment Variables",
+    "math": "Key-value pairs",
+    "note": "Explains the concept of environment variables for storing configuration data. The lesson covers how to view (`printenv`), set (`export`), and use common variables like `PATH`, `HOME`, and `USER` in a Bash session."
+  },
+  {
+    "n": 10,
+    "title": "Permissions and Ownership",
+    "math": "Access control",
+    "note": "This section covers the Linux/Unix file permission system. It explains the meaning of read, write, and execute permissions for the user, group, and others, and how to change them with `chmod` and `chown`."
+  },
+  {
+    "n": 11,
+    "title": "Process Management",
+    "math": "Concurrency",
+    "note": "Explains how to view and manage running processes from the command line. The lesson covers commands like `ps`, `top`, `kill`, and how to run processes in the background (`&`) and manage jobs."
+  },
+  {
+    "n": 12,
+    "title": "Introduction to Bash Scripting",
+    "math": "Automation",
+    "note": "Explains how to create and execute a simple Bash script. The lesson covers the shebang (`#!/bin/bash`), how to make a script executable with `chmod`, and how to run it."
+  },
+  {
+    "n": 13,
+    "title": "Variables in Scripts",
+    "math": "Algebra",
+    "note": "This lesson delves into using variables within a Bash script. It covers variable assignment, referencing variables, and the important difference between single quotes (literal) and double quotes (interpolated)."
+  },
+  {
+    "n": 14,
+    "title": "Command-Line Arguments",
+    "math": "Logic",
+    "note": "Covers how to access command-line arguments passed to a Bash script using positional parameters (`$1`, `$2`, etc.), and special variables like `$#` (number of arguments) and `$@` (all arguments)."
+  },
+  {
+    "n": 15,
+    "title": "User Input",
+    "math": "Logic",
+    "note": "Explains how to prompt for and read user input interactively within a script using the `read` command. This allows for creating interactive Bash scripts."
+  },
+  {
+    "n": 16,
+    "title": "Conditional Statements: `if`",
+    "math": "Boolean algebra",
+    "note": "This section explains how to use `if`, `elif`, and `else` for conditional logic in Bash scripts. It introduces the `test` command and the `[[ ... ]]` compound command for evaluating conditions."
+  },
+  {
+    "n": 17,
+    "title": "Conditional Statements: `case`",
+    "math": "Logic",
+    "note": "Introduces the `case` statement as an alternative to `if/elif` for simplifying complex conditional logic where a variable is matched against several patterns."
+  },
+  {
+    "n": 18,
+    "title": "Loops: `for`",
+    "math": "Iteration",
+    "note": "Covers the `for` loop for iterating over a list of items (like files or strings). The lesson demonstrates different ways to create lists for `for` loops to process."
+  },
+  {
+    "n": 19,
+    "title": "Loops: `while` and `until`",
+    "math": "Iteration",
+    "note": "Explains the `while` loop, which repeats as long as a condition is true, and the `until` loop, which repeats as long as a condition is false. These are useful for tasks that need to run until a certain state is reached."
+  },
+  {
+    "n": 20,
+    "title": "Functions",
+    "math": "Functional programming",
+    "note": "This lesson covers how to define and use functions to create reusable blocks of code within a Bash script. It explains how to pass arguments to functions and how to use `return` for exit statuses."
+  },
+  {
+    "n": 21,
+    "title": "Finding Files",
+    "math": "Search algorithms",
+    "note": "Covers the powerful `find` command for searching for files and directories based on various criteria like name, size, modification time, and permissions. It also introduces `xargs` for acting on the search results."
+  },
+  {
+    "n": 22,
+    "title": "Archiving and Compression",
+    "math": "Compression algorithms",
+    "note": "This lesson explains how to create and extract archives using `tar` and how to compress files using `gzip` and `bzip2`. It demonstrates how to combine these tools to create compressed archive files (`.tar.gz`)."
+  },
+  {
+    "n": 23,
+    "title": "Customizing the Bash Environment",
+    "math": "Logic",
+    "note": "This final section covers how to customize the Bash environment by modifying startup files like `~/.bashrc` and `~/.bash_profile`. It explains how to create aliases for frequently used commands and how to customize the command prompt (`PS1`)."
+  }
+]

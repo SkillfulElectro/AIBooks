@@ -1,0 +1,146 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to PostgreSQL",
+    "math": "Relational algebra",
+    "note": "This section introduces PostgreSQL, often called 'Postgres', as a powerful, open-source object-relational database system. It covers its key features like reliability, data integrity, and its support for advanced data types. The context is a standard server environment."
+  },
+  {
+    "n": 2,
+    "title": "Installing and Configuring PostgreSQL",
+    "math": "Logic",
+    "note": "Provides a guide on how to install PostgreSQL on different operating systems. The lesson covers the initial setup, including the role of the `postgres` superuser, and how to start and stop the database server."
+  },
+  {
+    "n": 3,
+    "title": "Using `psql`, the PostgreSQL CLI",
+    "math": "Command-line interface",
+    "note": "This lesson introduces `psql`, the interactive terminal for working with PostgreSQL. It covers connecting to a database, running SQL queries, and using meta-commands (like `\\l`, `\\dt`, `\\d`) to inspect the database structure."
+  },
+  {
+    "n": 4,
+    "title": "PostgreSQL Architecture: Databases and Schemas",
+    "math": "Set theory",
+    "note": "Explains the hierarchy of a PostgreSQL server, which contains multiple databases, and how each database can be further organized into schemas. This is key for multi-tenant applications and logical separation of data."
+  },
+  {
+    "n": 5,
+    "title": "PostgreSQL Data Types",
+    "math": "Set theory",
+    "note": "Explains the rich set of data types available in PostgreSQL, including standard types like `INTEGER` and `VARCHAR`, as well as advanced types like `JSONB`, `ARRAY`, `UUID`, and geometric types."
+  },
+  {
+    "n": 6,
+    "title": "Creating Tables and Constraints",
+    "math": "Relational algebra",
+    "note": "This section covers the `CREATE TABLE` statement for defining new tables. It focuses on defining columns and using constraints like `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, and `CHECK` to enforce data integrity."
+  },
+  {
+    "n": 7,
+    "title": "The `SERIAL` Type for Auto-Incrementing Keys",
+    "math": "Number theory",
+    "note": "Explains the use of `SERIAL` (and `BIGSERIAL`) pseudo-types in PostgreSQL for creating unique, auto-incrementing primary keys, a very common pattern in database design."
+  },
+  {
+    "n": 8,
+    "title": "CRUD Operations: INSERT",
+    "math": "Set theory",
+    "note": "Covers the `INSERT` statement for adding new rows to a table. The lesson also introduces the `RETURNING` clause, a powerful PostgreSQL feature for getting back data from the inserted row."
+  },
+  {
+    "n": 9,
+    "title": "CRUD Operations: SELECT",
+    "math": "Set theory",
+    "note": "Explores the `SELECT` statement in detail, covering how to retrieve data, use `WHERE` for filtering, and `ORDER BY` for sorting results in a PostgreSQL database."
+  },
+  {
+    "n": 10,
+    "title": "CRUD Operations: UPDATE and DELETE",
+    "math": "Logic",
+    "note": "This lesson covers the `UPDATE` and `DELETE` statements for modifying and removing data. It emphasizes the importance of the `WHERE` clause and also shows how to use the `RETURNING` clause with these statements."
+  },
+  {
+    "n": 11,
+    "title": "Joins in PostgreSQL",
+    "math": "Set theory",
+    "note": "Explains how to combine data from multiple tables using different types of joins (`INNER`, `LEFT`, `RIGHT`, `FULL OUTER`) in PostgreSQL. The context is on writing complex queries to retrieve related data."
+  },
+  {
+    "n": 12,
+    "title": "Grouping and Aggregation",
+    "math": "Data aggregation",
+    "note": "This section covers the `GROUP BY` clause and aggregate functions (`COUNT`, `SUM`, `AVG`, etc.) for summarizing data. It also introduces the `HAVING` clause for filtering grouped results."
+  },
+  {
+    "n": 13,
+    "title": "Subqueries and Common Table Expressions (CTEs)",
+    "math": "Set theory",
+    "note": "Explains how to use subqueries and CTEs (using the `WITH` clause) to write more readable and modular complex queries in PostgreSQL. CTEs are particularly powerful for recursive queries."
+  },
+  {
+    "n": 14,
+    "title": "Working with JSON and JSONB",
+    "math": "Data structures",
+    "note": "Introduces PostgreSQL's powerful `JSON` and `JSONB` data types for storing and querying JSON data. The lesson focuses on the indexed `JSONB` type and its specific operators and functions."
+  },
+  {
+    "n": 15,
+    "title": "Working with Arrays",
+    "math": "Set theory",
+    "note": "This lesson covers PostgreSQL's support for array data types. It demonstrates how to define array columns, insert array data, and use array-specific functions and operators for querying."
+  },
+  {
+    "n": 16,
+    "title": "Transactions and Data Integrity",
+    "math": "ACID properties",
+    "note": "Covers the concept of database transactions for ensuring data consistency (ACID properties). The lesson explains how to use `BEGIN`, `COMMIT`, and `ROLLBACK` to manage transactions in PostgreSQL."
+  },
+  {
+    "n": 17,
+    "title": "Indexes and Performance",
+    "math": "Data structures",
+    "note": "This section explains the importance of indexes for improving query performance. It covers different index types available in PostgreSQL (like B-Tree, GIN, GiST) and how to use the `EXPLAIN ANALYZE` command to understand query plans."
+  },
+  {
+    "n": 18,
+    "title": "Views",
+    "math": "Set theory",
+    "note": "Explains how to create and use views to simplify complex queries and control access to data. The lesson covers standard views and materialized views for caching the results of expensive queries."
+  },
+  {
+    "n": 19,
+    "title": "User and Role Management",
+    "math": "Access control",
+    "note": "This lesson covers how to manage access to a PostgreSQL database using its powerful role-based system. It explains how to create roles, grant privileges on different database objects, and manage user permissions for security."
+  },
+  {
+    "n": 20,
+    "title": "Stored Procedures and Functions",
+    "math": "Procedural programming",
+    "note": "This section explains how to write stored procedures and user-defined functions in PostgreSQL using languages like PL/pgSQL. The context is on moving business logic into the database for performance and reusability."
+  },
+  {
+    "n": 21,
+    "title": "Triggers",
+    "math": "Event-driven programming",
+    "note": "Explains how to create triggers that automatically execute a function in response to certain events (like `INSERT`, `UPDATE`, or `DELETE`) on a table. The lesson demonstrates how to use triggers to enforce complex business rules or auditing."
+  },
+  {
+    "n": 22,
+    "title": "Window Functions",
+    "math": "Data analysis",
+    "note": "Provides an introduction to window functions, which perform calculations across a set of rows related to the current row. This is a powerful feature for advanced data analysis and reporting directly within the database."
+  },
+  {
+    "n": 23,
+    "title": "Backup and Restore",
+    "math": "Logic",
+    "note": "This lesson covers the essential command-line tools for backing up and restoring a PostgreSQL database, such as `pg_dump`, `pg_dumpall`, and `pg_restore`. It explains the difference between logical and physical backups."
+  },
+  {
+    "n": 24,
+    "title": "PostgreSQL Extensions",
+    "math": "Software architecture",
+    "note": "This final section introduces the concept of extensions in PostgreSQL, which allow you to add new functionality to the database. It provides examples of popular extensions like PostGIS (for geospatial data) and `hstore` (for key-value data)."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Django",
+    "math": "Software architecture",
+    "note": "This section introduces Django as a high-level Python web framework that encourages rapid development and clean, pragmatic design. It covers the MVT (Model-View-Template) architectural pattern and the 'batteries-included' philosophy. The context is a Python web development environment."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up a Django Project",
+    "math": "Logic",
+    "note": "Provides a guide on how to set up a new Django project. The lesson covers installing Python and Django, creating a virtual environment, and using the `django-admin` command to start a new project and understand its file structure."
+  },
+  {
+    "n": 3,
+    "title": "Creating a Django App",
+    "math": "Set theory",
+    "note": "This lesson explains the concept of apps in Django as reusable modules of a web application. It covers creating a new app with `manage.py startapp`, registering it with the project, and the purpose of the files generated within the app directory."
+  },
+  {
+    "n": 4,
+    "title": "Django Views and URLconfs",
+    "math": "Graph theory",
+    "note": "Explains how to create views, which are Python functions that take a web request and return a web response. The lesson also covers how to map URLs to views using a URLconf (`urls.py`), which acts as the table of contents for the site."
+  },
+  {
+    "n": 5,
+    "title": "Django Templates",
+    "math": "String theory",
+    "note": "This section introduces the Django Template Language (DTL) for creating dynamic HTML pages. It covers template variables (`{{...}}`), tags (`{%...%}`), and how to pass data (the 'context') from a view to a template."
+  },
+  {
+    "n": 6,
+    "title": "Template Tags and Filters",
+    "math": "Functional programming",
+    "note": "Dives deeper into DTL by explaining common template tags like `{% if %}` and `{% for %}` for logic, and template filters (e.g., `|date`, `|length`) for transforming how data is displayed."
+  },
+  {
+    "n": 7,
+    "title": "Template Inheritance",
+    "math": "Set theory",
+    "note": "This lesson covers template inheritance, a powerful feature for creating a base template with common elements (like a header and footer) that other templates can extend using `{% extends %}` and `{% block %}` tags. This promotes code reuse."
+  },
+  {
+    "n": 8,
+    "title": "Django Models",
+    "math": "Relational algebra",
+    "note": "Explains how to define the data model for an application using Django's Object-Relational Mapper (ORM). The lesson covers creating model classes that inherit from `django.db.models.Model` and defining fields like `CharField` and `IntegerField`."
+  },
+  {
+    "n": 9,
+    "title": "Model Fields and Relationships",
+    "math": "Relational algebra",
+    "note": "Covers the different types of model fields available in Django and how to define relationships between models, such as `ForeignKey` (many-to-one), `ManyToManyField`, and `OneToOneField`."
+  },
+  {
+    "n": 10,
+    "title": "Database Migrations",
+    "math": "Logic",
+    "note": "This lesson covers Django's migration system for managing changes to the database schema. It explains how to use the `makemigrations` and `migrate` commands to keep the database schema in sync with the models."
+  },
+  {
+    "n": 11,
+    "title": "The Django Admin",
+    "math": "User interface design",
+    "note": "Introduces Django's built-in admin interface, a powerful tool for managing the application's data. The lesson shows how to register models with the admin site (`admin.py`) to get a full CRUD interface for free."
+  },
+  {
+    "n": 12,
+    "title": "Customizing the Django Admin",
+    "math": "User interface design",
+    "note": "Explains how to customize the admin interface using `ModelAdmin` classes. The lesson covers how to control which fields are displayed, how they are ordered, and how to add search and filter capabilities."
+  },
+  {
+    "n": 13,
+    "title": "Querying Data with the ORM",
+    "math": "Query languages",
+    "note": "This section explains how to use the Django ORM to retrieve data from the database. It covers making queries with methods like `.all()`, `.filter()` (for `WHERE` clauses), `.exclude()`, and `.get()` (for a single object)."
+  },
+  {
+    "n": 14,
+    "title": "Advanced Querying",
+    "math": "Query optimization",
+    "note": "Explores more advanced querying techniques, including chaining filters, using Q objects for complex lookups with OR conditions, and field lookups (e.g., `__icontains`, `__gt`)."
+  },
+  {
+    "n": 15,
+    "title": "Django Forms",
+    "math": "Logic",
+    "note": "Explains how to create and handle HTML forms with Django's forms library. The lesson covers creating a `Form` class, rendering it in a template, validating the submitted data, and processing it in a view."
+  },
+  {
+    "n": 16,
+    "title": "ModelForms",
+    "math": "Logic",
+    "note": "This lesson introduces `ModelForm`, a helper class for creating a form directly from a Django model. It demonstrates how `ModelForm` can simplify the process of creating forms for CRUD (Create, Read, Update, Delete) operations."
+  },
+  {
+    "n": 17,
+    "title": "Class-Based Views (CBVs)",
+    "math": "Object-oriented programming",
+    "note": "Introduces class-based views as an alternative to function-based views. The lesson covers Django's generic CBVs for common tasks, such as `ListView` for displaying lists of objects and `DetailView` for single object pages."
+  },
+  {
+    "n": 18,
+    "title": "Generic Editing Views",
+    "math": "Object-oriented programming",
+    "note": "Expands on CBVs by covering the generic editing views: `CreateView`, `UpdateView`, and `DeleteView`. These views provide a powerful and reusable way to handle form processing for creating and modifying objects."
+  },
+  {
+    "n": 19,
+    "title": "User Authentication",
+    "math": "Access control",
+    "note": "This section covers Django's built-in authentication system. It explains how to handle user registration, login, and logout using Django's provided views and forms, and how to protect views from unauthorized access."
+  },
+  {
+    "n": 20,
+    "title": "Static Files and Media",
+    "math": "File systems",
+    "note": "Explains how to manage static files (like CSS, JavaScript, and images) and user-uploaded media files. The lesson covers the necessary configuration (`STATIC_URL`, `MEDIA_ROOT`) for serving these files."
+  },
+  {
+    "n": 21,
+    "title": "Testing in Django",
+    "math": "Logic",
+    "note": "Provides an introduction to writing tests for a Django application. The lesson covers creating unit tests for models and views using Python's `unittest` framework and Django's test client to simulate requests."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Django REST Framework (DRF)",
+    "math": "API design",
+    "note": "This section introduces DRF as a powerful toolkit for building Web APIs. It covers the basic concepts of serializers (for converting querysets to JSON), views, and routers for creating a RESTful API."
+  },
+  {
+    "n": 23,
+    "title": "Deploying a Django Application",
+    "math": "Logic",
+    "note": "Covers the process of deploying a Django application to a production server. The lesson discusses key considerations like the WSGI server (e.g., Gunicorn), serving static files with a web server like Nginx, and database configuration."
+  },
+  {
+    "n": 24,
+    "title": "Django Signals",
+    "math": "Event-driven programming",
+    "note": "This lesson introduces signals, which allow certain senders to notify a set of receivers that some action has taken place. It explains how to use built-in signals (like `post_save`) and create custom ones for decoupled application logic."
+  },
+  {
+    "n": 25,
+    "title": "Performance and Optimization",
+    "math": "Query optimization",
+    "note": "This final section explores techniques for optimizing the performance of a Django application. It covers query optimization with `select_related` and `prefetch_related`, and caching strategies to reduce database load."
+  }
+]
