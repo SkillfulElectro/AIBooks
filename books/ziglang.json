@@ -1,0 +1,290 @@
+[
+  {
+    "n": 1,
+    "title": "Environment Setup",
+    "math": "None",
+    "note": "Install the Zig stable toolchain and verify with `zig version`. Use VS Code with the zls (Zig Language Server) extension for IDE support. Perform all commands in a terminal on Linux/macOS or PowerShell on Windows 11. No prior Zig knowledge required; this section ensures a working compiler, editor integration, and PATH configuration."
+  },
+  {
+    "n": 2,
+    "title": "Hello, Zig",
+    "math": "Boolean algebra",
+    "note": "Create a minimal `main.zig` that prints text using `std.debug.print`. Run with `zig run main.zig` and build with `zig build-exe main.zig`. Use a terminal on Linux/macOS or Windows PowerShell; optional editing in VS Code + zls. Explain true/false conditions driving simple branching in the example."
+  },
+  {
+    "n": 3,
+    "title": "Project Scaffolding",
+    "math": "Set theory (project composition)",
+    "note": "Initialize a project with `zig init-exe` and examine `src/main.zig`, `build.zig`, and `build.zig.zon`. Build and run via `zig build` and `zig build run`. Context: terminal on Linux/macOS/Windows; editor: VS Code + zls. Teach how build steps, modules, and metadata files relate to each other."
+  },
+  {
+    "n": 4,
+    "title": "Build Modes",
+    "math": "Asymptotic analysis, numerical error",
+    "note": "Demonstrate `-Doptimize=Debug|ReleaseSafe|ReleaseFast|ReleaseSmall` with `zig build`. Show runtime checks in Debug and Safe, and performance differences in Release modes. Platform: Linux/macOS/Windows terminal; editor optional VS Code + zls. Discuss trade-offs among speed, size, and safety."
+  },
+  {
+    "n": 5,
+    "title": "Variables and Types",
+    "math": "Type theory basics",
+    "note": "Declare `const` and `var`; use integer, float, bool, and `comptime_int`. Explain immutability defaults and explicit sizing like `u8`, `i64`, `f32`. Compile and run on Linux/macOS/Windows via terminal; code in VS Code + zls. Show integer literals, numeric separators, and underscore naming."
+  },
+  {
+    "n": 6,
+    "title": "Control Flow Essentials",
+    "math": "Boolean algebra, predicate logic",
+    "note": "Use `if`, `while`, `for`, and `switch` with exhaustive handling. Demonstrate `break`, `continue`, and labeled loops. Context: run examples with `zig run` in a terminal on Linux/macOS/Windows; edit in VS Code + zls. Emphasize expression-oriented `if` and exhaustive `switch` for safety."
+  },
+  {
+    "n": 7,
+    "title": "Functions and Param Passing",
+    "math": "Function composition",
+    "note": "Define functions with explicit return types, default parameterless calls, and error-union returns. Show value vs pointer parameters and inlining hints. Build and run via terminal on Linux/macOS/Windows; editor: VS Code + zls. Include naming/style conventions idiomatic to Zig."
+  },
+  {
+    "n": 8,
+    "title": "Errors, try, catch",
+    "math": "Set theory (error sets)",
+    "note": "Introduce error sets, error unions (`!T`), `try`, `catch`, and propagation patterns. Show mapping/handling with `catch |e| {...}`. Execute on Linux/macOS/Windows via terminal; editor: VS Code + zls. Contrast errors with panics and when to return vs abort."
+  },
+  {
+    "n": 9,
+    "title": "defer and errdefer",
+    "math": "Logical sequencing",
+    "note": "Guarantee cleanup with `defer` and rollbacks with `errdefer`. Demonstrate ordering relative to returns and errors. Run code using terminal on Linux/macOS/Windows; optional VS Code + zls. Apply to file handles and allocator-owned memory."
+  },
+  {
+    "n": 10,
+    "title": "Pointers, Arrays, Slices",
+    "math": "Binary arithmetic, pointer arithmetic",
+    "note": "Work with fixed-size arrays `[N]T`, slices `[]T`, many-pointer `[*]T`, and sentinel-terminated slices `[:0]u8`. Explain bounds checks and pointer safety. Build via terminal on Linux/macOS/Windows; edit in VS Code + zls. Show conversions and lifetime considerations for returning slices."
+  },
+  {
+    "n": 11,
+    "title": "Optionals and Nullability",
+    "math": "Set theory (optional types)",
+    "note": "Teach `?T` optionals, `if (x) |v|` unwrapping, `orelse` defaults, and `.?` operator. Contrast with error unions. Platform: Linux/macOS/Windows terminal; editor: VS Code + zls. Include API patterns for returning `?[]const u8` vs `![]u8`."
+  },
+  {
+    "n": 12,
+    "title": "Structs and Namespaces",
+    "math": "Algebraic data types",
+    "note": "Define `struct` with fields, methods via top-level functions taking `*Self`, and `usingnamespace` for composition. Show `init` helpers and value semantics. Run on Linux/macOS/Windows via terminal; edit in VS Code + zls."
+  },
+  {
+    "n": 13,
+    "title": "Enums and Tagged Unions",
+    "math": "Sum types, pattern matching",
+    "note": "Create `enum` with explicit integer tags and `union(enum)` tagged unions for variant data. Use `switch` exhaustiveness on tags. Context: terminal on Linux/macOS/Windows; editor: VS Code + zls. Discuss memory layout and when to use payload unions."
+  },
+  {
+    "n": 14,
+    "title": "Packages and Imports",
+    "math": "Graph theory (module dependency graphs)",
+    "note": "Import modules with `@import`, add local modules in `build.zig`, and reference standard library as `std`. Demonstrate clean module boundaries. Build and run via terminal on Linux/macOS/Windows; edit in VS Code + zls."
+  },
+  {
+    "n": 15,
+    "title": "Testing Basics",
+    "math": "Logic, proof by example",
+    "note": "Write `test` blocks, use `std.testing.expect`, and run with `zig test file.zig` or `zig build test`. Platform: Linux/macOS/Windows terminal; editor: VS Code + zls. Cover exit codes and isolating tests."
+  },
+  {
+    "n": 16,
+    "title": "Formatting and Style",
+    "math": "None",
+    "note": "Use `zig fmt` to auto-format, understand common idioms (snake_case, explicit types), and configure VS Code to format on save. Run tooling in Linux/macOS terminals or Windows PowerShell; editor: VS Code + zls."
+  },
+  {
+    "n": 17,
+    "title": "Stdlib Tour: Core Modules",
+    "math": "None",
+    "note": "Explore `std.mem`, `std.heap`, `std.debug`, `std.fs`, and `std.time`. Show discovery via `zig build --help` and reading stdlib docs in editor. Execute examples on Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 18,
+    "title": "Allocators Overview",
+    "math": "Amortized analysis, memory models",
+    "note": "Introduce allocator interfaces and patterns: `GeneralPurposeAllocator`, `ArenaAllocator`, and `FixedBufferAllocator`. Show ownership rules and `defer`-based cleanup. Platform: Linux/macOS/Windows terminal; editor: VS Code + zls."
+  },
+  {
+    "n": 19,
+    "title": "Strings and Unicode",
+    "math": "Encoding theory, combinatorics of sequences",
+    "note": "Explain that strings are `[]u8`; validate UTF‑8 with `std.unicode`; handle code points vs bytes. Demonstrate slicing, copying, and immutability. Run on Linux/macOS/Windows via terminal; edit in VS Code + zls."
+  },
+  {
+    "n": 20,
+    "title": "File I/O Essentials",
+    "math": "Tree structures (directories)",
+    "note": "Use `std.fs.cwd()` to read, write, and iterate files/directories; handle errors robustly. Cover paths, permissions, and text/binary modes. Execute in Linux/macOS terminals or Windows PowerShell; editor: VS Code + zls."
+  },
+  {
+    "n": 21,
+    "title": "CLI Arguments and Exit Codes",
+    "math": "Finite automata (argument parsing flow)",
+    "note": "Access arguments via `std.process.argsAlloc` and implement basic flag parsing. Return appropriate exit codes with `std.process.exit`. Platform: Linux/macOS/Windows terminal; editor: VS Code + zls."
+  },
+  {
+    "n": 22,
+    "title": "Logging and Debugging",
+    "math": "Logic",
+    "note": "Use `std.log` with levels and `std.debug.print` for formatted output. Demonstrate `std.debug.assert` and `unreachable`. Run on Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 23,
+    "title": "Collections in std",
+    "math": "Hash functions, amortized analysis",
+    "note": "Work with `ArrayList`, `AutoHashMap`, and `StringHashMap`. Show initialization with allocators, iteration, and teardown. Build and run on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 24,
+    "title": "JSON Parsing and Writing",
+    "math": "Tree traversal, grammars",
+    "note": "Parse JSON with `std.json` (DOM and streaming styles) and serialize with pretty printing. Handle errors and memory explicitly. Execute in Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 25,
+    "title": "Time and Scheduling",
+    "math": "Modular arithmetic, clock drift basics",
+    "note": "Use `std.time` to measure durations, sleep, and benchmark operations. Explain monotonic vs wall-clock time. Platform: Linux/macOS/Windows terminal; editor: VS Code + zls."
+  },
+  {
+    "n": 26,
+    "title": "Concurrency with Threads",
+    "math": "Amdahl's law, queueing basics",
+    "note": "Spawn threads with `std.Thread.spawn`, share data safely with `Mutex`, and join threads. Demonstrate race conditions and fixes. Build/run on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 27,
+    "title": "Atomics and Memory Ordering",
+    "math": "Partial orders, happens-before relations",
+    "note": "Use atomic operations for lock-free counters and flags, discussing Acquire/Release/SeqCst orderings conceptually. Provide compile-and-run examples on Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 28,
+    "title": "Networking: TCP/UDP",
+    "math": "Graph theory (networks), probability (timeouts)",
+    "note": "Create a TCP echo client/server with `std.net` and a simple UDP sender/receiver. Handle partial reads/writes, timeouts, and errors. Run from terminal on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 29,
+    "title": "Bit Manipulation",
+    "math": "Boolean algebra, binary arithmetic",
+    "note": "Use shifts, masks, `@bitCast`, and packed structs for bitfields. Demonstrate endianness and serialization of integers. Build and run via Linux/macOS/Windows terminal; editor: VS Code + zls."
+  },
+  {
+    "n": 30,
+    "title": "Numerics and IEEE‑754",
+    "math": "Floating-point arithmetic, numerical stability",
+    "note": "Work with `f16/f32/f64`, rounding, NaN/Inf, and conversions `@floatFromInt`, `@intFromFloat`. Discuss precision loss and accumulation error. Execute on Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 31,
+    "title": "Compile-Time Programming",
+    "math": "Metaprogramming, logic",
+    "note": "Use `comptime` variables/blocks, `@typeInfo`, `@TypeOf`, `@sizeOf`, and `inline for` to generate code at compile time. Provide examples compiled on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 32,
+    "title": "Generics via comptime",
+    "math": "Parametric polymorphism",
+    "note": "Design generic functions and types with `comptime` parameters and type values. Show instantiation and specialization. Build and run using terminal on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 33,
+    "title": "Reflection and Field Access",
+    "math": "Set theory (field sets)",
+    "note": "Inspect types using `@typeInfo` and access fields dynamically with `@field`. Demonstrate serialization based on reflected metadata. Execute on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 34,
+    "title": "Memory Layout and Alignment",
+    "math": "Modular arithmetic, geometry (alignment)",
+    "note": "Explain alignment, padding, and `@alignOf`, `@alignCast`. Show `extern` structs for ABI-stable layouts and packed structs for bit-level control. Platform: Linux/macOS/Windows terminal; editor: VS Code + zls."
+  },
+  {
+    "n": 35,
+    "title": "Advanced Error Patterns",
+    "math": "Algebra of sum types",
+    "note": "Compose error sets, wrap/unwrap with helper functions, and convert between error domains. Compare error unions with optionals for API clarity. Build on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 36,
+    "title": "Build.zig Deep Dive",
+    "math": "Graph theory (build DAGs)",
+    "note": "Author custom build steps with `std.Build`, add executables/libs, pass `-D` options, and define `run`, `test`, and `install` steps. Execute `zig build` in Linux/macOS terminals or Windows PowerShell; editor: VS Code + zls."
+  },
+  {
+    "n": 37,
+    "title": "Cross‑Compilation",
+    "math": "Number systems (architectures), set theory",
+    "note": "Target different platforms with `-Dtarget` (e.g., `x86_64-windows` or `aarch64-linux`). Show musl vs glibc and static vs dynamic. Build using terminal on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 38,
+    "title": "C Interop: Calling C",
+    "math": "Function mappings, ABI concepts",
+    "note": "Use `@cImport` and `@cInclude` to call C headers, link system libraries, and pass pointers safely. Build with `zig build` or `zig cc` on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 39,
+    "title": "C Interop: Exporting Zig",
+    "math": "ABI, set theory (symbol sets)",
+    "note": "Export Zig functions with `extern` and C ABI, build a shared/static library, and call from a small C program. Compile and link on Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 40,
+    "title": "WebAssembly with WASI",
+    "math": "Automata, stack machines",
+    "note": "Compile to `wasm32-wasi`, run with a WASI runtime (e.g., wasmtime), and perform file I/O via WASI APIs. Use terminal on Linux/macOS/Windows; edit in VS Code + zls. Explain limitations vs native."
+  },
+  {
+    "n": 41,
+    "title": "Cryptography in std",
+    "math": "Number theory, modular arithmetic, probability",
+    "note": "Use `std.crypto` for hashing (SHA‑256) and authenticated encryption (e.g., ChaCha20‑Poly1305). Manage keys as byte slices and use constant‑time comparisons. Build and run on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 42,
+    "title": "SIMD and Vectors",
+    "math": "Linear algebra, vector spaces",
+    "note": "Demonstrate `@Vector` types for packed operations and illustrate speedups for arithmetic kernels. Verify results and measure performance. Execute on Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 43,
+    "title": "Unsafe Operations",
+    "math": "Logic (preconditions), binary arithmetic",
+    "note": "Explain `@ptrCast`, `@intFromPtr`, volatile reads/writes, and when `unreachable` is valid. Emphasize safety checks and testing. Run via terminal on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 44,
+    "title": "Resource Embedding",
+    "math": "Information theory (byte sequences)",
+    "note": "Embed assets with `@embedFile` and access them as `[]const u8`. Compare embedding vs loading from disk. Build and run on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 45,
+    "title": "API Design in Zig",
+    "math": "Type theory, algebraic data types",
+    "note": "Design clear APIs using error unions, optionals, explicit allocators, and `defer`-based cleanup. Provide naming, documentation comments, and module layout guidelines. Platform: Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 46,
+    "title": "Dependencies and Vendoring",
+    "math": "Graph theory (dependency graphs)",
+    "note": "Add local or vendored modules via `build.zig` and keep third‑party code in a `deps/` directory. Demonstrate reproducible builds with `build.zig.zon` metadata. Build from Linux/macOS/Windows terminals; editor: VS Code + zls."
+  },
+  {
+    "n": 47,
+    "title": "Profiling and Optimization",
+    "math": "Big‑O, cache locality, statistics",
+    "note": "Benchmark with `std.time`, profile using platform tools (Linux perf, macOS Instruments, Windows Performance Analyzer), and optimize allocations and data layout. Build and run on Linux/macOS/Windows; editor: VS Code + zls."
+  },
+  {
+    "n": 48,
+    "title": "Testing Advanced Patterns",
+    "math": "Probability (random testing), logic",
+    "note": "Use `std.testing.allocator` for leak detection, create table‑driven tests, and add property checks with `std.rand`. Integrate tests into `zig build test`. Execute on Linux/macOS/Windows terminals; editor: VS Code + zls."
+  }
+]
