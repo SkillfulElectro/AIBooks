@@ -1,0 +1,152 @@
+[
+  {
+    "n": 1,
+    "title": "What Is a Microservice?",
+    "math": "Set Theory",
+    "note": "Define the core concept of a microservice as a small, autonomous service that works together with others. Explain its key characteristics: single responsibility, independent deployment, decentralized governance, and technology heterogeneity. The context for this lesson is a high-level, language-agnostic architectural discussion."
+  },
+  {
+    "n": 2,
+    "title": "Monolithic vs. Microservice Architectures",
+    "math": "Complexity Theory",
+    "note": "Compare and contrast the monolithic architecture (a single, unified deployable unit) with the microservice architecture (a collection of smaller, independent services). Use diagrams to illustrate communication paths, deployment models, and failure domains for each. The context is a conceptual architectural comparison without code."
+  },
+  {
+    "n": 3,
+    "title": "Principles of Domain-Driven Design (DDD)",
+    "math": "Graph Theory, Set Theory",
+    "note": "Introduce Domain-Driven Design (DDD) as a software design approach for complex systems. Explain the foundational concepts of Ubiquitous Language, Bounded Contexts, and Aggregates, which are essential for identifying logical service boundaries. The context is a theoretical design methodology discussion."
+  },
+  {
+    "n": 4,
+    "title": "Decomposing a Monolith into Microservices",
+    "math": "Graph Partitioning",
+    "note": "Teach strategies for breaking down a large, existing monolithic application into smaller microservices. Cover the 'Decompose by Business Capability' and 'Decompose by Subdomain' patterns, using a sample e-commerce monolith as a case study. The context is a practical architectural refactoring exercise."
+  },
+  {
+    "n": 5,
+    "title": "Synchronous Communication with REST APIs",
+    "math": "Finite State Machines",
+    "note": "Explain synchronous, request-response communication between services using REST (Representational State Transfer) over HTTP. Teach how to design and build a simple REST API for a microservice using Java with the Spring Boot framework, covering HTTP verbs (GET, POST, PUT, DELETE) and JSON data exchange."
+  },
+  {
+    "n": 6,
+    "title": "High-Performance Communication with gRPC",
+    "math": "Formal Languages, Protocol Buffers",
+    "note": "Introduce gRPC (Google Remote Procedure Call) as a high-performance, contract-first alternative to REST. Explain how it uses Protocol Buffers for schema definition and HTTP/2 for transport. Demonstrate creating a client-server interaction using gRPC with the Go programming language."
+  },
+  {
+    "n": 7,
+    "title": "Asynchronous Communication with Message Queues",
+    "math": "Queuing Theory",
+    "note": "Explain the principles of asynchronous, event-based communication to decouple services and improve system resilience. Teach how to implement a publisher/subscriber pattern using a message broker. The lesson will use RabbitMQ as the message broker and Python with the Pika library for implementation."
+  },
+  {
+    "n": 8,
+    "title": "Event-Driven Architecture with Apache Kafka",
+    "math": "Log-Structured Merge-Trees",
+    "note": "Introduce Apache Kafka as a distributed streaming platform for building real-time, event-driven architectures. Explain the concepts of topics, producers, consumers, and durable, ordered message logs. Demonstrate how to stream data between two Node.js services using the `kafkajs` library."
+  },
+  {
+    "n": 9,
+    "title": "The Database per Service Pattern",
+    "math": "Relational Algebra, CAP Theorem",
+    "note": "Explain the core data management pattern where each microservice owns and manages its own private database. Discuss the benefits of technology heterogeneity and loose coupling, along with the challenges of eventual consistency and distributed data management. The context is a foundational data architecture principle."
+  },
+  {
+    "n": 10,
+    "title": "Implementing the API Gateway Pattern",
+    "math": "Graph Theory (Routing)",
+    "note": "Introduce the API Gateway as a single entry point for all client requests. Explain its role in routing, request aggregation, and handling cross-cutting concerns like authentication. Demonstrate setting up a basic gateway using Spring Cloud Gateway to route requests to two different backend Java microservices."
+  },
+  {
+    "n": 11,
+    "title": "Service Discovery with Consul",
+    "math": "Hash Tables, Gossip Protocol",
+    "note": "Explain the problem of services locating each other in a dynamic environment with ephemeral IP addresses. Introduce the Service Discovery pattern. Implement a server-side discovery mechanism using HashiCorp Consul as the service registry and register two Go microservices as clients."
+  },
+  {
+    "n": 12,
+    "title": "Externalized Configuration Management",
+    "math": "Key-Value Stores",
+    "note": "Teach the pattern of externalizing configuration to remove it from application code, allowing dynamic updates without redeployment. Implement this using Spring Cloud Config Server, which serves configuration properties from a central Git repository to a client Spring Boot application."
+  },
+  {
+    "n": 13,
+    "title": "The Circuit Breaker Pattern for Fault Tolerance",
+    "math": "Probability Theory, State Machines",
+    "note": "Introduce the Circuit Breaker pattern to prevent a network or service failure from cascading to other services. Explain its three states: Closed, Open, and Half-Open. Implement a circuit breaker in a Java Spring Boot application using the Resilience4j library to handle failures when calling a dependent service."
+  },
+  {
+    "n": 14,
+    "title": "Securing Microservices with OAuth 2.0 and JWT",
+    "math": "Cryptography (Asymmetric Keys)",
+    "note": "Explain fundamentals of securing microservice endpoints. Introduce the OAuth 2.0 authorization framework and JSON Web Tokens (JWT) for stateless authentication. Demonstrate securing a REST API using Keycloak as an identity provider, where an API Gateway validates the JWT on incoming requests."
+  },
+  {
+    "n": 15,
+    "title": "Containerizing Services with Docker",
+    "math": "Set Theory (Namespaces)",
+    "note": "Introduce containerization as a method for packaging and isolating applications with their dependencies. Teach how to write a Dockerfile for a simple Python Flask application, build a Docker image, and run it as a standalone container. The platform used will be Docker Desktop."
+  },
+  {
+    "n": 16,
+    "title": "Orchestrating Containers with Kubernetes",
+    "math": "Control Theory, Graph Theory",
+    "note": "Explain the need for a container orchestrator to manage applications at scale. Introduce core Kubernetes concepts: Pods, Services, Deployments, and ConfigMaps. Demonstrate deploying a containerized Node.js application to a local Kubernetes cluster like Minikube."
+  },
+  {
+    "n": 17,
+    "title": "Distributed Tracing for Observability",
+    "math": "Directed Acyclic Graphs (DAGs)",
+    "note": "Explain how to trace a request as it travels across multiple microservices to debug performance bottlenecks. Introduce the concepts of Spans and Traces. Instrument two communicating Go microservices using OpenTelemetry and visualize the resulting traces in the Jaeger UI."
+  },
+  {
+    "n": 18,
+    "title": "Monitoring with Prometheus and Grafana",
+    "math": "Time Series Analysis",
+    "note": "Teach how to collect and visualize metrics for monitoring the health and performance of microservices. Demonstrate how to expose application metrics from a Java Spring Boot service using Micrometer, scrape them with a Prometheus server, and build a real-time dashboard in Grafana."
+  },
+  {
+    "n": 19,
+    "title": "The Saga Pattern for Distributed Transactions",
+    "math": "Finite Automata, Compensating Transactions",
+    "note": "Explain how to maintain data consistency across multiple services without using distributed locks. Introduce the Saga pattern, which coordinates a sequence of local transactions. Describe and implement a Choreography-based Saga using RabbitMQ message queues to coordinate between three C#/.NET services."
+  },
+  {
+    "n": 20,
+    "title": "CQRS and Event Sourcing Patterns",
+    "math": "Event Calculus, Log Structures",
+    "note": "Introduce Command Query Responsibility Segregation (CQRS) to separate read and write models, and Event Sourcing to store an application's state as a sequence of events. Explain how these patterns enable scalability and auditability. Implement a simple application using the Axon Framework with Java to demonstrate the concepts."
+  },
+  {
+    "n": 21,
+    "title": "Consumer-Driven Contract Testing",
+    "math": "Formal Verification",
+    "note": "Teach a testing strategy to ensure services can communicate effectively without requiring complex, brittle end-to-end tests. Introduce Consumer-Driven Contract Testing, where a 'consumer' service defines a 'contract' that a 'provider' service must honor. Implement a contract test between two Node.js services using the Pact framework."
+  },
+  {
+    "n": 22,
+    "title": "CI/CD Pipelines for Microservices",
+    "math": "Process Automation Theory",
+    "note": "Explain how to automate the build, testing, and deployment process for a single microservice. Design and implement a continuous integration and continuous deployment (CI/CD) pipeline. Use GitHub Actions to automatically build a Docker image for a Python service, run unit tests, and push it to a container registry like Docker Hub."
+  },
+  {
+    "n": 23,
+    "title": "Advanced Deployment with Blue-Green Deployments",
+    "math": "Risk Analysis",
+    "note": "Teach the Blue-Green deployment strategy for releasing new software versions with near-zero downtime and instant rollback capability. Explain the concept of maintaining two identical production environments ('Blue' and 'Green'). Demonstrate a Blue-Green deployment on Kubernetes by manipulating Service selectors."
+  },
+  {
+    "n": 24,
+    "title": "Introduction to Service Mesh with Istio",
+    "math": "Graph Theory, Network Theory",
+    "note": "Introduce the concept of a Service Mesh as a dedicated infrastructure layer for managing service-to-service communication. Explain how a sidecar proxy (Envoy) works. Use Istio on a Kubernetes cluster to demonstrate advanced traffic management, like request routing and fault injection, without changing any application code."
+  },
+  {
+    "n": 25,
+    "title": "Building Serverless Functions with AWS Lambda",
+    "math": "Function Composition",
+    "note": "Explore the evolution from microservices to finer-grained, event-triggered functions (FaaS - Function as a Service). Teach how to write, deploy, and trigger a serverless function. Create a simple API endpoint using AWS Lambda and Amazon API Gateway, with the function code written in Python."
+  }
+]
