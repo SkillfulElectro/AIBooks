@@ -1,0 +1,194 @@
+[
+  {
+    "n": 1,
+    "title": "The \"What and Why\" of Nix",
+    "math": "Set theory, Logic",
+    "note": "Explain the core philosophy of Nix: reproducibility, declarativity, and purity. Introduce the concept of building software from a complete, isolated set of dependencies, contrasting it with traditional package managers like APT or Homebrew. This is a conceptual lesson with no hands-on commands."
+  },
+  {
+    "n": 2,
+    "title": "Installing the Nix Package Manager",
+    "math": "Graph theory",
+    "note": "Provide step-by-step instructions for installing the Nix package manager on a standard Linux distribution (like Ubuntu), macOS, or Windows Subsystem for Linux (WSL) using the official multi-user installation script. Explain what the script does, including creating the `/nix` directory and setting up the Nix daemon."
+  },
+  {
+    "n": 3,
+    "title": "Understanding the Nix Store",
+    "math": "Hashing functions, Cryptography",
+    "note": "Describe the purpose and structure of the `/nix/store`. Explain that every package and its dependencies live in a unique, read-only directory named with a cryptographic hash of its inputs. Use the `ls /nix/store` command to demonstrate this structure."
+  },
+  {
+    "n": 4,
+    "title": "Entering Ad-Hoc Environments with nix-shell",
+    "math": "Set theory",
+    "note": "Teach the `nix-shell` command for creating temporary, isolated shell environments. Demonstrate how to start a shell with specific packages available, like `nix-shell -p git cowsay`, without permanently installing them on the system. Explain how exiting the shell removes access to these packages."
+  },
+  {
+    "n": 5,
+    "title": "Nix Language Fundamentals: Primitives and Comments",
+    "math": "Formal language theory",
+    "note": "Introduce the basic syntax of the Nix language using the `nix repl`. Cover fundamental data types: integers (e.g., `123`), strings (e.g., `\"hello\"` and `''world''`), booleans (`true`, `false`), null (`null`), and paths (e.g., `./file.txt`). Explain single-line (`#`) and multi-line (`/* ... */`) comments."
+  },
+  {
+    "n": 6,
+    "title": "Working with Lists in Nix",
+    "math": "Sequence and series",
+    "note": "Explain how to define and manipulate lists in the Nix language within the `nix repl`. Cover list creation syntax (`[ 1 \"two\" true ]`), accessing elements with `builtins.elemAt`, checking for membership with `builtins.elem`, and concatenating lists with the `++` operator."
+  },
+  {
+    "n": 7,
+    "title": "Working with Attribute Sets in Nix",
+    "math": "Set theory, Key-value pairs",
+    "note": "Introduce attribute sets (attrsets), the Nix equivalent of maps or dictionaries, using the `nix repl`. Explain the syntax for defining them (`{ key = \"value\"; }`), accessing attributes with dot notation (`set.key`), and merging sets with the `//` operator."
+  },
+  {
+    "n": 8,
+    "title": "Defining Local Variables with `let...in`",
+    "math": "Lambda calculus, Algebra",
+    "note": "Teach the `let ... in` expression for defining local variables within a Nix expression. In the `nix repl`, demonstrate how to bind values to names within the `let` block and use them in the `in` block, for example: `let x = 5; in x * x`."
+  },
+  {
+    "n": 9,
+    "title": "Creating and Using Functions in Nix",
+    "math": "Lambda calculus, Function application",
+    "note": "Explain how to define and call functions (anonymous lambdas) in the Nix language. In the `nix repl`, show the syntax for a simple function `x: x + 1` and a function taking an attribute set `{ name }: \"Hello, ${name}\"`. Demonstrate function application."
+  },
+  {
+    "n": 10,
+    "title": "Conditional Expressions with `if-then-else`",
+    "math": "Boolean algebra, Logic",
+    "note": "Teach how to control flow in the Nix language using `if ... then ... else` expressions. Emphasize that it is an expression that must evaluate to a value, not a statement. Demonstrate its usage in the `nix repl` with boolean conditions."
+  },
+  {
+    "n": 11,
+    "title": "Importing Nix Expressions from Files",
+    "math": "Graph theory",
+    "note": "Teach how to structure Nix code across multiple files using `import`. Create two files, `data.nix` (containing an attribute set) and `main.nix`. In `main.nix`, use `import ./data.nix` to load the expression from the other file and use its value. Evaluate `main.nix` using `nix-instantiate --eval`."
+  },
+  {
+    "n": 12,
+    "title": "Introduction to Nix Derivations",
+    "math": "Directed Acyclic Graphs, Hashing functions",
+    "note": "Conceptually explain what a Nix derivation is: a set of instructions for building a package in a pure environment. Show a `.drv` file in `/nix/store` and explain that it's a low-level representation of a build. Use `nix show-derivation` to inspect a derivation from nixpkgs."
+  },
+  {
+    "n": 13,
+    "title": "Building \"Hello World\" with `derivation`",
+    "math": "Logic, Instruction sets",
+    "note": "Guide the user to write their first derivation from scratch using the `builtins.derivation` function. The goal is to create a file containing \"hello world\". The derivation will specify `name`, `system`, a `builder` (e.g., `/bin/sh`), and `args`. Build it using `nix-build`."
+  },
+  {
+    "n": 14,
+    "title": "Using `stdenv.mkDerivation` for Standard Builds",
+    "math": "Abstraction, Set theory",
+    "note": "Introduce `stdenv.mkDerivation` as the high-level, standard way to package software. Explain that it provides a standard environment with a C compiler, coreutils, and a build script that runs through phases (unpack, configure, build, install). Create a minimal C \"hello world\" package using it."
+  },
+  {
+    "n": 15,
+    "title": "Customizing Packages with `overrideAttrs`",
+    "math": "Function composition, Set theory",
+    "note": "Teach how to modify an existing package from Nixpkgs without forking it. Use the `overrideAttrs` function to change attributes of a package, for example, changing a build flag or applying a patch. Demonstrate this by modifying the `cowsay` package to use a different message by default."
+  },
+  {
+    "n": 16,
+    "title": "Creating Project Environments with `shell.nix`",
+    "math": "Set theory",
+    "note": "Explain how to create a reproducible development environment using a `shell.nix` file. Write a simple `shell.nix` that uses `pkgs.mkShell` to define build inputs (e.g., a compiler) and runtime dependencies. Show that running `nix-shell` in the same directory automatically loads this environment."
+  },
+  {
+    "n": 17,
+    "title": "Understanding Nix Flakes and Their Structure",
+    "math": "Graph theory, Hashing functions",
+    "note": "Introduce the concept of Flakes as a modern, more reproducible way to manage Nix projects. Explain the `flake.nix` and `flake.lock` files. Describe the standard structure of a `flake.nix` with `description`, `inputs`, and `outputs`."
+  },
+  {
+    "n": 18,
+    "title": "Managing Dependencies with Flake Inputs",
+    "math": "Graph theory",
+    "note": "Detail how to define and use `inputs` in a `flake.nix` file. Show how to add `nixpkgs` and another flake (e.g., from GitHub) as inputs. Explain that the `outputs` function receives these inputs as arguments. Use `nix flake show` to inspect the flake."
+  },
+  {
+    "n": 19,
+    "title": "Using Flakes for Development Shells",
+    "math": "Set theory",
+    "note": "Teach how to define a development environment as a `devShells.<system>.default` output in `flake.nix`. Create a `flake.nix` that provides a shell with `nodejs` and `git`. Demonstrate entering this environment using `nix develop`."
+  },
+  {
+    "n": 20,
+    "title": "Defining Package Outputs in a Flake",
+    "math": "Logic",
+    "note": "Explain how to define a package build as an output in `flake.nix` under `packages.<system>.default`. Use `stdenv.mkDerivation` inside the flake to package a simple shell script. Show how to build it using `nix build`."
+  },
+  {
+    "n": 21,
+    "title": "Running Code Directly with `nix run`",
+    "math": "Function application",
+    "note": "Introduce the `apps` output in `flake.nix`. Define an app that points to a package and specifies the program to run via the `type = \"app\"` attribute. Demonstrate how `nix run` can be used to build and execute the application in one command."
+  },
+  {
+    "n": 22,
+    "title": "NixOS: The Declarative Operating System",
+    "math": "Logic, Set theory",
+    "note": "Provide a high-level overview of NixOS. Explain that the entire operating system configuration is defined in `/etc/nixos/configuration.nix`. Contrast this declarative approach with traditional, imperative system management."
+  },
+  {
+    "n": 23,
+    "title": "Managing Packages and Users in NixOS",
+    "math": "Set theory",
+    "note": "Within a NixOS virtual machine, demonstrate how to edit `/etc/nixos/configuration.nix`. Show how to add system-wide packages to `environment.systemPackages` and define a user declaratively in the `users.users.<name>` attribute set. Rebuild the system with `nixos-rebuild switch`."
+  },
+  {
+    "n": 24,
+    "title": "Declaratively Configuring System Services in NixOS",
+    "math": "Boolean algebra, Logic",
+    "note": "Teach how to enable and configure system services using NixOS modules. Edit `/etc/nixos/configuration.nix` to enable the Nginx web server via `services.nginx.enable = true;`. Show how to configure its settings. Rebuild the system to apply the changes."
+  },
+  {
+    "n": 25,
+    "title": "Creating Reusable NixOS Modules",
+    "math": "Abstraction, Function composition",
+    "note": "Explain the structure of a basic NixOS module. Create a new `.nix` file that defines a new option (e.g., `my-app.enable`) and uses that option to configure other parts of the system. Show how to import and use this custom module in `configuration.nix`."
+  },
+  {
+    "n": 26,
+    "title": "Managing Dotfiles with Home Manager",
+    "math": "Set theory",
+    "note": "Introduce Home Manager as a tool for declaratively managing a user's environment, including dotfiles and user-specific packages. Show how to install Home Manager and create a basic `home.nix` file to manage the configuration for programs like Git and Bash."
+  },
+  {
+    "n": 27,
+    "title": "Customizing Nixpkgs with Overlays",
+    "math": "Function composition, Set theory",
+    "note": "Explain what overlays are and how they provide a structured way to add new packages or modify existing ones in Nixpkgs. Create a simple overlay file that adds a custom package and modifies an existing one. Show how to apply this overlay to a Nix configuration."
+  },
+  {
+    "n": 28,
+    "title": "Packaging a Python Application",
+    "math": "Graph theory",
+    "note": "Demonstrate how to package a simple Python application with dependencies from PyPI. Use the `buildPythonApplication` helper function from Nixpkgs. Explain how to specify the application source, its Python dependencies, and the main executable. Build the package using `nix-build`."
+  },
+  {
+    "n": 29,
+    "title": "Cleaning Up with Garbage Collection",
+    "math": "Set theory",
+    "note": "Explain why the Nix store grows over time and how to safely remove unreferenced store paths. Describe what a 'garbage collector root' is. Demonstrate the command `nix-collect-garbage -d` to perform a dry run and `nix-collect-garbage` to perform a real cleanup."
+  },
+  {
+    "n": 30,
+    "title": "Building OCI Container Images with Nix",
+    "math": "Set theory, Layering",
+    "note": "Teach how to use Nix to build minimal, reproducible Docker/OCI container images. Use the `dockerTools.buildImage` function from Nixpkgs. Create a Nix expression that defines the contents of the image and its runtime command. Build the image and load it into a Docker daemon."
+  },
+  {
+    "n": 31,
+    "title": "Speeding Up Builds with Binary Caches",
+    "math": "Hashing functions, Caching algorithms",
+    "note": "Explain how Nix avoids rebuilding everything from source by using binary caches. Describe the role of `cache.nixos.org`. Explain how to configure additional binary caches, such as one from Cachix, in `nix.conf` to fetch pre-built packages for faster builds."
+  },
+  {
+    "n": 32,
+    "title": "Cross-Compilation with Nix",
+    "math": "Set theory, Matrix algebra",
+    "note": "Introduce the concept of cross-compilation in Nix. Explain the difference between `buildPlatform`, `hostPlatform`, and `targetPlatform`. Demonstrate how to use Nixpkgs to build a simple C program for a different architecture, such as compiling for AArch64 on an x86-64 machine."
+  }
+]
