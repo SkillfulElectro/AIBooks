@@ -1,0 +1,255 @@
+[
+  {
+    "n": 1,
+    "title": "Course Introduction and OpenCV Overview",
+    "math": "None",
+    "note": "Provide a high-level overview of the OpenCV library, its history, capabilities, and common use cases in computer vision. This lesson, taught within the context of a C++ course, will set the stage for subsequent practical applications without involving any code."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up a C++ Development Environment",
+    "math": "None",
+    "note": "Guide through the installation and configuration of a C++ compiler (like GCC/MinGW or MSVC) and an Integrated Development Environment (IDE) such as Visual Studio, VS Code, or CLion. This setup is a prerequisite for writing and compiling any C++ code for this course."
+  },
+  {
+    "n": 3,
+    "title": "Installing and Linking OpenCV",
+    "math": "None",
+    "note": "Provide step-by-step instructions for downloading or building the OpenCV library from source and configuring the C++ project settings (include paths, library paths, and linker inputs) in your chosen IDE to correctly link against the OpenCV modules."
+  },
+  {
+    "n": 4,
+    "title": "Loading and Displaying an Image",
+    "math": "Coordinate systems",
+    "note": "Write a complete 'Hello World' C++ program using OpenCV. This involves using the `cv::imread` function to load an image from a file into memory and the `cv::imshow` and `cv::waitKey` functions to display it in a window and wait for a keypress."
+  },
+  {
+    "n": 5,
+    "title": "The Core `Mat` Data Structure",
+    "math": "Matrix algebra",
+    "note": "Introduce the fundamental `cv::Mat` class, the N-dimensional dense array used in OpenCV to store and manipulate images. Explain its header and data parts, and how it manages memory automatically using a reference-counting system within a C++ application."
+  },
+  {
+    "n": 6,
+    "title": "Creating and Initializing `Mat` Objects",
+    "math": "Matrix dimensions",
+    "note": "Demonstrate various methods to create `cv::Mat` objects in C++. This includes using constructors to specify size and data type (e.g., `CV_8UC3`), and static methods like `cv::Mat::zeros`, `cv::Mat::ones`, and `cv::Mat::eye` for initialization."
+  },
+  {
+    "n": 7,
+    "title": "Accessing and Modifying Pixel Values",
+    "math": "Matrix indexing",
+    "note": "Teach how to read and write individual pixel values in a `cv::Mat` object. This lesson will cover the efficient `at<>()` method for type-safe access and direct pointer manipulation for performance-critical operations in C++."
+  },
+  {
+    "n": 8,
+    "title": "Image Properties and Metadata",
+    "math": "None",
+    "note": "Explain how to query essential properties of a `cv::Mat` object, such as its dimensions (`rows`, `cols`), number of channels (`channels()`), data type (`type()`, `depth()`), and total number of elements (`total()`) within a C++ program."
+  },
+  {
+    "n": 9,
+    "title": "Defining a Region of Interest (ROI)",
+    "math": "Matrix slicing",
+    "note": "Demonstrate how to create a new `cv::Mat` header that points to a rectangular sub-region of an existing image without copying data. This technique, known as creating a Region of Interest (ROI), is used for localized processing in C++ OpenCV applications."
+  },
+  {
+    "n": 10,
+    "title": "Color Spaces: BGR, Grayscale, HSV",
+    "math": "Vector spaces, color theory",
+    "note": "Explain different color models used in computer vision. Teach how to use the `cv::cvtColor` function in C++ to convert an image from the default BGR (Blue-Green-Red) color space to others like Grayscale and HSV (Hue-Saturation-Value)."
+  },
+  {
+    "n": 11,
+    "title": "Splitting and Merging Color Channels",
+    "math": "Vector decomposition",
+    "note": "Show how to use the `cv::split` function to separate a multi-channel image (like BGR) into individual single-channel `cv::Mat` objects, and how to use the `cv::merge` function to combine multiple single-channel images back into one."
+  },
+  {
+    "n": 12,
+    "title": "Basic Drawing Functions on Images",
+    "math": "Analytic geometry, line equations",
+    "note": "Teach how to draw basic 2D shapes directly onto a `cv::Mat` object. This lesson covers the C++ functions `cv::line`, `cv::rectangle`, `cv::circle`, and `cv::putText` to add visual annotations to an image."
+  },
+  {
+    "n": 13,
+    "title": "Adjusting Image Brightness and Contrast",
+    "math": "Linear transformations, scalar arithmetic",
+    "note": "Implement a basic brightness and contrast adjustment algorithm. This involves iterating over each pixel and applying the linear transformation g(x) = α*f(x) + β, using the `cv::Mat::convertTo` method in C++ for an efficient implementation."
+  },
+  {
+    "n": 14,
+    "title": "Image Thresholding Techniques",
+    "math": "Set theory, statistical mean",
+    "note": "Introduce image segmentation using thresholding. This lesson will explain and implement simple binary thresholding, inverted binary thresholding, and adaptive thresholding using the `cv::threshold` and `cv::adaptiveThreshold` C++ functions."
+  },
+  {
+    "n": 15,
+    "title": "Image Filtering with Blurring",
+    "math": "Convolution, Gaussian function",
+    "note": "Explain the concept of image filtering using kernels. This lesson will demonstrate how to apply various blurring (smoothing) filters, including simple averaging, Gaussian blur, and median blur, using C++ functions like `cv::blur` and `cv::GaussianBlur`."
+  },
+  {
+    "n": 16,
+    "title": "Morphological Operations: Erosion and Dilation",
+    "math": "Set theory, Minkowski operations",
+    "note": "Introduce fundamental morphological transformations for shape analysis. This lesson will teach how to use `cv::erode` and `cv::dilate` in C++ to shrink or expand the boundaries of foreground objects in a binary image, respectively."
+  },
+  {
+    "n": 17,
+    "title": "Morphological Operations: Opening and Closing",
+    "math": "Set theory composition",
+    "note": "Build upon basic morphological operations to perform more complex noise removal. This lesson explains and implements Opening (erosion followed by dilation) and Closing (dilation followed by erosion) using the `cv::morphologyEx` C++ function."
+  },
+  {
+    "n": 18,
+    "title": "Image Gradients and Edge Detection",
+    "math": "Calculus, finite differences, vector calculus",
+    "note": "Explain how to detect intensity changes in an image. This lesson will teach the use of Sobel and Scharr operators via the `cv::Sobel` and `cv::Scharr` C++ functions to compute first-order image derivatives (gradients) in the x and y directions."
+  },
+  {
+    "n": 19,
+    "title": "Canny Edge Detector",
+    "math": "Gaussian distribution, non-maximum suppression",
+    "note": "Implement the multi-stage Canny edge detection algorithm. This lesson will explain the steps (Gaussian blurring, gradient calculation, non-maximum suppression, and hysteresis thresholding) and show how to use the single `cv::Canny` function in C++."
+  },
+  {
+    "n": 20,
+    "title": "Calculating Image Histograms",
+    "math": "Statistics, probability distributions",
+    "note": "Introduce histograms as a tool for analyzing image intensity distribution. This lesson will teach how to compute a histogram for a grayscale image using the `cv::calcHist` function in C++ and visualize the results."
+  },
+  {
+    "n": 21,
+    "title": "Histogram Equalization",
+    "math": "Cumulative distribution functions (CDF)",
+    "note": "Demonstrate a method to improve image contrast by redistributing pixel intensities. This lesson explains the theory behind histogram equalization and shows how to apply it to a grayscale image using the `cv::equalizeHist` C++ function."
+  },
+  {
+    "n": 22,
+    "title": "Template Matching",
+    "math": "Cross-correlation",
+    "note": "Teach a method for finding a small template image within a larger source image. This lesson will explain different comparison methods and demonstrate how to use the `cv::matchTemplate` function in C++ to locate object instances."
+  },
+  {
+    "n": 23,
+    "title": "Hough Line Transform",
+    "math": "Analytic geometry, polar coordinates",
+    "note": "Introduce a feature extraction technique for detecting straight lines. This lesson will explain the concept of mapping points to a parameter space (Hough space) and demonstrate the `cv::HoughLines` and `cv::HoughLinesP` C++ functions."
+  },
+  {
+    "n": 24,
+    "title": "Hough Circle Transform",
+    "math": "Equation of a circle, parameter space",
+    "note": "Extend the Hough Transform concept to detect circular shapes. This lesson will cover how to use the `cv::HoughCircles` C++ function to find circles in an image, specifying parameters like minimum distance and radius range."
+  },
+  {
+    "n": 25,
+    "title": "Finding and Drawing Contours",
+    "math": "Graph theory, topology",
+    "note": "Teach how to find the boundaries of connected components in a binary image. This lesson will cover the use of the `cv::findContours` C++ function to extract contour hierarchies and `cv::drawContours` to visualize them."
+  },
+  {
+    "n": 26,
+    "title": "Contour Properties and Moments",
+    "math": "Integral calculus, moments in mechanics",
+    "note": "Demonstrate how to analyze the properties of extracted contours. This lesson will teach how to calculate features like area, perimeter, and centroid using `cv::contourArea`, `cv::arcLength`, and `cv::moments` C++ functions."
+  },
+  {
+    "n": 27,
+    "title": "Contour Approximation and Convex Hull",
+    "math": "Computational geometry, polygon approximation",
+    "note": "Teach methods to simplify contour shapes. This lesson will cover the use of `cv::approxPolyDP` to reduce the number of vertices in a contour and `cv::convexHull` to find the smallest convex polygon enclosing a shape in a C++ application."
+  },
+  {
+    "n": 28,
+    "title": "Bounding Shapes around Contours",
+    "math": "Geometry",
+    "note": "Show how to fit simple geometric shapes around contours. This lesson will demonstrate the use of C++ functions `cv::boundingRect`, `cv::minEnclosingCircle`, and `cv::minAreaRect` to find bounding boxes and circles for detected objects."
+  },
+  {
+    "n": 29,
+    "title": "Reading Video from a File",
+    "math": "None",
+    "note": "Introduce video processing by reading frames from a file. This lesson will teach how to use the `cv::VideoCapture` class in C++ to open a video file, loop through its frames, and process each frame as a `cv::Mat` object."
+  },
+  {
+    "n": 30,
+    "title": "Capturing Live Video from a Camera",
+    "math": "None",
+    "note": "Demonstrate how to access a live video stream from a connected webcam. This lesson will use the `cv::VideoCapture` class in C++, passing a device index (e.g., 0) to its constructor to begin capturing and displaying real-time video frames."
+  },
+  {
+    "n": 31,
+    "title": "Writing Video to a File",
+    "math": "None",
+    "note": "Teach how to save a sequence of processed frames to a video file. This lesson will cover the use of the `cv::VideoWriter` class in C++, including specifying the output filename, FourCC codec, frames per second (FPS), and frame size."
+  },
+  {
+    "n": 32,
+    "title": "Harris Corner Detection",
+    "math": "Linear algebra, matrix eigenvalues",
+    "note": "Introduce a classic algorithm for detecting corners, which are points with high intensity variation in all directions. This lesson will explain the underlying matrix operations and demonstrate the `cv::cornerHarris` C++ function."
+  },
+  {
+    "n": 33,
+    "title": "Shi-Tomasi 'Good Features to Track'",
+    "math": "Linear algebra, matrix eigenvalues",
+    "note": "Present an improvement on Harris corner detection, often used as a preliminary step for feature tracking. This lesson will teach how to use the `cv::goodFeaturesToTrack` C++ function to find the N strongest corners in an image."
+  },
+
+  {
+    "n": 34,
+    "title": "Feature Detection and Description with ORB",
+    "math": "Binary arithmetic, image moments",
+    "note": "Introduce ORB (Oriented FAST and Rotated BRIEF), a fast and robust local feature detector. This lesson will show how to create an ORB object in C++ and use its `detectAndCompute` method to find keypoints and generate their binary descriptors."
+  },
+  {
+    "n": 35,
+    "title": "Feature Matching with Brute-Force Matcher",
+    "math": "Distance metrics, Hamming distance",
+    "note": "Teach a straightforward method for matching feature descriptors between two images. This lesson will demonstrate how to use the `cv::BFMatcher` class in C++ to find the best matches for each descriptor from a query set in a train set."
+  },
+  {
+    "n": 36,
+    "title": "Haar Cascades for Face Detection",
+    "math": "Integral images, AdaBoost algorithm",
+    "note": "Introduce a classic and fast object detection method. This lesson will teach how to load a pre-trained Haar Cascade XML file (e.g., for face detection) into a `cv::CascadeClassifier` object and use its `detectMultiScale` method in C++."
+  },
+  {
+    "n": 37,
+    "title": "Introduction to the DNN Module",
+    "math": "Linear algebra, calculus",
+    "note": "Provide an overview of OpenCV's Deep Neural Network (DNN) module for running inference with pre-trained models. This lesson will explain the workflow: loading a model, creating a blob from an image, setting input, and performing a forward pass in C++."
+  },
+  {
+    "n": 38,
+    "title": "Object Detection with a Pre-trained DNN Model",
+    "math": "Probability, bounding box regression",
+    "note": "Demonstrate a complete object detection pipeline using the DNN module. This lesson will show how to load a pre-trained model (like SSD MobileNet) and its configuration file in C++, perform inference on an image, and parse the output to draw bounding boxes."
+  },
+  {
+    "n": 39,
+    "title": "Optical Flow with Lucas-Kanade",
+    "math": "Differential equations, linear algebra",
+    "note": "Introduce a method for tracking the movement of feature points between consecutive video frames. This lesson will use `cv::goodFeaturesToTrack` to find initial points and `cv::calcOpticalFlowPyrLK` in C++ to estimate their new positions."
+  },
+  {
+    "n": 40,
+    "title": "Camera Calibration",
+    "math": "Projective geometry, linear algebra",
+    "note": "Explain the process of finding a camera's intrinsic and extrinsic parameters. This lesson will teach how to use a checkerboard pattern and the `cv::findChessboardCorners` and `cv::calibrateCamera` C++ functions to remove lens distortion."
+  },
+  {
+    "n": 41,
+    "title": "Finding Homography to Stitch Images",
+    "math": "Homogeneous coordinates, matrix decomposition",
+    "note": "Teach how to find the perspective transformation between two images of the same planar scene. This lesson will involve finding feature matches and using `cv::findHomography` and `cv::warpPerspective` in C++ to create a simple panorama."
+  },
+  {
+    "n": 42,
+    "title": "Performance Measurement and Optimization",
+    "math": "Time complexity analysis",
+    "note": "Demonstrate how to measure the execution time of code segments. This lesson will use the `cv::getTickCount` and `cv::getTickFrequency` C++ functions to benchmark different OpenCV operations and discuss basic optimization strategies."
+  }
+]
