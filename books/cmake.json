@@ -1,0 +1,182 @@
+[
+  {
+    "n": 1,
+    "title": "Why Build Systems Exist",
+    "math": "build graph concepts",
+    "note": "Explain the purpose of build automation, dependency graphs and incremental compilation, and introduce how CMake fits into modern C/C++ workflows on Windows, macOS, and Linux."
+  },
+  {
+    "n": 2,
+    "title": "Installing CMake Properly",
+    "math": "version semantics",
+    "note": "Demonstrate downloading the latest CMake binary or building from source, adding it to PATH, and verifying cmake --version across Windows PowerShell, macOS Terminal, and Linux Bash."
+  },
+  {
+    "n": 3,
+    "title": "First CMakeLists.txt",
+    "math": "declarative syntax",
+    "note": "Create a minimal CMakeLists.txt containing cmake_minimum_required and project commands for a C++17 console app; run cmake, then cmake --build on Ninja and Makefile generators."
+  },
+  {
+    "n": 4,
+    "title": "Understanding Variables",
+    "math": "scope hierarchy",
+    "note": "Teach set, cache variables, force, advanced, and PARENT_SCOPE behaviors, illustrating with message() prints while configuring a cross-platform C++ example."
+  },
+  {
+    "n": 5,
+    "title": "Source File Organization",
+    "math": "file globbing",
+    "note": "Compare explicit source listing versus file(GLOB), introduce source_group for IDE folders, and show repercussions on incremental builds using Visual Studio and Ninja."
+  },
+  {
+    "n": 6,
+    "title": "Creating Executable Targets",
+    "math": "object linking",
+    "note": "Use add_executable to define a target, attach sources, and run cmake --build to generate a runnable binary on Windows, macOS, and Linux."
+  },
+  {
+    "n": 7,
+    "title": "Static And Shared Libraries",
+    "math": "linkage types",
+    "note": "Show add_library with STATIC, SHARED, and OBJECT options, compile a simple math library, and link it into the executable in GCC, Clang, and MSVC environments."
+  },
+  {
+    "n": 8,
+    "title": "Target Properties Deep Dive",
+    "math": "property key-value pairs",
+    "note": "Inspect and set COMPILE_DEFINITIONS, INCLUDE_DIRECTORIES, POSITION_INDEPENDENT_CODE via set_target_properties and target_* commands in a small multi-target project."
+  },
+  {
+    "n": 9,
+    "title": "Modern target_link_libraries",
+    "math": "dependency propagation",
+    "note": "Explain PUBLIC, PRIVATE, INTERFACE keywords, include directories propagation, and demonstrate reliable linking across static, shared, and interface libraries."
+  },
+  {
+    "n": 10,
+    "title": "Compiler Options Handling",
+    "math": "flag abstraction",
+    "note": "Teach target_compile_options and target_link_options with generator expressions for platform-specific flags, illustrating warnings-as-errors setup on GCC, Clang, MSVC."
+  },
+  {
+    "n": 11,
+    "title": "Build Types & Configs",
+    "math": "multi-config matrices",
+    "note": "Distinguish single-config versus multi-config generators, explain CMAKE_BUILD_TYPE, and set optimized and debug symbol flags for Release and Debug builds."
+  },
+  {
+    "n": 12,
+    "title": "Generator Expressions 101",
+    "math": "$<...> conditionals",
+    "note": "Introduce syntax and common expressions like $<CONFIG:Debug> and $<TARGET_PROPERTY:...>, embedding them in compile definitions for platform-dependent behavior."
+  },
+  {
+    "n": 13,
+    "title": "Custom Commands",
+    "math": "build graph edges",
+    "note": "Create add_custom_command PRE_BUILD, POST_BUILD, and add_custom_target for code generation; rebuild on file change using a protobuf example."
+  },
+  {
+    "n": 14,
+    "title": "Discovering Libraries",
+    "math": "find_package logic",
+    "note": "Use find_package with built-in Find*.cmake modules, REQUIRED/QUIET options, and locate system OpenSSL, then consume imported targets."
+  },
+  {
+    "n": 15,
+    "title": "Config-file Packages",
+    "math": "exported targets",
+    "note": "Generate and install a config package using install(TARGETS ... EXPORT) and export(EXPORT), then consume it from a separate build tree."
+  },
+  {
+    "n": 16,
+    "title": "FetchContent Module",
+    "math": "on-the-fly dependency",
+    "note": "Fetch googletest via FetchContent, handle SOURCE_SUBDIR, and rebuild when tag changes, showcasing reproducible builds without system installs."
+  },
+  {
+    "n": 17,
+    "title": "ExternalProject_Add",
+    "math": "superbuild strategy",
+    "note": "Build zlib as an external project, pass toolchain and CMAKE_ARGS, and stage artifacts into the main project across Unix and Windows."
+  },
+  {
+    "n": 18,
+    "title": "CTest Basics",
+    "math": "test automation",
+    "note": "Enable testing(), add basic ADD_TEST commands, run ctest --output-on-failure, and set pass/fail criteria for cross-platform unit tests."
+  },
+  {
+    "n": 19,
+    "title": "Advanced CTest Features",
+    "math": "parallel scheduling",
+    "note": "Cover labels, fixtures, timeout settings, and ctest -T dashboard submissions to CDash for continuous quality monitoring."
+  },
+  {
+    "n": 20,
+    "title": "Packaging With CPack",
+    "math": "artifact generation",
+    "note": "Configure CPack to create .deb, .rpm, and NSIS installers, set CPACK_PACKAGE_VERSION, and include license files for a demo application."
+  },
+  {
+    "n": 21,
+    "title": "Cross-Compilation Toolchains",
+    "math": "target triples",
+    "note": "Write a toolchain file for ARM-Linux, set CMAKE_SYSTEM_NAME, CMAKE_SYSROOT, and demonstrate building the same project on an x86 host."
+  },
+  {
+    "n": 22,
+    "title": "CUDA And GPU Builds",
+    "math": "heterogeneous compilation",
+    "note": "Enable CUDA language, set CUDA_ARCHITECTURES, and compile a kernel library, linking it into the existing C++ application with target_link_libraries."
+  },
+  {
+    "n": 23,
+    "title": "Unity, PCH, and IPO",
+    "math": "build acceleration",
+    "note": "Enable UNITY_BUILD, target_precompile_headers, and INTERPROCEDURAL_OPTIMIZATION to shorten build times and improve runtime performance."
+  },
+  {
+    "n": 24,
+    "title": "Policy Management",
+    "math": "backward compatibility flags",
+    "note": "Explain cmake_policy(), CMP* IDs, and how to write future-proof CMakeLists by setting policies to NEW or OLD with version safeguards."
+  },
+  {
+    "n": 25,
+    "title": "Presets For Repeatability",
+    "math": "JSON configuration",
+    "note": "Create CMakePresets.json and CMakeUserPresets.json for reproducible configure and build steps, then integrate them into Visual Studio 2022 and CLI."
+  },
+  {
+    "n": 26,
+    "title": "IDE And Editor Integration",
+    "math": "language servers",
+    "note": "Set up compile_commands.json, clangd, VS Code CMake Tools extension, and JetBrains CLion profiles to streamline cross-platform development."
+  },
+  {
+    "n": 27,
+    "title": "Continuous Integration Scripts",
+    "math": "pipeline stages",
+    "note": "Write GitHub Actions YAML to configure, build, test, and package the CMake project on Ubuntu, Windows, and macOS runners."
+  },
+  {
+    "n": 28,
+    "title": "Debugging CMake Runs",
+    "math": "message tracing",
+    "note": "Use --trace-source, MESSAGE(DEBUG), and CMAKE_PRINT_DIAGNOSTIC_DATA to troubleshoot variable values and target properties during configuration."
+  },
+  {
+    "n": 29,
+    "title": "Refactoring To Modern CMake",
+    "math": "interface libraries",
+    "note": "Convert a legacy include-directory-driven project into an imported-target model, eliminating global variables for maintainable, modern CMake code."
+  },
+  {
+    "n": 30,
+    "title": "Future CMake Features",
+    "math": "roadmap discussion",
+    "note": "Discuss upcoming CMake features such as file-set libraries and module-based dependency tracking, and show how to experiment with nightly builds."
+  }
+]
