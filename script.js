@@ -1,15 +1,19 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const BOOKS_INDEX = "./books.json"; // server endpoint to list books
+  const BOOKS_INDEX = "./books.json";
   const booksArea = document.getElementById("booksArea");
   const listEl = document.getElementById("list");
   const jsError = document.getElementById("jsErrorPlaceholder");
-  let booksIndex = []; // [{name,file}]
-  let currentBook = null; // {name,file,data}
+  const searchInput = document.getElementById("search");
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  let booksIndex = [];
+  let currentBook = null;
 
   function showError(msg) {
     jsError.style.display = "block";
     jsError.textContent = msg;
   }
+
   function clearError() {
     jsError.style.display = "none";
     jsError.textContent = "";
@@ -18,6 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function saveProgress(map, bookName) {
     localStorage.setItem("progress::" + bookName, JSON.stringify(map));
   }
+
   function loadProgress(bookName) {
     try {
       return JSON.parse(localStorage.getItem("progress::" + bookName) || "{}");
@@ -37,28 +42,28 @@ window.addEventListener("DOMContentLoaded", () => {
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok)
       throw new Error(
-        "Failed to fetch " +
-          url +
-          " — " +
-          res.status +
-          " " +
-          res.statusText
+        `Failed to fetch ${url} — ${res.status} ${res.statusText}`
       );
     return res.json();
   }
 
-  function renderBookButtons() {
+  function renderBookButtons(filter = "") {
     booksArea.innerHTML = "";
-    if (!booksIndex || booksIndex.length === 0) {
+    const filteredBooks = booksIndex.filter((b) =>
+      b.name.toLowerCase().includes(filter.toLowerCase())
+    );
+
+    if (filteredBooks.length === 0) {
       booksArea.innerHTML =
-        '<div class="text-gray-400">No books found on server.</div>';
+        '<div class="text-gray-400">No books found.</div>';
       return;
     }
-    booksIndex.forEach((b, idx) => {
+
+    filteredBooks.forEach((b, idx) => {
       const btn = document.createElement("button");
       btn.className =
         "bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded book-btn";
-      btn.textContent = b.name || "Book " + (idx + 1);
+      btn.textContent = b.name || `Book ${idx + 1}`;
       btn.dataset.file = b.file || b.filename || b.path || "";
       btn.title = b.file || "";
       btn.addEventListener("click", () => {
@@ -72,8 +77,8 @@ window.addEventListener("DOMContentLoaded", () => {
     clearError();
     document
       .querySelectorAll(".book-btn")
-      .forEach((x) => x.classList.remove("active"));
-    btnEl.classList.add("active");
+      .forEach((x) => x.classList.remove("bg-blue-600", "hover:bg-blue-700"));
+    btnEl.classList.add("bg-blue-600", "hover:bg-blue-700");
 
     try {
       const filePath = book.file || book.path || book.filename;
@@ -84,7 +89,7 @@ window.addEventListener("DOMContentLoaded", () => {
       renderTopics(bookData, filePath, book.name);
     } catch (err) {
       console.error(err);
-      showError("Unable to load book: " + (err.message || err));
+      showError(`Unable to load book: ${err.message || err}`);
       listEl.innerHTML = "";
     }
   }
@@ -148,7 +153,7 @@ window.addEventListener("DOMContentLoaded", () => {
       h.appendChild(math);
 
       const note = document.createElement("div");
-      note.className = "mt-2 text-gray-300";
+      note.className = "mt-2 text-gray-300 text-sm";
       note.textContent = t.note || "";
 
       const actions = document.createElement("div");
@@ -216,7 +221,6 @@ window.addEventListener("DOMContentLoaded", () => {
       listEl.appendChild(card);
     });
 
-    // attach controls behavior scoped to current book
     const selectAllBtn = document.getElementById("selectAll");
     const clearAllBtn = document.getElementById("clearAll");
 
@@ -235,26 +239,46 @@ window.addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  function handleScroll() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  }
+
+  function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   (async function init() {
     try {
       clearError();
       booksArea.innerHTML =
         '<div class="spinner-border spinner-border-sm me-2" role="status"></div> Loading books...';
       const idx = await fetchJsonSafe(BOOKS_INDEX);
-      booksIndex = Array.isArray(idx)
-        ? idx
-        : idx.books || idx.items || [];
+      booksIndex = Array.isArray(idx) ? idx : idx.books || idx.items || [];
       if (!booksIndex || booksIndex.length === 0) {
         booksArea.innerHTML =
           '<div class="small-muted">No books found on server (empty index).</div>';
         return;
       }
       renderBookButtons();
+      searchInput.addEventListener("input", (e) =>
+        renderBookButtons(e.target.value)
+      );
+      window.addEventListener("scroll", handleScroll);
+      scrollTopBtn.addEventListener("click", scrollToTop);
     } catch (err) {
       console.error(err);
-      showError("Unable to fetch books index: " + (err.message || err));
+      showError(`Unable to fetch books index: ${err.message || err}`);
       booksArea.innerHTML =
         '<div class="small-muted">Failed to load books.</div>';
     }
   })();
 });
+      
