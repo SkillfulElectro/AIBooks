@@ -13,92 +13,111 @@
     />
     <script src="https://cdn.tailwindcss.com/3.4.1"></script>
   </head>
-  <body class="bg-gray-900 text-white">
-    <div class="container mx-auto p-4">
-      <header class="flex items-center justify-between gap-3 py-8">
+  <body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto p-4 lg:p-8">
+      <header
+        class="flex flex-col sm:flex-row items-center justify-between gap-4 py-8 border-b border-gray-700"
+      >
         <div class="flex items-center gap-3">
-          <div class="bg-purple-600 text-white px-4 py-2 rounded-lg">
+          <div
+            class="bg-purple-600 text-white px-4 py-2 rounded-lg text-lg font-bold"
+          >
             AIBooks
           </div>
-          <h1 class="text-3xl font-bold mb-1">Books By AI</h1>
+          <h1 class="text-3xl font-bold">Books By AI</h1>
         </div>
       </header>
 
-      <div id="book-selection-view">
-        <div class="flex items-center gap-2 mb-4">
-          <input
-            type="text"
-            id="searchBooks"
-            class="bg-gray-800 text-white px-3 py-2 rounded-lg w-full"
-            placeholder="Search books..."
-          />
-        </div>
-        <section class="mb-3 flex gap-2 items-center flex-wrap">
-          <div id="booksArea" class="flex gap-2 items-center flex-wrap">
-            <!-- Book buttons inserted here after fetching /books.json -->
-            <div class="text-gray-400">Loading books...</div>
-          </div>
-        </section>
-      </div>
-
-      <div id="topic-view" style="display: none">
-        <div class="flex items-center justify-between gap-3 py-4">
-          <button
-            id="backToBooksBtn"
-            class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
-          >
-            <i class="fas fa-arrow-left mr-2"></i> Back to Books
-          </button>
-          <h2 id="bookTitle" class="text-2xl font-bold"></h2>
-          <div class="flex items-center gap-2">
+      <main class="mt-8">
+        <div id="book-selection-view">
+          <div class="mb-6">
             <input
               type="text"
-              id="searchTopics"
-              class="bg-gray-800 text-white px-3 py-2 rounded-lg"
-              placeholder="Search topics..."
+              id="searchBooks"
+              class="bg-gray-800 text-white px-4 py-3 rounded-lg w-full max-w-md mx-auto block border border-gray-700 focus:ring-2 focus:ring-purple-500 focus:outline-none"
+              placeholder="Search for a book..."
             />
+          </div>
+          <section
+            id="booksArea"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
+            <!-- Book buttons inserted here -->
+            <div class="text-gray-400 col-span-full text-center">
+              Loading books...
+            </div>
+          </section>
+        </div>
+
+        <div id="topic-view" style="display: none">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-4 py-4 mb-6 border-b border-gray-700"
+          >
             <button
-              id="selectAll"
-              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              id="backToBooksBtn"
+              class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg self-start md:self-center"
             >
-              Select All
+              <i class="fas fa-arrow-left mr-2"></i>
+              Back
             </button>
-            <button
-              id="clearAll"
-              class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
-            >
-              Clear All
-            </button>
+            <h2 id="bookTitle" class="text-2xl font-bold text-center"></h2>
+            <div class="flex items-center gap-2 flex-wrap justify-center">
+              <input
+                type="text"
+                id="searchTopics"
+                class="bg-gray-800 text-white px-3 py-2 rounded-lg border border-gray-700 focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                placeholder="Search topics..."
+              />
+              <button
+                id="selectAll"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
+              >
+                Select All
+              </button>
+              <button
+                id="clearAll"
+                class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg"
+              >
+                Clear All
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="list"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- Topic cards inserted here -->
           </div>
         </div>
-      </div>
 
-      <div
-        id="jsErrorPlaceholder"
-        style="display: none"
-        class="bg-red-200 text-red-800 p-3 rounded-lg mb-4"
-      ></div>
+        <div
+          id="jsErrorPlaceholder"
+          style="display: none"
+          class="bg-red-500/20 text-red-300 p-4 rounded-lg my-4 border border-red-500/30"
+        ></div>
+      </main>
 
-      <main id="list" class="grid grid-cols-1 gap-4"></main>
-
-      <footer class="mt-4 text-gray-400 text-sm">
-        Server schema notes: <code>/books.json</code> must list books like
-        <code
-          >{"books": [{"name":"AI and ML
-          Tour","file":"/books/ai_ml_tour.json"}]}</code
-        >. Each book file must be an array of topic objects. Each topic object
-        should include <code>n</code>, <code>title</code>, <code>math</code>,
-        and <code>note</code>. Example topic object:
-        <code
-          >{"n":1,"title":"Python Programming & Colab","math":"Basic
-          algebra","note":"Teach Python..."}</code
-        >
+      <footer
+        class="mt-12 pt-6 border-t border-gray-700 text-center text-gray-500 text-sm"
+      >
+        <p class="mb-2">
+          Server schema notes: <code>/books.json</code> must list books. Each
+          book file must be an array of topic objects.
+        </p>
+        <p>
+          Example topic:
+          <code
+            >{"n":1,"title":"Python Programming","math":"Basic
+            algebra","note":"Teach Python..."}</code
+          >
+        </p>
       </footer>
     </div>
 
     <button
       id="scrollTopBtn"
-      class="fixed bottom-5 right-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+      class="fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-110"
       style="display: none"
     >
       <i class="fas fa-arrow-up"></i>

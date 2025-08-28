@@ -60,18 +60,32 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (filteredBooks.length === 0) {
       booksArea.innerHTML =
-        '<div class="text-gray-400">No books found.</div>';
+        '<div class="text-gray-400 col-span-full text-center">No books found.</div>';
       return;
     }
 
     filteredBooks.forEach((b, idx) => {
       const btn = document.createElement("button");
       btn.className =
-        "bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded book-btn";
-      btn.textContent = b.name || `Book ${idx + 1}`;
+        "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
+      btn.innerHTML = `<span class="text-lg">${
+        b.name || `Book ${idx + 1}`
+      }</span>`;
       btn.dataset.file = b.file || b.filename || b.path || "";
-      btn.title = b.file || "";
+      btn.title = `Load book: ${b.name}`;
       btn.addEventListener("click", () => {
+        // Clear selection from other buttons
+        document
+          .querySelectorAll(".book-btn.bg-purple-600")
+          .forEach((b) => {
+            b.classList.remove("bg-purple-600");
+            b.classList.add("bg-gray-800");
+          });
+
+        // Highlight selected button
+        btn.classList.remove("bg-gray-800");
+        btn.classList.add("bg-purple-600");
+
         selectBook(b, btn);
       });
       booksArea.appendChild(btn);
@@ -124,6 +138,11 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     listEl.innerHTML = "";
+    if (topics.length === 0) {
+      listEl.innerHTML = `<div class="text-gray-400 col-span-full text-center">No topics found for this filter.</div>`;
+      return;
+    }
+
     const progress = loadProgress(bookName);
 
     topics.forEach((t) => {
@@ -132,93 +151,102 @@ window.addEventListener("DOMContentLoaded", () => {
       const checked = !!progress[key];
 
       const card = document.createElement("div");
-      card.className = "bg-gray-800 p-4 rounded-lg flex items-start gap-4";
+      card.className = `bg-gray-800 p-5 rounded-xl shadow-lg transition-all duration-300 border border-gray-700 hover:border-purple-500 hover:shadow-purple-500/10 ${
+        checked ? "opacity-60" : ""
+      }`;
 
-      const left = document.createElement("div");
-      left.className = "flex-shrink-0 text-center";
+      const header = document.createElement("div");
+      header.className = "flex items-center justify-between mb-4";
+
+      const titleGroup = document.createElement("div");
+      titleGroup.className = "flex-1";
+      const title = document.createElement("h5");
+      title.className = "text-xl font-bold text-white leading-tight";
+      title.textContent = t.title || "Untitled";
+      titleGroup.appendChild(title);
+
+      if (t.math) {
+        const math = document.createElement("div");
+        math.className =
+          "mt-1 text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full inline-block";
+        math.textContent = t.math;
+        titleGroup.appendChild(math);
+      }
+
+      const checkboxGroup = document.createElement("div");
+      checkboxGroup.className = "flex items-center gap-2";
+      const numEl = document.createElement("div");
+      numEl.className = "text-gray-400 font-mono text-sm";
+      numEl.textContent = `#${num}`;
       const cb = document.createElement("input");
       cb.type = "checkbox";
       cb.id = "cb-" + num;
       cb.checked = checked;
-      cb.className = "form-checkbox h-5 w-5 text-blue-600";
+      cb.className =
+        "form-checkbox h-6 w-6 text-purple-500 bg-gray-700 border-gray-600 rounded focus:ring-purple-500 cursor-pointer";
       cb.setAttribute("aria-label", "Mark lesson completed");
       cb.addEventListener("change", (e) => {
         const p = loadProgress(bookName);
         p[key] = e.target.checked;
         saveProgress(p, bookName);
+        card.classList.toggle("opacity-60", e.target.checked);
       });
-      const numEl = document.createElement("div");
-      numEl.className = "mt-2 text-gray-400 text-sm";
-      numEl.textContent = num;
-      left.appendChild(cb);
-      left.appendChild(numEl);
+      checkboxGroup.appendChild(numEl);
+      checkboxGroup.appendChild(cb);
 
-      const right = document.createElement("div");
-      right.className = "flex-1";
-      const h = document.createElement("div");
-      h.className = "flex items-center justify-between flex-wrap";
-      const title = document.createElement("h5");
-      title.className = "text-lg font-bold text-white";
-      title.textContent = t.title || "Untitled";
-      const math = document.createElement("div");
-      math.className = "text-sm text-gray-400 ml-3";
-      math.textContent = t.math || "";
-      h.appendChild(title);
-      h.appendChild(math);
+      header.appendChild(titleGroup);
+      header.appendChild(checkboxGroup);
 
-      const note = document.createElement("div");
-      note.className = "mt-2 text-gray-300 text-sm";
+      const note = document.createElement("p");
+      note.className = "text-gray-400 text-sm mb-5";
       note.textContent = t.note || "";
 
       const actions = document.createElement("div");
-      actions.className = "mt-3 flex gap-2";
+      actions.className = "flex gap-2 flex-wrap";
 
       function openAndCheck(url) {
         try {
           const p = loadProgress(bookName);
           p[key] = true;
           saveProgress(p, bookName);
-          const el = document.getElementById("cb-" + num);
-          if (el) el.checked = true;
+          cb.checked = true;
+          card.classList.add("opacity-60");
         } catch (e) {
           console.error(e);
         }
         window.open(url, "_blank", "noopener");
       }
 
+      const baseButtonClasses =
+        "flex items-center justify-center gap-2 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 text-sm";
       const searchBtn = document.createElement("button");
-      searchBtn.className =
-        "bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded text-sm";
-      searchBtn.innerHTML =
-        '<i class="fa-solid fa-magnifying-glass me-2"></i> Searcher';
+      searchBtn.className = `${baseButtonClasses} bg-blue-600 hover:bg-blue-700 flex-1`;
+      searchBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i> Search`;
       searchBtn.title = "Open ChatGPT search with this lesson note";
       searchBtn.addEventListener("click", () =>
         openAndCheck(makeQueryUrl(t.note || "", "search"))
       );
 
       const studyBtn = document.createElement("button");
-      studyBtn.className =
-        "bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-3 rounded text-sm";
-      studyBtn.innerHTML =
-        '<i class="fa-solid fa-book-open me-2"></i> Study';
+      studyBtn.className = `${baseButtonClasses} bg-gray-700 hover:bg-gray-600 flex-1`;
+      studyBtn.innerHTML = `<i class="fa-solid fa-book-open"></i> Study`;
       studyBtn.title = "Open ChatGPT study session with this lesson note";
       studyBtn.addEventListener("click", () =>
         openAndCheck(makeQueryUrl(t.note || "", "study"))
       );
 
       const copyBtn = document.createElement("button");
-      copyBtn.className =
-        "bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-3 rounded text-sm";
-      copyBtn.innerHTML =
-        '<i class="fa-regular fa-clipboard me-1"></i>Copy note';
+      copyBtn.className = `${baseButtonClasses} bg-gray-600 hover:bg-gray-500`;
+      copyBtn.innerHTML = `<i class="fa-regular fa-clipboard"></i>`;
+      copyBtn.title = "Copy note to clipboard";
       copyBtn.addEventListener("click", () => {
         navigator.clipboard.writeText(t.note || "").then(() => {
-          copyBtn.innerHTML =
-            '<i class="fa-solid fa-check me-1"></i>Copied';
+          copyBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+          copyBtn.title = "Copied!";
           setTimeout(() => {
-            copyBtn.innerHTML =
-              '<i class="fa-regular fa-clipboard me-1"></i>Copy note';
-          }, 1200);
+            copyBtn.innerHTML = `<i class="fa-regular fa-clipboard"></i>`;
+            copyBtn.title = "Copy note to clipboard";
+          }, 1500);
         });
       });
 
@@ -226,12 +254,9 @@ window.addEventListener("DOMContentLoaded", () => {
       actions.appendChild(studyBtn);
       actions.appendChild(copyBtn);
 
-      right.appendChild(h);
-      right.appendChild(note);
-      right.appendChild(actions);
-
-      card.appendChild(left);
-      card.appendChild(right);
+      card.appendChild(header);
+      card.appendChild(note);
+      card.appendChild(actions);
       listEl.appendChild(card);
     });
 
@@ -301,8 +326,11 @@ window.addEventListener("DOMContentLoaded", () => {
         listEl.innerHTML = "";
         currentBook = null;
         document
-          .querySelectorAll(".book-btn.bg-blue-600")
-          .forEach((b) => b.classList.remove("bg-blue-600", "hover:bg-blue-700"));
+          .querySelectorAll(".book-btn.bg-purple-600")
+          .forEach((b) => {
+            b.classList.remove("bg-purple-600");
+            b.classList.add("bg-gray-800");
+          });
       });
       window.addEventListener("scroll", handleScroll);
       scrollTopBtn.addEventListener("click", scrollToTop);
