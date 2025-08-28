@@ -1,0 +1,333 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Java and Setup",
+    "math": "Procedural logic",
+    "note": "Explain the core concepts of the Java Virtual Machine (JVM), Java Runtime Environment (JRE), and Java Development Kit (JDK). Guide the installation of a recent JDK (e.g., 17 or later). Demonstrate compiling and running a 'Hello, World!' program from the command-line using `javac` and `java` to illustrate the fundamental code lifecycle."
+  },
+  {
+    "n": 2,
+    "title": "Variables and Primitive Data Types",
+    "math": "Set theory, number systems",
+    "note": "Introduce Java's eight primitive data types: byte, short, int, long, float, double, char, and boolean. Explain how to declare and initialize variables, and discuss standard naming conventions (camelCase). The context is a basic Java class within a `main` method using an IDE like IntelliJ IDEA."
+  },
+  {
+    "n": 3,
+    "title": "Basic Arithmetic and Assignment Operators",
+    "math": "Arithmetic, order of operations",
+    "note": "Cover the standard arithmetic operators (+, -, *, /) and the modulus operator (%). Explain operator precedence and the use of parentheses. Also introduce the assignment (=) and compound assignment operators (e.g., +=, -=). All examples are to be run within the `main` method of a Java program."
+  },
+  {
+    "n": 4,
+    "title": "Type Casting",
+    "math": "Number theory, type conversion",
+    "note": "Explain the difference between implicit (widening) and explicit (narrowing) type casting between primitive numeric types. Demonstrate potential data loss with narrowing conversions and show the syntax for explicit casting, for example `(int) myDouble`. This lesson is taught using simple variable assignments in a Java `main` method."
+  },
+  {
+    "n": 5,
+    "title": "Working with Strings",
+    "math": "Formal language theory, sequences",
+    "note": "Introduce the `String` class as a non-primitive type for handling text. Demonstrate string creation, concatenation using the '+' operator, and common methods like `length()`, `charAt()`, `toLowerCase()`, and `toUpperCase()`. All examples are performed in a standard Java environment."
+  },
+  {
+    "n": 6,
+    "title": "Getting User Input",
+    "math": "Input/output models",
+    "note": "Teach how to read input from the console using the `java.util.Scanner` class. Demonstrate creating a Scanner object to read from `System.in`, and using methods like `nextLine()` for strings and `nextInt()` for integers. Explain the need to import the Scanner class."
+  },
+
+  {
+    "n": 7,
+    "title": "Conditional Logic with if-else",
+    "math": "Boolean algebra, conditional logic",
+    "note": "Introduce conditional branching using `if`, `else if`, and `else` statements. Cover the use of relational operators (==, !=, <, >, <=, >=) to form boolean expressions that control the flow of the program. All examples are within a standard Java `main` method."
+  },
+  {
+    "n": 8,
+    "title": "Conditional Logic with switch Statements",
+    "math": "Set theory, discrete logic",
+    "note": "Explain the `switch` statement as an alternative to long if-else-if chains for checking a variable against multiple constant values. Cover the syntax of `case`, `break`, and `default` labels. Use examples with integers, characters, and strings in a standard Java environment."
+  },
+  {
+    "n": 9,
+    "title": "Logical Operators",
+    "math": "Boolean algebra, propositional logic",
+    "note": "Teach the use of logical operators AND (&&), OR (||), and NOT (!) to combine multiple boolean expressions. Explain the concept of short-circuit evaluation. This is taught in the context of `if` statements within a Java `main` method."
+  },
+  {
+    "n": 10,
+    "title": "The `while` Loop",
+    "math": "Iteration, recursion theory",
+    "note": "Introduce the `while` loop for repeating a block of code as long as a boolean condition remains true. Explain its use for situations where the number of iterations is not known beforehand. Demonstrate a simple counter example in a Java `main` method."
+  },
+  {
+    "n": 11,
+    "title": "The `do-while` Loop",
+    "math": "Iteration, loop invariants",
+    "note": "Explain the `do-while` loop, highlighting its key difference from the `while` loop: the loop body is guaranteed to execute at least once. This lesson is taught by contrasting it with a `while` loop in a standard Java `main` method."
+  },
+  {
+    "n": 12,
+    "title": "The `for` Loop",
+    "math": "Discrete mathematics, summation",
+    "note": "Teach the structure and syntax of the classic `for` loop, including its initialization, condition, and update parts. Emphasize its use for iterating a specific number of times. All examples are within a standard Java `main` method."
+  },
+  {
+    "n": 13,
+    "title": "Loop Control with `break` and `continue`",
+    "math": "Control flow theory",
+    "note": "Explain how to alter the flow of loops using the `break` statement to exit a loop prematurely and the `continue` statement to skip the current iteration and proceed to the next. Demonstrate with examples inside `for` or `while` loops in a standard Java environment."
+  },
+  {
+    "n": 14,
+    "title": "Introduction to Classes and Objects",
+    "math": "Set theory, type theory",
+    "note": "Introduce the fundamental concepts of Object-Oriented Programming (OOP). Define a class as a blueprint and an object as an instance of a class. Demonstrate creating a simple `Car` class with fields (instance variables) like `color` and `speed` using an IDE like IntelliJ IDEA."
+  },
+  {
+    "n": 15,
+    "title": "Creating and Using Objects",
+    "math": "Object instantiation logic",
+    "note": "Teach how to create objects (instances) from a class using the `new` keyword. Demonstrate accessing an object's fields using dot notation (e.g., `myCar.color`). This lesson involves creating a separate class file and instantiating it within the `main` method of another class."
+  },
+  {
+    "n": 16,
+    "title": "Defining and Calling Methods",
+    "math": "Function theory, procedural abstraction",
+    "note": "Explain how to define methods (behaviors) inside a class. Cover method signatures, including return types (like `int` or `void`) and parameters. Demonstrate calling a method on an object using dot notation (e.g., `myCar.startEngine()`) from the `main` method."
+  },
+  {
+    "n": 17,
+    "title": "Constructors and the `this` Keyword",
+    "math": "Object initialization logic",
+    "note": "Teach the purpose of constructors for initializing an object's state upon creation. Differentiate between default and parameterized constructors. Introduce the `this` keyword to distinguish between instance variables and parameters within a constructor. This is taught within a custom Java class."
+  },
+  {
+    "n": 18,
+    "title": "Encapsulation with Access Modifiers",
+    "math": "Information hiding principles",
+    "note": "Introduce the concept of encapsulation. Explain the `public` and `private` access modifiers to control visibility of class members. Demonstrate the standard practice of making fields `private` and providing `public` getter and setter methods to access and modify them."
+  },
+  {
+    "n": 19,
+    "title": "Static Variables and Methods",
+    "math": "Set theory (class-level vs instance-level)",
+    "note": "Explain the `static` keyword for creating variables and methods that belong to the class itself, rather than to an instance. Demonstrate calling a static method using the class name (e.g., `Math.random()`) and explain use cases like utility methods or shared counters."
+  },
+  {
+    "n": 20,
+    "title": "Arrays",
+    "math": "Linear algebra, vector notation",
+    "note": "Introduce one-dimensional arrays as fixed-size collections of elements of the same type. Cover syntax for declaring, instantiating, and initializing arrays. Demonstrate accessing elements using zero-based indexing and getting the array's size with the `.length` property."
+  },
+  {
+    "n": 21,
+    "title": "Iterating Over Arrays",
+    "math": "Discrete mathematics, sequences",
+    "note": "Demonstrate two ways to loop through array elements: using a standard `for` loop with an index variable and using the more concise enhanced `for-each` loop. Examples will process an array of integers or strings within a Java `main` method."
+  },
+  {
+    "n": 22,
+    "title": "Two-Dimensional Arrays",
+    "math": "Linear algebra, matrix theory",
+    "note": "Explain how to declare, initialize, and access elements in a two-dimensional array (an array of arrays), often used to represent grids or matrices. Demonstrate using nested loops to iterate over all elements in a 2D array. All code is run in a standard Java environment."
+  },
+  {
+    "n": 23,
+    "title": "Introduction to the Collections Framework",
+    "math": "Set theory, abstract data types",
+    "note": "Provide a high-level overview of the Java Collections Framework. Briefly introduce the primary interfaces: `List` (ordered collection), `Set` (unique elements), and `Map` (key-value pairs), setting the stage for subsequent lessons. This is a conceptual lesson with simple code examples."
+  },
+  {
+    "n": 24,
+    "title": "Using ArrayList",
+    "math": "Dynamic arrays, sequence theory",
+    "note": "Teach the `java.util.ArrayList` class as a resizable array implementation of the `List` interface. Demonstrate how to create an ArrayList, add elements (`add()`), get elements by index (`get()`), and remove elements (`remove()`). Introduce the concept of generics for type safety (e.g., `ArrayList<String>`)."
+  },
+  {
+    "n": 25,
+    "title": "Using HashMap",
+    "math": "Hash functions, key-value mappings",
+    "note": "Introduce the `java.util.HashMap` class for storing key-value pairs. Explain how to add entries (`put()`), retrieve values by key (`get()`), and check for the existence of a key (`containsKey()`). Use a `HashMap<String, Integer>` as a practical example in a Java `main` method."
+  },
+  {
+    "n": 26,
+    "title": "Inheritance",
+    "math": "Set theory (subsets), hierarchy theory",
+    "note": "Introduce inheritance as a core OOP pillar for code reuse. Explain the `extends` keyword to create a subclass (child) that inherits fields and methods from a superclass (parent). Demonstrate creating a `Dog` class that extends an `Animal` class, using an IDE to manage the class files."
+  },
+  {
+    "n": 27,
+    "title": "Method Overriding and `@Override`",
+    "math": "Function redefinition",
+    "note": "Teach how a subclass can provide a specific implementation for a method that is already defined in its superclass. Introduce the `@Override` annotation as a best practice to ensure the method signature correctly matches the superclass method. This is taught using an Animal/Dog class hierarchy."
+  },
+  {
+    "n": 28,
+    "title": "Polymorphism",
+    "math": "Type theory, substitution principle",
+    "note": "Explain polymorphism, the ability of an object to take on many forms. Demonstrate this by creating objects of a subclass (e.g., `Dog`) but referencing them using a superclass variable (e.g., `Animal myPet = new Dog();`). Show how overridden methods are called on the actual object type."
+  },
+  {
+    "n": 29,
+    "title": "Abstract Classes and Methods",
+    "math": "Abstract algebra, generalization",
+    "note": "Introduce abstract classes using the `abstract` keyword as blueprints that cannot be instantiated. Explain abstract methods (methods without a body) that must be implemented by any non-abstract subclass. This is taught in the context of creating a base `Shape` class with an abstract `calculateArea()` method."
+  },
+  {
+    "n": 30,
+    "title": "Interfaces",
+    "math": "Contract theory, API design",
+    "note": "Define an interface as a contract that specifies methods a class must implement. Explain the `implements` keyword. Contrast interfaces with abstract classes, highlighting that a class can implement multiple interfaces. Use a `Flyable` interface as a practical example for different `Animal` classes."
+  },
+  {
+    "n": 31,
+    "title": "The `final` Keyword",
+    "math": "Constant theory, immutability",
+    "note": "Explain the three uses of the `final` keyword in Java: to create constant variables, to prevent method overriding, and to prevent a class from being subclassed. Provide a distinct, simple example for each use case within a standard Java project."
+  },
+  {
+    "n": 32,
+    "title": "The `Object` Class",
+    "math": "Root theory, identity and equality",
+    "note": "Explain that all classes in Java implicitly inherit from the `java.lang.Object` class. Discuss the importance and standard practice of overriding the `toString()`, `equals()`, and `hashCode()` methods in custom classes to provide meaningful string representations and logical equality checks."
+  },
+  {
+    "n": 33,
+    "title": "Introduction to Exceptions",
+    "math": "Error handling models, state machines",
+    "note": "Define what an exception is in Java (an event that disrupts normal program flow). Explain the exception hierarchy, differentiating between checked exceptions (compile-time) and unchecked exceptions (runtime). Show examples that cause common exceptions like `NullPointerException` and `ArrayIndexOutOfBoundsException`."
+  },
+  {
+    "n": 34,
+    "title": "Handling Exceptions with `try-catch`",
+    "math": "Control flow theory, error handling",
+    "note": "Teach the `try-catch` block for handling exceptions gracefully. Demonstrate wrapping potentially problematic code in a `try` block and catching a specific exception (e.g., `ArithmeticException`) in a `catch` block to prevent the program from crashing. This is taught in a Java `main` method."
+  },
+  {
+    "n": 35,
+    "title": "The `finally` Block",
+    "math": "Guaranteed execution logic",
+    "note": "Explain the `finally` block, which contains code that is always executed after a `try-catch` block, regardless of whether an exception was thrown or caught. Demonstrate its primary use case for resource cleanup, such as closing a file or network connection."
+  },
+  {
+    "n": 36,
+    "title": "Throwing Exceptions with `throw` and `throws`",
+    "math": "Signal theory, error propagation",
+    "note": "Teach how to explicitly create and throw an exception using the `throw` keyword (e.g., `throw new IllegalArgumentException()`). Explain the `throws` keyword in a method signature to declare that the method might throw a checked exception that the caller must handle."
+  },
+  {
+    "n": 37,
+    "title": "Reading Text Files",
+    "math": "Stream theory, input models",
+    "note": "Demonstrate how to read data from a text file using a combination of `java.io.File` and `java.util.Scanner`. The code will be placed within a `try-catch` block to handle potential `FileNotFoundException`. The context is a standard Java project with a sample text file."
+  },
+  {
+    "n": 38,
+    "title": "Writing to Text Files",
+    "math": "Stream theory, output models",
+    "note": "Teach how to write text to a file using `java.io.FileWriter` and `java.io.PrintWriter`. Explain how to create a new file or append to an existing one. Show the importance of closing the writer resource, typically in a `finally` block or using a try-with-resources statement."
+  },
+  {
+    "n": 39,
+    "title": "Packages and `import` Statements",
+    "math": "Namespace theory, modular arithmetic",
+    "note": "Explain how packages are used to organize related classes and interfaces into namespaces, preventing naming conflicts. Demonstrate creating a class in a specific package and using the `import` statement to access classes from other packages. This is taught within an IDE like IntelliJ that manages package structure."
+  },
+  {
+    "n": 40,
+    "title": "Enumerations (Enums)",
+    "math": "Set theory, finite sets",
+    "note": "Introduce enums as a special type that represents a fixed set of constants. Demonstrate how to define a simple enum (e.g., for days of the week or user roles) and how to use it in variables and `switch` statements for more readable and type-safe code."
+  },
+  {
+    "n": 41,
+    "title": "Introduction to Generics",
+    "math": "Type theory, parametric polymorphism",
+    "note": "Explain the purpose of generics for creating classes, interfaces, and methods that can operate on different data types while providing compile-time type safety. Use `ArrayList<E>` and `HashMap<K, V>` as primary examples to illustrate the concept of type parameters."
+  },
+  {
+    "n": 42,
+    "title": "Lambda Expressions",
+    "math": "Lambda calculus, functional programming",
+    "note": "Introduce lambda expressions as a concise way to represent an anonymous function. Explain the basic syntax (parameters -> body) and show how they can be used to provide an implementation for a functional interface. This is taught using a simple `Comparator` or a custom functional interface."
+  },
+  {
+    "n": 43,
+    "title": "Functional Interfaces",
+    "math": "Lambda calculus, higher-order functions",
+    "note": "Define a functional interface as an interface with a single abstract method. Introduce the `@FunctionalInterface` annotation. Cover common built-in functional interfaces from `java.util.function` like `Predicate<T>`, `Function<T, R>`, and `Consumer<T>`, demonstrating their use with lambda expressions."
+  },
+  {
+    "n": 44,
+    "title": "Streams API: Creating Streams",
+    "math": "Set theory, sequence processing",
+    "note": "Introduce the `java.util.stream` API for processing sequences of elements. Demonstrate how to create a stream from a collection (like an `ArrayList`) using the `.stream()` method. Explain that streams are a pipeline of operations and do not modify the original data source."
+  },
+  {
+    "n": 45,
+    "title": "Streams API: Intermediate Operations",
+    "math": "Functional composition, transformation",
+    "note": "Explain intermediate stream operations, which are lazy and return a new stream. Focus on the two most common operations: `filter(Predicate)` to select elements based on a condition and `map(Function)` to transform each element. Chain these operations in a single pipeline."
+  },
+  {
+    "n": 46,
+    "title": "Streams API: Terminal Operations",
+    "math": "Aggregation, reduction algorithms",
+    "note": "Explain terminal operations, which trigger the processing of the stream and produce a result. Demonstrate `forEach(Consumer)` to perform an action on each element and `collect(Collectors.toList())` to gather the stream's elements back into a `List`."
+  },
+  {
+    "n": 47,
+    "title": "Concurrency: Creating and Running Threads",
+    "math": "Concurrency theory, parallel processing",
+    "note": "Introduce the basics of multithreading in Java. Demonstrate the two primary ways to create a new thread of execution: by extending the `Thread` class and by implementing the `Runnable` interface. Show how to start the thread using the `.start()` method."
+  },
+  {
+    "n": 48,
+    "title": "Concurrency: Synchronization",
+    "math": "Mutual exclusion, semaphore theory",
+    "note": "Explain race conditions that can occur when multiple threads access shared, mutable data. Introduce the `synchronized` keyword to create a monitor lock on a method or a block of code, ensuring that only one thread can execute that code at a time to maintain data consistency."
+  },
+  {
+    "n": 49,
+    "title": "Basic Networking with Sockets",
+    "math": "Network theory, graph theory (nodes)",
+    "note": "Introduce socket programming for network communication. Demonstrate building a simple client-server application where the server listens for a connection using `ServerSocket` and the client connects to it using `Socket`. Show how to send and receive text data over the connection."
+  },
+  {
+    "n": 50,
+    "title": "JDBC: Connecting to a Database",
+    "math": "Relational algebra, database theory",
+    "note": "Introduce Java Database Connectivity (JDBC). Explain how to establish a connection to a SQL database (e.g., an in-memory H2 database) using `DriverManager.getConnection()`. This involves providing a JDBC URL, username, and password. The H2 dependency must be added to the project."
+  },
+  {
+    "n": 51,
+    "title": "JDBC: Executing Queries",
+    "math": "Relational algebra, SQL theory",
+    "note": "Demonstrate how to execute SQL queries against a database using a JDBC connection. Explain the use of `Statement` for simple queries and `PreparedStatement` for parameterized queries to prevent SQL injection. Show examples for `SELECT`, `INSERT`, and `UPDATE` statements."
+  },
+  {
+    "n": 52,
+    "title": "JDBC: Processing a `ResultSet`",
+    "math": "Set theory, data retrieval",
+    "note": "Teach how to process the results of a SQL `SELECT` query, which are returned in a `ResultSet` object. Demonstrate iterating through the `ResultSet` using a `while(rs.next())` loop and retrieving data from columns by name or index using methods like `rs.getString()` and `rs.getInt()`."
+  },
+  {
+    "n": 53,
+    "title": "Unit Testing with JUnit 5",
+    "math": "Formal verification, proof by assertion",
+    "note": "Introduce the concept of unit testing. Guide the setup of the JUnit 5 framework in a project. Demonstrate how to write a test class, annotate test methods with `@Test`, and use assertion methods like `assertEquals()` and `assertTrue()` from `org.junit.jupiter.api.Assertions` to verify code correctness."
+  },
+  {
+    "n": 54,
+    "title": "Build Automation with Maven",
+    "math": "Dependency graph theory",
+    "note": "Provide an introduction to Apache Maven as a build automation and dependency management tool. Explain the structure of the `pom.xml` file, focusing on how to declare project metadata and add external libraries (dependencies) like JUnit or a JDBC driver from the Maven Central repository."
+  },
+  {
+    "n": 55,
+    "title": "Introduction to Java Modules",
+    "math": "Modular design, graph theory",
+    "note": "Introduce the Java Platform Module System (Project Jigsaw), available since Java 9. Explain how to create a `module-info.java` file to define a module. Demonstrate the use of `requires` to specify dependencies and `exports` to make packages publicly available to other modules."
+  }
+]
