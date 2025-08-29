@@ -129,8 +129,7 @@
         class="mt-12 pt-6 border-t border-gray-700 text-center text-gray-500 text-sm"
       >
         <p class="mb-2">
-          Server schema notes: <code>/books.json</code> must list books. Each
-          book file must be an array of topic objects.
+          Server schema notes: <code>/books.json</code> uses a tree structure. Categories have a `name` and `children` array. Books have a `name` and `file` path. Each book file must be an array of topic objects.
         </p>
         <p>
           Example topic:
