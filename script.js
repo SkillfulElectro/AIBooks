@@ -95,37 +95,66 @@ window.addEventListener("DOMContentLoaded", () => {
   function renderBookButtons(filter = "") {
     booksArea.innerHTML = "";
     booksArea.classList.add("fade-in");
-    const filteredBooks = booksIndex.filter((b) =>
-      b.name.toLowerCase().includes(filter.toLowerCase())
-    );
+    const fragment = document.createDocumentFragment();
+    const filterLower = filter.toLowerCase();
 
-    if (filteredBooks.length === 0) {
-      booksArea.innerHTML =
-        '<div class="text-gray-400 col-span-full text-center">No books found.</div>';
-      return;
+    function renderNode(node, forceShow = false) {
+      const isCategory = !!node.children;
+
+      if (isCategory) {
+        const categoryName = node.name.toLowerCase();
+        const categoryMatches = !filterLower || categoryName.includes(filterLower);
+        
+        const childElements = node.children
+          .map(child => renderNode(child, forceShow || categoryMatches))
+          .filter(Boolean);
+
+        if (childElements.length > 0) {
+          const categoryEl = document.createElement("div");
+          categoryEl.className = "col-span-full mb-4";
+          categoryEl.innerHTML = `<h2 class="text-2xl font-bold text-white border-b-2 border-purple-500 pb-2">${node.name}</h2>`;
+
+          const childrenContainer = document.createElement("div");
+          childrenContainer.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-4";
+          childElements.forEach(el => childrenContainer.appendChild(el));
+          
+          categoryEl.appendChild(childrenContainer);
+          return categoryEl;
+        }
+      } else { // It's a book
+        const bookName = node.name.toLowerCase();
+        if (forceShow || !filterLower || bookName.includes(filterLower)) {
+          const btn = document.createElement("button");
+          btn.className =
+            "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
+          btn.innerHTML = `<span class="text-lg">${node.name}</span>`;
+          btn.dataset.file = node.file || node.filename || node.path || "";
+          btn.title = `Load book: ${node.name}`;
+          btn.addEventListener("click", () => {
+            resetBookButtonStyles();
+            btn.classList.remove("bg-gray-800");
+            btn.classList.add("bg-purple-600");
+            selectBook(node, btn);
+          });
+          return btn;
+        }
+      }
+      return null;
     }
 
-    filteredBooks.forEach((b, idx) => {
-      const btn = document.createElement("button");
-      btn.className =
-        "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
-      btn.innerHTML = `<span class="text-lg">${
-        b.name || `Book ${idx + 1}`
-      }</span>`;
-      btn.dataset.file = b.file || b.filename || b.path || "";
-      btn.title = `Load book: ${b.name}`;
-      btn.addEventListener("click", () => {
-        // Clear selection from other buttons
-        resetBookButtonStyles();
-
-        // Highlight selected button
-        btn.classList.remove("bg-gray-800");
-        btn.classList.add("bg-purple-600");
-
-        selectBook(b, btn);
-      });
-      booksArea.appendChild(btn);
+    booksIndex.forEach(node => {
+      const element = renderNode(node);
+      if (element) {
+        fragment.appendChild(element);
+      }
     });
+
+    if (fragment.children.length === 0) {
+      booksArea.innerHTML =
+        '<div class="text-gray-400 col-span-full text-center">No books or categories found.</div>';
+    } else {
+      booksArea.appendChild(fragment);
+    }
   }
 
   async function selectBook(book, btnEl) {
