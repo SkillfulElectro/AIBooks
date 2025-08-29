@@ -46,7 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function getSelectedProvider() {
-    const selector = document.querySelector(".provider-btn.bg-purple-600");
+    const selector = document.querySelector(".provider-btn.bg-purple-500");
     return selector ? selector.dataset.provider : "chatgpt";
   }
 
@@ -82,6 +82,13 @@ window.addEventListener("DOMContentLoaded", () => {
     return res.json();
   }
 
+  function resetBookButtonStyles() {
+    document.querySelectorAll(".book-btn.bg-purple-600").forEach((b) => {
+      b.classList.remove("bg-purple-600");
+      b.classList.add("bg-gray-800");
+    });
+  }
+
   function renderBookButtons(filter = "") {
     booksArea.innerHTML = "";
     booksArea.classList.add("fade-in");
@@ -106,12 +113,7 @@ window.addEventListener("DOMContentLoaded", () => {
       btn.title = `Load book: ${b.name}`;
       btn.addEventListener("click", () => {
         // Clear selection from other buttons
-        document
-          .querySelectorAll(".book-btn.bg-purple-600")
-          .forEach((b) => {
-            b.classList.remove("bg-purple-600");
-            b.classList.add("bg-gray-800");
-          });
+        resetBookButtonStyles();
 
         // Highlight selected button
         btn.classList.remove("bg-gray-800");
@@ -364,21 +366,16 @@ window.addEventListener("DOMContentLoaded", () => {
         topicView.style.display = "none";
         listEl.innerHTML = "";
         currentBook = null;
-        document
-          .querySelectorAll(".book-btn.bg-purple-600")
-          .forEach((b) => {
-            b.classList.remove("bg-purple-600");
-            b.classList.add("bg-gray-800");
-          });
+        resetBookButtonStyles();
       });
       document.querySelectorAll(".provider-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
           document.querySelectorAll(".provider-btn").forEach((b) => {
-            b.classList.remove("bg-purple-600");
+            b.classList.remove("bg-purple-500");
             b.classList.add("bg-gray-700", "hover:bg-gray-600");
           });
           btn.classList.remove("bg-gray-700", "hover:bg-gray-600");
-          btn.classList.add("bg-purple-600");
+          btn.classList.add("bg-purple-500");
 
           if (currentBook) {
             renderTopics(
@@ -390,6 +387,15 @@ window.addEventListener("DOMContentLoaded", () => {
           }
         });
       });
+
+      // Set default provider
+      const defaultProvider = document.querySelector(
+        '.provider-btn[data-provider="chatgpt"]'
+      );
+      if (defaultProvider) {
+        defaultProvider.classList.remove("bg-gray-700", "hover:bg-gray-600");
+        defaultProvider.classList.add("bg-purple-500");
+      }
       window.addEventListener("scroll", handleScroll);
       scrollTopBtn.addEventListener("click", scrollToTop);
     } catch (err) {
