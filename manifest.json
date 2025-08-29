@@ -1,7 +1,7 @@
 {
   "name": "AIBooks",
   "short_name": "AIBooks",
-  "start_url": "/AIBooks",
+  "start_url": "/AIBooks/index.html",
   "display": "standalone",
   "background_color": "#333333",
   "theme_color": "#333333",
