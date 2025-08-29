@@ -1,0 +1,272 @@
+[
+  {
+    "n": 1,
+    "title": "Ethics, Law, And Safety",
+    "math": "basic logic, decision theory",
+    "note": "Define ethical hacking, authorization models, safe lab conduct, and responsible disclosure workflows. Contrast white/gray/black hat activities and legal boundaries in the United States (CFAA overview) and internationally. Deliverables: a signed code-of-conduct and a template rules-of-engagement. Context: policy-first lecture with sample contracts in PDF; no tools required."
+  },
+  {
+    "n": 2,
+    "title": "Build A Safe Lab",
+    "math": "set theory (isolation sets)",
+    "note": "Create an isolated practice environment on a Windows 11 host using VirtualBox 7. Configure separate networks (NAT and host-only), and provision VMs: Kali Linux 2025.2, Ubuntu Server 24.04, Windows 11 Evaluation, and intentionally vulnerable targets (OWASP Juice Shop via Docker, Metasploitable2). Emphasize snapshotting, network isolation, and no internet exposure."
+  },
+  {
+    "n": 3,
+    "title": "Linux Command Line Foundations",
+    "math": "regular languages, finite automata",
+    "note": "Teach navigation, permissions, processes, and package management in Kali Linux 2025.2 and Ubuntu 24.04 using Bash. Cover file finding, text processing, service management, journaling, and safe privilege elevation. Context: interactive terminal sessions within the lab VMs."
+  },
+  {
+    "n": 4,
+    "title": "Networking Fundamentals Primer",
+    "math": "graph theory, queuing theory, probability",
+    "note": "Explain the OSI and TCP/IP models, switching vs routing, IPv4/IPv6 addressing, ARP, ICMP, DNS, DHCP, and NAT. Demonstrate with a simulated network in VirtualBox using host-only adapters and Wireshark on Kali to observe traffic from Ubuntu to Juice Shop."
+  },
+  {
+    "n": 5,
+    "title": "Packets With Wireshark",
+    "math": "time series analysis, combinatorics",
+    "note": "Use Wireshark on Kali to inspect TCP handshakes, TLS negotiation, and HTTP/HTTP2 message flows between a browser and local OWASP Juice Shop. Teach capture filters, display filters, and safe pcap handling. Focus on interpreting protocols rather than attacking them."
+  },
+  {
+    "n": 6,
+    "title": "Threat Modeling Basics",
+    "math": "attack trees, graph theory, set theory",
+    "note": "Apply STRIDE and attack-tree methods to the Juice Shop application and the lab network. Identify assets, trust boundaries, threats, and mitigations. Document a simple data flow diagram using draw.io and map threats to MITRE ATT&CK techniques at a conceptual level."
+  },
+  {
+    "n": 7,
+    "title": "Risk Quantification Essentials",
+    "math": "probability, expected value, Bayes’ theorem",
+    "note": "Teach qualitative vs quantitative risk, likelihood/impact matrices, and single-loss expectancy/annualized-loss expectancy. Use a spreadsheet on Windows 11 to compute sample risk values for discovered misconfigurations in the lab network. Emphasize uncertainty and assumptions."
+  },
+  {
+    "n": 8,
+    "title": "Documentation, Git, And Notes",
+    "math": "set notation for evidence tagging",
+    "note": "Create a structured engagement notebook using Git, Markdown, and simple issue tracking on a private self-hosted Gitea or GitHub Classroom. Show how to capture evidence (screens, pcaps, logs) with hashes (SHA-256) and commit signing (GPG) from Kali."
+  },
+  {
+    "n": 9,
+    "title": "Python Scripting For Analysts",
+    "math": "algorithm analysis, complexity (Big-O)",
+    "note": "Use Python 3.12 in Kali to parse logs, interact with HTTP APIs (requests), and transform JSON/CSV. Teach virtual environments, safety when handling untrusted data, and writing reusable CLI tools without interacting with production systems."
+  },
+  {
+    "n": 10,
+    "title": "Regex And Text Processing",
+    "math": "formal languages, regular expressions",
+    "note": "Practice building safe regular expressions to extract indicators from logs and HTTP responses. Use grep/awk/sed and Python’s re module on Kali against sanitized sample datasets. Emphasize performance, readability, and avoiding catastrophic backtracking."
+  },
+  {
+    "n": 11,
+    "title": "OSINT With Ethics",
+    "math": "set theory, graph traversal",
+    "note": "Introduce open-source intelligence with legal boundaries and privacy considerations. Demonstrate safe use of search operators, certificate transparency logs, and public breach-notification services using a pre-approved dummy organization scenario in a browser on Windows 11."
+  },
+  {
+    "n": 12,
+    "title": "Identity And Password Fundamentals",
+    "math": "entropy, combinatorics, probability",
+    "note": "Explain password entropy, multi-factor authentication types, and credential lifecycle. Use a local identity demo (Keycloak in Docker) to illustrate password policies, TOTP enrollment, and session lifetimes. No cracking activities; focus on defenses and policy configuration."
+  },
+  {
+    "n": 13,
+    "title": "Cryptography Foundations",
+    "math": "modular arithmetic, number theory, group theory, information theory",
+    "note": "Describe symmetric vs asymmetric crypto, hashes, MACs, digital signatures, TLS certificates, and PKI. Use OpenSSL on Kali to inspect certificates and verify signatures on sample files. Emphasize correct usage and common pitfalls rather than breaking cryptography."
+  },
+  {
+    "n": 14,
+    "title": "Web Basics: HTTP And The Browser",
+    "math": "state machines, encoding theory",
+    "note": "Cover HTTP verbs, status codes, cookies, SameSite, CORS, and content security policies. Use Firefox Developer Tools against local OWASP Juice Shop to observe requests, cookies, storage, and CSP headers. Focus on understanding flows and defenses."
+  },
+  {
+    "n": 15,
+    "title": "Intercepting Proxies Overview",
+    "math": "graph traversal, finite-state machines",
+    "note": "Introduce Burp Suite Community Edition as an intercepting proxy on Kali. Show safe proxy configuration for localhost targets only, certificate installation for HTTPS inspection, and how to review requests/responses for security-relevant patterns without altering application state."
+  },
+  {
+    "n": 16,
+    "title": "OWASP Top 10 Overview",
+    "math": "classification theory, risk scoring",
+    "note": "Explain categories in OWASP Top 10 (2021/2023 updates) with defensive examples. Use OWASP Juice Shop running in Docker to map each category to illustrative, non-destructive scenarios and discuss remediation strategies at a conceptual level."
+  },
+  {
+    "n": 17,
+    "title": "Input Validation And XSS Defenses",
+    "math": "formal languages, context-free grammars, encoding theory",
+    "note": "Teach output encoding, CSP, and secure templating patterns. Use a local demo app (Node.js Express with Nunjucks) to show how context-aware encoding prevents client-side issues. Focus on prevention and verification using browser devtools and security headers."
+  },
+  {
+    "n": 18,
+    "title": "Injection Concepts And Mitigations",
+    "math": "set theory, relational algebra",
+    "note": "Explain how untrusted data in interpreters causes injection classes (SQL, NoSQL, command, LDAP). Demonstrate safe parameterization in PostgreSQL and MongoDB using prepared statements in sample apps on Docker. Emphasize ORMs, input normalization, and least privilege."
+  },
+  {
+    "n": 19,
+    "title": "Auth, Sessions, OAuth 2.0, OIDC",
+    "math": "state machines, graph theory",
+    "note": "Model login flows, session fixation risks, and token-based auth. Use IdentityServer (or Keycloak) in Docker plus a demo SPA and API to visualize auth code flow with PKCE and token introspection. Focus on secure configuration and verification practices."
+  },
+  {
+    "n": 20,
+    "title": "API Security Fundamentals",
+    "math": "set theory, finite automata",
+    "note": "Use Postman/Insomnia to explore OpenAPI-described endpoints on a local demo API. Map issues to OWASP API Security Top 10 and discuss rate limiting, access control, and input validation. Capture requests with Burp for documentation, not exploitation."
+  },
+  {
+    "n": 21,
+    "title": "Mobile App Security Basics",
+    "math": "state machines, information flow control",
+    "note": "Set up Android Studio emulator on Windows 11 and MobSF in Docker. Analyze a benign sample APK’s permissions, exported components, and network calls. Discuss secure storage, certificate pinning, and platform security features without bypass techniques."
+  },
+  {
+    "n": 22,
+    "title": "Desktop And Electron App Security",
+    "math": "graph theory, sandboxing models",
+    "note": "Review desktop security concerns and Electron-specific risks (contextIsolation, nodeIntegration). Use a local demo Electron app to validate secure IPC patterns and content loading rules. Tools: VS Code, Node.js, and Electron on Windows 11."
+  },
+  {
+    "n": 23,
+    "title": "Network Discovery Concepts",
+    "math": "graph traversal, set cover",
+    "note": "Introduce safe network mapping on a closed lab segment. Use Nmap on Kali to understand host discovery logic, port states, and service fingerprinting theory against the Metasploitable2 VM only. Emphasize consent, rate limiting, and log awareness."
+  },
+  {
+    "n": 24,
+    "title": "Vulnerability Scanning In Practice",
+    "math": "statistics, prioritization heuristics",
+    "note": "Deploy OpenVAS (Greenbone Community Edition) in Docker on Ubuntu and scan only the Metasploitable2 VM inside the host-only network. Teach tuning, authentication options, report interpretation, and how to create remediation tickets, avoiding automated exploitation."
+  },
+  {
+    "n": 25,
+    "title": "Wireless Security Fundamentals",
+    "math": "information theory, probability",
+    "note": "Explain 802.11 frames, WPA2/WPA3 handshake concepts, and RF basics. Use a dedicated lab access point with default credentials changed and client devices you own. Capture traffic with Wireshark in monitor mode where legal, focusing on protocol understanding and defenses."
+  },
+  {
+    "n": 26,
+    "title": "Windows Internals For Defenders",
+    "math": "state machines, graph theory",
+    "note": "Teach processes, threads, services, registry, and Windows logging (Event IDs). Use Windows 11 VM with Sysmon and Event Viewer to trace benign activities, build XML filtering, and export EVTX for analysis. No credential extraction activities."
+  },
+  {
+    "n": 27,
+    "title": "Active Directory Overview",
+    "math": "graph theory, set theory",
+    "note": "Stand up a tiny AD lab using Windows Server Evaluation as Domain Controller and a Windows 11 member. Explain Kerberos tickets conceptually, group policy, and common misconfigurations. Enumerate directory objects with official admin tools; focus on hardening and monitoring."
+  },
+  {
+    "n": 28,
+    "title": "Linux Hardening And Auditing",
+    "math": "set theory, lattice models",
+    "note": "Apply CIS Benchmarks concepts on Ubuntu 24.04 using OpenSCAP and auditd. Configure sudo policies, file integrity monitoring (AIDE), and basic AppArmor profiles. Verify with logs and reports; emphasize change control and rollback using snapshots."
+  },
+  {
+    "n": 29,
+    "title": "Container Security Essentials",
+    "math": "namespace theory, capability models",
+    "note": "Explain Docker architecture, namespaces, cgroups, and capabilities. Scan images with Trivy, implement least-privilege containers, and demonstrate read-only filesystems using Docker Desktop on Windows 11. Discuss supply-chain risks and SBOMs (CycloneDX)."
+  },
+  {
+    "n": 30,
+    "title": "Kubernetes Security Basics",
+    "math": "graph theory, access control models",
+    "note": "Run Kind (Kubernetes-in-Docker) on Windows 11. Cover RBAC, NetworkPolicies, admission control, and secrets management. Use kube-bench and kubectl to inspect cluster posture and apply defense-oriented YAML examples. No multi-tenant production interactions."
+  },
+  {
+    "n": 31,
+    "title": "AWS IAM And Guardrails",
+    "math": "set theory, logic, lattice models",
+    "note": "Using an AWS Free Tier sandbox account, demonstrate IAM users, roles, policies, SCPs, and least privilege. Enable CloudTrail and Config. Use IAM Access Analyzer to identify broad permissions. Keep all resources in a billing-safe sandbox and destroy them after class."
+  },
+  {
+    "n": 32,
+    "title": "Cloud Storage And Networking",
+    "math": "graph theory, probability (misconfiguration likelihood)",
+    "note": "Create an S3 bucket with proper block-public-access, SSE-KMS, and least-privilege policies. Build a minimal VPC with subnets, routing tables, and security groups. Validate with AWS CLI and console. Emphasize secure defaults and logging rather than external exposure."
+  },
+  {
+    "n": 33,
+    "title": "SSO, Federation, And Zero Trust",
+    "math": "set theory, state machines",
+    "note": "Configure a demo SSO between Azure AD (Entra ID) developer tenant and a sample app using OIDC. Discuss conditional access, device posture, and least privilege. Validate token claims with jwt.io and SDKs on Windows 11; focus on secure design patterns."
+  },
+  {
+    "n": 34,
+    "title": "SIEM And Log Analytics",
+    "math": "statistics, time series analysis",
+    "note": "Deploy Elastic Stack (ELK) or Splunk Free in the lab. Ingest Windows Sysmon and Linux audit logs. Build detections for benign lab activities, dashboards for authentication anomalies, and practice hypothesis-driven hunting. Avoid production data ingestion."
+  },
+  {
+    "n": 35,
+    "title": "Purple Teaming With ATT&CK",
+    "math": "graph theory, mapping functions",
+    "note": "Map hypothetical adversary behaviors to MITRE ATT&CK, design detection goals, and validate via emulation with safe, non-destructive commands that generate telemetry only. Document detection coverage and gaps inside the SIEM dashboard in the lab."
+  },
+  {
+    "n": 36,
+    "title": "Incident Response Tabletop",
+    "math": "decision theory, game theory",
+    "note": "Run a tabletop exercise using the lab environment’s logs and a staged scenario. Walk through NIST IR phases (Preparation, Identification, Containment, Eradication, Recovery, Lessons Learned). Produce an executive brief and a technical post-incident report."
+  },
+  {
+    "n": 37,
+    "title": "Reverse Engineering With Ghidra",
+    "math": "control flow graphs, graph theory",
+    "note": "Use Ghidra on Windows 11 to analyze benign compiled binaries provided by the instructor, reconstruct control flow graphs, and identify unsafe patterns. Discuss symbol tables, strings, and calling conventions. Work strictly with approved samples in an offline VM."
+  },
+  {
+    "n": 38,
+    "title": "Memory Safety And Exploit Mitigations",
+    "math": "pointer arithmetic, set theory, probability",
+    "note": "Explain stack vs heap memory, typical bug classes, and mitigations (ASLR, DEP, stack canaries, CET, Control Flow Guard). Use safe demo programs compiled with and without mitigations to illustrate effects in a Kali VM. Emphasize defensive coding practices."
+  },
+  {
+    "n": 39,
+    "title": "Memory Forensics Basics",
+    "math": "graph theory, pattern matching",
+    "note": "Analyze provided memory images with Volatility 3 in Kali to locate processes, network connections, and injected modules in a benign training image. Demonstrate timelines and plugin usage to support incident investigations. No live system acquisition required."
+  },
+  {
+    "n": 40,
+    "title": "Malware Analysis In REMnux",
+    "math": "information theory, control flow graphs",
+    "note": "Use the REMnux distribution in a fully isolated VM to perform safe static and dynamic analysis of instructor-supplied, legally shareable sample binaries. Focus on unpacking indicators, strings, and network IOCs; emphasize containment and never developing or deploying malware."
+  },
+  {
+    "n": 41,
+    "title": "IoT And Embedded Security",
+    "math": "finite-state machines, probability",
+    "note": "Use an ESP32 or Arduino-compatible dev board you own to study firmware signing concepts, secure boot, and update mechanisms. Analyze UART/serial output and configuration hardening. Network tests occur only on the device you own within the lab network."
+  },
+  {
+    "n": 42,
+    "title": "ICS And SCADA Basics",
+    "math": "control theory, graph theory",
+    "note": "Simulate industrial protocols using open-source tools (Conpot) on Ubuntu. Discuss zones and conduits, Purdue model, and read-only monitoring with Wireshark. Emphasize safety, change control, and why production ICS environments must never be touched."
+  },
+  {
+    "n": 43,
+    "title": "Secure Reporting And Communication",
+    "math": "set theory (evidence sets), risk scoring",
+    "note": "Write clear, audience-appropriate reports with evidence, reproduction context limited to the lab, and prioritized remediation. Use Markdown templates, CVSS v3.1 scoring, and hash evidence with SHA-256. Deliver both an executive summary and a technical appendix."
+  },
+  {
+    "n": 44,
+    "title": "Scoping, ROE, And Legal Workflow",
+    "math": "logic, decision trees",
+    "note": "Draft a full engagement scope, rules of engagement, out-of-bounds list, and contact/escalation plans using provided templates. Practice intake interviews and change management within a mock company scenario. Artifacts are produced as signed PDFs on Windows 11."
+  },
+  {
+    "n": 45,
+    "title": "Capstone: Lab CTF And Debrief",
+    "math": "graph traversal, probability, statistics",
+    "note": "Run a capture-the-flag in the isolated lab using Juice Shop, Windows, and Linux VMs with challenges designed for defense-first learning (log analysis, misconfiguration identification, and secure remediation). Conclude with a structured debrief and lessons learned write-up."
+  }
+]
