@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const BOOKS_INDEX = "./books.json";
   const booksArea = document.getElementById("booksArea");
   const listEl = document.getElementById("list");
+  const loader = document.getElementById("loader");
   const jsError = document.getElementById("jsErrorPlaceholder");
   const searchBooksInput = document.getElementById("searchBooks");
   const searchTopicsInput = document.getElementById("searchTopics");
@@ -13,6 +14,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let booksIndex = [];
   let currentBook = null;
+
+  function showLoader() {
+    loader.classList.remove("hidden");
+  }
+
+  function hideLoader() {
+    loader.classList.add("hidden");
+  }
 
   function showError(msg) {
     jsError.style.display = "block";
@@ -75,6 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function renderBookButtons(filter = "") {
     booksArea.innerHTML = "";
+    booksArea.classList.add("fade-in");
     const filteredBooks = booksIndex.filter((b) =>
       b.name.toLowerCase().includes(filter.toLowerCase())
     );
@@ -118,11 +128,12 @@ window.addEventListener("DOMContentLoaded", () => {
     bookSelectionView.style.display = "none";
     topicView.style.display = "block";
     bookTitle.textContent = book.name;
+    showLoader();
 
     try {
       const filePath = book.file || book.path || book.filename;
       if (!filePath) throw new Error("Book entry has no file path");
-      listEl.innerHTML = `<div class="text-white">Loading book... (${filePath})</div>`;
+      listEl.innerHTML = "";
       const bookData = await fetchJsonSafe(filePath);
       currentBook = { name: book.name, file: filePath, data: bookData };
       renderTopics(bookData, filePath, book.name, "");
@@ -131,6 +142,8 @@ window.addEventListener("DOMContentLoaded", () => {
       console.error(err);
       showError(`Unable to load book: ${err.message || err}`);
       listEl.innerHTML = "";
+    } finally {
+      hideLoader();
     }
   }
 
@@ -159,6 +172,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     listEl.innerHTML = "";
+    listEl.classList.add("fade-in");
     if (topics.length === 0) {
       listEl.innerHTML = `<div class="text-gray-400 col-span-full text-center">No topics found for this filter.</div>`;
       return;
@@ -322,8 +336,7 @@ window.addEventListener("DOMContentLoaded", () => {
   (async function init() {
     try {
       clearError();
-      booksArea.innerHTML =
-        '<div class="spinner-border spinner-border-sm me-2" role="status"></div> Loading books...';
+      showLoader();
       console.log("Fetching books index...");
       const idx = await fetchJsonSafe(BOOKS_INDEX);
       booksIndex = Array.isArray(idx) ? idx : idx.books || idx.items || [];
@@ -384,6 +397,8 @@ window.addEventListener("DOMContentLoaded", () => {
       showError(`Unable to fetch books index: ${err.message || err}`);
       booksArea.innerHTML =
         '<div class="small-muted">Failed to load books.</div>';
+    } finally {
+      hideLoader();
     }
   })();
 });
