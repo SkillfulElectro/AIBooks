@@ -85,6 +85,7 @@
         { "name": "Bash Tour", "file": "./books/bash.json" },
         { "name": "CMake Tour", "file": "./books/cmake.json" },
         { "name": "Docker Tour", "file": "./books/docker.json" },
+        { "name": "Kubernetes Tour", "file": "./books/kubernetes.json" },
         { "name": "FFmpeg C/C++ Tour", "file": "./books/ffmpeg.json" },
         { "name": "Git Tour", "file": "./books/git.json" },
         { "name": "Vim Tour", "file": "./books/vim.json" }
