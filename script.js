@@ -11,9 +11,15 @@ window.addEventListener("DOMContentLoaded", () => {
   const topicView = document.getElementById("topic-view");
   const backToBooksBtn = document.getElementById("backToBooksBtn");
   const bookTitle = document.getElementById("bookTitle");
+  const categoryNav = document.getElementById("category-nav");
+  const categoryBackBtn = document.getElementById("categoryBackBtn");
+  const breadcrumbs = document.getElementById("breadcrumbs");
 
   let booksIndex = [];
   let currentBook = null;
+  let currentPath = [];
+  let pathBeforeSearch = [];
+  let isSearching = false;
 
   function showLoader() {
     loader.classList.remove("hidden");
@@ -98,63 +104,145 @@ window.addEventListener("DOMContentLoaded", () => {
     const fragment = document.createDocumentFragment();
     const filterLower = filter.toLowerCase();
 
-    function renderNode(node, forceShow = false) {
-      const isCategory = !!node.children;
+    if (filterLower) {
+      // Global search logic (existing implementation)
+      function renderNode(node, forceShow = false) {
+        const isCategory = !!node.children;
 
-      if (isCategory) {
-        const categoryName = node.name.toLowerCase();
-        const categoryMatches = !filterLower || categoryName.includes(filterLower);
-        
-        const childElements = node.children
-          .map(child => renderNode(child, forceShow || categoryMatches))
-          .filter(Boolean);
-
-        if (childElements.length > 0) {
-          const categoryEl = document.createElement("div");
-          categoryEl.className = "col-span-full mb-4";
-          categoryEl.innerHTML = `<h2 class="text-2xl font-bold text-white border-b-2 border-purple-500 pb-2">${node.name}</h2>`;
-
-          const childrenContainer = document.createElement("div");
-          childrenContainer.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-4";
-          childElements.forEach(el => childrenContainer.appendChild(el));
+        if (isCategory) {
+          const categoryName = node.name.toLowerCase();
+          const categoryMatches = !filterLower || categoryName.includes(filterLower);
           
-          categoryEl.appendChild(childrenContainer);
-          return categoryEl;
-        }
-      } else { // It's a book
-        const bookName = node.name.toLowerCase();
-        if (forceShow || !filterLower || bookName.includes(filterLower)) {
-          const btn = document.createElement("button");
-          btn.className =
-            "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
-          btn.innerHTML = `<span class="text-lg">${node.name}</span>`;
-          btn.dataset.file = node.file || node.filename || node.path || "";
-          btn.title = `Load book: ${node.name}`;
-          btn.addEventListener("click", () => {
-            resetBookButtonStyles();
-            btn.classList.remove("bg-gray-800");
-            btn.classList.add("bg-purple-600");
-            selectBook(node, btn);
-          });
-          return btn;
-        }
-      }
-      return null;
-    }
+          const childElements = node.children
+            .map(child => renderNode(child, forceShow || categoryMatches))
+            .filter(Boolean);
 
-    booksIndex.forEach(node => {
-      const element = renderNode(node);
-      if (element) {
-        fragment.appendChild(element);
+          if (childElements.length > 0) {
+            const categoryEl = document.createElement("div");
+            categoryEl.className = "col-span-full mb-4";
+            categoryEl.innerHTML = `<h2 class="text-2xl font-bold text-white border-b-2 border-purple-500 pb-2">${node.name}</h2>`;
+
+            const childrenContainer = document.createElement("div");
+            childrenContainer.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-4";
+            childElements.forEach(el => childrenContainer.appendChild(el));
+            
+            categoryEl.appendChild(childrenContainer);
+            return categoryEl;
+          }
+        } else { // It's a book
+          const bookName = node.name.toLowerCase();
+          if (forceShow || !filterLower || bookName.includes(filterLower)) {
+            const btn = document.createElement("button");
+            btn.className =
+              "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
+            btn.innerHTML = `<span class="text-lg">${node.name}</span>`;
+            btn.dataset.file = node.file || node.filename || node.path || "";
+            btn.title = `Load book: ${node.name}`;
+            btn.addEventListener("click", () => {
+              resetBookButtonStyles();
+              btn.classList.remove("bg-gray-800");
+              btn.classList.add("bg-purple-600");
+              selectBook(node, btn);
+            });
+            return btn;
+          }
+        }
+        return null;
       }
-    });
+
+      booksIndex.forEach(node => {
+        const element = renderNode(node);
+        if (element) {
+          fragment.appendChild(element);
+        }
+      });
+    } else {
+      // Drill-down logic
+      let currentNode = { children: booksIndex };
+      for (const categoryName of currentPath) {
+        currentNode = currentNode.children.find(c => c.name === categoryName);
+      }
+
+      currentNode.children.forEach(item => {
+        const btn = document.createElement("button");
+        btn.className =
+            "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
+        btn.innerHTML = `<span class="text-lg">${item.name}</span>`;
+        
+        if(item.children) { // Is a category
+            btn.addEventListener('click', () => {
+                currentPath.push(item.name);
+                renderBookButtons();
+            });
+        } else { // Is a book
+            btn.dataset.file = item.file || item.filename || item.path || "";
+            btn.title = `Load book: ${item.name}`;
+            btn.addEventListener("click", () => {
+                resetBookButtonStyles();
+                btn.classList.remove("bg-gray-800");
+                btn.classList.add("bg-purple-600");
+                selectBook(item, btn);
+            });
+        }
+        fragment.appendChild(btn);
+      });
+    }
 
     if (fragment.children.length === 0) {
       booksArea.innerHTML =
-        '<div class="text-gray-400 col-span-full text-center">No books or categories found.</div>';
+        `<div class="text-gray-400 col-span-full text-center">No ${filterLower ? 'books or categories found' : 'items in this category'}.</div>`;
     } else {
       booksArea.appendChild(fragment);
     }
+    updateNavigationControls();
+  }
+
+  function updateNavigationControls() {
+    const filterValue = searchBooksInput.value;
+    if (currentPath.length > 0 && !filterValue) {
+      categoryNav.style.display = 'flex';
+    } else {
+      categoryNav.style.display = 'none';
+    }
+
+    breadcrumbs.innerHTML = '';
+    const homeLink = document.createElement('a');
+    homeLink.href = '#';
+    homeLink.textContent = 'Home';
+    homeLink.className = 'hover:text-white';
+    homeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentPath = [];
+      renderBookButtons();
+    });
+    breadcrumbs.appendChild(homeLink);
+
+    let pathAccumulator = [];
+    currentPath.forEach((segment, index) => {
+      pathAccumulator.push(segment);
+      const separator = document.createElement('span');
+      separator.textContent = ' / ';
+      separator.className = 'mx-1';
+      breadcrumbs.appendChild(separator);
+
+      if (index < currentPath.length - 1) {
+        const pathLink = document.createElement('a');
+        pathLink.href = '#';
+        pathLink.textContent = segment;
+        pathLink.className = 'hover:text-white';
+        const currentSegmentPath = [...pathAccumulator];
+        pathLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentPath = currentSegmentPath;
+          renderBookButtons();
+        });
+        breadcrumbs.appendChild(pathLink);
+      } else {
+        const currentSegmentSpan = document.createElement('span');
+        currentSegmentSpan.textContent = segment;
+        breadcrumbs.appendChild(currentSegmentSpan);
+      }
+    });
   }
 
   async function selectBook(book, btnEl) {
@@ -380,9 +468,20 @@ window.addEventListener("DOMContentLoaded", () => {
         return;
       }
       renderBookButtons();
-      searchBooksInput.addEventListener("input", (e) =>
-        renderBookButtons(e.target.value)
-      );
+      searchBooksInput.addEventListener("input", (e) => {
+        const filterValue = e.target.value;
+        if (filterValue && !isSearching) {
+            // Starting a search
+            pathBeforeSearch = [...currentPath];
+            isSearching = true;
+        } else if (!filterValue && isSearching) {
+            // Clearing a search
+            currentPath = [...pathBeforeSearch];
+            pathBeforeSearch = [];
+            isSearching = false;
+        }
+        renderBookButtons(filterValue);
+      });
       searchTopicsInput.addEventListener("input", (e) => {
         if (currentBook) {
           renderTopics(
@@ -399,6 +498,12 @@ window.addEventListener("DOMContentLoaded", () => {
         listEl.innerHTML = "";
         currentBook = null;
         resetBookButtonStyles();
+      });
+      categoryBackBtn.addEventListener('click', () => {
+        if (currentPath.length > 0) {
+            currentPath.pop();
+            renderBookButtons();
+        }
       });
       document.querySelectorAll(".provider-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
