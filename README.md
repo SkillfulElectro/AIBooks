@@ -38,17 +38,41 @@ We welcome contributions! To add a new book or improve an existing one, please f
 1.  **Fork the repository.**
 2.  **Create a new branch:** `git checkout -b my-new-book`
 3.  **Add your book to `books.json`:**
-    - Add a new entry to the `books` array in `books.json`.
-    - Make sure to keep the list sorted alphabetically by book name.
+    - The `books.json` file now uses a tree structure to organize books into categories.
+    - To add a new book, find the appropriate category and add a new book object to its `children` array. A book object has a `name` and a `file` property.
+    - To add a new category, create a category object with a `name` and a `children` array. You can nest categories as needed.
+    - Example of adding a book to an existing category:
     ```json
     {
-      "name": "My New Book",
-      "file": "./books/my_new_book.json"
+      "name": "Programming",
+      "children": [
+        {
+          "name": "Languages",
+          "children": [
+            { "name": "C Language Tour", "file": "./books/c_language.json" },
+            { "name": "My New Book", "file": "./books/my_new_book.json" }
+          ]
+        }
+      ]
+    }
+    ```
+    - Example of adding a new category:
+    ```json
+    {
+      "name": "Programming",
+      "children": [
+        {
+          "name": "My New Category",
+          "children": [
+            { "name": "My New Book", "file": "./books/my_new_book.json" }
+          ]
+        }
+      ]
     }
     ```
 4.  **Create a new JSON file for your book's content:**
     - Create a new file in the `books/` directory (e.g., `my_new_book.json`).
-    - The file should contain an array of topic objects, each with `n`, `title`, `math`, and `note` fields.
+    - The file should contain an array of topic objects, each with `n`, `title`, and `note` fields. The `math` field is optional.
     ```json
     [
       {
