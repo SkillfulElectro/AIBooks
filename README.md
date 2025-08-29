@@ -2,6 +2,7 @@
   <img src="Logos/AIBooks_logo.png" alt="logo" width="100" style="border-radius: 50%"/>
 </div>
 
+# AIBooks
 AIBooks is a simple and easy-to-use prompt book library for everyone. It provides a collection of AI-powered study guides on various technical subjects.
 
 **Live Site:** https://skillfulelectro.github.io/AIBooks/
