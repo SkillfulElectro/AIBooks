@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Books by AI</title>
-
+    <link rel="icon" href="Logos/favicon.ico" sizes="any" />
+    <link rel="icon" href="Logos/AIBooks_logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="Logos/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
     <!-- Font Awesome (cdnjs) -->
     <link
       rel="stylesheet"
@@ -21,7 +24,11 @@
         class="flex flex-col sm:flex-row items-center justify-between gap-4 py-8 border-b border-gray-800"
       >
         <div class="flex items-center gap-3">
-          <i class="fas fa-book-open fa-2x text-purple-400"></i>
+          <img
+            src="Logos/AIBooks_logo.png"
+            alt="logo"
+            class="w-16 h-16"
+          />
           <h1 class="text-4xl font-bold tracking-tight">Books By AI</h1>
         </div>
       </header>
@@ -145,5 +152,19 @@
     </button>
 
     <script src="script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((reg) => {
+              console.log("Service worker registered.", reg);
+            })
+            .catch((err) => {
+              console.error("Service worker registration failed:", err);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
