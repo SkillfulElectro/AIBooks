@@ -55,10 +55,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const math = topic.math || "";
     const note = topic.note || "";
 
+
     let query = `You are a teacher and going to teach '${title}'`;
+    /* future updates
     if (math) {
       query += ` and you must teach '${math}' alongside it`;
     }
+    */
     query += ` . here is a note describing exactly what you have to teach and focus on : "${note}"`;
 
     const q = encodeURIComponent(query);
