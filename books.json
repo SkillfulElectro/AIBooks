@@ -1,6 +1,7 @@
 {
   "books": [
     { "name": "AI and ML Tour", "file": "./books/ai_ml_tour.json" },
+    { "name": "Ethical Hacking", "file": "./books/ethical_hacking.json" },
     { "name": "Angular Tour", "file": "./books/angular.json" },
     { "name": "Arch Linux Tour", "file": "./books/archlinux.json" },
     { "name": "ARM Assembly Tour", "file": "./books/arm_asm.json" },
