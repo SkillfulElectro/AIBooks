@@ -1,6 +1,6 @@
 {
-  "name": "Books by AI",
-  "short_name": "BooksAI",
+  "name": "AIBooks",
+  "short_name": "AIBooks",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#333333",
