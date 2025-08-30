@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Machine Learning?",
+    "math": "Statistical learning",
+    "note": "This section provides a formal definition of Machine Learning as a field of artificial intelligence that uses statistical techniques to give computer systems the ability to 'learn' (e.g., progressively improve performance on a specific task) from data, without being explicitly programmed."
+  },
+  {
+    "n": 2,
+    "title": "Types of Machine Learning",
+    "math": "Learning paradigms",
+    "note": "This lesson categorizes the main types of machine learning. It covers Supervised Learning (learning from labeled data), Unsupervised Learning (finding patterns in unlabeled data), and Reinforcement Learning (learning through trial and error with rewards and penalties)."
+  },
+  {
+    "n": 3,
+    "title": "The Machine Learning Workflow",
+    "math": "Process model",
+    "note": "This section outlines the typical end-to-end process of a machine learning project. It covers the key steps: defining the problem, gathering and preparing data, choosing a model, training the model, evaluating the model, tuning hyperparameters, and deploying the model."
+  },
+  {
+    "n": 4,
+    "title": "Introduction to Supervised Learning: Regression",
+    "math": "Regression analysis",
+    "note": "This lesson introduces Regression as a supervised learning task where the goal is to predict a continuous numerical value (e.g., predicting the price of a house). It explains the concept of using input features to predict a target variable."
+  },
+  {
+    "n": 5,
+    "title": "Linear Regression",
+    "math": "Linear regression",
+    "note": "This section details Linear Regression, the most fundamental regression algorithm. It explains how the model learns a linear relationship between the input features and the target variable by finding the best-fitting line (or hyperplane) through the data. The concepts of coefficients and intercept are explained."
+  },
+  {
+    "n": 6,
+    "title": "Training a Model: Cost Functions and Gradient Descent",
+    "math": "Gradient descent",
+    "note": "This lesson explains how a model like linear regression is trained. It introduces the concept of a Cost Function (like Mean Squared Error), which measures how 'wrong' the model's predictions are. It then explains Gradient Descent as an optimization algorithm that iteratively adjusts the model's parameters to minimize the cost function."
+  },
+  {
+    "n": 7,
+    "title": "Introduction to Supervised Learning: Classification",
+    "math": "Classification analysis",
+    "note": "This lesson introduces Classification as a supervised learning task where the goal is to predict a discrete class label (e.g., predicting whether an email is 'spam' or 'not spam')."
+  },
+  {
+    "n": 8,
+    "title": "Classification: Logistic Regression",
+    "math": "Logistic regression",
+    "note": "This section covers Logistic Regression, a core algorithm for binary classification. Despite its name, it's a classification algorithm. It uses the logistic (or sigmoid) function to squash the output of a linear equation to a value between 0 and 1, representing the probability of belonging to a class."
+  },
+  {
+    "n": 9,
+    "title": "Classification: Decision Trees",
+    "math": "Decision trees",
+    "note": "This lesson introduces Decision Trees, an intuitive model that learns to classify data by creating a tree of if-then-else rules. It explains how the tree is built by finding the best features to split the data on at each node, typically using metrics like Gini impurity or information gain."
+  },
+  {
+    "n": 10,
+    "title": "Evaluating Classification Models: The Confusion Matrix",
+    "math": "Confusion matrix",
+    "note": "This section introduces the Confusion Matrix as a primary tool for evaluating a classification model. It explains the four outcomes: True Positives, True Negatives, False Positives (Type I Error), and False Negatives (Type II Error)."
+  },
+  {
+    "n": 11,
+    "title": "Classification Metrics: Accuracy, Precision, and Recall",
+    "math": "Precision and recall",
+    "note": "This lesson details the key metrics derived from the confusion matrix. It explains Accuracy (overall correctness), Precision (the accuracy of positive predictions), and Recall (the ability to find all positive samples). The tradeoff between precision and recall is discussed."
+  },
+  {
+    "n": 12,
+    "title": "The Bias-Variance Tradeoff",
+    "math": "Bias-variance tradeoff",
+    "note": "This crucial lesson explains a fundamental concept in machine learning. Bias is the error from erroneous assumptions in the learning algorithm (underfitting). Variance is the error from sensitivity to small fluctuations in the training set (overfitting). The goal is to find a balance between the two."
+  },
+  {
+    "n": 13,
+    "title": "Overfitting and Regularization",
+    "math": "Regularization",
+    "note": "This section focuses on overfitting, where a model learns the training data too well and fails to generalize to new data. It introduces Regularization as a technique to prevent overfitting by adding a penalty to the cost function for large model coefficients. L1 (Lasso) and L2 (Ridge) regularization are explained."
+  },
+  {
+    "n": 14,
+    "title": "Ensemble Learning: Random Forests",
+    "math": "Ensemble learning (Random Forests)",
+    "note": "This lesson introduces Ensemble Learning, the technique of combining multiple models to produce a more powerful result. It focuses on Random Forests, an ensemble of many decision trees. It explains how Random Forests reduce overfitting by introducing randomness in both data sampling (bagging) and feature selection."
+  },
+  {
+    "n": 15,
+    "title": "Ensemble Learning: Gradient Boosting",
+    "math": "Boosting algorithms",
+    "note": "This section covers another type of ensemble learning called Boosting. It explains how boosting works by building models sequentially, where each new model attempts to correct the errors of the previous one. Gradient Boosting is presented as a powerful and widely used boosting algorithm."
+  },
+  {
+    "n": 16,
+    "title": "Introduction to Unsupervised Learning: Clustering",
+    "math": "Clustering analysis",
+    "note": "This lesson introduces Unsupervised Learning, where the goal is to find hidden patterns in unlabeled data. It focuses on Clustering, the task of grouping a set of objects in such a way that objects in the same group (or cluster) are more similar to each other than to those in other clusters."
+  },
+  {
+    "n": 17,
+    "title": "Clustering: K-Means Algorithm",
+    "math": "k-Means clustering",
+    "note": "This section details the k-Means algorithm, a popular and simple clustering algorithm. It explains its iterative process of assigning data points to the nearest of k centroids and then recalculating the centroids. The importance of choosing the right value for 'k' is discussed."
+  },
+  {
+    "n": 18,
+    "title": "Unsupervised Learning: Dimensionality Reduction",
+    "math": "Dimensionality reduction",
+    "note": "This lesson explains Dimensionality Reduction, the process of reducing the number of input variables (features) in a dataset. This is done to combat the 'curse of dimensionality', reduce computational cost, and often to improve model performance by removing noise."
+  },
+  {
+    "n": 19,
+    "title": "Dimensionality Reduction: Principal Component Analysis (PCA)",
+    "math": "Principal Component Analysis (PCA)",
+    "note": "This section introduces PCA as the most common technique for dimensionality reduction. It explains, at a high level, how PCA works by identifying the directions (principal components) that capture the maximum variance in the data and then projecting the data onto a new, lower-dimensional subspace."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Deep Learning",
+    "math": "Artificial Neural Networks",
+    "note": "This final lesson provides a brief introduction to Deep Learning as a subfield of machine learning based on Artificial Neural Networks with many layers ('deep' architectures). It explains how these deep networks can automatically learn complex representations from data, leading to breakthroughs in fields like image recognition and natural language processing."
+  }
+]

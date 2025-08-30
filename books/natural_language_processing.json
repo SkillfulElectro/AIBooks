@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Natural Language Processing (NLP)?",
+    "math": "Computational linguistics",
+    "note": "This section defines Natural Language Processing (NLP) as a subfield of artificial intelligence concerned with the interaction between computers and humans in natural language. The ultimate objective of NLP is to read, decipher, understand, and make sense of human languages in a manner that is valuable."
+  },
+  {
+    "n": 2,
+    "title": "The NLP Pipeline",
+    "math": "Data processing pipeline",
+    "note": "This lesson provides a high-level overview of the typical workflow for an NLP project. It outlines the common stages: Data Collection, Text Pre-processing (cleaning), Feature Extraction (turning text into numbers), Model Building, and Evaluation."
+  },
+  {
+    "n": 3,
+    "title": "Text Pre-processing: Tokenization",
+    "math": "String tokenization",
+    "note": "This section covers the first fundamental step in pre-processing: tokenization. It is the process of breaking down a stream of text into smaller pieces or 'tokens', which can be words, characters, or subwords. The difference between sentence tokenization and word tokenization is explained."
+  },
+  {
+    "n": 4,
+    "title": "Text Pre-processing: Stop Word Removal",
+    "math": "Set theory (set difference)",
+    "note": "This lesson explains the process of removing 'stop words'—common words (like 'the', 'is', 'a') that are often considered noise in NLP tasks. Removing these words helps to focus on the more important keywords in a text."
+  },
+  {
+    "n": 5,
+    "title": "Text Pre-processing: Stemming and Lemmatization",
+    "math": "Morphological analysis",
+    "note": "This section covers techniques for normalizing words to their base or root form. It contrasts Stemming, a crude heuristic process that chops off the ends of words, with Lemmatization, which uses a vocabulary and morphological analysis to return the base form (or 'lemma') of a word."
+  },
+  {
+    "n": 6,
+    "title": "Feature Extraction: Bag-of-Words (BoW)",
+    "math": "Vector space models",
+    "note": "This lesson introduces the Bag-of-Words model, a simple way to represent a text document as a numerical vector. It works by creating a vocabulary of all unique words in the corpus and then representing each document by the count of how many times each word appears. The model disregards grammar and word order."
+  },
+  {
+    "n": 7,
+    "title": "Feature Extraction: TF-IDF",
+    "math": "Term Frequency-Inverse Document Frequency (TF-IDF)",
+    "note": "This section covers TF-IDF, a more advanced feature extraction technique. It is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. It increases with the number of times a word appears in the document but is offset by the frequency of the word in the corpus."
+  },
+  {
+    "n": 8,
+    "title": "Feature Extraction: N-grams",
+    "math": "N-grams",
+    "note": "This lesson introduces n-grams as a way to incorporate some word order information into text representation. An n-gram is a contiguous sequence of n items from a given sample of text or speech. Bi-grams (n=2) and tri-grams (n=3) are common examples."
+  },
+  {
+    "n": 9,
+    "title": "Word Embeddings: The Need for Dense Representations",
+    "math": "Vector semantics",
+    "note": "This section explains the limitations of sparse representations like Bag-of-Words (e.g., they don't capture semantic relationships). It introduces Word Embeddings as a technique where words are represented as dense, low-dimensional numerical vectors. In these embeddings, semantically similar words have similar vector representations."
+  },
+  {
+    "n": 10,
+    "title": "Word Embeddings: Word2Vec",
+    "math": "Neural networks",
+    "note": "This lesson introduces Word2Vec, one of the most popular techniques for learning word embeddings. It provides a high-level overview of its two model architectures: CBOW (Continuous Bag-of-Words), which predicts a word from its context, and Skip-gram, which predicts the context from a word."
+  },
+  {
+    "n": 11,
+    "title": "Part-of-Speech (POS) Tagging",
+    "math": "Syntactic analysis",
+    "note": "This section covers POS Tagging, the process of marking up a word in a text as corresponding to a particular part of speech (like noun, verb, adjective), based on both its definition and its context. This is a fundamental task for understanding the syntactic structure of a sentence."
+  },
+  {
+    "n": 12,
+    "title": "Named Entity Recognition (NER)",
+    "math": "Information extraction",
+    "note": "This lesson introduces NER, a subtask of information extraction that seeks to locate and classify named entities in text into pre-defined categories such as the names of persons, organizations, locations, expressions of times, quantities, etc."
+  },
+  {
+    "n": 13,
+    "title": "Topic Modeling with LDA",
+    "math": "Latent Dirichlet Allocation (LDA)",
+    "note": "This section covers Topic Modeling, an unsupervised technique used to discover the abstract 'topics' that occur in a collection of documents. It introduces Latent Dirichlet Allocation (LDA) as a popular generative statistical model for this task."
+  },
+  {
+    "n": 14,
+    "title": "Deep Learning for NLP: Recurrent Neural Networks (RNNs)",
+    "math": "Sequence modeling",
+    "note": "This lesson explains how Recurrent Neural Networks (RNNs) are well-suited for NLP tasks because they are designed to work with sequential data like text. It explains how the recurrent nature of an RNN allows it to maintain a 'memory' of previous words in a sequence."
+  },
+  {
+    "n": 15,
+    "title": "The Attention Mechanism",
+    "math": "Attention mechanisms",
+    "note": "This section introduces the Attention Mechanism, a revolutionary idea in deep learning for NLP. It allows a model to focus on relevant parts of the input sequence when producing an output, rather than relying on a single fixed-context vector. This was a key step towards overcoming the limitations of RNNs."
+  },
+  {
+    "n": 16,
+    "title": "The Transformer Architecture",
+    "math": "Transformer models",
+    "note": "This lesson introduces the Transformer, a novel network architecture based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Its parallelizable nature and superior performance have made it the foundation of most modern, state-of-the-art NLP models."
+  },
+  {
+    "n": 17,
+    "title": "Modern NLP: Transfer Learning and BERT",
+    "math": "Transfer learning",
+    "note": "This section explains the concept of Transfer Learning in NLP, where a large model is pre-trained on a massive amount of text data and then 'fine-tuned' for a specific downstream task. It introduces BERT (Bidirectional Encoder Representations from Transformers) as a landmark pre-trained model."
+  },
+  {
+    "n": 18,
+    "title": "Modern NLP: Generative Models like GPT",
+    "math": "Generative language models",
+    "note": "This lesson provides a high-level overview of large generative language models like GPT (Generative Pre-trained Transformer). It explains that these models are trained to predict the next word in a sequence and can be used to generate human-like text, translate languages, and answer questions."
+  },
+  {
+    "n": 19,
+    "title": "Application: Sentiment Analysis",
+    "math": "Text classification",
+    "note": "This lesson provides a practical overview of Sentiment Analysis, the task of identifying and categorizing opinions expressed in a piece of text to determine whether the writer's attitude is positive, negative, or neutral. It discusses both traditional and deep learning approaches."
+  },
+  {
+    "n": 20,
+    "title": "NLP Libraries: NLTK, spaCy, and Hugging Face",
+    "math": "Software libraries",
+    "note": "This final lesson introduces the key Python libraries used for NLP. It covers NLTK (a comprehensive academic toolkit), spaCy (a fast, production-ready library), and the Hugging Face `transformers` library (which provides easy access to thousands of pre-trained Transformer models)."
+  }
+]

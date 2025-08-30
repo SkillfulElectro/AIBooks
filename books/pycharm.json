@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is an IDE? Introduction to PyCharm",
+    "math": "Integrated Development Environments (IDEs)",
+    "note": "This section explains that an IDE is a software application that provides comprehensive facilities to computer programmers for software development. It then introduces PyCharm as a dedicated IDE for Python, which integrates a code editor, a debugger, a test runner, and version control into a single, powerful tool."
+  },
+  {
+    "n": 2,
+    "title": "PyCharm Editions: Professional vs. Community",
+    "math": "Software editions",
+    "note": "This lesson compares the two main editions of PyCharm. The Community Edition is free and open-source, providing all the essential features for general Python development. The Professional Edition is a paid product that adds advanced features for web development (Django, Flask), scientific tools, and database support."
+  },
+  {
+    "n": 3,
+    "title": "Creating a New Project and Configuring an Interpreter",
+    "math": "Project setup",
+    "note": "This lesson provides a practical guide to starting a new project in PyCharm. It emphasizes the crucial step of configuring a project-specific Python interpreter using a virtual environment (`venv`). This practice isolates the project's dependencies from other projects on the system."
+  },
+  {
+    "n": 4,
+    "title": "A Tour of the PyCharm User Interface",
+    "math": "User interface tour",
+    "note": "This section provides a guided tour of the main PyCharm window. It explains the purpose of the key components: the Editor (where you write code), the Project tool window (for navigating files), the Navigation Bar, and the Status Bar."
+  },
+  {
+    "n": 5,
+    "title": "The Intelligent Editor: Code Completion",
+    "math": "Code completion",
+    "note": "This lesson introduces one of PyCharm's most powerful features: intelligent code completion. It demonstrates how PyCharm analyzes your code in real-time to provide context-aware suggestions for variables, functions, and methods as you type, significantly speeding up development."
+  },
+  {
+    "n": 6,
+    "title": "The Editor: Code Inspections and Quick-Fixes",
+    "math": "Static code analysis",
+    "note": "This section explains how PyCharm continuously analyzes your code for potential errors, style violations (according to PEP 8), and inefficiencies. It demonstrates how the IDE highlights these issues and often provides 'quick-fixes' to automatically correct them."
+  },
+  {
+    "n": 7,
+    "title": "The Editor: Code Navigation",
+    "math": "Code navigation",
+    "note": "This lesson covers PyCharm's powerful navigation features. It demonstrates how to use 'Go to Definition' to jump directly to the source of a function or class, and 'Find Usages' to see all the places where a particular piece of code is used."
+  },
+  {
+    "n": 8,
+    "title": "Refactoring Tools",
+    "math": "Code refactoring",
+    "note": "This section introduces refactoring as the process of restructuring existing computer code without changing its external behavior. It demonstrates some of PyCharm's powerful automated refactoring tools, such as 'Rename' (which safely renames a variable or function everywhere it is used) and 'Extract Method'."
+  },
+  {
+    "n": 9,
+    "title": "The Visual Debugger",
+    "math": "Debugging",
+    "note": "This lesson explains how to use PyCharm's integrated visual debugger to find and fix bugs. It covers the essential concepts of setting 'breakpoints' to pause execution at a specific line of code and then 'stepping' through the code line by line."
+  },
+  {
+    "n": 10,
+    "title": "Using the Debugger: Inspecting Variables",
+    "math": "Variable inspection",
+    "note": "This section provides a deeper dive into the debugger. It demonstrates how, when execution is paused at a breakpoint, you can use the Debug tool window to inspect the current values of all variables in scope, helping you to understand the program's state and identify problems."
+  },
+  {
+    "n": 11,
+    "title": "Running Tests with the Test Runner",
+    "math": "Test automation",
+    "note": "This lesson covers PyCharm's support for testing frameworks like `pytest` and `unittest`. It demonstrates how to create a test file and then use PyCharm's integrated test runner to execute the tests. The results are displayed in a dedicated test runner tool window with clear pass/fail indicators."
+  },
+  {
+    "n": 12,
+    "title": "Version Control Integration with Git",
+    "math": "Version control systems",
+    "note": "This section explains PyCharm's seamless integration with Git. It shows how to perform all common Git operations from within the IDE, including viewing changes, committing files, viewing history, working with branches, and pushing changes to a remote repository."
+  },
+  {
+    "n": 13,
+    "title": "The Commit Tool Window",
+    "math": "Git commit",
+    "note": "This lesson focuses on the Commit tool window in PyCharm. It provides a powerful interface for staging changes, writing a commit message, and viewing a diff of the changes before committing. It also performs pre-commit checks to analyze the code for errors."
+  },
+  {
+    "n": 14,
+    "title": "Managing Python Packages",
+    "math": "Package management",
+    "note": "This section demonstrates how to manage your project's dependencies from within PyCharm. It shows how to use the Python Packages tool window to search for, install, and upgrade packages from the Python Package Index (PyPI) for your project's specific virtual environment."
+  },
+  {
+    "n": 15,
+    "title": "Web Development with Django (Professional Edition)",
+    "math": "Web frameworks",
+    "note": "This lesson provides an overview of the specialized support for the Django web framework in the Professional edition. It demonstrates how to create a new Django project, use the 'Run/Debug Configuration' to start the development server, and get advanced support for Django-specific template tags and ORM queries."
+  },
+  {
+    "n": 16,
+    "title": "Database Tools (Professional Edition)",
+    "math": "Database clients",
+    "note": "This section covers the integrated database tools available in the Professional edition. It shows how to configure a connection to a database (like PostgreSQL or MySQL), how to use the Database tool window to browse tables and schemas, and how to write and execute SQL queries in a dedicated editor."
+  },
+  {
+    "n": 17,
+    "title": "The Python Console",
+    "math": "REPL (Read-Eval-Print Loop)",
+    "note": "This lesson introduces the Python Console tool window, which provides an interactive REPL environment. It is useful for testing small snippets of code, exploring libraries, and interacting with your project's code dynamically."
+  },
+  {
+    "n": 18,
+    "title": "Using Live Templates",
+    "math": "Code snippets",
+    "note": "This section explains Live Templates, which are a way to insert common code constructs into your code quickly. It demonstrates how to use built-in templates (e.g., typing `main` and pressing Tab to insert the `if __name__ == '__main__':` block) and how to create your own custom templates."
+  },
+  {
+    "n": 19,
+    "title": "Customizing the UI and Keymap",
+    "math": "User customization",
+    "note": "This lesson shows how to personalize the PyCharm environment. It covers how to change the UI theme (e.g., to a dark theme) and how to customize the keyboard shortcuts (the keymap) to match your preferences or emulate another editor."
+  },
+  {
+    "n": 20,
+    "title": "Extending PyCharm with Plugins",
+    "math": "Software plugins",
+    "note": "This final lesson explains how to extend PyCharm's functionality by installing plugins. It demonstrates how to browse and install plugins from the JetBrains Marketplace directly within the IDE, covering popular plugins for themes, language support, and tool integrations."
+  }
+]

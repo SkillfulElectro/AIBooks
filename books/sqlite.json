@@ -1,0 +1,86 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Databases and SQL",
+    "math": "Set theory, relational algebra",
+    "note": "This section introduces the fundamental concepts of databases. It explains what a database is, the purpose of a Structured Query Language (SQL), and the core differences between relational (SQL) and non-relational (NoSQL) database models. This lesson uses the context of data storage and retrieval systems."
+  },
+  {
+    "n": 2,
+    "title": "What is SQLite?",
+    "math": "File I/O operations",
+    "note": "This lesson defines SQLite and its unique characteristics. It covers the serverless, self-contained, zero-configuration, and transactional nature of the SQLite database engine. Ideal use cases are discussed, such as for embedded devices, IoT, application file formats, and development or testing."
+  },
+  {
+    "n": 3,
+    "title": "Getting Started with the SQLite CLI",
+    "math": "Command-line syntax",
+    "note": "This section provides a hands-on guide to using the SQLite command-line interface (CLI). It covers how to install the necessary tools, create a new database file from the terminal, and execute special '.dot' commands like '.help', '.databases', and '.tables' to interact with the database."
+  },
+  {
+    "n": 4,
+    "title": "Data Definition Language (DDL)",
+    "math": "Schema design",
+    "note": "Learn how to define the structure of a database. This lesson covers the primary DDL commands in SQL: `CREATE TABLE` to define a new table and its columns, `ALTER TABLE` to modify an existing table's structure, and `DROP TABLE` to delete a table. It also introduces the dynamic data types used in SQLite (NULL, INTEGER, REAL, TEXT, BLOB)."
+  },
+  {
+    "n": 5,
+    "title": "Data Manipulation Language (DML)",
+    "math": "CRUD operations (Create, Read, Update, Delete)",
+    "note": "This section focuses on managing the data within tables. It provides detailed examples of the core DML commands: `INSERT` to add new rows of data, `UPDATE` to modify existing rows, and `DELETE` to remove rows from a table. The context is direct data manipulation using the SQLite engine."
+  },
+  {
+    "n": 6,
+    "title": "Basic Data Retrieval with SELECT",
+    "math": "Boolean logic, predicate logic",
+    "note": "This lesson introduces the foundation of querying data in SQL. It covers the `SELECT` statement for retrieving data from one or more columns and the `WHERE` clause for filtering rows based on specific conditions. The concept of a result set is explained. This is performed within the SQLite SQL dialect."
+  },
+  {
+    "n": 7,
+    "title": "Filtering and Sorting Results",
+    "math": "Comparison operators, sorting algorithms",
+    "note": "Learn to refine and organize query results. This section covers using `ORDER BY` to sort data in ascending or descending order and `LIMIT` to restrict the number of rows returned. It also explains how to use `DISTINCT` to remove duplicate values from a result set. Logical operators (`AND`, `OR`, `NOT`) and comparison operators (`=`, `!=`, `<`, `>`) are covered in detail."
+  },
+  {
+    "n": 8,
+    "title": "Combining Data with JOINs",
+    "math": "Set intersection and union",
+    "note": "This lesson explains how to retrieve data from multiple tables in a single query. It focuses on the most common join types: `INNER JOIN` to select records that have matching values in both tables, and `LEFT JOIN` to select all records from the left table and the matched records from the right table."
+  },
+  {
+    "n": 9,
+    "title": "Using Aggregate Functions",
+    "math": "Statistical functions (average, sum, count)",
+    "note": "This section teaches how to perform calculations on a set of rows and return a single summary value. It covers the main SQL aggregate functions: `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX`. The use of the `GROUP BY` clause to group rows and apply aggregates to each group is also explained."
+  },
+  {
+    "n": 10,
+    "title": "Ensuring Data Integrity with Constraints",
+    "math": "Rule-based systems",
+    "note": "Learn how to enforce rules on the data in a table using SQL constraints. This lesson covers `PRIMARY KEY` for unique row identification, `FOREIGN KEY` to link tables, `UNIQUE` to ensure all values in a column are different, `NOT NULL` to prevent empty values, and `CHECK` to validate data against a condition."
+  },
+  {
+    "n": 11,
+    "title": "Speeding Up Queries with Indexes",
+    "math": "B-tree data structure",
+    "note": "This section explains how indexes can improve the performance of data retrieval operations. It covers the `CREATE INDEX` command and discusses the trade-offs of using indexes, including the impact on data insertion and update speed. The context is query optimization within the SQLite engine."
+  },
+  {
+    "n": 12,
+    "title": "Understanding Transactions",
+    "math": "ACID properties (Atomicity, Consistency, Isolation, Durability)",
+    "note": "This lesson covers how to group multiple SQL statements into a single, all-or-nothing operation called a transaction. It explains the commands `BEGIN TRANSACTION`, `COMMIT` to save the changes, and `ROLLBACK` to undo the changes, ensuring data integrity even if errors occur. The ACID properties are explained in the context of SQLite."
+  },
+  {
+    "n": 13,
+    "title": "Simplifying Queries with Views",
+    "math": "Abstraction",
+    "note": "Learn how to use views to encapsulate complex queries. This section explains that a view is a stored SQL query that acts like a virtual table. It covers the `CREATE VIEW` and `DROP VIEW` commands and demonstrates how views can be used to simplify data access and enhance security by restricting access to underlying table columns."
+  },
+  {
+    "n": 14,
+    "title": "Using SQLite with Python",
+    "math": "API integration",
+    "note": "This lesson demonstrates how to interact with an SQLite database programmatically using Python's built-in `sqlite3` module. It covers the standard workflow: establishing a connection to a database file, creating a cursor object, executing SQL queries (DDL, DML, and SELECT), and fetching the results into Python variables."
+  }
+]

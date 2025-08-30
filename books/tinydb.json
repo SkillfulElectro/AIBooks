@@ -1,0 +1,92 @@
+[
+  {
+    "n": 1,
+    "title": "What Is TinyDB?",
+    "math": "Document-oriented databases",
+    "note": "This section introduces TinyDB as a tiny, document-oriented database written in pure Python. It is designed to be simple, lightweight, and easy to use, requiring no external server. It stores data in a JSON file, making it human-readable."
+  },
+  {
+    "n": 2,
+    "title": "When to Use TinyDB",
+    "math": "Use case analysis",
+    "note": "This lesson explains the ideal use cases for TinyDB. It is perfect for small applications, command-line tools, IoT devices, or for teaching database concepts, where setting up a full-fledged database server like PostgreSQL or MongoDB would be overkill."
+  },
+  {
+    "n": 3,
+    "title": "Getting Started: Installation and Creating a Database",
+    "math": "Database creation",
+    "note": "This section provides a practical guide to getting started. It demonstrates how to install TinyDB using `pip` and how to create or open a database by instantiating the `TinyDB` class with a path to a JSON file."
+  },
+  {
+    "n": 4,
+    "title": "Inserting Documents",
+    "math": "Insert operation",
+    "note": "This lesson covers how to add data to the database. It explains that a 'document' in TinyDB is simply a Python dictionary. It demonstrates the `.insert()` method for adding a single document and the `.insert_multiple()` method for adding a list of documents."
+  },
+  {
+    "n": 5,
+    "title": "Fetching All Documents",
+    "math": "Data retrieval",
+    "note": "This section demonstrates the simplest way to retrieve data. It introduces the `.all()` method, which returns a list containing all the documents currently stored in the database."
+  },
+  {
+    "n": 6,
+    "title": "Searching for Data: The `Query` Object",
+    "math": "Querying",
+    "note": "This lesson introduces the core mechanism for searching in TinyDB. It explains how to create a `Query` object, which is then used to build search queries. The `db.search()` method, which takes a query as an argument, is introduced."
+  },
+  {
+    "n": 7,
+    "title": "Searching with Equality",
+    "math": "Equality queries",
+    "note": "This section demonstrates the most basic type of search. It shows how to use a `Query` object to find all documents where a specific field has an exact value (e.g., `db.search(User.name == 'John')`)."
+  },
+  {
+    "n": 8,
+    "title": "Advanced Searches",
+    "math": "Complex queries",
+    "note": "This lesson covers more advanced search capabilities. It demonstrates how to search using comparisons (like `!=`, `>`, `<`), how to check for the existence of a key, and how to use regular expressions for partial string matching."
+  },
+  {
+    "n": 9,
+    "title": "Combining Queries",
+    "math": "Logical operators (AND, OR)",
+    "note": "This section explains how to build more complex queries by combining simpler ones. It demonstrates how to use the `&` (and) and `|` (or) operators to create queries that match multiple conditions."
+  },
+  {
+    "n": 10,
+    "title": "Updating Documents",
+    "math": "Update operation",
+    "note": "This lesson covers how to modify existing documents. It introduces the `.update()` method, which takes the data to update as an argument and a query to specify which documents to update. It can update one or multiple documents at once."
+  },
+  {
+    "n": 11,
+    "title": "Upserting Documents",
+    "math": "Upsert operation",
+    "note": "This section explains the 'upsert' operation, which means to update a document if it exists, or insert it if it does not. It demonstrates the `.upsert()` method, which is a convenient way to synchronize data without having to first check for its existence."
+  },
+  {
+    "n": 12,
+    "title": "Deleting Documents",
+    "math": "Delete operation",
+    "note": "This lesson covers how to remove documents from the database. It introduces the `.remove()` method, which takes a query to specify which documents to delete. It also covers the `.truncate()` method for removing all documents from a table."
+  },
+  {
+    "n": 13,
+    "title": "Working with Multiple Tables",
+    "math": "Database tables",
+    "note": "This section explains that a single TinyDB database file can contain multiple tables. It demonstrates the `db.table('table_name')` method, which allows you to get a reference to a specific table within the database to perform operations on."
+  },
+  {
+    "n": 14,
+    "title": "Middleware and Custom Storage",
+    "math": "Middleware",
+    "note": "This lesson provides an overview of TinyDB's extensibility. It introduces the concept of Middleware, which allows you to modify the storage behavior, for example, by adding a caching layer. It also mentions the ability to create your own custom storage engine instead of writing to a JSON file."
+  },
+  {
+    "n": 15,
+    "title": "Project: A Command-Line To-Do List Application",
+    "math": "Application development",
+    "note": "This final lesson provides a practical project to tie all the concepts together. It walks through the process of building a simple command-line to-do list application where the tasks are stored and managed in a TinyDB database. It covers adding, listing, and completing tasks."
+  }
+]

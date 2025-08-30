@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Cryptography?",
+    "math": "Information theory",
+    "note": "This section provides a formal definition of cryptography as the practice and study of techniques for secure communication in the presence of third parties called adversaries. It introduces the core goals of modern cryptography: Confidentiality, Integrity, Authenticity, and Non-repudiation."
+  },
+  {
+    "n": 2,
+    "title": "Kerckhoffs's Principle",
+    "math": "Security principles",
+    "note": "This lesson explains one of the foundational principles of modern cryptography: Kerckhoffs's Principle. It states that a cryptosystem should be secure even if everything about the system, except for the key, is public knowledge. This principle emphasizes that the security of a system should rely on the secrecy of its key, not the secrecy of its algorithm."
+  },
+  {
+    "n": 3,
+    "title": "Classical Ciphers: The Caesar Cipher",
+    "math": "Modular arithmetic",
+    "note": "This section introduces classical cryptography by examining one of the earliest and simplest ciphers, the Caesar cipher. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. Its simplicity and weaknesses are discussed."
+  },
+  {
+    "n": 4,
+    "title": "Breaking Simple Ciphers: Frequency Analysis",
+    "math": "Statistical analysis, frequency distribution",
+    "note": "This lesson explains the primary technique used to break simple monoalphabetic substitution ciphers. Frequency analysis is based on the fact that, in any given stretch of written language, certain letters and combinations of letters occur with varying frequencies. By counting the frequencies of characters in the ciphertext, one can deduce the likely substitutions."
+  },
+  {
+    "n": 5,
+    "title": "The One-Time Pad: Perfect Secrecy",
+    "math": "Information-theoretic security",
+    "note": "This section introduces the One-Time Pad (OTP), a unique encryption technique that is mathematically proven to be impossible to break if used correctly. It explains the requirements for perfect secrecy: the key must be a truly random sequence, at least as long as the message, and never reused."
+  },
+  {
+    "n": 6,
+    "title": "Modern Cryptography: Symmetric-Key Encryption",
+    "math": "Symmetric-key algorithms",
+    "note": "This lesson introduces symmetric-key cryptography, where the same secret key is used for both encryption and decryption. It is contrasted with classical ciphers by its use of complex, computer-based algorithms. The main challenge of this approach—securely sharing the key—is highlighted."
+  },
+  {
+    "n": 7,
+    "title": "Block Ciphers and Stream Ciphers",
+    "math": "Data processing modes",
+    "note": "This section explains the two main types of modern symmetric ciphers. A Block Cipher operates on fixed-size blocks of data (e.g., 128 bits) with a fixed key. A Stream Cipher encrypts digits of a plaintext one at a time, typically by combining the plaintext with a pseudorandom cipher digit stream."
+  },
+  {
+    "n": 8,
+    "title": "The Advanced Encryption Standard (AES)",
+    "math": "Substitution-permutation networks",
+    "note": "This lesson introduces the Advanced Encryption Standard (AES) as the modern, worldwide standard for symmetric encryption. It provides a high-level overview of its operation, which involves multiple rounds of substitution and permutation operations on blocks of data. The different key sizes (128, 192, 256 bits) are discussed."
+  },
+  {
+    "n": 9,
+    "title": "Block Cipher Modes of Operation",
+    "math": "Cryptographic modes of operation",
+    "note": "This section explains that a block cipher on its own can only encrypt a single block of data. A 'mode of operation' describes how to repeatedly apply a block cipher's single-block operation to securely encrypt amounts of data larger than a block. It introduces common modes like ECB (insecure), CBC, and CTR."
+  },
+  {
+    "n": 10,
+    "title": "The Revolution: Public-Key Cryptography",
+    "math": "Asymmetric-key algorithms",
+    "note": "This lesson introduces the concept of public-key (or asymmetric) cryptography, a revolutionary idea from the 1970s. It explains the use of a key pair: a public key, which can be shared with anyone, for encryption, and a private key, which is kept secret, for decryption. This solves the key distribution problem of symmetric cryptography."
+  },
+  {
+    "n": 11,
+    "title": "The RSA Algorithm",
+    "math": "Number theory (prime factorization)",
+    "note": "This section introduces the RSA algorithm, one of the first and still most widely used public-key cryptosystems. It explains that the security of RSA is based on the practical difficulty of factoring the product of two large prime numbers (the 'factoring problem')."
+  },
+  {
+    "n": 12,
+    "title": "Diffie-Hellman Key Exchange",
+    "math": "Discrete logarithm problem",
+    "note": "This lesson explains the Diffie-Hellman key exchange protocol, a method for two parties to securely establish a shared secret key over an insecure communication channel. It allows two parties with no prior knowledge of each other to jointly create a key that can then be used for symmetric encryption."
+  },
+  {
+    "n": 13,
+    "title": "Cryptographic Hash Functions",
+    "math": "Hash functions",
+    "note": "This section defines a cryptographic hash function as a mathematical algorithm that maps data of arbitrary size to a bit string of a fixed size (a 'hash'). It details the essential properties: it's a one-way function (pre-image resistant), and it's collision-resistant (hard to find two inputs that hash to the same output)."
+  },
+  {
+    "n": 14,
+    "title": "Applications of Hash Functions",
+    "math": "Data integrity",
+    "note": "This lesson covers the primary use cases for hash functions. These include verifying file integrity (by comparing the hash of a downloaded file to a known good hash), and securely storing passwords (by storing the hash of the password instead of the password itself)."
+  },
+  {
+    "n": 15,
+    "title": "Message Authentication Codes (MACs)",
+    "math": "Message authentication",
+    "note": "This section introduces Message Authentication Codes (MACs) as a way to verify both the integrity and authenticity of a message using a shared secret key. It explains how a MAC (like HMAC) is generated from the message and the key, and how the recipient can recalculate it to ensure the message hasn't been tampered with."
+  },
+  {
+    "n": 16,
+    "title": "Digital Signatures",
+    "math": "Digital signature algorithms",
+    "note": "This lesson explains digital signatures as the public-key equivalent of a MAC. A digital signature is created by hashing a message and then encrypting the hash with the sender's private key. Anyone with the sender's public key can decrypt the hash and verify it, providing authenticity, integrity, and non-repudiation."
+  },
+  {
+    "n": 17,
+    "title": "Public Key Infrastructure (PKI)",
+    "math": "Trust models",
+    "note": "This section addresses a key problem in public-key cryptography: how do you trust that a public key actually belongs to the person you think it does? It introduces Public Key Infrastructure (PKI) as a system for managing this trust, based on third-party Certificate Authorities (CAs)."
+  },
+  {
+    "n": 18,
+    "title": "Digital Certificates and Certificate Authorities",
+    "math": "X.509 certificates",
+    "note": "This lesson details the components of a PKI. A Certificate Authority (CA) is a trusted entity that issues Digital Certificates. A Digital Certificate (like an X.509 certificate) is a data file that binds a public key to a specific identity, and is itself digitally signed by the CA."
+  },
+  {
+    "n": 19,
+    "title": "How HTTPS Secures the Web",
+    "math": "Transport Layer Security (TLS)",
+    "note": "This lesson explains how all these cryptographic concepts come together to secure web traffic with HTTPS. It details the TLS handshake process, where a browser uses a web server's public key (from its certificate) to negotiate a symmetric session key, which is then used for fast, confidential communication."
+  },
+  {
+    "n": 20,
+    "title": "The Threat of Quantum Computing",
+    "math": "Quantum computing (Shor's algorithm)",
+    "note": "This final lesson looks to the future. It explains that large-scale quantum computers, if built, could use algorithms like Shor's algorithm to break most of the public-key cryptography used today (like RSA). This has led to the development of a new field: post-quantum cryptography."
+  }
+]

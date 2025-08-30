@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is SaltStack?",
+    "math": "Configuration management and remote execution",
+    "note": "This section introduces SaltStack (or Salt) as a powerful, Python-based open-source platform for remote execution, configuration management, and event-driven automation. It is known for its high speed and scalability, which is achieved through its persistent ZeroMQ connection."
+  },
+  {
+    "n": 2,
+    "title": "The Salt Architecture: Master and Minions",
+    "math": "Publish-subscribe architecture",
+    "note": "This lesson details the main components of a SaltStack setup. It explains the roles of the Salt Master (the central control server) and the Salt Minions (agents that run on the managed nodes). It introduces the Event Bus, which uses a high-speed publish-subscribe pattern for communication."
+  },
+  {
+    "n": 3,
+    "title": "Setting Up a Salt Master and Minion",
+    "math": "Client-server setup",
+    "note": "This section provides a practical guide to installing the `salt-master` and `salt-minion` packages. It covers the initial configuration files and the process of key exchange, where the master must accept the minion's public key before it can be controlled."
+  },
+  {
+    "n": 4,
+    "title": "Remote Execution: The `salt` Command",
+    "math": "Remote command execution",
+    "note": "This lesson introduces Salt's powerful remote execution capabilities. It demonstrates the `salt` command-line tool, which is used on the master to execute commands on minions. The basic syntax `salt '<target>' <module>.<function>` is explained."
+  },
+  {
+    "n": 5,
+    "title": "Targeting Minions",
+    "math": "Targeting expressions",
+    "note": "This section covers the different ways to specify which minions a command should run on. It demonstrates targeting by minion ID (including using globbing), by grains, and by compound expressions that combine multiple targeting methods."
+  },
+  {
+    "n": 6,
+    "title": "Common Execution Modules",
+    "math": "Execution modules",
+    "note": "This lesson provides examples of some of the most common execution modules. It covers `test.ping` (to check connectivity), `cmd.run` (to run shell commands), `pkg.install` (to install a package), and `service.running` (to manage a service)."
+  },
+  {
+    "n": 7,
+    "title": "Introduction to the State System",
+    "math": "Declarative configuration management",
+    "note": "This section introduces Salt's configuration management system. It explains that you define the desired 'state' of a system in files, and Salt figures out how to enforce that state. This is Salt's declarative approach, similar to Puppet or Ansible Playbooks."
+  },
+  {
+    "n": 8,
+    "title": "SLS Files and YAML",
+    "math": "YAML syntax",
+    "note": "This lesson explains that Salt states are defined in SLS (SaLt State) files, which are typically written in YAML. It provides an overview of the basic YAML syntax used for writing Salt states."
+  },
+  {
+    "n": 9,
+    "title": "Writing Your First State File",
+    "math": "State declaration",
+    "note": "This section provides a hands-on guide to creating a simple state file. It demonstrates the basic structure of a state declaration: an ID, the state module to use (e.g., `pkg`), the function to call (e.g., `installed`), and any parameters. An example to install a package is shown."
+  },
+  {
+    "n": 10,
+    "title": "Applying States with `state.apply`",
+    "math": "State enforcement",
+    "note": "This lesson demonstrates how to apply a state to a minion from the master using the `state.apply` execution module (e.g., `salt '<minion>' state.apply my_state`). It explains how Salt runs through the state file and makes any necessary changes to bring the system into compliance."
+  },
+  {
+    "n": 11,
+    "title": "The Top File",
+    "math": "State mapping",
+    "note": "This section introduces the Top File (`top.sls`), which maps which states should be applied to which minions. This is the central point of control for your configuration management. It allows you to assign different configurations to different groups of minions."
+  },
+  {
+    "n": 12,
+    "title": "Requisites: `require` and `watch`",
+    "math": "Dependency management",
+    "note": "This lesson explains how to create dependencies between state declarations. It covers the `require` requisite, which ensures one state is applied before another, and the `watch` requisite, which causes a state to re-run if another state it is 'watching' changes (e.g., restarting a service if its config file changes)."
+  },
+  {
+    "n": 13,
+    "title": "Grains: Minion-Side Data",
+    "math": "System information",
+    "note": "This section introduces Grains, which are pieces of static information collected about a minion, such as its operating system, CPU architecture, and network interfaces. Grains are collected on the minion and are primarily used for targeting."
+  },
+  {
+    "n": 14,
+    "title": "Pillar: Master-Side Data",
+    "math": "Secure data management",
+    "note": "This lesson introduces Pillar, which is a system for defining data on the master and securely assigning it to specific minions. Pillar is the primary way to manage sensitive data (like passwords and keys) and configuration variables that differ between minions."
+  },
+  {
+    "n": 15,
+    "title": "Using Pillar Data in States",
+    "math": "Data lookup",
+    "note": "This section demonstrates how to access Pillar data from within a state file using the `pillar.get` function. This allows you to create generic states that are customized with the specific data provided by the Pillar for each minion."
+  },
+  {
+    "n": 16,
+    "title": "Templating with Jinja",
+    "math": "Template engines",
+    "note": "This lesson explains how Salt uses the Jinja2 templating engine to add programmatic logic to state files. It demonstrates how to use Jinja to embed variables, conditionals (`if/else`), and loops directly within your SLS files, making them highly dynamic."
+  },
+  {
+    "n": 17,
+    "title": "Salt Runners",
+    "math": "Master-side execution",
+    "note": "This section introduces Salt Runners, which are modules containing functions that are executed on the Salt Master, not on the minions. Runners are used for tasks that involve managing the Salt environment itself, such as orchestrating deployments across multiple minions or querying job status."
+  },
+  {
+    "n": 18,
+    "title": "The Event Bus, Beacons, and Reactors",
+    "math": "Event-driven automation",
+    "note": "This lesson covers Salt's powerful event-driven infrastructure. It explains the Event Bus, which carries events for every action in the system. It then introduces Beacons (which monitor minions for specific events) and Reactors (which listen for events on the bus and trigger actions), enabling self-healing and automated responses."
+  },
+  {
+    "n": 19,
+    "title": "Salt SSH: Agentless Salt",
+    "math": "Agentless execution",
+    "note": "This section introduces Salt SSH as an alternative way to run Salt commands over SSH without requiring a Salt Minion to be installed on the target machine. This provides an agentless mode of operation, similar to Ansible, for environments where installing an agent is not feasible."
+  },
+  {
+    "n": 20,
+    "title": "Formulas and Best Practices",
+    "math": "Best practices",
+    "note": "This final lesson provides an overview of Salt Formulas, which are pre-written sets of states for common applications, similar to Puppet modules or Ansible roles. It also discusses best practices for structuring your Salt states, such as using a `map.jinja` file to separate OS-specific data from your state logic."
+  }
+]

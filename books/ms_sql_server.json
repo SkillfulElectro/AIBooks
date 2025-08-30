@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Microsoft SQL Server",
+    "math": "Relational Database Management Systems (RDBMS)",
+    "note": "This section introduces Microsoft SQL Server as a leading enterprise-grade RDBMS. It covers the different editions (like Enterprise, Standard, and the free Express edition) and introduces SQL Server Management Studio (SSMS) as the primary graphical tool for managing and interacting with SQL Server."
+  },
+  {
+    "n": 2,
+    "title": "SQL Server Architecture",
+    "math": "Database engine architecture",
+    "note": "This lesson provides a high-level overview of the SQL Server architecture. It explains the concept of a SQL Server 'Instance' and how an instance can contain multiple databases. It also introduces the core components of the Database Engine, which processes queries and manages data storage."
+  },
+  {
+    "n": 3,
+    "title": "Transact-SQL (T-SQL): An Introduction",
+    "math": "SQL dialects",
+    "note": "This section introduces Transact-SQL (T-SQL) as Microsoft's proprietary extension to the standard SQL language. It explains that while T-SQL includes the standard SQL commands, it also adds features like procedural programming, local variables, and additional functions."
+  },
+  {
+    "n": 4,
+    "title": "DDL: `CREATE TABLE` and Data Types",
+    "math": "Data Definition Language (DDL)",
+    "note": "This lesson covers the T-SQL DDL commands for defining the database structure. It demonstrates how to use the `CREATE DATABASE` and `CREATE TABLE` statements and introduces the common data types used in SQL Server, such as `INT`, `VARCHAR(n)`, `DECIMAL`, and `DATETIME`."
+  },
+  {
+    "n": 5,
+    "title": "DDL: Constraints",
+    "math": "Data integrity constraints",
+    "note": "This section explains how to enforce data integrity using constraints. It covers defining a `PRIMARY KEY`, a `FOREIGN KEY` to link tables, and other constraints like `UNIQUE`, `NOT NULL`, and `CHECK`. The concept of an `IDENTITY` property for auto-incrementing primary keys is also introduced."
+  },
+  {
+    "n": 6,
+    "title": "Indexes: Clustered vs. Non-Clustered",
+    "math": "Database indexes",
+    "note": "This lesson explains the concept of indexes for speeding up queries. It details the two main types in SQL Server: a Clustered index, which determines the physical order of data in a table (a table can only have one), and a Non-Clustered index, which has a separate structure pointing back to the data rows."
+  },
+  {
+    "n": 7,
+    "title": "DML: `INSERT`, `UPDATE`, `DELETE`",
+    "math": "Data Manipulation Language (DML)",
+    "note": "This lesson covers the DML commands for adding, modifying, and removing data. It demonstrates the syntax for `INSERT` (to add new rows), `UPDATE` (to change existing rows), and `DELETE` (to remove rows). The critical importance of the `WHERE` clause for `UPDATE` and `DELETE` is emphasized."
+  },
+  {
+    "n": 8,
+    "title": "DQL: The `SELECT` Statement",
+    "math": "Data Query Language (DQL)",
+    "note": "This section covers the foundation of querying data in T-SQL. It details the `SELECT` statement, including using `TOP n` to limit results, the `WHERE` clause for filtering, and the `ORDER BY` clause for sorting the results."
+  },
+  {
+    "n": 9,
+    "title": "Joins in T-SQL",
+    "math": "Relational joins",
+    "note": "This lesson explains how to combine data from multiple tables. It demonstrates the syntax for `INNER JOIN` (to get matching rows from both tables) and `LEFT JOIN` (to get all rows from the left table and any matching rows from the right table)."
+  },
+  {
+    "n": 10,
+    "title": "Aggregation with `GROUP BY`",
+    "math": "Data aggregation",
+    "note": "This section covers how to perform calculations on groups of rows. It introduces aggregate functions like `COUNT()`, `SUM()`, and `AVG()`. It then explains how the `GROUP BY` clause is used to group rows that have the same values into summary rows, and how `HAVING` is used to filter these groups."
+  },
+  {
+    "n": 11,
+    "title": "T-SQL Programming: Variables and Control Flow",
+    "math": "Procedural programming",
+    "note": "This lesson introduces the procedural programming capabilities of T-SQL. It demonstrates how to declare and assign variables using `DECLARE` and `SET`, and how to control the flow of a script using `IF...ELSE` blocks and `WHILE` loops."
+  },
+  {
+    "n": 12,
+    "title": "Stored Procedures",
+    "math": "Database procedures",
+    "note": "This section defines a Stored Procedure as a pre-compiled collection of T-SQL statements that can be executed as a single unit. It demonstrates how to create a simple stored procedure that accepts input parameters and returns a result set, which helps to encapsulate business logic in the database."
+  },
+  {
+    "n": 13,
+    "title": "User-Defined Functions (UDFs)",
+    "math": "User-defined functions",
+    "note": "This lesson covers UDFs, which are routines that accept parameters, perform an action, and return the result of that action as a value. It contrasts them with stored procedures and explains the different types, such as scalar functions (which return a single value) and table-valued functions."
+  },
+  {
+    "n": 14,
+    "title": "Triggers",
+    "math": "Database triggers",
+    "note": "This section introduces Triggers, which are a special type of stored procedure that automatically runs when an event (like an `INSERT`, `UPDATE`, or `DELETE`) occurs on a table. They are often used to enforce complex business rules or for auditing purposes."
+  },
+  {
+    "n": 15,
+    "title": "Transaction Management",
+    "math": "Database transactions",
+    "note": "This lesson covers how to manage transactions in T-SQL. It explains how to use `BEGIN TRANSACTION`, `COMMIT TRANSACTION`, and `ROLLBACK TRANSACTION` to group a series of statements into a single atomic operation that either succeeds or fails as a whole, ensuring data integrity."
+  },
+  {
+    "n": 16,
+    "title": "Security: Authentication and Logins",
+    "math": "Authentication modes",
+    "note": "This section for administrators covers authentication. It explains the two modes: Windows Authentication (where users are authenticated by the Windows OS) and SQL Server Authentication (where users have a username and password stored within SQL Server). The concept of a 'Login' as a server-level principal is defined."
+  },
+  {
+    "n": 17,
+    "title": "Security: Authorization, Users, and Roles",
+    "math": "Authorization and roles",
+    "note": "This lesson covers authorization. It explains how a server 'Login' is mapped to a database 'User'. It then introduces database 'Roles' as a way to group users and grant permissions to the role instead of individual users. The `GRANT`, `REVOKE`, and `DENY` statements are demonstrated."
+  },
+  {
+    "n": 18,
+    "title": "Backup and Restore",
+    "math": "Database backup and recovery",
+    "note": "This section covers the critical administrative task of backup and recovery. It explains the different backup types: Full backups, Differential backups (changes since the last full), and Transaction Log backups (for point-in-time recovery). The basic `BACKUP DATABASE` and `RESTORE DATABASE` commands are shown."
+  },
+  {
+    "n": 19,
+    "title": "The SQL Server Agent",
+    "math": "Job scheduling",
+    "note": "This lesson introduces the SQL Server Agent, a component used to run scheduled administrative tasks called 'jobs'. It demonstrates how to create a job that can run a T-SQL script or other tasks on a recurring schedule, which is commonly used for automating backups and maintenance."
+  },
+  {
+    "n": 20,
+    "title": "Performance Tuning: Execution Plans",
+    "math": "Query execution plans",
+    "note": "This final lesson provides an introduction to performance tuning. It explains that when you run a query, the SQL Server Query Optimizer determines the most efficient way to execute it, called an 'Execution Plan'. It demonstrates how to view the graphical execution plan in SSMS to identify performance bottlenecks, such as missing indexes."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to AppML",
+    "math": "Data-driven architecture",
+    "note": "This section introduces AppML (Application Modeling Language) as a simple, data-driven framework for creating web applications. It explains the core philosophy of using HTML attributes to define application behavior with minimal JavaScript coding, focusing on displaying data from sources like JSON or XML."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up an AppML Application",
+    "math": "File dependencies",
+    "note": "This lesson provides a step-by-step guide to setting up a basic AppML project. It explains how to include the `appml.js` library script in an HTML file and how to structure the basic HTML document that will host the AppML application."
+  },
+  {
+    "n": 3,
+    "title": "The `appml-data` Attribute",
+    "math": "Data source linking",
+    "note": "This section introduces the `appml-data` attribute, which is used to link an HTML element to a data source. It demonstrates how to point this attribute to an external JSON or XML file, making the data within that file available to the AppML application."
+  },
+  {
+    "n": 4,
+    "title": "Displaying Data with `appml-repeat`",
+    "math": "Iteration",
+    "note": "This lesson covers the fundamental `appml-repeat` attribute, which is used to iterate over an array of records from a data source. It demonstrates how to apply this attribute to an HTML element (like a `<li>` or `<tr>`) to create a template that is rendered once for each item in the data collection."
+  },
+  {
+    "n": 5,
+    "title": "Using AppML Expressions",
+    "math": "String interpolation",
+    "note": "This section explains how to display individual data fields within an `appml-repeat` loop. It covers the use of double curly brace expressions, `{{ fieldname }}`, to bind and display the values of specific properties from the current data record in the HTML."
+  },
+  {
+    "n": 6,
+    "title": "First Example: A Simple Customer List",
+    "math": "Procedural walkthrough",
+    "note": "This lesson provides a complete, simple example combining the core AppML concepts. It walks through creating a JSON file with customer data, an HTML file with the `appml-data` and `appml-repeat` attributes, and using expressions to display a dynamic list of customer names."
+  },
+  {
+    "n": 7,
+    "title": "Sorting Data with `appml-orderby`",
+    "math": "Sorting algorithms",
+    "note": "This section explains how to sort the data displayed by `appml-repeat`. It introduces the `appml-orderby` attribute and demonstrates how to set its value to a field name to sort the data in ascending order by that field. Sorting in descending order is also covered."
+  },
+  {
+    "n": 8,
+    "title": "Filtering Data with `appml-filter`",
+    "math": "Boolean filtering",
+    "note": "This lesson covers how to filter the data being displayed. It introduces the `appml-filter` attribute and demonstrates how it can be linked to the value of an HTML input field, allowing users to type and dynamically filter the repeated data in real-time."
+  },
+  {
+    "n": 9,
+    "title": "Case-Insensitive Filtering",
+    "math": "String case conversion",
+    "note": "This section builds on the filtering concept by explaining how to make the `appml-filter` case-insensitive. It introduces the `appml-case='upper'` attribute, which converts both the data and the filter value to uppercase before comparison, providing a better user experience."
+  },
+  {
+    "n": 10,
+    "title": "The `appml-model` Attribute",
+    "math": "Data modeling",
+    "note": "This lesson introduces the `appml-model` attribute as a way to give a name to a data source. This is useful when working with multiple data sources on a single page or for creating more readable and maintainable applications."
+  },
+  {
+    "n": 11,
+    "title": "The `appml-controller` Attribute",
+    "math": "Controller logic",
+    "note": "This section explains the role of the `appml-controller` attribute. It is used to define a block of HTML that is controlled by a specific JavaScript function, allowing for more complex interactions and custom logic to be integrated with the AppML framework."
+  },
+  {
+    "n": 12,
+    "title": "Working with Different Data Sources: XML",
+    "math": "XML parsing",
+    "note": "This lesson demonstrates AppML's flexibility by showing how to use an XML file as a data source instead of JSON. It explains the necessary structure of the XML file and how AppML automatically parses it and makes it available for repeating and display."
+  },
+  {
+    "n": 13,
+    "title": "Working with Inline JSON Data",
+    "math": "Embedded data",
+    "note": "This section covers how to embed JSON data directly within the HTML page using a `<script>` tag with a specific `id`. It shows how to link the `appml-data` attribute to this `id`, which is useful for smaller datasets or for bootstrapping an application with initial data."
+  },
+  {
+    "n": 14,
+    "title": "Conditional Display with `appml-if`",
+    "math": "Conditional statements",
+    "note": "This lesson introduces the `appml-if` attribute for conditionally displaying an HTML element. It explains how to set the attribute to an expression that evaluates to true or false, allowing parts of the view to be rendered only when certain data conditions are met."
+  },
+  {
+    "n": 15,
+    "title": "Including HTML Partials with `appml-include`",
+    "math": "File inclusion",
+    "note": "This section explains how to structure larger applications by splitting HTML into reusable partial files. It introduces the `appml-include` attribute and demonstrates how it can be used to load and render an external HTML file within a specific part of the main page."
+  },
+  {
+    "n": 16,
+    "title": "Creating Forms with AppML",
+    "math": "Form handling",
+    "note": "This lesson covers how to build data-entry forms using AppML. It shows how to use the `appml-bind` attribute on input fields to link them to properties of a data model, enabling easy data collection from the user."
+  },
+  {
+    "n": 17,
+    "title": "The AppML JavaScript API",
+    "math": "API interaction",
+    "note": "This section delves into the JavaScript functions provided by the `appml.js` library for programmatic control. It introduces key functions like `appml.load(element, datasource)` to manually trigger the loading of data into an element, allowing for more dynamic application behavior."
+  },
+  {
+    "n": 18,
+    "title": "Project: Building a Searchable Product Catalog",
+    "math": "Application design",
+    "note": "This lesson provides a complete project walkthrough. It combines multiple AppML concepts to build a product catalog that loads data from a JSON file, displays the products in a list, and includes a search box that uses `appml-filter` to let users find products in real-time."
+  },
+  {
+    "n": 19,
+    "title": "Limitations of AppML",
+    "math": "Scalability analysis",
+    "note": "This section provides a critical look at the framework. It discusses the limitations of AppML, such as its focus on simple CRUD (Create, Read, Update, Delete) operations, potential performance issues with very large datasets, and its lack of features compared to modern, full-fledged frameworks like React or Vue."
+  },
+  {
+    "n": 20,
+    "title": "AppML in Context: When to Use It",
+    "math": "Decision theory",
+    "note": "This final lesson summarizes the ideal use cases for AppML. It positions the framework as a tool for rapid prototyping, creating simple data-driven dashboards, or for educational purposes to understand the basics of data binding, rather than for building large, complex, production-grade applications."
+  }
+]

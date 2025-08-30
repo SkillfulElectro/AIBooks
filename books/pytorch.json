@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to PyTorch",
+    "math": "Deep learning frameworks",
+    "note": "This section introduces PyTorch as a premier open-source deep learning framework developed by Facebook's AI Research lab. It is known for its flexibility, Pythonic feel, and strong support for both research and production. It is contrasted with other frameworks like TensorFlow."
+  },
+  {
+    "n": 2,
+    "title": "Core Data Structure: The Tensor",
+    "math": "Tensors",
+    "note": "This lesson introduces the Tensor as the fundamental data structure in PyTorch, similar to a NumPy array. It is a multi-dimensional array that can be used to store scalars, vectors, matrices, or higher-dimensional data. The ability to run tensor computations on a GPU is highlighted as a key feature."
+  },
+  {
+    "n": 3,
+    "title": "Tensor Operations",
+    "math": "Tensor algebra",
+    "note": "This section covers common operations performed on PyTorch tensors. It demonstrates basic arithmetic operations (addition, multiplication), reshaping tensors, and accessing elements using indexing and slicing, similar to NumPy."
+  },
+  {
+    "n": 4,
+    "title": "Automatic Differentiation with `autograd`",
+    "math": "Automatic differentiation",
+    "note": "This lesson explains one of PyTorch's most critical features: `torch.autograd`. It is an engine that automatically calculates the gradients (derivatives) of the operations performed on tensors. This is the foundation for training neural networks using backpropagation."
+  },
+  {
+    "n": 5,
+    "title": "The Computation Graph",
+    "math": "Directed acyclic graphs (DAGs)",
+    "note": "This section explains how `autograd` works. PyTorch builds a dynamic computation graph on-the-fly as operations are performed. This graph tracks all the operations, and the `backward()` method on a tensor (like the loss) traverses this graph backward to compute the gradients for all tensors that have `requires_grad=True`."
+  },
+  {
+    "n": 6,
+    "title": "Building Models with the `torch.nn` Module",
+    "math": "Neural network layers",
+    "note": "This lesson introduces `torch.nn`, PyTorch's module for building neural networks. It explains that a model is typically created as a class that inherits from `nn.Module`. The layers of the network are defined in the `__init__` method, and the forward pass logic is defined in the `forward` method."
+  },
+  {
+    "n": 7,
+    "title": "Defining a Simple Neural Network",
+    "math": "Model definition",
+    "note": "This section provides a practical example of creating a simple neural network. It demonstrates how to define the layers, such as `nn.Linear` for fully connected layers and `nn.ReLU` for the activation function, within the `nn.Module` class structure."
+  },
+  {
+    "n": 8,
+    "title": "Loss Functions",
+    "math": "Loss functions",
+    "note": "This lesson explains how to measure the error of a model's prediction. It introduces common loss functions from the `torch.nn` module, such as `nn.MSELoss` for regression tasks and `nn.CrossEntropyLoss` for multi-class classification tasks."
+  },
+  {
+    "n": 9,
+    "title": "Optimizers",
+    "math": "Optimization algorithms",
+    "note": "This section introduces the `torch.optim` package, which contains various optimization algorithms used to update the model's weights during training. It covers the classic Stochastic Gradient Descent (SGD) and the more advanced and popular Adam optimizer."
+  },
+  {
+    "n": 10,
+    "title": "The Training Loop",
+    "math": "Iterative optimization",
+    "note": "This crucial lesson details the standard training loop in PyTorch. It provides the step-by-step recipe: 1. Perform a forward pass to get predictions. 2. Compute the loss. 3. Zero the gradients (`optimizer.zero_grad()`). 4. Perform backpropagation to compute gradients (`loss.backward()`). 5. Update the weights (`optimizer.step()`)."
+  },
+  {
+    "n": 11,
+    "title": "Working with Data: `Dataset` and `DataLoader`",
+    "math": "Data loading and batching",
+    "note": "This section explains the standard PyTorch tools for handling data. A `Dataset` is an object that stores the samples and their corresponding labels. A `DataLoader` wraps a `Dataset` and provides an iterable for easy access to the data, handling batching, shuffling, and parallel data loading."
+  },
+  {
+    "n": 12,
+    "title": "Using `torchvision` for Image Data",
+    "math": "Image datasets and transforms",
+    "note": "This lesson introduces `torchvision`, the PyTorch package for computer vision. It demonstrates how to use `torchvision.datasets` to easily load standard datasets like MNIST or CIFAR-10, and how to use `torchvision.transforms` to perform pre-processing and data augmentation on the images."
+  },
+  {
+    "n": 13,
+    "title": "Building a Convolutional Neural Network (CNN)",
+    "math": "Convolutional Neural Networks (CNNs)",
+    "note": "This section covers how to build a CNN for image classification. It introduces the key layers from `torch.nn`, including `nn.Conv2d` for the convolutional layers and `nn.MaxPool2d` for the pooling layers. A complete CNN architecture is defined."
+  },
+  {
+    "n": 14,
+    "title": "Training a CNN",
+    "math": "Model training",
+    "note": "This lesson provides a complete example of training an image classifier. It combines all the previous concepts: loading data with a `DataLoader`, defining the CNN model, defining the loss function and optimizer, and then running the training loop for a number of epochs."
+  },
+  {
+    "n": 15,
+    "title": "Model Evaluation",
+    "math": "Model performance evaluation",
+    "note": "This section explains how to evaluate the trained model on a separate test dataset. It demonstrates how to set the model to evaluation mode with `model.eval()`, turn off gradient calculations, and loop through the test data to calculate the overall accuracy of the model."
+  },
+  {
+    "n": 16,
+    "title": "Saving and Loading Models",
+    "math": "Model persistence",
+    "note": "This lesson covers how to save the state of a trained model for later use. It explains the recommended practice of saving the model's 'state dictionary' (which contains all the learned weights and biases) using `torch.save()`, and how to load this state back into a model instance."
+  },
+  {
+    "n": 17,
+    "title": "Transfer Learning",
+    "math": "Transfer learning",
+    "note": "This section introduces the powerful technique of Transfer Learning. It explains how you can use a model that has been pre-trained on a very large dataset (like ImageNet) and adapt it for your own, smaller dataset. This often results in much better performance than training a model from scratch."
+  },
+  {
+    "n": 18,
+    "title": "Fine-Tuning a Pre-trained Model",
+    "math": "Model fine-tuning",
+    "note": "This lesson demonstrates how to implement transfer learning in PyTorch. It shows how to load a pre-trained model from `torchvision.models`, freeze the weights of the early convolutional layers, and replace the final classification layer with a new one suited to your specific task. You then train (or 'fine-tune') only the new layer."
+  },
+  {
+    "n": 19,
+    "title": "Running on a GPU",
+    "math": "GPU computing",
+    "note": "This section explains how to leverage a GPU to significantly speed up model training. It demonstrates the standard practice: 1. Check if a GPU is available. 2. Define the device (`torch.device(...)`). 3. Move your model and your data tensors to the selected device using the `.to(device)` method."
+  },
+  {
+    "n": 20,
+    "title": "The PyTorch Ecosystem",
+    "math": "Software ecosystems",
+    "note": "This final lesson provides a brief overview of the broader PyTorch ecosystem beyond the core library. It mentions libraries like `torchtext` for natural language processing, `torchaudio` for audio processing, and PyTorch Lightning, a high-level library for organizing PyTorch code."
+  }
+]

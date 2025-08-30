@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is phpMyAdmin?",
+    "math": "Database administration tools",
+    "note": "This section introduces phpMyAdmin as a free and open source administration tool for MySQL and MariaDB. It explains that as a web application written in PHP, it provides a convenient graphical user interface (GUI) for performing database administration tasks, making it easier than using the command-line client."
+  },
+  {
+    "n": 2,
+    "title": "Installation and Setup",
+    "math": "Web application deployment",
+    "note": "This lesson provides an overview of the installation process. It explains the prerequisites: a web server (like Apache), PHP, and a running MySQL or MariaDB server. It covers the basic steps of downloading phpMyAdmin, placing it in the web root, and performing the initial configuration."
+  },
+  {
+    "n": 3,
+    "title": "Navigating the Main Interface",
+    "math": "User interface tour",
+    "note": "This section provides a guided tour of the phpMyAdmin main page. It explains the three main sections: the left navigation panel (which lists databases), the main panel (which displays information and results), and the top menu bar (which provides access to global server actions)."
+  },
+  {
+    "n": 4,
+    "title": "The Server Homepage",
+    "math": "Server status dashboard",
+    "note": "This lesson details the information available on the server homepage. It covers the 'Database server' section, which shows information about the connected database server, and the 'Web server' section, which shows information about the web server and phpMyAdmin itself. The various tabs like 'Databases', 'SQL', and 'User accounts' are introduced."
+  },
+  {
+    "n": 5,
+    "title": "Managing Databases",
+    "math": "Database management",
+    "note": "This section demonstrates how to perform database-level operations. It shows how to view the list of all databases, how to create a new database by providing a name and collation, and how to permanently delete (drop) a database using the interface."
+  },
+  {
+    "n": 6,
+    "title": "The Table Structure View",
+    "math": "Schema visualization",
+    "note": "This lesson focuses on the 'Structure' tab, which is the default view when you select a table. It explains how this view shows the detailed schema of the table, including the column names, data types, indexes, and primary/foreign key constraints."
+  },
+  {
+    "n": 7,
+    "title": "Creating a Table",
+    "math": "Table creation GUI",
+    "note": "This section provides a practical guide to creating a new table using the graphical interface. It walks through the process of specifying the table name, the number of columns, and then filling out the details for each column, such as its name, data type, length, and other attributes like `AUTO_INCREMENT`."
+  },
+  {
+    "n": 8,
+    "title": "Modifying a Table",
+    "math": "Schema modification",
+    "note": "This lesson demonstrates how to alter the structure of an existing table. It shows how to use the 'Structure' view to perform actions like adding new columns, changing the data type or name of an existing column, and adding or dropping indexes."
+  },
+  {
+    "n": 9,
+    "title": "The 'Browse' Tab: Viewing and Sorting Data",
+    "math": "Data browsing",
+    "note": "This section explains how to view the data within a table using the 'Browse' tab. It shows the data in a paginated grid and demonstrates how to sort the data by clicking on the column headers."
+  },
+  {
+    "n": 10,
+    "title": "Editing and Deleting Rows",
+    "math": "Data manipulation",
+    "note": "This lesson covers how to modify individual records using the 'Browse' tab. It demonstrates how to use the 'Edit' button to change the values in a row and the 'Delete' button to remove a row. The SQL queries that phpMyAdmin generates for these actions are also shown."
+  },
+  {
+    "n": 11,
+    "title": "The 'Insert' Tab: Adding New Data",
+    "math": "Data insertion",
+    "note": "This section focuses on the 'Insert' tab, which provides a user-friendly form for adding new rows to a table. It shows how to fill out the form fields for each column and how phpMyAdmin constructs and executes the corresponding `INSERT` SQL statement."
+  },
+  {
+    "n": 12,
+    "title": "The 'Search' Tab",
+    "math": "Data searching",
+    "note": "This lesson introduces the powerful 'Search' tab, which allows you to find specific records in a table. It covers the 'Query by example' feature for simple searches and demonstrates how to build more complex search queries by specifying conditions for multiple columns."
+  },
+  {
+    "n": 13,
+    "title": "The 'SQL' Tab: Running Queries Manually",
+    "math": "SQL query execution",
+    "note": "This section explains how to run any arbitrary SQL query using the 'SQL' tab. This provides a query editor where you can type or paste a query, making it a powerful tool for developers who need to run complex commands not available through the GUI."
+  },
+  {
+    "n": 14,
+    "title": "Exporting a Database or Table",
+    "math": "Data export",
+    "note": "This lesson covers the 'Export' feature, which is used to create a backup or copy of your data. It explains the difference between the 'Quick' and 'Custom' export methods and shows how to export a database to the standard `.sql` file format."
+  },
+  {
+    "n": 15,
+    "title": "Export Formats: CSV and Others",
+    "math": "Data formats",
+    "note": "This section explores the different export formats available in phpMyAdmin. Besides SQL, it shows how to export data to formats like CSV (for use in spreadsheets), XML, and JSON, which is useful for data interchange with other applications."
+  },
+  {
+    "n": 16,
+    "title": "Importing Data",
+    "math": "Data import",
+    "note": "This lesson explains how to use the 'Import' tab to load data into a table or database from a file. The most common use case, restoring a database from an exported `.sql` file, is demonstrated."
+  },
+  {
+    "n": 17,
+    "title": "Managing User Accounts",
+    "math": "User account management",
+    "note": "This section covers the 'User accounts' tab, which provides a graphical interface for managing database users. It demonstrates how to view existing users, create new user accounts, and set their passwords."
+  },
+  {
+    "n": 18,
+    "title": "Managing User Privileges",
+    "math": "Access control",
+    "note": "This lesson focuses on granting permissions to users. It shows how to use the interface to assign specific privileges (like `SELECT`, `INSERT`, `UPDATE`) to a user on a global or database-specific level, and how to revoke those privileges."
+  },
+  {
+    "n": 19,
+    "title": "The 'Operations' Tab",
+    "math": "Database operations",
+    "note": "This section provides an overview of the 'Operations' tab, which is available for both databases and tables. It allows you to perform various administrative tasks, such as renaming a table, changing its storage engine, or optimizing it to reclaim wasted space."
+  },
+  {
+    "n": 20,
+    "title": "Securing Your phpMyAdmin Installation",
+    "math": "Web application security",
+    "note": "This final lesson discusses essential security practices for a phpMyAdmin installation. Because it provides powerful access to the database, it is a common target for attackers. The lesson covers best practices, such as protecting the installation directory with an additional layer of authentication."
+  }
+]

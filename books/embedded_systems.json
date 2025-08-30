@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is an Embedded System?",
+    "math": "System definition",
+    "note": "This section provides a formal definition of an Embedded System as a computer system—a combination of a computer processor, computer memory, and input/output peripheral devices—that has a dedicated function within a larger mechanical or electronic system. Examples like microwaves, digital watches, and engine controllers in cars are used."
+  },
+  {
+    "n": 2,
+    "title": "Embedded Systems vs. General-Purpose Computers",
+    "math": "Comparative analysis",
+    "note": "This lesson contrasts embedded systems with general-purpose computers (like a desktop PC). It highlights the key differences: embedded systems have a dedicated function, are resource-constrained (in memory, power, and processing), and must often meet real-time computing constraints."
+  },
+  {
+    "n": 3,
+    "title": "Core Components of an Embedded System",
+    "math": "System architecture",
+    "note": "This section outlines the main hardware components of a typical embedded system. It covers the processor (the 'brain'), memory (for program and data), input/output (I/O) ports for interacting with the outside world, timers, and communication interfaces."
+  },
+  {
+    "n": 4,
+    "title": "Microprocessor vs. Microcontroller (MCU)",
+    "math": "Integrated circuits",
+    "note": "This lesson explains the crucial difference between a microprocessor and a microcontroller. A microprocessor is just a CPU and requires external chips for memory and I/O. A microcontroller (MCU) is a 'computer on a chip' that integrates a CPU, memory, and I/O peripherals into a single integrated circuit, which is ideal for embedded systems."
+  },
+  {
+    "n": 5,
+    "title": "Popular MCU Architectures: ARM Cortex-M",
+    "math": "Processor architecture",
+    "note": "This section introduces the ARM Cortex-M family as the de facto industry standard for 32-bit microcontrollers. It provides a high-level overview of its architecture and explains why its balance of performance and power efficiency has made it so popular in the embedded world."
+  },
+  {
+    "n": 6,
+    "title": "Embedded I/O: General Purpose Input/Output (GPIO)",
+    "math": "Digital logic (high/low)",
+    "note": "This lesson covers the most fundamental type of I/O. It explains how GPIO pins on an MCU can be configured as either an input (to read a digital signal, like from a button) or an output (to send a digital signal, like to turn on an LED). The concept of setting a pin 'high' or 'low' is detailed."
+  },
+  {
+    "n": 7,
+    "title": "Interrupts and Interrupt Service Routines (ISRs)",
+    "math": "Event-driven programming",
+    "note": "This section introduces interrupts as a mechanism for a peripheral or external event to pause the main program flow and request immediate attention from the processor. It explains how an Interrupt Service Routine (ISR) is a special function that is automatically executed in response to an interrupt, enabling efficient handling of asynchronous events."
+  },
+  {
+    "n": 8,
+    "title": "Analog-to-Digital Converters (ADC)",
+    "math": "Analog-to-digital conversion",
+    "note": "This lesson explains the function of an ADC, a peripheral that converts a continuous analog voltage (from a sensor like a potentiometer or temperature sensor) into a discrete digital value that the microcontroller can process."
+  },
+  {
+    "n": 9,
+    "title": "Communication Protocol: UART",
+    "math": "Asynchronous serial communication",
+    "note": "This section introduces the Universal Asynchronous Receiver-Transmitter (UART) protocol. It is a simple, two-wire protocol for serial communication, commonly used for debugging (e.g., printing messages to a PC) or for connecting to modules like GPS or Bluetooth."
+  },
+  {
+    "n": 10,
+    "title": "Communication Protocol: I2C",
+    "math": "Synchronous serial communication (I2C)",
+    "note": "This lesson covers the Inter-Integrated Circuit (I2C) protocol. It is a synchronous, multi-device, two-wire bus (SDA for data, SCL for clock) commonly used to connect low-speed peripherals like sensors and EEPROMs to a microcontroller over short distances."
+  },
+  {
+    "n": 11,
+    "title": "Communication Protocol: SPI",
+    "math": "Synchronous serial communication (SPI)",
+    "note": "This section explains the Serial Peripheral Interface (SPI) protocol. It is another synchronous serial communication protocol that is generally faster than I2C and uses four wires (MISO, MOSI, SCLK, CS). It is often used for higher-bandwidth devices like SD cards and display screens."
+  },
+  {
+    "n": 12,
+    "title": "Embedded Programming Languages: C and C++",
+    "math": "Low-level programming",
+    "note": "This lesson explains why C and C++ are the dominant languages for embedded systems development. Their ability to perform low-level memory manipulation, their performance, and their direct access to hardware are highlighted as key advantages for resource-constrained environments."
+  },
+  {
+    "n": 13,
+    "title": "The Embedded C Toolchain",
+    "math": "Compilation process",
+    "note": "This section explains the 'cross-compilation' toolchain used in embedded development. It covers the roles of the compiler (which turns C code into assembly), the assembler (which turns assembly into machine code), and the linker (which combines object files and resolves addresses to create a final executable file)."
+  },
+  {
+    "n": 14,
+    "title": "Low-Level Programming: Bit Manipulation",
+    "math": "Bitwise operations (AND, OR, XOR, SHIFT)",
+    "note": "This lesson covers the essential skill of bit manipulation in embedded C. It explains how to use bitwise operators (AND, OR, XOR, NOT, bit shifts) to read, set, clear, and toggle individual bits within a hardware register, which is how peripherals are controlled."
+  },
+  {
+    "n": 15,
+    "title": "Memory in Embedded Systems",
+    "math": "Memory map",
+    "note": "This section details the memory layout of a typical microcontroller. It explains the difference between non-volatile Flash memory (where the program code is stored) and volatile SRAM (where program variables and the stack are stored)."
+  },
+  {
+    "n": 16,
+    "title": "What Is a Real-Time Operating System (RTOS)?",
+    "math": "Real-time systems",
+    "note": "This lesson introduces the concept of an RTOS. Unlike a general-purpose OS, an RTOS is designed to manage hardware resources for applications that must process data as it comes in, typically without buffer delays. It provides deterministic scheduling of tasks."
+  },
+  {
+    "n": 17,
+    "title": "Core RTOS Concepts: Tasks and Scheduling",
+    "math": "Task scheduling algorithms",
+    "note": "This section explains the core concepts of an RTOS. A 'task' (or thread) is an independent function that runs in a loop. The 'scheduler' is the part of the RTOS that decides which task should be running at any given point in time, based on priorities."
+  },
+  {
+    "n": 18,
+    "title": "Core RTOS Concepts: Semaphores and Mutexes",
+    "math": "Synchronization primitives",
+    "note": "This lesson covers mechanisms for task synchronization and communication. A Mutex (mutual exclusion) is used to protect a shared resource from being accessed by multiple tasks at the same time. A Semaphore is used for signaling between tasks."
+  },
+  {
+    "n": 19,
+    "title": "Debugging with JTAG/SWD",
+    "math": "On-chip debugging",
+    "note": "This section explains modern techniques for debugging embedded systems. It introduces JTAG and Serial Wire Debug (SWD) as hardware debugging interfaces that allow a developer to control the MCU's execution (e.g., set breakpoints, step through code) and inspect memory and registers in real-time."
+  },
+  {
+    "n": 20,
+    "title": "The Internet of Things (IoT)",
+    "math": "Network of physical objects",
+    "note": "This final lesson looks at the modern application of embedded systems in the Internet of Things (IoT). It defines IoT as the network of physical objects—'things'—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet."
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "n": 1,
+    "title": "The Crisis of Software Development",
+    "math": "Historical trend analysis",
+    "note": "This section introduces the historical context that led to Agile. It explores the limitations and common failures of the traditional Waterfall model in the late 20th century, such as its rigidity, slow delivery cycles, and inability to handle changing requirements in complex software projects."
+  },
+  {
+    "n": 2,
+    "title": "The Agile Manifesto: 4 Core Values",
+    "math": "Comparative analysis",
+    "note": "A deep dive into the four foundational values of the Agile Manifesto. This lesson explains what 'Individuals and interactions over processes and tools', 'Working software over comprehensive documentation', 'Customer collaboration over contract negotiation', and 'Responding to change over following a plan' mean in practice."
+  },
+  {
+    "n": 3,
+    "title": "The Agile Manifesto: 12 Supporting Principles",
+    "math": "Rule-based systems",
+    "note": "This lesson details the twelve principles behind the Agile Manifesto, which provide specific guidance on how to implement the core values. Topics include satisfying the customer through early and continuous delivery, welcoming changing requirements, and delivering working software frequently."
+  },
+  {
+    "n": 4,
+    "title": "Core Concepts: Iterative and Incremental Development",
+    "math": "Iterative algorithms",
+    "note": "This section explains the core mechanics of Agile development. It defines 'iterative development' as building software in repeated cycles and 'incremental development' as delivering finished portions of the product in parts. The combination of these two concepts to reduce risk is highlighted."
+  },
+  {
+    "n": 5,
+    "title": "Introduction to Scrum: An Agile Framework",
+    "math": "Empirical process control theory",
+    "note": "This lesson introduces Scrum as a lightweight yet powerful framework for managing complex projects. It explains that Scrum is not a methodology but a framework that implements Agile principles through a set of defined roles, events, and artifacts. The theory of empiricism (transparency, inspection, and adaptation) is presented as the foundation of Scrum."
+  },
+  {
+    "n": 6,
+    "title": "The Scrum Values",
+    "math": "Ethical frameworks",
+    "note": "Explore the five values that are the bedrock of a successful Scrum team: Commitment, Courage, Focus, Openness, and Respect. This lesson explains how these values guide the team's work, actions, and behaviors, fostering an environment of trust and psychological safety."
+  },
+  {
+    "n": 7,
+    "title": "The Scrum Team: Product Owner",
+    "math": "Value stream mapping",
+    "note": "A detailed look at the Product Owner role. This lesson explains that the Product Owner is accountable for maximizing the value of the product resulting from the work of the Scrum Team. Key responsibilities, such as managing the Product Backlog and stakeholder communication, are covered."
+  },
+  {
+    "n": 8,
+    "title": "The Scrum Team: Scrum Master",
+    "math": "Servant leadership principles",
+    "note": "This section defines the Scrum Master role as a servant-leader for the Scrum Team. It explains that the Scrum Master is accountable for establishing Scrum as defined in the Scrum Guide, helping the team be effective by removing impediments, and coaching the team in self-management."
+  },
+  {
+    "n": 9,
+    "title": "The Scrum Team: The Developers",
+    "math": "Self-organizing systems",
+    "note": "This lesson focuses on the role of the Developers within the Scrum Team. It explains that the Developers are the people who are committed to creating any aspect of a usable Increment each Sprint. The concepts of cross-functionality and self-management are detailed as key characteristics of this role."
+  },
+  {
+    "n": 10,
+    "title": "Scrum Events: The Sprint",
+    "math": "Timeboxing",
+    "note": "This section defines the Sprint as the heartbeat of Scrum, a fixed-length event of one month or less to create consistency. It explains that all other Scrum events happen within the Sprint, and that each Sprint can be considered a short project to accomplish something."
+  },
+  {
+    "n": 11,
+    "title": "Scrum Events: Sprint Planning",
+    "math": "Resource allocation",
+    "note": "This lesson details the Sprint Planning event, which initiates the Sprint. It explains the three topics of Sprint Planning: Why is this Sprint valuable? What can be Done this Sprint? and How will the chosen work get done? The output is the Sprint Backlog."
+  },
+  {
+    "n": 12,
+    "title": "Scrum Events: The Daily Scrum",
+    "math": "Synchronization and planning",
+    "note": "This section explains the purpose of the Daily Scrum, a 15-minute event for the Developers of the Scrum Team. Its purpose is to inspect progress toward the Sprint Goal and adapt the Sprint Backlog as necessary, adjusting the upcoming planned work. It is not a status meeting for stakeholders."
+  },
+  {
+    "n": 13,
+    "title": "Scrum Events: The Sprint Review",
+    "math": "Feedback loops",
+    "note": "This lesson covers the Sprint Review, an event held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed. During this event, the Scrum Team presents the results of their work to key stakeholders, and progress toward the Product Goal is discussed."
+  },
+  {
+    "n": 14,
+    "title": "Scrum Events: The Sprint Retrospective",
+    "math": "Root cause analysis",
+    "note": "This section explains the Sprint Retrospective, which is an opportunity for the Scrum Team to inspect itself and create a plan for improvements to be enacted during the next Sprint. The focus is on improving the team's process, tools, and collaboration."
+  },
+  {
+    "n": 15,
+    "title": "Scrum Artifacts: The Product Backlog",
+    "math": "Prioritization algorithms",
+    "note": "This lesson defines the Product Backlog as an emergent, ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team. The role of the Product Owner in ordering and managing the backlog is detailed."
+  },
+  {
+    "n": 16,
+    "title": "Scrum Artifacts: The Sprint Backlog",
+    "math": "Task decomposition",
+    "note": "This section explains the Sprint Backlog, which is composed of the Sprint Goal (the 'why'), the set of Product Backlog items selected for the Sprint (the 'what'), as well as an actionable plan for delivering the Increment (the 'how'). It is a plan by and for the Developers."
+  },
+  {
+    "n": 17,
+    "title": "Scrum Artifacts: The Increment",
+    "math": "Summation",
+    "note": "This lesson defines the Increment as a concrete stepping stone toward the Product Goal. Each Increment is additive to all prior Increments and thoroughly verified, ensuring that all Increments work together. Multiple Increments may be created within a Sprint."
+  },
+  {
+    "n": 18,
+    "title": "The Definition of Done",
+    "math": "Quality assurance metrics",
+    "note": "This section explains the crucial concept of the Definition of Done (DoD). The DoD is a formal description of the state of the Increment when it meets the quality measures required for the product. It creates transparency and is used to assess when work is complete on the product Increment."
+  },
+  {
+    "n": 19,
+    "title": "Crafting User Stories",
+    "math": "Narrative structure",
+    "note": "This lesson introduces user stories as a simple format for describing a feature from an end-user's perspective. The standard template (As a <type of user>, I want <some goal> so that <some reason>) is explained, along with the importance of Acceptance Criteria for clarifying the desired behavior."
+  },
+  {
+    "n": 20,
+    "title": "User Story Splitting Techniques",
+    "math": "Decomposition",
+    "note": "Explore techniques for breaking down large user stories (epics) into smaller, manageable pieces that can be completed in a single sprint. This lesson covers patterns for story splitting, such as by workflow steps, business rule variations, or major effort."
+  },
+  {
+    "n": 21,
+    "title": "Agile Estimation: Story Points",
+    "math": "Relative sizing",
+    "note": "This section introduces Story Points as a unit of measure for expressing the overall effort required to fully implement a Product Backlog item. It explains that story points are a relative measure of effort, complexity, and risk, not a measure of time."
+  },
+  {
+    "n": 22,
+    "title": "Agile Estimation: Planning Poker",
+    "math": "Delphi method, consensus building",
+    "note": "This lesson explains Planning Poker, a consensus-based technique for estimating effort. It details the process where team members use numbered cards to vote on the size of a user story, followed by a discussion to understand and resolve differences in estimates."
+  },
+  {
+    "n": 23,
+    "title": "Team Velocity: Measuring Progress",
+    "math": "Moving averages",
+    "note": "This section defines Velocity as the amount of work a team can tackle during a single Sprint. It is calculated at the end of the Sprint by summing the points for all fully completed user stories. It is used for forecasting and planning future Sprints, but should not be used to compare teams."
+  },
+  {
+    "n": 24,
+    "title": "Visualizing Progress: Burndown Charts",
+    "math": "Linear regression",
+    "note": "This lesson explains how to use a Sprint Burndown Chart to track the total work remaining in a Sprint. The chart shows the amount of work remaining (on the vertical axis) over time (on the horizontal axis), helping the team to see if they are on track to meet the Sprint Goal."
+  },
+  {
+    "n": 25,
+    "title": "Introduction to Kanban",
+    "math": "Queuing theory",
+    "note": "This lesson introduces Kanban as an alternative Agile method focused on visualizing work, limiting work in progress (WIP), and maximizing flow. It explains that Kanban is a pull system, where work is pulled from a backlog as the team has capacity, rather than being pushed in time-boxed iterations."
+  },
+  {
+    "n": 26,
+    "title": "The Kanban Board",
+    "math": "Visual management",
+    "note": "This section details the Kanban board, the primary tool for visualizing the workflow. It covers how to design a board that accurately reflects the team's process, from 'To Do' to 'In Progress' to 'Done', and how to use swimlanes and different card types to manage work."
+  },
+  {
+    "n": 27,
+    "title": "Limiting Work in Progress (WIP)",
+    "math": "Little's Law",
+    "note": "A core concept of Kanban, this lesson explains the importance of setting explicit limits on how many items can be in progress at any given time. It details how WIP limits reduce multitasking, prevent bottlenecks, and create a smoother, more predictable flow of work."
+  },
+  {
+    "n": 28,
+    "title": "Kanban Metrics: Lead Time and Cycle Time",
+    "math": "Time-series analysis",
+    "note": "This section defines key metrics for measuring and improving a Kanban system. 'Lead Time' is the total time from a request being made until it is delivered. 'Cycle Time' is the time it takes for an item to move through the 'in progress' stages of the workflow. These are used to improve predictability."
+  },
+  {
+    "n": 29,
+    "title": "Kanban vs. Scrum: A Comparison",
+    "math": "Comparative framework analysis",
+    "note": "This lesson highlights the key differences and similarities between Scrum and Kanban. It compares their approaches to roles (prescribed vs. no new roles), iterations (time-boxed vs. continuous flow), and how change is handled, helping teams choose the right framework for their context."
+  },
+  {
+    "n": 30,
+    "title": "Introduction to Extreme Programming (XP)",
+    "math": "Feedback control systems",
+    "note": "This lesson introduces Extreme Programming (XP) as an Agile software development framework that aims to produce higher quality software and higher quality of life for the development team. XP is defined by its five values: Simplicity, Communication, Feedback, Respect, and Courage."
+  },
+  {
+    "n": 31,
+    "title": "XP Practices: Pair Programming",
+    "math": "Collaborative problem-solving",
+    "note": "A deep dive into the XP practice of Pair Programming, where two programmers work together at one workstation. This lesson explains the roles of the 'driver' (who writes code) and the 'navigator' (who reviews and plans), and the benefits, such as higher code quality and knowledge sharing."
+  },
+  {
+    "n": 32,
+    "title": "XP Practices: Test-Driven Development (TDD)",
+    "math": "Red-Green-Refactor cycle",
+    "note": "This section explains Test-Driven Development (TDD), a core technical practice of XP. It details the simple, repeating cycle: 1. Write a failing automated test. 2. Write the minimal production code to make the test pass. 3. Refactor the code. This process results in robust, well-tested code."
+  },
+  {
+    "n": 33,
+    "title": "XP Practices: Continuous Integration (CI)",
+    "math": "Integration testing",
+    "note": "This lesson covers the XP practice of Continuous Integration, where developers frequently merge their code changes into a central repository, after which automated builds and tests are run. The goal is to detect integration errors as quickly as possible."
+  },
+  {
+    "n": 34,
+    "title": "Lean Software Development Principles",
+    "math": "Lean manufacturing principles",
+    "note": "This section introduces Lean Software Development, which adapts principles from lean manufacturing to the software domain. The seven core principles are explained: Eliminate Waste, Amplify Learning, Decide as Late as Possible, Deliver as Fast as Possible, Empower the Team, Build Integrity In, and See the Whole."
+  },
+  {
+    "n": 35,
+    "title": "Scaling Agile: Challenges and Frameworks",
+    "math": "Organizational theory",
+    "note": "This lesson discusses the challenges of applying Agile principles to large, complex enterprises with multiple teams. It introduces the concept of scaling frameworks, which are designed to help coordinate work and align teams toward common goals."
+  },
+  {
+    "n": 36,
+    "title": "Introduction to Scaled Agile Framework (SAFe)",
+    "math": "Hierarchical systems",
+    "note": "An overview of the Scaled Agile Framework (SAFe), one of the most popular frameworks for enterprise-level Agile. This lesson introduces the different levels of SAFe (Essential, Large Solution, Portfolio, Full) and key concepts like the Agile Release Train (ART) and Program Increment (PI) Planning."
+  },
+  {
+    "n": 37,
+    "title": "Introduction to Large-Scale Scrum (LeSS)",
+    "math": "System scaling principles",
+    "note": "This section introduces Large-Scale Scrum (LeSS) as a framework for scaling Scrum to multiple teams. It explains the LeSS principles, such as applying the rules of single-team Scrum to a larger group, and how it structures events like a single Sprint Review for all teams."
+  },
+  {
+    "n": 38,
+    "title": "Agile and Technical Debt",
+    "math": "Financial debt metaphor",
+    "note": "This lesson explains the concept of Technical Debt, the implied cost of rework caused by choosing an easy (limited) solution now instead of using a better approach that would take longer. It discusses how Agile practices like refactoring and the Definition of Done help to manage and reduce technical debt."
+  },
+  {
+    "n": 39,
+    "title": "Behavior-Driven Development (BDD)",
+    "math": "Formal specification languages",
+    "note": "This section introduces Behavior-Driven Development (BDD) as an extension of TDD. BDD focuses on defining system behavior through examples written in a natural language format (like Gherkin's Given-When-Then syntax) that can be understood by developers, testers, and business analysts alike."
+  },
+  {
+    "n": 40,
+    "title": "The Relationship Between Agile and DevOps",
+    "math": "Pipeline automation",
+    "note": "This lesson explores the synergy between Agile and DevOps. It explains how Agile focuses on optimizing the development process ('what' to build), while DevOps focuses on automating the delivery pipeline to get that software to users quickly and reliably. They are two complementary movements that reinforce each other."
+  },
+  {
+    "n": 41,
+    "title": "The Agile Mindset",
+    "math": "Growth mindset theory",
+    "note": "This final section emphasizes that Agile is more than a set of practices; it is a mindset based on the values and principles of the Agile Manifesto. It discusses the importance of continuous learning, embracing uncertainty, fostering collaboration, and focusing on delivering value to achieve true business agility."
+  }
+]

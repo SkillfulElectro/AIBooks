@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Computer Vision?",
+    "math": "Image analysis",
+    "note": "This section provides a formal definition of Computer Vision as an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos. It seeks to automate tasks that the human visual system can do."
+  },
+  {
+    "n": 2,
+    "title": "Introduction to OpenCV",
+    "math": "Computer vision libraries",
+    "note": "This lesson introduces OpenCV (Open Source Computer Vision Library) as a premier, open-source library for computer vision, machine learning, and image processing. It explains that OpenCV supports a wide variety of programming languages like Python and C++ and is designed for computational efficiency with a strong focus on real-time applications."
+  },
+  {
+    "n": 3,
+    "title": "Reading, Displaying, and Saving Images",
+    "math": "Image I/O",
+    "note": "This section covers the most fundamental operations in OpenCV. It demonstrates how to read an image from a file into a NumPy array using `cv2.imread()`, how to display that image in a window using `cv2.imshow()`, and how to save an image back to a file using `cv2.imwrite()`."
+  },
+  {
+    "n": 4,
+    "title": "Basic Image Properties and Manipulations",
+    "math": "NumPy array manipulation",
+    "note": "This lesson explains how images in OpenCV are represented as NumPy arrays. It shows how to access basic properties like height, width, and number of channels from the array's `.shape` attribute. It also demonstrates how to access and manipulate individual pixel values by indexing the array."
+  },
+  {
+    "n": 5,
+    "title": "Drawing Shapes and Text on Images",
+    "math": "Vector graphics",
+    "note": "This section covers how to draw on images. It demonstrates the OpenCV functions for drawing basic shapes like lines (`cv2.line()`), circles (`cv2.circle()`), and rectangles (`cv2.rectangle()`), as well as how to add text to an image using `cv2.putText()`."
+  },
+  {
+    "n": 6,
+    "title": "Working with Video Streams",
+    "math": "Video processing",
+    "note": "This lesson explains how to work with video in OpenCV. It shows how to create a `VideoCapture` object to read from either a video file or a live camera feed. The process of reading frames from the video in a loop is demonstrated."
+  },
+  {
+    "n": 7,
+    "title": "Image Processing: Color Spaces",
+    "math": "Color models (BGR, HSV)",
+    "note": "This section covers color spaces. It explains that OpenCV reads images in BGR (Blue, Green, Red) order by default. It demonstrates how to convert an image to other color spaces, like Grayscale (for simplicity) or HSV (Hue, Saturation, Value), which is often more useful for color-based object detection."
+  },
+  {
+    "n": 8,
+    "title": "Image Processing: Geometric Transformations",
+    "math": "Affine transformations",
+    "note": "This lesson details how to transform images. It covers scaling (resizing), translation (shifting), and rotation. It explains how these transformations are achieved using transformation matrices and the `cv2.warpAffine()` function."
+  },
+  {
+    "n": 9,
+    "title": "Image Processing: Blurring and Filtering",
+    "math": "Image filtering, convolution",
+    "note": "This section explains how to blur images to reduce noise. It introduces the concept of a 'kernel' and the process of convolution. It covers different blurring techniques, such as simple averaging, Gaussian blurring, and median blurring."
+  },
+  {
+    "n": 10,
+    "title": "Image Processing: Thresholding",
+    "math": "Image thresholding",
+    "note": "This lesson introduces thresholding, a simple yet powerful method for image segmentation. It explains how simple binary thresholding converts a grayscale image into a binary image by setting all pixels above a threshold to white and all pixels below to black. Adaptive thresholding is also introduced."
+  },
+  {
+    "n": 11,
+    "title": "Feature Detection: Edge Detection",
+    "math": "Edge detection",
+    "note": "This section covers the process of identifying points in a digital image at which the image brightness changes sharply. It focuses on the Canny edge detector, a popular multi-stage algorithm that detects a wide range of edges with low noise."
+  },
+  {
+    "n": 12,
+    "title": "Feature Detection: Contours",
+    "math": "Contour tracing",
+    "note": "This lesson introduces contours as a curve joining all the continuous points along the boundary of an object that have the same color or intensity. It demonstrates how to use the `cv2.findContours()` function to find the contours of objects in a binary image and `cv2.drawContours()` to visualize them."
+  },
+  {
+    "n": 13,
+    "title": "Feature Detection: Corner Detection",
+    "math": "Corner detection",
+    "note": "This section explains corner detection as a method for identifying points in an image that have a strong variation in intensity in all directions. It provides an overview of the Harris Corner Detection algorithm, a common method for this task."
+  },
+  {
+    "n": 14,
+    "title": "Feature Descriptors: ORB",
+    "math": "Feature detection and description",
+    "note": "This lesson introduces the concept of feature detectors and descriptors, which are crucial for tasks like image matching and object recognition. It focuses on the ORB (Oriented FAST and Rotated BRIEF) algorithm, a fast and robust open-source alternative to SIFT and SURF, for both detecting keypoints and computing their descriptors."
+  },
+  {
+    "n": 15,
+    "title": "Object Detection: Haar Cascades for Face Detection",
+    "math": "Haar-like features, cascade classifiers",
+    "note": "This section introduces a classic, machine learning-based approach for object detection. It explains how Haar Cascades, a method proposed by Viola and Jones, can be used to detect faces (and other objects) in an image very quickly. It demonstrates how to use OpenCV's pre-trained face detection classifiers."
+  },
+  {
+    "n": 16,
+    "title": "Object Detection with Deep Learning (DNN Module)",
+    "math": "Deep Neural Networks (DNNs)",
+    "note": "This lesson explains how to use modern, deep learning-based models for object detection. It introduces OpenCV's DNN module, which allows you to load pre-trained models from popular frameworks like TensorFlow and Caffe. It demonstrates how to use a pre-trained model (like SSD MobileNet) to detect a wide variety of objects in an image."
+  },
+  {
+    "n": 17,
+    "title": "Video Analysis: Optical Flow",
+    "math": "Optical flow",
+    "note": "This section covers Optical Flow, which is the pattern of apparent motion of objects, surfaces, and edges in a visual scene caused by the relative motion between an observer and the scene. It provides an overview of the Lucas-Kanade method for tracking feature points across video frames."
+  },
+  {
+    "n": 18,
+    "title": "Video Analysis: Background Subtraction",
+    "math": "Background subtraction",
+    "note": "This lesson introduces background subtraction as a common technique for detecting moving objects in videos from static cameras. It explains the process of building a statistical model of the 'background' and then subtracting the background from the current frame to isolate the moving foreground objects."
+  },
+  {
+    "n": 19,
+    "title": "Application: Document Scanner",
+    "math": "Image perspective transform",
+    "note": "This lesson provides a practical project walkthrough. It shows how to combine several OpenCV techniques—like edge detection, contour finding, and perspective transforms—to build a simple document scanner that can find a piece of paper in an image and create a top-down, 'scanned' view of it."
+  },
+  {
+    "n": 20,
+    "title": "Application: Face and Eye Detection",
+    "math": "Object detection application",
+    "note": "This final lesson provides another practical project. It demonstrates how to use pre-trained Haar Cascades to detect not only faces in an image but also the eyes within each detected face, showcasing the hierarchical nature of object detection."
+  }
+]

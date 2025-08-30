@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Scala?",
+    "math": "Hybrid programming paradigms",
+    "note": "This section introduces Scala as a high-level language that unifies object-oriented and functional programming in one concise, logical, and statically typed language. It explains that Scala code is compiled to Java bytecode and runs on the Java Virtual Machine (JVM), allowing for seamless interoperability with Java."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up a Scala Environment",
+    "math": "Build tools (sbt)",
+    "note": "This lesson provides a practical guide to setting up a development environment. It introduces `sbt` (the simple build tool) as the standard build tool for Scala projects. It also demonstrates how to use the Scala REPL (Read-Eval-Print Loop) for interactive experimentation."
+  },
+  {
+    "n": 3,
+    "title": "Scala Fundamentals: `val`, `var`, and Data Types",
+    "math": "Immutability",
+    "note": "This section covers the basics of Scala syntax. It explains the core data types like `Int`, `Double`, and `String`. It introduces the two ways to define variables: `val` for immutable values (which is preferred) and `var` for mutable variables."
+  },
+  {
+    "n": 4,
+    "title": "Control Structures: `if/else` Expressions",
+    "math": "Expressions vs. statements",
+    "note": "This lesson explains that most control structures in Scala are expressions, meaning they return a value. It demonstrates the `if/else` construct and shows how its result can be assigned to a variable, a common pattern in functional programming."
+  },
+  {
+    "n": 5,
+    "title": "Functional Programming: First-Class Functions",
+    "math": "First-class functions",
+    "note": "This section introduces a core tenet of functional programming. In Scala, functions are first-class citizens, which means they can be treated like any other value: you can pass them as arguments to other functions, return them as results, and assign them to variables."
+  },
+  {
+    "n": 6,
+    "title": "Anonymous Functions (Lambdas)",
+    "math": "Lambda calculus",
+    "note": "This lesson introduces anonymous functions, also known as lambdas or function literals. These are unnamed functions that can be defined inline. The concise 'rocket' syntax `(x: Int) => x * 2` is demonstrated. They are frequently used with higher-order functions."
+  },
+  {
+    "n": 7,
+    "title": "Higher-Order Functions",
+    "math": "Higher-order functions",
+    "note": "This section explains that a higher-order function is a function that either takes another function as an argument or returns a function as its result. This is a powerful concept for creating abstract and reusable code."
+  },
+  {
+    "n": 8,
+    "title": "Collections: `List`, `Set`, `Map`",
+    "math": "Immutable collections",
+    "note": "This lesson introduces Scala's powerful and rich collections library. It focuses on the core immutable collections: `List` (an ordered sequence), `Set` (a collection of unique elements), and `Map` (a collection of key-value pairs)."
+  },
+  {
+    "n": 9,
+    "title": "Working with Collections: `map`, `filter`, `flatMap`",
+    "math": "Collection transformations",
+    "note": "This section demonstrates the functional way of working with collections using higher-order functions. It covers `map` (to transform each element), `filter` (to select elements that meet a condition), and `flatMap` (a combination of map and flattening), which are fundamental for data manipulation."
+  },
+  {
+    "n": 10,
+    "title": "Object-Oriented Programming: Classes",
+    "math": "Classes and objects",
+    "note": "This lesson covers Scala's object-oriented side. It demonstrates how to define a class with fields and methods using the `class` keyword. The concept of a constructor for initializing an object is also explained."
+  },
+  {
+    "n": 11,
+    "title": "Singleton Objects and Companion Objects",
+    "math": "Singleton pattern",
+    "note": "This section introduces the `object` keyword, which is used to define a class that has only one instance (a singleton). It also explains the common Scala pattern of a 'Companion Object', which is a singleton object that has the same name as a class and is defined in the same file. It is often used to hold factory methods or static members."
+  },
+  {
+    "n": 12,
+    "title": "Case Classes",
+    "math": "Algebraic data types",
+    "note": "This lesson introduces Case Classes as a special type of class that is optimized for functional programming. They are immutable by default, provide useful auto-generated methods (like `equals` and `hashCode`), and are ideal for use in pattern matching."
+  },
+  {
+    "n": 13,
+    "title": "Traits",
+    "math": "Traits (mixins)",
+    "note": "This section covers Traits, a core feature of Scala's object model. A trait is similar to an interface in Java, but it can also contain implemented methods. Traits are used for code reuse through 'mixin' composition, allowing a class to inherit from multiple traits."
+  },
+  {
+    "n": 14,
+    "title": "Pattern Matching",
+    "math": "Pattern matching",
+    "note": "This lesson introduces pattern matching as one of Scala's most powerful features. It is a more advanced version of a `switch` statement that can match on values, types, and the structure of data (especially case classes). The `match` keyword and `case` clauses are demonstrated."
+  },
+  {
+    "n": 15,
+    "title": "Handling Absence: The `Option` Type",
+    "math": "Option types",
+    "note": "This section explains the 'Scala way' of handling potentially missing values, avoiding `null`. The `Option` type is an enumeration with two cases: `Some(value)` if a value is present, and `None` if it is absent. This forces the programmer to handle the 'no value' case, preventing null pointer exceptions."
+  },
+  {
+    "n": 16,
+    "title": "Error Handling: `Try` and `Either`",
+    "math": "Error handling",
+    "note": "This lesson covers functional approaches to error handling. `Try` is a type that represents a computation that can result in either a value (`Success(value)`) or an exception (`Failure(exception)`). `Either` is a more general type that can hold one of two possible values, typically a `Left(error)` or a `Right(success)`."
+  },
+  {
+    "n": 17,
+    "title": "Asynchronous Programming with `Future`",
+    "math": "Futures and promises",
+    "note": "This section introduces `Future`, Scala's construct for handling asynchronous operations. A `Future` is a placeholder object for a value that may not yet be available. It allows you to write non-blocking code by composing operations on the future value."
+  },
+  {
+    "n": 18,
+    "title": "The Scala Build Tool (sbt)",
+    "math": "Build automation",
+    "note": "This lesson provides an overview of `sbt`, the standard build tool for Scala. It explains the structure of a `build.sbt` file, which is used to define project settings, dependencies, and custom tasks."
+  },
+  {
+    "n": 19,
+    "title": "Testing with ScalaTest",
+    "math": "Testing frameworks",
+    "note": "This section introduces ScalaTest, a popular testing framework for Scala. It demonstrates how to write simple unit tests and assertions to verify the correctness of your code."
+  },
+  {
+    "n": 20,
+    "title": "The Scala Ecosystem: Akka and Spark",
+    "math": "Distributed computing frameworks",
+    "note": "This final lesson provides a glimpse into why Scala is so powerful in the real world. It briefly introduces Akka, a toolkit for building highly concurrent and distributed applications using the actor model, and Apache Spark, the leading framework for big data processing, which has its primary API in Scala."
+  }
+]

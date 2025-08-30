@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Microsoft Azure",
+    "math": "Cloud computing platforms",
+    "note": "This section introduces Microsoft Azure as a comprehensive cloud computing platform offering a wide range of services, including computing, analytics, storage, and networking. It explains Azure's position as a leading global cloud provider, particularly strong in enterprise and hybrid cloud scenarios."
+  },
+  {
+    "n": 2,
+    "title": "Azure Global Infrastructure",
+    "math": "Geographic distribution",
+    "note": "This lesson explains the physical structure of the Azure cloud. It defines a 'Region' as a set of datacenters deployed within a latency-defined perimeter. It also introduces 'Availability Zones' as unique physical locations with independent power, cooling, and networking within a region, which are used to build high-availability applications."
+  },
+  {
+    "n": 3,
+    "title": "Navigating the Azure Portal",
+    "math": "Web-based user interfaces",
+    "note": "This section provides a guided tour of the Azure Portal, the primary web-based interface for creating, managing, and monitoring Azure resources. It covers the main dashboard, the resource navigation menu, and the Cloud Shell for command-line access directly within the browser."
+  },
+  {
+    "n": 4,
+    "title": "Core Concept: Resource Groups and ARM",
+    "math": "Resource management",
+    "note": "This lesson introduces the Azure Resource Manager (ARM) as the deployment and management service for Azure. It explains that all resources in Azure must belong to a 'Resource Group', which acts as a logical container for resources that share a common lifecycle (e.g., all resources for a single application)."
+  },
+  {
+    "n": 5,
+    "title": "Compute: Azure Virtual Machines (IaaS)",
+    "math": "Infrastructure as a Service (IaaS)",
+    "note": "This section covers Azure's primary IaaS offering. It explains how to create and configure a Virtual Machine (VM) in Azure, choosing an operating system (Windows or Linux), a size (CPU/memory), and configuring networking and storage. This gives you maximum control over the computing environment."
+  },
+  {
+    "n": 6,
+    "title": "Compute: Azure App Service (PaaS)",
+    "math": "Platform as a Service (PaaS)",
+    "note": "This lesson introduces Azure App Service, a fully managed platform for building, deploying, and scaling web apps and APIs. It is a PaaS offering, meaning Azure manages the underlying infrastructure, OS, and patching, allowing developers to focus on their code. It supports various languages like .NET, Java, and Node.js."
+  },
+  {
+    "n": 7,
+    "title": "Compute: Azure Functions (Serverless)",
+    "math": "Function as a Service (FaaS)",
+    "note": "This section covers Azure Functions, Azure's serverless compute service. It allows you to run small pieces of code (functions) in response to events (triggers), without having to provision or manage any servers. You are billed only for the time your code runs."
+  },
+  {
+    "n": 8,
+    "title": "Compute: Containers in Azure",
+    "math": "Container services",
+    "note": "This lesson provides an overview of container services in Azure. It introduces Azure Container Instances (ACI) for running single, simple containers without orchestration, and Azure Kubernetes Service (AKS), a managed Kubernetes service for deploying and managing complex, microservices-based applications at scale."
+  },
+  {
+    "n": 9,
+    "title": "Storage: Azure Blob Storage",
+    "math": "Object storage",
+    "note": "This section covers Azure Blob Storage, a massively scalable object store for unstructured data. It is optimized for storing large amounts of data like text, images, and videos. The different access tiers (Hot, Cool, Archive) for cost optimization are also explained."
+  },
+  {
+    "n": 10,
+    "title": "Storage: Azure Files and Disk Storage",
+    "math": "File and block storage",
+    "note": "This lesson details other core storage services. Azure Files provides fully managed file shares in the cloud that can be accessed via the standard SMB protocol. Azure Disk Storage provides high-performance, persistent block storage for use with Azure Virtual Machines."
+  },
+  {
+    "n": 11,
+    "title": "Networking: Azure Virtual Network (VNet)",
+    "math": "Software-Defined Networking (SDN)",
+    "note": "This section introduces Azure Virtual Network (VNet) as a service that enables you to create a private, isolated network in the Azure cloud. You can control the VNet's IP address space, create subnets, and configure route tables and network gateways."
+  },
+  {
+    "n": 12,
+    "title": "Networking: Network Security Groups (NSGs)",
+    "math": "Network firewalls",
+    "note": "This lesson explains Network Security Groups (NSGs), which act as a basic, stateful firewall for Azure resources. An NSG contains a list of security rules that allow or deny inbound or outbound network traffic to resources connected to your VNet."
+  },
+  {
+    "n": 13,
+    "title": "Databases: Azure SQL Database",
+    "math": "Database as a Service (DBaaS)",
+    "note": "This section covers Azure SQL Database, a fully managed PaaS database engine based on Microsoft SQL Server. Azure handles management functions like patching, backups, and monitoring, allowing you to focus on application development."
+  },
+  {
+    "n": 14,
+    "title": "Databases: Azure Cosmos DB",
+    "math": "Multi-model NoSQL databases",
+    "note": "This lesson introduces Azure Cosmos DB, Microsoft's globally distributed, multi-model NoSQL database service. It is designed for high availability and low latency, and it supports multiple data models, including document, key-value, and graph, through various APIs."
+  },
+  {
+    "n": 15,
+    "title": "Identity: Azure Active Directory (Azure AD)",
+    "math": "Identity and access management (IAM)",
+    "note": "This section explains Azure AD, Microsoft's cloud-based identity and access management service. It is the backbone of authentication and authorization in Azure. It allows you to manage users and groups and enable features like single sign-on (SSO) and multi-factor authentication (MFA)."
+  },
+  {
+    "n": 16,
+    "title": "Security: Role-Based Access Control (RBAC)",
+    "math": "Access control",
+    "note": "This lesson covers Azure RBAC, the system used to manage who has access to Azure resources, what they can do with those resources, and what areas they have access to. You assign roles (like 'Owner', 'Contributor', 'Reader') to users or groups at a specific scope (like a resource group)."
+  },
+  {
+    "n": 17,
+    "title": "Governance: Azure Policy",
+    "math": "Policy enforcement",
+    "note": "This section introduces Azure Policy, a service that helps you create, assign, and manage policies that enforce different rules and effects over your resources. This ensures that your deployments stay compliant with corporate standards and service level agreements."
+  },
+  {
+    "n": 18,
+    "title": "Management: The Azure CLI and PowerShell",
+    "math": "Command-line interfaces",
+    "note": "This lesson covers how to manage Azure from the command line. It introduces the Azure CLI (a cross-platform command-line tool) and Azure PowerShell as powerful tools for creating and managing Azure resources through scripts, enabling automation."
+  },
+  {
+    "n": 19,
+    "title": "Management: ARM Templates",
+    "math": "Infrastructure as Code (IaC)",
+    "note": "This section introduces Azure Resource Manager (ARM) templates as Azure's native Infrastructure as Code (IaC) solution. An ARM template is a JSON file that defines the infrastructure and configuration for your project, allowing you to deploy your resources in a consistent and repeatable manner."
+  },
+  {
+    "n": 20,
+    "title": "Azure Cost Management",
+    "math": "Cloud cost optimization",
+    "note": "This final lesson provides an overview of managing costs in Azure. It introduces the Azure Cost Management and Billing tool in the portal, which helps you analyze costs, set budgets, and get recommendations from Azure Advisor to optimize your spending."
+  }
+]

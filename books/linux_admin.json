@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "The Role of a Linux System Administrator",
+    "math": "System administration",
+    "note": "This section defines the role of a Linux System Administrator as a professional responsible for installing, configuring, and maintaining Linux operating systems and servers. It covers the key responsibilities, including user management, system security, performance monitoring, and ensuring system availability."
+  },
+  {
+    "n": 2,
+    "title": "The Command Line: Your Primary Tool",
+    "math": "Command-line interfaces (CLI)",
+    "note": "This lesson emphasizes the importance of the command line (or shell) for system administration. It explains that while GUIs exist, the CLI provides more power, flexibility, and the ability to automate tasks through scripting. The Bash shell is introduced as the most common."
+  },
+  {
+    "n": 3,
+    "title": "User and Group Management",
+    "math": "User account management",
+    "note": "This section covers the fundamental task of managing user accounts. It explains the concepts of users and groups in Linux and introduces the primary commands for creating, modifying, and deleting users (`useradd`, `usermod`, `userdel`) and groups (`groupadd`, `groupmod`)."
+  },
+  {
+    "n": 4,
+    "title": "Understanding Key User Files",
+    "math": "Configuration files",
+    "note": "This lesson explains the three critical files that store user and group information: `/etc/passwd` (user account information), `/etc/shadow` (secure user account information, including hashed passwords), and `/etc/group` (group information)."
+  },
+  {
+    "n": 5,
+    "title": "Privilege Escalation with `sudo`",
+    "math": "Access control",
+    "note": "This section covers the `sudo` command, the standard way to run commands with administrative (root) privileges. It explains the importance of not logging in as the root user directly and how to configure the `/etc/sudoers` file to grant specific privileges to users."
+  },
+  {
+    "n": 6,
+    "title": "The Linux File System Hierarchy (FHS)",
+    "math": "File system hierarchy",
+    "note": "This lesson explains the Filesystem Hierarchy Standard (FHS), which defines the directory structure and directory contents in Linux distributions. It covers the purpose of key directories like `/bin`, `/etc`, `/home`, `/var`, and `/usr`."
+  },
+  {
+    "n": 7,
+    "title": "File Permissions",
+    "math": "File system permissions (r, w, x)",
+    "note": "This section details the Linux file permission model. It explains the three types of permissions—read (r), write (w), and execute (x)—and the three sets of owners—user (owner), group, and other (everyone else). The `ls -l` command is used to view permissions."
+  },
+  {
+    "n": 8,
+    "title": "Changing Permissions with `chmod`",
+    "math": "Symbolic and octal notation",
+    "note": "This lesson demonstrates how to change file permissions using the `chmod` command. It covers both the symbolic method (e.g., `chmod u+x file`) and the more common octal notation (e.g., `chmod 755 file`), explaining how the numbers correspond to read, write, and execute permissions."
+  },
+  {
+    "n": 9,
+    "title": "Process Management",
+    "math": "Process control",
+    "note": "This section introduces the concept of a process as a running instance of a program. It covers how to view running processes using commands like `ps` (to see a snapshot) and `top` (to see a live, interactive view of system processes)."
+  },
+  {
+    "n": 10,
+    "title": "Managing Processes with `kill`",
+    "math": "Process signals",
+    "note": "This lesson explains how to send signals to processes to manage them, primarily using the `kill` command. It covers the most common signals, like `SIGTERM` (15, for a graceful shutdown) and `SIGKILL` (9, for a forced shutdown)."
+  },
+  {
+    "n": 11,
+    "title": "Package Management: APT and DNF/YUM",
+    "math": "Package management systems",
+    "note": "This section explains how to manage software on a Linux system using a package manager. It contrasts the two main families: Debian-based systems (like Ubuntu), which use `apt`, and Red Hat-based systems (like CentOS/Fedora), which use `yum` or `dnf`. The commands for installing, updating, and removing software are demonstrated."
+  },
+  {
+    "n": 12,
+    "title": "Service Management with `systemd`",
+    "math": "Init systems",
+    "note": "This lesson introduces `systemd` as the modern standard for initializing and managing system services (daemons). It explains the role of an init system and introduces the `systemctl` command as the primary tool for interacting with `systemd`."
+  },
+  {
+    "n": 13,
+    "title": "Using `systemctl`",
+    "math": "Service control",
+    "note": "This section demonstrates the most common `systemctl` commands. It covers `start`, `stop`, and `restart` for controlling a service in the current session, `status` for checking its state, and `enable`/`disable` for controlling whether a service starts automatically at boot."
+  },
+  {
+    "n": 14,
+    "title": "Network Configuration and Troubleshooting",
+    "math": "Network configuration",
+    "note": "This lesson covers basic Linux networking. It introduces the `ip` command for viewing and configuring network interfaces and the `ping` and `traceroute` commands for troubleshooting network connectivity issues."
+  },
+  {
+    "n": 15,
+    "title": "DNS Configuration",
+    "math": "DNS resolution",
+    "note": "This section explains how a Linux system resolves domain names. It covers the purpose of the `/etc/resolv.conf` file, which is used to configure the IP addresses of the DNS servers the system should use."
+  },
+  {
+    "n": 16,
+    "title": "Storage Management: `df` and `du`",
+    "math": "Disk space analysis",
+    "note": "This lesson introduces commands for monitoring disk space. It explains how `df` (disk free) is used to see the amount of space used and available on mounted file systems, and how `du` (disk usage) is used to see the space used by specific directories."
+  },
+  {
+    "n": 17,
+    "title": "Mounting File Systems and `/etc/fstab`",
+    "math": "File system mounting",
+    "note": "This section explains how to attach a file system on a storage device (like a hard drive partition) to a specific directory (a mount point). It covers the `mount` command and the `/etc/fstab` file, which is used to define which file systems should be mounted automatically at boot."
+  },
+  {
+    "n": 18,
+    "title": "System Logging with `journalctl`",
+    "math": "Log management",
+    "note": "This lesson covers how to view and analyze system logs using the `journalctl` command, which is the tool for interacting with the `systemd` journal. It demonstrates how to filter logs by time, service, or priority."
+  },
+  {
+    "n": 19,
+    "title": "Automation with Shell Scripting and `cron`",
+    "math": "Automation and task scheduling",
+    "note": "This section introduces automation. It provides a brief overview of writing simple Bash scripts to automate repetitive tasks. It then explains how to use the `cron` daemon to schedule these scripts or other commands to run automatically at specific times or intervals."
+  },
+  {
+    "n": 20,
+    "title": "Basic Security: Firewalls and SSH",
+    "math": "System security",
+    "note": "This final lesson covers two essential security tasks. It introduces the concept of a host-based firewall and simple tools like `ufw` to manage it. It also covers how to secure the Secure Shell (SSH) service, for example by disabling password authentication and using key-based authentication only."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Why Python for Machine Learning?",
+    "math": "Programming language ecosystems",
+    "note": "This section explains why Python has become the dominant language for machine learning and data science. It highlights its simple syntax, extensive collection of powerful libraries (like Scikit-learn and Pandas), and strong community support."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up Your Environment",
+    "math": "Software installation",
+    "note": "This lesson provides a practical guide to setting up a Python environment for machine learning. It recommends installing the Anaconda distribution, which bundles Python and all the necessary libraries. It also introduces Jupyter Notebooks as the standard interactive environment for data science work."
+  },
+  {
+    "n": 3,
+    "title": "Essential Library: NumPy",
+    "math": "N-dimensional arrays",
+    "note": "This section introduces NumPy (Numerical Python) as the fundamental package for numerical computing in Python. It explains the core data structure, the powerful N-dimensional array object, and how it enables efficient vectorized operations, which are much faster than standard Python lists."
+  },
+  {
+    "n": 4,
+    "title": "NumPy: Array Creation and Indexing",
+    "math": "Array indexing and slicing",
+    "note": "This lesson covers the basics of creating NumPy arrays from Python lists and using built-in functions like `np.arange()` and `np.zeros()`. It then demonstrates how to access and manipulate elements in the array using indexing and slicing techniques."
+  },
+  {
+    "n": 5,
+    "title": "Essential Library: Pandas",
+    "math": "Data frames",
+    "note": "This section introduces Pandas as the most important library for data manipulation and analysis in Python. It explains the two primary data structures: the `Series` (a 1D array) and the `DataFrame` (a 2D table with labeled rows and columns), which is the primary object you will work with."
+  },
+  {
+    "n": 6,
+    "title": "Pandas: Reading and Inspecting Data",
+    "math": "Data import and summary statistics",
+    "note": "This lesson demonstrates how to read data from a CSV file into a Pandas DataFrame using `pd.read_csv()`. It then covers essential methods for getting a first look at your data, including `.head()` (to see the first few rows), `.info()` (to see data types), and `.describe()` (to get summary statistics)."
+  },
+  {
+    "n": 7,
+    "title": "Pandas: Selection and Filtering",
+    "math": "Data selection",
+    "note": "This section covers how to select specific rows and columns from a DataFrame. It explains how to select columns by name and how to use boolean indexing to filter rows based on conditions (e.g., selecting all rows where 'age' > 30). The `.loc` and `.iloc` accessors are introduced."
+  },
+  {
+    "n": 8,
+    "title": "Essential Library: Matplotlib and Seaborn",
+    "math": "Data visualization",
+    "note": "This lesson introduces Matplotlib as the foundational plotting library in Python and Seaborn as a high-level interface built on top of it for creating attractive statistical plots. The importance of visualizing data to find patterns and outliers is emphasized."
+  },
+  {
+    "n": 9,
+    "title": "Introduction to Scikit-Learn",
+    "math": "Machine learning APIs",
+    "note": "This section introduces Scikit-learn as the core machine learning library in Python. It highlights its key features: a wide range of algorithms, a clean and consistent API, and excellent documentation. The core 'Estimator' API (`fit`, `predict`) is introduced."
+  },
+  {
+    "n": 10,
+    "title": "The `train_test_split` Function",
+    "math": "Data splitting",
+    "note": "This lesson explains a crucial step in model evaluation. It demonstrates how to use the `train_test_split` function from Scikit-learn to split your dataset into a training set (used to train the model) and a testing set (used to evaluate the model's performance on unseen data), which helps to avoid overfitting."
+  },
+  {
+    "n": 11,
+    "title": "Implementing Linear Regression",
+    "math": "Linear regression implementation",
+    "note": "This lesson provides a practical example of building a machine learning model. It shows how to import the `LinearRegression` class from Scikit-learn, create an instance of the model, train it on the training data using the `.fit()` method, and make predictions on the test data using the `.predict()` method."
+  },
+  {
+    "n": 12,
+    "title": "Implementing Logistic Regression",
+    "math": "Logistic regression implementation",
+    "note": "This section demonstrates how to implement a classification model. It walks through the process of importing and using the `LogisticRegression` classifier from Scikit-learn, including fitting the model and predicting class labels."
+  },
+  {
+    "n": 13,
+    "title": "Implementing K-Nearest Neighbors (k-NN)",
+    "math": "k-NN implementation",
+    "note": "This lesson covers the implementation of the k-NN classification algorithm. It shows how to use the `KNeighborsClassifier` from Scikit-learn and highlights the importance of feature scaling for distance-based algorithms like k-NN."
+  },
+  {
+    "n": 14,
+    "title": "Feature Scaling",
+    "math": "Data normalization and standardization",
+    "note": "This section explains why feature scaling is a critical pre-processing step for many ML algorithms. It introduces the `StandardScaler` (which standardizes features to have zero mean and unit variance) and the `MinMaxScaler` (which scales features to a range, typically 0 to 1) from Scikit-learn."
+  },
+  {
+    "n": 15,
+    "title": "Implementing Decision Trees and Random Forests",
+    "math": "Tree-based model implementation",
+    "note": "This lesson shows how to implement tree-based models in Scikit-learn. It covers using the `DecisionTreeClassifier` for a single tree and the `RandomForestClassifier` for an ensemble of trees, demonstrating the improvement in performance that Random Forests often provide."
+  },
+  {
+    "n": 16,
+    "title": "Implementing K-Means Clustering",
+    "math": "k-Means implementation",
+    "note": "This section covers the implementation of the most popular unsupervised learning algorithm. It demonstrates how to use the `KMeans` class from Scikit-learn to group unlabeled data into a specified number of clusters."
+  },
+  {
+    "n": 17,
+    "title": "Hyperparameter Tuning with `GridSearchCV`",
+    "math": "Hyperparameter optimization",
+    "note": "This lesson explains that hyperparameters are parameters that are not learned from the data but are set before training (e.g., the 'k' in k-NN). It introduces `GridSearchCV` from Scikit-learn as a tool for automatically searching for the best combination of hyperparameters for a model."
+  },
+  {
+    "n": 18,
+    "title": "Building Pipelines",
+    "math": "Workflow automation",
+    "note": "This section introduces Scikit-learn's `Pipeline` object as a tool for streamlining common workflows. It demonstrates how to create a pipeline that chains together multiple steps, such as feature scaling and model training, into a single object. This helps to prevent data leakage and simplifies code."
+  },
+  {
+    "n": 19,
+    "title": "A Complete Project Walkthrough",
+    "math": "End-to-end project implementation",
+    "note": "This lesson ties all the concepts together by walking through a complete machine learning project in a Jupyter Notebook. It covers loading a standard dataset (like the Iris dataset), performing exploratory data analysis, building a pre-processing and modeling pipeline, and evaluating the final model."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Deep Learning with Keras",
+    "math": "Neural network implementation",
+    "note": "This final lesson provides a brief, practical introduction to deep learning in Python. It introduces the Keras API (part of TensorFlow) and shows how to build a simple sequential neural network for a classification task, demonstrating the basic steps of building, compiling, fitting, and evaluating the model."
+  }
+]

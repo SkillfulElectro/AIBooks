@@ -1,0 +1,170 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to IT Automation",
+    "math": "Process optimization",
+    "note": "This section introduces the 'why' behind automation in IT. It covers the concepts of configuration management, infrastructure as code (IaC), and the benefits of automating tasks, such as increased speed, improved reliability, and enhanced security. It contrasts manual system administration with automated approaches."
+  },
+  {
+    "n": 2,
+    "title": "Declarative vs. Imperative Automation",
+    "math": "Declarative vs. imperative programming paradigms",
+    "note": "This lesson explains the two main approaches to automation. It defines the 'imperative' approach as specifying the exact steps to reach a goal (like a shell script) and the 'declarative' approach as defining the desired end state, letting the tool figure out how to get there. Ansible's declarative nature is highlighted."
+  },
+  {
+    "n": 3,
+    "title": "What is Ansible?",
+    "math": "System architecture",
+    "note": "This section introduces Ansible as a simple, powerful, and agentless IT automation engine. It explains Ansible's core philosophy and its architecture, which consists of a 'Control Node' (where Ansible is run) and 'Managed Nodes' (the servers being automated). The agentless nature (using SSH/WinRM) is emphasized as a key differentiator."
+  },
+  {
+    "n": 4,
+    "title": "Setting Up an Ansible Control Node",
+    "math": "Software installation and configuration",
+    "note": "This lesson provides a step-by-step guide to installing Ansible on a Linux-based control node. It covers using package managers like `apt` or `yum` and installing Python dependencies. It also demonstrates how to configure the `ansible.cfg` file for custom settings."
+  },
+  {
+    "n": 5,
+    "title": "Configuring Managed Nodes and SSH Keys",
+    "math": "Public-key cryptography",
+    "note": "This section explains how to prepare managed nodes for automation by Ansible. It focuses on the crucial step of setting up passwordless SSH authentication using SSH key pairs, which allows the control node to securely connect to and manage the remote servers without needing a password."
+  },
+  {
+    "n": 6,
+    "title": "The Ansible Inventory",
+    "math": "Set theory (for host grouping)",
+    "note": "This lesson introduces the inventory file, which is the list of managed nodes that Ansible will automate. It demonstrates how to create a basic inventory file, define individual hosts, and organize hosts into groups for easier targeting. The default location (`/etc/ansible/hosts`) is discussed."
+  },
+  {
+    "n": 7,
+    "title": "Ansible Ad-Hoc Commands",
+    "math": "Command-line syntax",
+    "note": "This section covers the use of ad-hoc commands for running simple, one-off tasks. It demonstrates the `ansible` command-line tool syntax: `ansible <host-pattern> -m <module> -a <arguments>`. This is used for quick checks and simple changes, not complex automation."
+  },
+  {
+    "n": 8,
+    "title": "Introduction to Ansible Modules",
+    "math": "Modular programming",
+    "note": "This lesson defines modules as the reusable units of code that Ansible executes on managed nodes. It explains that each module is responsible for a specific task, like managing packages, files, or services. The concept of idempotence—running a task multiple times results in the same state—is introduced."
+  },
+  {
+    "n": 9,
+    "title": "Essential Modules: `ping`, `command`, `shell`",
+    "math": "Remote execution",
+    "note": "This section demonstrates fundamental Ansible modules. It covers `ping` to test connectivity, `command` to execute simple commands (that do not require a shell), and `shell` for running more complex commands or scripts that need shell features like pipes and redirection."
+  },
+  {
+    "n": 10,
+    "title": "File Management with `copy` and `file` Modules",
+    "math": "File system permissions",
+    "note": "This lesson focuses on managing files on remote hosts. It explains how to use the `copy` module to transfer files from the control node to managed nodes and the `file` module to manage file properties, such as creating directories, setting permissions, and creating symlinks."
+  },
+  {
+    "n": 11,
+    "title": "Introduction to Playbooks",
+    "math": "YAML data serialization language",
+    "note": "This section introduces playbooks as the core of Ansible's power, allowing you to orchestrate complex, multi-step automation tasks. It explains that playbooks are written in YAML format and contain a series of 'plays', each targeting a set of hosts and executing a list of 'tasks'."
+  },
+  {
+    "n": 12,
+    "title": "Writing Your First Playbook",
+    "math": "Procedural logic",
+    "note": "This lesson provides a hands-on guide to creating a simple playbook. It details the basic structure of a playbook file, including the `hosts`, `become` (for privilege escalation), and `tasks` keywords. A simple playbook to install a web server is used as an example."
+  },
+  {
+    "n": 13,
+    "title": "Running Playbooks with `ansible-playbook`",
+    "math": "Execution flow",
+    "note": "This section explains how to execute a playbook using the `ansible-playbook` command. It covers essential command-line options like `--check` for a 'dry run' to see what would change, and `-v` (verbose) for more detailed output during execution."
+  },
+  {
+    "n": 14,
+    "title": "Ansible Facts and the `setup` Module",
+    "math": "Data gathering",
+    "note": "This lesson introduces Ansible Facts, which are pieces of information discovered about managed nodes (e.g., OS version, IP address, memory). It explains that these facts are gathered automatically by the `setup` module at the start of a play and can be used as variables within the playbook."
+  },
+  {
+    "n": 15,
+    "title": "Using Variables in Playbooks",
+    "math": "Variable substitution",
+    "note": "This section covers how to define and use variables to make playbooks more flexible and reusable. It demonstrates how to define variables directly in the `vars` section of a playbook and how to reference them in tasks using Jinja2 syntax, like `{{ my_variable }}`."
+  },
+  {
+    "n": 16,
+    "title": "Managing Variables with `group_vars` and `host_vars`",
+    "math": "Variable scope and precedence",
+    "note": "This lesson explains a more organized way to manage variables. It details how to create `group_vars` and `host_vars` directories to store variable files specific to inventory groups or individual hosts. Ansible's variable precedence rules (which variables win in case of conflict) are also introduced."
+  },
+  {
+    "n": 17,
+    "title": "Templating with the `template` Module and Jinja2",
+    "math": "Template engines",
+    "note": "This section introduces the `template` module, which allows you to create dynamic configuration files using the Jinja2 templating engine. It explains how to create a `.j2` template file containing variables and logic, which Ansible then renders and copies to the managed node."
+  },
+  {
+    "n": 18,
+    "title": "Task Control: Loops",
+    "math": "Iteration",
+    "note": "This lesson demonstrates how to perform a task multiple times using different values. It covers the `loop` keyword, showing how to iterate over a simple list of strings (e.g., to install multiple packages) or a list of dictionaries to perform more complex, repeated actions."
+  },
+  {
+    "n": 19,
+    "title": "Task Control: Conditionals with `when`",
+    "math": "Boolean logic",
+    "note": "This section explains how to execute a task conditionally using the `when` statement. It shows how to write a condition based on Ansible facts or variables, ensuring a task only runs if the condition is met (e.g., only install a package on a specific OS family)."
+  },
+  {
+    "n": 20,
+    "title": "Handlers: Triggering Actions on Change",
+    "math": "Event-driven programming",
+    "note": "This lesson introduces handlers, which are special tasks that only run when 'notified' by another task. They are typically used for actions like restarting a service after its configuration file has been changed. This avoids unnecessary service restarts."
+  },
+  {
+    "n": 21,
+    "title": "Introduction to Roles",
+    "math": "Encapsulation and abstraction",
+    "note": "This section defines Roles as the Ansible way to organize and reuse automation content. A role encapsulates all the tasks, variables, templates, and handlers needed for a specific purpose (e.g., setting up a web server) into a standardized, portable directory structure."
+  },
+  {
+    "n": 22,
+    "title": "The Role Directory Structure",
+    "math": "Directory hierarchy",
+    "note": "This lesson details the standard directory structure of an Ansible role. It explains the purpose of each main directory: `tasks` (for the main list of tasks), `handlers`, `templates`, `files`, `vars` (for role variables), `defaults` (for default variable values), and `meta` (for role metadata)."
+  },
+  {
+    "n": 23,
+    "title": "Creating and Using a Role",
+    "math": "Content organization",
+    "note": "This lesson provides a practical guide to creating a new role from scratch using `ansible-galaxy init`. It then shows how to populate the role with content and how to call that role from a playbook using the `roles` keyword."
+  },
+  {
+    "n": 24,
+    "title": "Ansible Galaxy",
+    "math": "Public repositories",
+    "note": "This section introduces Ansible Galaxy as a public hub for finding, reusing, and sharing Ansible content. It demonstrates how to search for roles created by the community and how to install them into your project using the `ansible-galaxy` command-line tool."
+  },
+  {
+    "n": 25,
+    "title": "Managing Secrets with Ansible Vault",
+    "math": "Encryption and decryption",
+    "note": "This lesson covers Ansible Vault, a feature for encrypting sensitive data like passwords and API keys. It shows how to create an encrypted file, edit it, and how to use the `--ask-vault-pass` option when running a playbook to decrypt the secrets at runtime."
+  },
+  {
+    "n": 26,
+    "title": "Dynamic Inventories",
+    "math": "API integration",
+    "note": "This advanced lesson explains how to use dynamic inventories, which are scripts that fetch inventory information from external sources like cloud providers (AWS, Azure, GCP) or a CMDB. This avoids the need to manually update a static inventory file in dynamic environments."
+  },
+  {
+    "n": 27,
+    "title": "Error Handling in Playbooks",
+    "math": "Exception handling",
+    "note": "This section introduces `block`, `rescue`, and `always` as a mechanism for handling errors within a play, similar to try/catch/finally in programming. This allows you to define a set of 'rescue' tasks that run if a task in the 'block' section fails."
+  },
+  {
+    "n": 28,
+    "title": "Introduction to Ansible Tower / AWX",
+    "math": "Web-based user interfaces",
+    "note": "This lesson provides a high-level overview of Ansible Tower (the commercial product) and its open-source upstream project, AWX. It explains how these tools provide a web-based UI for Ansible, adding features like role-based access control (RBAC), job scheduling, graphical inventory management, and a REST API."
+  }
+]

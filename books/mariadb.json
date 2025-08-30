@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to MariaDB",
+    "math": "Relational databases",
+    "note": "This section introduces MariaDB as a community-developed, commercially supported fork of the MySQL relational database management system (RDBMS). It explains its origins, its commitment to being open source, and its high level of compatibility with MySQL."
+  },
+  {
+    "n": 2,
+    "title": "MariaDB vs. MySQL",
+    "math": "Comparative analysis",
+    "note": "This lesson details the key differences between MariaDB and MySQL. It covers aspects like performance improvements in MariaDB, its different storage engines (like Aria), and its more open development model. For most use cases, it is a drop-in replacement for MySQL."
+  },
+  {
+    "n": 3,
+    "title": "Installing and Connecting to MariaDB",
+    "math": "Software installation",
+    "note": "This section provides a practical guide to installing the MariaDB server on a Linux system. It also demonstrates how to connect to the server from the command line using the `mariadb` client and how to perform the initial secure installation."
+  },
+  {
+    "n": 4,
+    "title": "Data Definition Language (DDL): `CREATE TABLE`",
+    "math": "Schema design",
+    "note": "This lesson covers the SQL DDL commands used to define the database structure. It demonstrates how to create a new database and how to use the `CREATE TABLE` statement to define a table, its columns, and the data types for each column (e.g., `INT`, `VARCHAR`, `DATETIME`)."
+  },
+  {
+    "n": 5,
+    "title": "DDL: Constraints",
+    "math": "Data integrity",
+    "note": "This section explains how to enforce data integrity using constraints. It covers defining a `PRIMARY KEY` for unique row identification, a `FOREIGN KEY` to enforce relationships between tables, and other constraints like `UNIQUE`, `NOT NULL`, and `CHECK`."
+  },
+  {
+    "n": 6,
+    "title": "Data Manipulation Language (DML): `INSERT`, `UPDATE`, `DELETE`",
+    "math": "CRUD operations",
+    "note": "This lesson covers the DML commands for adding, modifying, and removing data. It demonstrates the syntax for `INSERT` (to add new rows), `UPDATE` (to change existing rows, used with a `WHERE` clause), and `DELETE` (to remove rows, used with a `WHERE` clause)."
+  },
+  {
+    "n": 7,
+    "title": "Querying Data: The `SELECT` Statement",
+    "math": "Data retrieval",
+    "note": "This section introduces the foundation of data retrieval in SQL. It covers the `SELECT` statement for specifying the columns to be returned, the `FROM` clause for specifying the table, and the `WHERE` clause for filtering the rows based on specific conditions."
+  },
+  {
+    "n": 8,
+    "title": "Filtering, Sorting, and Limiting Results",
+    "math": "Result set manipulation",
+    "note": "This lesson explains how to control the output of a query. It covers comparison and logical operators in the `WHERE` clause, the `ORDER BY` clause for sorting the results, and the `LIMIT` clause for restricting the number of rows returned."
+  },
+  {
+    "n": 9,
+    "title": "Joining Tables",
+    "math": "Relational joins",
+    "note": "This section explains how to combine data from multiple tables in a single query. It details the syntax for `INNER JOIN` (to get matching rows from both tables) and `LEFT JOIN` (to get all rows from the left table and any matching rows from the right table)."
+  },
+  {
+    "n": 10,
+    "title": "Aggregation with `GROUP BY` and `HAVING`",
+    "math": "Data aggregation",
+    "note": "This lesson covers how to perform calculations on groups of rows. It introduces aggregate functions like `COUNT()`, `SUM()`, and `AVG()`. It then explains how the `GROUP BY` clause is used to group rows and how the `HAVING` clause is used to filter those groups."
+  },
+  {
+    "n": 11,
+    "title": "Transactions",
+    "math": "ACID properties",
+    "note": "This lesson introduces the concept of a transaction as a single logical unit of work. It explains how to use `START TRANSACTION`, `COMMIT` (to make changes permanent), and `ROLLBACK` (to undo changes), which ensures data integrity through ACID properties when using a transactional storage engine like InnoDB."
+  },
+  {
+    "n": 12,
+    "title": "Storage Engines: InnoDB and Aria",
+    "math": "Database storage engines",
+    "note": "This section explains that MariaDB supports multiple storage engines, which handle the underlying storage and retrieval of data. It contrasts the default InnoDB engine (which is transactional and best for general use) with Aria, MariaDB's modern, crash-safe replacement for the older MyISAM engine."
+  },
+  {
+    "n": 13,
+    "title": "Advanced SQL: Common Table Expressions (CTEs)",
+    "math": "Common Table Expressions",
+    "note": "This lesson introduces CTEs (using the `WITH` clause) as a feature to simplify complex queries. A CTE allows you to define a temporary, named result set that you can then reference within a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, improving readability."
+  },
+  {
+    "n": 14,
+    "title": "Advanced SQL: Window Functions",
+    "math": "Window functions",
+    "note": "This section covers Window Functions, an advanced SQL feature that performs a calculation across a set of table rows that are somehow related to the current row. This is in contrast to an aggregate function, which returns a single value for a group of rows. Examples include `ROW_NUMBER()`, `RANK()`, and `LEAD()`."
+  },
+  {
+    "n": 15,
+    "title": "Working with JSON",
+    "math": "JSON functions",
+    "note": "This lesson explains MariaDB's support for the JSON data type. It demonstrates how to use built-in functions like `JSON_OBJECT`, `JSON_ARRAY`, and `JSON_EXTRACT` to store, create, and query semi-structured JSON data directly within the relational database."
+  },
+  {
+    "n": 16,
+    "title": "Stored Procedures",
+    "math": "Database procedures",
+    "note": "This lesson defines a Stored Procedure as a set of SQL statements that can be stored in the database and executed as a single unit. It demonstrates how to create and call a simple stored procedure, which can encapsulate complex business logic on the database server."
+  },
+  {
+    "n": 17,
+    "title": "User Account Management",
+    "math": "Access control",
+    "note": "This section for administrators covers how to manage security. It demonstrates the `CREATE USER` command to create new user accounts and the `GRANT` and `REVOKE` commands to assign specific privileges (like `SELECT`, `INSERT`, `UPDATE`) on specific databases or tables to those users."
+  },
+  {
+    "n": 18,
+    "title": "Backup and Recovery with `mariadb-dump`",
+    "math": "Database backups",
+    "note": "This lesson covers the essential administrative task of backing up a database. It focuses on the `mariadb-dump` utility, which creates a logical backup of the database by generating a file containing the SQL statements needed to recreate it."
+  },
+  {
+    "n": 19,
+    "title": "Introduction to Replication",
+    "math": "Data replication",
+    "note": "This section provides a high-level overview of replication for achieving high availability and read scaling. It explains the basic master-slave replication model, where one server (the master) logs all its changes, and other servers (slaves) read this log to apply the same changes."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Galera Cluster",
+    "math": "Database clustering",
+    "note": "This final lesson introduces MariaDB Galera Cluster as a solution for high-availability synchronous replication. It explains that in a Galera cluster, all nodes are masters (multi-master), meaning you can write to any node, and the changes are synchronously replicated to all other nodes in the cluster."
+  }
+]

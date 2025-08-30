@@ -1,0 +1,86 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Software Engineering",
+    "math": "Problem decomposition",
+    "note": "This section defines Software Engineering as a discipline. It explains the key differences between simple programming and a systematic engineering approach to software development, emphasizing the importance of reliability, scalability, and maintainability for building complex systems."
+  },
+  {
+    "n": 2,
+    "title": "The Software Development Life Cycle (SDLC)",
+    "math": "Process flow models",
+    "note": "An introduction to the Software Development Life Cycle (SDLC), a foundational framework for software development. This lesson provides an overview of the core phases: Requirements gathering, Design, Implementation (Coding), Testing, Deployment, and Maintenance. The context is a structured approach to building software."
+  },
+  {
+    "n": 3,
+    "title": "Classic SDLC Models",
+    "math": "Linear vs. iterative models",
+    "note": "This section explores traditional, plan-driven SDLC models. It details the linear-sequential Waterfall model, the V-Model (which emphasizes testing), the Incremental model (delivering parts of the system in increments), and the risk-driven Spiral model. The pros and cons of each approach are discussed."
+  },
+  {
+    "n": 4,
+    "title": "Agile Methodologies: Scrum and Kanban",
+    "math": "Empirical process control",
+    "note": "This lesson introduces the principles of the Agile Manifesto. It provides a detailed explanation of Scrum, including its roles (Product Owner, Scrum Master, Development Team), events (Sprint, Daily Stand-up), and artifacts (Product Backlog, Sprint Backlog). It also introduces Kanban as a visual method for managing workflow."
+  },
+  {
+    "n": 5,
+    "title": "Requirements Engineering",
+    "math": "Formal logic",
+    "note": "Learn how to gather and manage software requirements. This section distinguishes between Functional (what the system does) and Non-functional (how the system performs) requirements. Techniques for eliciting requirements, such as interviews, surveys, and user stories, are explained."
+  },
+  {
+    "n": 6,
+    "title": "Core Software Design Principles",
+    "math": "Object-oriented design principles",
+    "note": "This lesson covers fundamental principles for writing clean, maintainable code. It explains the SOLID principles (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion), as well as DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid)."
+  },
+  {
+    "n": 7,
+    "title": "Software Architecture Styles",
+    "math": "Graph theory, network topology",
+    "note": "An introduction to high-level software structures. This section compares and contrasts major architectural styles: the traditional, tightly-coupled Monolithic architecture, the independently deployable Microservices architecture, and the distributed Service-Oriented Architecture (SOA)."
+  },
+  {
+    "n": 8,
+    "title": "Introduction to UML Diagrams",
+    "math": "Visual modeling languages",
+    "note": "This lesson introduces the Unified Modeling Language (UML) as a standard way to visualize a system's design. It provides an overview of three common diagram types: Use Case diagrams (for user interactions), Class diagrams (for static structure), and Sequence diagrams (for object interactions over time)."
+  },
+  {
+    "n": 9,
+    "title": "Version Control with Git",
+    "math": "Directed acyclic graphs (DAGs)",
+    "note": "This section explains the critical role of version control systems in modern software development. It introduces Git as the industry standard and covers essential commands for individual use, including `git init`, `git add`, `git commit`, and viewing history with `git log`. The concept of a local repository is the focus."
+  },
+  {
+    "n": 10,
+    "title": "Foundations of Software Testing",
+    "math": "Combinatorics, equivalence partitioning",
+    "note": "An introduction to the principles of software testing. This lesson explains the different levels of testing: Unit Testing (code-level), Integration Testing (component interaction), System Testing (end-to-end), and User Acceptance Testing (UAT). It also defines the difference between Black-Box and White-Box testing techniques."
+  },
+  {
+    "n": 11,
+    "title": "Continuous Integration & Deployment (CI/CD)",
+    "math": "Automation and pipeline logic",
+    "note": "This lesson introduces the concept of CI/CD as a cornerstone of modern DevOps practices. It explains how Continuous Integration (CI) involves automatically building and testing code changes, and how Continuous Deployment (CD) automates the release of validated code to a production environment. The goal of a CI/CD pipeline is explained."
+  },
+  {
+    "n": 12,
+    "title": "Software Project Management Basics",
+    "math": "Estimation theory, probability",
+    "note": "This section covers fundamental concepts in managing software projects. It introduces techniques for effort estimation, such as Story Points used in Agile teams. It also provides an overview of project scheduling, resource allocation, and basic risk management (identifying and mitigating potential problems)."
+  },
+  {
+    "n": 13,
+    "title": "Software Quality Assurance (SQA)",
+    "math": "Statistical analysis",
+    "note": "This lesson defines Software Quality Assurance (SQA) as a process-oriented activity. It explains how SQA ensures quality throughout the SDLC using methods like establishing coding standards, conducting formal code reviews (peer reviews), and using static analysis tools to automatically detect potential issues in the source code."
+  },
+  {
+    "n": 14,
+    "title": "The Role of Software Maintenance",
+    "math": "System lifecycle analysis",
+    "note": "This section explores the post-deployment phase of the SDLC. It defines the four categories of software maintenance: Corrective (fixing bugs), Adaptive (modifying the system to cope with a changed environment), Perfective (implementing new user requirements), and Preventive (making software more maintainable)."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Seaborn",
+    "math": "Statistical data visualization",
+    "note": "This section introduces Seaborn as a Python data visualization library based on Matplotlib. It explains that Seaborn provides a high-level interface for drawing attractive and informative statistical graphics. Its tight integration with Pandas DataFrames is highlighted as a key feature."
+  },
+  {
+    "n": 2,
+    "title": "Seaborn vs. Matplotlib",
+    "math": "Comparative analysis",
+    "note": "This lesson clarifies the relationship between Seaborn and Matplotlib. Seaborn is built on top of Matplotlib and is designed to make creating common types of statistical plots easier and more aesthetically pleasing. Matplotlib is more low-level and provides more control, while Seaborn is higher-level and more declarative."
+  },
+  {
+    "n": 3,
+    "title": "Figure-Level vs. Axes-Level Functions",
+    "math": "API design",
+    "note": "This section explains the two types of functions in the Seaborn API. Axes-level functions (like `scatterplot` or `boxplot`) plot data onto a single Matplotlib axes. Figure-level functions (like `relplot` or `catplot`) create a figure with one or more subplots and manage the figure creation for you."
+  },
+  {
+    "n": 4,
+    "title": "Visualizing Statistical Relationships with `relplot()`",
+    "math": "Relational plots",
+    "note": "This lesson introduces the `relplot()` figure-level function, which is used to visualize the relationship between two numerical variables. It demonstrates how to create scatter plots by default and how to switch to line plots by setting `kind='line'`."
+  },
+  {
+    "n": 5,
+    "title": "Using Semantic Variables: `hue`, `size`, and `style`",
+    "math": "Multivariate analysis",
+    "note": "This section demonstrates a powerful feature of Seaborn. It shows how to map additional variables in your data to visual properties (semantics) of the plot. For example, you can use the `hue` parameter to color points based on a third categorical variable, adding another dimension to your visualization."
+  },
+  {
+    "n": 6,
+    "title": "Visualizing Distributions with `displot()`",
+    "math": "Data distributions",
+    "note": "This lesson covers the `displot()` figure-level function, which is used for visualizing the distribution of a single variable or the joint distribution of two variables. It can create several types of plots, with the histogram being the default."
+  },
+  {
+    "n": 7,
+    "title": "Distribution Plots: Histograms and KDEs",
+    "math": "Histograms, Kernel Density Estimation (KDE)",
+    "note": "This section details two common ways to visualize a distribution. A histogram (`histplot`) shows the frequency of data points in discrete bins. A Kernel Density Estimate (`kdeplot`) creates a smooth curve to estimate the probability density function of the variable."
+  },
+  {
+    "n": 8,
+    "title": "Visualizing Categorical Data with `catplot()`",
+    "math": "Categorical data visualization",
+    "note": "This lesson introduces the `catplot()` figure-level function, which is the main entry point for visualizing the relationship between a numerical and one or more categorical variables. It can create many different types of plots, which are grouped into three families."
+  },
+  {
+    "n": 9,
+    "title": "Categorical Plots: Scatter Plots (`stripplot`, `swarmplot`)",
+    "math": "Categorical scatter plots",
+    "note": "This section covers the first family of categorical plots, which show every observation. A `stripplot` shows a simple scatter plot of the data, while a `swarmplot` adjusts the points along the categorical axis to avoid overlap, giving a better sense of the distribution."
+  },
+  {
+    "n": 10,
+    "title": "Categorical Plots: Distribution Plots (`boxplot`, `violinplot`)",
+    "math": "Box plots, violin plots",
+    "note": "This lesson covers plots that show an abstract representation of the distribution. A `boxplot` shows the five-number summary of the data. A `violinplot` combines a box plot with a KDE, providing a richer description of the distribution's shape."
+  },
+  {
+    "n": 11,
+    "title": "Categorical Plots: Estimate Plots (`barplot`, `pointplot`)",
+    "math": "Statistical estimation",
+    "note": "This section covers plots that show a statistical estimate (like the mean) for each category, along with a confidence interval. A `barplot` shows the estimate as the height of a bar, while a `pointplot` shows just the point and confidence interval, making it easier to compare slopes between categories."
+  },
+  {
+    "n": 12,
+    "title": "Visualizing Linear Relationships with `lmplot()`",
+    "math": "Linear regression models",
+    "note": "This lesson introduces `lmplot()`, a figure-level function that combines a scatter plot with a linear regression model fit. It automatically fits and plots a regression line along with a confidence interval, making it easy to visualize the relationship between two variables."
+  },
+  {
+    "n": 13,
+    "title": "Visualizing Matrix Data with `heatmap()`",
+    "math": "Heatmaps",
+    "note": "This section covers the `heatmap()` function, which is used to plot rectangular data as a color-encoded matrix. This is extremely useful for visualizing correlation matrices or confusion matrices, where the color provides a quick visual cue to the value in each cell."
+  },
+  {
+    "n": 14,
+    "title": "Hierarchical Clustering with `clustermap()`",
+    "math": "Hierarchical clustering",
+    "note": "This lesson introduces the `clustermap()` function, which combines a heatmap with hierarchical clustering. It reorders the rows and columns of the matrix so that similar rows and columns are placed near each other, revealing underlying structures in the data. Dendrograms are drawn to show the clustering."
+  },
+  {
+    "n": 15,
+    "title": "Creating Multi-Plot Grids with `FacetGrid`",
+    "math": "Faceted plots",
+    "note": "This section explains the underlying mechanism for figure-level functions like `relplot` and `catplot`. They use the `FacetGrid` object, which allows you to create a grid of subplots where each subplot shows a different subset of the data based on the values of categorical variables."
+  },
+  {
+    "n": 16,
+    "title": "Customizing Plot Aesthetics",
+    "math": "Plot styling",
+    "note": "This lesson covers how to change the overall look and feel of your plots. It introduces the `sns.set_theme()` and `sns.set_style()` functions for changing the plot style (e.g., 'darkgrid', 'whitegrid') and context (e.g., 'notebook', 'talk')."
+  },
+  {
+    "n": 17,
+    "title": "Working with Color Palettes",
+    "math": "Color theory",
+    "note": "This section explains how to control the colors used in your plots. It covers the different types of color palettes available in Seaborn (qualitative, sequential, diverging) and how to set a custom color palette using `sns.set_palette()`."
+  },
+  {
+    "n": 18,
+    "title": "Combining Seaborn and Matplotlib",
+    "math": "Library integration",
+    "note": "This lesson demonstrates how to further customize a Seaborn plot using Matplotlib. Since Seaborn plots are drawn on Matplotlib axes, you can get the axes object and use Matplotlib functions to add titles, change labels, or add custom annotations, giving you full control over the final figure."
+  },
+  {
+    "n": 19,
+    "title": "A Practical Example: The 'Tips' Dataset",
+    "math": "Exploratory Data Analysis (EDA)",
+    "note": "This lesson provides a practical walkthrough of using Seaborn for exploratory data analysis. It uses the built-in 'tips' dataset to demonstrate how to use a variety of plots (like `scatterplot`, `boxplot`, and `histplot`) to explore relationships and distributions within the data."
+  },
+  {
+    "n": 20,
+    "title": "A Practical Example: The 'Titanic' Dataset",
+    "math": "Exploratory Data Analysis (EDA)",
+    "note": "This final lesson provides another comprehensive example. It uses the famous 'titanic' dataset to show how to use categorical plots (`countplot`, `catplot`) and relational plots (`lmplot`) to investigate the factors that influenced a passenger's survival."
+  }
+]

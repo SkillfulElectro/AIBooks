@@ -1,0 +1,152 @@
+[
+  {
+    "n": 1,
+    "title": "The Biological Inspiration: The Neuron",
+    "math": "Neuroscience concepts",
+    "note": "This section explores the biological neuron as the inspiration for artificial neural networks. It covers the basic components of a biological neuron—dendrites (inputs), the soma (processor), and the axon (output)—and explains the process of synaptic transmission and neural firing."
+  },
+  {
+    "n": 2,
+    "title": "The First Artificial Neuron: The McCulloch-Pitts Model",
+    "math": "Threshold logic",
+    "note": "This lesson introduces the first mathematical model of a neuron, created by McCulloch and Pitts in 1943. It explains this model as a simple computational unit that takes binary inputs, sums them, and fires a binary output if the sum exceeds a certain threshold. Its ability to represent basic logical functions (AND, OR, NOT) is demonstrated."
+  },
+  {
+    "n": 3,
+    "title": "The Perceptron: A Trainable Neuron",
+    "math": "Linear algebra (dot product)",
+    "note": "This section introduces the Perceptron, developed by Frank Rosenblatt. It advances on the McCulloch-Pitts model by introducing the concept of weights for each input, allowing the neuron to 'learn'. The process of taking a weighted sum of inputs and applying a step function is detailed."
+  },
+  {
+    "n": 4,
+    "title": "The Perceptron Learning Rule",
+    "math": "Iterative algorithms",
+    "note": "This lesson explains how a Perceptron learns from data. It details the Perceptron learning algorithm, an iterative process where the network's weights are adjusted after each misclassified example, nudging the decision boundary closer to a correct separation of the data."
+  },
+  {
+    "n": 5,
+    "title": "The Limits of the Perceptron: The XOR Problem",
+    "math": "Linear separability",
+    "note": "This section explains the fundamental limitation of a single Perceptron. It demonstrates that a Perceptron can only solve problems that are linearly separable. The classic XOR problem is used as an example of a simple function that a single Perceptron cannot learn, which led to the first 'AI winter'."
+  },
+  {
+    "n": 6,
+    "title": "Overcoming Limits: The Multilayer Perceptron (MLP)",
+    "math": "Network layers",
+    "note": "This lesson introduces the Multilayer Perceptron (MLP) as the solution to the Perceptron's limitations. It explains the architecture of an MLP, consisting of an input layer, one or more hidden layers, and an output layer. The hidden layers are what allow an MLP to learn non-linear decision boundaries."
+  },
+  {
+    "n": 7,
+    "title": "Activation Functions: Introducing Non-Linearity",
+    "math": "Non-linear functions",
+    "note": "This section explains the crucial role of activation functions. It details why applying a non-linear activation function after the weighted sum in each neuron is essential for allowing the network to learn complex patterns. Without them, an MLP would be equivalent to a single-layer network."
+  },
+  {
+    "n": 8,
+    "title": "Classic Activation Functions: Sigmoid and Tanh",
+    "math": "Sigmoid function, hyperbolic tangent",
+    "note": "This lesson covers the traditional activation functions. It explains the Sigmoid function, which squashes values to a range between 0 and 1, and the Hyperbolic Tangent (tanh) function, which squashes values to a range between -1 and 1. Their properties and historical use are discussed."
+  },
+  {
+    "n": 9,
+    "title": "Modern Activation Function: ReLU",
+    "math": "Rectified Linear Unit (ReLU)",
+    "note": "This section introduces the Rectified Linear Unit (ReLU) as the most common activation function in modern deep learning. It is defined as f(x) = max(0, x). The lesson explains its advantages, such as computational efficiency and mitigating the vanishing gradient problem, as well as its variants like Leaky ReLU."
+  },
+  {
+    "n": 10,
+    "title": "Feedforward Propagation",
+    "math": "Matrix multiplication",
+    "note": "This lesson details the process of feedforward propagation, which is how a neural network makes a prediction. It provides a step-by-step mathematical explanation of how input data is passed through the network, layer by layer, involving matrix multiplications (for the weighted sums) and the application of activation functions, until an output is produced."
+  },
+  {
+    "n": 11,
+    "title": "The Goal of Training: Loss Functions",
+    "math": "Optimization",
+    "note": "This section explains that training a neural network is an optimization problem. It introduces the concept of a loss function (or cost function), which measures how far the network's predictions are from the actual target values. The goal of training is to minimize this function."
+  },
+  {
+    "n": 12,
+    "title": "Loss Functions for Regression and Classification",
+    "math": "Mean Squared Error (MSE), Cross-Entropy",
+    "note": "This lesson details specific loss functions for different tasks. It covers Mean Squared Error (MSE) for regression problems (predicting a continuous value) and Cross-Entropy loss for classification problems (predicting a probability distribution across classes)."
+  },
+  {
+    "n": 13,
+    "title": "Optimization: Gradient Descent",
+    "math": "Calculus (gradients and derivatives)",
+    "note": "This section introduces Gradient Descent, the fundamental algorithm used to train neural networks. It explains the concept of a 'gradient' as the direction of steepest ascent of the loss function. Gradient Descent works by iteratively taking small steps in the opposite direction of the gradient to find a minimum of the loss function."
+  },
+  {
+    "n": 14,
+    "title": "The Backpropagation Algorithm",
+    "math": "Calculus (the chain rule)",
+    "note": "This lesson explains Backpropagation, the cornerstone algorithm for training MLPs. It is an efficient method for computing the gradients of the loss function with respect to every weight in the network. The lesson explains how the chain rule of calculus is used to propagate the error backward from the output layer to the input layer."
+  },
+  {
+    "n": 15,
+    "title": "Stochastic and Mini-Batch Gradient Descent",
+    "math": "Stochastic approximation",
+    "note": "This section covers practical variations of Gradient Descent. It explains that calculating the gradient over the entire dataset (Batch GD) is slow. It then details Stochastic Gradient Descent (SGD), which updates weights after every single example, and Mini-Batch Gradient Descent, which is a compromise that updates weights after a small batch of examples."
+  },
+  {
+    "n": 16,
+    "title": "The Problem of Overfitting",
+    "math": "Bias-variance tradeoff",
+    "note": "This lesson explains overfitting, a common problem where a model learns the training data too well, including its noise and random fluctuations, and thus fails to generalize to new, unseen data. The concept of a separate validation set to detect overfitting is introduced."
+  },
+  {
+    "n": 17,
+    "title": "Regularization Technique: L1 and L2",
+    "math": "Regularization (in mathematics)",
+    "note": "This section introduces regularization as a technique to combat overfitting. It explains L1 and L2 regularization, which work by adding a penalty term to the loss function based on the magnitude of the network's weights. This discourages the model from learning overly complex patterns."
+  },
+  {
+    "n": 18,
+    "title": "Regularization Technique: Dropout",
+    "math": "Ensemble learning",
+    "note": "This lesson covers Dropout, a powerful and widely used regularization technique. It explains how, during training, Dropout randomly sets a fraction of neuron activations to zero at each update step. This forces the network to learn more robust features and prevents neurons from co-adapting too much."
+  },
+  {
+    "n": 19,
+    "title": "Advanced Optimizers: Adam",
+    "math": "Adaptive learning rates",
+    "note": "This section introduces the Adam (Adaptive Moment Estimation) optimizer as a popular and effective alternative to standard SGD. It provides a high-level explanation of how Adam adapts the learning rate for each weight in the network, combining the advantages of other optimizers like Momentum and RMSprop."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Convolutional Neural Networks (CNNs)",
+    "math": "Convolution operation",
+    "note": "This lesson introduces CNNs, a specialized type of deep neural network designed for processing grid-like data, such as images. It explains the core idea of using small filters (kernels) to detect features like edges, corners, and textures, preserving the spatial relationship between pixels."
+  },
+  {
+    "n": 21,
+    "title": "CNNs: The Convolutional and Pooling Layers",
+    "math": "Feature mapping and down-sampling",
+    "note": "This section details the key layers of a CNN. It explains how the Convolutional layer applies filters to an input to create a feature map. It then covers the Pooling (or sub-sampling) layer, which reduces the spatial dimensions of the feature map, making the network more computationally efficient and robust to variations in feature location."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Recurrent Neural Networks (RNNs)",
+    "math": "Sequence modeling",
+    "note": "This lesson introduces RNNs, a class of neural networks designed for sequential data like text or time series. It explains the core concept of a recurrent loop, where the network's output from the previous time step is fed as input to the current time step, giving the network a form of 'memory'."
+  },
+  {
+    "n": 23,
+    "title": "The Vanishing Gradient Problem in RNNs",
+    "math": "Gradient propagation",
+    "note": "This section explains a major challenge in training simple RNNs. The vanishing gradient problem occurs during backpropagation, where the gradients of the loss function can shrink exponentially as they are propagated back through time, making it difficult for the network to learn long-range dependencies."
+  },
+  {
+    "n": 24,
+    "title": "Long Short-Term Memory (LSTM) Networks",
+    "math": "Gating mechanisms",
+    "note": "This lesson introduces LSTMs as an advanced type of RNN that solves the vanishing gradient problem. It explains the architecture of an LSTM cell, which includes a 'cell state' and three 'gates' (input, forget, and output) that regulate the flow of information, allowing the network to remember information for long periods."
+  },
+  {
+    "n": 25,
+    "title": "Building a Neural Network with Keras",
+    "math": "API abstraction",
+    "note": "This final lesson provides a practical guide to building an ANN using the Keras high-level API for TensorFlow. It walks through the process: defining a model architecture using `Sequential`, adding layers with `Dense`, compiling the model with an optimizer and loss function, training it with `.fit()`, and evaluating its performance."
+  }
+]

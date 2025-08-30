@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Data, Databases, and DBMS",
+    "math": "Data models",
+    "note": "This section provides the fundamental definitions. It explains the difference between raw data, a database (an organized collection of data), and a Database Management System (DBMS), which is the software used to create, manage, and interact with a database. The limitations of traditional file-based systems are also discussed."
+  },
+  {
+    "n": 2,
+    "title": "Advantages of a DBMS",
+    "math": "System benefits",
+    "note": "This lesson details the key advantages of using a DBMS over a file-based system. These include controlling data redundancy, enforcing data integrity, restricting unauthorized access (security), providing data independence, and enabling concurrent access by multiple users."
+  },
+  {
+    "n": 3,
+    "title": "Levels of Data Abstraction",
+    "math": "Abstraction layers",
+    "note": "This section explains the three levels of data abstraction in a DBMS. The Physical Level (lowest) describes how data is actually stored. The Logical Level describes what data is stored and the relationships between data. The View Level (highest) describes only a part of the entire database for a particular user group."
+  },
+  {
+    "n": 4,
+    "title": "The Relational Model",
+    "math": "Set theory, relational model",
+    "note": "This lesson introduces the Relational Model, the most widely used data model for DBMS. It explains the core concepts: a 'Relation' is a table, a 'Tuple' is a row or record, and an 'Attribute' is a column or field. The properties of a relation (e.g., no duplicate tuples, order of tuples is immaterial) are defined."
+  },
+  {
+    "n": 5,
+    "title": "Relational Keys",
+    "math": "Key constraints",
+    "note": "This section covers the different types of keys used to identify and relate data in the relational model. It defines a Superkey, a Candidate Key, a Primary Key (a chosen candidate key), and a Foreign Key (a key used to link two tables together)."
+  },
+  {
+    "n": 6,
+    "title": "Relational Integrity Constraints",
+    "math": "Data integrity",
+    "note": "This lesson explains the rules that maintain the accuracy and consistency of data. It covers Entity Integrity (which states that no primary key value can be null), Referential Integrity (which ensures that a foreign key value must match a primary key value in another table or be null), and Domain Constraints (which restrict values to a given set)."
+  },
+  {
+    "n": 7,
+    "title": "Introduction to Relational Algebra",
+    "math": "Relational algebra",
+    "note": "This section introduces Relational Algebra as a formal, procedural query language. Each operation in relational algebra takes one or more relations as input and produces a new relation as output. It forms the theoretical foundation for the SQL language."
+  },
+  {
+    "n": 8,
+    "title": "Fundamental Relational Algebra Operations",
+    "math": "SELECT, PROJECT, UNION, SET DIFFERENCE, CARTESIAN PRODUCT, RENAME",
+    "note": "This lesson details the six fundamental operations of relational algebra. It explains SELECT (σ) for row filtering, PROJECT (π) for column selection, UNION (∪), SET DIFFERENCE (-), CARTESIAN PRODUCT (×), and RENAME (ρ)."
+  },
+  {
+    "n": 9,
+    "title": "Introduction to SQL",
+    "math": "Structured Query Language (SQL)",
+    "note": "This section introduces SQL as the standard, declarative language for interacting with relational databases. It explains that SQL is composed of several sub-languages, including the Data Definition Language (DDL), Data Manipulation Language (DML), and Data Query Language (DQL)."
+  },
+  {
+    "n": 10,
+    "title": "SQL: Data Definition Language (DDL)",
+    "math": "Schema definition",
+    "note": "This lesson covers the DDL part of SQL, which is used to define the database schema. It demonstrates the `CREATE TABLE`, `ALTER TABLE`, and `DROP TABLE` commands for creating, modifying, and deleting tables and their columns."
+  },
+  {
+    "n": 11,
+    "title": "SQL: Data Manipulation Language (DML)",
+    "math": "CRUD operations",
+    "note": "This section focuses on the DML part of SQL, used for managing data within tables. It provides examples of the `INSERT`, `UPDATE`, and `DELETE` commands for adding, modifying, and removing data from a database."
+  },
+  {
+    "n": 12,
+    "title": "Database Design: The Entity-Relationship (ER) Model",
+    "math": "Entity-Relationship modeling",
+    "note": "This lesson introduces the ER model as a high-level conceptual data model used for database design. It explains the core components: Entities (real-world objects), Attributes (properties of entities), and Relationships (associations among entities)."
+  },
+  {
+    "n": 13,
+    "title": "Mapping ER Diagrams to Relational Tables",
+    "math": "Schema mapping",
+    "note": "This section provides a practical guide on how to convert a conceptual ER diagram into a set of relational tables. It covers the rules for mapping entities, attributes, and different types of relationships (one-to-one, one-to-many, many-to-many) into tables with primary and foreign keys."
+  },
+  {
+    "n": 14,
+    "title": "Functional Dependencies",
+    "math": "Functional dependencies",
+    "note": "This lesson introduces the concept of a functional dependency as a constraint between two sets of attributes in a relation. A functional dependency X -> Y means that the value of attribute set X uniquely determines the value of attribute set Y. This is the core concept for understanding normalization."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to Normalization",
+    "math": "Database normalization",
+    "note": "This section explains Normalization as the process of organizing the columns and tables of a relational database to minimize data redundancy. It explains how redundancy can lead to logical inconsistencies called insertion, update, and deletion anomalies."
+  },
+  {
+    "n": 16,
+    "title": "First, Second, and Third Normal Forms (1NF, 2NF, 3NF)",
+    "math": "Normalization forms",
+    "note": "This lesson details the most common normal forms. 1NF requires that all attribute values be atomic. 2NF requires that a relation be in 1NF and that all non-key attributes be fully functionally dependent on the primary key. 3NF builds on 2NF by also removing transitive dependencies."
+  },
+  {
+    "n": 17,
+    "title": "Transaction Management and ACID Properties",
+    "math": "ACID properties",
+    "note": "This section defines a transaction as a single logical unit of work which accesses and possibly modifies the contents of a database. It introduces the four critical ACID properties that guarantee transaction reliability: Atomicity, Consistency, Isolation, and Durability."
+  },
+  {
+    "n": 18,
+    "title": "Concurrency Control",
+    "math": "Concurrency control",
+    "note": "This lesson explains the challenges that arise when multiple transactions execute concurrently, such as lost updates or inconsistent reads. It introduces Concurrency Control as the process of managing simultaneous operations on a database without them interfering with one another."
+  },
+  {
+    "n": 19,
+    "title": "Lock-Based Protocols",
+    "math": "Locking protocols",
+    "note": "This section covers locking as a common mechanism for concurrency control. It explains how a transaction must acquire a lock on a data item before performing an operation. It discusses different lock types (shared and exclusive) and the Two-Phase Locking (2PL) protocol to ensure serializability."
+  },
+  {
+    "n": 20,
+    "title": "Database Security",
+    "math": "Database security",
+    "note": "This final lesson provides an overview of database security. It covers the different types of security, including legal and ethical issues, policy matters, and physical controls. It focuses on Discretionary Access Control and how the `GRANT` and `REVOKE` SQL commands are used to manage user privileges."
+  }
+]

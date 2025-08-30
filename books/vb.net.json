@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is VB.NET?",
+    "math": "Object-oriented programming languages",
+    "note": "This section introduces Visual Basic .NET (VB.NET) as a multi-paradigm, object-oriented programming language, implemented on the .NET Framework. It is the successor to the classic Visual Basic (VB6) and is designed to be a modern, powerful language for building .NET applications."
+  },
+  {
+    "n": 2,
+    "title": "The .NET Framework and Visual Studio",
+    "math": "Integrated Development Environments (IDEs)",
+    "note": "This lesson explains that VB.NET is part of the .NET ecosystem. It also introduces Visual Studio as the primary Integrated Development Environment (IDE) for VB.NET development, providing a powerful editor, debugger, and GUI designer."
+  },
+  {
+    "n": 3,
+    "title": "Creating a 'Hello, World!' Console Application",
+    "math": "Application creation",
+    "note": "This section provides a practical guide to creating a new project in Visual Studio. It walks through the steps of creating a new Console Application project, writing the `Console.WriteLine(\"Hello, World!\")` code, and running the program."
+  },
+  {
+    "n": 4,
+    "title": "Variables and Data Types",
+    "math": "Variable declaration",
+    "note": "This lesson covers the fundamentals of declaring variables in VB.NET using the `Dim` statement. It introduces the common data types, such as `Integer`, `Double` (for floating-point numbers), `String`, and `Boolean`."
+  },
+  {
+    "n": 5,
+    "title": "Control Flow: `If...Then...Else`",
+    "math": "Conditional logic",
+    "note": "This section explains how to control the flow of a program based on conditions. It demonstrates the syntax for the `If...Then...Else` statement for executing different blocks of code based on whether a condition is true or false."
+  },
+  {
+    "n": 6,
+    "title": "Control Flow: `Select Case`",
+    "math": "Switch statements",
+    "note": "This lesson introduces the `Select Case` statement as an alternative to a long series of `If...Then...ElseIf` statements. It is a clearer way to execute one of several blocks of code based on the value of a single expression."
+  },
+  {
+    "n": 7,
+    "title": "Control Flow: Loops",
+    "math": "Loop constructs",
+    "note": "This section covers the different types of loops in VB.NET. It explains the `For...Next` loop for iterating a specific number of times, and the `Do...Loop` for iterating while or until a condition is met."
+  },
+  {
+    "n": 8,
+    "title": "Data Structures: Arrays",
+    "math": "Array data structures",
+    "note": "This lesson introduces Arrays as a way to store a fixed-size, sequential collection of elements of the same type. It demonstrates how to declare an array, initialize it, and access its elements using an index."
+  },
+  {
+    "n": 9,
+    "title": "Procedures: `Sub` and `Function`",
+    "math": "Procedures and functions",
+    "note": "This section covers how to create reusable blocks of code. It contrasts a `Sub` procedure, which performs a task but does not return a value, with a `Function`, which performs a task and then returns a value to the calling code."
+  },
+  {
+    "n": 10,
+    "title": "Passing Parameters: `ByVal` and `ByRef`",
+    "math": "Parameter passing",
+    "note": "This lesson explains the two ways to pass arguments to procedures. `ByVal` (the default) passes a copy of the variable, so the original variable cannot be changed by the procedure. `ByRef` passes a reference to the original variable, allowing the procedure to modify it."
+  },
+  {
+    "n": 11,
+    "title": "Introduction to Object-Oriented Programming",
+    "math": "Object-Oriented Programming (OOP)",
+    "note": "This section introduces the core concepts of OOP. It explains that OOP is a programming model based on the concept of 'objects', which can contain data (in the form of fields or properties) and code (in the form of procedures or methods)."
+  },
+  {
+    "n": 12,
+    "title": "Classes and Objects",
+    "math": "Class and object instantiation",
+    "note": "This lesson demonstrates how to define a blueprint for an object using the `Class` keyword. It then shows how to create an instance of that class (an object) using the `New` keyword."
+  },
+  {
+    "n": 13,
+    "title": "Constructors and Properties",
+    "math": "Constructors and properties",
+    "note": "This section covers two key class features. A Constructor (`Sub New`) is a special method that is called when an object is created. Properties provide a flexible mechanism to read, write, or compute the value of a private field, using `Get` and `Set` accessors."
+  },
+  {
+    "n": 14,
+    "title": "Exception Handling with `Try...Catch`",
+    "math": "Exception handling",
+    "note": "This lesson introduces structured exception handling. It explains how to use a `Try...Catch...Finally` block to gracefully handle runtime errors. Code that might cause an error is placed in the `Try` block, and the code to handle the error is placed in the `Catch` block."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to Windows Forms",
+    "math": "GUI application development",
+    "note": "This section introduces Windows Forms as a GUI class library included as a part of the .NET Framework. It is a common way to create desktop applications for Windows using VB.NET."
+  },
+  {
+    "n": 16,
+    "title": "The Visual Studio Form Designer",
+    "math": "Visual GUI design",
+    "note": "This lesson demonstrates how to use the visual designer in Visual Studio. It shows how you can drag and drop controls (like buttons and text boxes) from the Toolbox onto a Form to visually design the user interface of your application."
+  },
+  {
+    "n": 17,
+    "title": "Common Controls: `Button`, `Label`, `TextBox`",
+    "math": "UI controls",
+    "note": "This section covers the three most fundamental controls in Windows Forms. It explains the `Button` control for user actions, the `Label` control for displaying static text, and the `TextBox` control for user text input."
+  },
+  {
+    "n": 18,
+    "title": "Handling Events",
+    "math": "Event handling",
+    "note": "This lesson explains the event-driven model of GUI programming. It demonstrates how to handle an event, such as a button's `Click` event. It shows how to double-click a control in the designer to automatically generate an event handler subroutine in the code-behind."
+  },
+  {
+    "n": 19,
+    "title": "File I/O with `System.IO`",
+    "math": "File input/output",
+    "note": "This section covers how to read from and write to files using classes from the `System.IO` namespace. It demonstrates how to write text to a file using `StreamWriter` and read text from a file using `StreamReader`."
+  },
+  {
+    "n": 20,
+    "title": "Database Connectivity with ADO.NET",
+    "math": "Database connectivity",
+    "note": "This final lesson provides a high-level overview of ADO.NET, the data access technology for the .NET Framework. It explains the core objects, such as the `Connection` object (to connect to a database) and the `Command` object (to execute a SQL query), for interacting with a database like SQL Server."
+  }
+]

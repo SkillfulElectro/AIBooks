@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to GUI Programming and PyQt",
+    "math": "Graphical User Interfaces (GUIs)",
+    "note": "This section explains the concept of a GUI as a user interface that includes graphical elements, such as windows, icons, and buttons. It then introduces Qt as a mature, cross-platform C++ framework for creating GUI applications, and PyQt as the popular Python binding for the Qt framework."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up Your PyQt Environment",
+    "math": "Software installation",
+    "note": "This lesson provides a practical guide to installing the PyQt library into a Python virtual environment using the `pip` package manager. It ensures that the development environment is set up correctly before writing any code."
+  },
+  {
+    "n": 3,
+    "title": "Creating Your First Window",
+    "math": "Application lifecycle",
+    "note": "This section provides a 'Hello, World!' example for PyQt. It demonstrates how to create a `QApplication` object, instantiate a `QWidget` to act as a top-level window, set its title and size, show it on the screen, and start the application's event loop to make it interactive."
+  },
+  {
+    "n": 4,
+    "title": "The Event Loop",
+    "math": "Event-driven programming",
+    "note": "This lesson explains the concept of the event loop, which is the core of any GUI application. The event loop continuously waits for user events (like mouse clicks or key presses), processes them, and dispatches them to the appropriate widgets in the application."
+  },
+  {
+    "n": 5,
+    "title": "Core Widgets: `QLabel` and `QPushButton`",
+    "math": "UI widgets",
+    "note": "This section introduces two of the most fundamental widgets. It demonstrates how to use `QLabel` to display text or images, and `QPushButton` to create a clickable button. The concept of adding widgets to a parent window is shown."
+  },
+  {
+    "n": 6,
+    "title": "Core Widgets: Text Input",
+    "math": "Text input widgets",
+    "note": "This lesson covers widgets for user text input. It explains the `QLineEdit` for single-line text entry (like a name or search box) and the `QTextEdit` for multi-line text editing (like a notepad)."
+  },
+  {
+    "n": 7,
+    "title": "Layout Management",
+    "math": "Layout managers",
+    "note": "This crucial lesson explains why you should never position widgets using fixed coordinates (absolute positioning). It introduces Layout Managers as the proper way to arrange widgets in a window, as they automatically handle resizing and ensure the UI looks good on different screen sizes."
+  },
+  {
+    "n": 8,
+    "title": "Horizontal, Vertical, and Grid Layouts",
+    "math": "Layout types",
+    "note": "This section demonstrates the three main layout managers. `QHBoxLayout` arranges widgets in a horizontal row, `QVBoxLayout` arranges them in a vertical column, and `QGridLayout` arranges them in a grid of rows and columns. Nesting layouts is also shown."
+  },
+  {
+    "n": 9,
+    "title": "Signals and Slots",
+    "math": "Observer pattern",
+    "note": "This lesson introduces Qt's core mechanism for communication between objects: Signals and Slots. A 'signal' is emitted by a widget when a particular event occurs (e.g., a button is clicked). A 'slot' is a function that is called in response to a signal. This decouples the objects from each other."
+  },
+  {
+    "n": 10,
+    "title": "Connecting a Signal to a Slot",
+    "math": "Event handling",
+    "note": "This lesson provides a practical example of the signals and slots mechanism. It demonstrates how to connect a `QPushButton`'s `clicked` signal to a custom Python method (the slot), so that the method is executed every time the button is clicked."
+  },
+  {
+    "n": 11,
+    "title": "Building a Main Window with `QMainWindow`",
+    "math": "Application main window",
+    "note": "This section introduces `QMainWindow`, which provides a framework for building a standard application window. Unlike a simple `QWidget`, `QMainWindow` has built-in support for a menu bar, toolbars, and a status bar."
+  },
+  {
+    "n": 12,
+    "title": "Creating Menus and Toolbars",
+    "math": "Menu and toolbar creation",
+    "note": "This lesson demonstrates how to create a menu bar and a toolbar for a `QMainWindow`. It covers creating `QAction` objects (which represent an action like 'Open' or 'Save') and then adding these actions to both the menu bar and the toolbar for user access."
+  },
+  {
+    "n": 13,
+    "title": "Using Built-in Dialogs",
+    "math": "Dialog boxes",
+    "note": "This section explains how to use Qt's pre-built dialog boxes for common tasks. It demonstrates how to use `QMessageBox` for showing information or warnings, and `QFileDialog` for prompting the user to select a file to open or save."
+  },
+  {
+    "n": 14,
+    "title": "Advanced Widgets: `QListWidget` and `QTableWidget`",
+    "math": "List and table widgets",
+    "note": "This lesson covers widgets for displaying collections of data. It introduces `QListWidget` for showing a simple list of items, and `QTableWidget` for displaying data in a spreadsheet-like table with rows and columns."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to Qt Designer",
+    "math": "Visual GUI design",
+    "note": "This section introduces Qt Designer, a graphical tool for designing user interfaces. It explains how you can drag and drop widgets onto a form to create a complex UI visually, which is often faster than writing the UI code manually."
+  },
+  {
+    "n": 16,
+    "title": "Loading `.ui` Files in Python",
+    "math": "UI file loading",
+    "note": "This lesson demonstrates how to use a UI file created in Qt Designer within your Python application. It shows how to use the `uic.loadUi()` function to load the `.ui` file and apply it to your window, automatically creating all the widgets and layouts you designed."
+  },
+  {
+    "n": 17,
+    "title": "Styling Applications with Qt Style Sheets (QSS)",
+    "math": "CSS-like styling",
+    "note": "This section introduces QSS, a mechanism for customizing the appearance of PyQt applications. It explains that QSS uses syntax that is very similar to CSS from web development, allowing you to change colors, fonts, borders, and other properties of your widgets."
+  },
+  {
+    "n": 18,
+    "title": "The Graphics View Framework",
+    "math": "2D graphics rendering",
+    "note": "This lesson provides an overview of Qt's framework for managing and interacting with a large number of 2D graphical items. It introduces the `QGraphicsScene` (to manage the items), `QGraphicsView` (the viewport), and `QGraphicsItem` (the items themselves)."
+  },
+  {
+    "n": 19,
+    "title": "Multithreading with `QThread`",
+    "math": "Multithreading",
+    "note": "This section explains how to perform long-running tasks in a PyQt application without freezing the user interface. It introduces `QThread` and the recommended approach of using 'worker' objects that are moved to a separate thread to perform the work and then emit signals to update the UI when finished."
+  },
+  {
+    "n": 20,
+    "title": "Packaging Your Application with `pyinstaller`",
+    "math": "Application packaging",
+    "note": "This final lesson covers how to distribute your completed PyQt application. It introduces `pyinstaller`, a popular tool that analyzes your Python script and bundles it with all its dependencies (including PyQt and the Python interpreter) into a single, standalone executable file that can be run on other computers."
+  }
+]

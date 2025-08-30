@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Big Data?",
+    "math": "Exponential growth",
+    "note": "This section provides a formal definition of Big Data, moving beyond the buzzword. It explains that Big Data refers to datasets that are too large or complex for traditional data-processing application software to adequately deal with. The context is the shift in scale of data generation in the digital era."
+  },
+  {
+    "n": 2,
+    "title": "The 3 V's of Big Data: Volume, Velocity, Variety",
+    "math": "Multi-dimensional analysis",
+    "note": "This lesson introduces the three core dimensions that define a Big Data problem. It explains Volume (the sheer scale of data), Velocity (the speed at which data is generated and must be processed), and Variety (the different forms of data, from structured tables to unstructured text, images, and videos)."
+  },
+  {
+    "n": 3,
+    "title": "The Expanded V's: Veracity and Value",
+    "math": "Data quality metrics",
+    "note": "This section explores two additional, crucial dimensions of Big Data. It covers Veracity, which refers to the uncertainty and trustworthiness of the data, and Value, which emphasizes that the ultimate goal of collecting and analyzing Big Data is to extract tangible business value."
+  },
+  {
+    "n": 4,
+    "title": "Introduction to the Hadoop Ecosystem",
+    "math": "Distributed computing principles",
+    "note": "This lesson provides a high-level overview of Apache Hadoop as the original open-source framework for distributed storage and processing of Big Data. It introduces the main components of the ecosystem, positioning it as a foundational technology in the history of Big Data."
+  },
+  {
+    "n": 5,
+    "title": "HDFS: The Hadoop Distributed File System",
+    "math": "Distributed file systems",
+    "note": "This section focuses on HDFS, the storage layer of Hadoop. It explains how HDFS is designed to store very large files across a cluster of commodity hardware. The architecture, including the role of the NameNode (metadata) and DataNodes (actual data blocks), is detailed. The concept of data replication for fault tolerance is also covered."
+  },
+  {
+    "n": 6,
+    "title": "MapReduce: The Original Processing Paradigm",
+    "math": "MapReduce programming model",
+    "note": "This lesson introduces MapReduce, the processing framework that originally came with Hadoop. It explains the two-phase programming model: the 'Map' phase, which processes and transforms data, and the 'Reduce' phase, which aggregates the results. A simple word count example is used to illustrate the concept."
+  },
+  {
+    "n": 7,
+    "title": "YARN: Hadoop's Cluster Resource Manager",
+    "math": "Resource scheduling algorithms",
+    "note": "This section explains YARN (Yet Another Resource Negotiator), the component of Hadoop that handles resource management and job scheduling. It details how YARN decoupled resource management from the MapReduce processing engine, allowing Hadoop to run other processing frameworks, like Spark, on the same cluster."
+  },
+  {
+    "n": 8,
+    "title": "The Rise of Apache Spark",
+    "math": "In-memory computing",
+    "note": "This lesson introduces Apache Spark as the modern, de facto standard for Big Data processing. It explains why Spark is significantly faster than MapReduce, primarily due to its ability to perform computations in memory rather than writing to disk between steps. Its versatility and ease of use are also highlighted."
+  },
+  {
+    "n": 9,
+    "title": "Spark Architecture: RDDs",
+    "math": "Resilient Distributed Datasets (RDDs)",
+    "note": "This section dives into the core abstraction of Spark: the Resilient Distributed Dataset (RDD). An RDD is an immutable, partitioned collection of records that can be operated on in parallel. The concepts of 'resilience' (fault tolerance through lineage) and 'distributed' (split across the cluster) are explained."
+  },
+  {
+    "n": 10,
+    "title": "Spark APIs: Transformations and Actions",
+    "math": "Lazy evaluation",
+    "note": "This lesson explains how to work with RDDs. It distinguishes between 'Transformations' (like `map`, `filter`), which are lazy operations that create a new RDD, and 'Actions' (like `count`, `collect`), which trigger the actual computation on the cluster. The concept of lazy evaluation is explained as a key optimization."
+  },
+  {
+    "n": 11,
+    "title": "Spark SQL and DataFrames",
+    "math": "Relational algebra on distributed data",
+    "note": "This section introduces the DataFrame API, a higher-level abstraction over RDDs that organizes data into named columns, similar to a database table. It explains how Spark SQL allows you to run SQL queries against this structured data, making it more accessible to a wider range of users."
+  },
+  {
+    "n": 12,
+    "title": "Data Ingestion with Apache Sqoop and Flume",
+    "math": "Data pipelines",
+    "note": "This lesson covers tools for getting data into the Hadoop ecosystem. It introduces Apache Sqoop, designed for efficiently transferring bulk data between Hadoop and structured datastores such as relational databases. It also covers Apache Flume, a distributed service for collecting and moving large amounts of streaming data like log files."
+  },
+  {
+    "n": 13,
+    "title": "Introduction to Apache Kafka",
+    "math": "Distributed messaging systems (pub/sub)",
+    "note": "This section introduces Apache Kafka as a high-throughput, distributed publish-subscribe messaging system. It explains how Kafka is used as a real-time data pipeline for streaming data, acting as a central hub to decouple systems that produce data from systems that consume it."
+  },
+  {
+    "n": 14,
+    "title": "Introduction to NoSQL Databases",
+    "math": "CAP theorem (Consistency, Availability, Partition tolerance)",
+    "note": "This lesson explains why traditional relational databases are often not a good fit for the scale and variety of Big Data. It introduces NoSQL databases as a category of databases designed for high availability and scalability, often at the cost of strict consistency (as explained by the CAP theorem)."
+  },
+  {
+    "n": 15,
+    "title": "Types of NoSQL Databases",
+    "math": "Data modeling",
+    "note": "This section explores the four main categories of NoSQL databases. It covers Key-Value stores (e.g., Redis), Document stores (e.g., MongoDB), Column-Family stores (e.g., Cassandra, HBase), and Graph databases (e.g., Neo4j), explaining the data model and ideal use case for each."
+  },
+  {
+    "n": 16,
+    "title": "Data Warehousing with Apache Hive",
+    "math": "Schema-on-read",
+    "note": "This lesson introduces Apache Hive, a data warehouse software project built on top of Hadoop. It explains how Hive provides a SQL-like interface (HiveQL) to query data stored in various files on HDFS. The concept of 'schema-on-read' is detailed, where a structure is imposed on the data at query time, not when the data is loaded."
+  },
+  {
+    "n": 17,
+    "title": "Stream Processing with Spark Streaming",
+    "math": "Micro-batching",
+    "note": "This section covers how to process data in near real-time with Apache Spark. It explains the concept of Spark Streaming, which uses a 'micro-batching' approach to ingest data from sources like Kafka or Flume, process it in small batches, and push the results out to downstream systems."
+  },
+  {
+    "n": 18,
+    "title": "Machine Learning at Scale with Spark MLlib",
+    "math": "Distributed machine learning algorithms",
+    "note": "This lesson introduces MLlib, Spark's scalable machine learning library. It explains how MLlib provides implementations of common algorithms (like classification, regression, clustering) that are designed to run in parallel on a cluster, enabling machine learning on massive datasets."
+  },
+  {
+    "n": 19,
+    "title": "Big Data in the Cloud: AWS EMR and S3",
+    "math": "Cloud computing services",
+    "note": "This section explains how cloud platforms simplify Big Data analytics. It introduces Amazon Web Services (AWS) and its key services: S3 (Simple Storage Service) as a highly scalable data lake, and EMR (Elastic MapReduce) as a managed service for running Hadoop and Spark clusters without managing the underlying infrastructure."
+  },
+  {
+    "n": 20,
+    "title": "The Modern Data Lakehouse",
+    "math": "Hybrid data architecture",
+    "note": "This final lesson introduces the concept of the Data Lakehouse as a modern architecture that combines the best features of data lakes (low-cost, flexible storage) and data warehouses (ACID transactions, data management features). It explains how technologies like Delta Lake enable this hybrid approach."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Perl?",
+    "math": "Scripting languages",
+    "note": "This section introduces Perl as a high-level, general-purpose, interpreted, dynamic programming language. It explains its history and its reputation as the 'Swiss Army chainsaw' of scripting languages due to its power and flexibility, especially for text manipulation and system administration tasks."
+  },
+  {
+    "n": 2,
+    "title": "Perl's Philosophy: TMTOWTDI",
+    "math": "Programming language design",
+    "note": "This lesson explains the core philosophy of Perl: 'There's More Than One Way To Do It' (TMTOWTDI). This principle emphasizes providing the programmer with expressive freedom, which makes the language powerful but can also lead to code that is hard to read if not written carefully."
+  },
+  {
+    "n": 3,
+    "title": "Setting Up a Perl Environment",
+    "math": "Software installation",
+    "note": "This section provides a practical guide to getting started with Perl. It explains that Perl is pre-installed on most Linux and macOS systems and shows how to check the installed version. It also demonstrates how to write and execute a simple 'Hello, World!' script from the command line."
+  },
+  {
+    "n": 4,
+    "title": "Core Concept: Sigils and Variable Types",
+    "math": "Variable declaration",
+    "note": "This lesson introduces one of Perl's most distinctive features: sigils. It explains that the character at the start of a variable name (`$`, `@`, or `%`) determines its type. `$` indicates a scalar (a single value), `@` indicates an array (an ordered list), and `%` indicates a hash (a key-value map)."
+  },
+  {
+    "n": 5,
+    "title": "Scalars: Numbers and Strings",
+    "math": "Scalar variables",
+    "note": "This section provides a deep dive into scalar variables, which hold a single value. It explains that Perl automatically handles the conversion between numbers and strings based on context. It also covers string interpolation within double-quoted strings."
+  },
+  {
+    "n": 6,
+    "title": "Arrays",
+    "math": "Array data structures",
+    "note": "This lesson covers Perl arrays, which are ordered lists of scalars. It demonstrates how to create an array, how to access individual elements using their index (e.g., `$my_array[0]`), and how to find the length of an array."
+  },
+  {
+    "n": 7,
+    "title": "Array Manipulation Functions",
+    "math": "Stack and queue operations",
+    "note": "This section introduces the built-in functions for working with arrays. It covers `push` and `pop` for adding/removing elements from the end of an array (like a stack), and `shift` and `unshift` for adding/removing elements from the beginning (like a queue)."
+  },
+  {
+    "n": 8,
+    "title": "Hashes",
+    "math": "Associative arrays (hashes)",
+    "note": "This lesson covers Perl hashes, which store a collection of key-value pairs. It demonstrates how to create a hash and how to access a value by its string key (e.g., `$my_hash{'key'}`)."
+  },
+  {
+    "n": 9,
+    "title": "Control Flow: Conditionals and Loops",
+    "math": "Control flow statements",
+    "note": "This section explains how to control the flow of a Perl script. It covers conditional statements like `if`, `else`, and `elsif`, and looping constructs like `while`, `for`, and the very common `foreach` for iterating over the elements of an array."
+  },
+  {
+    "n": 10,
+    "title": "Introduction to Regular Expressions",
+    "math": "Regular expressions",
+    "note": "This lesson introduces regular expressions (regex) as Perl's most powerful feature for pattern matching and text manipulation. It explains that regex is a mini-language for describing patterns in strings."
+  },
+  {
+    "n": 11,
+    "title": "The Match and Substitution Operators",
+    "math": "Pattern matching and substitution",
+    "note": "This section demonstrates the two primary ways regex is used in Perl. It covers the match operator (`m//` or just `//`) for checking if a pattern exists in a string, and the substitution operator (`s/pattern/replacement/`) for finding a pattern and replacing it with something else."
+  },
+  {
+    "n": 12,
+    "title": "Capturing Groups",
+    "math": "Regex capturing groups",
+    "note": "This lesson explains how to use parentheses `()` in a regular expression to 'capture' part of the matched string. These captured substrings are then available in special variables like `$1`, `$2`, etc., for later use."
+  },
+  {
+    "n": 13,
+    "title": "Subroutines (Functions)",
+    "math": "Subroutines",
+    "note": "This section covers how to create reusable blocks of code using subroutines. It demonstrates how to define a subroutine using the `sub` keyword and how to call it. It also explains how arguments are passed to a subroutine via the special `@_` array."
+  },
+  {
+    "n": 14,
+    "title": "File I/O: Reading from Files",
+    "math": "File input/output",
+    "note": "This lesson explains how to read data from files. It covers opening a file using the `open` function to get a 'filehandle', and then reading from that filehandle line by line, typically inside a `while` loop."
+  },
+  {
+    "n": 15,
+    "title": "File I/O: The Diamond Operator",
+    "math": "Command-line arguments",
+    "note": "This section introduces a common Perl idiom for processing files. The diamond operator `<>` reads from the filenames given on the command line, or from standard input if no files are given. This makes it easy to write flexible command-line tools."
+  },
+  {
+    "n": 16,
+    "title": "Perl for System Administration: One-Liners",
+    "math": "Command-line scripting",
+    "note": "This lesson demonstrates one of Perl's great strengths: writing powerful one-liner programs directly on the command line using the `-e` switch. This is often used for quick text processing tasks, like find-and-replace across multiple files."
+  },
+  {
+    "n": 17,
+    "title": "References and Complex Data Structures",
+    "math": "Data references",
+    "note": "This section introduces references as a way to create complex, nested data structures (like an array of hashes or a hash of arrays). A reference is a scalar that 'points' to another data structure. The backslash `\\` operator is used to create a reference."
+  },
+  {
+    "n": 18,
+    "title": "The `strict` and `warnings` Pragmas",
+    "math": "Code quality",
+    "note": "This lesson explains two crucial 'pragmas' (compiler directives) that should be at the top of every modern Perl script. `use strict;` enforces better coding practices, like requiring variable declaration. `use warnings;` enables warnings for potential problems in your code."
+  },
+  {
+    "n": 19,
+    "title": "The Comprehensive Perl Archive Network (CPAN)",
+    "math": "Software module repositories",
+    "note": "This section introduces CPAN, a massive archive of over 200,000 modules of reusable Perl code. It is one of Perl's greatest strengths. The lesson explains how to use the `cpan` command-line client to install modules from CPAN."
+  },
+  {
+    "n": 20,
+    "title": "Using Modules: The `DBI` Example",
+    "math": "Database connectivity",
+    "note": "This final lesson provides a practical example of using a module from CPAN. It introduces the `DBI` (Database Interface) module, which provides a standard, database-agnostic API for connecting to and interacting with a wide variety of databases from a Perl script."
+  }
+]

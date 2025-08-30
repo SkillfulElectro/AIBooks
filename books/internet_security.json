@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Internet Security?",
+    "math": "Risk management",
+    "note": "This section defines Internet Security as a specific branch of cybersecurity focused on protecting against threats and vulnerabilities that arise from using the internet. It explains that the goal is to protect the data you send and receive online, as well as your personal devices."
+  },
+  {
+    "n": 2,
+    "title": "Secure Web Browsing: HTTP vs. HTTPS",
+    "math": "Encryption (TLS/SSL)",
+    "note": "This lesson explains the crucial difference between HTTP and HTTPS. It details that data sent over HTTP is in plain text and can be intercepted, while HTTPS uses encryption (SSL/TLS) to create a secure, confidential connection between your browser and the web server. The importance of the padlock icon is emphasized."
+  },
+  {
+    "n": 3,
+    "title": "Understanding Browser Cookies",
+    "math": "Client-side state management",
+    "note": "This section explains what web cookies are: small text files that websites store on your computer to remember information about you. It differentiates between first-party cookies (for site functionality) and third-party cookies (for tracking and advertising), and discusses the privacy implications."
+  },
+  {
+    "n": 4,
+    "title": "The Dangers of Public Wi-Fi",
+    "math": "Network security threats",
+    "note": "This lesson highlights the risks of using unsecured public Wi-Fi networks, such as those in cafes or airports. It explains how attackers on the same network can potentially intercept your traffic, leading to Man-in-the-Middle (MitM) attacks. The danger of 'evil twin' hotspots is also covered."
+  },
+  {
+    "n": 5,
+    "title": "Using a Virtual Private Network (VPN)",
+    "math": "Encrypted tunneling",
+    "note": "This section introduces a VPN as a primary tool for protecting your internet traffic. It explains that a VPN creates a secure, encrypted 'tunnel' between your device and a remote server, hiding your online activity from your local network and your ISP. This is especially important on public Wi-Fi."
+  },
+  {
+    "n": 6,
+    "title": "Email Security: How to Spot a Phishing Attack",
+    "math": "Social engineering",
+    "note": "This lesson focuses on phishing, the most common type of email-based attack. It provides practical tips for identifying a phishing email, such as checking the sender's email address, looking for generic greetings, spotting urgent or threatening language, and hovering over links before clicking to see the actual destination."
+  },
+  {
+    "n": 7,
+    "title": "Understanding Spam and Malware Attachments",
+    "math": "Malware distribution",
+    "note": "This section explains that unsolicited email (spam) is often used to deliver malware. It warns users to be extremely cautious of unexpected email attachments, especially from unknown senders, and to never open attachments with suspicious file extensions like `.exe` or `.scr`."
+  },
+  {
+    "n": 8,
+    "title": "Creating Strong Passwords",
+    "math": "Password entropy",
+    "note": "This lesson covers the principles of creating a strong password. It emphasizes length over complexity and recommends using long passphrases (e.g., 'correct-horse-battery-staple') which are easy to remember but hard for computers to guess. The danger of reusing passwords across multiple sites is also stressed."
+  },
+  {
+    "n": 9,
+    "title": "Password Managers",
+    "math": "Password management",
+    "note": "This section introduces password managers as the best solution for handling credentials. It explains how a password manager can generate and store long, random, unique passwords for every site you use, requiring you to only remember one strong master password."
+  },
+  {
+    "n": 10,
+    "title": "The Importance of Multi-Factor Authentication (MFA)",
+    "math": "Multi-factor authentication",
+    "note": "This lesson explains MFA as one of the most effective security measures you can take. It requires you to provide a second factor (like a code from an app on your phone) in addition to your password. This means that even if an attacker steals your password, they still cannot access your account."
+  },
+  {
+    "n": 11,
+    "title": "Social Media Privacy Settings",
+    "math": "Privacy controls",
+    "note": "This section provides a guide to managing your privacy on social media platforms like Facebook and Instagram. It encourages users to review their privacy settings to control who can see their posts and personal information, and to be mindful of the information they share publicly."
+  },
+  {
+    "n": 12,
+    "title": "The Dangers of Oversharing",
+    "math": "Information leakage",
+    "note": "This lesson discusses the risks associated with sharing too much personal information online. It explains how seemingly innocent details (like your pet's name or your mother's maiden name) are often used as answers to security questions and can be exploited by attackers for identity theft."
+  },
+  {
+    "n": 13,
+    "title": "Securing Your Home Wi-Fi Network",
+    "math": "Wireless security protocols (WPA2/WPA3)",
+    "note": "This section covers essential steps for securing your home network. It includes changing the default administrator password on your router, using a strong encryption protocol like WPA2 or WPA3, and choosing a strong, unique password for your Wi-Fi network itself."
+  },
+  {
+    "n": 14,
+    "title": "The Importance of Software Updates",
+    "math": "Patch management",
+    "note": "This lesson explains that software updates, for both your operating system and applications, often contain critical security patches that fix known vulnerabilities. It stresses the importance of enabling automatic updates whenever possible to protect your devices from malware that exploits these vulnerabilities."
+  },
+  {
+    "n": 15,
+    "title": "Antivirus and Anti-Malware Software",
+    "math": "Malware detection",
+    "note": "This section explains the role of antivirus and anti-malware software. It details how these programs can detect and remove malicious software from your computer by scanning files for known malware signatures and by monitoring for suspicious behavior."
+  },
+  {
+    "n": 16,
+    "title": "Recognizing Online Scams: Tech Support Scams",
+    "math": "Fraud detection",
+    "note": "This lesson details a common online fraud tactic. Tech support scams often involve a pop-up message that falsely claims your computer is infected with a virus and urges you to call a phone number. The lesson explains that legitimate companies will never solicit you in this way."
+  },
+  {
+    "n": 17,
+    "title": "Safe Online Shopping",
+    "math": "E-commerce security",
+    "note": "This section provides tips for staying safe while shopping online. It includes looking for HTTPS in the URL, using credit cards (which have better fraud protection than debit cards), being wary of deals that seem too good to be true, and avoiding making purchases over public Wi-Fi."
+  },
+  {
+    "n": 18,
+    "title": "Understanding Your Digital Footprint",
+    "math": "Data privacy",
+    "note": "This lesson defines a 'digital footprint' as the trail of data you leave behind when you use the internet. It includes websites you visit, emails you send, and information you submit to online services. The lesson encourages mindfulness about the permanence of this data."
+  },
+  {
+    "n": 19,
+    "title": "Parental Controls",
+    "math": "Access control for minors",
+    "note": "This section introduces parental control software and settings as tools to help parents manage their children's online activity. It explains how these tools can be used to filter inappropriate content, limit screen time, and monitor usage to help keep children safe online."
+  },
+  {
+    "n": 20,
+    "title": "What to Do If You've Been Hacked",
+    "math": "Incident response",
+    "note": "This final lesson provides a simple action plan for when you suspect an account has been compromised. The immediate steps include changing the password for the affected account and any other accounts that use the same password, enabling MFA, and checking for any unauthorized activity."
+  }
+]

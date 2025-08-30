@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Software Testing?",
+    "math": "Quality assurance",
+    "note": "This section provides a formal definition of Software Testing as an investigation conducted to provide stakeholders with information about the quality of the software product or service under test. It explains that the primary goal is to identify defects so that they can be fixed."
+  },
+  {
+    "n": 2,
+    "title": "The 7 Principles of Testing",
+    "math": "Testing principles",
+    "note": "This lesson covers the seven fundamental principles of software testing. These include 'Testing shows presence of defects, not absence', 'Exhaustive testing is impossible', 'Early testing saves time and money', and the 'Pesticide paradox' (if the same tests are repeated over and over again, they eventually no longer find any new bugs)."
+  },
+  {
+    "n": 3,
+    "title": "The Software Testing Life Cycle (STLC)",
+    "math": "Process model",
+    "note": "This section introduces the STLC as a sequence of specific activities conducted during the testing process to ensure software quality goals are met. It outlines the phases: Requirement Analysis, Test Planning, Test Case Development, Test Environment Setup, Test Execution, and Test Cycle Closure."
+  },
+  {
+    "n": 4,
+    "title": "Levels of Testing: Unit Testing",
+    "math": "Unit testing",
+    "note": "This lesson explains Unit Testing, the lowest level of testing. A unit is the smallest testable part of any software, often a single function or method. Unit testing is typically performed by the developers themselves to verify that their individual code components work as expected."
+  },
+  {
+    "n": 5,
+    "title": "Levels of Testing: Integration Testing",
+    "math": "Integration testing",
+    "note": "This section covers Integration Testing, where individual software modules are combined and tested as a group. The purpose is to expose faults in the interaction between integrated units. Different strategies like Big Bang, Top-Down, and Bottom-Up integration are introduced."
+  },
+  {
+    "n": 6,
+    "title": "Levels of Testing: System Testing",
+    "math": "System testing",
+    "note": "This lesson explains System Testing, where a complete and integrated software is tested. The purpose of this test is to evaluate the system's compliance with the specified requirements. It is a form of black-box testing."
+  },
+  {
+    "n": 7,
+    "title": "Levels of Testing: User Acceptance Testing (UAT)",
+    "math": "Acceptance testing",
+    "note": "This section covers UAT, the final phase of testing. UAT is performed by the end-user or the client to verify that the software meets their business requirements and is ready for deployment. Alpha and Beta testing are discussed as types of UAT."
+  },
+  {
+    "n": 8,
+    "title": "Functional vs. Non-functional Testing",
+    "math": "Test classification",
+    "note": "This lesson differentiates between the two main categories of testing. Functional testing verifies *what* the system does (the features). Non-functional testing verifies *how well* the system does it, checking aspects like performance, usability, and reliability."
+  },
+  {
+    "n": 9,
+    "title": "Functional Testing Type: Regression Testing",
+    "math": "Regression testing",
+    "note": "This section explains Regression Testing, one of the most important testing types. It is the process of re-running tests to ensure that recently added code changes have not adversely affected existing features. This is crucial for preventing 'regressions' (bugs in existing functionality)."
+  },
+  {
+    "n": 10,
+    "title": "Non-functional Testing Type: Performance Testing",
+    "math": "Performance testing",
+    "note": "This lesson covers Performance Testing, which is conducted to determine how a system performs in terms of responsiveness and stability under a particular workload. It also introduces sub-types like Load testing and Stress testing."
+  },
+  {
+    "n": 11,
+    "title": "Test Design Technique: Black-Box Testing",
+    "math": "Black-box testing",
+    "note": "This section introduces Black-Box Testing, a testing method in which the internal structure or code of the item being tested is not known to the tester. The tester is only concerned with the inputs and outputs of the system."
+  },
+  {
+    "n": 12,
+    "title": "Black-Box Technique: Equivalence Partitioning and Boundary Value Analysis",
+    "math": "Equivalence partitioning, Boundary Value Analysis (BVA)",
+    "note": "This lesson covers two key techniques for designing black-box test cases. Equivalence Partitioning involves dividing input data into partitions of equivalent data from which test cases can be derived. Boundary Value Analysis focuses on testing at the 'boundaries' or edges of these partitions, where errors are most likely to occur."
+  },
+  {
+    "n": 13,
+    "title": "Test Design Technique: White-Box Testing",
+    "math": "White-box testing",
+    "note": "This section introduces White-Box Testing, a testing method in which the internal structure and code are known to the tester. It is used to test the internal logic of an application. This type of testing is typically performed by developers."
+  },
+  {
+    "n": 14,
+    "title": "White-Box Technique: Statement and Branch Coverage",
+    "math": "Code coverage",
+    "note": "This lesson explains how to measure the effectiveness of white-box testing using code coverage metrics. Statement Coverage measures whether each line of code has been executed. Branch Coverage measures whether each branch of a control structure (like an `if` statement) has been executed."
+  },
+  {
+    "n": 15,
+    "title": "Test Documentation: The Test Case",
+    "math": "Test case design",
+    "note": "This section defines a Test Case as a document which specifies a set of test inputs, execution conditions, and expected results, developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement."
+  },
+  {
+    "n": 16,
+    "title": "Test Documentation: The Bug Report",
+    "math": "Bug reporting",
+    "note": "This lesson details the components of a good bug report. It explains that a bug report should contain a clear and concise title, a detailed description of the bug, step-by-step instructions to reproduce it, the actual result vs. the expected result, and relevant attachments like screenshots."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to Test Automation",
+    "math": "Test automation",
+    "note": "This section introduces Test Automation as the use of special software (separate from the software being tested) to control the execution of tests and the comparison of actual outcomes with predicted outcomes. It explains the benefits, such as speed and repeatability, especially for regression testing."
+  },
+  {
+    "n": 18,
+    "title": "The Test Automation Pyramid",
+    "math": "Test automation pyramid",
+    "note": "This lesson explains the Test Automation Pyramid, a model for guiding test automation strategy. It suggests that you should have a large base of fast, cheap Unit Tests, a smaller layer of Integration Tests, and a very small layer of slow, expensive End-to-End (UI) Tests."
+  },
+  {
+    "n": 19,
+    "title": "Agile Testing",
+    "math": "Agile testing",
+    "note": "This section discusses how testing practices are adapted for Agile development methodologies. It emphasizes that in Agile, testing is not a separate phase but a continuous activity performed by the whole team. The focus is on preventing defects rather than just finding them."
+  },
+  {
+    "n": 20,
+    "title": "Continuous Testing in DevOps",
+    "math": "Continuous testing",
+    "note": "This final lesson introduces Continuous Testing as a key practice in DevOps. It is the process of executing automated tests as part of the software delivery pipeline in order to obtain immediate feedback on the business risks associated with a software release candidate."
+  }
+]

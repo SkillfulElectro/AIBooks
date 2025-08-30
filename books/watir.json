@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Watir",
+    "math": "Browser automation libraries",
+    "note": "This section introduces Watir (Web Application Testing in Ruby) as an open-source Ruby library for automating web browsers. It is known for its simple, elegant, and human-readable API, which makes writing automation scripts feel intuitive."
+  },
+  {
+    "n": 2,
+    "title": "Setting Up a Watir Project",
+    "math": "RubyGems",
+    "note": "This lesson provides a practical guide to getting started. It covers installing the `watir` gem and the `webdrivers` gem, which automatically manages the necessary browser drivers (like chromedriver) for you."
+  },
+  {
+    "n": 3,
+    "title": "Launching and Controlling a Browser",
+    "math": "Browser session management",
+    "note": "This section demonstrates the first steps of a Watir script. It shows how to launch a new browser instance with `Watir::Browser.new :chrome`, how to navigate to a URL with the `.goto` method, and how to close the browser with `.close`."
+  },
+  {
+    "n": 4,
+    "title": "Locating Elements: The Basics",
+    "math": "Element locators",
+    "note": "This lesson introduces Watir's intuitive syntax for finding elements. Instead of a generic `find_element` method, Watir provides methods for each element type, such as `browser.text_field`, `browser.button`, and `browser.div`."
+  },
+  {
+    "n": 5,
+    "title": "Specifying Locators",
+    "math": "Key-value locators",
+    "note": "This section explains how to identify a specific element. After selecting the element type (e.g., `browser.button`), you provide a hash of attributes to locate it, such as `:id`, `:name`, `:class`, or `:text`. For example, `browser.button(id: 'submit')`."
+  },
+  {
+    "n": 6,
+    "title": "Interacting with Text Fields",
+    "math": "Text input simulation",
+    "note": "This lesson focuses on text boxes. It demonstrates how to find a text field and use the `.set` method to type text into it. The `.clear` method for clearing existing text is also covered."
+  },
+  {
+    "n": 7,
+    "title": "Interacting with Buttons and Links",
+    "math": "Click simulation",
+    "note": "This section covers how to click on elements. It shows how to locate a button or a link and then use the `.click` method to simulate a user click."
+  },
+  {
+    "n": 8,
+    "title": "Handling Checkboxes and Radio Buttons",
+    "math": "Checkbox and radio button interaction",
+    "note": "This lesson demonstrates how to work with checkboxes and radio buttons. It introduces the `.set` method to select them, `.clear` to deselect a checkbox, and the `.selected?` method to check their current state."
+  },
+  {
+    "n": 9,
+    "title": "Handling Dropdown Lists (Select Lists)",
+    "math": "Select list interaction",
+    "note": "This section explains how to interact with HTML `<select>` elements. It shows how to use the `.select` method on a select list element to choose an option by its visible text or its underlying value."
+  },
+  {
+    "n": 10,
+    "title": "Getting Information from Elements",
+    "math": "Data extraction",
+    "note": "This lesson covers how to retrieve data from elements. It demonstrates the `.text` method to get the visible text of an element and the `.attribute_value('name')` method to get the value of a specific HTML attribute."
+  },
+  {
+    "n": 11,
+    "title": "Waits in Watir",
+    "math": "Synchronization",
+    "note": "This section explains how Watir handles the dynamic nature of modern web pages. Watir has built-in, automatic waits, meaning that when you try to interact with an element, it will automatically wait for a few seconds for the element to be present and ready for interaction, which significantly reduces test flakiness."
+  },
+  {
+    "n": 12,
+    "title": "Explicit Waits",
+    "math": "Conditional waits",
+    "note": "This lesson covers situations where you need to wait for a specific condition. It introduces the `.wait_until_present` method (to wait for an element to appear) and the `.wait_while_present` method (to wait for an element to disappear)."
+  },
+  {
+    "n": 13,
+    "title": "Handling Alerts",
+    "math": "Alert handling",
+    "note": "This section explains how to work with JavaScript alerts, confirms, and prompts. It demonstrates how to use the `browser.alert` object to get its text, accept it with `.ok`, or dismiss it with `.close`."
+  },
+  {
+    "n": 14,
+    "title": "Working with Collections of Elements",
+    "math": "Element collections",
+    "note": "This lesson explains how to work with multiple elements that match a locator. It introduces the pluralized element methods, like `browser.divs`, which return a collection of elements. You can then iterate over this collection or select a specific element by its index."
+  },
+  {
+    "n": 15,
+    "title": "The Page Object Model (POM) in Ruby",
+    "math": "Design patterns",
+    "note": "This section introduces the Page Object Model as a design pattern for creating scalable and maintainable automation code. The idea is to create a Ruby class for each page of your application that encapsulates the element locators and interaction methods for that page."
+  },
+  {
+    "n": 16,
+    "title": "Implementing a Simple Page Object",
+    "math": "Object-oriented design",
+    "note": "This lesson provides a practical example of creating a page object. It shows how to define methods in the class that represent user actions (like a `login` method) and how these methods internally use Watir to interact with the elements on the page."
+  },
+  {
+    "n": 17,
+    "title": "Using Watir with RSpec",
+    "math": "Testing frameworks",
+    "note": "This section demonstrates how to structure your Watir tests using RSpec, a popular testing framework for Ruby. It shows how to set up the browser in a `before` block, write the test logic using Watir and page objects in an `it` block, and close the browser in an `after` block."
+  },
+  {
+    "n": 18,
+    "title": "Headless Browser Testing",
+    "math": "Headless browsers",
+    "note": "This lesson explains how to run your Watir tests without a visible browser window, which is essential for running tests in a CI/CD environment. It demonstrates how to pass the `headless: true` option when creating the browser instance."
+  },
+  {
+    "n": 19,
+    "title": "Taking Screenshots",
+    "math": "Screenshots",
+    "note": "This section covers how to take a screenshot of the browser window, which is very useful for debugging failed tests. It introduces the `browser.screenshot.save` method."
+  },
+  {
+    "n": 20,
+    "title": "A Complete Test Example",
+    "math": "End-to-end test implementation",
+    "note": "This final lesson provides a complete, well-structured test script. It shows how to use RSpec for the test structure, a page object to interact with a login page, and assertions to verify the outcome, tying together all the core concepts of using Watir for test automation."
+  }
+]
