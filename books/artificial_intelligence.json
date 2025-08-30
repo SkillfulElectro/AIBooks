@@ -1,0 +1,170 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Artificial Intelligence?",
+    "math": "Formal logic, computational theory",
+    "note": "This section provides a formal definition of Artificial Intelligence (AI) as the theory and development of computer systems able to perform tasks that normally require human intelligence. It distinguishes between the four main approaches to AI: thinking humanly, thinking rationally, acting humanly, and acting rationally (the 'rational agent' approach)."
+  },
+  {
+    "n": 2,
+    "title": "A Brief History of AI",
+    "math": "Historical timelines",
+    "note": "This lesson traces the history of AI from its conceptual roots in the 1940s-50s, through the 'AI winters' of funding cuts, to the modern boom driven by data and computation. Key milestones like the Turing Test, the Dartmouth Workshop, the rise of expert systems, and the deep learning revolution are covered."
+  },
+  {
+    "n": 3,
+    "title": "Types of AI: Narrow, General, and Superintelligence",
+    "math": "Capability spectrum",
+    "note": "This section categorizes AI based on its capabilities. It defines Artificial Narrow Intelligence (ANI), which is specialized for one task (e.g., chess, image recognition); Artificial General Intelligence (AGI), a hypothetical AI with human-level cognitive abilities; and Artificial Superintelligence (ASI), which would surpass human intelligence."
+  },
+  {
+    "n": 4,
+    "title": "Symbolic AI vs. Connectionism",
+    "math": "Symbolic logic vs. statistical modeling",
+    "note": "This lesson explains the two major historical approaches to AI. It covers Symbolic AI (or 'Good Old-Fashioned AI'), which is based on manipulating symbols and rules, and Connectionism, which is inspired by the brain's structure and is the foundation for modern neural networks and deep learning."
+  },
+  {
+    "n": 5,
+    "title": "Ethical Considerations in AI",
+    "math": "Ethical frameworks, bias analysis",
+    "note": "This section introduces the critical field of AI ethics. It discusses major challenges such as algorithmic bias in data, the need for fairness and transparency ('explainable AI'), accountability for AI decisions, and the potential societal impact of AI on jobs and privacy."
+  },
+  {
+    "n": 6,
+    "title": "Problem Solving with Search Agents",
+    "math": "State-space search",
+    "note": "This lesson frames problem-solving in AI as a process of searching for a sequence of actions to reach a goal. It defines the components of a search problem: an initial state, a set of possible actions, a transition model, a goal test, and a path cost. This forms the foundation for all search algorithms."
+  },
+  {
+    "n": 7,
+    "title": "Uninformed Search: Breadth-First and Depth-First Search",
+    "math": "Graph traversal algorithms",
+    "note": "This section covers uninformed (or 'blind') search algorithms, which do not use any knowledge about the problem to guide the search. It details Breadth-First Search (BFS), which explores the shallowest nodes first, and Depth-First Search (DFS), which explores the deepest nodes first. Their completeness and optimality are compared."
+  },
+  {
+    "n": 8,
+    "title": "Informed Search: Heuristics and A* Search",
+    "math": "Heuristic functions, optimization",
+    "note": "This lesson introduces informed search, which uses a problem-specific 'heuristic' function to estimate how close a state is to the goal. It culminates in the A* (A-star) search algorithm, which combines the path cost so far with the estimated cost to the goal, making it optimally efficient."
+  },
+  {
+    "n": 9,
+    "title": "Adversarial Search: The Minimax Algorithm",
+    "math": "Game theory",
+    "note": "This section explores search in two-player, zero-sum games like chess or tic-tac-toe. It introduces the Minimax algorithm, which helps a player choose the optimal move by assuming the opponent will also play optimally, minimizing the maximum loss the player can face."
+  },
+  {
+    "n": 10,
+    "title": "Knowledge Representation and Reasoning",
+    "math": "Propositional logic",
+    "note": "This lesson explains the need for agents to represent knowledge about the world. It introduces logic as a formal language for representation and reasoning. Propositional logic, with its symbols and logical connectives (AND, OR, NOT, IMPLIES), is presented as the simplest form."
+  },
+  {
+    "n": 11,
+    "title": "Expert Systems",
+    "math": "Rule-based systems",
+    "note": "This section covers Expert Systems, an early and successful branch of Symbolic AI. It explains how these systems capture the knowledge of a human expert in a specific domain using a set of 'if-then' rules and an inference engine to derive new conclusions, mimicking a human expert's reasoning."
+  },
+  {
+    "n": 12,
+    "title": "Introduction to Machine Learning",
+    "math": "Statistical learning theory",
+    "note": "This lesson defines Machine Learning (ML) as a subfield of AI that gives computers the ability to learn without being explicitly programmed. It introduces the core idea of learning patterns from data and categorizes the field into three main types: Supervised, Unsupervised, and Reinforcement Learning."
+  },
+  {
+    "n": 13,
+    "title": "Supervised Learning: Regression",
+    "math": "Linear regression, gradient descent",
+    "note": "This section focuses on Supervised Learning tasks where the goal is to predict a continuous value. It explains Linear Regression, a method for modeling the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the observed data."
+  },
+  {
+    "n": 14,
+    "title": "Supervised Learning: Classification",
+    "math": "Logistic regression, decision boundaries",
+    "note": "This lesson covers Supervised Learning tasks where the goal is to predict a discrete category or class. It introduces Logistic Regression for binary classification and explains how it uses a sigmoid function to output a probability. The concept of a decision boundary is visualized."
+  },
+  {
+    "n": 15,
+    "title": "Evaluating Classification Models",
+    "math": "Confusion matrix, precision, recall, F1-score",
+    "note": "This section explains how to measure the performance of a classification model. It details the Confusion Matrix and the key metrics derived from it: Accuracy, Precision (the 'purity' of positive predictions), and Recall (the 'completeness' of positive predictions). The F1-score is presented as the harmonic mean of precision and recall."
+  },
+  {
+    "n": 16,
+    "title": "The Bias-Variance Tradeoff",
+    "math": "Model fitting",
+    "note": "A fundamental concept in machine learning, this lesson explains the tradeoff between bias (underfitting, where a model is too simple) and variance (overfitting, where a model learns the training data too well, including its noise). The goal is to find a balance that minimizes total error on unseen data."
+  },
+  {
+    "n": 17,
+    "title": "Unsupervised Learning: K-Means Clustering",
+    "math": "Centroid-based clustering",
+    "note": "This section introduces Unsupervised Learning, where the algorithm learns from unlabeled data. It details the K-Means algorithm for clustering, which aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centroid)."
+  },
+  {
+    "n": 18,
+    "title": "Dimensionality Reduction with PCA",
+    "math": "Principal Component Analysis (PCA), linear algebra",
+    "note": "This lesson covers dimensionality reduction, the process of reducing the number of random variables under consideration. It explains Principal Component Analysis (PCA), a technique that transforms the data into a new set of orthogonal variables (principal components) that capture the maximum variance in the data."
+  },
+  {
+    "n": 19,
+    "title": "Introduction to Artificial Neural Networks",
+    "math": "Biological neuron inspiration",
+    "note": "This section introduces Artificial Neural Networks (ANNs) as models inspired by the human brain. It explains the basic structure of a neuron (or perceptron), which receives inputs, applies weights, and passes the result through an activation function to produce an output."
+  },
+  {
+    "n": 20,
+    "title": "Training Neural Networks: Backpropagation",
+    "math": "Calculus (chain rule), gradient descent",
+    "note": "This lesson explains the process of training a neural network. It details the Backpropagation algorithm, which calculates the gradient of the loss function with respect to the network's weights. This gradient is then used by an optimization algorithm, like Gradient Descent, to iteratively adjust the weights to minimize the error."
+  },
+  {
+    "n": 21,
+    "title": "Deep Learning: Convolutional Neural Networks (CNNs)",
+    "math": "Convolution operations, image processing",
+    "note": "This section introduces Deep Learning and its application to computer vision. It explains the architecture of Convolutional Neural Networks (CNNs), detailing the key layers—Convolutional layers for feature detection, Pooling layers for down-sampling, and Fully Connected layers for classification."
+  },
+  {
+    "n": 22,
+    "title": "Deep Learning: Recurrent Neural Networks (RNNs)",
+    "math": "Sequence modeling",
+    "note": "This lesson covers Recurrent Neural Networks (RNNs), a type of neural network designed to work with sequence data like text or time series. It explains how RNNs have 'memory' by using their output from the previous step as an input to the current step, allowing them to process sequences."
+  },
+  {
+    "n": 23,
+    "title": "Introduction to Natural Language Processing (NLP)",
+    "math": "Computational linguistics",
+    "note": "This section defines Natural Language Processing (NLP) as a field of AI that focuses on enabling computers to understand, interpret, and generate human language. It covers the major tasks in NLP, such as sentiment analysis, machine translation, and question answering."
+  },
+  {
+    "n": 24,
+    "title": "NLP: Text Preprocessing",
+    "math": "String manipulation",
+    "note": "This lesson explains the crucial first steps in any NLP pipeline. It covers Tokenization (splitting text into words or sentences), Stop Word Removal (removing common words like 'the' and 'a'), and Normalization techniques like Stemming and Lemmatization to reduce words to their root form."
+  },
+  {
+    "n": 25,
+    "title": "NLP: Feature Extraction with TF-IDF",
+    "math": "Term Frequency-Inverse Document Frequency (TF-IDF)",
+    "note": "This section covers how to convert text into numerical features that ML models can understand. It explains the TF-IDF statistic, which reflects how important a word is to a document in a collection or corpus. It gives higher weight to words that are frequent in a document but not frequent across all documents."
+  },
+  {
+    "n": 26,
+    "title": "NLP: Transformer Models (BERT, GPT)",
+    "math": "Attention mechanisms",
+    "note": "This lesson introduces the state-of-the-art in NLP: Transformer models. It provides a high-level overview of the 'attention mechanism,' which allows these models to weigh the importance of different words in the input text, leading to significant advances in language understanding and generation as seen in models like BERT and GPT."
+  },
+  {
+    "n": 27,
+    "title": "Introduction to Reinforcement Learning",
+    "math": "Markov decision processes",
+    "note": "This section introduces Reinforcement Learning (RL), an area of ML concerned with how intelligent agents ought to take actions in an environment in order to maximize the notion of cumulative reward. The core components—Agent, Environment, State, Action, Reward—are defined."
+  },
+  {
+    "n": 28,
+    "title": "The Future of AI",
+    "math": "Trend forecasting",
+    "note": "This final lesson discusses the current trends and future directions of Artificial Intelligence. Topics include advances in generative AI, the push for more robust and explainable AI, the integration of AI into various industries, and the ongoing ethical and societal conversations surrounding its development."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "The CIA Triad: Core Security Principles",
+    "math": "Security principles",
+    "note": "This section introduces the foundational model for information security: the CIA Triad. It defines the three core goals: Confidentiality (preventing unauthorized disclosure of information), Integrity (ensuring information is trustworthy and accurate), and Availability (ensuring information and systems are accessible when needed)."
+  },
+  {
+    "n": 2,
+    "title": "Assets, Vulnerabilities, Threats, and Risks",
+    "math": "Risk analysis",
+    "note": "This lesson defines the fundamental terminology of security. An 'Asset' is what you want to protect. A 'Vulnerability' is a weakness in a system. A 'Threat' is a potential danger that could exploit a vulnerability. 'Risk' is the likelihood of a threat exploiting a vulnerability and the resulting impact."
+  },
+  {
+    "n": 3,
+    "title": "Introduction to Cryptography",
+    "math": "Cryptography",
+    "note": "This section explains the role of cryptography as a primary tool for achieving confidentiality and integrity. It defines the basic concepts of encryption (converting plaintext to ciphertext) and decryption. The difference between an algorithm (like AES) and a key is clarified."
+  },
+  {
+    "n": 4,
+    "title": "Symmetric vs. Asymmetric Encryption",
+    "math": "Symmetric-key vs. public-key cryptography",
+    "note": "This lesson compares the two main types of encryption. Symmetric-key cryptography uses the same secret key for both encryption and decryption, making it fast but requiring a secure way to share the key. Asymmetric (public-key) cryptography uses a public key to encrypt and a private key to decrypt, solving the key-sharing problem."
+  },
+  {
+    "n": 5,
+    "title": "Hash Functions and Digital Signatures",
+    "math": "Cryptographic hash functions",
+    "note": "This section covers two critical cryptographic tools. A Hash Function creates a unique, fixed-size 'fingerprint' of data, used to verify integrity. A Digital Signature combines hashing with private-key encryption to provide authenticity, integrity, and non-repudiation (proof of origin)."
+  },
+  {
+    "n": 6,
+    "title": "Authentication: Proving Your Identity",
+    "math": "Authentication factors",
+    "note": "This lesson defines authentication as the process of verifying a claimed identity. It introduces the three factors of authentication: something you know (a password), something you have (a security token or phone), and something you are (a fingerprint or face scan)."
+  },
+  {
+    "n": 7,
+    "title": "The Weakness of Passwords and the Rise of MFA",
+    "math": "Multi-factor authentication (MFA)",
+    "note": "This section explains why passwords alone are often insufficient for security. It then introduces Multi-Factor Authentication (MFA) as a method that requires a user to provide two or more verification factors to gain access, significantly increasing security."
+  },
+  {
+    "n": 8,
+    "title": "Access Control Models",
+    "math": "Access control policy",
+    "note": "This lesson explains what happens after authentication: authorization. It covers different models for controlling what an authenticated user is allowed to do. Key models discussed are Discretionary Access Control (DAC), Mandatory Access Control (MAC), and the most common, Role-Based Access Control (RBAC)."
+  },
+  {
+    "n": 9,
+    "title": "What Is Malware?",
+    "math": "Malicious software classification",
+    "note": "This section provides a general definition of Malware (malicious software) as any software intentionally designed to cause disruption to a computer, server, client, or computer network, leak private information, gain unauthorized access to information or systems, or deprive users access to information."
+  },
+  {
+    "n": 10,
+    "title": "Malware Types: Viruses and Worms",
+    "math": "Replication mechanisms",
+    "note": "This lesson differentiates between two types of self-replicating malware. A Virus attaches itself to another legitimate program and requires human action (like running the program) to spread. A Worm is a standalone program that can replicate and spread across a network on its own, without human intervention."
+  },
+  {
+    "n": 11,
+    "title": "Malware Types: Trojans and Ransomware",
+    "math": "Deception and extortion tactics",
+    "note": "This section covers two common malware types based on their purpose. A Trojan disguises itself as a legitimate program to trick a user into running it, often to create a backdoor. Ransomware is a type of malware that encrypts a victim's files and demands a ransom payment to restore access."
+  },
+  {
+    "n": 12,
+    "title": "Software Vulnerability: SQL Injection",
+    "math": "Input validation",
+    "note": "This lesson explains one of the most common web application vulnerabilities. SQL Injection occurs when an attacker can manipulate the SQL queries that an application makes to its database. This can be used to steal, modify, or delete data. The importance of using parameterized queries as a defense is emphasized."
+  },
+  {
+    "n": 13,
+    "title": "Software Vulnerability: Cross-Site Scripting (XSS)",
+    "math": "Code injection",
+    "note": "This section covers Cross-Site Scripting (XSS), a vulnerability where an attacker can inject malicious scripts (usually JavaScript) into a website, which then get executed in the browsers of other users. The importance of output encoding as a defense is explained."
+  },
+  {
+    "n": 14,
+    "title": "Network Security: Firewalls",
+    "math": "Packet filtering",
+    "note": "This lesson introduces firewalls as a primary network security device. It explains that a firewall monitors incoming and outgoing network traffic and decides whether to allow or block specific traffic based on a defined set of security rules, acting as a barrier between a trusted internal network and an untrusted external network."
+  },
+  {
+    "n": 15,
+    "title": "Network Security: Intrusion Detection Systems (IDS)",
+    "math": "Signature and anomaly detection",
+    "note": "This section explains Intrusion Detection Systems (IDS) as devices or software applications that monitor a network for malicious activity or policy violations. An IDS is a passive system that logs and reports potential incidents, but does not stop them."
+  },
+  {
+    "n": 16,
+    "title": "Network Attack: Denial-of-Service (DoS)",
+    "math": "Resource exhaustion",
+    "note": "This lesson defines a Denial-of-Service (DoS) attack, whose goal is to make a machine or network resource unavailable to its intended users. It explains how this is typically accomplished by flooding the target with superfluous requests in an attempt to overload systems and prevent some or all legitimate requests from being fulfilled."
+  },
+  {
+    "n": 17,
+    "title": "Network Attack: Man-in-the-Middle (MitM)",
+    "math": "Eavesdropping and impersonation",
+    "note": "This section covers Man-in-the-Middle (MitM) attacks, where an attacker secretly relays and possibly alters the communication between two parties who believe they are directly communicating with each other. The importance of encryption (like HTTPS) as a defense is highlighted."
+  },
+  {
+    "n": 18,
+    "title": "The Human Element: Social Engineering",
+    "math": "Psychological manipulation",
+    "note": "This lesson explains that the weakest link in security is often the human user. It defines Social Engineering as the use of deception to manipulate individuals into divulging confidential or personal information that may be used for fraudulent purposes."
+  },
+  {
+    "n": 19,
+    "title": "Social Engineering Tactic: Phishing",
+    "math": "Deception tactics",
+    "note": "This section details Phishing, the most common form of social engineering. It is the fraudulent attempt to obtain sensitive information such as usernames, passwords, and credit card details by disguising oneself as a trustworthy entity in an electronic communication, typically email."
+  },
+  {
+    "n": 20,
+    "title": "Incident Response",
+    "math": "Emergency management",
+    "note": "This final lesson provides an overview of Incident Response, the organized approach to addressing and managing the aftermath of a security breach or cyberattack. It introduces the typical phases: Preparation, Identification, Containment, Eradication, Recovery, and Lessons Learned."
+  }
+]

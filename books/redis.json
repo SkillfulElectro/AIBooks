@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Redis?",
+    "math": "In-memory databases",
+    "note": "This section introduces Redis (Remote Dictionary Server) as an open-source, in-memory data structure store. It explains that because Redis keeps its data primarily in memory, it is incredibly fast. It is often used as a database, cache, message broker, and streaming engine."
+  },
+  {
+    "n": 2,
+    "title": "Redis vs. Traditional Databases and Memcached",
+    "math": "Comparative analysis",
+    "note": "This lesson compares Redis to other data stores. It contrasts Redis with traditional disk-based databases (like MySQL), highlighting its speed advantage. It also compares Redis to Memcached, another in-memory key-value store, explaining that Redis is more powerful due to its support for rich data structures beyond simple strings."
+  },
+  {
+    "n": 3,
+    "title": "Getting Started with Redis",
+    "math": "Software installation",
+    "note": "This lesson provides a practical guide to installing the Redis server. It also introduces the `redis-cli` (Command-Line Interface), the primary tool for interacting with a Redis server manually, and demonstrates the `PING` command to check for a connection."
+  },
+  {
+    "n": 4,
+    "title": "Data Structure: Strings",
+    "math": "Key-value stores",
+    "note": "This section covers the most basic Redis data type, the String. It can hold any kind of data, such as text or binary data, up to 512MB. It demonstrates the fundamental commands `SET` (to create or overwrite a string) and `GET` (to retrieve it). The atomic `INCR` command for counters is also shown."
+  },
+  {
+    "n": 5,
+    "title": "Data Structure: Hashes",
+    "math": "Hash maps",
+    "note": "This lesson introduces Hashes, which are maps between string fields and string values. They are the perfect data type to represent objects (e.g., a user with fields for name, email, and age). It covers the `HSET`, `HGET`, and `HGETALL` commands."
+  },
+  {
+    "n": 6,
+    "title": "Data Structure: Lists",
+    "math": "Linked lists",
+    "note": "This section explains Redis Lists, which are simply lists of strings, sorted by insertion order. It demonstrates how you can push elements to the left (head) or right (tail) of a list using `LPUSH` and `RPUSH`, making them ideal for implementing stacks and queues."
+  },
+  {
+    "n": 7,
+    "title": "Data Structure: Sets",
+    "math": "Set theory",
+    "note": "This lesson covers Redis Sets, which are unordered collections of unique strings. It demonstrates the `SADD` command to add members to a set and `SISMEMBER` to check for existence. Sets are useful for tasks like tracking unique visitors or performing set operations like unions and intersections."
+  },
+  {
+    "n": 8,
+    "title": "Data Structure: Sorted Sets",
+    "math": "Sorted sets",
+    "note": "This section introduces Sorted Sets, which are similar to regular sets but where every member has an associated score (a floating-point number). The members are always sorted by their score. This makes them perfect for applications like leaderboards. The `ZADD` and `ZRANGE` commands are covered."
+  },
+  {
+    "n": 9,
+    "title": "Setting Key Expiry",
+    "math": "Time-to-live (TTL)",
+    "note": "This lesson explains how to set a timeout on a key. It covers the `EXPIRE` command, which sets a key's time-to-live in seconds. After the timeout has expired, the key will be automatically deleted. This is fundamental for caching applications."
+  },
+  {
+    "n": 10,
+    "title": "Transactions",
+    "math": "Database transactions",
+    "note": "This section introduces transactions in Redis, which allow the execution of a group of commands in a single step. It covers the `MULTI` command (to start a transaction), the queuing of commands, and the `EXEC` command (to execute all queued commands). This ensures that the commands are executed atomically."
+  },
+  {
+    "n": 11,
+    "title": "Pipelining",
+    "math": "Network pipelining",
+    "note": "This lesson explains Pipelining as a performance optimization. Instead of sending one command and waiting for the response, pipelining allows a client to send multiple commands to the server without waiting for the replies, and then read the replies in a single step. This dramatically reduces network latency."
+  },
+  {
+    "n": 12,
+    "title": "Publish/Subscribe (Pub/Sub)",
+    "math": "Publish-subscribe pattern",
+    "note": "This section introduces Redis's built-in messaging system. It explains the Publish/Subscribe paradigm, where 'publishers' send messages to 'channels', and 'subscribers' listen to specific channels without knowing who the publishers are. The `SUBSCRIBE` and `PUBLISH` commands are demonstrated."
+  },
+  {
+    "n": 13,
+    "title": "Redis Persistence: RDB",
+    "math": "Database snapshots",
+    "note": "This lesson covers one of the two methods for Redis persistence. RDB (Redis Database) persistence performs point-in-time snapshots of your dataset at specified intervals. It is fast and produces a compact file, making it good for backups."
+  },
+  {
+    "n": 14,
+    "title": "Redis Persistence: AOF",
+    "math": "Append-only logs",
+    "note": "This section explains the second persistence method. AOF (Append Only File) persistence logs every write operation received by the server. These operations can then be replayed on startup to reconstruct the original dataset. It provides better durability than RDB."
+  },
+  {
+    "n": 15,
+    "title": "Use Case: Caching",
+    "math": "Caching strategies",
+    "note": "This lesson provides a practical example of Redis's most common use case: caching. It explains how an application can first check Redis for requested data. If the data is not in the cache (a 'cache miss'), the application fetches it from a slower primary database and then stores it in Redis with an expiration time for future requests."
+  },
+  {
+    "n": 16,
+    "title": "Use Case: Session Store",
+    "math": "Session management",
+    "note": "This section explains how Redis can be used to store web session data for an application. Its speed and key expiry features make it an ideal choice for managing user sessions in a scalable way, especially in a distributed system with multiple web servers."
+  },
+  {
+    "n": 17,
+    "title": "Use Case: Leaderboards",
+    "math": "Ranked lists",
+    "note": "This lesson demonstrates how the Sorted Set data structure is perfectly suited for building real-time leaderboards. It shows how to use `ZADD` to add users with their scores and `ZREVRANGE` to retrieve the top N users from the leaderboard efficiently."
+  },
+  {
+    "n": 18,
+    "title": "Using Redis with Python",
+    "math": "Database clients",
+    "note": "This section provides a practical guide to interacting with Redis from a programming language. It demonstrates how to use the popular `redis-py` client library in Python to connect to a Redis server and execute commands for various data structures."
+  },
+  {
+    "n": 19,
+    "title": "High Availability with Redis Sentinel",
+    "math": "High availability systems",
+    "note": "This lesson introduces Redis Sentinel, the high availability solution for Redis. It explains how Sentinel provides monitoring, notifications, and automatic failover. If a master instance fails, Sentinel will automatically promote one of the replicas to be the new master."
+  },
+  {
+    "n": 20,
+    "title": "Scaling with Redis Cluster",
+    "math": "Database sharding",
+    "note": "This final lesson provides an overview of Redis Cluster, which is used to scale Redis horizontally. It explains how Redis Cluster automatically shards (partitions) the data across multiple nodes, allowing you to create a dataset that is larger than the memory of a single machine and to increase throughput."
+  }
+]

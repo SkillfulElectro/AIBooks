@@ -1,0 +1,140 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Cloud Computing?",
+    "math": "Distributed systems",
+    "note": "This section provides the formal NIST definition of Cloud Computing. It explains it as a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction."
+  },
+  {
+    "n": 2,
+    "title": "The 5 Essential Characteristics of Cloud Computing",
+    "math": "System attributes",
+    "note": "This lesson details the five essential characteristics defined by NIST. It covers On-Demand Self-Service, Broad Network Access, Resource Pooling (multi-tenancy), Rapid Elasticity (scaling), and Measured Service (pay-per-use). Understanding these is key to distinguishing true cloud services from traditional hosting."
+  },
+  {
+    "n": 3,
+    "title": "Traditional IT vs. Cloud Computing",
+    "math": "Economic models (CapEx vs. OpEx)",
+    "note": "This section contrasts the cloud model with traditional on-premises IT. It focuses on the economic shift from Capital Expenditure (CapEx), where you buy physical hardware upfront, to Operational Expenditure (OpEx), where you pay for resources as you consume them, like a utility."
+  },
+  {
+    "n": 4,
+    "title": "Service Model: Infrastructure as a Service (IaaS)",
+    "math": "Virtualization",
+    "note": "This lesson introduces IaaS, the most basic cloud service model. It explains that with IaaS, the provider offers fundamental computing resources like virtual machines, storage, and networking. The consumer is responsible for the operating system and applications. Examples include AWS EC2 and Azure Virtual Machines."
+  },
+  {
+    "n": 5,
+    "title": "Service Model: Platform as a Service (PaaS)",
+    "math": "Application platforms",
+    "note": "This section covers PaaS, which provides a platform allowing customers to develop, run, and manage applications without the complexity of building and maintaining the underlying infrastructure. The provider manages the OS, servers, and runtime. Examples include Heroku and AWS Elastic Beanstalk."
+  },
+  {
+    "n": 6,
+    "title": "Service Model: Software as a Service (SaaS)",
+    "math": "Software delivery models",
+    "note": "This lesson explains SaaS, the most common cloud service model. With SaaS, software is licensed on a subscription basis and is centrally hosted. Users access the software via a web browser, and the provider manages all aspects of the infrastructure and application. Examples include Microsoft 365 and Salesforce."
+  },
+  {
+    "n": 7,
+    "title": "The 'Pizza as a Service' Analogy",
+    "math": "Analogical reasoning",
+    "note": "This section uses the popular 'Pizza as a Service' analogy to solidify the understanding of IaaS, PaaS, and SaaS. It compares traditional on-premises IT to making pizza at home from scratch, IaaS to buying a pre-made pizza base and adding your own toppings, PaaS to ordering a pizza for delivery, and SaaS to dining out at a restaurant."
+  },
+  {
+    "n": 8,
+    "title": "Deployment Model: Public Cloud",
+    "math": "Multi-tenancy",
+    "note": "This lesson defines the Public Cloud, where cloud services are owned and operated by a third-party provider and delivered over the public internet. The infrastructure is shared by multiple organizations ('multi-tenant'). Its key benefits are massive scalability and a pay-as-you-go pricing model."
+  },
+  {
+    "n": 9,
+    "title": "Deployment Model: Private Cloud",
+    "math": "Single-tenancy",
+    "note": "This section explains the Private Cloud, where cloud infrastructure is operated solely for a single organization. It can be managed internally or by a third party and hosted either on-premises or in a data center. The key benefit is enhanced security and control over a dedicated environment."
+  },
+  {
+    "n": 10,
+    "title": "Deployment Model: Hybrid Cloud",
+    "math": "System integration",
+    "note": "This lesson covers the Hybrid Cloud, which combines public and private clouds, bound together by technology that allows data and applications to be shared between them. A common use case is 'cloud bursting,' where an application runs in a private cloud but 'bursts' into a public cloud to handle high-demand spikes."
+  },
+  {
+    "n": 11,
+    "title": "Core Technology: Virtualization and Hypervisors",
+    "math": "Machine virtualization",
+    "note": "This section explains virtualization as the foundational technology that powers cloud computing. It details how a hypervisor (like VMware ESXi or KVM) abstracts computing resources from the physical hardware, allowing the creation and management of multiple virtual machines (VMs) on a single physical server."
+  },
+  {
+    "n": 12,
+    "title": "Core Technology: Containers and Docker",
+    "math": "Operating-system-level virtualization",
+    "note": "This lesson introduces containers as a lightweight, more efficient alternative to VMs. It explains that containers virtualize the operating system, allowing multiple applications to run in isolated user spaces on a single OS kernel. Docker is presented as the most popular containerization platform."
+  },
+  {
+    "n": 13,
+    "title": "Core Technology: Container Orchestration with Kubernetes",
+    "math": "Cluster management",
+    "note": "This section explains the need for container orchestration when running containers at scale. It introduces Kubernetes as the de facto standard for automating the deployment, scaling, and management of containerized applications. Its role in managing the container lifecycle is highlighted."
+  },
+  {
+    "n": 14,
+    "title": "Core Technology: Serverless Computing",
+    "math": "Function as a Service (FaaS)",
+    "note": "This lesson covers Serverless Computing, an evolution of the cloud model where the cloud provider dynamically manages the allocation and provisioning of servers. It focuses on Function as a Service (FaaS), where developers write and deploy small, event-triggered functions without any server management. Examples include AWS Lambda and Azure Functions."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to the Major Cloud Providers",
+    "math": "Market analysis",
+    "note": "This section provides a high-level introduction to the 'big three' public cloud providers: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). It discusses their respective market positions, historical strengths, and primary target audiences."
+  },
+  {
+    "n": 16,
+    "title": "Cloud Storage Types: Object, File, and Block",
+    "math": "Data storage models",
+    "note": "This lesson explains the three main types of cloud storage. It covers Object Storage (for unstructured data like media files), Block Storage (for high-performance virtual disks attached to VMs), and File Storage (for traditional shared file systems). The ideal use case for each is discussed."
+  },
+  {
+    "n": 17,
+    "title": "Cloud Networking Fundamentals",
+    "math": "Software-Defined Networking (SDN)",
+    "note": "This section introduces the basics of networking in the cloud. It explains the concept of a Virtual Private Cloud (VPC) or Virtual Network (VNet) as an isolated slice of the public cloud. Key components like subnets, route tables, and internet gateways are defined."
+  },
+  {
+    "n": 18,
+    "title": "Cloud Security: The Shared Responsibility Model",
+    "math": "Security policy",
+    "note": "This crucial lesson explains the Shared Responsibility Model. It details which security tasks are the responsibility of the cloud provider ('security of the cloud') and which are the responsibility of the customer ('security in the cloud'). This varies depending on the service model (IaaS, PaaS, SaaS)."
+  },
+  {
+    "n": 19,
+    "title": "Cloud Security: Identity and Access Management (IAM)",
+    "math": "Access control matrix",
+    "note": "This section covers Identity and Access Management (IAM) as the foundation of cloud security. It explains how IAM systems are used to manage users, groups, and roles, and to assign granular permissions that define who can access which resources and perform what actions."
+  },
+  {
+    "n": 20,
+    "title": "Cloud Economics: Pricing Models",
+    "math": "Economic forecasting",
+    "note": "This lesson explores the different ways cloud providers charge for services. It covers the standard Pay-as-you-go model, Reserved Instances (committing to usage for a discount), and Spot Instances (bidding on spare capacity for massive discounts). The importance of choosing the right model is emphasized."
+  },
+  {
+    "n": 21,
+    "title": "Cloud Cost Management and Optimization",
+    "math": "Cost optimization",
+    "note": "This section focuses on the discipline of FinOps (Cloud Financial Operations). It explains the importance of monitoring cloud spending and introduces techniques for optimizing costs, such as right-sizing instances, deleting unused resources, and using automation to shut down development environments overnight."
+  },
+  {
+    "n": 22,
+    "title": "Infrastructure as Code (IaC) in the Cloud",
+    "math": "Declarative infrastructure",
+    "note": "This lesson explains how Infrastructure as Code is used to manage cloud resources programmatically. It introduces declarative tools like AWS CloudFormation and Terraform, which allow you to define your desired cloud infrastructure in configuration files, enabling versioning, reusability, and automated provisioning."
+  },
+  {
+    "n": 23,
+    "title": "The Future of Cloud: Edge Computing",
+    "math": "Decentralized computing",
+    "note": "This final lesson looks at emerging trends. It introduces Edge Computing, a distributed computing paradigm that brings computation and data storage closer to the sources of data. This is done in order to improve response times and save bandwidth, and is a complement to centralized cloud computing."
+  }
+]

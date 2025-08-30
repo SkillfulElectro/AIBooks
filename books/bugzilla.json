@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Bug Tracking",
+    "math": "Software development lifecycle (SDLC)",
+    "note": "This section explains the critical role of bug tracking in software development. It defines what constitutes a 'bug' and why a systematic process for reporting, tracking, and resolving defects is essential for creating quality software. The concept of a bug tracker as a central communication hub is introduced."
+  },
+  {
+    "n": 2,
+    "title": "What Is Bugzilla?",
+    "math": "Issue tracking systems",
+    "note": "This lesson introduces Bugzilla as a mature, open-source, web-based bug tracking system. It covers its history, its purpose as a tool to help developers manage software defects, and its key features, such as advanced search capabilities, email notifications, and workflow customization."
+  },
+  {
+    "n": 3,
+    "title": "Navigating the Bugzilla Interface",
+    "math": "User interface (UI) design",
+    "note": "This section provides a guided tour of the standard Bugzilla user interface for a new user. It explains the main components: the header for navigation and search, the footer with useful links, and the main page dashboard. The core concepts of Products and Components as organizational units are defined."
+  },
+  {
+    "n": 4,
+    "title": "The Bug Lifecycle in Bugzilla",
+    "math": "State machine diagrams",
+    "note": "This lesson details the typical workflow of a bug from creation to closure. It explains each primary status in the lifecycle: UNCONFIRMED, NEW, ASSIGNED, RESOLVED, VERIFIED, and CLOSED. Understanding this flow is crucial for all users of the system."
+  },
+  {
+    "n": 5,
+    "title": "Bug Resolutions Explained",
+    "math": "Classification",
+    "note": "This section dives into the different types of 'resolutions' a bug can have when it is marked as RESOLVED. It explains the meaning of FIXED, INVALID (not a bug), WONTFIX (will not be fixed), DUPLICATE (reported elsewhere), and WORKSFORME (cannot be reproduced)."
+  },
+  {
+    "n": 6,
+    "title": "How to File an Effective Bug Report",
+    "math": "Technical writing principles",
+    "note": "This lesson covers the principles of writing a high-quality bug report. It emphasizes the importance of being clear, concise, and providing detailed, step-by-step instructions to reproduce the issue. The goal is to give a developer all the information they need to fix the bug quickly."
+  },
+  {
+    "n": 7,
+    "title": "The 'New Bug' Form: Core Fields",
+    "math": "Data entry",
+    "note": "This section provides a field-by-field guide to the 'New Bug' form. It explains how to correctly select the Product and Component, and how to define the Version the bug was found in. The distinction between Severity (impact of the bug) and Priority (urgency to fix) is clarified."
+  },
+  {
+    "n": 8,
+    "title": "The 'New Bug' Form: Description and Attachments",
+    "math": "Information architecture",
+    "note": "This lesson focuses on the most critical parts of a bug report. It shows how to write a clear, one-line Summary (the title) and a detailed Description, including the steps to reproduce, the actual results, and the expected results. The importance of adding attachments like screenshots or log files is also covered."
+  },
+  {
+    "n": 9,
+    "title": "Searching for Bugs: Simple Search",
+    "math": "Keyword search",
+    "note": "This section introduces the bug search functionality, a core feature of Bugzilla. It demonstrates how to use the simple search bar in the header to quickly find bugs by ID number, keywords in the summary, or email addresses."
+  },
+  {
+    "n": 10,
+    "title": "Searching for Bugs: Advanced Search",
+    "math": "Boolean logic, query building",
+    "note": "This lesson covers the 'Advanced Search' page, which allows for building highly specific queries. It demonstrates how to search based on criteria like Status, Resolution, Product, Component, and specific dates. The ability to combine multiple criteria to narrow down results is explained."
+  },
+  {
+    "n": 11,
+    "title": "Working with Bug Lists",
+    "math": "Data tabulation",
+    "note": "This section explains how to work with the list of bugs returned by a search query. It covers how to customize the columns displayed in the bug list, how to sort the results by different fields, and how to perform batch operations on multiple selected bugs (e.g., changing the status of several bugs at once)."
+  },
+  {
+    "n": 12,
+    "title": "Interacting with a Bug (For Developers)",
+    "math": "Workflow management",
+    "note": "This lesson focuses on the developer's workflow. It covers how to assign a bug to oneself, how to change the bug's status as work progresses (e.g., from NEW to ASSIGNED), and the importance of adding clear and concise comments to communicate progress to the reporter and other stakeholders."
+  },
+  {
+    "n": 13,
+    "title": "Using Flags for Custom Workflows",
+    "math": "State flags",
+    "note": "This section explains Flags, a powerful feature for custom workflows. It demonstrates how a flag can have a 'setter' and a 'requestee' and can be in one of three states: '?' (requested), '+' (granted), or '-' (denied). Common examples like `review?` or `needinfo?` are used."
+  },
+  {
+    "n": 14,
+    "title": "Bug Dependencies",
+    "math": "Graph theory (dependency graphs)",
+    "note": "This lesson covers how to manage relationships between bugs. It explains the 'Blocks' and 'Depends on' fields, which are used to create a dependency tree. This is crucial for tracking bugs that cannot be fixed until other bugs are resolved first."
+  },
+  {
+    "n": 15,
+    "title": "Email Notifications",
+    "math": "Notification systems",
+    "note": "This section explains how Bugzilla uses email to keep users informed of changes. It covers the different types of notifications and demonstrates how to use the user preferences page to control the email notification settings, reducing noise and focusing on relevant updates."
+  },
+  {
+    "n": 16,
+    "title": "Saving and Sharing Searches",
+    "math": "Query persistence",
+    "note": "This lesson shows how to save a complex search query for later use. It explains how to name a saved search and how it can be quickly re-run from the footer of the Bugzilla interface. The ability to share search links with other users is also covered."
+  },
+  {
+    "n": 17,
+    "title": "Bugzilla Reporting: Tabular Reports",
+    "math": "Data aggregation",
+    "note": "This section introduces Bugzilla's reporting capabilities. It focuses on creating tabular (HTML table) reports. It demonstrates how to configure a report by selecting a vertical axis (e.g., Priority) and a horizontal axis (e.g., Status) to generate a pivot table that summarizes the current state of bugs."
+  },
+  {
+    "n": 18,
+    "title": "Bugzilla Administration: User Management",
+    "math": "Access control",
+    "note": "This lesson is for administrators. It provides an overview of the user administration panel, covering how to create new user accounts, edit existing ones, and manage user permissions and group memberships to control access to different products and features."
+  },
+  {
+    "n": 19,
+    "title": "Bugzilla Administration: Products and Components",
+    "math": "System configuration",
+    "note": "This section for administrators explains how to configure the core organizational structure of Bugzilla. It covers the process of creating and editing Products (the highest-level category) and the Components within each product."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to the Bugzilla API",
+    "math": "RESTful APIs",
+    "note": "This final lesson provides a high-level introduction to Bugzilla's web service API. It explains how external tools and scripts can use this API (typically REST-based) to automate actions like creating bugs, searching for issues, and updating bug information, enabling integration with other systems."
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Blockchain Technology",
+    "math": "Decentralized network theory",
+    "note": "This section introduces the fundamental concept of a blockchain as a distributed, immutable ledger. It explains the core differences between centralized, decentralized, and distributed systems. The key principles of blockchain, including transparency, security, and immutability, are defined in the context of a trustless digital environment."
+  },
+  {
+    "n": 2,
+    "title": "Core Cryptographic Principles",
+    "math": "Cryptographic hash functions, public-key cryptography",
+    "note": "This lesson covers the essential cryptography that underpins blockchain technology. It explains the role of cryptographic hash functions (specifically SHA-256) in creating a unique fingerprint for data. It also introduces public/private key cryptography and how digital signatures are used to verify ownership and transaction authenticity."
+  },
+  {
+    "n": 3,
+    "title": "How a Blockchain Works",
+    "math": "Linked lists, Merkle trees",
+    "note": "This section provides a step-by-step explanation of the blockchain mechanism. It details how transactions are grouped into blocks, how each block is cryptographically linked to the previous one to form a chain, and the concept of a distributed ledger. The role of network nodes in validating and propagating transactions is also covered."
+  },
+  {
+    "n": 4,
+    "title": "Consensus Algorithms: Proof-of-Work",
+    "math": "Computational complexity theory, probability",
+    "note": "Learn how decentralized networks agree on the state of the ledger. This lesson focuses on the first major consensus algorithm, Proof-of-Work (PoW), used by Bitcoin. It explains the process of 'mining' as a computational puzzle that miners solve to get the right to add a new block to the chain and earn a reward."
+  },
+  {
+    "n": 5,
+    "title": "Bitcoin: The First Cryptocurrency",
+    "math": "Peer-to-peer networking",
+    "note": "This lesson explores Bitcoin as the first and most well-known application of blockchain technology. It explains how Bitcoin transactions work, the concept of the Unspent Transaction Output (UTXO) model, and the role of Bitcoin wallets in managing private keys and addresses."
+  },
+  {
+    "n": 6,
+    "title": "Ethereum and Smart Contracts",
+    "math": "Turing completeness, state machines",
+    "note": "This section introduces Ethereum as a programmable blockchain. It defines a 'smart contract' as a self-executing contract with the terms of the agreement directly written into code. The concept of 'gas' as a fee for computational effort on the Ethereum network is also explained."
+  },
+  {
+    "n": 7,
+    "title": "Solidity Programming Fundamentals",
+    "math": "Contract-oriented programming",
+    "note": "An introduction to Solidity, the primary programming language for writing smart contracts on Ethereum. This lesson covers basic syntax, including data types (e.g., address, uint), state variables, functions, and modifiers. The structure of a simple 'Hello World' style smart contract is demonstrated using the Remix IDE."
+  },
+  {
+    "n": 8,
+    "title": "Decentralized Applications (DApps)",
+    "math": "Client-server architecture vs. decentralized architecture",
+    "note": "This lesson defines what a Decentralized Application (DApp) is and how its architecture differs from a traditional web application. It explains the typical DApp stack, which includes a frontend (like React) that interacts with a smart contract (the backend) deployed on a blockchain like Ethereum."
+  },
+  {
+    "n": 9,
+    "title": "Exploring Other Consensus Algorithms",
+    "math": "Game theory, Byzantine Fault Tolerance",
+    "note": "This section expands on consensus mechanisms beyond Proof-of-Work. It introduces Proof-of-Stake (PoS), where block validators are chosen based on the amount of cryptocurrency they hold and are willing to 'stake'. Other models like Delegated Proof-of-Stake (DPoS) and Practical Byzantine Fault Tolerance (PBFT) are also briefly discussed."
+  },
+  {
+    "n": 10,
+    "title": "Types of Blockchains",
+    "math": "Access control models",
+    "note": "Learn about the different categories of blockchains based on their permission model. This lesson explains Public blockchains (like Bitcoin and Ethereum, which are permissionless), Private blockchains (controlled by a single organization), and Consortium blockchains (governed by a group of organizations)."
+  },
+  {
+    "n": 11,
+    "title": "Wallets, Exchanges, and NFTs",
+    "math": "Digital asset management",
+    "note": "This section covers key components of the blockchain ecosystem. It explains the difference between hot wallets (online) and cold wallets (offline) for storing crypto assets. It introduces centralized and decentralized exchanges (DEXs) for trading. Finally, it defines Non-Fungible Tokens (NFTs) as unique digital assets on a blockchain."
+  },
+  {
+    "n": 12,
+    "title": "Blockchain Security and Challenges",
+    "math": "Risk analysis",
+    "note": "This lesson discusses the security vulnerabilities and limitations of blockchain technology. It explains the concept of a '51% attack,' where a single entity could control the majority of the network's mining power. It also covers major challenges, including scalability, energy consumption (for PoW), and the evolving regulatory landscape."
+  },
+  {
+    "n": 13,
+    "title": "The Future of Blockchain",
+    "math": "Scalability solutions and interoperability protocols",
+    "note": "This section explores the ongoing evolution of blockchain technology. It introduces Layer 2 scaling solutions (like Rollups and State Channels) designed to increase transaction speed and reduce costs. It also discusses the concept of blockchain interoperability, with examples like Polkadot and Cosmos, which aim to enable different blockchains to communicate with each other."
+  }
+]

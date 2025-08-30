@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "The Importance of Data Visualization",
+    "math": "Data analysis",
+    "note": "This section explains why data visualization is a critical skill in data science and analysis. It highlights how visual representations of data can reveal patterns, trends, and outliers that might not be apparent from raw numbers alone. The goal is to communicate insights effectively."
+  },
+  {
+    "n": 2,
+    "title": "Introduction to Matplotlib",
+    "math": "Python plotting libraries",
+    "note": "This lesson introduces Matplotlib as the foundational and most widely used plotting library in the Python ecosystem. It is a low-level library that provides a high degree of control over every aspect of a figure. Many other libraries, like Seaborn, are built on top of it."
+  },
+  {
+    "n": 3,
+    "title": "The Anatomy of a Matplotlib Plot",
+    "math": "Plot components",
+    "note": "This section explains the main components of a Matplotlib plot. It defines the 'Figure' as the overall window or page that everything is drawn on, and the 'Axes' as the actual plot area where data is plotted with x-axis and y-axis."
+  },
+  {
+    "n": 4,
+    "title": "The Two APIs: Pyplot vs. Object-Oriented",
+    "math": "Programming interfaces (APIs)",
+    "note": "This lesson introduces the two ways to use Matplotlib. The `pyplot` interface provides a simple, MATLAB-style state-based interface for creating plots quickly. The more powerful and flexible Object-Oriented (OO) interface involves explicitly creating and managing Figure and Axes objects."
+  },
+  {
+    "n": 5,
+    "title": "Creating a Simple Line Plot",
+    "math": "Line plots",
+    "note": "This lesson demonstrates how to create a basic line plot using the `pyplot` interface. It covers the `plt.plot()` function for plotting data points and connecting them with a line, and `plt.show()` to display the plot."
+  },
+  {
+    "n": 6,
+    "title": "Adding Labels and a Title",
+    "math": "Plot annotation",
+    "note": "This section explains how to make a plot informative. It demonstrates how to use the `plt.xlabel()`, `plt.ylabel()`, and `plt.title()` functions to add descriptive labels to the x-axis, y-axis, and the plot itself."
+  },
+  {
+    "n": 7,
+    "title": "Customizing Lines and Adding a Legend",
+    "math": "Plot customization",
+    "note": "This lesson covers how to customize the appearance of a plot. It shows how to change the color, linestyle, and add markers to a line plot. It also introduces the `plt.legend()` function to add a legend that explains what each line represents."
+  },
+  {
+    "n": 8,
+    "title": "Creating Scatter Plots",
+    "math": "Scatter plots",
+    "note": "This section introduces scatter plots, which are used to display the relationship between two numerical variables. It demonstrates the `plt.scatter()` function and shows how to customize the color, size, and shape of the markers."
+  },
+  {
+    "n": 9,
+    "title": "Creating Bar Charts",
+    "math": "Bar charts",
+    "note": "This lesson covers how to create bar charts for comparing categorical data. It demonstrates the `plt.bar()` function for vertical bar charts and `plt.barh()` for horizontal bar charts."
+  },
+  {
+    "n": 10,
+    "title": "Creating Histograms",
+    "math": "Histograms",
+    "note": "This section introduces histograms, which are used to visualize the distribution of a single numerical variable. It demonstrates the `plt.hist()` function and explains how to control the number of 'bins' in the histogram."
+  },
+  {
+    "n": 11,
+    "title": "The Object-Oriented Approach",
+    "math": "Object-oriented plotting",
+    "note": "This lesson demonstrates the recommended, object-oriented way of creating plots. It introduces the `plt.subplots()` function, which creates a Figure and a set of subplots (Axes). This approach provides more control and is better for creating complex figures."
+  },
+  {
+    "n": 12,
+    "title": "Plotting with the Axes Object",
+    "math": "Method calls on objects",
+    "note": "This section shows how to use the Axes object returned by `plt.subplots()`. Instead of `plt.plot()`, you use `ax.plot()`. Instead of `plt.title()`, you use `ax.set_title()`. This makes it explicit which plot you are modifying."
+  },
+  {
+    "n": 13,
+    "title": "Creating Multiple Subplots",
+    "math": "Plot grids",
+    "note": "This lesson demonstrates one of the main advantages of the object-oriented approach: creating figures with multiple plots. It shows how to use `plt.subplots(nrows, ncols)` to create a grid of Axes objects, allowing you to build complex dashboards and comparisons."
+  },
+  {
+    "n": 14,
+    "title": "Customizing Ticks and Spines",
+    "math": "Axis formatting",
+    "note": "This section covers how to customize the axes of a plot. It shows how to set the limits of the x and y axes using `ax.set_xlim()` and `ax.set_ylim()`, and how to customize the tick marks and their labels. It also explains how to hide the 'spines' (the lines enclosing the plot area)."
+  },
+  {
+    "n": 15,
+    "title": "Adding Text and Annotations",
+    "math": "Plot annotation",
+    "note": "This lesson demonstrates how to add text to a plot for extra information using `ax.text()`. It also covers the more advanced `ax.annotate()` function, which can be used to create an annotation with an arrow pointing to a specific data point."
+  },
+  {
+    "n": 16,
+    "title": "Integrating Matplotlib with Pandas",
+    "math": "Dataframe plotting",
+    "note": "This section explains the convenient integration between Pandas and Matplotlib. It demonstrates how you can call the `.plot()` method directly on a Pandas DataFrame or Series to quickly generate plots, using the column names for labels automatically."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to Seaborn",
+    "math": "Statistical data visualization",
+    "note": "This lesson introduces Seaborn as a high-level library based on Matplotlib. It explains that Seaborn excels at creating beautiful and informative statistical plots (like box plots, violin plots, and heatmaps) with much less code than would be required in plain Matplotlib."
+  },
+  {
+    "n": 18,
+    "title": "Creating a Box Plot",
+    "math": "Box plots",
+    "note": "This section demonstrates how to create a box plot, which is a standardized way of displaying the distribution of data based on a five-number summary (minimum, first quartile, median, third quartile, and maximum). This is useful for comparing distributions across categories."
+  },
+  {
+    "n": 19,
+    "title": "Creating a Heatmap",
+    "math": "Heatmaps",
+    "note": "This lesson covers how to create a heatmap, which is a graphical representation of data where the individual values contained in a matrix are represented as colors. Heatmaps are very useful for visualizing correlation matrices."
+  },
+  {
+    "n": 20,
+    "title": "Saving Plots to a File",
+    "math": "File output",
+    "note": "This final lesson explains how to save your Matplotlib figures to a file. It demonstrates the `plt.savefig()` function and shows how to specify the filename, file format (e.g., PNG, PDF, SVG), and the resolution in dots per inch (DPI)."
+  }
+]

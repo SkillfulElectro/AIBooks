@@ -1,0 +1,146 @@
+[
+  {
+    "n": 1,
+    "title": "Chef's Philosophy: Infrastructure as Code",
+    "math": "Declarative programming",
+    "note": "This section introduces Chef's core philosophy of treating infrastructure configuration as code. It explains how this approach enables practices from software development—like version control, automated testing, and continuous delivery—to be applied to infrastructure management, leading to more consistent and reliable systems."
+  },
+  {
+    "n": 2,
+    "title": "The Chef Architecture: Server, Workstation, and Nodes",
+    "math": "Client-server architecture",
+    "note": "This lesson details the main components of the Chef ecosystem. It explains the roles of the Chef Infra Server (the central hub for cookbooks and node data), the Workstation (where code is developed), and the Nodes (the machines being managed by Chef Client). The pull-based model, where nodes pull their configuration from the server, is highlighted."
+  },
+  {
+    "n": 3,
+    "title": "Chef vs. Ansible and Puppet",
+    "math": "Comparative analysis",
+    "note": "This section compares Chef with other major configuration management tools. It highlights key differences: Chef's agent-based, pull model vs. Ansible's agentless, push model; and Chef's use of a Ruby DSL vs. Puppet's custom declarative language. This provides context on when to choose one tool over another."
+  },
+  {
+    "n": 4,
+    "title": "Setting Up a Chef Workstation",
+    "math": "Software development kits (SDKs)",
+    "note": "This lesson provides a step-by-step guide to installing and configuring the Chef Workstation package. This package contains all the necessary tools for developing and testing Chef code, including the Chef Infra Client, the `knife` and `chef` command-line tools, and testing tools like Test Kitchen."
+  },
+  {
+    "n": 5,
+    "title": "Core Building Block: The Resource",
+    "math": "Declarative statements",
+    "note": "This section introduces the Resource as the most fundamental building block in Chef. A Resource is a declarative statement about a piece of the system's state, such as a package that should be installed, a service that should be running, or a file that should exist. The concept of idempotence is explained in this context."
+  },
+  {
+    "n": 6,
+    "title": "Organizing Resources: The Recipe",
+    "math": "Procedural scripts",
+    "note": "This lesson defines a Chef Recipe as a file that contains an ordered series of Resources. The recipe defines the configuration that is applied to a node. It is written in Chef's Ruby-based Domain-Specific Language (DSL)."
+  },
+  {
+    "n": 7,
+    "title": "The Unit of Distribution: The Cookbook",
+    "math": "Encapsulation and modularity",
+    "note": "This section introduces the Cookbook as the fundamental unit for distributing configuration in Chef. A cookbook groups together related recipes, templates, files, and other components needed to configure a specific part of a system (e.g., a web server or a database)."
+  },
+  {
+    "n": 8,
+    "title": "Creating and Structuring a Cookbook",
+    "math": "Directory hierarchy",
+    "note": "This lesson demonstrates how to create a new cookbook using the `chef generate cookbook` command. It explains the standard directory structure of a cookbook, including the purpose of the `recipes`, `attributes`, `templates`, `files`, and `metadata.rb` files."
+  },
+  {
+    "n": 9,
+    "title": "Writing Your First Recipe",
+    "math": "Ruby DSL syntax",
+    "note": "This lesson provides a hands-on guide to writing a simple recipe. It uses basic resources like `package` to install software, `service` to start a service, and `file` to create a file, demonstrating the declarative syntax of Chef's Ruby DSL."
+  },
+  {
+    "n": 10,
+    "title": "Running Chef Locally with `chef-client`",
+    "math": "Local execution mode",
+    "note": "This section explains how to apply a cookbook to your local machine for testing purposes. It demonstrates the use of `chef-client --local-mode` (also known as 'chef-solo'), which runs the Chef Infra Client without needing to connect to a Chef Server."
+  },
+  {
+    "n": 11,
+    "title": "Managing Cookbook Dependencies with `metadata.rb`",
+    "math": "Dependency management",
+    "note": "This lesson covers the `metadata.rb` file in detail. It explains how to define the cookbook's name and version, and more importantly, how to declare dependencies on other cookbooks using the `depends` keyword. This is crucial for building complex configurations."
+  },
+  {
+    "n": 12,
+    "title": "Using Attributes to Make Cookbooks Flexible",
+    "math": "Variable precedence",
+    "note": "This section introduces Attributes as a way to provide data to your cookbooks, making them tunable and reusable. It explains the different attribute precedence levels (`default`, `normal`, `override`) and how they allow you to override default settings for specific nodes or environments."
+  },
+  {
+    "n": 13,
+    "title": "Templates and the `template` Resource",
+    "math": "Template engines (ERB)",
+    "note": "This lesson explains how to create dynamic configuration files using templates. It introduces the `template` resource and the ERB (Embedded Ruby) template format. It demonstrates how to create a `.erb` file with embedded Ruby code to dynamically insert attribute values into a file."
+  },
+  {
+    "n": 14,
+    "title": "Defining Server Functions with Roles",
+    "math": "Role-based configuration",
+    "note": "This section introduces Roles as a way to define a configuration for a specific type of server (e.g., 'web_server' or 'database_server'). A Role is a simple JSON or Ruby file that contains a name and a 'run-list' of recipes or other roles to be applied to a node."
+  },
+  {
+    "n": 15,
+    "title": "Managing Stages with Environments",
+    "math": "Environment management",
+    "note": "This lesson covers Environments, which allow you to manage different configurations for different stages of your workflow (e.g., development, testing, production). A key feature is the ability to pin specific versions of cookbooks to an environment, ensuring stability in production while allowing changes in development."
+  },
+  {
+    "n": 16,
+    "title": "The `knife` Command-Line Tool",
+    "math": "Command-line interfaces",
+    "note": "This section introduces `knife`, the primary command-line tool for interacting with the Chef Infra Server from the workstation. It demonstrates common `knife` commands for uploading cookbooks (`knife cookbook upload`), managing nodes, and working with roles and environments."
+  },
+  {
+    "n": 17,
+    "title": "Bootstrapping a Node",
+    "math": "Client registration",
+    "note": "This lesson explains the 'bootstrap' process, which installs the Chef Infra Client on a target node and registers it with the Chef Server. It demonstrates the `knife bootstrap` command, which performs these actions and runs the chef-client for the first time."
+  },
+  {
+    "n": 18,
+    "title": "Chef Search and Data Bags",
+    "math": "Distributed key-value stores",
+    "note": "This section covers two ways to manage data in Chef. It explains Chef Search, which allows you to query the Chef Server for information about nodes. It also introduces Data Bags, which are used to store global data (in JSON format) that can be accessed by any node, often used for things like user accounts or application settings."
+  },
+  {
+    "n": 19,
+    "title": "Managing Secrets with Encrypted Data Bags",
+    "math": "Symmetric encryption",
+    "note": "This lesson explains how to manage sensitive information like passwords or API keys. It demonstrates how to create an encrypted data bag using a shared secret, ensuring that the sensitive data is encrypted on the Chef Server and can only be decrypted by nodes that have the secret key."
+  },
+  {
+    "n": 20,
+    "title": "Testing Cookbooks: Linting with `cookstyle`",
+    "math": "Static code analysis",
+    "note": "This section introduces the importance of testing infrastructure code. It covers `cookstyle`, Chef's linter, which checks your recipes for code style violations, logic errors, and deprecated practices, helping to ensure code quality and maintainability."
+  },
+  {
+    "n": 21,
+    "title": "Testing Cookbooks: Unit Testing with `ChefSpec`",
+    "math": "Unit testing frameworks",
+    "note": "This lesson explains how to unit test Chef recipes using ChefSpec. ChefSpec performs a simulated chef-client run in memory, allowing you to test the logic of your recipes very quickly without needing to spin up a virtual machine. It is used to verify that resources are created with the correct properties."
+  },
+  {
+    "n": 22,
+    "title": "Testing Cookbooks: Integration Testing with `Test Kitchen`",
+    "math": "Integration testing",
+    "note": "This section introduces Test Kitchen, the primary tool for integration testing Chef cookbooks. It explains how Test Kitchen automatically creates a virtual machine or container, applies your cookbook to it, and then runs tests to verify that the system is in the desired state. This provides confidence that the cookbook works on a real system."
+  },
+  {
+    "n": 23,
+    "title": "Modern Chef: Policyfiles",
+    "math": "Dependency resolution",
+    "note": "This lesson introduces Policyfiles as a more robust and reliable way to manage cookbook dependencies, as an alternative to using environments. It explains how a `Policyfile.rb` explicitly defines the set of cookbooks and their versions that should be applied to a node, creating a single, immutable artifact for deployment."
+  },
+  {
+    "n": 24,
+    "title": "Introduction to Chef Automate",
+    "math": "Continuous delivery dashboards",
+    "note": "This final lesson provides a high-level overview of Chef Automate, the enterprise suite that provides a unified dashboard for managing your entire infrastructure and application lifecycle. It explains how Automate provides visibility into configuration management runs, compliance status, and application delivery pipelines."
+  }
+]

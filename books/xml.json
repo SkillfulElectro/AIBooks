@@ -1,146 +1,122 @@
 [
   {
     "n": 1,
-    "title": "Introduction to XML",
-    "math": "Set theory",
-    "note": "This section introduces XML (eXtensible Markup Language) as a markup language designed to store and transport data. It emphasizes that XML is self-descriptive and does not do anything on its own. The context is general data representation."
+    "title": "What Is XML?",
+    "math": "Markup languages",
+    "note": "This section introduces XML (eXtensible Markup Language) as a markup language and file format for storing and transporting data. It emphasizes that unlike HTML, XML was designed to be self-descriptive and is used to carry data, not to display it."
   },
   {
     "n": 2,
-    "title": "XML Syntax",
-    "math": "Syntax analysis",
-    "note": "Covers the fundamental syntax rules of XML. The lesson explains that all XML documents must have a root element, all tags must be closed, tags are case-sensitive, and attribute values must be quoted."
+    "title": "XML vs. HTML",
+    "math": "Comparative analysis",
+    "note": "This lesson clarifies the key difference between XML and HTML. HTML is about displaying information and has a predefined set of tags. XML is about describing and carrying information, and it has no predefined tags; you invent your own tags that are relevant to your data."
   },
   {
     "n": 3,
-    "title": "XML Tree Structure",
-    "math": "Graph theory",
-    "note": "Explains the tree structure of an XML document, with a root element and a hierarchy of parent-child relationships between elements. This structure is key to how XML documents are parsed and processed."
+    "title": "XML vs. JSON",
+    "math": "Data interchange formats",
+    "note": "This section compares XML to its more modern counterpart, JSON. It explains that while both are used for data interchange, JSON is generally less verbose, easier to parse, and maps more directly to data structures in modern programming languages. The specific use cases where XML is still preferred (e.g., documents, configuration) are discussed."
   },
   {
     "n": 4,
-    "title": "Elements vs. Attributes",
-    "math": "Data modeling",
-    "note": "This lesson discusses the often-debated topic of when to use elements and when to use attributes to store data in an XML document. It covers the general guidelines and trade-offs for each approach."
+    "title": "XML Syntax: Elements and Tags",
+    "math": "XML syntax",
+    "note": "This lesson covers the fundamental syntax of XML. It explains that an XML document is a tree of 'elements', each of which consists of a start-tag, content, and an end-tag (e.g., `<book>My Book</book>`). The rule that all elements must have a closing tag is emphasized."
   },
   {
     "n": 5,
-    "title": "Well-Formed vs. Valid XML",
-    "math": "Logic",
-    "note": "Clarifies the important distinction between a well-formed XML document (which follows XML's syntax rules) and a valid XML document (which also conforms to a specified schema like a DTD or XSD)."
+    "title": "The XML Prolog and Root Element",
+    "math": "Document structure",
+    "note": "This section explains that an XML document must have one single 'root' element that contains all other elements. It also introduces the optional XML Prolog `<?xml version=\"1.0\" encoding=\"UTF-8\"?>`, which specifies the XML version and character encoding."
   },
   {
     "n": 6,
-    "title": "XML Namespaces",
-    "math": "Set theory",
-    "note": "Explains the concept of XML namespaces for avoiding element name conflicts when combining XML documents from different sources. The lesson covers the syntax for declaring namespaces using the `xmlns` attribute."
+    "title": "XML Attributes",
+    "math": "Attributes",
+    "note": "This lesson introduces attributes as a way to provide additional information about an element. Attributes are key-value pairs placed inside the start-tag of an element (e.g., `<book category=\"fiction\">`). The debate over when to use an attribute versus a child element is discussed."
   },
   {
     "n": 7,
-    "title": "XML Entities",
-    "math": "Character encoding",
-    "note": "This section covers the use of predefined entities (like `&lt;` for `<` and `&amp;` for `&`) to represent special characters in XML. It also introduces the concept of creating custom entities in a DTD."
+    "title": "Well-Formed XML",
+    "math": "Syntactic correctness",
+    "note": "This section defines a 'well-formed' XML document. A document is well-formed if it adheres to all the basic XML syntax rules, such as having a single root element, having all tags properly closed and nested, and having attribute values quoted."
   },
   {
     "n": 8,
-    "title": "Comments and CDATA Sections",
-    "math": "Syntax analysis",
-    "note": "Explains how to add comments (`<!-- ... -->`) to an XML document for documentation. The lesson also covers CDATA sections (`<![CDATA[...]]>`) for including blocks of text that should not be parsed as XML."
+    "title": "The Need for Validation",
+    "math": "Schema validation",
+    "note": "This lesson explains that being 'well-formed' is not enough. A 'valid' XML document is one that conforms to a specific set of rules that define the structure and content for that type of document. This is achieved using a schema, like a DTD or XSD."
   },
   {
     "n": 9,
-    "title": "Introduction to DTD",
-    "math": "Formal language theory",
-    "note": "Introduces Document Type Definition (DTD) as the original way to define the legal structure and building blocks of an XML document. The lesson covers the basic syntax for declaring elements and attributes in a DTD."
+    "title": "Validation with DTD",
+    "math": "Document Type Definition (DTD)",
+    "note": "This section introduces the Document Type Definition (DTD) as one way to define the legal building blocks of an XML document. It demonstrates the basic syntax for declaring elements, attributes, and entities in a DTD."
   },
   {
     "n": 10,
-    "title": "DTD Elements and Attributes",
-    "math": "Formal language theory",
-    "note": "Dives deeper into DTDs by explaining how to define the content model of elements (e.g., specifying child elements and their order) and how to declare attributes with their types and default values."
+    "title": "Validation with XML Schema (XSD)",
+    "math": "XML Schema Definition (XSD)",
+    "note": "This lesson introduces XML Schema as the more powerful and flexible successor to DTDs. It explains that XSD is itself written in XML and provides much richer capabilities, most importantly the ability to define specific data types for elements and attributes."
   },
   {
     "n": 11,
-    "title": "Introduction to XML Schema (XSD)",
-    "math": "Formal language theory",
-    "note": "Explains XML Schema (XSD) as a more powerful, flexible, and modern alternative to DTDs for validating XML documents. It highlights the benefits of XSD, such as its use of XML syntax and its support for data types."
+    "title": "Introduction to XPath",
+    "math": "XPath",
+    "note": "This section introduces XPath (XML Path Language) as a language for finding information in an XML document. It uses a path-like syntax to navigate through elements and attributes in an XML document and select specific nodes."
   },
   {
     "n": 12,
-    "title": "XSD Simple and Complex Types",
-    "math": "Formal language theory",
-    "note": "Covers the core concepts of XSD, including defining simple types (with restrictions on base types like strings and integers) and complex types (which define the structure of elements with children and attributes)."
+    "title": "XPath Expressions",
+    "math": "Path expressions",
+    "note": "This lesson demonstrates basic XPath expressions. It covers selecting nodes by name, using `/` to navigate down the tree, `//` to select nodes anywhere in the document, `.` to select the current node, and `..` to select the parent."
   },
   {
     "n": 13,
-    "title": "XSD Indicators and Constraints",
-    "math": "Formal language theory",
-    "note": "Explains how to use indicators (like `all`, `choice`, `sequence`) to control the order and occurrence of elements within a complex type. It also covers constraints like `minOccurs` and `maxOccurs`."
+    "title": "Introduction to XSLT",
+    "math": "XSL Transformations (XSLT)",
+    "note": "This section introduces XSLT (eXtensible Stylesheet Language Transformations) as a language for transforming XML documents into other formats, such as HTML (for display in a browser), plain text, or another XML structure. It is a declarative, template-based language."
   },
   {
     "n": 14,
-    "title": "Styling XML with CSS",
-    "math": "Set theory",
-    "note": "This lesson demonstrates how to use Cascading Style Sheets (CSS) to format and display an XML document directly in a web browser. It explains how to link a CSS file to an XML document using a processing instruction."
+    "title": "How XSLT Works",
+    "math": "Template matching",
+    "note": "This lesson provides a high-level overview of the XSLT process. An XSLT stylesheet contains a set of 'template rules'. The XSLT processor scans the input XML document and, for each node it encounters, it finds the best-matching template in the stylesheet and applies it to produce part of the output."
   },
   {
     "n": 15,
-    "title": "Introduction to XPath",
-    "math": "Graph theory",
-    "note": "Introduces XPath as a language for navigating through elements and attributes in an XML document. The lesson covers the basic syntax of XPath expressions for selecting nodes from the XML tree."
+    "title": "XML Namespaces",
+    "math": "XML Namespaces",
+    "note": "This section explains the purpose of XML Namespaces, which is to avoid element name conflicts when combining XML documents from different sources. A namespace is a unique identifier (typically a URI) that qualifies element and attribute names."
   },
   {
     "n": 16,
-    "title": "XPath Axes and Operators",
-    "math": "Graph theory",
-    "note": "Explores more advanced XPath concepts, including different axes (like `ancestor`, `descendant`, `following-sibling`) for more complex navigation, and operators for filtering selections."
+    "title": "Parsing XML: DOM and SAX",
+    "math": "XML parsing models",
+    "note": "This lesson explains how software applications process XML documents. It contrasts the two main parsing models. The DOM (Document Object Model) parser builds a complete in-memory tree of the entire document, which is easy to navigate but memory-intensive. The SAX (Simple API for XML) parser is an event-based parser that reads the document sequentially and is more memory-efficient."
   },
   {
     "n": 17,
-    "title": "Introduction to XSLT",
-    "math": "Functional programming",
-    "note": "This section explains XSLT (eXtensible Stylesheet Language Transformations) as a language for transforming XML documents into other formats, such as HTML, text, or another XML structure. It covers the basic structure of an XSLT stylesheet."
+    "title": "Parsing XML in Python",
+    "math": "XML parsing in Python",
+    "note": "This lesson provides a practical example of parsing an XML document using Python's built-in `xml.etree.ElementTree` module. It demonstrates how to parse a file, get the root element, and then iterate through its children to extract data."
   },
   {
     "n": 18,
-    "title": "XSLT Templates and `apply-templates`",
-    "math": "Functional programming",
-    "note": "Explains the core concept of template matching in XSLT. The lesson covers how to create templates (`<xsl:template>`) that match specific nodes in the source XML and how to use `<xsl:apply-templates>` to process child nodes recursively."
+    "title": "Use Case: RSS Feeds",
+    "math": "RSS (Really Simple Syndication)",
+    "note": "This section provides a real-world example of XML. It explains that RSS is an XML-based format used by websites and blogs to publish frequently updated content, such as blog posts or news headlines. The basic structure of an RSS feed is shown."
   },
   {
     "n": 19,
-    "title": "Parsing XML with JavaScript (DOM)",
-    "math": "Graph theory",
-    "note": "Explains how to parse and manipulate an XML document using JavaScript in a web browser. The lesson covers using the built-in DOM parser to load an XML file and traverse its nodes to extract data for display on a web page."
+    "title": "Use Case: SOAP Web Services",
+    "math": "SOAP",
+    "note": "This lesson introduces SOAP as a protocol specification for exchanging structured information in the implementation of web services. It explains that SOAP relies heavily on XML to define its message format, consisting of an envelope, a header, and a body."
   },
   {
     "n": 20,
-    "title": "Parsing XML with Server-Side Languages",
-    "math": "Graph theory",
-    "note": "Provides an overview of how to parse XML in a server-side language like Python or Java. It introduces common parsing strategies like DOM (which loads the whole document into memory) and SAX (which processes the document as a stream of events)."
-  },
-  {
-    "n": 21,
-    "title": "XML vs. JSON",
-    "math": "Comparative analysis",
-    "note": "Compares and contrasts XML with JSON (JavaScript Object Notation) as data interchange formats. The lesson discusses verbosity, readability, parsing complexity, and the typical use cases where one might be preferred over the other."
-  },
-  {
-    "n": 22,
-    "title": "Real-World XML: SOAP and Web Services",
-    "math": "API design",
-    "note": "Explores the use of XML in SOAP (Simple Object Access Protocol), a messaging protocol for exchanging structured information in the implementation of web services. It provides a high-level overview of a SOAP message structure."
-  },
-  {
-    "n": 23,
-    "title": "Real-World XML: RSS and Atom Feeds",
-    "math": "Set theory",
-    "note": "Explains how XML is used as the basis for RSS and Atom feeds for syndicating web content. The lesson covers the basic structure of these feeds and how they are used by news aggregators."
-  },
-  {
-    "n": 24,
-    "title": "Real-World XML: SVG",
-    "math": "Vector calculus",
-    "note": "This lesson introduces Scalable Vector Graphics (SVG) as an XML-based vector image format. It demonstrates how SVG's XML structure defines shapes, paths, and styles for creating graphics that scale without losing quality."
+    "title": "Use Case: SVG",
+    "math": "Scalable Vector Graphics (SVG)",
+    "note": "This final lesson explains that SVG is an XML-based vector image format for two-dimensional graphics. Because it is XML, an SVG image can be indexed, searched, scripted, and compressed, and it can be created and edited with any text editor."
   }
 ]

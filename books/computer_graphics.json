@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Computer Graphics",
+    "math": "Coordinate systems",
+    "note": "This section provides a formal definition of Computer Graphics as the field of creating and manipulating visual images using a computer. It covers the wide range of applications, from video games and movies to scientific visualization and computer-aided design (CAD). The distinction between interactive and non-interactive graphics is also made."
+  },
+  {
+    "n": 2,
+    "title": "Raster vs. Vector Graphics",
+    "math": "Bitmap vs. geometric primitives",
+    "note": "This lesson explains the two fundamental ways to represent images. It defines Raster graphics (or bitmaps) as a grid of individual pixels, which are resolution-dependent. It contrasts this with Vector graphics, which represent images using mathematical primitives (lines, curves, polygons) and are infinitely scalable without loss of quality."
+  },
+  {
+    "n": 3,
+    "title": "The Graphics Pipeline",
+    "math": "Pipeline processing model",
+    "note": "This section provides a high-level overview of the Graphics Pipeline, the sequence of steps used to create a 2D representation of a 3D scene. It introduces the main conceptual stages: Application, Geometry Processing, Rasterization, and Pixel Processing. This forms the roadmap for the rest of the course."
+  },
+  {
+    "n": 4,
+    "title": "Essential Math: Vectors and Points",
+    "math": "Linear algebra (vectors)",
+    "note": "This lesson covers the foundational mathematics of vectors. It explains the difference between a point (a location in space) and a vector (a direction and magnitude). Key vector operations, including addition, subtraction, scalar multiplication, magnitude, and normalization, are defined and visualized."
+  },
+  {
+    "n": 5,
+    "title": "Essential Math: The Dot and Cross Product",
+    "math": "Vector operations",
+    "note": "This section details two critical vector operations. The Dot Product is explained as a way to find the angle between two vectors, essential for lighting calculations. The Cross Product is explained as a way to find a vector perpendicular to two other vectors, which is crucial for calculating surface normals."
+  },
+  {
+    "n": 6,
+    "title": "Essential Math: 2D Transformations and Matrices",
+    "math": "Matrix algebra",
+    "note": "This lesson introduces how matrices are used to perform geometric transformations. It demonstrates how 2x2 matrices can represent 2D rotation and scaling, and how translation must be handled separately. The concept of combining transformations through matrix multiplication is introduced."
+  },
+  {
+    "n": 7,
+    "title": "Essential Math: Homogeneous Coordinates",
+    "math": "Projective geometry",
+    "note": "This section explains the solution to the problem of representing 2D translation with matrices. It introduces Homogeneous Coordinates, which add an extra dimension (W) to our points and vectors. This allows all 2D transformations (translation, rotation, and scaling) to be represented by a single 3x3 matrix, enabling them to be easily combined."
+  },
+  {
+    "n": 8,
+    "title": "3D Transformations",
+    "math": "3D matrix transformations",
+    "note": "This lesson extends the concepts of 2D transformations into three dimensions. It shows how translation, rotation (around X, Y, and Z axes), and scaling are represented using 4x4 matrices in a homogeneous coordinate system. The order of transformations is emphasized as being critical."
+  },
+  {
+    "n": 9,
+    "title": "Rasterization: The Bresenham Line Algorithm",
+    "math": "Integer arithmetic, digital differential analyzer",
+    "note": "This section dives into the process of rasterization, or drawing primitives onto a pixel grid. It details the Bresenham line algorithm, a highly efficient method for drawing a line between two points that uses only integer arithmetic, making it ideal for hardware implementation."
+  },
+  {
+    "n": 10,
+    "title": "Polygon Filling Algorithms",
+    "math": "Scan-line algorithms",
+    "note": "This lesson covers techniques for filling the interior of a 2D polygon with color. It explains the scan-line algorithm, which works by iterating through the polygon on a line-by-line basis, finding the intersections of the scan line with the polygon edges, and filling the pixels between these intersection points."
+  },
+  {
+    "n": 11,
+    "title": "Aliasing and Antialiasing",
+    "math": "Signal processing (sampling theory)",
+    "note": "This section explains the problem of aliasing, which manifests as jagged edges ('jaggies') when representing smooth lines or curves on a discrete pixel grid. It then introduces antialiasing as a technique to reduce this effect, typically by rendering the image at a higher resolution and then down-sampling, or by blending the colors of pixels along the edges."
+  },
+  {
+    "n": 12,
+    "title": "3D Polygon Meshes",
+    "math": "Graph theory",
+    "note": "This lesson explains the most common way to represent 3D objects: the polygon mesh. It defines the components of a mesh, including vertices (the points in 3D space), edges (the connections between vertices), and faces (the polygons, usually triangles, that form the surface of the object)."
+  },
+  {
+    "n": 13,
+    "title": "3D Viewing: The Virtual Camera",
+    "math": "Camera models",
+    "note": "This section introduces the concept of a virtual camera as the viewer's eye in the 3D scene. It explains the key parameters that define the camera: its position, the direction it's looking in (the target), and an 'up' vector to define its orientation."
+  },
+  {
+    "n": 14,
+    "title": "3D Viewing: Projections",
+    "math": "Geometric projection",
+    "note": "This lesson explains how a 3D scene is projected onto a 2D view plane. It contrasts Orthographic projection, which does not have perspective and is used in technical drawings, with Perspective projection, which mimics how the human eye works, making objects appear smaller as they get further away."
+  },
+  {
+    "n": 15,
+    "title": "Hidden Surface Removal: The Z-Buffer",
+    "math": "Depth buffering",
+    "note": "This section addresses the problem of determining which surfaces are visible to the camera. It details the Z-buffer (or depth buffer) algorithm, the most common method used in real-time graphics. It works by storing a depth value for each pixel and only drawing a new pixel if it is closer to the camera than the one already stored."
+  },
+  {
+    "n": 16,
+    "title": "Lighting and Shading: The Phong Reflection Model",
+    "math": "Physics-based reflection models",
+    "note": "This lesson introduces a simple, popular model for calculating the color of a point on a surface. It explains the three components of the Phong model: Ambient (background light), Diffuse (light scattered equally in all directions), and Specular (the bright highlight from a light source)."
+  },
+  {
+    "n": 17,
+    "title": "Shading Models: Flat, Gouraud, and Phong Shading",
+    "math": "Interpolation",
+    "note": "This section explains different techniques for applying a lighting model across a polygon mesh. It contrasts Flat shading (one color per polygon), Gouraud shading (interpolating colors from the vertices), and Phong shading (interpolating surface normals and calculating lighting per-pixel), showing the increasing quality and computational cost of each."
+  },
+  {
+    "n": 18,
+    "title": "Texture Mapping",
+    "math": "UV mapping",
+    "note": "This lesson explains texture mapping as a method to add rich surface detail to a 3D model. It describes the process of 'unwrapping' the 3D model's surface onto a 2D texture image using UV coordinates, allowing the image to be applied to the model like a decal."
+  },
+  {
+    "n": 19,
+    "title": "Advanced Rendering: Ray Tracing",
+    "math": "Ray-plane intersection",
+    "note": "This section introduces Ray Tracing as an alternative, more physically accurate rendering technique. It explains the basic algorithm: for each pixel on the screen, a ray is cast from the camera into the scene, and the color of the pixel is determined by the first object the ray intersects. This naturally handles shadows, reflections, and refractions."
+  },
+  {
+    "n": 20,
+    "title": "Graphics APIs and Shaders",
+    "math": "GPU programming",
+    "note": "This final lesson provides an overview of modern graphics APIs like OpenGL and DirectX. It explains the role of the Graphics Processing Unit (GPU) as a highly parallel processor specialized for graphics tasks. It introduces the concept of 'shaders'—small programs that run on the GPU—and defines the roles of the Vertex Shader (for transforming vertices) and the Fragment Shader (for calculating pixel colors)."
+  }
+]

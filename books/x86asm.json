@@ -1,242 +1,122 @@
 [
   {
     "n": 1,
-    "title": "Binary and Hexadecimal Systems",
-    "math": "Base conversion, modular arithmetic",
-    "note": "Teach conversion between decimal, binary, and hexadecimal number systems using division/remainder method and positional notation. Cover how x86 processors internally represent numbers in binary and why hexadecimal is used in assembly programming for memory addresses and instruction encoding."
+    "title": "What Is Assembly Language?",
+    "math": "Low-level programming",
+    "note": "This section defines Assembly Language as a low-level programming language that has a very strong correspondence between the language's statements and the architecture's machine code instructions. It explains that assembly is a human-readable representation of machine code, specific to a particular computer architecture."
   },
   {
     "n": 2,
-    "title": "Two's Complement Representation",
-    "math": "Binary arithmetic, complement operations",
-    "note": "Explain signed integer representation using two's complement in x86 architecture. Teach how to negate binary numbers by inverting bits and adding 1, demonstrate range limits for 8-bit, 16-bit, and 32-bit signed integers, and show overflow detection in arithmetic operations."
+    "title": "Why Learn Assembly?",
+    "math": "Computer science education",
+    "note": "This lesson discusses the motivations for learning assembly language in an age of high-level languages. These include understanding how computers work at a hardware level, writing highly optimized code for performance-critical tasks, and for reverse engineering and security research."
   },
   {
     "n": 3,
-    "title": "x86 Architecture Overview",
-    "math": "Boolean logic, finite state machines",
-    "note": "Introduce Von Neumann architecture components: CPU, memory, I/O. Explain fetch-decode-execute cycle, instruction pointer operation, and how x86 processors execute machine code sequentially. Cover difference between 16-bit, 32-bit, and 64-bit x86 architectures."
+    "title": "The x86 Architecture: Registers",
+    "math": "CPU registers",
+    "note": "This lesson introduces the core components of the 32-bit x86 CPU architecture. It focuses on the general-purpose registers (EAX, EBX, ECX, EDX, ESI, EDI), which are small, fast storage locations directly on the CPU used to hold data for operations."
   },
   {
     "n": 4,
-    "title": "General Purpose Registers",
-    "math": "Set theory, mapping functions",
-    "note": "Detail the eight 32-bit registers (EAX, EBX, ECX, EDX, ESI, EDI, EBP, ESP) and their 16-bit/8-bit subdivisions. Explain register naming conventions, special purposes (accumulator, counter, stack pointer), and how to access different portions of registers in instructions."
+    "title": "Special-Purpose Registers: EIP, ESP, EBP",
+    "math": "Instruction pointer, stack pointer",
+    "note": "This section covers the key special-purpose registers. The Instruction Pointer (EIP) holds the memory address of the next instruction to be executed. The Stack Pointer (ESP) points to the top of the stack. The Base Pointer (EBP) is used to reference arguments and local variables on the stack."
   },
   {
     "n": 5,
-    "title": "Memory Addressing Modes",
-    "math": "Linear algebra, pointer arithmetic",
-    "note": "Teach five x86 addressing modes: immediate (MOV EAX, 5), register (MOV EAX, EBX), direct (MOV EAX, [0x1234]), register indirect (MOV EAX, [EBX]), and indexed (MOV EAX, [EBX+ECX*4+8]). Show syntax and byte calculations for each mode."
+    "title": "The EFLAGS Register",
+    "math": "Status flags",
+    "note": "This lesson explains the EFLAGS register, which holds a set of status flags that reflect the result of arithmetic operations. Key flags include the Zero Flag (ZF), set if a result is zero, and the Carry Flag (CF), set if an operation resulted in a carry out."
   },
   {
     "n": 6,
-    "title": "MOV and Data Transfer",
-    "math": "Function composition, data flow",
-    "note": "Explain MOV instruction syntax and operand rules: source to destination, size matching requirements, memory-to-memory transfer restrictions. Cover XCHG for swapping, LEA for address calculation, and demonstrate moving bytes, words, and doublewords between registers and memory."
+    "title": "Tools: Assembler, Linker, Debugger",
+    "math": "Compiler toolchain",
+    "note": "This section introduces the essential tools for assembly programming. The Assembler (like NASM) translates assembly code into machine code (object files). The Linker (like ld) combines object files into a final executable. The Debugger (like GDB) is used to inspect the program's execution."
   },
   {
     "n": 7,
-    "title": "Basic Arithmetic Instructions",
-    "math": "Integer arithmetic, overflow theory",
-    "note": "Teach ADD, SUB, INC, DEC instructions with immediate values and register operands. Explain carry flag (CF) and overflow flag (OF) behavior, demonstrate multi-precision arithmetic using ADC/SBB for adding 64-bit numbers using 32-bit operations."
+    "title": "Your First Program: 'Hello, World!' with Linux System Calls",
+    "math": "System calls",
+    "note": "This lesson provides a complete 'Hello, World!' example written in NASM for the Linux operating system. It demonstrates how to use Linux system calls to perform I/O operations like writing to the console and exiting the program. The `int 0x80` instruction is used to trigger the system call."
   },
   {
     "n": 8,
-    "title": "Multiplication and Division",
-    "math": "Modular arithmetic, integer division",
-    "note": "Cover MUL/IMUL for unsigned/signed multiplication, explaining EDX:EAX result pair for 32-bit multiplication. Teach DIV/IDIV division with dividend in EDX:EAX, quotient in EAX, remainder in EDX. Include CDQ sign extension and division overflow conditions."
+    "title": "Data Movement: The `MOV` Instruction",
+    "math": "Data transfer",
+    "note": "This section introduces the `MOV` instruction, one of the most fundamental instructions. It is used to copy data from a source operand to a destination operand. The operands can be registers, memory locations, or immediate values."
   },
   {
     "n": 9,
-    "title": "Bitwise Logic Operations",
-    "math": "Boolean algebra, truth tables",
-    "note": "Explain AND, OR, XOR, NOT operations on binary data. Demonstrate bit masking to clear/set/toggle specific bits, bit testing with TEST instruction, and practical uses like checking even/odd numbers or extracting bit fields from packed data."
+    "title": "Addressing Modes",
+    "math": "Memory addressing modes",
+    "note": "This lesson explains the different ways an instruction can access data in memory. It covers direct addressing (using a variable name) and indirect addressing (using a register to hold the address of the data), which is more flexible."
   },
   {
     "n": 10,
-    "title": "Shift and Rotate Instructions",
-    "math": "Binary multiplication/division by powers of 2",
-    "note": "Teach SHL/SHR for logical shifts, SAL/SAR for arithmetic shifts preserving sign bit. Cover ROL/ROR circular rotations and RCL/RCR rotations through carry flag. Show efficient multiplication/division by powers of 2 using shifts."
+    "title": "Arithmetic Instructions: `ADD` and `SUB`",
+    "math": "Integer arithmetic",
+    "note": "This section covers the basic arithmetic instructions. `ADD` is used for addition, and `SUB` is used for subtraction. The `INC` (increment) and `DEC` (decrement) instructions for adding or subtracting 1 are also introduced."
   },
   {
     "n": 11,
-    "title": "FLAGS Register and Status Bits",
-    "math": "Boolean predicates, state representation",
-    "note": "Detail EFLAGS register bits: carry (CF), parity (PF), auxiliary (AF), zero (ZF), sign (SF), overflow (OF). Explain how arithmetic/logic instructions modify flags and demonstrate reading flag states using PUSHF/POPF or conditional instructions."
+    "title": "Logical Instructions: `AND`, `OR`, `XOR`",
+    "math": "Bitwise operations",
+    "note": "This lesson covers the instructions for performing bitwise logical operations. `AND`, `OR`, and `XOR` perform their respective operations on the bits of their operands. These are useful for manipulating individual bits."
   },
   {
     "n": 12,
-    "title": "CMP and Conditional Testing",
-    "math": "Relational operators, inequality comparisons",
-    "note": "Explain CMP as subtraction without storing result, only setting flags. Teach TEST as AND without result storage. Show how to compare signed/unsigned values and demonstrate flag combinations for different comparison outcomes (equal, greater, less)."
+    "title": "Control Flow: The `CMP` and `JMP` Instructions",
+    "math": "Comparison and branching",
+    "note": "This section introduces the foundation of control flow. The `CMP` instruction compares two operands (by subtracting them) and sets the flags in the EFLAGS register accordingly. The `JMP` instruction performs an unconditional jump to another location in the code."
   },
   {
     "n": 13,
-    "title": "Unconditional Jump Instructions",
-    "math": "Graph theory, control flow graphs",
-    "note": "Teach JMP instruction with direct addressing (JMP label), register indirect (JMP EAX), and memory indirect (JMP [EBX]). Explain near vs far jumps, relative vs absolute addressing, and how assembler calculates jump offsets in machine code."
+    "title": "Conditional Jumps",
+    "math": "Conditional branching",
+    "note": "This lesson explains how to create conditional logic. Conditional jump instructions (like `JE` for 'jump if equal', `JNE` for 'jump if not equal', `JG` for 'jump if greater') check the status flags set by a previous `CMP` instruction and only jump if the condition is met."
   },
   {
     "n": 14,
-    "title": "Conditional Jump Instructions",
-    "math": "Propositional logic, conditional statements",
-    "note": "Cover all conditional jumps: JE/JZ, JNE/JNZ, JG/JL for signed, JA/JB for unsigned comparisons. Explain flag combinations each jump tests, demonstrate if-then-else structures, and show signed vs unsigned comparison importance with negative numbers."
+    "title": "The Stack",
+    "math": "Stack data structure",
+    "note": "This section explains the stack, a LIFO (Last-In, First-Out) data structure in memory that is essential for function calls. It grows downwards in memory. The `PUSH` instruction adds an item to the top of the stack, and the `POP` instruction removes an item."
   },
   {
     "n": 15,
-    "title": "LOOP Instructions",
-    "math": "Iteration, loop invariants",
-    "note": "Teach LOOP/LOOPE/LOOPNE instructions using ECX as counter. Explain automatic ECX decrement, conditional loop termination with zero flag, and demonstrate counted loops for array processing. Show equivalent implementation using DEC ECX and JNZ."
+    "title": "Functions: `CALL` and `RET`",
+    "math": "Function calls",
+    "note": "This lesson introduces the instructions for creating functions. The `CALL` instruction pushes the return address onto the stack and then jumps to the function's code. The `RET` instruction at the end of the function pops the return address off the stack and jumps back to it."
   },
   {
     "n": 16,
-    "title": "Stack Operations Fundamentals",
-    "math": "Stack data structure, LIFO principle",
-    "note": "Explain stack growing downward in memory, ESP pointing to top. Teach PUSH decrements ESP by 4 then writes value, POP reads value then increments ESP by 4. Show stack frame visualization and alignment requirements for 32-bit operations."
+    "title": "The Stack Frame",
+    "math": "Stack frames",
+    "note": "This section explains the 'stack frame', which is a dedicated area on the stack for a single function call. It typically contains the function's arguments, local variables, and the return address. The EBP register is used as a fixed base pointer to access items in the stack frame."
   },
   {
     "n": 17,
-    "title": "Stack Frame Creation",
-    "math": "Function composition, variable scoping",
-    "note": "Teach standard function prologue: PUSH EBP, MOV EBP ESP to create stack frame. Explain local variable allocation with SUB ESP, accessing parameters at [EBP+8] and beyond, locals at [EBP-4] and below. Show epilogue with MOV ESP EBP, POP EBP."
+    "title": "Calling Conventions: cdecl",
+    "math": "Calling conventions",
+    "note": "This lesson introduces calling conventions, which are a set of rules about how functions are called in a particular programming language. It covers the `cdecl` convention (used by C), which specifies that function arguments are pushed onto the stack from right to left and that the caller is responsible for cleaning up the stack after the call returns."
   },
   {
     "n": 18,
-    "title": "CALL and RET Instructions",
-    "math": "Function calls, return addresses",
-    "note": "Explain CALL pushes return address (next instruction) onto stack then jumps to target. RET pops address from stack into EIP. Demonstrate near calls with relative/absolute addressing and parameter passing conventions via stack or registers."
+    "title": "Interfacing with C",
+    "math": "Language interoperability",
+    "note": "This section demonstrates how to call C library functions (like `printf`) from an assembly program. By following the `cdecl` calling convention, you can push arguments onto the stack and then call a C function, allowing you to leverage existing C code."
   },
   {
     "n": 19,
-    "title": "Calling Conventions cdecl",
-    "math": "Parameter passing, stack cleanup",
-    "note": "Detail C declaration convention: parameters pushed right-to-left, caller cleans stack with ADD ESP after call, return value in EAX. Show function call example with multiple parameters and demonstrate ESP adjustment after return."
+    "title": "Introduction to 64-bit (x86-64) Assembly",
+    "math": "64-bit architecture",
+    "note": "This lesson provides an overview of the key differences in 64-bit assembly. It introduces the new general-purpose registers (R8-R15) and the extension of the old registers to 64 bits (e.g., EAX becomes RAX)."
   },
   {
     "n": 20,
-    "title": "Calling Conventions stdcall",
-    "math": "Stack frame management, callee cleanup",
-    "note": "Explain Windows API standard call: parameters pushed right-to-left, callee cleans stack using RET n instruction. Compare with cdecl showing code size advantages and demonstrate Windows API function calls with proper cleanup."
-  },
-  {
-    "n": 21,
-    "title": "String Instructions Overview",
-    "math": "Array indexing, pointer arithmetic",
-    "note": "Introduce string instruction prefix concept and direction flag (DF) controlling increment/decrement. Explain ESI as source pointer, EDI as destination pointer, and ECX as counter for repeated operations. Cover CLD/STD for direction control."
-  },
-  {
-    "n": 22,
-    "title": "MOVS String Copy",
-    "math": "Memory copying, array traversal",
-    "note": "Teach MOVSB/MOVSW/MOVSD for byte/word/dword copying from [ESI] to [EDI] with automatic pointer increment/decrement. Demonstrate REP prefix for block memory copy using ECX counter and show efficient memcpy implementation."
-  },
-  {
-    "n": 23,
-    "title": "CMPS String Comparison",
-    "math": "String comparison algorithms, lexicographic ordering",
-    "note": "Explain CMPSB/CMPSW/CMPSD comparing memory at [ESI] and [EDI], setting flags like CMP. Teach REPE/REPZ prefix for finding first difference and demonstrate strcmp implementation comparing null-terminated strings byte-by-byte."
-  },
-  {
-    "n": 24,
-    "title": "SCAS String Scanning",
-    "math": "Linear search, pattern matching",
-    "note": "Cover SCASB/SCASW/SCASD comparing AL/AX/EAX with memory at [EDI]. Explain REPNE prefix for finding first match and demonstrate strchr implementation searching for specific character in string using SCASB with REPNE."
-  },
-  {
-    "n": 25,
-    "title": "Array Element Access",
-    "math": "Array indexing formulas, offset calculation",
-    "note": "Teach base + index * scale addressing for arrays. Show accessing array[i] as [base + i * element_size] where element_size is 1/2/4/8 bytes. Demonstrate iteration through integer array using scaled index addressing mode [EBX + ECX*4]."
-  },
-    {
-    "n": 26,
-    "title": "Multidimensional Array Layout",
-    "math": "Matrix representation, row/column major ordering",
-    "note": "Explain row-major storage where array[i][j] is at base + (i * cols + j) * element_size. Show calculation for 2D array element access, demonstrate nested loop traversal, and compare with column-major layout used in Fortran."
-  },
-  {
-    "n": 27,
-    "title": "Linux System Calls",
-    "math": "Operating system interfaces, interrupt vectors",
-    "note": "Teach INT 0x80 interrupt for Linux system calls with call number in EAX, parameters in EBX/ECX/EDX/ESI/EDI. Show sys_write (EAX=4) for console output, sys_exit (EAX=1) for program termination with examples writing strings and reading input."
-  },
-  {
-    "n": 28,
-    "title": "Windows API Calls",
-    "math": "Dynamic linking, import tables",
-    "note": "Explain calling Windows DLL functions using CALL with import address table. Show MessageBoxA parameters pushed on stack in reverse order, demonstrate GetStdHandle/WriteConsole for console I/O with proper STDCALL cleanup."
-  },
-  {
-    "n": 29,
-    "title": "Software Interrupts",
-    "math": "Interrupt vectors, exception handling",
-    "note": "Explain interrupt vector table at memory address 0, each entry containing segment:offset. Teach INT instruction saving FLAGS/CS/IP on stack, jumping through vector. Show DOS INT 21h services and BIOS INT 10h video services for legacy systems."
-  },
-  {
-    "n": 30,
-    "title": "Hardware Interrupt Handling",
-    "math": "Asynchronous events, interrupt priority",
-    "note": "Describe external hardware triggering CPU interrupts via PIC (8259A). Explain interrupt acknowledgment, automatic register saving, and IRET instruction restoring FLAGS/CS/IP. Show keyboard interrupt handler example reading scan codes from port 0x60."
-  },
-  {
-    "n": 31,
-    "title": "Inline Assembly in C",
-    "math": "Language interoperability, register allocation",
-    "note": "Teach GCC inline assembly syntax: asm(\"instruction\" : outputs : inputs : clobbers). Show constraint letters (r for register, m for memory), demonstrate optimized string length function using SCASB within C code with proper register preservation."
-  },
-  {
-    "n": 32,
-    "title": "NASM Assembler Syntax",
-    "math": "Assembly language parsing, symbol resolution",
-    "note": "Explain NASM directive syntax: section .data/.text/.bss, global/extern for symbols, db/dw/dd for data definition. Show complete Hello World program with proper sections, demonstrate assembly and linking commands for executable creation."
-  },
-  {
-    "n": 33,
-    "title": "MASM Assembler Differences",
-    "math": "Syntax variations, macro processing",
-    "note": "Cover Microsoft MASM syntax differences: .data/.code directives, PROC/ENDP for procedures, OFFSET operator vs LEA. Demonstrate same program in MASM syntax, explain INVOKE for high-level procedure calls with automatic parameter handling."
-  },
-  {
-    "n": 34,
-    "title": "Debugging with GDB",
-    "math": "Program state inspection, breakpoint logic",
-    "note": "Teach GDB commands for assembly debugging: break *address for breakpoints, stepi for single instruction, info registers to view CPU state, x/10x $esp to examine stack memory. Show tracking register changes through program execution."
-  },
-  {
-    "n": 35,
-    "title": "FPU x87 Stack Architecture",
-    "math": "Floating-point arithmetic, IEEE 754 standard",
-    "note": "Explain x87 FPU with 8-register stack ST(0)-ST(7), 80-bit extended precision format. Teach FLD/FST for load/store, FADD/FSUB/FMUL/FDIV for arithmetic on stack top. Show converting between integer and float using FILD/FISTP instructions."
-  },
-  {
-    "n": 36,
-    "title": "SSE Parallel Operations",
-    "math": "Vector arithmetic, SIMD parallelism",
-    "note": "Introduce SSE 128-bit XMM registers processing 4 floats simultaneously. Teach MOVAPS for aligned loads, ADDPS/MULPS for parallel arithmetic. Demonstrate 4x4 matrix multiplication using SSE instructions for performance improvement over scalar FPU code."
-  },
-  {
-    "n": 37,
-    "title": "Memory Alignment Optimization",
-    "math": "Cache line theory, memory bandwidth",
-    "note": "Explain CPU cache lines (typically 64 bytes), aligned vs unaligned memory access penalties. Show using ALIGN directive for data section, demonstrate performance difference between aligned and unaligned SSE loads with timing measurements."
-  },
-  {
-    "n": 38,
-    "title": "Code Optimization Techniques",
-    "math": "Pipeline theory, instruction scheduling",
-    "note": "Teach loop unrolling to reduce branch overhead, instruction pairing for superscalar execution, register allocation to minimize memory access. Demonstrate optimizing array sum with unrolled loop processing multiple elements per iteration."
-  },
-  {
-    "n": 39,
-    "title": "Position Independent Code",
-    "math": "Relocation theory, address space layout",
-    "note": "Explain PIC for shared libraries using relative addressing. Teach CALL/POP trick to get current EIP, Global Offset Table (GOT) for external symbols. Show creating shared library with -fPIC flag avoiding absolute addresses."
-  },
-  {
-    "n": 40,
-    "title": "Buffer Overflow Exploitation",
-    "math": "Stack layout, return address overwriting",
-    "note": "Demonstrate vulnerable strcpy overflowing local buffer to overwrite return address. Show crafting exploit payload with NOP sled and shellcode, explain modern protections: stack canaries, ASLR, DEP/NX bit preventing code execution on stack."
+    "title": "The x86-64 Calling Convention",
+    "math": "System V AMD64 ABI",
+    "note": "This final lesson explains the major change in 64-bit mode. The calling convention is different: instead of passing all arguments on the stack, the first six integer arguments are passed in specific registers (RDI, RSI, RDX, RCX, R8, R9). This is much more efficient than using the stack."
   }
 ]

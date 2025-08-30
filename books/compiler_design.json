@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Language Translators",
+    "math": "Formal languages",
+    "note": "This section introduces the concept of a language translator as a program that converts source code from one language to another. It defines a Compiler as a translator that converts a high-level language (like C++ or Java) into a low-level language (like machine code). The distinction between a compiler (which translates the whole program at once) and an interpreter (which executes it line-by-line) is clarified."
+  },
+  {
+    "n": 2,
+    "title": "The Phases of a Compiler",
+    "math": "Pipeline processing model",
+    "note": "This lesson provides a high-level overview of the entire compilation process, broken down into a series of phases. It introduces the main front-end phases (Lexical Analysis, Syntax Analysis, Semantic Analysis) and back-end phases (Intermediate Code Generation, Code Optimization, Code Generation). The role of the Symbol Table and Error Handler across all phases is also introduced."
+  },
+  {
+    "n": 3,
+    "title": "Phase 1: Lexical Analysis (Scanning)",
+    "math": "String processing",
+    "note": "This section defines the role of the Lexical Analyzer (or Scanner) as the first phase of the compiler. Its job is to read the source code as a stream of characters and group them into meaningful sequences called 'lexemes', which are then represented by 'tokens'. For example, the character sequence `x = 10;` would be broken into tokens for identifier, assignment operator, number, and semicolon."
+  },
+  {
+    "n": 4,
+    "title": "Tokens, Patterns, and Lexemes",
+    "math": "Set theory",
+    "note": "This lesson clarifies the terminology of lexical analysis. A 'lexeme' is the actual sequence of characters in the source code. A 'token' is a name for a category of lexemes (e.g., `identifier`, `number`). A 'pattern' is the rule that describes the set of strings that can form a particular lexeme, typically defined using regular expressions."
+  },
+  {
+    "n": 5,
+    "title": "Regular Expressions and Finite Automata",
+    "math": "Regular expressions, Finite Automata (DFA, NFA)",
+    "note": "This section explains the formalisms used to specify and recognize tokens. It introduces Regular Expressions as the standard notation for defining the patterns of tokens. It then explains how these patterns are recognized by a mathematical model called a Finite Automaton, which can be either Non-deterministic (NFA) or Deterministic (DFA)."
+  },
+  {
+    "n": 6,
+    "title": "Phase 2: Syntax Analysis (Parsing)",
+    "math": "Context-Free Grammars (CFGs)",
+    "note": "This lesson introduces the role of the Syntax Analyzer (or Parser). The parser receives the sequence of tokens from the lexical analyzer and verifies that it conforms to the grammatical rules of the source language. It typically produces a tree-like representation of the source code, called a parse tree or abstract syntax tree (AST)."
+  },
+  {
+    "n": 7,
+    "title": "Context-Free Grammars",
+    "math": "Formal grammar theory",
+    "note": "This section explains Context-Free Grammars (CFGs) as the formal notation used to specify the syntax of a programming language. It covers the components of a grammar: a set of terminals (tokens), a set of non-terminals (syntactic variables), a start symbol, and a set of production rules."
+  },
+  {
+    "n": 8,
+    "title": "Top-Down Parsing",
+    "math": "Recursive algorithms",
+    "note": "This lesson introduces Top-Down Parsing, a parsing strategy that attempts to construct a parse tree from the top (the start symbol) down to the leaves (the tokens). It explains the concept of Recursive Descent Parsing, where a set of mutually recursive procedures is used to process the input."
+  },
+  {
+    "n": 9,
+    "title": "Bottom-Up Parsing",
+    "math": "Shift-reduce algorithms",
+    "note": "This section covers Bottom-Up Parsing, which works in the opposite direction of top-down parsing. It attempts to construct a parse tree from the leaves (tokens) up to the root (start symbol). The most common bottom-up method, Shift-Reduce parsing, is introduced."
+  },
+  {
+    "n": 10,
+    "title": "Parser Generators: Yacc and Bison",
+    "math": "Code generation",
+    "note": "This lesson introduces tools that automate the creation of a parser. It explains how tools like Yacc (Yet Another Compiler-Compiler) or its GNU version, Bison, take a context-free grammar specification as input and generate a C-code implementation of a parser."
+  },
+  {
+    "n": 11,
+    "title": "Phase 3: Semantic Analysis",
+    "math": "Type theory, logic",
+    "note": "This section explains the role of the Semantic Analyzer. Its job is to check the source code for semantic errors—things that are syntactically correct but don't make logical sense. The primary task of this phase is type checking, ensuring that operators are applied to compatible operands."
+  },
+  {
+    "n": 12,
+    "title": "Type Checking",
+    "math": "Type systems",
+    "note": "This lesson dives deeper into type checking. It explains how the semantic analyzer uses the grammatical structure and the information in the symbol table to verify that each operator has matching operands. For example, it would flag an error if a user tried to add an array to a function."
+  },
+  {
+    "n": 13,
+    "title": "The Symbol Table",
+    "math": "Hash tables, data structures",
+    "note": "This section details the Symbol Table, a crucial data structure used throughout all phases of the compiler. It is used to store information about all the identifiers (variables, function names, etc.) in the source program, such as their type, scope, and memory location."
+  },
+  {
+    "n": 14,
+    "title": "Phase 4: Intermediate Code Generation",
+    "math": "Intermediate Representation (IR)",
+    "note": "This lesson explains the process of translating the source code into a machine-independent intermediate representation (IR). This IR makes it easier to perform optimizations and retarget the compiler to different machine architectures. The IR is simpler than the source language but higher-level than machine code."
+  },
+  {
+    "n": 15,
+    "title": "Three-Address Code",
+    "math": "Instruction sets",
+    "note": "This section introduces Three-Address Code (TAC) as a common type of intermediate representation. In TAC, most instructions have at most three operands, of the form `result = operand1 op operand2`. This format is easy to generate and easy to translate into final machine code."
+  },
+  {
+    "n": 16,
+    "title": "Phase 5: Code Optimization",
+    "math": "Algorithm optimization",
+    "note": "This section covers the Code Optimization phase, which attempts to improve the intermediate code to make it run faster and/or take up less space. It explains that optimizations should be 'safe'—they must not change the output of the program."
+  },
+  {
+    "n": 17,
+    "title": "Principal Sources of Optimization",
+    "math": "Code analysis",
+    "note": "This lesson details common optimization techniques. It covers local optimizations (within a single basic block) and global optimizations (across basic blocks). Key techniques like common subexpression elimination, constant folding, dead code elimination, and loop optimizations are explained."
+  },
+  {
+    "n": 18,
+    "title": "Phase 6: Code Generation",
+    "math": "Machine architecture",
+    "note": "This final phase of the compiler takes the optimized intermediate code as input and maps it to the target machine language. This phase must be aware of the specific architecture of the target machine, including its instruction set and registers."
+  },
+  {
+    "n": 19,
+    "title": "Issues in Code Generation",
+    "math": "Resource allocation",
+    "note": "This lesson discusses the main challenges in the code generation phase. These include Instruction Selection (choosing the best machine instructions to implement the IR), Register Allocation (deciding which variables to keep in fast CPU registers), and Instruction Ordering."
+  },
+  {
+    "n": 20,
+    "title": "Run-Time Environments",
+    "math": "Memory management",
+    "note": "This section explains how a compiler manages memory for the program it compiles. It covers the typical memory layout of a running program and the difference between static allocation (for global data) and stack allocation (for function call data via 'activation records'). The role of the heap for dynamic memory is also introduced."
+  }
+]

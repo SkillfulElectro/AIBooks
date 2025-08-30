@@ -1,0 +1,170 @@
+[
+  {
+    "n": 1,
+    "title": "The Synchronous Web: A World of Full Page Reloads",
+    "math": "Synchronous processing model",
+    "note": "This section explains the traditional, synchronous model of web interaction. It details how a user action (like clicking a link or submitting a form) triggers a full request to the server, which then returns a completely new HTML page, causing a full page reload and a noticeable delay for the user."
+  },
+  {
+    "n": 2,
+    "title": "The Problem with the Synchronous Model",
+    "math": "User experience (UX) analysis",
+    "note": "This lesson analyzes the drawbacks of the synchronous web model from a user experience perspective. It highlights issues such as high latency, a disjointed user flow, and inefficient use of bandwidth, as the entire page must be rebuilt even for minor data updates."
+  },
+  {
+    "n": 3,
+    "title": "What is AJAX?",
+    "math": "Asynchronous communication principles",
+    "note": "This section introduces AJAX (Asynchronous JavaScript and XML) as a paradigm shift in web development. It explains that AJAX is not a single technology, but a set of techniques that allow a web page to send and receive data from a server asynchronously (in the background) without interfering with the display and behavior of the existing page."
+  },
+  {
+    "n": 4,
+    "title": "The Core Engine: The XMLHttpRequest (XHR) Object",
+    "math": "Object-oriented programming (OOP)",
+    "note": "This lesson introduces the `XMLHttpRequest` object, the original browser API that makes AJAX possible. It explains that this object is responsible for creating a connection to a server, sending a request, and receiving data back, all managed through JavaScript."
+  },
+  {
+    "n": 5,
+    "title": "The AJAX Request/Response Flow",
+    "math": "State machines",
+    "note": "This section details the step-by-step process of an AJAX communication. It covers: 1. A browser event triggers a JavaScript call. 2. An `XMLHttpRequest` object is created and configured. 3. The request is sent to the server. 4. The server processes the request and sends a response. 5. The JavaScript callback function processes the response and updates the DOM."
+  },
+  {
+    "n": 6,
+    "title": "Data Formats: XML vs. JSON",
+    "math": "Data serialization",
+    "note": "This lesson compares the two primary data formats used in AJAX. It explains the structure of XML (eXtensible Markup Language) and why it was initially used. It then introduces JSON (JavaScript Object Notation), explaining its simpler syntax, ease of parsing in JavaScript, and why it has become the de facto standard for modern web APIs."
+  },
+  {
+    "n": 7,
+    "title": "Classic AJAX: Creating an XHR Instance",
+    "math": "Object instantiation",
+    "note": "This lesson provides the first step in making a classic AJAX call. It shows how to create an instance of the `XMLHttpRequest` object in JavaScript, which will be used to configure and send the HTTP request. The context is setting up the foundational object for the communication."
+  },
+  {
+    "n": 8,
+    "title": "Classic AJAX: The `open()` Method",
+    "math": "HTTP request methods (GET, POST)",
+    "note": "This section explains how to initialize a newly created request using the `open()` method of the XHR object. It details the parameters of this method, including the HTTP method (e.g., 'GET', 'POST'), the server URL, and a boolean indicating if the request should be asynchronous."
+  },
+  {
+    "n": 9,
+    "title": "Classic AJAX: Handling Server Responses",
+    "math": "Event handling",
+    "note": "This lesson covers how to process the response from the server. It introduces the `onreadystatechange` event handler, which is called whenever the `readyState` property changes. The different `readyState` values (0-4) are explained, with a focus on state 4, which indicates the request is complete."
+  },
+  {
+    "n": 10,
+    "title": "Classic AJAX: The `send()` Method",
+    "math": "Data transmission",
+    "note": "This section explains how to dispatch the request to the server using the `send()` method. It demonstrates that for GET requests, the argument is typically null, while for POST requests, the data to be sent to the server is passed as the argument."
+  },
+  {
+    "n": 11,
+    "title": "Classic AJAX: Checking HTTP Status",
+    "math": "HTTP status codes",
+    "note": "This lesson focuses on verifying if the completed request was successful. It explains the `status` property of the XHR object, detailing how to check for a status of 200 (OK) to confirm success. Other common codes like 404 (Not Found) and 500 (Internal Server Error) are also discussed."
+  },
+  {
+    "n": 12,
+    "title": "Classic AJAX: Accessing Response Data",
+    "math": "String and XML parsing",
+    "note": "This section covers how to extract the data returned by the server. It explains the `responseText` property, which contains the server response as a string (typically JSON), and the `responseXML` property, used for parsing XML responses."
+  },
+  {
+    "n": 13,
+    "title": "Complete GET Request Example",
+    "math": "Procedural programming",
+    "note": "This lesson provides a complete, commented code example of making a GET request using `XMLHttpRequest`. It combines all the previous steps: creating the object, opening the connection, setting the `onreadystatechange` handler, and sending the request to fetch data from a server."
+  },
+  {
+    "n": 14,
+    "title": "Complete POST Request Example",
+    "math": "HTTP headers and body",
+    "note": "This lesson demonstrates how to send data to a server using a POST request. It shows how to set the `Content-Type` header using `setRequestHeader()` to inform the server about the data format (e.g., 'application/json') and how to pass the data payload in the `send()` method."
+  },
+  {
+    "n": 15,
+    "title": "Modern AJAX: Introduction to the `fetch` API",
+    "math": "API abstraction",
+    "note": "This section introduces the modern `fetch` API as a simpler, more powerful alternative to `XMLHttpRequest`. It explains that `fetch` is promise-based, which makes handling asynchronous operations more logical and avoids the complexities of 'callback hell'."
+  },
+  {
+    "n": 16,
+    "title": "Understanding Promises",
+    "math": "Asynchronous programming patterns",
+    "note": "This lesson explains the concept of a Promise, which is a fundamental building block of modern JavaScript and the `fetch` API. A Promise is an object representing the eventual completion (or failure) of an asynchronous operation. The states of a Promise (pending, fulfilled, rejected) are detailed."
+  },
+  {
+    "n": 17,
+    "title": "Making a GET Request with `fetch`",
+    "math": "Promise chaining",
+    "note": "This lesson demonstrates how to make a basic GET request using `fetch`. It shows how the `fetch()` call returns a Promise, and how the `.then()` method is used to handle the `Response` object when the Promise resolves. This provides a cleaner way to handle the asynchronous response."
+  },
+  {
+    "n": 18,
+    "title": "The `fetch` Response Object",
+    "math": "Data streaming",
+    "note": "This section details the `Response` object returned by a successful `fetch` call. It explains that the response body is a stream and must be read using methods like `.json()`, `.text()`, or `.blob()`, which themselves return Promises that resolve with the actual data content."
+  },
+  {
+    "n": 19,
+    "title": "Error Handling with `fetch`",
+    "math": "Exception handling",
+    "note": "This lesson explains how to handle errors in a `fetch` chain using the `.catch()` method. It clarifies a key point: `fetch` only rejects a promise on network failure, not on HTTP error statuses (like 404 or 500). The lesson shows how to manually check the `response.ok` property to handle HTTP errors."
+  },
+  {
+    "n": 20,
+    "title": "Making a POST Request with `fetch`",
+    "math": "Configuration objects",
+    "note": "This section demonstrates how to send data using `fetch`. It explains the second argument to `fetch`: the `options` object. It covers setting the `method` to 'POST', configuring the `headers` (e.g., 'Content-Type': 'application/json'), and providing the data payload in the `body` property."
+  },
+  {
+    "n": 21,
+    "title": "Using `async/await` with `fetch`",
+    "math": "Syntactic sugar",
+    "note": "This lesson introduces `async/await` syntax as a modern way to write asynchronous code that looks and behaves like synchronous code. It shows how to refactor a `.then()`-based `fetch` chain into a cleaner, more readable `async` function, using `await` to pause execution until the Promises resolve."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to JSON",
+    "math": "Data structures (key-value pairs, arrays)",
+    "note": "A focused lesson on JSON (JavaScript Object Notation). It details the syntax rules of JSON, including its support for objects (collections of key/value pairs) and arrays (ordered lists of values). The data types allowed in JSON (string, number, boolean, array, object, null) are also covered."
+  },
+  {
+    "n": 23,
+    "title": "Working with JSON in JavaScript",
+    "math": "Serialization and deserialization",
+    "note": "This section explains how to convert between JSON-formatted strings and JavaScript objects. It covers `JSON.parse()` to deserialize a JSON string into a JavaScript object, and `JSON.stringify()` to serialize a JavaScript object into a JSON string for sending to a server."
+  },
+  {
+    "n": 24,
+    "title": "Dynamically Updating the DOM",
+    "math": "DOM manipulation",
+    "note": "This lesson covers the final step of an AJAX call: using the fetched data to update the web page without a reload. It demonstrates how to use JavaScript DOM manipulation methods (like `getElementById`, `createElement`, and `appendChild`) to display the data received from the server."
+  },
+  {
+    "n": 25,
+    "title": "AJAX and CORS",
+    "math": "Same-origin policy",
+    "note": "This lesson explains Cross-Origin Resource Sharing (CORS), a browser security feature that restricts web pages from making requests to a different domain than the one that served the page. It explains why this 'same-origin policy' exists and how servers can use specific HTTP headers (like `Access-Control-Allow-Origin`) to permit cross-origin requests."
+  },
+  {
+    "n": 26,
+    "title": "AJAX in JavaScript Libraries",
+    "math": "Abstraction layers",
+    "note": "This section provides an overview of how popular JavaScript libraries simplify AJAX. It gives examples of using jQuery's `$.ajax` method and the standalone library `axios`, highlighting how they provide a more convenient syntax and handle browser inconsistencies automatically."
+  },
+  {
+    "n": 27,
+    "title": "Aborting Requests with `AbortController`",
+    "math": "Signal processing",
+    "note": "This lesson introduces a modern feature for aborting in-flight `fetch` requests. It explains how to use the `AbortController` and `AbortSignal` objects to create a signal that can be passed to a `fetch` request and later used to cancel it, which is useful for scenarios like cleaning up when a user navigates away from a component."
+  },
+  {
+    "n": 28,
+    "title": "Debugging AJAX in the Browser",
+    "math": "Network analysis",
+    "note": "This section provides a practical guide to debugging AJAX calls using browser developer tools. It focuses on the 'Network' tab, showing how to inspect outgoing requests, view their headers and payload, check the server's HTTP status code, and preview the response data."
+  }
+]

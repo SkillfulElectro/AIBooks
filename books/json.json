@@ -1,0 +1,104 @@
+[
+  {
+    "n": 1,
+    "title": "What Is a Data Interchange Format?",
+    "math": "Data serialization",
+    "note": "This section explains the need for a standardized format for exchanging data between different systems and programming languages. It introduces the concept of data serialization, which is the process of converting a data structure or object state into a format that can be stored or transmitted and reconstructed later."
+  },
+  {
+    "n": 2,
+    "title": "Introduction to JSON",
+    "math": "Data interchange formats",
+    "note": "This lesson introduces JSON (JavaScript Object Notation) as a lightweight, text-based, human-readable data interchange format. It explains that although it is derived from JavaScript, it is language-independent and supported by virtually all modern programming languages."
+  },
+  {
+    "n": 3,
+    "title": "JSON vs. XML",
+    "math": "Comparative analysis",
+    "note": "This section compares JSON to XML (eXtensible Markup Language), its main predecessor. It highlights the key differences: JSON is less verbose, easier to parse, and maps more directly to the data structures (objects and arrays) used in most programming languages."
+  },
+  {
+    "n": 4,
+    "title": "JSON Syntax Rules",
+    "math": "Syntax rules",
+    "note": "This lesson details the fundamental syntax rules of JSON. It explains that data is represented in key-value pairs, keys must be strings in double quotes, and data is separated by commas. The use of curly braces for objects and square brackets for arrays is introduced."
+  },
+  {
+    "n": 5,
+    "title": "JSON Data Types: String, Number, Boolean",
+    "math": "Primitive data types",
+    "note": "This section covers the three basic primitive data types in JSON. It explains that a 'string' is a sequence of characters in double quotes, a 'number' can be an integer or a floating-point number, and a 'boolean' must be either the literal `true` or `false`."
+  },
+  {
+    "n": 6,
+    "title": "JSON Data Type: `null`",
+    "math": "Null values",
+    "note": "This lesson explains the `null` data type in JSON. It represents an empty or non-existent value and must be written in lowercase."
+  },
+  {
+    "n": 7,
+    "title": "JSON Data Type: The Object",
+    "math": "Associative arrays (key-value pairs)",
+    "note": "This section introduces the JSON Object, which is an unordered collection of key/value pairs. An object is enclosed in curly braces `{}`. It is used to represent a single, structured entity, like a 'user' with a 'name' and 'age'."
+  },
+  {
+    "n": 8,
+    "title": "JSON Data Type: The Array",
+    "math": "Ordered lists (arrays)",
+    "note": "This lesson covers the JSON Array, which is an ordered collection of values. An array is enclosed in square brackets `[]`. The values in an array can be of any JSON data type, including other objects or arrays."
+  },
+  {
+    "n": 9,
+    "title": "Nesting Objects and Arrays",
+    "math": "Hierarchical data structures",
+    "note": "This section demonstrates how to build complex, hierarchical data structures by nesting objects and arrays. It shows an example of an array of user objects, where each user object might have a property whose value is another array (e.g., an array of phone numbers)."
+  },
+  {
+    "n": 10,
+    "title": "A Complete JSON Example",
+    "math": "Data modeling",
+    "note": "This lesson provides a complete, well-formatted JSON document that combines all the concepts covered so far. It models a realistic entity, such as a blog post with properties, an author object, and an array of comment objects, to illustrate a real-world use case."
+  },
+  {
+    "n": 11,
+    "title": "Using JSON in JavaScript: `JSON.parse()`",
+    "math": "Deserialization",
+    "note": "This section explains how to work with JSON in its native environment, JavaScript. It focuses on the `JSON.parse()` method, which takes a JSON-formatted string as input and converts it into a corresponding JavaScript object or array that can be directly manipulated in code."
+  },
+  {
+    "n": 12,
+    "title": "Using JSON in JavaScript: `JSON.stringify()`",
+    "math": "Serialization",
+    "note": "This lesson covers the reverse process of `JSON.parse()`. It explains the `JSON.stringify()` method, which takes a JavaScript object or array as input and converts it into a JSON-formatted string. This string is what you would send to a web server in an API request."
+  },
+  {
+    "n": 13,
+    "title": "JSON and Web APIs",
+    "math": "API data formats",
+    "note": "This section explains why JSON has become the de facto standard data format for modern web APIs (especially RESTful APIs). Its simplicity and direct mapping to JavaScript objects make it ideal for use in web browsers and SPAs (Single Page Applications)."
+  },
+  {
+    "n": 14,
+    "title": "Example of a JSON API Response",
+    "math": "HTTP responses",
+    "note": "This lesson shows a practical example of a JSON response from a web API. It explains how a client would make a `GET` request to an API endpoint and receive a response with the `Content-Type` header set to `application/json` and the body containing the requested data as a JSON string."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to JSON Schema",
+    "math": "Schema validation",
+    "note": "This section introduces JSON Schema, a vocabulary that allows you to annotate and validate JSON documents. It explains that a JSON Schema can be used to describe the structure of your JSON data, including required properties, data types, and value constraints, which is useful for documentation and validation."
+  },
+  {
+    "n": 16,
+    "title": "JSON Web Tokens (JWT)",
+    "math": "Authentication tokens",
+    "note": "This lesson provides a high-level overview of JSON Web Tokens (JWTs) as a common application of the JSON format. It explains that a JWT is a compact, URL-safe means of representing claims to be transferred between two parties, often used for authentication in web applications."
+  },
+  {
+    "n": 17,
+    "title": "Common Pitfalls",
+    "math": "Syntax errors",
+    "note": "This final lesson covers common syntax mistakes when writing JSON manually. These include using single quotes instead of double quotes for keys and strings, having a trailing comma after the last element in an object or array, and using comments (which are not allowed in the JSON standard)."
+  }
+]

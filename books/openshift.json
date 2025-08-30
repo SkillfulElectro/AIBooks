@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Containers, Kubernetes, and OpenShift",
+    "math": "Container orchestration",
+    "note": "This section provides context by briefly recapping containers as a lightweight virtualization method and Kubernetes as the de facto standard for orchestrating them. It then introduces OpenShift as an enterprise-ready Kubernetes distribution that adds developer-friendly and security-focused tools on top of a Kubernetes core."
+  },
+  {
+    "n": 2,
+    "title": "OpenShift vs. Kubernetes",
+    "math": "Comparative analysis",
+    "note": "This lesson details the key value additions that OpenShift provides over a standard Kubernetes installation. These include stricter security policies by default, an integrated container registry, built-in CI/CD pipelines, and powerful developer tools like Source-to-Image (S2I)."
+  },
+  {
+    "n": 3,
+    "title": "Getting Started: The `oc` CLI",
+    "math": "Command-line interfaces",
+    "note": "This section introduces the OpenShift Command-Line Interface (CLI), `oc`. It explains that `oc` is a superset of the Kubernetes CLI, `kubectl`, meaning all `kubectl` commands work with `oc`. It demonstrates how to log in to an OpenShift cluster and manage projects."
+  },
+  {
+    "n": 4,
+    "title": "Core Concept: Projects",
+    "math": "Namespaces",
+    "note": "This lesson explains an OpenShift 'Project' as a Kubernetes namespace with additional annotations. A project is the primary unit of isolation for a user or team, allowing them to manage their own applications, policies, and constraints without affecting others."
+  },
+  {
+    "n": 5,
+    "title": "Deploying an Application with `oc new-app`",
+    "math": "Application deployment",
+    "note": "This section introduces the powerful `oc new-app` command, a simplified way to deploy applications. It demonstrates how this single command can take a Git repository URL, a container image, or a template as input and automatically create all the necessary OpenShift objects (like DeploymentConfigs and Services) to run the application."
+  },
+  {
+    "n": 6,
+    "title": "Source-to-Image (S2I)",
+    "math": "Automated container builds",
+    "note": "This lesson details one of OpenShift's key features: Source-to-Image (S2I). S2I is a tool for building reproducible container images from source code without requiring a Dockerfile. It works by combining application source code with a builder image that provides the necessary language runtime (e.g., Node.js, Python, Java)."
+  },
+  {
+    "n": 7,
+    "title": "DeploymentConfigs vs. Deployments",
+    "math": "Deployment strategies",
+    "note": "This section contrasts the OpenShift-specific `DeploymentConfig` object with the standard Kubernetes `Deployment` object. It explains that `DeploymentConfigs` have additional features, most notably the concept of 'triggers' that can automatically start a new deployment when the application's image changes."
+  },
+  {
+    "n": 8,
+    "title": "Exposing Applications with Services and Routes",
+    "math": "Network routing",
+    "note": "This lesson explains how to make an application accessible from outside the OpenShift cluster. It covers the standard Kubernetes 'Service' object for internal load balancing. It then introduces the OpenShift 'Route', which is a more powerful object that provides a publicly accessible URL and can handle TLS termination for secure HTTPS traffic."
+  },
+  {
+    "n": 9,
+    "title": "Builds and BuildConfigs",
+    "math": "Build automation",
+    "note": "This section provides a deeper dive into the build process. It explains the `BuildConfig` object, which defines how to build an application (e.g., using S2I or a Dockerfile). A `Build` is a specific execution of a `BuildConfig`. This system provides a complete, repeatable build history within the platform."
+  },
+  {
+    "n": 10,
+    "title": "ImageStreams",
+    "math": "Image metadata management",
+    "note": "This lesson introduces the `ImageStream`, an OpenShift-specific object for managing container images. An ImageStream acts as a virtual view of all related versions of an image, allowing you to easily tag images (e.g., `latest`, `prod`) and trigger new deployments when a new version of an image is pushed to the integrated registry."
+  },
+  {
+    "n": 11,
+    "title": "Persistent Storage",
+    "math": "Persistent Volumes (PVs) and Claims (PVCs)",
+    "note": "This section covers how to provide stateful applications with persistent storage. It explains the Kubernetes concepts of a `PersistentVolume` (PV), which is a piece of storage in the cluster, and a `PersistentVolumeClaim` (PVC), which is a request for storage by a user. This decouples the application from the underlying storage technology."
+  },
+  {
+    "n": 12,
+    "title": "Managing Application Configuration",
+    "math": "ConfigMaps and Secrets",
+    "note": "This lesson explains how to manage application configuration data. It covers `ConfigMaps` for storing non-sensitive configuration data as key-value pairs, and `Secrets` for storing sensitive data like passwords and API keys. These objects can be mounted as volumes or exposed as environment variables to pods."
+  },
+  {
+    "n": 13,
+    "title": "Security: Role-Based Access Control (RBAC)",
+    "math": "Access control",
+    "note": "This section covers how OpenShift manages user permissions. It explains the RBAC system, which involves 'Roles' (sets of permissions) and 'RoleBindings' (which assign a role to a user or group). This allows for granular control over who can do what within a project."
+  },
+  {
+    "n": 14,
+    "title": "Security: Security Context Constraints (SCCs)",
+    "math": "Security policy",
+    "note": "This lesson details Security Context Constraints (SCCs), a core security feature of OpenShift. SCCs control what permissions pods have, such as whether they can run as root or access host resources. By default, OpenShift applies a restrictive SCC, making it more secure out-of-the-box than standard Kubernetes."
+  },
+  {
+    "n": 15,
+    "title": "The OpenShift Web Console",
+    "math": "Web-based dashboards",
+    "note": "This section provides a tour of the OpenShift web console, focusing on the Developer Perspective. It highlights the 'Topology' view, which provides a powerful visual representation of the applications in a project and their relationships."
+  },
+  {
+    "n": 16,
+    "title": "Introduction to OpenShift Pipelines",
+    "math": "CI/CD pipelines",
+    "note": "This lesson introduces OpenShift Pipelines, the integrated CI/CD solution based on the open-source Tekton project. It allows you to define and run your build, test, and deployment pipelines as native Kubernetes/OpenShift resources."
+  },
+  {
+    "n": 17,
+    "title": "Pipeline Concepts: Tasks and Pipelines",
+    "math": "Pipeline definition",
+    "note": "This section explains the core objects in OpenShift Pipelines. A 'Task' defines a sequence of steps (e.g., build, run tests). A 'Pipeline' defines the overall structure of the CI/CD process by chaining together multiple Tasks."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to OpenShift Operators",
+    "math": "Application lifecycle management",
+    "note": "This lesson introduces Operators as a method of packaging, deploying, and managing a Kubernetes-native application. An Operator is a piece of software running in your cluster that uses the Kubernetes API to manage an application and its components on your behalf."
+  },
+  {
+    "n": 19,
+    "title": "OpenShift Service Mesh",
+    "math": "Service mesh (Istio)",
+    "note": "This section provides a high-level overview of OpenShift Service Mesh, which is based on the Istio project. It explains how a service mesh provides a dedicated infrastructure layer for making service-to-service communication safe, fast, and reliable, offering features like traffic management, observability, and security."
+  },
+  {
+    "n": 20,
+    "title": "OpenShift Serverless",
+    "math": "Serverless platforms (Knative)",
+    "note": "This final lesson introduces OpenShift Serverless, which is based on the Knative project. It allows you to run serverless, event-driven applications on your OpenShift cluster. A key feature is 'scale-to-zero', where applications can scale down to zero pods when they are not in use, saving resources."
+  }
+]

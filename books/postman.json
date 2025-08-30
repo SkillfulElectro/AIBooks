@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is an API? What Is Postman?",
+    "math": "Application Programming Interfaces (APIs)",
+    "note": "This section provides a high-level definition of an API as a set of rules that allows different software applications to communicate with each other. It then introduces Postman as a collaborative platform and GUI client for building, testing, and documenting APIs, simplifying the process of sending HTTP requests and viewing responses."
+  },
+  {
+    "n": 2,
+    "title": "Installing Postman and Touring the UI",
+    "math": "User interface tour",
+    "note": "This lesson provides a practical guide to downloading and installing the Postman desktop application. It then gives a guided tour of the user interface, explaining the main components: the sidebar (for collections and history), the request builder, and the response viewer."
+  },
+  {
+    "n": 3,
+    "title": "Making Your First GET Request",
+    "math": "HTTP GET method",
+    "note": "This section walks through the process of making a simple API call. It demonstrates how to create a new request, enter a URL for a public API, select the GET method, and hit 'Send'. This is the most basic operation for retrieving data from an API."
+  },
+  {
+    "n": 4,
+    "title": "Analyzing the API Response",
+    "math": "HTTP responses",
+    "note": "This lesson details the information that Postman provides after a request is sent. It explains how to inspect the three main parts of the response: the Body (the actual data returned), the Headers (metadata about the response), and the HTTP Status Code (which indicates success or failure, e.g., 200 OK)."
+  },
+  {
+    "n": 5,
+    "title": "Organizing Requests with Collections",
+    "math": "Request organization",
+    "note": "This section introduces Collections as the primary way to group and organize your API requests in Postman. A collection acts like a folder for related requests, such as all the requests for a specific API or project. This is the foundation for building test suites and documentation."
+  },
+  {
+    "n": 6,
+    "title": "Making a POST Request",
+    "math": "HTTP POST method",
+    "note": "This lesson demonstrates how to send data to an API using a POST request. It explains how to use the 'Body' tab in the request builder, select the 'raw' and 'JSON' options, and provide a JSON payload to be sent with the request. This is used for creating new resources."
+  },
+  {
+    "n": 7,
+    "title": "The Problem of Hardcoding: Introduction to Variables",
+    "math": "Variable substitution",
+    "note": "This section explains why hardcoding values like URLs and IDs in your requests is a bad practice. It introduces variables as a way to store and reuse values. Using variables makes requests more maintainable and allows you to easily switch between different environments."
+  },
+  {
+    "n": 8,
+    "title": "Using Environments and Environment Variables",
+    "math": "Environment management",
+    "note": "This lesson covers Environments, which are sets of variables that you can switch between. This is commonly used to store different configurations for different environments, such as 'Development', 'Staging', and 'Production'. It demonstrates how to create an environment and define a variable like `{{base_url}}`."
+  },
+  {
+    "n": 9,
+    "title": "Postman Variable Scopes",
+    "math": "Variable scope",
+    "note": "This section details the different levels (scopes) at which variables can exist in Postman. It explains the hierarchy, from Global (available everywhere) and Collection variables, to Environment variables, and finally Local variables (which are temporary and exist only for a single request run)."
+  },
+  {
+    "n": 10,
+    "title": "Introduction to API Testing in Postman",
+    "math": "Test automation",
+    "note": "This lesson explains how Postman can be used to automate the testing of APIs. It introduces the 'Tests' tab in the request builder, where you can write JavaScript code that runs after a response is received to verify that the API is working correctly."
+  },
+  {
+    "n": 11,
+    "title": "Writing Your First Test",
+    "math": "Test assertions",
+    "note": "This section demonstrates how to write a simple test script. It introduces the `pm.test()` function for defining a test case and the Chai.js BDD syntax for writing assertions (e.g., `pm.response.to.have.status(200)`). The 'Snippets' feature for generating common tests is also shown."
+  },
+  {
+    "n": 12,
+    "title": "Testing the Response Body",
+    "math": "JSON data validation",
+    "note": "This lesson focuses on validating the data in the API response. It shows how to parse the JSON response body using `pm.response.json()` and then write tests to assert that specific properties exist and have the expected values."
+  },
+  {
+    "n": 13,
+    "title": "Chaining Requests: Using Variables from a Response",
+    "math": "Request chaining",
+    "note": "This section covers a common testing scenario: extracting a value from one API response and using it in the next request (e.g., getting an ID from a POST response and using it in a subsequent GET request). It demonstrates how to use `pm.environment.set()` in the 'Tests' tab to save a value to a variable."
+  },
+  {
+    "n": 14,
+    "title": "Pre-request Scripts",
+    "math": "Script execution order",
+    "note": "This lesson introduces the 'Pre-request Script' tab. It explains that code in this tab runs *before* the request is sent. This is useful for tasks like generating dynamic data (e.g., a random username or a current timestamp) to be used in the request body or URL."
+  },
+  {
+    "n": 15,
+    "title": "Handling Authentication",
+    "math": "API authentication",
+    "note": "This section covers how to work with secured APIs. It demonstrates the 'Authorization' tab in Postman, which provides helpers for various authentication schemes, including API Keys, Basic Auth, and setting a Bearer Token."
+  },
+  {
+    "n": 16,
+    "title": "The Collection Runner",
+    "math": "Test suite execution",
+    "note": "This lesson introduces the Collection Runner, a tool for running all the requests in a collection in a specified order. This is how you execute an entire API test suite automatically instead of running each request manually."
+  },
+  {
+    "n": 17,
+    "title": "Data-Driven Testing with the Collection Runner",
+    "math": "Data-driven testing",
+    "note": "This section explains how to run a collection multiple times with different data for each iteration. It demonstrates how to use an external data file (like a CSV or JSON file) with the Collection Runner to perform data-driven testing."
+  },
+  {
+    "n": 18,
+    "title": "Automating with Newman",
+    "math": "Command-line execution",
+    "note": "This lesson introduces Newman, the command-line companion to Postman. It is a Node.js application that allows you to run a Postman collection directly from the command line, without needing the Postman GUI. This is the key to integrating Postman tests into an automated CI/CD pipeline."
+  },
+  {
+    "n": 19,
+    "title": "Generating Reports with Newman",
+    "math": "Test reporting",
+    "note": "This section covers how to generate reports from a Newman run. It demonstrates how to use Newman 'reporters' to create output files in various formats, such as a user-friendly HTML report that can be published as a test artifact in a CI/CD system."
+  },
+  {
+    "n": 20,
+    "title": "Team Collaboration and Documentation",
+    "math": "Collaboration and documentation",
+    "note": "This final lesson provides an overview of Postman's collaboration features. It explains how to use shared Workspaces for teams to work on the same collections. It also demonstrates how Postman can automatically generate and publish beautiful, web-based API documentation directly from a collection."
+  }
+]

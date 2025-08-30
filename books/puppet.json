@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Puppet and Desired State Configuration",
+    "math": "Declarative configuration management",
+    "note": "This section introduces Puppet as a configuration management tool that uses a declarative model. It explains the concept of 'Desired State Configuration', where you define the state you want your system to be in (e.g., 'this package must be installed'), and Puppet figures out how to make it so."
+  },
+  {
+    "n": 2,
+    "title": "The Puppet Architecture: Master and Agent",
+    "math": "Client-server architecture",
+    "note": "This lesson details the main components of a Puppet setup. It explains the roles of the Puppet Master (or Primary Server), which compiles and serves configurations, and the Puppet Agent, which runs on each managed node, requests its configuration, and applies it. This is a pull-based model."
+  },
+  {
+    "n": 3,
+    "title": "Puppet's Workflow: The Catalog",
+    "math": "Configuration compilation",
+    "note": "This section explains the typical workflow. The Puppet agent sends facts (information about itself) to the master. The master uses these facts to compile a 'catalog'—a detailed JSON document describing the desired state for that specific node. The agent then receives the catalog and applies it."
+  },
+  {
+    "n": 4,
+    "title": "Core Concept: Resources",
+    "math": "Resource declaration",
+    "note": "This lesson introduces the Resource as the fundamental building block of the Puppet language. A resource describes a single part of the system's state, such as a file, a package, or a service. The syntax for declaring a resource with its type, title, and attributes is shown."
+  },
+  {
+    "n": 5,
+    "title": "Core Concept: Manifests",
+    "math": "Configuration files",
+    "note": "This section defines a Manifest as a file (with a `.pp` extension) that contains Puppet code written in the Puppet DSL. A manifest is composed of resource declarations that together describe a part of the system's configuration."
+  },
+  {
+    "n": 6,
+    "title": "Applying Your First Manifest with `puppet apply`",
+    "math": "Standalone execution",
+    "note": "This lesson provides a hands-on guide to running Puppet in a masterless, standalone mode. It demonstrates how to write a simple manifest to create a file and then how to use the `puppet apply` command to apply that manifest directly on a machine."
+  },
+  {
+    "n": 7,
+    "title": "Resource Relationships and Ordering",
+    "math": "Dependency management",
+    "note": "This section explains how to define dependencies between resources. It covers the `require` and `before` metaparameters for explicit ordering, and the `notify` and `subscribe` metaparameters for creating relationships where one resource's change triggers an action on another (e.g., restarting a service when its config file changes)."
+  },
+  {
+    "n": 8,
+    "title": "Organizing Code: Introduction to Modules",
+    "math": "Modularity",
+    "note": "This lesson introduces Modules as the standard way to organize and share Puppet code. A module is a self-contained bundle of manifests, files, templates, and other code that manages a specific technology (e.g., an `apache` module)."
+  },
+  {
+    "n": 9,
+    "title": "The Structure of a Puppet Module",
+    "math": "Directory hierarchy",
+    "note": "This section details the standard directory structure of a module. It explains the purpose of the main directories: `manifests` (for the Puppet code), `files` (for static files), `templates` (for template files), and the `metadata.json` file (which describes the module and its dependencies)."
+  },
+  {
+    "n": 10,
+    "title": "Classes in Modules",
+    "math": "Class definition",
+    "note": "This lesson explains that a 'class' in Puppet is a named block of Puppet code within a module. It is the primary way that modules are used. A class is declared in a node's manifest to apply the configuration that it contains."
+  },
+  {
+    "n": 11,
+    "title": "Using Facts with Facter",
+    "math": "System information gathering",
+    "note": "This section introduces Facter, Puppet's system inventory tool. Facter gathers 'facts' about a node, such as its operating system, IP address, and memory. These facts are available as variables within your Puppet manifests, allowing you to write conditional logic (e.g., install a different package name on Red Hat vs. Debian)."
+  },
+  {
+    "n": 12,
+    "title": "Separating Data from Code with Hiera",
+    "math": "Key-value data lookup",
+    "note": "This lesson introduces Hiera as Puppet's built-in key-value lookup tool. It solves a critical problem by allowing you to separate the data your code needs (e.g., a specific version number or user name) from the logic of the code itself. This makes your Puppet code much more reusable."
+  },
+  {
+    "n": 13,
+    "title": "The Hiera Hierarchy",
+    "math": "Data hierarchy",
+    "note": "This section explains how Hiera looks up data. You define a 'hierarchy' in a `hiera.yaml` file, which tells Hiera where to look for data. A common hierarchy might be to look for data specific to a node, then data for an operating system, and finally common default data. This allows for powerful and flexible data overrides."
+  },
+  {
+    "n": 14,
+    "title": "Templates",
+    "math": "Template engines (ERB)",
+    "note": "This lesson covers how to create dynamic configuration files using templates. It introduces the `template` function and the ERB (Embedded Ruby) template format. It demonstrates how to create a `.erb` file that can embed variables and simple logic to generate a custom configuration file for a node."
+  },
+  {
+    "n": 15,
+    "title": "The Puppet Forge",
+    "math": "Module repositories",
+    "note": "This section introduces the Puppet Forge, a public repository containing thousands of pre-built modules created by the community and Puppet itself. This allows you to quickly get started with managing common software without having to write the code from scratch."
+  },
+  {
+    "n": 16,
+    "title": "Managing Modules with a `Puppetfile`",
+    "math": "Dependency management",
+    "note": "This lesson explains the best practice for managing modules from the Forge. A `Puppetfile` is a file that lists all the external modules your environment depends on. Tools like `r10k` or `librarian-puppet` can then read this file to automatically download and install the specified versions of the modules."
+  },
+  {
+    "n": 17,
+    "title": "The Roles and Profiles Pattern",
+    "math": "Design patterns",
+    "note": "This section introduces the most important design pattern for building scalable and maintainable Puppet code. It explains the two layers: a 'Profile' is a module that configures a specific technology stack (e.g., a LAMP stack), and a 'Role' is a simple module that includes one or more profiles to define the complete configuration of a machine."
+  },
+  {
+    "n": 18,
+    "title": "Testing Puppet Code: `puppet-lint` and `rspec-puppet`",
+    "math": "Linting and unit testing",
+    "note": "This lesson covers how to test your Puppet code. It introduces `puppet-lint` for checking your manifests against a style guide, and `rspec-puppet` for unit testing your catalog compilation. Unit tests verify that your Puppet code compiles a catalog with the correct resources and relationships, without actually applying any changes."
+  },
+  {
+    "n": 19,
+    "title": "Puppet Tasks and Bolt",
+    "math": "Imperative task running",
+    "note": "This section introduces Puppet Bolt, an open-source, agentless, multi-platform tool for running imperative tasks. While Puppet's strength is in enforcing a declarative state, Bolt is used for ad-hoc tasks and procedural orchestration, like running a command across 100 servers or deploying an application."
+  },
+  {
+    "n": 20,
+    "title": "Puppet Enterprise (PE)",
+    "math": "Enterprise software",
+    "note": "This final lesson provides a high-level overview of Puppet Enterprise, the commercial version of Puppet. It explains the additional features that PE provides, such as a graphical user interface for managing nodes and viewing reports, Role-Based Access Control (RBAC), and orchestration capabilities directly in the console."
+  }
+]

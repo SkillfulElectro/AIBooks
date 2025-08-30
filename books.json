@@ -1,126 +1,656 @@
 {
   "books": [
     {
-      "name": "Programming",
+      "name": "Computer Science",
       "children": [
         {
-          "name": "Languages",
-          "children": [
-            { "name": "C Language Tour", "file": "./books/c_language.json" },
-            { "name": "C# Tour", "file": "./books/c_sharp.json" },
-            { "name": "C++ Tour", "file": "./books/cpp.json" },
-            { "name": "Golang Tour", "file": "./books/golang.json" },
-            { "name": "Java Tour", "file": "./books/java.json" },
-            { "name": "JavaScript Tour", "file": "./books/javascript.json" },
-            { "name": "Kotlin Tour", "file": "./books/kotlin.json" },
-            { "name": "LUA Language Tour", "file": "./books/lua_language.json" },
-            { "name": "PHP Tour", "file": "./books/php.json" },
-            { "name": "Python Tour", "file": "./books/python.json" },
-            { "name": "R Tour", "file": "./books/r.json" },
-            { "name": "Rust Tour", "file": "./books/rust.json" },
-            { "name": "TypeScript Tour", "file": "./books/typescript.json" },
-            { "name": "Zig Language Tour", "file": "./books/ziglang.json" }
-          ]
+          "name": "Compiler Design Tour",
+          "file": "./books/compiler_design.json"
         },
         {
-          "name": "Assembly",
-          "children": [
-            { "name": "ARM Assembly Tour", "file": "./books/arm_asm.json" },
-            { "name": "x86 Assembly Tour", "file": "./books/x86asm.json" }
-          ]
-        },
-        { "name": "Introduction to Programming Tour", "file": "./books/intro_to_programming.json" },
-        { "name": "DSA Tour", "file": "./books/dsa.json" },
-        { "name": "Socket Programming C/C++ Tour", "file": "./books/socket_programming.json" }
-      ]
-    },
-    {
-      "name": "Web Development",
-      "children": [
-        { "name": "HTML Tour", "file": "./books/html.json" },
-        { "name": "CSS Tour", "file": "./books/css.json" },
-        {
-          "name": "Frontend",
-          "children": [
-            { "name": "Angular Tour", "file": "./books/angular.json" },
-            { "name": "Bootstrap Tour", "file": "./books/bootstrap.json" },
-            { "name": "jQuery Tour", "file": "./books/jquery.json" },
-            { "name": "React Js Tour", "file": "./books/reactjs.json" },
-            { "name": "React Native Tour", "file": "./books/react_native.json" },
-            { "name": "Sass Tour", "file": "./books/sass.json" },
-            { "name": "Tailwind CSS Tour", "file": "./books/tailwindcss.json" },
-            { "name": "Vue Tour", "file": "./books/vue.json" }
-          ]
+          "name": "Computer Fundamentals Tour",
+          "file": "./books/computer_fundamentals.json"
         },
         {
-          "name": "Backend",
-          "children": [
-            { "name": "ASP.NET Core Tour", "file": "./books/asp.json" },
-            { "name": "Django Tour", "file": "./books/django.json" },
-            { "name": "Node.js Tour", "file": "./books/nodejs.json" },
-            { "name": "Nginx Tour", "file": "./books/nginx.json" }
-          ]
+          "name": "Computer Graphics Tour",
+          "file": "./books/computer_graphics.json"
         },
-        { "name": "Web Dev Tour", "file": "./books/webdev.json" },
-        { "name": "XML Tour", "file": "./books/xml.json" }
+        {
+          "name": "Computer Networks Tour",
+          "file": "./books/computer_networks.json"
+        },
+        {
+          "name": "Digital Circuits Tour",
+          "file": "./books/digital_circuits.json"
+        },
+        {
+          "name": "Discrete Mathematics Tour",
+          "file": "./books/discrete_mathematics.json"
+        },
+        {
+          "name": "Microprocessor Tour",
+          "file": "./books/microprocessor.json"
+        },
+        {
+          "name": "Operating System Tour",
+          "file": "./books/operating_system.json"
+        },
+        {
+          "name": "Software Engineering Tour",
+          "file": "./books/software_engineering.json"
+        }
       ]
     },
     {
       "name": "Data Science",
       "children": [
-        { "name": "AI and ML Tour", "file": "./books/ai_ml_tour.json" },
-        { "name": "Data Science Tour", "file": "./books/data_science.json" },
-        { "name": "Generative AI Tour", "file": "./books/gen_ai.json" },
-        { "name": "NumPy Tour", "file": "./books/numpy.json" },
-        { "name": "OpenCV C++ Tour", "file": "./books/opencv_cpp.json" },
-        { "name": "OpenCV Python Tour", "file": "./books/opencv_py.json" },
-        { "name": "Pandas Tour", "file": "./books/pandas.json" },
-        { "name": "SciPy Tour", "file": "./books/scipy.json" },
-        { "name": "TensorFlow Tour", "file": "./books/tensorflow.json" }
-      ]
-    },
-    {
-      "name": "DevOps & Tooling",
-      "children": [
-        { "name": "Bash Tour", "file": "./books/bash.json" },
-        { "name": "CMake Tour", "file": "./books/cmake.json" },
-        { "name": "Docker Tour", "file": "./books/docker.json" },
-        { "name": "Kubernetes Tour", "file": "./books/kubernetes.json" },
-        { "name": "FFmpeg C/C++ Tour", "file": "./books/ffmpeg.json" },
-        { "name": "Git Tour", "file": "./books/git.json" },
-        { "name": "Vim Tour", "file": "./books/vim.json" }
+        {
+          "name": "AI and ML Tour",
+          "file": "./books/ai_ml_tour.json"
+        },
+        {
+          "name": "Artificial Intelligence Tour",
+          "file": "./books/artificial_intelligence.json"
+        },
+        {
+          "name": "Artificial Neural Network Tour",
+          "file": "./books/artificial_neural_network.json"
+        },
+        {
+          "name": "Big Data Analytics Tour",
+          "file": "./books/big_data_analytics.json"
+        },
+        {
+          "name": "Data Mining Tour",
+          "file": "./books/data_mining.json"
+        },
+        {
+          "name": "Data Science Tour",
+          "file": "./books/data_science.json"
+        },
+        {
+          "name": "Generative AI Tour",
+          "file": "./books/gen_ai.json"
+        },
+        {
+          "name": "Machine Learning Tour",
+          "file": "./books/machine_learning.json"
+        },
+        {
+          "name": "Machine Learning with Python Tour",
+          "file": "./books/machine_learning_with_python.json"
+        },
+        {
+          "name": "Matplotlib Tour",
+          "file": "./books/matplotlib.json"
+        },
+        {
+          "name": "Natural Language Processing Tour",
+          "file": "./books/natural_language_processing.json"
+        },
+        {
+          "name": "Numpy Tour",
+          "file": "./books/numpy.json"
+        },
+        {
+          "name": "OpenCV C++ Tour",
+          "file": "./books/opencv_cpp.json"
+        },
+        {
+          "name": "OpenCV Python Tour",
+          "file": "./books/opencv_py.json"
+        },
+        {
+          "name": "Opencv Tour",
+          "file": "./books/opencv_tour.json"
+        },
+        {
+          "name": "Pandas Tour",
+          "file": "./books/pandas.json"
+        },
+        {
+          "name": "Python Pandas Tour",
+          "file": "./books/python_pandas.json"
+        },
+        {
+          "name": "Pytorch Tour",
+          "file": "./books/pytorch.json"
+        },
+        {
+          "name": "Scipy Tour",
+          "file": "./books/scipy.json"
+        },
+        {
+          "name": "Seaborn Tour",
+          "file": "./books/seaborn.json"
+        },
+        {
+          "name": "Statistics Tour",
+          "file": "./books/statistics.json"
+        },
+        {
+          "name": "Tensorflow Tour",
+          "file": "./books/tensorflow.json"
+        }
       ]
     },
     {
       "name": "Databases",
       "children": [
-        { "name": "MongoDB Tour", "file": "./books/mongodb.json" },
-        { "name": "MySQL Tour", "file": "./books/mysql.json" },
-        { "name": "PostgreSQL Tour", "file": "./books/postgresql.json" },
-        { "name": "SQL Tour", "file": "./books/sql.json" }
+        {
+          "name": "Couchdb Tour",
+          "file": "./books/couchdb.json"
+        },
+        {
+          "name": "Db2 Tour",
+          "file": "./books/db2.json"
+        },
+        {
+          "name": "Dbms Tour",
+          "file": "./books/dbms.json"
+        },
+        {
+          "name": "Mariadb Tour",
+          "file": "./books/mariadb.json"
+        },
+        {
+          "name": "Mongodb Tour",
+          "file": "./books/mongodb.json"
+        },
+        {
+          "name": "Mysql Tour",
+          "file": "./books/mysql.json"
+        },
+        {
+          "name": "Phpmyadmin Tour",
+          "file": "./books/phpmyadmin.json"
+        },
+        {
+          "name": "Plsql Tour",
+          "file": "./books/plsql.json"
+        },
+        {
+          "name": "Postgresql Tour",
+          "file": "./books/postgresql.json"
+        },
+        {
+          "name": "Redis Tour",
+          "file": "./books/redis.json"
+        },
+        {
+          "name": "Sql Tour",
+          "file": "./books/sql.json"
+        },
+        {
+          "name": "Sqlite Tour",
+          "file": "./books/sqlite.json"
+        },
+        {
+          "name": "Tinydb Tour",
+          "file": "./books/tinydb.json"
+        }
+      ]
+    },
+    {
+      "name": "DevOps & Tooling",
+      "children": [
+        {
+          "name": "Amazon Web Services (AWS) Tour",
+          "file": "./books/aws.json"
+        },
+        {
+          "name": "Ansible Tour",
+          "file": "./books/ansible.json"
+        },
+        {
+          "name": "Bash Tour",
+          "file": "./books/bash.json"
+        },
+        {
+          "name": "Bugzilla Tour",
+          "file": "./books/bugzilla.json"
+        },
+        {
+          "name": "Chef Tour",
+          "file": "./books/chef.json"
+        },
+        {
+          "name": "Cmake Tour",
+          "file": "./books/cmake.json"
+        },
+        {
+          "name": "Cloud Computing Tour",
+          "file": "./books/cloud_computing.json"
+        },
+        {
+          "name": "Docker Tour",
+          "file": "./books/docker.json"
+        },
+        {
+          "name": "FFmpeg C/C++ Tour",
+          "file": "./books/ffmpeg.json"
+        },
+        {
+          "name": "Gerrit Tour",
+          "file": "./books/gerrit.json"
+        },
+        {
+          "name": "Git Tour",
+          "file": "./books/git.json"
+        },
+        {
+          "name": "Gitlab Tour",
+          "file": "./books/gitlab.json"
+        },
+        {
+          "name": "Jira Tour",
+          "file": "./books/jira.json"
+        },
+        {
+          "name": "Kubernetes Tour",
+          "file": "./books/kubernetes.json"
+        },
+        {
+          "name": "Microsoft Azure Tour",
+          "file": "./books/microsoft_azure.json"
+        },
+        {
+          "name": "Openshift Tour",
+          "file": "./books/openshift.json"
+        },
+        {
+          "name": "Puppet Tour",
+          "file": "./books/puppet.json"
+        },
+        {
+          "name": "Pycharm Tour",
+          "file": "./books/pycharm.json"
+        },
+        {
+          "name": "Saltstack Tour",
+          "file": "./books/saltstack.json"
+        },
+        {
+          "name": "Vim Tour",
+          "file": "./books/vim.json"
+        }
       ]
     },
     {
       "name": "IT & Security",
       "children": [
-        { "name": "Arch Linux Tour", "file": "./books/archlinux.json" },
-        { "name": "Cybersecurity Tour", "file": "./books/cybersecurity.json" },
-        { "name": "Ethical Hacking", "file": "./books/ethical_hacking.json" },
-        { "name": "LPIC-1 Tour", "file": "./books/LPIC1.json" },
-        { "name": "LPIC-2 Tour", "file": "./books/LPIC2.json" },
-        { "name": "Network+ Tour", "file": "./books/networkplus.json" },
-        { "name": "Nix Tour", "file": "./books/nix.json" },
-        { "name": "CCNA Tour", "file": "./books/ccna.json" },
-        { "name": "CCNP Tour", "file": "./books/ccnp.json" }
+        {
+          "name": "Archlinux Tour",
+          "file": "./books/archlinux.json"
+        },
+        {
+          "name": "Blockchain Tour",
+          "file": "./books/blockchain.json"
+        },
+        {
+          "name": "Ccna Tour",
+          "file": "./books/ccna.json"
+        },
+        {
+          "name": "Ccnp Tour",
+          "file": "./books/ccnp.json"
+        },
+        {
+          "name": "Computer Security Tour",
+          "file": "./books/computer_security.json"
+        },
+        {
+          "name": "Cryptography Tour",
+          "file": "./books/cryptography.json"
+        },
+        {
+          "name": "Cybersecurity Tour",
+          "file": "./books/cybersecurity.json"
+        },
+        {
+          "name": "Ethical Hacking Tour",
+          "file": "./books/ethical_hacking.json"
+        },
+        {
+          "name": "Information Security Law Tour",
+          "file": "./books/information_security_law.json"
+        },
+        {
+          "name": "Internet Security Tour",
+          "file": "./books/internet_security.json"
+        },
+        {
+          "name": "LPIC-1 Tour",
+          "file": "./books/LPIC1.json"
+        },
+        {
+          "name": "LPIC-2 Tour",
+          "file": "./books/LPIC2.json"
+        },
+        {
+          "name": "Linux Admin Tour",
+          "file": "./books/linux_admin.json"
+        },
+        {
+          "name": "Network Security Tour",
+          "file": "./books/network_security.json"
+        },
+        {
+          "name": "Network+ Tour",
+          "file": "./books/networkplus.json"
+        },
+        {
+          "name": "Nix Tour",
+          "file": "./books/nix.json"
+        },
+        {
+          "name": "Ubuntu Tour",
+          "file": "./books/ubuntu.json"
+        },
+        {
+          "name": "Unix Tour",
+          "file": "./books/unix.json"
+        },
+        {
+          "name": "Wireless Security Tour",
+          "file": "./books/wireless_security.json"
+        }
       ]
     },
     {
       "name": "Miscellaneous",
       "children": [
-        { "name": "Excel Tour", "file": "./books/excel.json" },
-        { "name": "Microservice Architecture Tour", "file": "./books/macro_service_arch.json" },
-        { "name": "OpenGL C/C++ Tour", "file": "./books/opengl.json" },
-        { "name": "Qt 5.15 C++ Tour", "file": "./books/Qt5_15.json" }
+        {
+          "name": "Digital Marketing Tour",
+          "file": "./books/digital_marketing.json"
+        },
+        {
+          "name": "Excel Tour",
+          "file": "./books/excel.json"
+        },
+        {
+          "name": "Microservice Architecture Tour",
+          "file": "./books/macro_service_arch.json"
+        },
+        {
+          "name": "Opengl Tour",
+          "file": "./books/opengl.json"
+        },
+        {
+          "name": "Seo Tour",
+          "file": "./books/seo.json"
+        }
+      ]
+    },
+    {
+      "name": "Programming",
+      "children": [
+        {
+          "name": "Assembly",
+          "children": [
+            {
+              "name": "Arm Asm Tour",
+              "file": "./books/arm_asm.json"
+            },
+            {
+              "name": "x86 Assembly Tour",
+              "file": "./books/x86asm.json"
+            }
+          ]
+        },
+        {
+          "name": "Languages",
+          "children": [
+            {
+              "name": "C Language Tour",
+              "file": "./books/c_language.json"
+            },
+            {
+              "name": "C# Tour",
+              "file": "./books/c_sharp.json"
+            },
+            {
+              "name": "C++ Tour",
+              "file": "./books/cpp.json"
+            },
+            {
+              "name": "Golang Tour",
+              "file": "./books/golang.json"
+            },
+            {
+              "name": "Java Tour",
+              "file": "./books/java.json"
+            },
+            {
+              "name": "Javascript Tour",
+              "file": "./books/javascript.json"
+            },
+            {
+              "name": "Kotlin Tour",
+              "file": "./books/kotlin.json"
+            },
+            {
+              "name": "LUA Language Tour",
+              "file": "./books/lua_language.json"
+            },
+            {
+              "name": "Perl Tour",
+              "file": "./books/perl.json"
+            },
+            {
+              "name": "Php Tour",
+              "file": "./books/php.json"
+            },
+            {
+              "name": "Python Tour",
+              "file": "./books/python.json"
+            },
+            {
+              "name": "R Tour",
+              "file": "./books/r.json"
+            },
+            {
+              "name": "Ruby Tour",
+              "file": "./books/ruby.json"
+            },
+            {
+              "name": "Rust Tour",
+              "file": "./books/rust.json"
+            },
+            {
+              "name": "Scala Tour",
+              "file": "./books/scala.json"
+            },
+            {
+              "name": "Swift Tour",
+              "file": "./books/swift.json"
+            },
+            {
+              "name": "Typescript Tour",
+              "file": "./books/typescript.json"
+            },
+            {
+              "name": "VB.NET Tour",
+              "file": "./books/vb.net.json"
+            },
+            {
+              "name": "Zig Language Tour",
+              "file": "./books/ziglang.json"
+            }
+          ]
+        },
+        {
+          "name": "DSA Tour",
+          "file": "./books/dsa.json"
+        },
+        {
+          "name": "Embedded Systems Tour",
+          "file": "./books/embedded_systems.json"
+        },
+        {
+          "name": "Introduction to Programming Tour",
+          "file": "./books/intro_to_programming.json"
+        },
+        {
+          "name": "Pillow Tour",
+          "file": "./books/pillow.json"
+        },
+        {
+          "name": "Pyqt Tour",
+          "file": "./books/pyqt.json"
+        },
+        {
+          "name": "Qt 5.15 C++ Tour",
+          "file": "./books/Qt5_15.json"
+        },
+        {
+          "name": "Socket Programming C/C++ Tour",
+          "file": "./books/socket_programming.json"
+        }
+      ]
+    },
+    {
+      "name": "Software Development Practices",
+      "children": [
+        {
+          "name": "Agile Tour",
+          "file": "./books/agile.json"
+        },
+        {
+          "name": "Cucumber Tour",
+          "file": "./books/cucumber.json"
+        },
+        {
+          "name": "Cypress Tour",
+          "file": "./books/cypress.json"
+        },
+        {
+          "name": "Jmeter Tour",
+          "file": "./books/jmeter.json"
+        },
+        {
+          "name": "Postman Tour",
+          "file": "./books/postman.json"
+        },
+        {
+          "name": "Selenium Tour",
+          "file": "./books/selenium.json"
+        },
+        {
+          "name": "Software Testing Tour",
+          "file": "./books/software_testing.json"
+        },
+        {
+          "name": "Testrail Tour",
+          "file": "./books/testrail.json"
+        },
+        {
+          "name": "Watir Tour",
+          "file": "./books/watir.json"
+        }
+      ]
+    },
+    {
+      "name": "Web Development",
+      "children": [
+        {
+          "name": "Backend",
+          "children": [
+            {
+              "name": "ASP.NET Core Tour",
+              "file": "./books/asp.json"
+            },
+            {
+              "name": "Codeigniter Tour",
+              "file": "./books/codeigniter.json"
+            },
+            {
+              "name": "Django Tour",
+              "file": "./books/django.json"
+            },
+            {
+              "name": "Nginx Tour",
+              "file": "./books/nginx.json"
+            },
+            {
+              "name": "Node.js Tour",
+              "file": "./books/nodejs.json"
+            }
+          ]
+        },
+        {
+          "name": "Frontend",
+          "children": [
+            {
+              "name": "Angular Tour",
+              "file": "./books/angular.json"
+            },
+            {
+              "name": "Angularjs Tour",
+              "file": "./books/angularjs.json"
+            },
+            {
+              "name": "Bootstrap Tour",
+              "file": "./books/bootstrap.json"
+            },
+            {
+              "name": "Jquery Tour",
+              "file": "./books/jquery.json"
+            },
+            {
+              "name": "React Js Tour",
+              "file": "./books/reactjs.json"
+            },
+            {
+              "name": "React Native Tour",
+              "file": "./books/react_native.json"
+            },
+            {
+              "name": "Sass Tour",
+              "file": "./books/sass.json"
+            },
+            {
+              "name": "Tailwind CSS Tour",
+              "file": "./books/tailwindcss.json"
+            },
+            {
+              "name": "Vue Tour",
+              "file": "./books/vue.json"
+            }
+          ]
+        },
+        {
+          "name": "Ajax Tour",
+          "file": "./books/ajax.json"
+        },
+        {
+          "name": "Appml Tour",
+          "file": "./books/appml.json"
+        },
+        {
+          "name": "Css Tour",
+          "file": "./books/css.json"
+        },
+        {
+          "name": "Html Tour",
+          "file": "./books/html.json"
+        },
+        {
+          "name": "Json Tour",
+          "file": "./books/json.json"
+        },
+        {
+          "name": "Web Dev Tour",
+          "file": "./books/webdev.json"
+        },
+        {
+          "name": "Wordpress Tour",
+          "file": "./books/wordpress.json"
+        },
+        {
+          "name": "Xml Tour",
+          "file": "./books/xml.json"
+        }
       ]
     }
   ]

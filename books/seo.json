@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is SEO?",
+    "math": "Search engine optimization",
+    "note": "This section defines Search Engine Optimization (SEO) as the practice of increasing the quantity and quality of traffic to a website through organic (non-paid) search engine results. It explains that the goal is to improve a site's visibility for relevant searches."
+  },
+  {
+    "n": 2,
+    "title": "How Search Engines Work",
+    "math": "Web crawling and indexing",
+    "note": "This lesson provides a foundational understanding of how search engines like Google discover and rank content. It explains the three main processes: Crawling (following links to discover web pages), Indexing (storing and organizing the content found), and Ranking (deciding which pages are most relevant for a given query)."
+  },
+  {
+    "n": 3,
+    "title": "The Three Pillars of SEO",
+    "math": "SEO framework",
+    "note": "This section introduces a framework for understanding SEO by breaking it down into three core pillars: On-Page SEO (the content on your site), Off-Page SEO (signals from other websites, like backlinks), and Technical SEO (how well your site can be crawled and indexed)."
+  },
+  {
+    "n": 4,
+    "title": "Keyword Research: Understanding User Intent",
+    "math": "User intent analysis",
+    "note": "This lesson explains that successful SEO starts with understanding what your audience is searching for. It covers the different types of search intent: Informational (wanting to know something), Navigational (wanting to go to a specific site), Transactional (wanting to buy something), and Commercial Investigation."
+  },
+  {
+    "n": 5,
+    "title": "How to Perform Keyword Research",
+    "math": "Keyword analysis",
+    "note": "This section provides a practical guide to finding keywords. It covers brainstorming seed keywords, using keyword research tools (like Google Keyword Planner or third-party tools) to expand the list, and analyzing metrics like monthly search volume and keyword difficulty."
+  },
+  {
+    "n": 6,
+    "title": "On-Page SEO: Title Tags and Meta Descriptions",
+    "math": "HTML metadata",
+    "note": "This lesson focuses on two of the most important on-page SEO elements. The Title Tag is the clickable headline in the search results and a strong ranking factor. The Meta Description is the descriptive text that appears under the title, which influences click-through rate."
+  },
+  {
+    "n": 7,
+    "title": "On-Page SEO: Content Optimization",
+    "math": "Content writing",
+    "note": "This section explains how to create content that ranks well. It emphasizes writing high-quality, comprehensive content that satisfies user intent. It also covers the importance of using your target keyword naturally within the content, headings, and URL."
+  },
+  {
+    "n": 8,
+    "title": "On-Page SEO: Internal Linking",
+    "math": "Graph theory (link graphs)",
+    "note": "This lesson covers the practice of linking from one page on your website to another. It explains that internal linking helps search engines understand the structure of your site, establishes a hierarchy of information, and spreads 'link equity' (ranking power) around your website."
+  },
+  {
+    "n": 9,
+    "title": "Technical SEO: Site Speed",
+    "math": "Performance optimization",
+    "note": "This section explains why page speed is a critical ranking factor. A faster page provides a better user experience and is favored by search engines. It provides an overview of common ways to improve speed, such as optimizing images and enabling browser caching."
+  },
+  {
+    "n": 10,
+    "title": "Technical SEO: Mobile-Friendliness",
+    "math": "Responsive design",
+    "note": "This lesson covers the importance of having a mobile-friendly website, especially with Google's move to mobile-first indexing. It explains that a site should be easy to use and read on a mobile device, which is typically achieved through responsive design."
+  },
+  {
+    "n": 11,
+    "title": "Technical SEO: XML Sitemaps",
+    "math": "XML sitemaps",
+    "note": "This section explains that an XML sitemap is a file that lists all the important pages on your website, making it easier for search engines to find and crawl them. It demonstrates the basic structure of a sitemap and how to submit it to Google Search Console."
+  },
+  {
+    "n": 12,
+    "title": "Technical SEO: `robots.txt`",
+    "math": "Robot Exclusion Protocol",
+    "note": "This lesson covers the `robots.txt` file, a text file located in the root directory of a website that tells search engine crawlers which pages or files the crawler can or can't request from your site. It is used to prevent crawling of non-public or unimportant pages."
+  },
+  {
+    "n": 13,
+    "title": "Technical SEO: Structured Data (Schema Markup)",
+    "math": "Semantic web",
+    "note": "This section introduces Structured Data as a standardized format for providing information about a page and classifying its content. Using schema markup (e.g., from schema.org) can help search engines understand your content better and can result in 'rich snippets' (like ratings or reviews) in the search results."
+  },
+  {
+    "n": 14,
+    "title": "Off-Page SEO: Backlinks",
+    "math": "Link analysis",
+    "note": "This lesson focuses on backlinks—links from other websites to yours. It explains that backlinks act as 'votes' of confidence from other sites, and a strong backlink profile is one of the most important ranking factors. The concepts of link quality and relevance are emphasized."
+  },
+  {
+    "n": 15,
+    "title": "Ethical Link Building",
+    "math": "Content marketing",
+    "note": "This section covers sustainable, 'white-hat' strategies for earning backlinks. It explains that the best way to get links is to create high-quality, link-worthy content that other people will want to reference and share. Outreach and promotion are also discussed."
+  },
+  {
+    "n": 16,
+    "title": "Measuring SEO: Google Search Console",
+    "math": "Performance monitoring",
+    "note": "This lesson introduces Google Search Console as an essential free tool for monitoring your site's health and performance in Google Search. It demonstrates how to use it to see which queries are driving traffic, check for indexing errors, and submit sitemaps."
+  },
+  {
+    "n": 17,
+    "title": "Measuring SEO: Google Analytics",
+    "math": "Web analytics",
+    "note": "This section covers Google Analytics as a tool for understanding how users behave on your website. It shows how to view the 'Organic Search' traffic channel to see how many visitors are coming from search engines and which pages they are landing on."
+  },
+  {
+    "n": 18,
+    "title": "Local SEO",
+    "math": "Local search optimization",
+    "note": "This lesson focuses on SEO for brick-and-mortar businesses. It introduces Local SEO as a strategy to increase visibility in local search results. The most important factor, optimizing a Google Business Profile, is detailed."
+  },
+  {
+    "n": 19,
+    "title": "The SEO Audit",
+    "math": "SEO auditing",
+    "note": "This section provides a framework for conducting a basic SEO audit. An audit is a process of analyzing how well your web presence aligns with best practices. It is the first step in creating an implementation plan to improve your rankings."
+  },
+  {
+    "n": 20,
+    "title": "The E-A-T Framework",
+    "math": "Expertise, Authoritativeness, Trustworthiness",
+    "note": "This final lesson introduces Google's E-A-T framework, which stands for Expertise, Authoritativeness, and Trustworthiness. It explains that for certain types of queries (especially Your Money or Your Life topics), Google places a high value on content created by trusted experts, and this should be a guiding principle of your content strategy."
+  }
+]

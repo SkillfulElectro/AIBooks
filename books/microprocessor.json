@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is a Microprocessor?",
+    "math": "Computer architecture",
+    "note": "This section defines a microprocessor as a computer processor where the data processing logic and control is included on a single integrated circuit, or a small number of integrated circuits. It is the central processing unit (CPU) of a computer, responsible for executing instructions."
+  },
+  {
+    "n": 2,
+    "title": "Evolution of Microprocessors",
+    "math": "Historical development",
+    "note": "This lesson traces the history of the microprocessor, from the first 4-bit processors in the 1970s (like the Intel 4004), through the 8-bit era (Intel 8080/8085), the 16-bit era (Intel 8086), and up to the 32-bit and 64-bit architectures that are standard today."
+  },
+  {
+    "n": 3,
+    "title": "Microprocessor vs. Microcontroller",
+    "math": "Comparative architecture",
+    "note": "This section clarifies the key difference between a microprocessor and a microcontroller. A microprocessor is just a CPU and requires external components for memory and I/O. A microcontroller is a 'computer on a chip' that integrates a CPU, memory, and I/O peripherals into a single package."
+  },
+  {
+    "n": 4,
+    "title": "Introduction to the 8085 Microprocessor",
+    "math": "8-bit architecture",
+    "note": "This lesson introduces the Intel 8085 as a classic 8-bit microprocessor that serves as an excellent learning tool for understanding computer architecture. Its features, such as its 8-bit data bus and 16-bit address bus, are outlined."
+  },
+  {
+    "n": 5,
+    "title": "The 8085 Architecture: Registers",
+    "math": "CPU registers",
+    "note": "This section details the internal registers of the 8085. It covers the general-purpose registers (B, C, D, E, H, L), the special-purpose Accumulator (A) for arithmetic operations, and the 16-bit Program Counter (PC) and Stack Pointer (SP)."
+  },
+  {
+    "n": 6,
+    "title": "The 8085 Architecture: ALU and Flag Register",
+    "math": "Arithmetic Logic Unit (ALU), status flags",
+    "note": "This lesson explains the role of the Arithmetic and Logic Unit (ALU) in performing arithmetic and logical operations. It also details the Flag Register, which holds status flags (like Zero, Carry, Sign) that indicate the result of the most recent ALU operation."
+  },
+  {
+    "n": 7,
+    "title": "The 8085 Pin Diagram: Address and Data Buses",
+    "math": "System bus",
+    "note": "This section explains how the 8085 communicates with external devices. It describes the 16-bit Address Bus (used to specify a memory location) and the 8-bit Data Bus (used to transfer data). The concept of a multiplexed (shared) address/data bus (AD0-AD7) is also introduced."
+  },
+  {
+    "n": 8,
+    "title": "The 8085 Pin Diagram: Control and Status Signals",
+    "math": "Control signals",
+    "note": "This lesson covers the key control signals of the 8085. It explains the purpose of signals like `RD` (Read), `WR` (Write), and `IO/M` (to select between memory and I/O operations), which control the flow of data between the microprocessor and other components."
+  },
+  {
+    "n": 9,
+    "title": "Instruction Sets and Addressing Modes",
+    "math": "Instruction Set Architecture (ISA)",
+    "note": "This section introduces the concept of an instruction set as the vocabulary of commands that a microprocessor can understand and execute. It also explains Addressing Modes, which are the different ways that an instruction can specify the data (operands) it will operate on."
+  },
+  {
+    "n": 10,
+    "title": "8085 Addressing Modes",
+    "math": "Addressing modes",
+    "note": "This lesson details the specific addressing modes of the 8085. It covers Immediate (data is in the instruction), Register (data is in a register), Direct (the address of the data is in the instruction), and Indirect (the address of the data is in a register pair)."
+  },
+  {
+    "n": 11,
+    "title": "Instruction Group: Data Transfer",
+    "math": "Data transfer instructions",
+    "note": "This section covers the data transfer instructions of the 8085. These instructions are used to move data between registers, between a register and memory, and to load immediate data. Examples include `MOV` (Move), `MVI` (Move Immediate), and `LDA` (Load Accumulator Direct)."
+  },
+  {
+    "n": 12,
+    "title": "Instruction Group: Arithmetic",
+    "math": "Arithmetic instructions",
+    "note": "This lesson details the arithmetic instructions. It covers instructions for addition (`ADD`, `ADI`), subtraction (`SUB`, `SUI`), and incrementing/decrementing registers (`INR`, `DCR`). The role of the Accumulator as the primary register for these operations is emphasized."
+  },
+  {
+    "n": 13,
+    "title": "Instruction Group: Logical and Branching",
+    "math": "Logical and control flow instructions",
+    "note": "This section covers two important instruction groups. Logical instructions perform bitwise operations (`ANA`, `ORA`, `XRA`). Branching (or jump) instructions alter the normal flow of program execution, allowing for loops and conditional logic (`JMP`, `JNZ`, `JC`)."
+  },
+  {
+    "n": 14,
+    "title": "Introduction to Assembly Language Programming",
+    "math": "Assembly language",
+    "note": "This lesson introduces Assembly Language as a low-level programming language that uses mnemonics to represent machine code instructions, making it more readable for humans. The relationship between one assembly instruction and one machine instruction is explained."
+  },
+  {
+    "n": 15,
+    "title": "Writing a Simple Assembly Program",
+    "math": "Procedural programming",
+    "note": "This lesson provides a practical example of writing a simple assembly language program for the 8085, such as adding two 8-bit numbers stored in memory. It demonstrates the structure of the code and the use of data transfer and arithmetic instructions."
+  },
+  {
+    "n": 16,
+    "title": "Memory Interfacing",
+    "math": "Memory mapping and decoding",
+    "note": "This section explains how memory chips (like RAM or ROM) are connected to the microprocessor. It covers the concept of address decoding, which is the process of using the address bus to select a specific memory location from all the available memory chips."
+  },
+  {
+    "n": 17,
+    "title": "Interrupts",
+    "math": "Interrupts",
+    "note": "This lesson introduces interrupts as a mechanism for an external device to get the attention of the microprocessor. It explains how an interrupt causes the microprocessor to pause its current program and execute a special routine (an Interrupt Service Routine) to handle the request from the device."
+  },
+  {
+    "n": 18,
+    "title": "The 8086 Microprocessor: A 16-bit Advance",
+    "math": "16-bit architecture",
+    "note": "This section provides an introduction to the Intel 8086, the successor to the 8085. It highlights the major advances, including its 16-bit architecture, more powerful instruction set, and the introduction of memory segmentation to address a larger memory space."
+  },
+  {
+    "n": 19,
+    "title": "Modern Concepts: CISC vs. RISC",
+    "math": "Instruction set complexity",
+    "note": "This lesson introduces two major design philosophies for processor instruction sets. CISC (Complex Instruction Set Computer), like the 80x86 family, has a large number of complex instructions. RISC (Reduced Instruction Set Computer), like ARM, has a smaller number of simpler, faster instructions."
+  },
+  {
+    "n": 20,
+    "title": "Modern Concepts: Multi-Core Processors and Cache",
+    "math": "Parallel processing and memory hierarchy",
+    "note": "This final lesson provides a high-level overview of two key features of modern microprocessors. It explains that a multi-core processor contains two or more independent processing units (cores) on a single chip to enable parallel processing. It also introduces cache memory as a small, fast memory on the processor chip used to store frequently accessed data."
+  }
+]

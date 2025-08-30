@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to Behavior-Driven Development (BDD)",
+    "math": "Software development methodologies",
+    "note": "This section introduces Behavior-Driven Development (BDD) as a software development process that emerged from Test-Driven Development (TDD). It explains that BDD encourages collaboration between developers, QA, and non-technical business participants by focusing on defining the desired 'behavior' of the system in a shared, understandable language."
+  },
+  {
+    "n": 2,
+    "title": "BDD vs. TDD",
+    "math": "Comparative analysis",
+    "note": "This lesson clarifies the relationship between BDD and TDD. While both involve writing tests before code, TDD is a developer-focused technique for designing code units. BDD is a broader methodology focused on defining and testing the overall behavior of a feature from the user's perspective, using examples."
+  },
+  {
+    "n": 3,
+    "title": "What Is Cucumber?",
+    "math": "Domain-Specific Languages (DSLs)",
+    "note": "This section introduces Cucumber as a tool that supports BDD. It explains that Cucumber allows you to write executable specifications in a business-readable, domain-specific language. It acts as a bridge, translating these plain-text specifications into tests that verify the system's behavior."
+  },
+  {
+    "n": 4,
+    "title": "Gherkin: The Language of Cucumber",
+    "math": "Formal language syntax",
+    "note": "This lesson introduces Gherkin, the language used to write specifications in Cucumber. It is a line-oriented language that uses keywords to structure plain-text descriptions of software behavior. The goal of Gherkin is to be simple enough for non-programmers to read."
+  },
+  {
+    "n": 5,
+    "title": "Gherkin Keywords: `Feature` and `Scenario`",
+    "math": "Specification structure",
+    "note": "This section covers the basic structure of a Gherkin document, called a 'feature file'. It explains the `Feature` keyword, used to describe a high-level software feature, and the `Scenario` keyword, used to describe a concrete example of that feature's behavior."
+  },
+  {
+    "n": 6,
+    "title": "Gherkin Keywords: `Given`, `When`, `Then`",
+    "math": "Pre-condition, Action, Post-condition",
+    "note": "This lesson details the core steps used to define a scenario. It explains `Given` (to describe the initial context or pre-condition), `When` (to describe an event or action), and `Then` (to describe the expected outcome or post-condition). The keywords `And` and `But` are also introduced for continuing a previous step."
+  },
+  {
+    "n": 7,
+    "title": "Writing Your First Feature File",
+    "math": "Technical writing",
+    "note": "This lesson provides a practical guide to writing a simple feature file for a login feature. It demonstrates how to combine the `Feature`, `Scenario`, `Given`, `When`, and `Then` keywords to create a clear, readable specification for a single behavior."
+  },
+  {
+    "n": 8,
+    "title": "Step Definitions: Connecting Gherkin to Code",
+    "math": "Function mapping",
+    "note": "This section explains the concept of Step Definitions. A step definition is a piece of code (e.g., a Java or Ruby method) that is linked to a Gherkin step. When Cucumber executes a Gherkin step, it calls the corresponding step definition method. This is how plain text becomes an automated test."
+  },
+  {
+    "n": 9,
+    "title": "Creating and Running Your First Step Definition",
+    "math": "Regular expressions",
+    "note": "This lesson demonstrates how to create a step definition file and write the code to implement a Gherkin step. It shows how annotations (like `@Given` in Java) and regular expressions are used to match the text in the feature file to the correct method."
+  },
+  {
+    "n": 10,
+    "title": "The Red-Green-Refactor Cycle in BDD",
+    "math": "Iterative development cycle",
+    "note": "This section explains the workflow of BDD with Cucumber. 1. (Red) Write a scenario and run it to see the steps fail or be marked as pending. 2. (Green) Write the minimum amount of application and test code to make the scenario pass. 3. (Refactor) Clean up and improve the code while keeping the test passing."
+  },
+  {
+    "n": 11,
+    "title": "Reducing Duplication with `Background`",
+    "math": "Code reuse",
+    "note": "This lesson introduces the `Background` keyword in Gherkin. It is used to define a set of `Given` steps that are common to all scenarios within a single feature file. This avoids repetition and makes the feature file cleaner."
+  },
+  {
+    "n": 12,
+    "title": "Data-Driven Testing with `Scenario Outline`",
+    "math": "Parameterized testing",
+    "note": "This section covers how to run the same scenario with multiple different sets of data. It introduces the `Scenario Outline` keyword, which uses placeholders in the steps, and the `Examples` table, which provides the values to be substituted into the placeholders for each run of the scenario."
+  },
+  {
+    "n": 13,
+    "title": "Passing Data with Data Tables",
+    "math": "Data structures (tables)",
+    "note": "This lesson explains how to pass a structured table of data from a Gherkin step to a step definition. This is useful for providing more complex data than can fit in a single step line. The step definition then receives this data as a list of lists or a similar data structure."
+  },
+  {
+    "n": 14,
+    "title": "Capturing Arguments in Step Definitions",
+    "math": "String capturing groups",
+    "note": "This section provides a deeper dive into making step definitions flexible. It demonstrates how to use capturing groups (with regular expressions or Cucumber Expressions) to extract values from a Gherkin step and pass them as parameters to the step definition method (e.g., capturing a username from the step 'When the user \"admin\" logs in')."
+  },
+  {
+    "n": 15,
+    "title": "Organizing Features with Tags",
+    "math": "Tagging systems",
+    "note": "This lesson introduces Tags, which are annotations starting with the `@` symbol that can be placed above `Feature` or `Scenario`. Tags are used to categorize your tests (e.g., `@smoke`, `@regression`) and to selectively run only a subset of scenarios."
+  },
+  {
+    "n": 16,
+    "title": "Setup and Teardown with Hooks",
+    "math": "Lifecycle hooks",
+    "note": "This section explains Hooks, which are blocks of code that can run at various points in the Cucumber test cycle. It covers the `@Before` hook (which runs before each scenario) and the `@After` hook (which runs after each scenario). These are commonly used for tasks like setting up a database connection or closing a web browser."
+  },
+  {
+    "n": 17,
+    "title": "Using Cucumber for Web Testing with Selenium",
+    "math": "UI automation",
+    "note": "This lesson provides a practical guide to integrating Cucumber with Selenium WebDriver. It explains how to set up the WebDriver in a `@Before` hook and then write step definitions that use the Selenium API to perform actions like navigating to a URL, finding elements, clicking buttons, and asserting on page content."
+  },
+  {
+    "n": 18,
+    "title": "The Page Object Model (POM) with Cucumber",
+    "math": "Design patterns",
+    "note": "This section introduces the Page Object Model (POM) as a design pattern for creating maintainable UI tests. It explains how to create classes that represent pages of the application, encapsulating the selectors and methods for interacting with that page. These page objects are then used within the step definitions to keep them clean and readable."
+  },
+  {
+    "n": 19,
+    "title": "Using Cucumber for API Testing",
+    "math": "API testing",
+    "note": "This lesson demonstrates how Cucumber can be used to test REST APIs. It shows how to write Gherkin scenarios that describe API behavior (e.g., 'When I send a POST request to /users'). The step definitions are then implemented using an HTTP client library to make the requests and assert on the status codes and response bodies."
+  },
+  {
+    "n": 20,
+    "title": "Generating Reports",
+    "math": "Test reporting",
+    "note": "This final lesson covers how to generate human-readable reports from a Cucumber test run. It explains how to configure Cucumber to output reports in various formats, such as HTML for easy viewing, and JSON or XML for integration with CI/CD systems like Jenkins."
+  }
+]

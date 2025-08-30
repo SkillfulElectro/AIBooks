@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is a Computer?",
+    "math": "Basic definitions",
+    "note": "This section provides a simple definition of a computer as an electronic device that accepts data (input), manipulates it (processing), and produces information (output). The fundamental Input-Process-Output-Storage (IPOS) cycle is introduced as the core operational model of any computer."
+  },
+  {
+    "n": 2,
+    "title": "A Brief History of Computing",
+    "math": "Historical timelines",
+    "note": "This lesson traces the evolution of computing devices. It starts with early mechanical calculators like the abacus, moves to the large-scale electronic computers of the mid-20th century (like ENIAC), and culminates in the development of the personal computer (PC) and the modern digital devices we use today."
+  },
+  {
+    "n": 3,
+    "title": "Types of Computers",
+    "math": "Classification",
+    "note": "This section categorizes computers based on their size, power, and application. It covers personal computers (desktops and laptops), servers (which provide services over a network), mainframes (for large-scale enterprise computing), supercomputers (for scientific research), and embedded systems (computers inside other devices like cars or microwaves)."
+  },
+  {
+    "n": 4,
+    "title": "Hardware vs. Software",
+    "math": "System components",
+    "note": "This lesson explains the fundamental distinction between computer hardware and software. Hardware refers to the physical, tangible parts of the computer that you can touch (like the monitor, keyboard, and internal chips). Software refers to the intangible set of instructions and programs that tell the hardware what to do."
+  },
+  {
+    "n": 5,
+    "title": "Hardware: The Central Processing Unit (CPU)",
+    "math": "Central processing",
+    "note": "This section introduces the CPU as the 'brain' of the computer. It explains that the CPU is responsible for executing instructions and performing calculations. The two main components of the CPU, the Arithmetic Logic Unit (ALU) for calculations and the Control Unit (CU) for coordinating operations, are defined."
+  },
+  {
+    "n": 6,
+    "title": "Hardware: Computer Memory (RAM and ROM)",
+    "math": "Memory hierarchy",
+    "note": "This lesson explains the concept of primary memory. It differentiates between RAM (Random Access Memory), which is volatile memory used for temporary storage of actively running programs, and ROM (Read-Only Memory), which is non-volatile memory that stores essential startup instructions for the computer."
+  },
+  {
+    "n": 7,
+    "title": "Hardware: Storage Devices",
+    "math": "Data storage",
+    "note": "This section covers secondary memory, which is used for long-term data storage. It explains the difference between a Hard Disk Drive (HDD), which uses spinning magnetic platters, and a Solid-State Drive (SSD), which uses flash memory and is much faster. External storage like USB drives is also discussed."
+  },
+  {
+    "n": 8,
+    "title": "Hardware: Input Devices",
+    "math": "Input mechanisms",
+    "note": "This lesson defines input devices as any hardware component that allows you to send data to a computer. It covers the most common input devices, including the keyboard (for typing text), the mouse (for pointing and clicking), the microphone (for audio input), and the scanner (for digitizing documents)."
+  },
+  {
+    "n": 9,
+    "title": "Hardware: Output Devices",
+    "math": "Output mechanisms",
+    "note": "This section defines output devices as any hardware component that displays information from the computer to a user. It covers the primary output devices: the monitor (for visual display), the printer (for producing hard copies), and speakers (for audio output)."
+  },
+  {
+    "n": 10,
+    "title": "Hardware: The Motherboard",
+    "math": "System integration",
+    "note": "This lesson explains the role of the motherboard as the main circuit board of the computer. It is described as the central hub that connects all the other hardware components, including the CPU, RAM, and storage drives, allowing them to communicate with each other."
+  },
+  {
+    "n": 11,
+    "title": "Software: The Operating System (OS)",
+    "math": "Resource management",
+    "note": "This section introduces the Operating System as the most important piece of system software. It explains that the OS manages all the computer's hardware and software resources, and provides a user interface for the user to interact with the computer. Examples like Windows, macOS, and Linux are given."
+  },
+  {
+    "n": 12,
+    "title": "Software: Application Software",
+    "math": "User applications",
+    "note": "This lesson defines application software as programs designed to perform specific tasks for the user. This is contrasted with system software, which runs the computer itself. Examples include word processors (like Microsoft Word), web browsers (like Google Chrome), and games."
+  },
+  {
+    "n": 13,
+    "title": "How Computers Represent Data: Bits and Bytes",
+    "math": "Binary number system",
+    "note": "This section explains the fundamental concept of how computers store information. It introduces the binary system, where all data is represented as a sequence of bits (binary digits), which can be either a 0 or a 1. A group of 8 bits is defined as a byte."
+  },
+  {
+    "n": 14,
+    "title": "Units of Data Storage",
+    "math": "Powers of 2",
+    "note": "This lesson defines the standard units used to measure digital data. It explains the hierarchy of storage units: Kilobyte (KB), Megabyte (MB), Gigabyte (GB), and Terabyte (TB), and provides real-world analogies to understand the scale of each unit (e.g., a text file vs. a movie)."
+  },
+  {
+    "n": 15,
+    "title": "The User Interface: GUI vs. CLI",
+    "math": "Human-computer interaction",
+    "note": "This section explains the two main ways users can interact with an operating system. It covers the Graphical User Interface (GUI), which uses icons, windows, and a mouse, and the Command-Line Interface (CLI), which uses text-based commands."
+  },
+  {
+    "n": 16,
+    "title": "File Systems: Organizing Your Data",
+    "math": "Hierarchical data structures (trees)",
+    "note": "This lesson explains how an operating system organizes data for storage using a file system. It introduces the concepts of files (a collection of related information) and directories or folders (a container for organizing files and other folders) in a hierarchical structure."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to Computer Networks",
+    "math": "Network topology",
+    "note": "This section defines a computer network as a collection of interconnected computers that can share resources and data. It explains the difference between a Local Area Network (LAN), which covers a small area like a home or office, and a Wide Area Network (WAN), which covers a large geographical area."
+  },
+  {
+    "n": 18,
+    "title": "What Is the Internet?",
+    "math": "Global networks",
+    "note": "This lesson defines the Internet as a massive, global network of interconnected computer networks. It explains that the Internet allows computers all over the world to communicate with each other. The distinction between the Internet (the infrastructure) and the World Wide Web (the information on the Internet) is clarified."
+  },
+  {
+    "n": 19,
+    "title": "Basic Computer Security: Malware",
+    "math": "Threat modeling",
+    "note": "This section introduces the concept of malware (malicious software). It provides simple definitions for common types of malware, such as viruses (which attach to other programs) and ransomware (which encrypts files and demands payment). The importance of using antivirus software is emphasized."
+  },
+  {
+    "n": 20,
+    "title": "Staying Safe Online",
+    "math": "Risk management",
+    "note": "This final lesson provides essential tips for online safety. It covers the importance of creating strong, unique passwords, being cautious of 'phishing' emails that try to steal information, and the critical practice of regularly backing up important files to prevent data loss from hardware failure or malware."
+  }
+]

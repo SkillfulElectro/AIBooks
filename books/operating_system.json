@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is an Operating System?",
+    "math": "System software",
+    "note": "This section provides a formal definition of an Operating System (OS) as a piece of system software that manages all the hardware and software resources of a computer. It acts as an intermediary between the user and the computer hardware, providing a convenient and efficient environment."
+  },
+  {
+    "n": 2,
+    "title": "The Structure of a Computer System",
+    "math": "Computer architecture",
+    "note": "This lesson outlines the basic organization of a computer system from the OS perspective. It covers the CPU, memory, and I/O devices, and explains how they are connected by a system bus. The role of device controllers and the CPU in managing these components is introduced."
+  },
+  {
+    "n": 3,
+    "title": "Types of Operating Systems",
+    "math": "OS classification",
+    "note": "This section categorizes different types of operating systems based on their processing methods. It covers Batch systems, Multiprogramming systems (which keep several jobs in memory at once), Time-Sharing (or multitasking) systems, and Real-Time Operating Systems (RTOS)."
+  },
+  {
+    "n": 4,
+    "title": "The Kernel and System Calls",
+    "math": "Kernel mode vs. user mode",
+    "note": "This lesson explains the concept of the Kernel as the core component of the operating system that has complete control over everything in the system. It also introduces System Calls as the programmatic interface through which a user program can request a service from the kernel."
+  },
+  {
+    "n": 5,
+    "title": "Processes: The Unit of Work",
+    "math": "Process model",
+    "note": "This section defines a Process as a program in execution. It explains that a process is more than just the program code; it also includes its current activity, represented by the program counter, processor registers, and a process stack containing temporary data."
+  },
+  {
+    "n": 6,
+    "title": "Process States and the Process Control Block (PCB)",
+    "math": "State machines",
+    "note": "This lesson describes the different states a process can be in: New, Ready, Running, Waiting, and Terminated. It introduces the Process Control Block (PCB), a data structure in the kernel that stores all the information associated with a specific process."
+  },
+  {
+    "n": 7,
+    "title": "CPU Scheduling",
+    "math": "Scheduling algorithms",
+    "note": "This section explains the need for CPU scheduling in a multiprogramming system. The CPU scheduler selects a process from the 'Ready' queue and allocates the CPU to it. The difference between preemptive and non-preemptive scheduling is also defined."
+  },
+  {
+    "n": 8,
+    "title": "CPU Scheduling Algorithms",
+    "math": "FCFS, SJF, Round Robin",
+    "note": "This lesson provides an overview of several classic CPU scheduling algorithms. It covers First-Come, First-Served (FCFS), Shortest-Job-First (SJF), and Round Robin (RR), which gives each process a small time slice (quantum) of CPU time. The trade-offs of each algorithm are discussed."
+  },
+  {
+    "n": 9,
+    "title": "Threads: Lightweight Processes",
+    "math": "Multithreading",
+    "note": "This section introduces the concept of a Thread as a basic unit of CPU utilization. A thread comprises a thread ID, a program counter, a register set, and a stack. It shares its code section, data section, and other OS resources with other threads belonging to the same process, making it 'lightweight'."
+  },
+  {
+    "n": 10,
+    "title": "Process Synchronization: The Critical-Section Problem",
+    "math": "Concurrency control",
+    "note": "This lesson introduces the challenge of process synchronization. It defines the Critical-Section Problem, which arises when multiple processes need to access shared data concurrently. The goal is to design a protocol that the processes can use to cooperate."
+  },
+  {
+    "n": 11,
+    "title": "Solutions to the Critical-Section Problem: Mutexes and Semaphores",
+    "math": "Synchronization primitives",
+    "note": "This section covers classic solutions for ensuring mutual exclusion. It introduces the Mutex (Mutual Exclusion) lock as a simple tool to protect a critical section. It also explains Semaphores, which are more sophisticated synchronization tools that can be used to control access to a resource with a limited number of instances."
+  },
+  {
+    "n": 12,
+    "title": "Deadlocks",
+    "math": "Deadlock",
+    "note": "This lesson defines a Deadlock as a situation where two or more processes are blocked forever, each waiting for a resource that is held by another process in the set. The four necessary conditions for a deadlock to occur (Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait) are explained."
+  },
+  {
+    "n": 13,
+    "title": "Memory Management",
+    "math": "Memory management",
+    "note": "This section explains the role of the OS in managing the main memory (RAM). The goal is to allocate memory space to processes in an efficient way, while also keeping track of which parts of memory are currently being used and by whom."
+  },
+  {
+    "n": 14,
+    "title": "Logical vs. Physical Address Space",
+    "math": "Address binding",
+    "note": "This lesson explains a fundamental concept in memory management. The Logical Address is an address generated by the CPU, also referred to as a virtual address. The Physical Address is the address seen by the memory unit. The Memory-Management Unit (MMU) is the hardware device that maps logical addresses to physical addresses."
+  },
+  {
+    "n": 15,
+    "title": "Memory Allocation: Paging",
+    "math": "Paging",
+    "note": "This section introduces Paging as a common memory-management scheme. It allows the physical address space of a process to be noncontiguous. The physical memory is broken down into fixed-sized blocks called frames, and the logical memory is broken into blocks of the same size called pages."
+  },
+  {
+    "n": 16,
+    "title": "Virtual Memory",
+    "math": "Virtual memory",
+    "note": "This lesson explains Virtual Memory, a technique that allows the execution of processes that are not completely in memory. This allows for a logical address space that is much larger than the physical address space, and it enables multiple processes to share memory more efficiently."
+  },
+  {
+    "n": 17,
+    "title": "Demand Paging and Page Replacement",
+    "math": "Page replacement algorithms",
+    "note": "This section details how virtual memory is implemented. Demand Paging is the strategy of loading a page into memory only when it is needed. When memory is full and a new page is needed, a Page Replacement algorithm (like FIFO or LRU) is used to decide which page in memory to swap out."
+  },
+  {
+    "n": 18,
+    "title": "File Systems",
+    "math": "File systems",
+    "note": "This lesson covers how the OS provides a uniform logical view of information storage. It defines a File as a named collection of related information that is recorded on secondary storage. The OS is responsible for mapping files onto physical devices and providing an interface for users to manage them."
+  },
+  {
+    "n": 19,
+    "title": "File Allocation Methods",
+    "math": "File allocation",
+    "note": "This section explains different methods for allocating disk space to files. It covers Contiguous Allocation (each file occupies a set of contiguous blocks), Linked Allocation (each file is a linked list of blocks), and Indexed Allocation (which brings all the pointers together into one location, the index block)."
+  },
+  {
+    "n": 20,
+    "title": "I/O Systems",
+    "math": "Input/Output (I/O)",
+    "note": "This final lesson provides an overview of how the OS manages Input/Output. It explains the role of device drivers in providing a uniform interface to the kernel, and the difference between polling, interrupt-driven I/O, and Direct Memory Access (DMA) for transferring data between I/O devices and memory."
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "n": 1,
+    "title": "Historical Context: What was AngularJS?",
+    "math": "Framework evolution",
+    "note": "This section introduces AngularJS (also known as Angular 1.x) as a foundational JavaScript framework. It explains its goal to be the 'Superheroic JavaScript MVW Framework' and its historical significance in popularizing Single Page Applications (SPAs). The lesson clarifies that this course covers the legacy version, not modern Angular (2+)."
+  },
+  {
+    "n": 2,
+    "title": "AngularJS vs. Modern Angular",
+    "math": "Comparative analysis",
+    "note": "This lesson details the critical differences between legacy AngularJS and modern Angular (versions 2 and above). It covers the architectural shift from Model-View-Controller (MVC) to a component-based architecture, the change in primary language from JavaScript to TypeScript, and the significant improvements in performance and modularity."
+  },
+  {
+    "n": 3,
+    "title": "Setting Up an AngularJS Project",
+    "math": "File linking",
+    "note": "This section demonstrates the classic method for setting up an AngularJS project. It explains how to include the AngularJS library in an HTML file using a `<script>` tag from a CDN and how to bootstrap the application using the `ng-app` directive on an HTML element."
+  },
+  {
+    "n": 4,
+    "title": "Core Concept: Modules",
+    "math": "Modular programming",
+    "note": "This lesson introduces the concept of modules as the main container for different parts of an AngularJS application. It shows how to create a module using `angular.module('myApp', [])` and explains how modules are used to organize controllers, services, and directives."
+  },
+  {
+    "n": 5,
+    "title": "Core Concept: Controllers and `ng-controller`",
+    "math": "Model-View-Controller (MVC) pattern",
+    "note": "This section explains the role of a controller in AngularJS. It demonstrates how to define a controller function and attach it to a part of the DOM using the `ng-controller` directive. The controller's primary responsibility is to hold the application logic and data for the view."
+  },
+  {
+    "n": 6,
+    "title": "Core Concept: The `$scope` Object",
+    "math": "Data binding",
+    "note": "This lesson introduces the `$scope` object as the 'glue' between the controller (JavaScript) and the view (HTML). It explains how properties attached to the `$scope` object in a controller become accessible within the view, forming the data model for that part of the application."
+  },
+  {
+    "n": 7,
+    "title": "One-Way Data Binding with Expressions",
+    "math": "String interpolation",
+    "note": "This section covers the use of AngularJS expressions, denoted by double curly braces `{{ }}`, for one-way data binding. It demonstrates how to use expressions to display data from the `$scope` directly in the HTML, and how these expressions are automatically updated when the data changes in the controller."
+  },
+  {
+    "n": 8,
+    "title": "Two-Way Data Binding with `ng-model`",
+    "math": "Synchronization",
+    "note": "This lesson explains one of AngularJS's most famous features: two-way data binding. It demonstrates how the `ng-model` directive, used on form inputs, creates a live synchronization between the view (the input field) and the model (a `$scope` property). Changes in one are instantly reflected in the other."
+  },
+  {
+    "n": 9,
+    "title": "Introduction to Directives",
+    "math": "Custom HTML attributes",
+    "note": "This section defines directives as markers on a DOM element (as an attribute, element name, or CSS class) that tell AngularJS's HTML compiler to attach a specified behavior to that DOM element. They are what makes powerful HTML possible in AngularJS."
+  },
+  {
+    "n": 10,
+    "title": "Structural Directive: `ng-repeat`",
+    "math": "Iteration and loops",
+    "note": "This lesson covers the `ng-repeat` directive, used for iterating over a collection (like an array) and instantiating a template once per item in the collection. It demonstrates the syntax `item in items` and how to create dynamic lists from data in the controller."
+  },
+  {
+    "n": 11,
+    "title": "Structural Directives: `ng-if`, `ng-show`, `ng-hide`",
+    "math": "Conditional logic (Boolean)",
+    "note": "This section explains how to conditionally show or hide elements. It contrasts `ng-if`, which removes the element from the DOM entirely, with `ng-show` and `ng-hide`, which toggle the element's visibility using CSS. The performance implications of each are discussed."
+  },
+  {
+    "n": 12,
+    "title": "Event Handling Directives",
+    "math": "Event listeners",
+    "note": "This lesson covers directives used to handle user interactions. It focuses on `ng-click` for handling clicks, but also introduces `ng-submit` for forms, `ng-mouseover`, and others. It shows how these directives can call functions defined on the `$scope` in the controller."
+  },
+  {
+    "n": 13,
+    "title": "Services and Dependency Injection",
+    "math": "Inversion of Control (IoC)",
+    "note": "This section introduces Services as singleton objects that carry out specific tasks for the application. It also explains Dependency Injection (DI) as the mechanism by which AngularJS provides components (like controllers) with their dependencies (like services) automatically."
+  },
+  {
+    "n": 14,
+    "title": "Built-in Service: `$http` for AJAX",
+    "math": "Asynchronous requests",
+    "note": "This lesson demonstrates how to use the built-in `$http` service to communicate with servers. It shows how to make GET and POST requests to fetch or send data, and how to handle the asynchronous response using promise-based `.then()` syntax."
+  },
+  {
+    "n": 15,
+    "title": "Creating a Custom Service with `.factory()`",
+    "math": "Factory pattern",
+    "note": "This lesson explains how to create a custom, reusable service using the `.factory()` recipe. A factory is a function that returns an object containing the service's methods and properties. This is one of the most common ways to create services in AngularJS."
+  },
+  {
+    "n": 16,
+    "title": "Creating a Custom Service with `.service()`",
+    "math": "Constructor functions",
+    "note": "This section demonstrates the `.service()` recipe for creating a custom service. A service is instantiated with the `new` keyword, meaning you add properties and methods to `this` inside a constructor function. The differences between `.service()` and `.factory()` are highlighted."
+  },
+  {
+    "n": 17,
+    "title": "Introduction to Filters",
+    "math": "Data transformation",
+    "note": "This lesson defines Filters as a way to format data for display in the view. It shows the pipe `|` syntax used to apply a filter to an expression, for example, `{{ myDate | date }}`. The purpose is to separate data formatting from application logic."
+  },
+  {
+    "n": 18,
+    "title": "Using Built-in Filters",
+    "math": "String and number manipulation",
+    "note": "This section provides examples of common built-in AngularJS filters. It covers `uppercase`, `lowercase` for text; `currency`, `number` for numerical formatting; `date` for date formatting; and `orderBy` and `filter` for manipulating arrays directly in the view."
+  },
+  {
+    "n": 19,
+    "title": "Routing with `ngRoute`",
+    "math": "URL routing",
+    "note": "This lesson introduces client-side routing for building Single Page Applications (SPAs). It explains how to include the `ngRoute` module and use the `$routeProvider` to configure different 'views' for different URLs, preventing full page reloads."
+  },
+  {
+    "n": 20,
+    "title": "Configuring Routes",
+    "math": "Configuration objects",
+    "note": "This section details how to use the `$routeProvider`'s `.when()` method to define a route. It covers specifying the URL, the `templateUrl` for the HTML partial, and the `controller` that will manage that view. The role of the `ng-view` directive as a placeholder for the template is also explained."
+  },
+  {
+    "n": 21,
+    "title": "Working with Forms",
+    "math": "Form state management",
+    "note": "This lesson covers how AngularJS enhances standard HTML forms. It explains how AngularJS creates a `FormController` instance for a form, which tracks the state of the form and its inputs. Key state properties like `$valid`, `$invalid`, `$dirty`, and `$pristine` are introduced."
+  },
+  {
+    "n": 22,
+    "title": "Form Validation",
+    "math": "Boolean validation logic",
+    "note": "This section demonstrates how to perform client-side form validation in AngularJS. It covers using standard HTML5 validation attributes like `required`, `minlength`, `type='email'`, etc. It also shows how to use the form's state properties (e.g., `myForm.myInput.$invalid`) to show or hide error messages for the user."
+  },
+  {
+    "n": 23,
+    "title": "The Digest Cycle",
+    "math": "Dirty checking algorithm",
+    "note": "This advanced lesson explains AngularJS's change detection mechanism, the Digest Cycle. It describes how AngularJS monitors the `$scope` for changes and updates the view accordingly. It explains when the cycle runs automatically and the implications for performance."
+  },
+  {
+    "n": 24,
+    "title": "The Component-Based Approach (Angular 1.5+)",
+    "math": "Component-based architecture",
+    "note": "This lesson introduces the `.component()` method, which was added in Angular 1.5 to encourage a more modern, component-based style of development, similar to modern Angular and React. It explains how components simplify directive creation and promote better application structure, making migration easier."
+  }
+]

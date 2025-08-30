@@ -1,0 +1,122 @@
+[
+  {
+    "n": 1,
+    "title": "What Is Data Mining?",
+    "math": "Knowledge discovery",
+    "note": "This section provides a formal definition of Data Mining as the process of discovering patterns, correlations, and anomalies within large sets of data to predict outcomes. It distinguishes Data Mining from standard data analysis, emphasizing its goal of automated or semi-automated knowledge discovery."
+  },
+  {
+    "n": 2,
+    "title": "The KDD Process",
+    "math": "Process flow model",
+    "note": "This lesson introduces the Knowledge Discovery in Databases (KDD) process, a comprehensive framework for data mining projects. It outlines the key stages: Selection (of data), Pre-processing (cleaning), Transformation (formatting), Data Mining (applying algorithms), and Interpretation/Evaluation (of discovered patterns)."
+  },
+  {
+    "n": 3,
+    "title": "Major Data Mining Tasks",
+    "math": "Problem classification",
+    "note": "This section provides an overview of the main categories of problems that Data Mining can solve. It introduces the primary tasks: Classification (predicting a category), Clustering (grouping similar items), Association Rule Mining (finding co-occurring items), Regression (predicting a continuous value), and Anomaly Detection (finding outliers)."
+  },
+  {
+    "n": 4,
+    "title": "The Importance of Data Pre-processing",
+    "math": "Data quality assurance",
+    "note": "This lesson emphasizes the 'Garbage In, Garbage Out' principle. It explains that real-world data is often incomplete, noisy, and inconsistent. Data pre-processing is a critical step that involves cleaning and organizing the data to improve the accuracy and efficiency of the mining algorithms."
+  },
+  {
+    "n": 5,
+    "title": "Data Cleaning",
+    "math": "Handling missing data and noise",
+    "note": "This section covers techniques for handling common data quality problems. It discusses strategies for dealing with missing values (e.g., ignoring the tuple, filling in the value manually, using a global constant) and methods for smoothing out noisy data to remove random errors."
+  },
+  {
+    "n": 6,
+    "title": "Data Transformation and Normalization",
+    "math": "Data scaling",
+    "note": "This lesson explains how data is transformed into forms appropriate for mining. It covers normalization, a technique to scale attribute data to fall within a smaller, specified range, such as 0 to 1. This is crucial for algorithms that are sensitive to the scale of input values, like k-Nearest Neighbors."
+  },
+  {
+    "n": 7,
+    "title": "Introduction to Classification",
+    "math": "Supervised learning",
+    "note": "This section defines Classification as a supervised learning task where the goal is to build a model that can predict a categorical class label. It explains the process: the model is first trained on a dataset with known labels, and then it is used to predict the labels of new, unseen data."
+  },
+  {
+    "n": 8,
+    "title": "Classification: Decision Tree Induction",
+    "math": "Decision trees, entropy, information gain",
+    "note": "This lesson introduces Decision Trees, one of the most intuitive classification models. It explains how a decision tree is built by recursively splitting the data based on attribute values. The concept of using metrics like Information Gain or Gini Index to choose the best attribute for each split is detailed."
+  },
+  {
+    "n": 9,
+    "title": "Classification: Naive Bayes Classifier",
+    "math": "Bayes' theorem, conditional probability",
+    "note": "This section covers the Naive Bayes classifier, a probabilistic model based on Bayes' theorem. It is called 'naive' because it makes a strong assumption that the features are conditionally independent of each other. Despite this simplicity, it performs surprisingly well in many real-world situations, especially text classification."
+  },
+  {
+    "n": 10,
+    "title": "Evaluating Classification Models",
+    "math": "Confusion matrix, accuracy, precision, recall",
+    "note": "This lesson explains how to measure the performance of a classification model. It details the Confusion Matrix and the key metrics derived from it: Accuracy, Precision (how many selected items are relevant), and Recall (how many relevant items are selected). The Receiver Operating Characteristic (ROC) curve is also introduced."
+  },
+  {
+    "n": 11,
+    "title": "Introduction to Clustering",
+    "math": "Unsupervised learning",
+    "note": "This section defines Clustering as an unsupervised learning task where the goal is to partition a set of objects into groups (clusters) such that objects in the same cluster are more similar to each other than to those in other clusters. Unlike classification, the class labels are not known in advance."
+  },
+  {
+    "n": 12,
+    "title": "Clustering: k-Means Algorithm",
+    "math": "Centroid-based clustering",
+    "note": "This lesson details the k-Means algorithm, one of the simplest and most popular clustering algorithms. It explains the iterative process: 1. Randomly select k initial centroids. 2. Assign each data point to the nearest centroid. 3. Recalculate the centroids as the mean of the points in each cluster. 4. Repeat until the centroids stabilize."
+  },
+  {
+    "n": 13,
+    "title": "Clustering: Hierarchical Methods",
+    "math": "Hierarchical clustering",
+    "note": "This section covers hierarchical clustering, which creates a tree-like structure of clusters (a dendrogram). It explains the two main approaches: Agglomerative (a 'bottom-up' approach where each observation starts in its own cluster) and Divisive (a 'top-down' approach where all observations start in one cluster)."
+  },
+  {
+    "n": 14,
+    "title": "Clustering: Density-Based Methods (DBSCAN)",
+    "math": "Density-based clustering",
+    "note": "This lesson introduces density-based clustering, which can find arbitrarily shaped clusters. It explains the DBSCAN algorithm, which groups together points that are closely packed together (points with many nearby neighbors), marking as outliers points that lie alone in low-density regions."
+  },
+  {
+    "n": 15,
+    "title": "Introduction to Association Rule Mining",
+    "math": "Market basket analysis",
+    "note": "This section introduces Association Rule Mining, a technique used to discover interesting relationships between variables in large databases. The classic example is 'Market Basket Analysis,' which aims to find rules like `{Diapers} -> {Beer}` from supermarket transaction data."
+  },
+  {
+    "n": 16,
+    "title": "Key Concepts: Support and Confidence",
+    "math": "Association rule metrics",
+    "note": "This lesson defines the two primary measures used to evaluate association rules. 'Support' indicates how frequently the items in the rule appear together in the dataset. 'Confidence' indicates how often the rule has been found to be true. A rule must meet a minimum support and confidence threshold to be considered interesting."
+  },
+  {
+    "n": 17,
+    "title": "The Apriori Algorithm",
+    "math": "Frequent itemset mining",
+    "note": "This section details the Apriori algorithm, a classic algorithm for mining frequent itemsets, which is the first step in association rule mining. It uses the 'Apriori property'—that any subset of a frequent itemset must also be frequent—to efficiently prune the search space."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to Anomaly Detection",
+    "math": "Outlier detection",
+    "note": "This lesson defines Anomaly Detection (or outlier detection) as the identification of rare items, events, or observations which raise suspicions by differing significantly from the majority of the data. Applications include fraud detection, fault detection, and system health monitoring."
+  },
+  {
+    "n": 19,
+    "title": "Data Mining Tools: Weka and Scikit-learn",
+    "math": "Software libraries",
+    "note": "This section provides an overview of popular software tools for data mining. It introduces Weka, a GUI-based tool popular in academia for its collection of machine learning algorithms. It also covers the Python library Scikit-learn, which has become the de facto standard for practical data mining and machine learning."
+  },
+  {
+    "n": 20,
+    "title": "Ethical Considerations in Data Mining",
+    "math": "Data privacy and ethics",
+    "note": "This final lesson discusses the important ethical implications of data mining. It covers issues related to data privacy, the potential for using data mining to create discriminatory models (e.g., in loan applications), and the need for transparency and accountability in how data mining results are used."
+  }
+]

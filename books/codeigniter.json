@@ -1,0 +1,128 @@
+[
+  {
+    "n": 1,
+    "title": "Introduction to PHP Frameworks",
+    "math": "Model-View-Controller (MVC) architecture",
+    "note": "This section explains the 'why' behind using a PHP framework. It covers the benefits over writing plain PHP, such as improved code organization, reusability, and security. The Model-View-Controller (MVC) pattern is introduced as the standard architectural pattern used by most frameworks to separate concerns."
+  },
+  {
+    "n": 2,
+    "title": "What Is CodeIgniter?",
+    "math": "Software design philosophy",
+    "note": "This lesson introduces CodeIgniter as a lightweight, fast, and powerful PHP framework. It covers its history and design philosophy, which emphasizes a small footprint and simplicity over the feature-heavy nature of other frameworks like Laravel or Symfony. Its ideal use cases for building full-featured web applications are discussed."
+  },
+  {
+    "n": 3,
+    "title": "Installing and Configuring CodeIgniter",
+    "math": "File system structure",
+    "note": "This section provides a step-by-step guide to installing CodeIgniter. It covers downloading the framework and understanding its directory structure, particularly the `application` and `system` folders. Key configuration files like `config.php` and `database.php` are introduced."
+  },
+  {
+    "n": 4,
+    "title": "The MVC Pattern in CodeIgniter",
+    "math": "Application flow",
+    "note": "This lesson details how the MVC pattern is implemented in CodeIgniter. It explains the flow of an application: a request comes in via a URL, which is handled by a Controller. The Controller may load a Model to fetch data, and then passes that data to a View to be rendered as HTML."
+  },
+  {
+    "n": 5,
+    "title": "Controllers: The Core of the Application",
+    "math": "Class methods",
+    "note": "This section introduces Controllers as the central unit of a CodeIgniter application. It demonstrates how to create a controller class that extends `CI_Controller`, and how the public methods within that class correspond to URL segments and are used to handle user requests."
+  },
+  {
+    "n": 6,
+    "title": "Views: Displaying Information",
+    "math": "Data presentation",
+    "note": "This lesson explains the role of Views in rendering the user interface. It shows how to create a simple view file (a PHP file with mostly HTML) and how to load it from a controller method using `$this->load->view('view_name');`."
+  },
+  {
+    "n": 7,
+    "title": "Passing Data from Controllers to Views",
+    "math": "Data structures (arrays)",
+    "note": "This section covers how to send dynamic data to a view. It demonstrates how to create an associative array of data in the controller and pass it as the second parameter to the `view()` method. The keys of the array are then automatically converted into variables within the view file."
+  },
+  {
+    "n": 8,
+    "title": "Models: Interacting with the Database",
+    "math": "Data abstraction",
+    "note": "This lesson introduces Models as classes designed to handle database operations. It explains that models are responsible for querying, inserting, and updating information in the database, providing a clean abstraction layer that separates data logic from the controller."
+  },
+  {
+    "n": 9,
+    "title": "CodeIgniter Libraries",
+    "math": "Software libraries",
+    "note": "This section explains Libraries as pre-built classes that provide common functionality. It demonstrates how to load a library within a controller using `$this->load->library('library_name');` and then use its methods to perform tasks."
+  },
+  {
+    "n": 10,
+    "title": "The Form Validation Library",
+    "math": "Input validation rules",
+    "note": "This lesson covers one of the most important libraries. It demonstrates how to use the Form Validation library to set rules for form fields (e.g., `required`, `min_length`, `valid_email`), run the validation, and retrieve any error messages to display to the user."
+  },
+  {
+    "n": 11,
+    "title": "The Session Library",
+    "math": "Session management",
+    "note": "This section explains how to manage user state across multiple page requests using the Session library. It covers how to store data in the session, retrieve it later, and use it for features like 'flash data' (messages that persist for only one request, like 'Item successfully updated')."
+  },
+  {
+    "n": 12,
+    "title": "CodeIgniter Helpers",
+    "math": "Procedural functions",
+    "note": "This lesson introduces Helpers as collections of procedural functions that assist with specific tasks. Unlike libraries (which are classes), helpers are simple function collections. It shows how to load a helper using `$this->load->helper('helper_name');`."
+  },
+  {
+    "n": 13,
+    "title": "The URL Helper and Form Helper",
+    "math": "Code generation",
+    "note": "This section covers two essential helpers. It demonstrates the URL Helper's functions like `site_url()` and `base_url()` for creating clean, portable links. It also shows how the Form Helper's functions like `form_open()` and `form_input()` can be used to generate form elements."
+  },
+  {
+    "n": 14,
+    "title": "Database Configuration",
+    "math": "Configuration files",
+    "note": "This lesson provides a detailed guide to configuring the database connection. It walks through the `application/config/database.php` file, explaining how to set the hostname, username, password, and database name to enable CodeIgniter to connect to your database server."
+  },
+  {
+    "n": 15,
+    "title": "The Query Builder Class: SELECT",
+    "math": "Database query language",
+    "note": "This section introduces CodeIgniter's Query Builder class, which provides a simple, database-agnostic way to build SQL queries. It focuses on retrieval, demonstrating methods like `$this->db->get('table_name')` to select all records and `$this->db->where()` to add conditions to the query."
+  },
+  {
+    "n": 16,
+    "title": "The Query Builder Class: INSERT, UPDATE, DELETE",
+    "math": "CRUD operations",
+    "note": "This lesson covers data modification using the Query Builder. It demonstrates how to use `$this->db->insert()` to add a new record, `$this->db->update()` to modify an existing record (usually combined with `where`), and `$this->db->delete()` to remove a record."
+  },
+  {
+    "n": 17,
+    "title": "Creating a Model to Abstract Database Logic",
+    "math": "Object-oriented design",
+    "note": "This lesson provides a practical example of building a model class. It shows how to create a model that extends `CI_Model` and contains methods like `get_posts()` or `insert_user()`, encapsulating the Query Builder logic and providing a clean API for the controllers to use."
+  },
+  {
+    "n": 18,
+    "title": "Handling Forms and User Input",
+    "math": "Input/Output (I/O)",
+    "note": "This section details the full process of handling a form submission. It covers creating the form view, the controller method to process the POST request, and using the Input Library (`$this->input->post('field_name')`) to safely access the submitted data."
+  },
+  {
+    "n": 19,
+    "title": "User Authentication: Building a Login System",
+    "math": "Authentication protocols",
+    "note": "This lesson provides a walkthrough of building a user login system. It covers creating the login form, validating user credentials against the database, and using the Session library to store the user's logged-in state if the credentials are correct."
+  },
+  {
+    "n": 20,
+    "title": "Security in CodeIgniter",
+    "math": "Security best practices",
+    "note": "This section covers built-in security features. It explains CodeIgniter's methods for filtering user input to prevent XSS attacks, and its implementation of CSRF protection to safeguard forms from cross-site request forgery attacks."
+  },
+  {
+    "n": 21,
+    "title": "Project: Building a Simple Blog",
+    "math": "Application architecture",
+    "note": "This final lesson ties all the concepts together by outlining the steps to build a complete, simple blog application. It covers designing the database schema, creating the controllers for posts, building the models for data interaction, and writing the views to display the blog posts and forms."
+  }
+]
