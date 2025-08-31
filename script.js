@@ -107,6 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (!isSearch) {
             btn.addEventListener("click", () => {
                 state.currentPath.push(item.name);
+                scrollToTop();
                 renderBookButtons();
             });
         }
@@ -233,6 +234,17 @@ window.addEventListener("DOMContentLoaded", () => {
       state.currentBook = { name: book.name, file: filePath, data: bookData };
       renderTopics();
       searchTopicsInput.value = "";
+
+      // Scroll to last completed topic or top of view
+      setTimeout(() => {
+        const completedTopics = document.querySelectorAll('.topic-card.completed');
+        if (completedTopics.length > 0) {
+          completedTopics[completedTopics.length - 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          topicView.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+
     } catch (err) {
       showError(`Unable to load book: ${err.message || ""}`);
     } finally {
