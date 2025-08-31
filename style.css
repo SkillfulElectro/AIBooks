@@ -105,7 +105,7 @@ body {
   border: 1px solid var(--card-border-color);
   border-radius: 9999px;
   background-color: var(--card-bg-color);
-  color: var(--text-color);
+  color: var(--text-color) !important;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
