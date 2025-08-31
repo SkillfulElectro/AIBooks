@@ -52,24 +52,14 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function getSelectedProvider() {
-    const selector = document.querySelector(".provider-btn.bg-purple-500");
+    const selector = document.querySelector(".provider-btn.active");
     return selector ? selector.dataset.provider : "chatgpt";
   }
 
   function makeQueryUrl(topic, mode, provider, bookName) {
     const title = topic.title || "";
-    const math = topic.math || "";
     const note = topic.note || "";
-
-
-    let query = `You are a teacher and going to teach '${title}' in context of ${bookName}`;
-    /* future updates
-    if (math) {
-      query += ` and you must teach '${math}' alongside it`;
-    }
-    */
-    query += ` . here is a note describing exactly what you have to teach and focus on : "${note}"`;
-
+    let query = `You are a teacher and going to teach '${title}' in context of ${bookName}. Here is a note describing exactly what you have to teach and focus on: "${note}"`;
     const q = encodeURIComponent(query);
     switch (provider) {
       case "perplexity":
@@ -92,105 +82,73 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   function resetBookButtonStyles() {
-    document.querySelectorAll(".book-btn.bg-purple-600").forEach((b) => {
-      b.classList.remove("bg-purple-600");
-      b.classList.add("bg-gray-800");
+    document.querySelectorAll(".book-btn.active").forEach((b) => {
+      b.classList.remove("active");
     });
   }
 
   function renderBookButtons(filter = "") {
     booksArea.innerHTML = "";
-    booksArea.classList.add("fade-in");
     const fragment = document.createDocumentFragment();
     const filterLower = filter.toLowerCase();
 
+    const createBookElement = (item) => {
+      const btn = document.createElement("button");
+      btn.className = "book-btn";
+      if (item.children) {
+        btn.classList.add("category");
+        btn.innerHTML = `<h3>${item.name}</h3>`;
+        btn.addEventListener("click", () => {
+          currentPath.push(item.name);
+          renderBookButtons();
+        });
+      } else {
+        btn.innerHTML = `<h3>${item.name}</h3>`;
+        btn.dataset.file = item.file || item.filename || item.path || "";
+        btn.title = `Load book: ${item.name}`;
+        btn.addEventListener("click", () => {
+          resetBookButtonStyles();
+          btn.classList.add("active");
+          selectBook(item, btn);
+        });
+      }
+      return btn;
+    };
+
     if (filterLower) {
-      // Global search logic (existing implementation)
-      function renderNode(node, forceShow = false) {
-        const isCategory = !!node.children;
-
-        if (isCategory) {
-          const categoryName = node.name.toLowerCase();
-          const categoryMatches = !filterLower || categoryName.includes(filterLower);
-          
-          const childElements = node.children
-            .map(child => renderNode(child, forceShow || categoryMatches))
-            .filter(Boolean);
-
-          if (childElements.length > 0) {
-            const categoryEl = document.createElement("div");
-            categoryEl.className = "col-span-full mb-4";
-            categoryEl.innerHTML = `<h2 class="text-2xl font-bold text-white border-b-2 border-purple-500 pb-2">${node.name}</h2>`;
-
+      const renderNode = (node) => {
+        if (node.name.toLowerCase().includes(filterLower)) {
+          return createBookElement(node);
+        }
+        if (node.children) {
+          const children = node.children.map(renderNode).filter(Boolean);
+          if (children.length > 0) {
+            const categoryEl = createBookElement(node);
             const childrenContainer = document.createElement("div");
-            childrenContainer.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-4";
-            childElements.forEach(el => childrenContainer.appendChild(el));
-            
+            childrenContainer.className = "bento-grid";
+            children.forEach((child) => childrenContainer.appendChild(child));
             categoryEl.appendChild(childrenContainer);
             return categoryEl;
           }
-        } else { // It's a book
-          const bookName = node.name.toLowerCase();
-          if (forceShow || !filterLower || bookName.includes(filterLower)) {
-            const btn = document.createElement("button");
-            btn.className =
-              "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
-            btn.innerHTML = `<span class="text-lg">${node.name}</span>`;
-            btn.dataset.file = node.file || node.filename || node.path || "";
-            btn.title = `Load book: ${node.name}`;
-            btn.addEventListener("click", () => {
-              resetBookButtonStyles();
-              btn.classList.remove("bg-gray-800");
-              btn.classList.add("bg-purple-600");
-              selectBook(node, btn);
-            });
-            return btn;
-          }
         }
         return null;
-      }
-
+      };
       booksIndex.forEach(node => {
-        const element = renderNode(node);
-        if (element) {
-          fragment.appendChild(element);
-        }
+        const el = renderNode(node);
+        if(el) fragment.appendChild(el)
       });
     } else {
-      // Drill-down logic
       let currentNode = { children: booksIndex };
-      for (const categoryName of currentPath) {
-        currentNode = currentNode.children.find(c => c.name === categoryName);
-      }
-
-      currentNode.children.forEach(item => {
-        const btn = document.createElement("button");
-        btn.className =
-            "bg-gray-800 hover:bg-gray-700 text-white font-bold py-4 px-6 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 book-btn flex flex-col items-center justify-center text-center";
-        btn.innerHTML = `<span class="text-lg">${item.name}</span>`;
-        
-        if(item.children) { // Is a category
-            btn.addEventListener('click', () => {
-                currentPath.push(item.name);
-                renderBookButtons();
-            });
-        } else { // Is a book
-            btn.dataset.file = item.file || item.filename || item.path || "";
-            btn.title = `Load book: ${item.name}`;
-            btn.addEventListener("click", () => {
-                resetBookButtonStyles();
-                btn.classList.remove("bg-gray-800");
-                btn.classList.add("bg-purple-600");
-                selectBook(item, btn);
-            });
-        }
-        fragment.appendChild(btn);
+      currentPath.forEach(
+        (p) => (currentNode = currentNode.children.find((c) => c.name === p))
+      );
+      currentNode.children.forEach((item) => {
+        fragment.appendChild(createBookElement(item));
       });
     }
 
     if (fragment.children.length === 0) {
-      booksArea.innerHTML =
-        `<div class="text-gray-400 col-span-full text-center">No ${filterLower ? 'books or categories found' : 'items in this category'}.</div>`;
+      booksArea.innerHTML = `<p class="no-results">No books or categories found.</p>`;
     } else {
       booksArea.appendChild(fragment);
     }
@@ -199,18 +157,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function updateNavigationControls() {
     const filterValue = searchBooksInput.value;
-    if (currentPath.length > 0 && !filterValue) {
-      categoryNav.style.display = 'flex';
-    } else {
-      categoryNav.style.display = 'none';
-    }
+    categoryNav.style.display = currentPath.length > 0 && !filterValue ? "flex" : "none";
 
-    breadcrumbs.innerHTML = '';
-    const homeLink = document.createElement('a');
-    homeLink.href = '#';
-    homeLink.textContent = 'Home';
-    homeLink.className = 'hover:text-white';
-    homeLink.addEventListener('click', (e) => {
+    breadcrumbs.innerHTML = "";
+    const homeLink = document.createElement("a");
+    homeLink.href = "#";
+    homeLink.textContent = "Home";
+    homeLink.addEventListener("click", (e) => {
       e.preventDefault();
       currentPath = [];
       renderBookButtons();
@@ -220,38 +173,32 @@ window.addEventListener("DOMContentLoaded", () => {
     let pathAccumulator = [];
     currentPath.forEach((segment, index) => {
       pathAccumulator.push(segment);
-      const separator = document.createElement('span');
-      separator.textContent = ' / ';
-      separator.className = 'mx-1';
-      breadcrumbs.appendChild(separator);
-
+      breadcrumbs.appendChild(document.createTextNode(" / "));
       if (index < currentPath.length - 1) {
-        const pathLink = document.createElement('a');
-        pathLink.href = '#';
+        const pathLink = document.createElement("a");
+        pathLink.href = "#";
         pathLink.textContent = segment;
-        pathLink.className = 'hover:text-white';
         const currentSegmentPath = [...pathAccumulator];
-        pathLink.addEventListener('click', (e) => {
+        pathLink.addEventListener("click", (e) => {
           e.preventDefault();
           currentPath = currentSegmentPath;
           renderBookButtons();
         });
         breadcrumbs.appendChild(pathLink);
       } else {
-        const currentSegmentSpan = document.createElement('span');
+        const currentSegmentSpan = document.createElement("span");
         currentSegmentSpan.textContent = segment;
         breadcrumbs.appendChild(currentSegmentSpan);
       }
     });
   }
 
-  async function selectBook(book, btnEl) {
+  async function selectBook(book) {
     clearError();
     bookSelectionView.style.display = "none";
     topicView.style.display = "block";
     bookTitle.textContent = book.name;
     showLoader();
-
     try {
       const filePath = book.file || book.path || book.filename;
       if (!filePath) throw new Error("Book entry has no file path");
@@ -263,7 +210,6 @@ window.addEventListener("DOMContentLoaded", () => {
     } catch (err) {
       console.error(err);
       showError(`Unable to load book: ${err.message || err}`);
-      listEl.innerHTML = "";
     } finally {
       hideLoader();
     }
@@ -278,12 +224,9 @@ window.addEventListener("DOMContentLoaded", () => {
   function renderTopics(bookData, fileKey, bookName, filter = "") {
     let topics = topicsFrom(bookData);
     if (!Array.isArray(topics)) {
-      showError(
-        "Book JSON format not recognized (expected array or {topics:[]})"
-      );
+      showError("Book JSON format not recognized");
       return;
     }
-
     if (filter) {
       const lowerFilter = filter.toLowerCase();
       topics = topics.filter(
@@ -292,139 +235,69 @@ window.addEventListener("DOMContentLoaded", () => {
           (t.note || "").toLowerCase().includes(lowerFilter)
       );
     }
-
     listEl.innerHTML = "";
-    listEl.classList.add("fade-in");
     if (topics.length === 0) {
-      listEl.innerHTML = `<div class="text-gray-400 col-span-full text-center">No topics found for this filter.</div>`;
+      listEl.innerHTML = `<p class="no-results">No topics found.</p>`;
       return;
     }
-
     const progress = loadProgress(bookName);
-
     topics.forEach((t) => {
       const num = t.n || t.id || t.index || "";
       const key = "t" + num;
       const checked = !!progress[key];
-
       const card = document.createElement("div");
-      card.className = `bg-gray-800 p-5 rounded-xl shadow-lg transition-all duration-300 border border-gray-700 hover:border-purple-500 hover:shadow-purple-500/10 ${
-        checked ? "opacity-60" : ""
-      }`;
-
-      const header = document.createElement("div");
-      header.className = "flex items-center justify-between mb-4";
-
-      const titleGroup = document.createElement("div");
-      titleGroup.className = "flex-1";
-      const title = document.createElement("h5");
-      title.className = "text-xl font-bold text-white leading-tight";
-      title.textContent = t.title || "Untitled";
-      titleGroup.appendChild(title);
-
-      if (t.math) {
-        const math = document.createElement("div");
-        math.className =
-          "mt-1 text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full inline-block";
-        math.textContent = t.math;
-        titleGroup.appendChild(math);
-      }
-
-      const checkboxGroup = document.createElement("div");
-      checkboxGroup.className = "flex items-center gap-2";
-      const numEl = document.createElement("div");
-      numEl.className = "text-gray-400 font-mono text-sm";
-      numEl.textContent = `#${num}`;
-      const cb = document.createElement("input");
-      cb.type = "checkbox";
-      cb.id = "cb-" + num;
-      cb.checked = checked;
-      cb.className =
-        "form-checkbox h-6 w-6 text-purple-500 bg-gray-700 border-gray-600 rounded focus:ring-purple-500 cursor-pointer";
-      cb.setAttribute("aria-label", "Mark lesson completed");
+      card.className = "topic-card";
+      if(checked) card.classList.add('completed');
+      
+      card.innerHTML = `
+        <div class="topic-card-header">
+            <h5 class="topic-title">${t.title || "Untitled"}</h5>
+            <div class="topic-actions">
+                <span class="topic-number">#${num}</span>
+                <input type="checkbox" id="cb-${num}" ${checked ? 'checked' : ''} />
+            </div>
+        </div>
+        <p class="topic-note">${t.note || ""}</p>
+        <div class="topic-buttons">
+            <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+            <button class="study-btn"><i class="fas fa-book-open"></i> Study</button>
+            <button class="copy-btn"><i class="far fa-clipboard"></i></button>
+        </div>
+      `;
+      
+      const cb = card.querySelector('input[type="checkbox"]');
       cb.addEventListener("change", (e) => {
         const p = loadProgress(bookName);
         p[key] = e.target.checked;
         saveProgress(p, bookName);
-        card.classList.toggle("opacity-60", e.target.checked);
+        card.classList.toggle("completed", e.target.checked);
       });
-      checkboxGroup.appendChild(numEl);
-      checkboxGroup.appendChild(cb);
 
-      header.appendChild(titleGroup);
-      header.appendChild(checkboxGroup);
-
-      const note = document.createElement("p");
-      note.className = "text-gray-400 text-sm mb-5";
-      note.textContent = t.note || "";
-
-      const actions = document.createElement("div");
-      actions.className = "flex gap-2 flex-wrap";
-
-      function openAndCheck(url) {
-        try {
+      const openAndCheck = (url) => {
           const p = loadProgress(bookName);
           p[key] = true;
           saveProgress(p, bookName);
           cb.checked = true;
-          card.classList.add("opacity-60");
-        } catch (e) {
-          console.error(e);
-        }
-        window.open(url, "_blank", "noopener");
+          card.classList.add("completed");
+          window.open(url, "_blank", "noopener");
       }
 
-      const baseButtonClasses =
-        "flex items-center justify-center gap-2 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 text-sm";
       const provider = getSelectedProvider();
-      const providerName =
-        provider.charAt(0).toUpperCase() + provider.slice(1);
-
-      const searchBtn = document.createElement("button");
-      searchBtn.className = `${baseButtonClasses} bg-blue-600 hover:bg-blue-700 flex-1`;
-      searchBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i> Search`;
-      searchBtn.title = `Open ${providerName} search with this lesson note`;
-      searchBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t, "search", provider, bookName))
-      );
-
-      const studyBtn = document.createElement("button");
-      studyBtn.className = `${baseButtonClasses} bg-gray-700 hover:bg-gray-600 flex-1`;
-      studyBtn.innerHTML = `<i class="fa-solid fa-book-open"></i> Study`;
-      studyBtn.title = `Open ${providerName} study session with this lesson note`;
-      studyBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t, "study", provider, bookName))
-      );
-
-      const copyBtn = document.createElement("button");
-      copyBtn.className = `${baseButtonClasses} bg-gray-600 hover:bg-gray-500`;
-      copyBtn.innerHTML = `<i class="fa-regular fa-clipboard"></i>`;
-      copyBtn.title = "Copy note to clipboard";
-      copyBtn.addEventListener("click", () => {
+      card.querySelector('.search-btn').addEventListener('click', () => openAndCheck(makeQueryUrl(t, "search", provider, bookName)));
+      card.querySelector('.study-btn').addEventListener('click', () => openAndCheck(makeQueryUrl(t, "study", provider, bookName)));
+      
+      const copyBtn = card.querySelector('.copy-btn');
+      copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(t.note || "").then(() => {
-          copyBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
-          copyBtn.title = "Copied!";
-          setTimeout(() => {
-            copyBtn.innerHTML = `<i class="fa-regular fa-clipboard"></i>`;
-            copyBtn.title = "Copy note to clipboard";
-          }, 1500);
+            copyBtn.innerHTML = `<i class="fas fa-check"></i>`;
+            setTimeout(() => { copyBtn.innerHTML = `<i class="far fa-clipboard"></i>`; }, 1500);
         });
       });
 
-      actions.appendChild(searchBtn);
-      actions.appendChild(studyBtn);
-      actions.appendChild(copyBtn);
-
-      card.appendChild(header);
-      card.appendChild(note);
-      card.appendChild(actions);
       listEl.appendChild(card);
     });
 
-    const selectAllBtn = document.getElementById("selectAll");
-    const clearAllBtn = document.getElementById("clearAll");
-
-    selectAllBtn.onclick = () => {
+    document.getElementById("selectAll").onclick = () => {
       const p = {};
       topicsFrom(bookData).forEach((t) => {
         const id = t.n || t.id || t.index || "";
@@ -433,49 +306,37 @@ window.addEventListener("DOMContentLoaded", () => {
       saveProgress(p, bookName);
       renderTopics(bookData, fileKey, bookName, filter);
     };
-    clearAllBtn.onclick = () => {
+    document.getElementById("clearAll").onclick = () => {
       saveProgress({}, bookName);
       renderTopics(bookData, fileKey, bookName, filter);
     };
   }
 
   function handleScroll() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      scrollTopBtn.style.display = "block";
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
+    scrollTopBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
   }
 
   function scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   (async function init() {
     try {
       clearError();
       showLoader();
-      console.log("Fetching books index...");
       const idx = await fetchJsonSafe(BOOKS_INDEX);
       booksIndex = Array.isArray(idx) ? idx : idx.books || idx.items || [];
-      if (!booksIndex || booksIndex.length === 0) {
-        booksArea.innerHTML =
-          '<div class="small-muted">No books found on server (empty index).</div>';
+      if (booksIndex.length === 0) {
+        booksArea.innerHTML = '<p class="no-results">No books found.</p>';
         return;
       }
       renderBookButtons();
       searchBooksInput.addEventListener("input", (e) => {
         const filterValue = e.target.value;
         if (filterValue && !isSearching) {
-            // Starting a search
             pathBeforeSearch = [...currentPath];
             isSearching = true;
         } else if (!filterValue && isSearching) {
-            // Clearing a search
             currentPath = [...pathBeforeSearch];
             pathBeforeSearch = [];
             isSearching = false;
@@ -484,18 +345,12 @@ window.addEventListener("DOMContentLoaded", () => {
       });
       searchTopicsInput.addEventListener("input", (e) => {
         if (currentBook) {
-          renderTopics(
-            currentBook.data,
-            currentBook.file,
-            currentBook.name,
-            e.target.value
-          );
+          renderTopics(currentBook.data, currentBook.file, currentBook.name, e.target.value);
         }
       });
       backToBooksBtn.addEventListener("click", () => {
         bookSelectionView.style.display = "block";
         topicView.style.display = "none";
-        listEl.innerHTML = "";
         currentBook = null;
         resetBookButtonStyles();
       });
@@ -507,39 +362,19 @@ window.addEventListener("DOMContentLoaded", () => {
       });
       document.querySelectorAll(".provider-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
-          document.querySelectorAll(".provider-btn").forEach((b) => {
-            b.classList.remove("bg-purple-500");
-            b.classList.add("bg-gray-700", "hover:bg-gray-600");
-          });
-          btn.classList.remove("bg-gray-700", "hover:bg-gray-600");
-          btn.classList.add("bg-purple-500");
-
+          document.querySelectorAll(".provider-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
           if (currentBook) {
-            renderTopics(
-              currentBook.data,
-              currentBook.file,
-              currentBook.name,
-              searchTopicsInput.value
-            );
+            renderTopics(currentBook.data, currentBook.file, currentBook.name, searchTopicsInput.value);
           }
         });
       });
-
-      // Set default provider
-      const defaultProvider = document.querySelector(
-        '.provider-btn[data-provider="chatgpt"]'
-      );
-      if (defaultProvider) {
-        defaultProvider.classList.remove("bg-gray-700", "hover:bg-gray-600");
-        defaultProvider.classList.add("bg-purple-500");
-      }
+      document.querySelector('.provider-btn[data-provider="chatgpt"]').classList.add('active');
       window.addEventListener("scroll", handleScroll);
       scrollTopBtn.addEventListener("click", scrollToTop);
     } catch (err) {
       console.error(err);
-      showError(`Unable to fetch books index: ${err.message || err}`);
-      booksArea.innerHTML =
-        '<div class="small-muted">Failed to load books.</div>';
+      showError(`Initialization failed: ${err.message || err}`);
     } finally {
       hideLoader();
     }
