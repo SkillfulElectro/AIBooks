@@ -12,7 +12,8 @@ const urlsToCache = [
   'Logos/apple-touch-icon.png',
   'Logos/favicon-16x16.png',
   'Logos/favicon-32x32.png',
-  'Logos/favicon.ico'
+  'Logos/favicon.ico',
+  'Logos/n',
 ];
 
 self.addEventListener('install', event => {
@@ -28,27 +29,21 @@ self.addEventListener('install', event => {
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
-      .then(response => {
-        if (response) {
-          return response;
+      .then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
         }
 
         return fetch(event.request).then(
-          response => {
-            if(!response || response.status !== 200 || response.type !== 'basic') {
-              if (!response.url.includes('books/')) { // Don't cache book data if it fails
-                return response;
-              }
+          networkResponse => {
+            if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+              const responseToCache = networkResponse.clone();
+              caches.open(CACHE_NAME)
+                .then(cache => {
+                  cache.put(event.request, responseToCache);
+                });
             }
-
-            const responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then(cache => {
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
+            return networkResponse;
           }
         );
       })
