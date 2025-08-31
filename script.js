@@ -335,6 +335,7 @@ window.addEventListener("DOMContentLoaded", () => {
         return;
       }
       renderBookButtons();
+      searchBooksInput.style.color = "var(--text-color)";
       searchBooksInput.addEventListener("input", (e) => {
         const filterValue = e.target.value;
         if (filterValue && !isSearching) {
