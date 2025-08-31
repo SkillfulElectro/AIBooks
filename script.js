@@ -98,10 +98,12 @@ window.addEventListener("DOMContentLoaded", () => {
       if (item.children) {
         btn.classList.add("category");
         btn.innerHTML = `<h3>${item.name}</h3>`;
-        btn.addEventListener("click", () => {
-          currentPath.push(item.name);
-          renderBookButtons();
-        });
+        if (!filter) {
+          btn.addEventListener("click", () => {
+            currentPath.push(item.name);
+            renderBookButtons();
+          });
+        }
       } else {
         btn.innerHTML = `<h3>${item.name}</h3>`;
         btn.dataset.file = item.file || item.filename || item.path || "";
