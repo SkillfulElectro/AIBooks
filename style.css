@@ -301,6 +301,26 @@ body {
   display: inline-block;
 }
 
+.category-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#breadcrumbs {
+  text-align: right;
+}
+
+.topic-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--card-border-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
 .topic-buttons {
   display: flex;
   gap: 0.5rem;
