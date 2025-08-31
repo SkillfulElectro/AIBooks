@@ -81,11 +81,6 @@ window.addEventListener("DOMContentLoaded", () => {
     return res.json();
   }
 
-  function resetBookButtonStyles() {
-    document.querySelectorAll(".book-btn.active").forEach((b) => {
-      b.classList.remove("active");
-    });
-  }
 
   function renderBookButtons(filter = "") {
     booksArea.innerHTML = "";
@@ -109,7 +104,6 @@ window.addEventListener("DOMContentLoaded", () => {
         btn.dataset.file = item.file || item.filename || item.path || "";
         btn.title = `Load book: ${item.name}`;
         btn.addEventListener("click", () => {
-          resetBookButtonStyles();
           btn.classList.add("active");
           selectBook(item, btn);
         });
