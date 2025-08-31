@@ -1,117 +1,117 @@
 [
   {
     "n": 1,
-    "title": "Introduction to Law and Ethics in Information Security",
+    "title": "Introduction to Law, Regulations, and Ethics",
     "math": "Legal and ethical frameworks",
-    "note": "This section defines the scope of the course, explaining the critical intersection of law, ethics, and information security. It differentiates between laws (which are enforceable by government), regulations (mandated rules for compliance), and ethics (moral principles that govern behavior)."
+    "note": "This section defines the scope of the course, explaining the critical intersection of law, ethics, and information security. It differentiates between laws (enforceable by government), regulations (mandated rules), and ethics (moral principles)."
   },
   {
     "n": 2,
     "title": "Intellectual Property: Copyright",
     "math": "Copyright law",
-    "note": "This lesson introduces Intellectual Property (IP) and focuses on Copyright law. It explains that copyright protects original works of authorship, such as software code, literature, and music. The concept of 'fair use' and the protections afforded to copyright holders are discussed."
+    "note": "This lesson introduces Intellectual Property (IP) and focuses on Copyright law. It explains that copyright protects original works of authorship, such as software code and literature. The concept of 'fair use' and the Digital Millennium Copyright Act (DMCA) are discussed."
   },
   {
     "n": 3,
-    "title": "Intellectual Property: The Digital Millennium Copyright Act (DMCA)",
-    "math": "Digital rights management (DRM)",
-    "note": "This section covers the DMCA, a significant U.S. copyright law. It explains its two main components: the anti-circumvention provisions, which make it illegal to bypass technologies that control access to copyrighted works (DRM), and the 'safe harbor' provisions, which protect online service providers from liability for user-infringed content."
+    "title": "Intellectual Property: Patents, Trademarks, and Trade Secrets",
+    "math": "Patent and trademark law",
+    "note": "This lesson covers other major forms of IP. It explains Patents (which protect inventions), Trademarks (which protect brand identity like logos), and Trade Secrets (confidential business information). The differences in protection and requirements for each are detailed."
   },
   {
     "n": 4,
-    "title": "Intellectual Property: Patents, Trademarks, and Trade Secrets",
-    "math": "Patent and trademark law",
-    "note": "This lesson covers other major forms of IP. It explains Patents (which protect inventions), Trademarks (which protect brand identity like logos and names), and Trade Secrets (confidential business information that provides a competitive edge). The differences in protection and requirements for each are detailed."
+    "title": "Software Licensing",
+    "math": "Licensing agreements",
+    "note": "This section explains how software is legally distributed. It contrasts proprietary licenses with open-source licenses and provides an overview of common open-source license types, such as permissive (MIT, Apache) and copyleft (GPL)."
   },
   {
     "n": 5,
-    "title": "Software Licensing",
-    "math": "Licensing agreements",
-    "note": "This section explains how software is legally distributed. It contrasts proprietary licenses (which are restrictive) with open-source licenses. It provides an overview of common open-source license types, such as permissive licenses (like MIT and Apache) and copyleft licenses (like the GPL)."
+    "title": "Cybercrime",
+    "math": "Criminal law",
+    "note": "This lesson defines cybercrime as a crime that involves a computer and a network. It covers key US legislation like the Computer Fraud and Abuse Act (CFAA) and international efforts like the Budapest Convention on Cybercrime."
   },
   {
     "n": 6,
-    "title": "What Is Cybercrime?",
-    "math": "Criminal law",
-    "note": "This lesson defines cybercrime as a crime that involves a computer and a network. It categorizes cybercrime into two main types: crimes where the computer is the target (e.g., hacking, malware deployment) and crimes where the computer is used as a tool to commit an offense (e.g., fraud, identity theft)."
+    "title": "The Right to Privacy",
+    "math": "Privacy law",
+    "note": "This section introduces the concept of privacy as a fundamental right and discusses the legal challenges of protecting privacy in the digital age, where vast amounts of personal data are collected and processed."
   },
   {
     "n": 7,
-    "title": "Key U.S. Cybercrime Law: The Computer Fraud and Abuse Act (CFAA)",
-    "math": "Computer crime legislation",
-    "note": "This section focuses on the CFAA, the primary anti-hacking law in the United States. It explains what the law prohibits, such as intentionally accessing a computer without authorization or exceeding authorized access. The controversy surrounding its broad interpretation is also discussed."
+    "title": "Global Privacy Regulation: GDPR",
+    "math": "Data protection regulation (GDPR)",
+    "note": "This lesson provides a detailed overview of the EU's General Data Protection Regulation, a landmark regulation that has set a global standard. It covers its scope, key principles (like data minimization), and the rights it grants to data subjects (like the right to erasure)."
   },
   {
     "n": 8,
-    "title": "International Cooperation: The Budapest Convention",
-    "math": "International treaties",
-    "note": "This lesson introduces the Budapest Convention on Cybercrime, the first international treaty seeking to address Internet and computer crime by harmonizing national laws, improving investigative techniques, and increasing cooperation among nations."
+    "title": "U.S. Privacy Law: CCPA/CPRA",
+    "math": "State-level privacy laws",
+    "note": "This lesson covers major privacy laws in the United States, focusing on the California Consumer Privacy Act (CCPA) and its successor, the California Privacy Rights Act (CPRA), which grant California consumers new rights over their personal information."
   },
   {
     "n": 9,
-    "title": "The Right to Privacy",
-    "math": "Privacy law",
-    "note": "This section introduces the concept of privacy as a fundamental right. It discusses the different dimensions of privacy (e.g., privacy of person, privacy of communication) and the legal challenges of protecting privacy in the digital age, where vast amounts of personal data are collected and processed."
+    "title": "U.S. Sector-Specific Privacy: HIPAA",
+    "math": "Healthcare privacy law",
+    "note": "This lesson covers the Health Insurance Portability and Accountability Act (HIPAA), which provides data privacy and security provisions for safeguarding protected health information (PHI) in the United States."
   },
   {
     "n": 10,
-    "title": "European Union: The General Data Protection Regulation (GDPR)",
-    "math": "Data protection regulation (GDPR)",
-    "note": "This lesson provides a detailed overview of the GDPR, a landmark regulation that has set a global standard for data protection. It covers its wide scope, key definitions (like 'personal data' and 'processing'), and its core principles, such as data minimization and purpose limitation."
+    "title": "U.S. Sector-Specific Privacy: COPPA and FERPA",
+    "math": "Privacy laws for children and students",
+    "note": "This lesson covers two other key sector-specific US laws. The Children's Online Privacy Protection Act (COPPA) imposes requirements on websites directed to children under 13. The Family Educational Rights and Privacy Act (FERPA) protects the privacy of student education records."
   },
   {
     "n": 11,
-    "title": "GDPR: Rights of the Data Subject",
-    "math": "Individual rights",
-    "note": "This section focuses on the rights that GDPR grants to individuals. These include the right to access their data, the right to correct inaccuracies (rectification), the right to be forgotten (erasure), and the right to data portability. The role of the Data Protection Officer (DPO) is also explained."
+    "title": "Financial and Corporate Governance Laws",
+    "math": "Financial and corporate regulation",
+    "note": "This lesson covers major laws with significant data security implications. It introduces the Sarbanes-Oxley Act (SOX), which requires internal controls for financial reporting at public companies, and the Gramm-Leach-Bliley Act (GLBA), which requires financial institutions to protect consumer financial privacy."
   },
   {
     "n": 12,
-    "title": "U.S. Privacy Law: CCPA and HIPAA",
-    "math": "Sector-specific privacy laws",
-    "note": "This lesson covers major privacy laws in the United States. It explains the California Consumer Privacy Act (CCPA), which grants California consumers new rights over their personal information. It also covers the Health Insurance Portability and Accountability Act (HIPAA), which provides data privacy and security provisions for safeguarding medical information."
+    "title": "The Payment Card Industry Data Security Standard (PCI DSS)",
+    "math": "Financial data security standard",
+    "note": "This lesson covers PCI DSS, a set of security standards designed to ensure that all companies that accept, process, store, or transmit credit card information maintain a secure environment. It is not a law, but a binding contractual requirement."
   },
   {
     "n": 13,
     "title": "Compliance Frameworks: NIST and ISO 27001",
     "math": "Information security standards",
-    "note": "This section introduces the concept of a compliance framework as a structured set of guidelines and best practices. It provides an overview of the NIST Cybersecurity Framework and the ISO/IEC 27001 standard for information security management systems (ISMS), which help organizations manage and improve their security posture."
+    "note": "This section introduces compliance frameworks as structured sets of guidelines. It provides an overview of the NIST Cybersecurity Framework and the ISO/IEC 27001 standard for information security management systems (ISMS), which help organizations manage their security posture."
   },
   {
     "n": 14,
-    "title": "The Payment Card Industry Data Security Standard (PCI DSS)",
-    "math": "Financial regulation",
-    "note": "This lesson covers PCI DSS, a set of security standards designed to ensure that all companies that accept, process, store, or transmit credit card information maintain a secure environment. It is not a law, but a contractual requirement for any organization handling major credit cards."
+    "title": "Corporate Security Policies",
+    "math": "Corporate governance",
+    "note": "This section explains the importance of having formal, written information security policies within an organization. It covers the purpose of a high-level Information Security Policy and more specific policies like the Acceptable Use Policy (AUP)."
   },
   {
     "n": 15,
-    "title": "Corporate Security Policies",
-    "math": "Corporate governance",
-    "note": "This section explains the importance of having formal, written information security policies within an organization. It covers the purpose of a high-level Information Security Policy and more specific policies like the Acceptable Use Policy (AUP), which defines how employees are permitted to use company IT assets."
+    "title": "Incident Response Planning and Notification",
+    "math": "Incident response",
+    "note": "This lesson emphasizes the legal and business need for a formal Incident Response Plan (IRP). It also covers the legal requirements for data breach notification, which vary by jurisdiction and dictate when and how a company must inform affected individuals and regulators."
   },
   {
     "n": 16,
-    "title": "Incident Response Planning",
-    "math": "Incident response",
-    "note": "This lesson emphasizes the legal and business need for a formal Incident Response Plan (IRP). An IRP is a documented set of instructions to help IT staff detect, respond to, and recover from network security incidents. It outlines procedures to minimize damage and recovery time."
+    "title": "Digital Forensics and Evidence",
+    "math": "Legal evidence procedures",
+    "note": "A lesson on the legal aspects of digital evidence. It covers the importance of evidence admissibility in court, proper collection procedures, and maintaining a verifiable chain of custody to ensure the integrity of the evidence."
   },
   {
     "n": 17,
-    "title": "Professional Ethics in Security",
-    "math": "Codes of ethics",
-    "note": "This section discusses the ethical responsibilities of information security professionals. It covers professional codes of conduct, such as those from (ISC)², which require members to act honorably, honestly, justly, responsibly, and legally. The ethics of vulnerability disclosure and penetration testing are explored."
+    "title": "Contracts and Service Level Agreements (SLAs)",
+    "math": "Contract law",
+    "note": "This lesson explains how legal documents are used to define security requirements between parties. It covers the role of contracts and SLAs in specifying security obligations, liability, and performance metrics, for example, between a company and a cloud service provider."
   },
   {
     "n": 18,
-    "title": "Legal Issues in Cloud Computing",
-    "math": "Data sovereignty",
-    "note": "This lesson explores the legal complexities introduced by cloud computing. A key issue is data sovereignty, which refers to the concept that information which has been converted and stored in binary digital form is subject to the laws of the country in which it is located. This creates challenges for global cloud services."
+    "title": "Professional Ethics in Security",
+    "math": "Codes of ethics",
+    "note": "This section discusses the ethical responsibilities of information security professionals. It covers professional codes of conduct, such as those from (ISC)², which require members to act honorably, honestly, justly, responsibly, and legally. The ethics of vulnerability disclosure are explored."
   },
   {
     "n": 19,
-    "title": "Legal Issues in the Internet of Things (IoT)",
-    "math": "IoT law and regulation",
-    "note": "This section discusses the unique legal challenges posed by the proliferation of IoT devices. It covers issues related to the privacy of data collected by smart devices, the security of those devices against hacking, and questions of liability when an IoT device fails or causes harm."
+    "title": "Legal Issues in Cloud Computing and IoT",
+    "math": "Data sovereignty and liability",
+    "note": "This lesson explores the legal complexities introduced by modern technologies. A key issue is data sovereignty (data is subject to the laws of the country where it is located). It also covers liability issues related to the failure of IoT devices."
   },
   {
     "n": 20,

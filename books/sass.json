@@ -37,9 +37,9 @@
   },
   {
     "n": 7,
-    "title": "Partials and Imports",
-    "math": "Set theory",
-    "note": "Explains how to split your Sass code into multiple files called partials (named with a leading underscore, e.g., `_variables.scss`) and how to import them into a main file using the `@import` rule. This is key for organizing large projects."
+    "title": "The Modern Module System: `@use` and `@forward`",
+    "math": "Namespacing and modularity",
+    "note": "This crucial lesson explains the modern way to structure Sass projects. It introduces `@use` for loading styles from other files (partials) into a private namespace, preventing global name clashes. It also introduces `@forward` for creating a public API for your module, making your code reusable and maintainable. This system replaces the older, problematic `@import` rule."
   },
   {
     "n": 8,
@@ -117,7 +117,7 @@
     "n": 20,
     "title": "Organizing a Sass Project (7-1 Pattern)",
     "math": "Software architecture",
-    "note": "This lesson provides guidance on how to structure a large Sass project. It introduces the popular 7-1 architectural pattern for organizing Sass files and folders into a scalable and maintainable structure."
+    "note": "This lesson provides guidance on how to structure a large Sass project. It introduces the popular 7-1 architectural pattern for organizing Sass files and folders, using a main file to `@use` all the other partials in the correct order."
   },
   {
     "n": 21,

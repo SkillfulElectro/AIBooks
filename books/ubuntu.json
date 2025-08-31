@@ -1,122 +1,122 @@
 [
   {
     "n": 1,
-    "title": "What Is a Linux Distribution? What Is Ubuntu?",
+    "title": "Introduction to Ubuntu",
     "math": "Operating systems",
-    "note": "This section explains that a 'Linux Distribution' (or distro) is a complete operating system made from the Linux kernel and a collection of software. It then introduces Ubuntu as a popular, user-friendly, and free distro based on Debian, known for its ease of use and strong community."
+    "note": "Explains that Ubuntu is a popular, user-friendly Linux distribution based on Debian. Covers the difference between the stable Long-Term Support (LTS) releases and the regular six-month releases."
   },
   {
     "n": 2,
-    "title": "Ubuntu Releases: LTS vs. Regular",
-    "math": "Software release cycles",
-    "note": "This lesson explains Ubuntu's release schedule. It covers the difference between Long-Term Support (LTS) releases, which are published every two years and supported for five years (making them stable and reliable for production), and the regular releases that come out every six months with newer features."
+    "title": "Installing Ubuntu Desktop and Navigating GNOME",
+    "math": "Desktop environments",
+    "note": "Covers creating a bootable USB and installing Ubuntu Desktop. Provides a guided tour of the GNOME desktop environment, including the Activities overview, the Dock, and the Software Center."
   },
   {
     "n": 3,
-    "title": "Installing Ubuntu Desktop",
-    "math": "OS installation",
-    "note": "This section provides a practical guide to installing Ubuntu Desktop. It covers the steps of downloading the ISO image, creating a bootable USB drive, booting from the USB, and walking through the graphical installation wizard."
+    "title": "Introduction to the Command Line (Terminal)",
+    "math": "Command-line interfaces",
+    "note": "Introduces the command line as the most powerful way to interact with Linux. Covers essential navigation and file management commands: `pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, and `rm`."
   },
   {
     "n": 4,
-    "title": "Navigating the Ubuntu Desktop (GNOME)",
-    "math": "Desktop environments",
-    "note": "This lesson provides a guided tour of the default Ubuntu desktop environment, GNOME. It explains the main components: the Activities overview for launching apps and managing workspaces, the top bar, and the Ubuntu Dock for quick access to favorite and running applications."
+    "title": "Getting Help and Running Commands as an Administrator",
+    "math": "Documentation & User administration",
+    "note": "Explains how to use `man` and `--help` to get documentation. Introduces `sudo` for running commands with administrative privileges."
   },
   {
     "n": 5,
-    "title": "Installing Software with the Ubuntu Software Center",
-    "math": "Application stores",
-    "note": "This section demonstrates the easiest way to install applications on Ubuntu Desktop. It introduces the Ubuntu Software center, a graphical 'app store' that allows you to browse, search for, and install thousands of applications with a single click."
+    "title": "Software Management with `apt`",
+    "math": "Package management",
+    "note": "Introduces `apt` as the command-line tool for managing software. Covers the main commands: `sudo apt update`, `upgrade`, `install <package>`, and `remove <package>`."
   },
   {
     "n": 6,
-    "title": "Introduction to the Command Line (Terminal)",
-    "math": "Command-line interfaces",
-    "note": "This lesson explains how to open the Terminal and introduces the command line as the most powerful way to interact with a Linux system. The concept of a shell (like Bash) that interprets your commands is explained."
+    "title": "Managing Software Sources and PPAs",
+    "math": "Software repositories",
+    "note": "Explains how `apt` uses repositories defined in `/etc/apt/sources.list`. Demonstrates how to add third-party software sources using Personal Package Archives (PPAs)."
   },
   {
     "n": 7,
-    "title": "Essential Navigation Commands",
-    "math": "File system navigation",
-    "note": "This section covers the most fundamental commands for moving around the file system. It demonstrates `pwd` (print working directory), `ls` (list files and directories), and `cd` (change directory)."
+    "title": "Managing Users and Groups",
+    "math": "User management",
+    "note": "Covers user and group administration. Demonstrates `adduser`, `usermod`, `deluser` for user management, and `addgroup` for creating groups."
   },
   {
     "n": 8,
-    "title": "Managing Files and Directories",
-    "math": "File management",
-    "note": "This lesson introduces the commands for creating and deleting files and directories. It covers `mkdir` (make directory), `touch` (create an empty file), `cp` (copy), `mv` (move or rename), and `rm` (remove)."
+    "title": "Understanding File Permissions",
+    "math": "File permissions",
+    "note": "Explains the Linux file permission model: read (r), write (w), and execute (x) for the user, group, and others. Covers using `chmod` to change permissions and `chown` to change ownership."
   },
   {
     "n": 9,
-    "title": "Getting Help with `man` and `--help`",
-    "math": "Documentation",
-    "note": "This crucial lesson explains how to get help directly from the command line. It introduces the `man` command (for viewing the 'manual' page of another command) and the common `--help` flag, which most commands support to show a brief summary of their usage."
+    "title": "Managing Processes",
+    "math": "Process management",
+    "note": "Covers how to view and manage running processes. Introduces `ps` to see a snapshot of processes, `top` and `htop` for real-time monitoring, and `kill`/`pkill` to terminate processes."
   },
   {
     "n": 10,
-    "title": "Software Management with `apt`",
-    "math": "Package management",
-    "note": "This section introduces `apt` (Advanced Package Tool) as the command-line tool for managing software on Ubuntu. It explains that `apt` works with 'packages' and handles dependencies automatically."
+    "title": "Viewing Logs with `journalctl`",
+    "math": "Log management",
+    "note": "Explains how to use `journalctl`, the tool for querying the `systemd` journal. Demonstrates how to view all logs, filter by service or time, and follow logs in real time."
   },
   {
     "n": 11,
-    "title": "Using `apt`: `update`, `upgrade`, `install`, `remove`",
-    "math": "Package management commands",
-    "note": "This lesson demonstrates the most common `apt` commands. It covers `sudo apt update` (to refresh the list of available packages), `sudo apt upgrade` (to install updates), `sudo apt install <package>` (to install a new package), and `sudo apt remove <package>` (to uninstall a package)."
+    "title": "Automating Tasks with Cron",
+    "math": "Task scheduling",
+    "note": "Introduces the `cron` daemon for scheduling recurring tasks. Explains the `crontab` file format and demonstrates how to edit it with `crontab -e` to schedule scripts to run automatically."
   },
   {
     "n": 12,
-    "title": "Managing Users with `sudo`",
-    "math": "User administration",
-    "note": "This section explains that administrative tasks require elevated privileges, which are gained by prepending a command with `sudo`. It then demonstrates how to add a new user with `sudo adduser <username>`."
+    "title": "Introduction to Ubuntu Server",
+    "math": "Server administration",
+    "note": "Discusses Ubuntu Server, highlighting the text-based installer and lack of a default GUI. Introduces remote administration as the primary way to manage a server."
   },
   {
     "n": 13,
-    "title": "Understanding File Permissions",
-    "math": "File permissions",
-    "note": "This lesson provides an overview of the Linux file permission system. It explains the read (r), write (w), and execute (x) permissions for the three types of owners: the user, the group, and others. The `chmod` command is introduced for changing permissions."
+    "title": "Connecting Remotely and Securely with SSH",
+    "math": "Secure Shell (SSH)",
+    "note": "Introduces SSH for remote command-line access. Explains how to connect with `ssh user@hostname` and covers the critical security practice of disabling password authentication in favor of SSH keys."
   },
   {
     "n": 14,
-    "title": "Installing Ubuntu Server",
-    "math": "Server installation",
-    "note": "This section provides an overview of the Ubuntu Server installation process. It highlights the differences from the Desktop installation, such as the text-based installer and the options to install common server software (like an SSH server) during setup."
+    "title": "Managing Services with `systemd`",
+    "math": "Service management",
+    "note": "Covers managing background services (daemons) with `systemd`. Introduces `systemctl` for starting, stopping, enabling, disabling, and checking the status of services."
   },
   {
     "n": 15,
-    "title": "Connecting to a Server with SSH",
-    "math": "Secure Shell (SSH)",
-    "note": "This lesson explains that servers are typically managed remotely. It introduces Secure Shell (SSH) as the standard protocol for securely connecting to the command line of a remote Linux server. The basic `ssh user@hostname` command is demonstrated."
+    "title": "Configuring the Firewall with UFW",
+    "math": "Firewall configuration",
+    "note": "Introduces `ufw` (Uncomplicated Firewall). Demonstrates how to enable the firewall, check its status, and create rules to allow or deny traffic for specific services like SSH and HTTP."
   },
   {
     "n": 16,
-    "title": "Managing Services with `systemd`",
-    "math": "Service management",
-    "note": "This section covers how to manage background services (daemons) on an Ubuntu server using `systemd`. It introduces the `systemctl` command for starting, stopping, and checking the status of services, such as the `apache2` web server."
+    "title": "Server Networking with Netplan",
+    "math": "Network configuration",
+    "note": "Explains that modern Ubuntu servers use Netplan for network configuration via YAML files in `/etc/netplan`. Covers basic configuration for a static IP address."
   },
   {
     "n": 17,
-    "title": "Configuring the Firewall with UFW",
-    "math": "Firewall configuration",
-    "note": "This lesson introduces `ufw` (Uncomplicated Firewall) as a user-friendly frontend for managing firewall rules on Ubuntu. It demonstrates how to enable the firewall and allow traffic for specific services, like SSH and HTTP."
+    "title": "Disk and Filesystem Management",
+    "math": "Disk management",
+    "note": "Covers fundamental disk management. Introduces `lsblk`, `df`, and `du` for viewing disks and usage. Explains how to partition a disk with `fdisk`, create a filesystem with `mkfs`, and mount it persistently in `/etc/fstab`."
   },
   {
     "n": 18,
-    "title": "Server Networking with Netplan",
-    "math": "Network configuration",
-    "note": "This section explains that modern Ubuntu servers use Netplan for network configuration. It provides an overview of the YAML-based configuration files located in `/etc/netplan` and how to apply changes."
+    "title": "Introduction to LVM (Logical Volume Management)",
+    "math": "Logical volumes",
+    "note": "Introduces LVM as a flexible way to manage storage. Explains the concepts of Physical Volumes (PVs), Volume Groups (VGs), and Logical Volumes (LVs), which can be resized easily."
   },
   {
     "n": 19,
-    "title": "Introduction to Snap Packages",
+    "title": "Universal Packages with Snap",
     "math": "Universal package management",
-    "note": "This lesson introduces Snaps as a newer, containerized software package format developed by Canonical (the company behind Ubuntu). It explains that Snaps bundle their dependencies and can run on any Linux distribution, and demonstrates the `snap install` command."
+    "note": "Introduces Snaps as containerized software packages that bundle their dependencies. Demonstrates the `snap install`, `remove`, and `list` commands."
   },
   {
     "n": 20,
-    "title": "Project: Setting Up a LAMP Stack",
-    "math": "Web server stack",
-    "note": "This final lesson provides a practical project. It walks through the steps of installing a LAMP stack (Linux, Apache, MySQL/MariaDB, PHP) on an Ubuntu server, which is a common software bundle for hosting dynamic websites."
+    "title": "Cloud Server Initialization with `cloud-init`",
+    "math": "Cloud computing",
+    "note": "Introduces `cloud-init`, the industry standard for early initialization of cloud instances. Explains how it uses user-data (e.g., cloud-config files) to configure networking, users, and install packages on first boot."
   }
 ]

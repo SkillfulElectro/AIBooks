@@ -3,120 +3,132 @@
     "n": 1,
     "title": "What Is GitLab?",
     "math": "DevOps platforms",
-    "note": "This section introduces GitLab as a single application for the entire DevOps lifecycle. It explains that while GitLab started as a source code management tool like GitHub, it has evolved to include integrated features for the entire software development process, from project planning and CI/CD to monitoring and security."
+    "note": "This section introduces GitLab as a single application for the entire DevOps lifecycle. It explains that while GitLab started as a source code management tool, it has evolved to include integrated features for the entire software development process, from project planning and CI/CD to monitoring and security."
   },
   {
     "n": 2,
     "title": "GitLab.com vs. Self-Hosted GitLab",
     "math": "SaaS vs. on-premises",
-    "note": "This lesson compares the two main ways to use GitLab. GitLab.com is the Software-as-a-Service (SaaS) offering, where GitLab hosts the platform for you. Self-hosted GitLab is the open-source version that you can install and manage on your own servers, offering more control and customization."
+    "note": "This lesson compares the two main ways to use GitLab. GitLab.com is the Software-as-a-Service (SaaS) offering. Self-hosted GitLab is the version you can install and manage on your own servers, offering more control."
   },
   {
     "n": 3,
     "title": "Creating a Project and Navigating the UI",
     "math": "User interface tour",
-    "note": "This section provides a practical guide to getting started. It walks through the process of creating a new project on GitLab.com and provides a guided tour of the main user interface, explaining the purpose of the different sections in the left-hand navigation menu, such as Repository, Issues, and CI/CD."
+    "note": "This section provides a practical guide to getting started. It walks through creating a new project and provides a guided tour of the main user interface, explaining the purpose of the different sections in the left-hand navigation menu."
   },
   {
     "n": 4,
-    "title": "Source Code Management: The Git Workflow",
+    "title": "Source Code Management with Git",
     "math": "Git version control",
-    "note": "This lesson covers the fundamental Git workflow within GitLab. It demonstrates how to clone a repository to your local machine, and the basic cycle of making changes, adding them to the staging area (`git add`), committing them (`git commit`), and pushing them back to the GitLab server (`git push`)."
+    "note": "This lesson covers the fundamental Git workflow within GitLab. It demonstrates how to clone a repository, and the basic cycle of making changes, committing them, and pushing them back to the GitLab server."
   },
   {
     "n": 5,
     "title": "The Merge Request (MR) Workflow",
     "math": "Code collaboration workflow",
-    "note": "This section introduces the Merge Request (MR) as the core mechanism for collaboration in GitLab. It explains the process: a developer creates a new branch, pushes their changes to that branch, and then opens an MR to propose merging their changes into a main branch like `master` or `main`."
+    "note": "This section introduces the Merge Request (MR) as the core mechanism for collaboration. It explains the process: a developer creates a branch, pushes changes, and then opens an MR to propose merging their changes into a main branch."
   },
   {
     "n": 6,
-    "title": "Creating and Reviewing a Merge Request",
+    "title": "Code Review in Merge Requests",
     "math": "Code review process",
-    "note": "This lesson demonstrates the practical steps of code review. It shows how to create a new MR from the GitLab UI, how reviewers can view the file changes, add inline comments on specific lines of code, and participate in a general discussion thread for the MR."
+    "note": "This lesson demonstrates the practical steps of code review. It shows how reviewers can view file changes, add inline comments, and participate in a general discussion thread for the MR. The concept of 'approvals' is also introduced."
   },
   {
     "n": 7,
     "title": "Protected Branches",
     "math": "Access control",
-    "note": "This section explains how to protect important branches (like `main`) from direct pushes. It demonstrates how to configure a branch as 'protected', which forces all changes to come through a Merge Request and can restrict who is allowed to merge."
+    "note": "This section explains how to protect important branches (like `main`) from direct pushes. It demonstrates how to configure a branch as 'protected', which forces all changes to come through an MR and can restrict who is allowed to merge."
   },
   {
     "n": 8,
-    "title": "Introduction to GitLab CI/CD",
-    "math": "Continuous Integration/Continuous Deployment",
-    "note": "This lesson introduces GitLab's built-in and powerful CI/CD capabilities. It explains the concept of Continuous Integration (automating the building and testing of code) and Continuous Deployment (automating the release of code to production). The central role of the `.gitlab-ci.yml` file is introduced."
+    "title": "Project Management: GitLab Issues",
+    "math": "Issue tracking",
+    "note": "This section introduces GitLab Issues for tracking tasks and bugs. It demonstrates how to create an issue, use Markdown for descriptions, and organize work with labels and milestones."
   },
   {
     "n": 9,
-    "title": "The `.gitlab-ci.yml` File: Jobs and Stages",
-    "math": "YAML configuration",
-    "note": "This section details the basic structure of the `.gitlab-ci.yml` file. It explains that a pipeline is composed of 'stages' (like `build`, `test`, `deploy`) and that each stage can contain one or more 'jobs'. Jobs in the same stage can run in parallel, while stages run in a specific order."
+    "title": "Visualizing Workflows with Issue Boards",
+    "math": "Kanban boards",
+    "note": "This section introduces Issue Boards, a Kanban-style board that provides a visual representation of your workflow. It shows how to create lists that correspond to stages in your process and how to move issues between these lists."
   },
   {
     "n": 10,
-    "title": "GitLab Runners",
-    "math": "Job execution agents",
-    "note": "This lesson explains what a GitLab Runner is. A Runner is an agent that picks up and executes the jobs defined in your `.gitlab-ci.yml` file. It explains the difference between shared runners (provided by GitLab.com) and specific runners that you can set up on your own infrastructure for more control."
+    "title": "Connecting Issues and Merge Requests",
+    "math": "Workflow integration",
+    "note": "This lesson explains how to link development work directly to an issue. It demonstrates how including an issue number (e.g., `#42`) in an MR description automatically links them, and how 'closing patterns' can auto-close issues when an MR is merged."
   },
   {
     "n": 11,
-    "title": "A Simple CI/CD Pipeline",
-    "math": "Pipeline construction",
-    "note": "This lesson provides a complete, simple example of a `.gitlab-ci.yml` file. It defines a `build` stage and a `test` stage, with a simple job in each that runs basic shell commands, demonstrating how a pipeline is triggered on a `git push`."
+    "title": "Introduction to GitLab CI/CD",
+    "math": "Continuous Integration/Continuous Deployment",
+    "note": "This lesson introduces GitLab's powerful CI/CD. It explains the concept of CI/CD and the central role of the `.gitlab-ci.yml` file, which defines the pipeline of jobs to be executed by a GitLab Runner."
   },
   {
     "n": 12,
-    "title": "CI/CD Variables",
-    "math": "Variable management",
-    "note": "This section covers how to manage variables and secrets in GitLab CI/CD. It explains how to define variables in the `.gitlab-ci.yml` file or, for sensitive information like passwords and API keys, how to securely store them in the project's CI/CD settings."
+    "title": "The `.gitlab-ci.yml` File: Jobs and Stages",
+    "math": "YAML configuration",
+    "note": "This section details the basic structure of the `.gitlab-ci.yml` file. It explains that a pipeline is composed of 'stages' (like `build`, `test`, `deploy`) and that each stage contains one or more 'jobs' that run scripts."
   },
   {
     "n": 13,
-    "title": "Job Artifacts",
-    "math": "File persistence between jobs",
-    "note": "This lesson explains how to pass files from one job to another in a later stage. It introduces the `artifacts` keyword, which is used to specify a list of files and directories that should be saved after a job completes and made available for download or for use by subsequent jobs."
+    "title": "CI/CD Variables and Secrets",
+    "math": "Variable management",
+    "note": "This section covers how to manage variables. It explains how to define variables in `.gitlab-ci.yml` or, for secrets like API keys, how to securely store them in the project's CI/CD settings, where they can be marked as 'protected' or 'masked'."
   },
   {
     "n": 14,
-    "title": "Project Management: GitLab Issues",
-    "math": "Issue tracking",
-    "note": "This section introduces GitLab Issues as the tool for tracking tasks, bugs, and feature requests. It demonstrates how to create an issue, write a description using Markdown, and assign it to a team member."
+    "title": "Job Artifacts and Caching",
+    "math": "File persistence",
+    "note": "This lesson explains two methods for persistence between jobs. `artifacts` are used to pass build outputs to later stages. `cache` is used to save and restore files like dependencies to speed up subsequent pipeline runs."
   },
   {
     "n": 15,
-    "title": "Organizing Work with Labels and Milestones",
-    "math": "Task categorization and scheduling",
-    "note": "This lesson covers how to organize issues. Labels are used to categorize issues (e.g., `bug`, `feature`, `priority:high`). Milestones are used to track issues against a specific deadline or release (e.g., 'Version 1.2 Release')."
+    "title": "Advanced CI/CD: Environments and Deployments",
+    "math": "Release management",
+    "note": "This lesson formalizes release management. It covers how to define different deployment environments (e.g., `staging`, `production`) in `.gitlab-ci.yml` and how GitLab tracks the history of deployments to each environment."
   },
   {
     "n": 16,
-    "title": "GitLab Issue Boards",
-    "math": "Kanban boards",
-    "note": "This section introduces Issue Boards, a Kanban-style board that provides a visual representation of your workflow. It shows how to create lists that correspond to stages in your process (e.g., 'To Do', 'Doing', 'Done') and how to move issues between these lists."
+    "title": "Advanced CI/CD: Review Apps",
+    "math": "Dynamic environments",
+    "note": "This lesson covers the powerful Review Apps feature. It explains how a pipeline can be configured to automatically deploy the code from a Merge Request to a temporary, live environment, allowing reviewers to interact with the changes directly."
   },
   {
     "n": 17,
-    "title": "Connecting Issues and Merge Requests",
-    "math": "Workflow integration",
-    "note": "This lesson explains how to link development work directly to an issue. It demonstrates how including an issue number (e.g., `#42`) in a commit message or MR description automatically links them. It also covers using keywords like 'Closes #42' to automatically close an issue when the MR is merged."
+    "title": "Advanced CI/CD: Merge Trains",
+    "math": "Concurrent pipeline execution",
+    "note": "A lesson on this feature for protecting busy branches. It explains how Merge Trains work by creating a queue of MRs and running a combined pipeline to ensure they all pass together before being merged sequentially, preventing a broken main branch."
   },
   {
     "n": 18,
-    "title": "GitLab Pages for Static Websites",
-    "math": "Static site hosting",
-    "note": "This section introduces GitLab Pages, a feature for hosting static websites directly from a GitLab repository. It explains how to use a special job in your `.gitlab-ci.yml` file to build the site and deploy it to GitLab's hosting service."
+    "title": "GitLab Security (DevSecOps)",
+    "math": "Application security testing",
+    "note": "This lesson introduces GitLab's integrated security scanning. It explains the concept of 'shifting security left' and provides an overview of the main scanner types that can be added to a pipeline: SAST, DAST, Dependency Scanning, and Secret Detection."
   },
   {
     "n": 19,
     "title": "GitLab Container Registry",
     "math": "Container image storage",
-    "note": "This lesson covers the GitLab Container Registry, a secure, private registry for Docker images built directly into GitLab. It demonstrates how a CI/CD pipeline can be used to automatically build a Docker image from a Dockerfile and push it to the project's registry."
+    "note": "This lesson covers the GitLab Container Registry, a secure, private registry for Docker images. It demonstrates how a CI/CD pipeline can be used to automatically build a Docker image and push it to the project's registry."
   },
   {
     "n": 20,
+    "title": "GitLab Pages for Static Websites",
+    "math": "Static site hosting",
+    "note": "This section introduces GitLab Pages, a feature for hosting static websites directly from a repository. It explains how to use a special CI/CD job to build the site and deploy it to GitLab's hosting service."
+  },
+  {
+    "n": 21,
+    "title": "Infrastructure as Code (IaC) with GitLab",
+    "math": "Declarative infrastructure",
+    "note": "A conceptual lesson on using GitLab CI/CD to manage infrastructure. It introduces the concept of IaC using a tool like Terraform and shows how a GitLab pipeline can be used to plan and apply infrastructure changes automatically."
+  },
+  {
+    "n": 22,
     "title": "A Complete Workflow: From Issue to Deployment",
     "math": "End-to-end DevOps workflow",
-    "note": "This final lesson provides a complete walkthrough of the GitLab flow. It shows how a team might work: 1. A new issue is created. 2. A developer creates a branch and an MR to address the issue. 3. The push triggers a CI pipeline that runs tests. 4. The MR is reviewed and approved. 5. The MR is merged, which triggers a CD pipeline that deploys the change to production."
+    "note": "This final lesson provides a complete walkthrough of the GitLab flow. It shows how a team might work: 1. An issue is created. 2. A developer creates an MR. 3. The push triggers a CI pipeline that builds, tests, and scans the code. 4. The MR is reviewed and merged, which triggers a CD pipeline that deploys the change."
   }
 ]

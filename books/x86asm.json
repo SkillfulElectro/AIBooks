@@ -1,122 +1,110 @@
 [
   {
     "n": 1,
-    "title": "What Is Assembly Language?",
+    "title": "Introduction to x86 Assembly",
     "math": "Low-level programming",
-    "note": "This section defines Assembly Language as a low-level programming language that has a very strong correspondence between the language's statements and the architecture's machine code instructions. It explains that assembly is a human-readable representation of machine code, specific to a particular computer architecture."
+    "note": "Defines Assembly Language as a human-readable representation of machine code. Introduces the x86 architecture and the core tools: assembler (NASM), linker (ld), and debugger (GDB)."
   },
   {
     "n": 2,
-    "title": "Why Learn Assembly?",
-    "math": "Computer science education",
-    "note": "This lesson discusses the motivations for learning assembly language in an age of high-level languages. These include understanding how computers work at a hardware level, writing highly optimized code for performance-critical tasks, and for reverse engineering and security research."
+    "title": "CPU Registers (32-bit)",
+    "math": "CPU registers",
+    "note": "Introduces the 32-bit general-purpose registers (EAX, EBX, ECX, EDX, ESI, EDI), special-purpose registers (EIP, ESP, EBP), and the EFLAGS register for status flags (ZF, CF)."
   },
   {
     "n": 3,
-    "title": "The x86 Architecture: Registers",
-    "math": "CPU registers",
-    "note": "This lesson introduces the core components of the 32-bit x86 CPU architecture. It focuses on the general-purpose registers (EAX, EBX, ECX, EDX, ESI, EDI), which are small, fast storage locations directly on the CPU used to hold data for operations."
+    "title": "Your First Program (Linux System Calls)",
+    "math": "System calls",
+    "note": "A 'Hello, World!' example in NASM for Linux. Demonstrates using the `int 0x80` interrupt to make system calls for writing to the console and exiting the program."
   },
   {
     "n": 4,
-    "title": "Special-Purpose Registers: EIP, ESP, EBP",
-    "math": "Instruction pointer, stack pointer",
-    "note": "This section covers the key special-purpose registers. The Instruction Pointer (EIP) holds the memory address of the next instruction to be executed. The Stack Pointer (ESP) points to the top of the stack. The Base Pointer (EBP) is used to reference arguments and local variables on the stack."
+    "title": "Data Movement and Addressing Modes",
+    "math": "Data transfer & Memory addressing",
+    "note": "Covers the `MOV` instruction for copying data. Explains addressing modes, including direct (variables) and indirect (using a register as a pointer to memory)."
   },
   {
     "n": 5,
-    "title": "The EFLAGS Register",
-    "math": "Status flags",
-    "note": "This lesson explains the EFLAGS register, which holds a set of status flags that reflect the result of arithmetic operations. Key flags include the Zero Flag (ZF), set if a result is zero, and the Carry Flag (CF), set if an operation resulted in a carry out."
+    "title": "Integer Arithmetic and Bitwise Logic",
+    "math": "Integer arithmetic & Bitwise operations",
+    "note": "Covers basic arithmetic (`ADD`, `SUB`, `INC`, `DEC`) and logical (`AND`, `OR`, `XOR`, `NOT`) instructions for manipulating data in registers."
   },
   {
     "n": 6,
-    "title": "Tools: Assembler, Linker, Debugger",
-    "math": "Compiler toolchain",
-    "note": "This section introduces the essential tools for assembly programming. The Assembler (like NASM) translates assembly code into machine code (object files). The Linker (like ld) combines object files into a final executable. The Debugger (like GDB) is used to inspect the program's execution."
+    "title": "Control Flow: Jumps",
+    "math": "Conditional branching",
+    "note": "Introduces the `CMP` instruction for comparing operands (which sets flags) and the `JMP` (unconditional jump) and conditional jump (`JE`, `JNE`, `JG`, etc.) instructions for controlling program flow."
   },
   {
     "n": 7,
-    "title": "Your First Program: 'Hello, World!' with Linux System Calls",
-    "math": "System calls",
-    "note": "This lesson provides a complete 'Hello, World!' example written in NASM for the Linux operating system. It demonstrates how to use Linux system calls to perform I/O operations like writing to the console and exiting the program. The `int 0x80` instruction is used to trigger the system call."
+    "title": "The Stack and Function Calls",
+    "math": "Stack data structure",
+    "note": "Explains the stack, the `PUSH` and `POP` instructions, and how the `CALL` and `RET` instructions use the stack to enable function calls."
   },
   {
     "n": 8,
-    "title": "Data Movement: The `MOV` Instruction",
-    "math": "Data transfer",
-    "note": "This section introduces the `MOV` instruction, one of the most fundamental instructions. It is used to copy data from a source operand to a destination operand. The operands can be registers, memory locations, or immediate values."
+    "title": "Stack Frames and Calling Conventions",
+    "math": "Calling conventions",
+    "note": "Details the 'stack frame' (a function's private space on the stack). Explains the `cdecl` calling convention used by C, which dictates how arguments are passed and who cleans up the stack."
   },
   {
     "n": 9,
-    "title": "Addressing Modes",
-    "math": "Memory addressing modes",
-    "note": "This lesson explains the different ways an instruction can access data in memory. It covers direct addressing (using a variable name) and indirect addressing (using a register to hold the address of the data), which is more flexible."
+    "title": "Interfacing with C Library Functions",
+    "math": "Language interoperability",
+    "note": "Demonstrates how to call a C library function like `printf` from assembly by pushing arguments to the stack according to the `cdecl` convention."
   },
   {
     "n": 10,
-    "title": "Arithmetic Instructions: `ADD` and `SUB`",
-    "math": "Integer arithmetic",
-    "note": "This section covers the basic arithmetic instructions. `ADD` is used for addition, and `SUB` is used for subtraction. The `INC` (increment) and `DEC` (decrement) instructions for adding or subtracting 1 are also introduced."
+    "title": "Data Structures: Arrays and Structs",
+    "math": "Data structures",
+    "note": "Explains how to represent arrays and structs in the `.data` or `.bss` sections. Demonstrates how to access elements and fields using base addresses and offsets."
   },
   {
     "n": 11,
-    "title": "Logical Instructions: `AND`, `OR`, `XOR`",
-    "math": "Bitwise operations",
-    "note": "This lesson covers the instructions for performing bitwise logical operations. `AND`, `OR`, and `XOR` perform their respective operations on the bits of their operands. These are useful for manipulating individual bits."
+    "title": "Code Reuse with Macros",
+    "math": "Macros",
+    "note": "Introduces assembler macros as a way to define reusable, parameterized blocks of code. This is a key technique for reducing repetition and improving the maintainability of assembly programs."
   },
   {
     "n": 12,
-    "title": "Control Flow: The `CMP` and `JMP` Instructions",
-    "math": "Comparison and branching",
-    "note": "This section introduces the foundation of control flow. The `CMP` instruction compares two operands (by subtracting them) and sets the flags in the EFLAGS register accordingly. The `JMP` instruction performs an unconditional jump to another location in the code."
+    "title": "Floating-Point Instructions (x87 FPU)",
+    "math": "Floating-point arithmetic",
+    "note": "Introduces the legacy x87 Floating-Point Unit (FPU). Explains its stack-based architecture and instructions like `fld` (load), `fadd` (add), `fmul` (multiply), and `fstp` (store and pop)."
   },
   {
     "n": 13,
-    "title": "Conditional Jumps",
-    "math": "Conditional branching",
-    "note": "This lesson explains how to create conditional logic. Conditional jump instructions (like `JE` for 'jump if equal', `JNE` for 'jump if not equal', `JG` for 'jump if greater') check the status flags set by a previous `CMP` instruction and only jump if the condition is met."
+    "title": "SIMD Instructions (SSE)",
+    "math": "Single Instruction, Multiple Data (SIMD)",
+    "note": "Introduces the modern approach to high-performance math: SIMD using the SSE instruction set. Covers the 128-bit XMM registers and instructions for performing parallel operations on multiple floating-point or integer values at once."
   },
   {
     "n": 14,
-    "title": "The Stack",
-    "math": "Stack data structure",
-    "note": "This section explains the stack, a LIFO (Last-In, First-Out) data structure in memory that is essential for function calls. It grows downwards in memory. The `PUSH` instruction adds an item to the top of the stack, and the `POP` instruction removes an item."
+    "title": "Introduction to 64-bit Assembly (x86-64)",
+    "math": "64-bit architecture",
+    "note": "Provides an overview of the key differences in 64-bit mode. Introduces the 64-bit registers (RAX, etc.) and the new general-purpose registers (R8-R15)."
   },
   {
     "n": 15,
-    "title": "Functions: `CALL` and `RET`",
-    "math": "Function calls",
-    "note": "This lesson introduces the instructions for creating functions. The `CALL` instruction pushes the return address onto the stack and then jumps to the function's code. The `RET` instruction at the end of the function pops the return address off the stack and jumps back to it."
+    "title": "The x86-64 Calling Convention (System V ABI)",
+    "math": "64-bit calling conventions",
+    "note": "Explains the modern calling convention where the first six integer arguments are passed in registers (RDI, RSI, RDX, RCX, R8, R9) for efficiency, rather than on the stack."
   },
   {
     "n": 16,
-    "title": "The Stack Frame",
-    "math": "Stack frames",
-    "note": "This section explains the 'stack frame', which is a dedicated area on the stack for a single function call. It typically contains the function's arguments, local variables, and the return address. The EBP register is used as a fixed base pointer to access items in the stack frame."
+    "title": "Interfacing with the Windows API",
+    "math": "Application Binary Interface (ABI)",
+    "note": "Provides a contrast to Linux system calls by showing how to call a function from the Windows API (e.g., `MessageBoxA` from `user32.dll`). Highlights the different calling convention (stdcall) and linking process."
   },
   {
     "n": 17,
-    "title": "Calling Conventions: cdecl",
-    "math": "Calling conventions",
-    "note": "This lesson introduces calling conventions, which are a set of rules about how functions are called in a particular programming language. It covers the `cdecl` convention (used by C), which specifies that function arguments are pushed onto the stack from right to left and that the caller is responsible for cleaning up the stack after the call returns."
+    "title": "Basic Optimization Techniques",
+    "math": "Code optimization",
+    "note": "Discusses simple strategies for optimizing assembly code, such as choosing efficient instructions (e.g., using `XOR rax, rax` instead of `MOV rax, 0`) and basic loop unrolling."
   },
   {
     "n": 18,
-    "title": "Interfacing with C",
-    "math": "Language interoperability",
-    "note": "This section demonstrates how to call C library functions (like `printf`) from an assembly program. By following the `cdecl` calling convention, you can push arguments onto the stack and then call a C function, allowing you to leverage existing C code."
-  },
-  {
-    "n": 19,
-    "title": "Introduction to 64-bit (x86-64) Assembly",
-    "math": "64-bit architecture",
-    "note": "This lesson provides an overview of the key differences in 64-bit assembly. It introduces the new general-purpose registers (R8-R15) and the extension of the old registers to 64 bits (e.g., EAX becomes RAX)."
-  },
-  {
-    "n": 20,
-    "title": "The x86-64 Calling Convention",
-    "math": "System V AMD64 ABI",
-    "note": "This final lesson explains the major change in 64-bit mode. The calling convention is different: instead of passing all arguments on the stack, the first six integer arguments are passed in specific registers (RDI, RSI, RDX, RCX, R8, R9). This is much more efficient than using the stack."
+    "title": "Security Context: Introduction to Shellcoding",
+    "math": "Payload development",
+    "note": "Provides a high-level conceptual overview of shellcode. Explains that it is a small piece of self-contained code used as a payload in exploits, and discusses the challenges of writing it, such as avoiding null bytes and being position-independent."
   }
 ]

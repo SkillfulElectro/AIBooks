@@ -103,18 +103,42 @@
   },
   {
     "n": 18,
-    "title": "The `strict` and `warnings` Pragmas",
+    "title": "Writing Robust Code: Pragmas and Features",
     "math": "Code quality",
-    "note": "This lesson explains two crucial 'pragmas' (compiler directives) that should be at the top of every modern Perl script. `use strict;` enforces better coding practices, like requiring variable declaration. `use warnings;` enables warnings for potential problems in your code."
+    "note": "This lesson explains crucial 'pragmas' (compiler directives). `use strict;` enforces better coding practices, like requiring variable declaration. `use warnings;` enables warnings for potential problems. `use feature 'say';` enables the modern `say` function, which is like `print` but automatically adds a newline."
   },
   {
     "n": 19,
+    "title": "Modern Exception Handling with `Try::Tiny`",
+    "math": "Exception handling",
+    "note": "Introduce a modern, robust way to handle errors. This lesson shows how to install `Try::Tiny` from CPAN and use its `try` and `catch` blocks to handle exceptions (`die`) gracefully, which is much safer than using a bare `eval` block."
+  },
+  {
+    "n": 20,
     "title": "The Comprehensive Perl Archive Network (CPAN)",
     "math": "Software module repositories",
     "note": "This section introduces CPAN, a massive archive of over 200,000 modules of reusable Perl code. It is one of Perl's greatest strengths. The lesson explains how to use the `cpan` command-line client to install modules from CPAN."
   },
   {
-    "n": 20,
+    "n": 21,
+    "title": "Modern OOP: Introduction to Moo",
+    "math": "Object-oriented programming",
+    "note": "Introduce modern Object-Oriented Perl using a popular module from CPAN. Explain that while Perl's built-in OO is minimal, modules like `Moo` provide a powerful and easy-to-use syntax for creating classes with attributes and methods, which is the standard for new projects."
+  },
+  {
+    "n": 22,
+    "title": "Modern OOP: Creating a Class with Moo",
+    "math": "Class definition",
+    "note": "Demonstrate how to write a simple Perl class using Moo. This lesson covers defining a package, using `use Moo;` to turn it into a class, declaring attributes with the `has` keyword, and defining methods as regular subroutines. It will show how to create an object with `new()` and call its methods."
+  },
+  {
+    "n": 23,
+    "title": "Testing Your Code with `Test::More`",
+    "math": "Test-driven development",
+    "note": "Introduce Perl's strong testing culture. This lesson shows how to create a basic test file (e.g., `mytest.t`) that uses the standard `Test::More` module. It covers writing a test plan, and using fundamental test functions like `ok()` (to check a condition) and `is()` (to compare two values)."
+  },
+  {
+    "n": 24,
     "title": "Using Modules: The `DBI` Example",
     "math": "Database connectivity",
     "note": "This final lesson provides a practical example of using a module from CPAN. It introduces the `DBI` (Database Interface) module, which provides a standard, database-agnostic API for connecting to and interacting with a wide variety of databases from a Perl script."

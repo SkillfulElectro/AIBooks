@@ -19,66 +19,114 @@
   },
   {
     "n": 4,
+    "title": "Advanced EC2: Pricing and Lifecycle",
+    "math": "Economic modeling",
+    "note": "This lesson explores EC2 purchasing options beyond On-Demand instances. It covers Spot Instances for fault-tolerant workloads, Reserved Instances for long-term commitments, and Dedicated Hosts for compliance needs. The concept of the instance lifecycle is also discussed."
+  },
+  {
+    "n": 5,
     "title": "S3: Scalable Object Storage",
     "math": "Key-value store concepts",
     "note": "This lesson covers Amazon Simple Storage Service (S3), a highly scalable object storage service. It explains how to create S3 buckets and manage objects (files). The section details different S3 storage classes for cost optimization, the importance of versioning for data durability, and how to host a static website directly from an S3 bucket."
   },
   {
-    "n": 5,
+    "n": 6,
+    "title": "Advanced S3: Lifecycle and Replication",
+    "math": "Data lifecycle management",
+    "note": "This section covers advanced S3 features. It explains how to configure S3 Lifecycle policies to automatically transition objects to more cost-effective storage classes over time. It also introduces Cross-Region Replication (CRR) for disaster recovery and compliance."
+  },
+  {
+    "n": 7,
     "title": "VPC: Virtual Private Cloud Networking",
     "math": "Network topology and IP subnetting",
     "note": "Learn to create an isolated network environment in AWS using Virtual Private Cloud (VPC). This lesson explains how to define an IP address range for a VPC, create public and private subnets, configure route tables to control traffic flow, and use an Internet Gateway to provide internet access to resources within the VPC."
   },
   {
-    "n": 6,
+    "n": 8,
     "title": "Databases on AWS: RDS and DynamoDB",
     "math": "Relational algebra and NoSQL data models",
     "note": "This section provides an overview of managed database services on AWS. It introduces the Relational Database Service (RDS) and demonstrates how to launch a managed MySQL or PostgreSQL database instance. It also provides a brief introduction to NoSQL databases by explaining the key-value and document model of Amazon DynamoDB."
   },
   {
-    "n": 7,
+    "n": 9,
     "title": "High Availability: ELB and Auto Scaling",
     "math": "Load balancing algorithms and feedback control systems",
     "note": "This lesson focuses on building resilient and scalable applications. It explains how to use an Elastic Load Balancer (ELB) to automatically distribute incoming application traffic across multiple EC2 instances. It also covers configuring an Auto Scaling Group to automatically add or remove EC2 instances based on defined conditions, such as CPU utilization."
   },
   {
-    "n": 8,
+    "n": 10,
     "title": "Route 53: AWS Domain Name System",
     "math": "DNS resolution process",
     "note": "An introduction to Amazon Route 53, a scalable Domain Name System (DNS) web service. This lesson covers how to register a new domain name and configure DNS records. It explains various routing policies (e.g., Simple, Weighted, Failover) to direct traffic to your AWS resources, such as EC2 instances or load balancers."
   },
   {
-    "n": 9,
-    "title": "Serverless Computing with AWS Lambda",
-    "math": "Event-driven architecture",
-    "note": "This section introduces the concept of serverless computing, where you can run code without provisioning or managing servers. It explains the fundamentals of AWS Lambda and demonstrates how to create a simple Python-based Lambda function. It also covers how to configure triggers, such as an S3 event or an HTTP request via API Gateway, to execute the function."
+    "n": 11,
+    "title": "Content Delivery with CloudFront",
+    "math": "Content delivery network (CDN) principles",
+    "note": "This lesson introduces Amazon CloudFront, a global content delivery network. It explains how CloudFront caches content in Edge Locations closer to users to reduce latency. The process of creating a distribution with an S3 bucket as an origin is demonstrated."
   },
   {
-    "n": 10,
+    "n": 12,
+    "title": "Serverless Computing with AWS Lambda",
+    "math": "Event-driven architecture",
+    "note": "This section introduces the concept of serverless computing, where you can run code without provisioning or managing servers. It explains the fundamentals of AWS Lambda and demonstrates how to create a simple Python-based Lambda function."
+  },
+  {
+    "n": 13,
+    "title": "Serverless APIs with API Gateway",
+    "math": "API proxying",
+    "note": "This lesson covers Amazon API Gateway, a managed service for creating, publishing, and securing APIs. It demonstrates how to create an HTTP endpoint that acts as a trigger for an AWS Lambda function, enabling the creation of fully serverless web services."
+  },
+  {
+    "n": 14,
+    "title": "Application Integration: SQS and SNS",
+    "math": "Queueing theory and publish-subscribe pattern",
+    "note": "This section explains how to build decoupled applications. It introduces the Simple Queue Service (SQS) for reliable message queuing between components and the Simple Notification Service (SNS) for building publish-subscribe messaging systems."
+  },
+  {
+    "n": 15,
+    "title": "Containerization: ECS and EKS",
+    "math": "Container orchestration",
+    "note": "This lesson introduces container management on AWS. It provides an overview of Elastic Container Service (ECS), AWS's native container orchestrator, and Elastic Kubernetes Service (EKS) for running managed Kubernetes. The core concepts of clusters, tasks, and services are explained."
+  },
+  {
+    "n": 16,
     "title": "Infrastructure as Code with CloudFormation",
     "math": "Declarative programming",
     "note": "Learn to automate your infrastructure deployment using AWS CloudFormation. This lesson introduces the concept of Infrastructure as Code (IaC) and explains how to use a JSON or YAML template to define a 'stack' of AWS resources. It demonstrates how CloudFormation reliably creates, updates, and deletes the entire stack as a single unit."
   },
   {
-    "n": 11,
+    "n": 17,
     "title": "Monitoring with Amazon CloudWatch",
     "math": "Time-series data analysis",
-    "note": "This section covers monitoring and observability using Amazon CloudWatch. It explains how to collect and track metrics, such as EC2 CPU utilization, and view them on dashboards. The lesson also covers creating alarms that trigger notifications (e.g., via SNS) when a metric breaches a threshold, and how to collect and analyze application log files with CloudWatch Logs."
+    "note": "This section covers monitoring and observability using Amazon CloudWatch. It explains how to collect and track metrics, such as EC2 CPU utilization, and view them on dashboards. The lesson also covers creating alarms that trigger notifications (e.g., via SNS) when a metric breaches a threshold."
   },
   {
-    "n": 12,
+    "n": 18,
+    "title": "Auditing with AWS CloudTrail",
+    "math": "Log analysis and auditing",
+    "note": "This lesson introduces AWS CloudTrail for governance, compliance, and auditing. It explains how CloudTrail logs every API call made in your AWS account, providing a detailed history of actions taken by users, roles, or AWS services."
+  },
+  {
+    "n": 19,
+    "title": "Security Services: WAF, Shield, and KMS",
+    "math": "Layered security models, cryptography",
+    "note": "This lesson provides an overview of key security services. It covers AWS WAF (Web Application Firewall) for protecting against common web exploits, AWS Shield for DDoS protection, and AWS KMS (Key Management Service) for creating and managing encryption keys."
+  },
+  {
+    "n": 20,
     "title": "Programmatic Access: AWS CLI and SDKs",
     "math": "Command-line syntax and API principles",
     "note": "This lesson explains how to interact with AWS services programmatically. It covers the initial configuration of the AWS Command Line Interface (CLI) with your credentials. It then demonstrates how to run commands to manage AWS resources (e.g., list S3 buckets, describe EC2 instances) from the terminal, providing an alternative to the AWS Management Console."
   },
   {
-    "n": 13,
+    "n": 21,
     "title": "AWS Cost Management",
     "math": "Budgeting and forecasting",
     "note": "An essential guide to understanding and managing your AWS costs. This section explains how to use the AWS Free Tier effectively. It introduces AWS Budgets for setting custom cost and usage alerts and demonstrates how to use the AWS Cost Explorer to visualize, understand, and manage your AWS spending over time."
   },
   {
-    "n": 14,
+    "n": 22,
     "title": "The AWS Well-Architected Framework",
     "math": "System design principles",
     "note": "This lesson provides an overview of the AWS Well-Architected Framework, which describes key concepts, design principles, and architectural best practices for designing and running workloads in the cloud. The five pillars are explained: Operational Excellence, Security, Reliability, Performance Efficiency, and Cost Optimization."

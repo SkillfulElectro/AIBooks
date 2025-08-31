@@ -1,122 +1,134 @@
 [
   {
     "n": 1,
-    "title": "Introducing GoLang: History, Use Cases, and Setup",
+    "title": "Introduction to Go",
     "math": "None",
-    "note": "Introduce learners to GoLang, exploring its origin at Google, current industrial adoption (cloud, microservices, backend systems), and key features that set it apart from Python, Java, and C++. Guide students through installing Go, setting up a development environment, and compiling their first program to ensure familiarity with Go's workflow and community-driven resources."
+    "note": "Introduce Go, its origin at Google, and its design philosophy emphasizing simplicity, concurrency, and performance. Cover key use cases like cloud services, CLI tools, and DevOps. Guide students through installing Go and setting up their environment."
   },
   {
     "n": 2,
-    "title": "Go Syntax Basics: Variables, Types, and Expressions",
-    "math": "Algebra and Data Domains",
-    "note": "Teach Go's variable declaration, zero values, type inference, and scope rules. Connect to algebraic concepts, demonstrating assignment, replacement, and evaluation of expressions. Practice creating integer, float, and string variables; show type conversions and formatted I/O, giving students foundation in domain/value reasoning crucial to static languages."
+    "title": "Go Syntax Basics: Variables, Types, and Control Structures",
+    "math": "Logic and Algebra",
+    "note": "Cover Go's fundamental syntax: variable declaration (`var`, `:=`), basic types (`int`, `string`, `bool`), and control flow statements (`if`, `else`, `switch`, and the unified `for` loop). Emphasize Go's strict typing and clean syntax."
   },
   {
     "n": 3,
-    "title": "Control Structures: Conditionals and Boolean Logic",
-    "math": "Logic and Truth Tables",
-    "note": "Cover 'if', 'else', and 'switch' statements in Go, mapping directly to principles of propositional logic. Use concrete truth tables and simple code to illustrate flow control and branching, reinforcing how logical reasoning translates into program behavior and how Boolean operators work at both mathematical and code levels."
+    "title": "Composite Types: Arrays, Slices, and Maps",
+    "math": "Data Structures",
+    "note": "Explain Go's core composite data structures. Cover fixed-size arrays, the more flexible and powerful slice type (including `len`, `cap`, and `append`), and maps for key-value storage. Demonstrate their declaration and common operations."
   },
   {
     "n": 4,
-    "title": "Loops and Iteration: For and Range",
-    "math": "Sequences and Summation",
-    "note": "Demonstrate Go's unified 'for' loop (traditional, infinite, and 'range'-based) for iterating over arrays, slices, and strings. Use mathematical sequences and summation as real-world analogies, implementing both summing elements and producing Fibonacci or other iterative series, highlighting the relationship between code and mathematical process."
+    "title": "Structs: Creating Custom Data Types",
+    "math": "Set Theory and Data Modeling",
+    "note": "Cover struct declaration, initialization, and field access. Emphasize the use of structs for modeling custom data types by grouping related fields together. This is the foundation for building complex data structures in Go."
   },
   {
     "n": 5,
-    "title": "Functions, Parameters, and Return Values",
+    "title": "Functions, Parameters, and Multiple Return Values",
     "math": "Function Theory",
-    "note": "Teach how to define and invoke functions in Go, pass parameters (by value and by reference), return single or multiple results, and understand scope. Relate to mathematical function mappings (domain, codomain, mapping rules) to reinforce both abstraction and application in code, laying a foundation for modular, testable programming."
+    "note": "Teach how to define and invoke functions in Go. Cover passing parameters (by value), variadic functions, and Go's idiomatic use of multiple return values, especially for returning a result alongside an error."
   },
   {
     "n": 6,
-    "title": "Pointers and Memory Management",
-    "math": "Graphs and Reference Models",
-    "note": "Introduce pointers for referencing memory addresses, highlighting syntax and practical implications (variable vs pointer semantics). Use a graph model to illustrate how memory is managed, how variables are connected, and how Go's garbage-collected model impacts program allocation and performance."
+    "title": "Pointers",
+    "math": "Reference Models",
+    "note": "Introduce pointers for referencing memory addresses. Explain the `&` (address of) and `*` (dereference) operators. Discuss when to use pointers (e.g., to modify a function argument) versus value types."
   },
   {
     "n": 7,
-    "title": "Arrays and Slices: Data Structures and Indexing",
-    "math": "Indexing, Sets, and Sequences",
-    "note": "Explain the static and flexible nature of arrays and slices in Go. Demonstrate indexing, slicing, appending, and len/cap operations. Use sets and sequence mathematics to model how elements are accessed and mutated, giving students a concrete sense of why Go's slices are preferred for most dynamic data manipulation tasks."
+    "title": "Methods and Interfaces",
+    "math": "Type Theory and Abstract Algebra",
+    "note": "Explain how to define methods on structs. Introduce interfaces as collections of method signatures. Cover Go's unique implicit implementation of interfaces, a key feature for writing decoupled, composable code."
   },
   {
     "n": 8,
-    "title": "Maps and Hash Tables",
-    "math": "Hash Functions and Lookup Efficiency",
-    "note": "Teach Go's map structure, showing key-value associations, insertion, lookup, and deletion. Discuss hash functions and the math behind efficient lookup and collision resolution. Relate this to real-world dictionaries and data grouping, giving hands-on practice with dynamic data sets."
+    "title": "Error Handling",
+    "math": "Logical Trees and Exception Paths",
+    "note": "Explain Go's idiomatic approach to error handling, which involves functions returning an `error` value. Contrast this with the exception-based systems of other languages and emphasize the importance of checking for errors explicitly."
   },
   {
     "n": 9,
-    "title": "Structs: Data Modeling and Composite Types",
-    "math": "Set Theory and Data Modeling",
-    "note": "Cover struct declaration, initialization, field access, and nesting. Emphasize the use of structs for modeling real-world data (such as a 'Person' or 'Order'). Apply set theory concepts to explain how grouping attributes in a struct forms the basis of compositional design, supporting extensible programs."
+    "title": "Concurrency: Goroutines",
+    "math": "Parallel computing",
+    "note": "Introduce goroutines as Go's lightweight approach to concurrency. Demonstrate how to start a new goroutine using the `go` keyword to run a function concurrently with the rest of the program."
   },
   {
     "n": 10,
-    "title": "Interfaces and Polymorphism",
-    "math": "Type Theory and Abstract Algebra",
-    "note": "Introduce interfaces and implicit implementation in Go, showing polymorphic design without traditional inheritance. Relate to abstract algebra by modeling how types satisfy interface contracts, which acts as a set of axioms, enabling advanced composition and modularity in larger programs."
+    "title": "Concurrency: Channels",
+    "math": "Communicating Sequential Processes (CSP)",
+    "note": "Introduce channels as the primary way for goroutines to communicate and synchronize. Explain how to create channels with `make`, send values with `<-`, and receive values. Emphasize the principle: 'Do not communicate by sharing memory; instead, share memory by communicating.'"
   },
   {
     "n": 11,
-    "title": "Error Handling and Panic/Recover",
-    "math": "Logical Trees and Exception Paths",
-    "note": "Explain Go's preference for explicit error returns, distinguishing normal and exceptional flows using logical tree diagrams. Cover panic and recover mechanisms for critical failures, comparing to other languages' exception handling, and reinforce structured error pathways using code and math-driven testing."
+    "title": "Advanced Concurrency: `select` and `sync`",
+    "math": "Synchronization primitives",
+    "note": "This lesson covers more advanced concurrency patterns. It introduces the `select` statement for working with multiple channels. It also covers the `sync` package, explaining when to use primitives like `sync.Mutex` and `sync.WaitGroup` for more traditional shared-memory concurrency."
   },
   {
     "n": 12,
-    "title": "Concurrency: Goroutines and Channels",
-    "math": "Scheduling, Graphs, and Parallel Optimization",
-    "note": "Teach Go's goroutines for lightweight concurrency, introducing channels for safe communication. Use scheduling and graph theory to show how tasks progress and dependencies are managed, culminating in practical patterns like worker pools and fan-out/fan-in concurrency."
+    "title": "The `context` Package",
+    "math": "Cancellation and propagation",
+    "note": "A crucial lesson on using the `context` package for managing deadlines, cancellation signals, and request-scoped values across API boundaries and between goroutines. This is essential for writing reliable and robust network services."
   },
   {
     "n": 13,
-    "title": "File and Directory I/O",
-    "math": "Streams and Data Representation",
-    "note": "Cover reading and writing files and directories using Go's 'os' and 'io/ioutil' packages. Discuss file streams, buffers, and encoding/decoding basics, relating to how data is structured and managed in external storage, and practice with small exercises parsing text or log files."
+    "title": "Packages and Modules",
+    "math": "Dependency management",
+    "note": "Explain how code is organized into packages and how to manage dependencies using Go Modules. Cover the `go.mod` and `go.sum` files and the basic commands like `go get` and `go mod tidy`."
   },
   {
     "n": 14,
-    "title": "Working with JSON: Parsing and Encoding",
-    "math": "Tree Structures and Key-Value Mapping",
-    "note": "Demonstrate Go's 'encoding/json' package to unmarshal and marshal JSON data into structs and maps. Practice with nested JSON and dynamic fields. Discuss tree structures and key-value operations in mathematics, which provides a formal basis for many API integrations and full-stack development requirements."
+    "title": "Generics",
+    "math": "Parametric polymorphism",
+    "note": "A dedicated lesson on generics, introduced in Go 1.18. It explains how to write functions and data structures with type parameters, allowing them to work with any of a set of types, which reduces code duplication."
   },
   {
     "n": 15,
-    "title": "Unit Testing and Benchmarking",
-    "math": "Statistics, Proof, and Optimization",
-    "note": "Teach Go's 'testing' package, writing basic and table-driven tests, and analyzing code correctness as a formal proof. Cover benchmarks and profiles, and interpret statistical output (mean, variance, distribution) to optimize code. Emphasize test-first mindset and reproducibility in software construction."
+    "title": "Working with JSON",
+    "math": "Data serialization",
+    "note": "Demonstrate Go's `encoding/json` package to marshal Go structs into JSON and unmarshal JSON data back into structs. Cover the use of struct field tags to customize the JSON output."
   },
   {
     "n": 16,
-    "title": "HTTP Servers and RESTful APIs in Go",
-    "math": "Graph Traversal and Protocol Modeling",
-    "note": "Guide students through building HTTP servers with Go's 'net/http' package, routing, request/response patterns, and JSON-based APIs. Use graph traversal models to represent request flows, endpoints, and resource relationships, consolidating practical networking with mathematical reasoning."
+    "title": "File I/O",
+    "math": "Data streams",
+    "note": "Cover reading and writing files using Go's `os` and `io` packages. Discuss file streams, buffers, and the use of `defer` to ensure files are closed properly."
   },
   {
     "n": 17,
-    "title": "Managing Dependencies and Go Modules",
-    "math": "Set Theory and Modular Design",
-    "note": "Introduce Go's module system, dependency management with 'go mod', and principles of semantic versioning. Apply set theory to show how modules encapsulate functionality and how import trees map to program structure."
+    "title": "Building an HTTP Server",
+    "math": "Protocol Modeling",
+    "note": "Guide students through building a simple web server with Go's standard `net/http` package. Cover setting up request handlers, routing, and serving basic HTTP responses."
   },
   {
     "n": 18,
-    "title": "Performance Profiling and Optimization",
-    "math": "Algorithmic Complexity and Statistics",
-    "note": "Show how to use Go's profiling tools ('pprof', trace) to measure CPU and memory usage. Link findings to algorithmic complexity (Big-O notation) and statistical metrics, helping students diagnose bottlenecks and apply efficient algorithms in practice."
+    "title": "Unit Testing and Benchmarking",
+    "math": "Formal verification",
+    "note": "Teach Go's built-in `testing` package. Cover writing basic unit tests with `t.Run()` for subtests, and creating benchmarks to measure code performance."
   },
   {
     "n": 19,
-    "title": "Go and Cloud-Native Ecosystem: Docker, Kubernetes, and Beyond",
-    "math": "Graphs (Topology) and Discrete Structures",
-    "note": "Introduce using Go to deploy microservices, build Docker containers, and interact with Kubernetes APIs. Relate to discrete mathematical models of resource allocation, service discovery, and dependency graphs, showing Go's role in modern orchestration and scalability."
+    "title": "Advanced Testing: Fuzzing",
+    "math": "Randomized testing",
+    "note": "A lesson on fuzz testing, a modern testing technique now built into the Go toolchain. It explains how fuzzing automatically generates inputs to your functions to find edge cases and bugs that normal unit tests might miss."
   },
   {
     "n": 20,
-    "title": "Capstone Project: Real-World Application and Reflection",
-    "math": "Synthesis and Algorithm Design",
-    "note": "Guide students through designing and implementing a multi-component Go application (eg, REST API service with concurrency and tests). Emphasize integrating all previously learned constructs, reflecting on algorithmic choices, performance tradeoffs, and testability. Assess with a real-world rubric that measures coding skills, mathematical thinking, and software design."
+    "title": "Reflection",
+    "math": "Metaprogramming",
+    "note": "A lesson introducing the concepts of reflection in Go. It explains how to use the `reflect` package to inspect the types and values of variables at runtime, while also discussing the trade-offs in terms of performance and code clarity."
+  },
+  {
+    "n": 21,
+    "title": "Calling C code with `cgo`",
+    "math": "Foreign function interface",
+    "note": "An introduction to `cgo`, the facility for calling C libraries from Go code. This lesson conceptually covers how it works and its use cases, such as integrating with existing C libraries or for performance-critical systems programming."
+  },
+  {
+    "n": 22,
+    "title": "Performance Profiling with `pprof`",
+    "math": "Statistical profiling",
+    "note": "Show how to use Go's built-in profiling tools (`pprof`) to measure and visualize CPU and memory usage, helping developers diagnose performance bottlenecks in their applications."
   }
 ]

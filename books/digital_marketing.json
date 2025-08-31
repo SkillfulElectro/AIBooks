@@ -3,7 +3,7 @@
     "n": 1,
     "title": "Introduction to Digital Marketing",
     "math": "Marketing principles",
-    "note": "This section provides a formal definition of Digital Marketing as the component of marketing that uses the Internet and online-based digital technologies to promote products and services. It contrasts digital marketing with traditional marketing (like print or TV ads), highlighting its advantages in reach, targeting, and measurability."
+    "note": "This section provides a formal definition of Digital Marketing as the component of marketing that uses the Internet and online-based digital technologies to promote products and services. It contrasts digital marketing with traditional marketing, highlighting its advantages in reach, targeting, and measurability."
   },
   {
     "n": 2,
@@ -15,94 +15,88 @@
     "n": 3,
     "title": "Core Channel: Search Engine Optimization (SEO)",
     "math": "Search engine algorithms",
-    "note": "This section introduces SEO as the practice of increasing the quantity and quality of traffic to your website through organic (non-paid) search engine results. It explains the fundamental goal of SEO: to be the most relevant result for a user's search query."
+    "note": "This section introduces SEO as the practice of increasing the quantity and quality of traffic to your website through organic (non-paid) search engine results. It explains the three pillars of SEO: On-Page SEO (content, keywords), Off-Page SEO (backlinks), and Technical SEO."
   },
   {
     "n": 4,
-    "title": "How Search Engines Work",
-    "math": "Web crawling and indexing",
-    "note": "This lesson provides a high-level overview of how search engines like Google work. It explains the three main processes: Crawling (discovering pages on the web), Indexing (storing and organizing the content of those pages), and Ranking (deciding which pages are most relevant to a search query)."
+    "title": "SEO: Keyword Research and On-Page SEO",
+    "math": "Keyword analysis",
+    "note": "This section covers On-Page SEO, the practice of optimizing individual web pages. It details key elements, including conducting keyword research to understand user intent, and optimizing title tags, meta descriptions, headings (H1, H2), and content for relevance."
   },
   {
     "n": 5,
-    "title": "SEO: On-Page SEO",
-    "math": "Keyword analysis",
-    "note": "This section covers On-Page SEO, which refers to the practice of optimizing individual web pages to rank higher. It details key elements, including conducting keyword research, writing effective title tags and meta descriptions, using proper headings (H1, H2), and creating high-quality, relevant content."
+    "title": "SEO: Off-Page and Technical SEO",
+    "math": "Link building, site architecture",
+    "note": "This lesson explains Off-Page SEO, focusing on building 'backlinks' to signal authority. It also introduces Technical SEO, which involves optimizing the website's infrastructure, covering topics like site speed, mobile-friendliness, and crawlability for search engines."
   },
   {
     "n": 6,
-    "title": "SEO: Off-Page SEO",
-    "math": "Link building, domain authority",
-    "note": "This lesson explains Off-Page SEO, which involves actions taken outside of your own website to impact your rankings. It focuses on the concept of 'backlinks' (links from other websites to yours) as a primary signal of authority and trust to search engines."
+    "title": "Core Channel: Search Engine Marketing (SEM)",
+    "math": "Pay-Per-Click (PPC) advertising",
+    "note": "This section introduces SEM as the practice of using paid advertisements on search engines. It explains the Pay-Per-Click (PPC) model, where advertisers pay a fee each time an ad is clicked. The lesson focuses on the Google Ads platform and the concept of an Ad Auction, which combines bid and Quality Score."
   },
   {
     "n": 7,
-    "title": "Core Channel: Search Engine Marketing (SEM)",
-    "math": "Pay-Per-Click (PPC) advertising",
-    "note": "This section introduces SEM as the practice of marketing a business using paid advertisements that appear on search engine results pages. It explains the Pay-Per-Click (PPC) model, where advertisers pay a fee each time one of their ads is clicked. Google Ads is presented as the most popular SEM platform."
+    "title": "Core Channel: Content Marketing",
+    "math": "Content strategy",
+    "note": "This section defines Content Marketing as a strategic approach focused on creating and distributing valuable, relevant content (like blog posts, videos, and e-books) to attract and retain a clearly defined audience, ultimately driving profitable customer action."
   },
   {
     "n": 8,
-    "title": "Understanding a PPC Auction",
-    "math": "Ad auction models",
-    "note": "This lesson explains how platforms like Google Ads determine which ads to show. It introduces the concept of the Ad Auction, which is not just based on the highest bid. It explains that Ad Rank is determined by a combination of the advertiser's bid and their Quality Score (a measure of ad relevance and landing page quality)."
+    "title": "Core Channel: Social Media Marketing (SMM)",
+    "math": "Social network analysis",
+    "note": "This lesson introduces SMM as the use of social media platforms to connect with an audience to build a brand, increase sales, and drive website traffic. It contrasts organic social media (community building) with paid social media (targeted ad campaigns)."
   },
   {
     "n": 9,
-    "title": "Core Channel: Content Marketing",
-    "math": "Content strategy",
-    "note": "This section defines Content Marketing as a strategic marketing approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience. The goal is to drive profitable customer action by providing useful information rather than direct sales pitches."
+    "title": "Core Channel: Email Marketing",
+    "math": "Direct marketing",
+    "note": "This lesson explains Email Marketing as sending commercial messages to a list of subscribers who have opted in. It is a highly effective channel for nurturing leads and retaining customers. Key components like subject lines, body copy, and calls-to-action (CTAs) are discussed."
   },
   {
     "n": 10,
-    "title": "Types of Content",
-    "math": "Content classification",
-    "note": "This lesson explores the various formats that content marketing can take. It covers blog posts and articles for SEO, videos for engagement, infographics for data visualization, lead magnets like e-books and whitepapers for lead generation, and webinars for interactive presentations."
+    "title": "Core Channel: Affiliate Marketing",
+    "math": "Performance marketing",
+    "note": "This lesson explains the affiliate marketing model, a type of performance-based marketing where a business rewards one or more affiliates for each visitor or customer brought by the affiliate's own marketing efforts. It covers the roles of the merchant, affiliate, and network."
   },
   {
     "n": 11,
-    "title": "Core Channel: Social Media Marketing (SMM)",
-    "math": "Social network analysis",
-    "note": "This lesson introduces SMM as the use of social media platforms to connect with your audience to build your brand, increase sales, and drive website traffic. It emphasizes the importance of choosing the right platforms based on where your target audience spends their time."
+    "title": "Core Channel: Influencer Marketing",
+    "math": "Social proof",
+    "note": "This lesson is dedicated to the strategy of partnering with social media influencers. It covers how to identify relevant influencers, different collaboration models (e.g., sponsored posts, reviews), and how to measure campaign success through metrics like engagement and reach."
   },
   {
     "n": 12,
-    "title": "Organic vs. Paid Social Media",
-    "math": "Marketing channels",
-    "note": "This section contrasts the two main approaches to SMM. Organic social media involves building a community and sharing content without paying for promotion. Paid social media involves running targeted ad campaigns to reach specific demographics and interests, which is crucial for reaching new audiences."
+    "title": "The Role of a CRM",
+    "math": "Customer Relationship Management",
+    "note": "This lesson explains what a Customer Relationship Management (CRM) system is (e.g., Salesforce, HubSpot) and why it's central to modern marketing. It covers how a CRM is used to store customer data, track all interactions with the brand, and align the marketing and sales teams."
   },
   {
     "n": 13,
-    "title": "Core Channel: Email Marketing",
-    "math": "Direct marketing",
-    "note": "This lesson explains Email Marketing as the act of sending a commercial message, typically to a group of people, using email. It is a highly effective channel for nurturing leads and retaining customers because you are communicating with an audience that has explicitly opted in to hear from you."
+    "title": "Introduction to Marketing Automation",
+    "math": "Marketing workflows",
+    "note": "This lesson expands on email marketing to cover the broader concept of automation. It introduces the idea of using platforms (like HubSpot or Marketo) to automate and personalize marketing workflows, such as lead scoring, lead nurturing email sequences, and behavioral triggers."
   },
   {
     "n": 14,
-    "title": "Building an Email List",
-    "math": "Lead generation",
-    "note": "This section covers the crucial first step of email marketing: building a subscriber list. It emphasizes ethical practices, such as using lead magnets and clear sign-up forms, and warns against the ineffectiveness and legal risks of buying email lists."
+    "title": "Introduction to Digital Marketing Analytics",
+    "math": "Web analytics",
+    "note": "This section introduces the practice of measuring and analyzing marketing performance to maximize its effectiveness. It emphasizes using data to make decisions and presents Google Analytics as the standard tool for web analytics."
   },
   {
     "n": 15,
-    "title": "Crafting an Effective Email Campaign",
-    "math": "A/B testing",
-    "note": "This lesson details the components of a successful email. It covers writing compelling subject lines to increase open rates, crafting clear and concise body copy with a single call-to-action (CTA), and the importance of A/B testing different elements to optimize performance."
+    "title": "Key Metrics and KPIs",
+    "math": "Key Performance Indicators (KPIs)",
+    "note": "This lesson defines the most important metrics in digital marketing. It covers Traffic, Bounce Rate, Conversion Rate, and Key Performance Indicators (KPIs) like Cost Per Acquisition (CPA), Customer Lifetime Value (CLV), and Return on Ad Spend (ROAS)."
   },
   {
     "n": 16,
-    "title": "Introduction to Digital Marketing Analytics",
-    "math": "Web analytics",
-    "note": "This section introduces the practice of measuring, managing, and analyzing marketing performance to maximize its effectiveness. It emphasizes the importance of using data, not intuition, to make marketing decisions. Google Analytics is presented as the standard tool for web analytics."
+    "title": "Conversion Rate Optimization (CRO)",
+    "math": "A/B testing",
+    "note": "This lesson is dedicated to the discipline of improving the percentage of users who perform a desired action (a conversion). It introduces the CRO process: analyzing user behavior, forming a hypothesis, and using A/B testing to validate changes on landing pages, emails, or ads."
   },
   {
     "n": 17,
-    "title": "Key Metrics to Track",
-    "math": "Key Performance Indicators (KPIs)",
-    "note": "This lesson defines some of the most important metrics in digital marketing. It covers Traffic (how many users visit your site), Bounce Rate (the percentage of visitors who leave after viewing only one page), Conversion Rate (the percentage of users who take a desired action), and Cost Per Acquisition (CPA)."
-  },
-  {
-    "n": 18,
     "title": "Developing a Digital Marketing Plan",
     "math": "Strategic planning",
     "note": "This final lesson provides a framework for creating a cohesive digital marketing strategy. It covers the essential steps: setting SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goals, defining your target audience and buyer personas, conducting a competitive analysis, choosing your channels, and setting a budget."

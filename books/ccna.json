@@ -1,164 +1,152 @@
 [
   {
     "n": 1,
-    "title": "Introduction to Cisco Packet Tracer",
-    "math": "None",
-    "note": "Teach students how to download, install, and navigate Cisco Packet Tracer. Include steps to create a free Cisco Networking Academy account and locate Packet Tracer within the portal. Discuss the purpose and capabilities of Packet Tracer in simulating routers, switches, and network topologies for CCNA study. No math topic is covered in this section."
+    "title": "Role and Function of Network Components",
+    "math": "Network topology",
+    "note": "This lesson introduces the core hardware components of a network. It explains the function of routers (Layer 3), switches (Layer 2 and Layer 3), next-generation firewalls (NGFW), access points (APs), and endpoints. The context is a typical enterprise network environment."
   },
   {
     "n": 2,
-    "title": "Basic Number Systems for Networking",
-    "math": "Overview of Binary and Hexadecimal",
-    "note": "Introduce the binary and hexadecimal numbering systems as used in networking. Explain the necessity for binary in IPv4 addressing and hexadecimal in IPv6 and MAC addresses. No prerequisites needed; set the stage for binary operations in later modules."
+    "title": "Network Topology Architectures",
+    "math": "Graph theory",
+    "note": "This section covers common network design blueprints. It compares and contrasts the traditional three-tier (core, distribution, access) and two-tier hierarchical architectures with the modern spine-leaf architecture used in data centers. WAN and SOHO (Small Office/Home Office) topologies are also discussed."
   },
   {
     "n": 3,
-    "title": "Binary to Decimal Conversion",
-    "math": "Binary to Decimal Conversion",
-    "note": "Teach how to convert binary octets to decimal values using positional notation (e.g., 11000000 = 128 + 64 = 192). Provide step-by-step exercises for converting any 8-bit binary to decimal, reinforcing the core skill behind IP addressing."
+    "title": "Cabling and Physical Interfaces",
+    "math": "Signal propagation",
+    "note": "This lesson details the physical layer of networking. It covers different cabling types, including copper (e.g., Cat 5e, Cat 6) and fiber optic (single-mode, multi-mode), and explains their use cases. It also covers identifying and troubleshooting common cable issues like collisions, errors, and duplex mismatches."
   },
   {
     "n": 4,
-    "title": "Decimal to Binary Conversion",
-    "math": "Decimal to Binary Conversion",
-    "note": "Instruct learners on converting decimal numbers (0–255) to their 8-bit binary equivalents by successive subtraction or division-by-two/remainders. Ensure every student can independently convert IPv4 octet values into binary for future subnetting work."
+    "title": "TCP vs. UDP",
+    "math": "Transport protocols",
+    "note": "This section compares the two primary transport layer protocols. It explains the key characteristics of TCP (connection-oriented, reliable, ordered delivery) and UDP (connectionless, best-effort delivery) and provides examples of applications that use each protocol. The concept of a three-way handshake for TCP is introduced."
   },
   {
     "n": 5,
-    "title": "IPv4 Address Structure and Classes",
-    "math": "Bit Pattern Identification",
-    "note": "Explain the IPv4 address structure as 32 bits divided into four octets and classified based on leading bits (Class A: 0xxxxxxx, B: 10xxxxxx, etc.). Teach students to recognize class by binary patterns, relating it to range and function."
+    "title": "Binary and Hexadecimal Numbering",
+    "math": "Base conversion",
+    "note": "This lesson provides the mathematical foundation for IP addressing. It teaches how to convert between decimal, binary, and hexadecimal number systems, which is a critical skill for working with IPv4, IPv6, and MAC addresses."
   },
   {
     "n": 6,
-    "title": "Subnet Masks and CIDR Notation",
-    "math": "Bit-Length Notation",
-    "note": "Introduce the concept of a subnet mask as a 32-bit number, and explain CIDR (/8, /16, /24) as a count of network bits. Teach conversion between dotted decimal and CIDR notations and the impact on valid host and network calculations."
+    "title": "IPv4 Addressing and Subnetting",
+    "math": "Boolean algebra, IP subnetting",
+    "note": "This section provides a deep dive into IPv4 addressing. It covers the structure of an IPv4 address, the concept of a subnet mask, and the process of subnetting to create smaller networks. Students will learn to calculate network addresses, host ranges, and broadcast addresses for a given subnet."
   },
   {
     "n": 7,
-    "title": "Hands-On: Configuring a Simple LAN Topology in Packet Tracer",
-    "math": "None",
-    "note": "Guide students to construct a simple LAN using Packet Tracer: add switches, PCs, routers, and connect them with correct cables. This exercise is self-contained and focuses on using the simulation environment and verifying basic connectivity using ping."
+    "title": "IPv6 Addressing Fundamentals",
+    "math": "Hexadecimal arithmetic",
+    "note": "This lesson introduces IPv6. It explains the 128-bit address format, hexadecimal notation, and rules for abbreviation. It also covers IPv6 address types, including global unicast, unique local, and link-local, and the process of configuring an address on a client OS."
   },
   {
     "n": 8,
-    "title": "Subnetting in Binary (Theory)",
-    "math": "Power of Two Calculations",
-    "note": "Demonstrate subnetting logic using binary: explain borrowing host bits for subnets, show how 2^n yields the number of subnets, and apply binary masks to derive boundaries. Lead students through calculating four subnets from a /24 block by toggling mask bits."
+    "title": "Introduction to VLANs",
+    "math": "Set theory (segmentation)",
+    "note": "This lesson introduces Virtual LANs (VLANs) as a mechanism to logically segment a physical network. It explains how VLANs can improve security and traffic management by creating separate broadcast domains on a single switch. The standard VLAN ranges are also covered."
   },
   {
     "n": 9,
-    "title": "Subnetting a Network: Decimal and Binary Methods",
-    "math": "Subnet Calculation Using Magic Numbers",
-    "note": "Compare binary and shortcut (magic number) subnetting techniques. Teach students to use magic numbers to quickly identify increment and ranges for subnets. Focus on practicing both approaches independently of routing or device configuration."
+    "title": "VLAN Trunking with 802.1Q",
+    "math": "Frame tagging",
+    "note": "This section explains how to pass traffic for multiple VLANs between switches. It introduces the IEEE 802.1Q trunking protocol, which adds a VLAN tag to Ethernet frames. The configuration of trunk ports on Cisco switches is demonstrated."
   },
   {
     "n": 10,
-    "title": "Calculating Usable Host Addresses in a Subnet",
-    "math": "Host Calculation Formula",
-    "note": "Explain and drill the formula 2^(32 - subnet bits) - 2 to compute usable hosts per subnet. Provide several worked examples, ensuring mastery of handling different subnet masks and avoiding network/broadcast address assignment."
+    "title": "EtherChannel (LACP and PAgP)",
+    "math": "Link aggregation",
+    "note": "This lesson covers EtherChannel, a technology for bundling multiple physical switch ports into a single logical link to increase bandwidth and provide redundancy. It explains the two negotiation protocols used: LACP (Link Aggregation Control Protocol, open standard) and PAgP (Port Aggregation Protocol, Cisco proprietary)."
   },
   {
     "n": 11,
-    "title": "Packet Tracer Lab: Assigning and Testing IPv4 Addresses",
-    "math": "Subnet ID, Range, Broadcast Calculation",
-    "note": "Walk students through assigning calculated IP addresses to devices in Packet Tracer, pinging to test connectivity, and using 'show running-config' and 'show ip interface' to verify correct subnet, host, and broadcast addressing. This lab reinforces manual calculations with real configuration."
+    "title": "Wireless LAN (WLAN) Concepts",
+    "math": "Radio frequency (RF) principles",
+    "note": "This section introduces the fundamentals of wireless networking. It covers the roles of Access Points (APs) and Wireless LAN Controllers (WLCs). Key concepts like SSIDs (Service Set Identifiers), RF channels, and the basic principles of Wi-Fi communication are explained."
   },
   {
     "n": 12,
-    "title": "VLAN Concepts and VLAN ID Ranges",
-    "math": "VLAN ID Numbering",
-    "note": "Introduce the concept of VLANs, their purpose for segmentation, and the valid ID range (1–4094), including reserved and default VLANs. Emphasize how to determine valid VLAN assignment and demonstrate in Packet Tracer via port assignment."
+    "title": "Routing Table Fundamentals",
+    "math": "Graph traversal algorithms",
+    "note": "This lesson explains how a router makes forwarding decisions based on its routing table. It covers how to read a routing table, including the meaning of route source codes, administrative distance (trustworthiness of the route source), and the metric (cost of the route)."
   },
   {
     "n": 13,
-    "title": "VLAN Configuration and Verification in Packet Tracer",
-    "math": "VLAN IDs and Trunking",
-    "note": "Guide students in creating VLANs, assigning ports to VLANs, configuring trunks, and testing VLAN isolation. Teach students to verify VLAN assignments, display VLAN tables, and solve basic trunking math and tag/untagged frame concepts."
+    "title": "Static Routing",
+    "math": "Manual route configuration",
+    "note": "This section covers how to manually configure routes on a router. It demonstrates the configuration of both IPv4 and IPv6 static routes, including default routes (the 'gateway of last resort'). The use cases and limitations of static routing are discussed."
   },
   {
     "n": 14,
-    "title": "IPv6 Address Structure and Hexadecimal Notation",
-    "math": "IPv6 and Hexadecimal Conversion",
-    "note": "Introduce the 128-bit structure of IPv6 addresses, hexadecimal representation (0-9, A-F), and the relationship between 4-bit binary groups and a single hex digit. Include exercises converting decimal and binary to hexadecimal."
+    "title": "Introduction to OSPFv2",
+    "math": "Shortest path first algorithms (Dijkstra)",
+    "note": "This lesson introduces OSPF (Open Shortest Path First) as a dynamic routing protocol. It explains the concepts of neighbor adjacencies, router IDs, and areas. It also covers the OSPF cost metric calculation (based on bandwidth) and how it is used to find the shortest path to a destination."
   },
   {
     "n": 15,
-    "title": "Calculating IPv6 Prefix Lengths and Host Counts",
-    "math": "IPv6 Prefix Calculations",
-    "note": "Explain prefix length in IPv6 (e.g., /64), how each group of 4 hex digits represents 16 bits, and compute the number of hosts for a given prefix. Lead students in breaking down an IPv6 address and practicing subnet prefix creation."
+    "title": "Configuring Single-Area OSPFv2",
+    "math": "Network configuration",
+    "note": "This lesson provides a practical guide to configuring and verifying single-area OSPFv2 in a lab environment. It covers the necessary commands to enable OSPF, configure network statements, and verify neighbor relationships and routing table entries using `show` commands."
   },
   {
     "n": 16,
-    "title": "Packet Tracer Lab: Configuring IPv6 Addresses",
-    "math": "Hexadecimal to Binary Conversion",
-    "note": "Walk through placing IPv6 addresses on devices using Packet Tracer. Practice segmenting the network using different /64, /56, /48 prefixes and testing connectivity. Emphasize error checking in hexadecimal to binary conversion for prefix calculation."
+    "title": "Network Address Translation (NAT)",
+    "math": "Address mapping",
+    "note": "This section explains the purpose and function of NAT for translating private IPv4 addresses to public IPv4 addresses. It covers the different types of NAT: static NAT (one-to-one mapping), dynamic NAT (many-to-many), and Port Address Translation (PAT) (many-to-one), which is the most common type."
   },
   {
     "n": 17,
-    "title": "Introduction to Routing Protocol Metrics (OSPF)",
-    "math": "OSPF Cost Calculation",
-    "note": "Introduce OSPF metrics, explain the cost formula (Cost = Reference Bandwidth / Interface Bandwidth), and demonstrate calculation steps. Practice with different interface speeds and clarify why lower cost is preferred for shortest-path routing."
+    "title": "Network Time Protocol (NTP)",
+    "math": "Time synchronization",
+    "note": "This lesson covers NTP, a protocol used to synchronize the clocks of computer systems over a network. It explains the importance of accurate time for logging and security purposes and demonstrates how to configure a Cisco device to act as an NTP client."
   },
   {
     "n": 18,
-    "title": "OSPF Configuration and Metric Visualization in Packet Tracer",
-    "math": "Cost Assignment and Routing Decision",
-    "note": "Configure OSPF in Packet Tracer, assign interface costs, and use 'show ip ospf interface' to display and interpret calculated costs. Experiment with bandwidth settings and observe changes in the routing table, reinforcing cost calculation logic."
+    "title": "Dynamic Host Configuration Protocol (DHCP)",
+    "math": "IP address leasing",
+    "note": "This section explains how DHCP is used to automatically assign IP addresses and other network configuration information to clients. It covers the DHCP process (Discover, Offer, Request, Acknowledge - DORA) and demonstrates how to configure a Cisco router to act as a DHCP server."
   },
   {
     "n": 19,
-    "title": "Routing Protocol Metrics (EIGRP)",
-    "math": "Bandwidth and Delay Calculations",
-    "note": "Explain EIGRP’s composite metric formula: [(10^7 / Bandwidth) + Delay] * 256. Guide students step-by-step through computing bandwidth (in kbps to metric units) and delay for given interfaces. Emphasize each metric property and its role in path selection."
+    "title": "Domain Name System (DNS) and SNMP",
+    "math": "Hierarchical naming systems, Management Information Base (MIB)",
+    "note": "This lesson covers two critical IP services. It explains the role of DNS in translating human-readable domain names into IP addresses. It also provides an overview of SNMP (Simple Network Management Protocol) for collecting and organizing information about managed devices on IP networks."
   },
   {
     "n": 20,
-    "title": "EIGRP Metric Configuration and Analysis in Packet Tracer",
-    "math": "Metric Computation and Path Verification",
-    "note": "Practice EIGRP setup in Packet Tracer. Assign bandwidth and delay values to interfaces, view computed metrics, and verify route selection logic. Guide students in modifying interface parameters and observing metric-driven routing changes."
+    "title": "Access Control Lists (ACLs)",
+    "math": "Set theory, Boolean logic",
+    "note": "This lesson introduces ACLs as a tool for filtering traffic. It explains the difference between standard ACLs (which filter based on source IP) and extended ACLs (which filter based on source/destination IP, protocol, and port). The concept of an implicit 'deny any' at the end of an ACL is emphasized."
   },
   {
     "n": 21,
-    "title": "Binary Logic in Access Control and Wildcard Masks",
-    "math": "Binary Bitmask Matching",
-    "note": "Teach conversion of subnet masks to wildcard masks and demonstrate the binary logic behind access-list configuration. Provide exercises matching given IP addresses using wildcard masks and practice calculating which addresses match specific ACLs."
+    "title": "Layer 2 Security Features",
+    "math": "Access control",
+    "note": "This section covers security features implemented on switches to protect the network at Layer 2. It explains DHCP Snooping to prevent rogue DHCP servers, Dynamic ARP Inspection to prevent ARP spoofing, and Port Security to limit the number of MAC addresses allowed on a port."
   },
   {
     "n": 22,
-    "title": "Packet Tracer Lab: Implementing ACLs",
-    "math": "Wildcard Mask Calculation",
-    "note": "Build ACLs in Packet Tracer using standard and extended rules. Calculate and apply wildcard masks, test traffic flow, and interpret results with show commands. Each lab instance is independent of prior ACL configuration learning."
+    "title": "Wireless LAN Security Protocols",
+    "math": "Encryption standards",
+    "note": "This lesson focuses on securing wireless networks. It covers the different security protocols available, including WPA2 and the modern WPA3 standard. The configuration of Pre-Shared Key (PSK) authentication for a SOHO environment is demonstrated."
   },
   {
     "n": 23,
-    "title": "Switching and MAC Address Table Fundamentals",
-    "math": "MAC Table Calculations",
-    "note": "Teach how switches learn and maintain MAC address tables, how frames are forwarded, and the calculation logic for frame switching. Simulate MAC learning and aging in Packet Tracer, and read table entries for troubleshooting communication."
+    "title": "Introduction to Network Automation",
+    "math": "API principles",
+    "note": "This section introduces the modern shift towards network automation and programmability. It explains how automation can improve efficiency and reduce errors. The lesson contrasts traditional manual configuration with modern approaches using APIs and configuration management tools."
   },
   {
     "n": 24,
-    "title": "Assessment: Binary and Subnetting Math Quiz",
-    "math": "Mixed Math Review",
-    "note": "Provide a robust, focused assessment on binary to decimal, decimal to binary, subnet calculations, VLSM, and class/range recognition. Each question is designed so students can attempt it without prior modules, verifying independent mastery."
+    "title": "REST APIs and JSON",
+    "math": "RESTful architecture, JSON data structures",
+    "note": "This lesson provides an overview of REST APIs as a common way for applications to communicate over HTTP. It explains the basic principles of REST. It also introduces JSON (JavaScript Object Notation) as a lightweight, human-readable data format used for data exchange in modern APIs."
   },
   {
     "n": 25,
-    "title": "Packet Tracer Simulation Mode and Packet Flow Analysis",
-    "math": "None",
-    "note": "Instruct students on using Packet Tracer’s simulation mode to visualize and analyze packet flow, explore protocol stacks, and debug connectivity issues. Focus on protocol tracing and troubleshooting without math computations."
-  },
-  {
-    "n": 26,
-    "title": "Building and Assessing Custom Labs in Packet Tracer",
-    "math": "Lab IP Planning and Subnet Math",
-    "note": "Guide learners to design their own lab scenarios, including subnet planning, address assignment, and topology verification. Emphasize how to independently plan subnets and address blocks before configuration."
-  },
-  {
-    "n": 27,
-    "title": "Evaluating CCNA Skills with Practical and Theoretical Tasks",
-    "math": "Mixed, as applicable from prior modules",
-    "note": "Describe techniques for skill assessment in networking: simulation-based quizzes, hands-on configuration checks, and speed/accuracy in performing binary and subnet calculations. Labs and quizzes should reinforce that each tested item is independent of scenario context."
+    "title": "Configuration Management Tools",
+    "math": "Declarative configuration",
+    "note": "This final lesson provides a high-level overview of popular configuration management tools like Ansible, Puppet, and Chef. It explains how these tools allow network administrators to define the desired state of their network devices in code, and the tool then automatically enforces that state."
   }
 ]

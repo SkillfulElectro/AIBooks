@@ -25,156 +25,180 @@
   },
   {
     "n": 5,
+    "title": "Modern PHP: Type Hinting and Strict Types",
+    "math": "Type theory",
+    "note": "Introduce a key feature of modern PHP for writing robust code. Explain scalar type declarations (e.g., `int`, `float`, `string`) for function arguments and return values. Show how to enable strict mode with `declare(strict_types=1);` to prevent type coercion."
+  },
+  {
+    "n": 6,
     "title": "Strings and String Functions",
     "math": "String theory",
     "note": "This lesson focuses on working with strings in PHP. It covers string concatenation and introduces a variety of useful built-in string functions like `strlen()`, `str_replace()`, and `explode()`."
   },
   {
-    "n": 6,
+    "n": 7,
     "title": "Operators in PHP",
     "math": "Arithmetic",
     "note": "Covers the various operators in PHP, including arithmetic, assignment, comparison, increment/decrement, and logical operators. The lesson shows how to perform operations and make decisions within a PHP script."
   },
   {
-    "n": 7,
+    "n": 8,
     "title": "Conditional Statements: if/else/elseif",
     "math": "Boolean algebra",
     "note": "This section explains how to use `if`, `elseif`, and `else` statements to execute different blocks of code based on conditions. All examples are for server-side scripts processed by a PHP engine."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "The Switch Statement",
     "math": "Logic",
     "note": "Introduces the `switch` statement as an alternative to a series of `if` statements for comparing a variable against many different values."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Loops: while and do-while",
     "math": "Iteration",
     "note": "Covers the `while` loop, which executes a block of code as long as a condition is true, and the `do-while` loop, which always executes the block of code at least once."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Loops: for and foreach",
     "math": "Iteration",
     "note": "Explains the `for` loop for executing a block of code a specified number of times, and the `foreach` loop, which is specifically designed for iterating over the elements of an array."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "Functions in PHP",
     "math": "Functional programming",
     "note": "This lesson introduces functions for creating reusable blocks of code. It covers defining and calling functions, passing arguments, setting default argument values, and returning values from a function."
   },
   {
-    "n": 12,
+    "n": 13,
+    "title": "Anonymous Functions (Closures)",
+    "math": "Lambda calculus",
+    "note": "Introduce anonymous functions, or Closures, which are functions without a name. Explain their syntax and how they can be assigned to variables and passed as arguments to other functions. Cover the `use` keyword for inheriting variables from the parent scope."
+  },
+  {
+    "n": 14,
     "title": "PHP Arrays",
     "math": "Set theory",
     "note": "Explains the three types of arrays in PHP: indexed arrays (numeric index), associative arrays (named keys), and multidimensional arrays (arrays containing other arrays). The lesson covers creating and accessing array elements."
   },
   {
-    "n": 13,
+    "n": 15,
     "title": "Sorting Arrays",
     "math": "Sorting algorithms",
     "note": "Covers the various built-in functions for sorting arrays in PHP, such as `sort()`, `rsort()`, `asort()`, `ksort()`, and their reverse counterparts. The context is on ordering data stored in arrays."
   },
   {
-    "n": 14,
+    "n": 16,
     "title": "PHP Superglobals",
     "math": "Key-value pairs",
     "note": "This section introduces PHP's built-in superglobal variables, which are always accessible. It focuses on `$_GET`, `$_POST`, and `$_REQUEST` for collecting data submitted from HTML forms."
   },
   {
-    "n": 15,
+    "n": 17,
     "title": "Form Handling and Validation",
     "math": "Logic",
     "note": "Covers the complete process of handling HTML forms with PHP. The lesson demonstrates how to build a form, retrieve the submitted data using `$_POST`, and perform server-side validation to ensure the data is safe and correct."
   },
   {
-    "n": 16,
+    "n": 18,
     "title": "Include and Require",
     "math": "Set theory",
     "note": "This lesson explains how to include the content of one PHP file into another using `include` and `require`. It discusses the difference between them (`require` will produce a fatal error if the file is not found) and how they help in organizing code, especially for templates."
   },
   {
-    "n": 17,
+    "n": 19,
     "title": "File Handling in PHP",
     "math": "File I/O",
     "note": "Explains how to read from and write to files on the server using PHP. The lesson covers functions like `fopen()`, `fread()`, `fwrite()`, and `fclose()`, as well as simpler functions like `file_get_contents()` and `file_put_contents()`."
   },
   {
-    "n": 18,
+    "n": 20,
     "title": "File Uploads with PHP",
     "math": "File I/O",
     "note": "This lesson demonstrates how to create an HTML form that allows users to upload files to the server. It covers the PHP logic for handling the uploaded file, including validation and moving it to a permanent location."
   },
   {
-    "n": 19,
+    "n": 21,
     "title": "Cookies in PHP",
     "math": "Key-value pairs",
     "note": "Explains how to use cookies to store small pieces of information on the user's computer. The lesson covers setting a cookie with `setcookie()`, retrieving cookie data from the `$_COOKIE` superglobal, and deleting cookies."
   },
   {
-    "n": 20,
+    "n": 22,
     "title": "Sessions in PHP",
     "math": "State machines",
     "note": "This section covers PHP sessions for storing user information on the server for later use (e.g., user login status). It explains how to start a session, store and access session data in the `$_SESSION` superglobal, and destroy a session."
   },
   {
-    "n": 21,
+    "n": 23,
     "title": "Introduction to PHP and MySQL",
     "math": "Relational algebra",
     "note": "Provides an introduction to connecting a PHP application to a MySQL database. The lesson covers the two main PHP extensions for this: MySQLi (procedural and OOP) and PDO (PHP Data Objects), discussing the benefits of PDO for database portability."
   },
   {
-    "n": 22,
+    "n": 24,
     "title": "Connecting to MySQL with PDO",
     "math": "API design",
     "note": "Focuses on using the PDO extension to connect to a MySQL database. The lesson demonstrates how to establish a connection, handle connection errors, and execute a simple query from a PHP script."
   },
   {
-    "n": 23,
-    "title": "Prepared Statements and Security",
-    "math": "Logic",
-    "note": "Explains the importance of using prepared statements to prevent SQL injection attacks, one of the most common web security vulnerabilities. The lesson demonstrates how to use prepared statements with placeholders to securely execute queries with user-provided data using PDO."
+    "n": 25,
+    "title": "Security: Prepared Statements",
+    "math": "SQL injection prevention",
+    "note": "Explains the importance of using prepared statements to prevent SQL injection attacks. The lesson demonstrates how to use prepared statements with placeholders to securely execute queries with user-provided data using PDO."
   },
   {
-    "n": 24,
+    "n": 26,
+    "title": "Security: Password Hashing",
+    "math": "Cryptography",
+    "note": "A critical security lesson that explains why passwords must never be stored in plaintext. It demonstrates how to use PHP's built-in `password_hash()` function to create a secure hash and `password_verify()` to check a submitted password against the hash."
+  },
+  {
+    "n": 27,
     "title": "Fetching Data from the Database",
     "math": "Relational algebra",
     "note": "This lesson covers how to execute a `SELECT` query with PDO and fetch the results into a PHP variable. It demonstrates different fetch modes, such as fetching into an associative array or an object."
   },
   {
-    "n": 25,
+    "n": 28,
     "title": "Introduction to Object-Oriented PHP (OOP)",
     "math": "Object-oriented programming",
     "note": "This section introduces the basic concepts of Object-Oriented Programming in PHP. It covers defining classes and creating objects (instances), and the basic syntax for properties and methods."
   },
   {
-    "n": 26,
+    "n": 29,
     "title": "OOP: Access Modifiers and Inheritance",
-    "math": "Object-oriented programming",
+    "math": "Encapsulation and inheritance",
     "note": "Dives deeper into OOP by explaining access modifiers (`public`, `private`, `protected`) for encapsulation, and inheritance (`extends`) for creating subclasses that inherit properties and methods from a parent class."
   },
   {
-    "n": 27,
-    "title": "Error Handling in PHP",
-    "math": "Logic",
-    "note": "Covers different methods for handling errors in PHP, from simple `die()` statements to more advanced exception handling with `try...catch` blocks. The context is on creating robust and debuggable applications."
+    "n": 30,
+    "title": "OOP: Interfaces and Traits",
+    "math": "Polymorphism and code reuse",
+    "note": "Covers advanced OOP concepts. Interfaces define a contract that a class must implement, enabling polymorphism. Traits provide a mechanism for horizontal code reuse in single-inheritance languages like PHP, allowing you to mix in methods into classes."
   },
   {
-    "n": 28,
+    "n": 31,
+    "title": "Error Handling with Exceptions",
+    "math": "Exception handling",
+    "note": "Covers modern error handling in PHP using `try...catch` blocks. Explain that in modern PHP, most errors are thrown as `Error` exceptions, making this the primary way to handle problems robustly."
+  },
+  {
+    "n": 32,
     "title": "Working with JSON in PHP",
     "math": "Set theory",
     "note": "This lesson explains how to work with JSON data in PHP. It covers the `json_encode()` function for converting PHP arrays into JSON strings, and `json_decode()` for converting JSON strings back into PHP objects or arrays."
   },
   {
-    "n": 29,
+    "n": 33,
     "title": "Dependency Management with Composer",
     "math": "Graph theory",
     "note": "Introduces Composer as the standard dependency manager for PHP. The lesson explains how to use Composer to declare and manage project dependencies (third-party libraries) and for autoloading classes."
   },
   {
-    "n": 30,
+    "n": 34,
     "title": "Introduction to a PHP Framework (Laravel/Symfony)",
     "math": "Software architecture",
     "note": "This final section provides a high-level introduction to modern PHP frameworks like Laravel or Symfony. It explains the benefits of using a framework, such as the MVC pattern, routing, and ORM, for building complex, maintainable web applications."

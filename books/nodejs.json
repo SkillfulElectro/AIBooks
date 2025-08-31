@@ -19,222 +19,246 @@
   },
   {
     "n": 4,
-    "title": "The CommonJS Module System",
+    "title": "The CommonJS Module System (`require`)",
     "math": "Graph Theory (Module dependencies as a graph)",
-    "note": "Explain Node.js's built-in module system, CommonJS. Teach how to use the `require` function to import modules and `module.exports` to export functionality from a file, enabling code organization."
+    "note": "Explain Node.js's traditional module system, CommonJS. Teach how to use the `require` function to import modules and `module.exports` to export functionality from a file, enabling code organization."
   },
   {
     "n": 5,
+    "title": "Modern JavaScript: ES Modules (`import`/`export`)",
+    "math": "Set Theory (Module exports as a defined set)",
+    "note": "Introduce the official JavaScript standard for modules, ES Modules. Explain the `import` and `export` syntax. Show how to enable ESM in a Node.js project by setting `\"type\": \"module\"` in `package.json` or using the `.mjs` file extension."
+  },
+  {
+    "n": 6,
     "title": "The File System (FS) Module",
     "math": "State Machines (File open/read/close states)",
     "note": "Introduce the built-in `fs` module for interacting with the file system. Teach asynchronous file reading with `fs.readFile` and writing with `fs.writeFile`, using callback functions to handle results and errors."
   },
   {
-    "n": 6,
+    "n": 7,
     "title": "Synchronous vs Asynchronous Operations",
     "math": "Queueing Theory (Event loop vs call stack)",
     "note": "Contrast blocking (synchronous) and non-blocking (asynchronous) code in a Node.js context. Use `fs` module's sync methods (e.g., `readFileSync`) to demonstrate how blocking operations can halt the event loop."
   },
   {
-    "n": 7,
+    "n": 8,
     "title": "The Path Module",
     "math": "Coordinate Geometry (Path manipulation)",
     "note": "Teach how to use the built-in `path` module to handle file and directory paths in a cross-platform-compatible way. Cover essential methods like `path.join` to correctly construct paths."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "The HTTP Module",
     "math": "Network Theory (Client-server communication)",
     "note": "Demonstrate how to create a basic web server from scratch using Node.js's built-in `http` module. Cover the `http.createServer` method, handling request and response objects, and listening on a network port."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Introduction to NPM",
     "math": "Set Theory (Package dependencies as sets)",
     "note": "Explain the role of npm (Node Package Manager) as the world's largest software registry. Teach how to initialize a new Node.js project using `npm init` to create a `package.json` manifest file."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Installing and Using External Packages",
     "math": "Combinatorics (Dependency combinations)",
     "note": "Show how to install third-party packages from the npm registry using the `npm install` command. Demonstrate using a simple external utility package like `lodash` within a Node.js script."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "Understanding package.json and package-lock.json",
     "math": "Logic (Version constraints and resolution)",
     "note": "Detail the purpose of the `package.json` file, focusing on `dependencies` and `devDependencies`. Explain how the `package-lock.json` file ensures that installations are deterministic and repeatable."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Using NPM Scripts",
     "math": "Discrete Mathematics (Finite instruction sets)",
     "note": "Teach how to define and run custom commands using the `scripts` section of `package.json`. Create common scripts like `start` to execute the main application file with the `node` command."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Introduction to Express.js",
     "math": "Function Composition (Middleware chaining)",
     "note": "Introduce Express.js as a minimal and flexible Node.js web application framework. Teach how to install Express, set up a basic server, and handle a simple GET request to the root URL."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Routing with Express",
     "math": "Graph Theory (Routes as graph paths)",
     "note": "Explain how to define application endpoints (routes) for different HTTP methods like GET and POST using the Express framework. Cover route parameters (e.g., `/users/:id`) for handling dynamic URL segments."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Understanding Middleware",
     "math": "Calculus (Chain rule for functions)",
     "note": "Define what middleware is in the context of Express.js: functions that have access to the request and response objects. Teach how to write a simple custom logger middleware to run on every request."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "Serving Static Files",
     "math": "Set Theory (Mapping URL paths to file sets)",
     "note": "Teach how to serve static assets like HTML, CSS, images, and client-side JavaScript using the `express.static` built-in middleware within an Express.js application."
   },
   {
-    "n": 17,
+    "n": 18,
     "title": "Handling JSON Data",
     "math": "Data Structures (JSON as a tree)",
     "note": "Show how to configure an Express.js server to receive and parse incoming JSON data from POST requests. Use the `express.json()` middleware to make request body data available on `req.body`."
   },
   {
-    "n": 18,
+    "n": 19,
     "title": "The Event Loop Explained",
     "math": "Queueing Theory (Call stack and callback queue)",
     "note": "Provide a conceptual model of the Node.js event loop, call stack, and task queues. Use simple `setTimeout` examples to illustrate how asynchronous code is executed out of its original order."
   },
   {
-    "n": 19,
+    "n": 20,
     "title": "From Callbacks to Promises",
     "math": "Logic (Promise states: pending, fulfilled, rejected)",
     "note": "Explain the challenge of 'callback hell' in asynchronous JavaScript. Introduce Promises as an object representing the eventual completion or failure of an async operation, covering `.then()` and `.catch()`."
   },
   {
-    "n": 20,
+    "n": 21,
     "title": "Promise Chaining and Composition",
     "math": "Function Composition",
     "note": "Teach how to chain multiple asynchronous operations sequentially using returned Promises. Cover static methods like `Promise.all` for running multiple async operations in parallel within a Node.js application."
   },
   {
-    "n": 21,
+    "n": 22,
     "title": "Async/Await for Cleaner Code",
     "math": "Syntactic Algebra (Transforming promise chains)",
     "note": "Introduce `async` and `await` keywords as syntactic sugar over Promises. Refactor a Promise chain into an async function to write asynchronous Node.js code that reads like synchronous code."
   },
   {
-    "n": 22,
+    "n": 23,
     "title": "Error Handling with Async/Await",
     "math": "Logic (Try-catch exception handling)",
     "note": "Demonstrate how to handle errors from awaited Promises using standard JavaScript `try...catch` blocks within an `async` function. This provides a unified error handling model in Node.js."
   },
   {
-    "n": 23,
+    "n": 24,
     "title": "Introduction to NoSQL with MongoDB",
     "math": "Set Theory (Collections of documents)",
     "note": "Introduce MongoDB as a popular document-oriented NoSQL database. Explain its core concepts of collections, documents, and BSON. Set up a connection to a local or cloud-hosted MongoDB instance."
   },
   {
-    "n": 24,
+    "n": 25,
     "title": "Connecting to MongoDB with Mongoose",
     "math": "Object-Oriented Programming (Models as classes)",
     "note": "Teach how to use Mongoose, an Object Data Modeling (ODM) library, to connect a Node.js application to MongoDB. Cover creating a Schema to define data structure and a Model to interact with a collection."
   },
   {
-    "n": 25,
+    "n": 26,
     "title": "CRUD Operations with Mongoose",
     "math": "Relational Algebra (CRUD operations)",
     "note": "Demonstrate how to perform Create, Read, Update, and Delete (CRUD) operations on a MongoDB collection using Mongoose models within an Express.js application."
   },
   {
-    "n": 26,
+    "n": 27,
     "title": "Principles of REST",
     "math": "Information Architecture (Structuring API endpoints)",
     "note": "Explain the core architectural principles of REpresentational State Transfer (REST), including resources, statelessness, and the use of standard HTTP verbs (GET, POST, PUT, DELETE) and status codes."
   },
   {
-    "n": 27,
+    "n": 28,
     "title": "Building a RESTful API with Express",
     "math": "Graph Theory (API endpoint graph)",
     "note": "Structure an Express.js application to function as a RESTful API. Use `express.Router` to group related routes for a specific resource (e.g., 'products') into a separate module."
   },
   {
-    "n": 28,
+    "n": 29,
     "title": "API Versioning Strategies",
     "math": "Number Theory (Semantic versioning)",
     "note": "Discuss the importance of versioning APIs to allow for non-breaking changes. Teach how to implement URI versioning (e.g., `/api/v1/products`) within an Express.js application."
   },
   {
-    "n": 29,
+    "n": 30,
+    "title": "Introduction to GraphQL",
+    "math": "Graph Theory (Querying a data graph)",
+    "note": "Introduce GraphQL as an alternative to REST for building APIs. Explain its core concepts: a strongly typed schema, querying for exactly the data you need, and getting predictable results. Contrast it with REST's multiple-endpoint approach."
+  },
+  {
+    "n": 31,
+    "title": "Building a GraphQL API with Apollo Server",
+    "math": "Schema Definition Language",
+    "note": "Demonstrate how to build a basic GraphQL server. Use `apollo-server-express` to define a schema with types and queries, write 'resolver' functions to fetch the data, and integrate it into an Express application."
+  },
+  {
+    "n": 32,
     "title": "Storing Passwords Securely",
     "math": "Cryptography (Hashing and salting)",
     "note": "Explain why passwords must not be stored in plaintext. Teach how to use the `bcrypt` library in a Node.js application to hash and salt user passwords before storing them in a database."
   },
   {
-    "n": 30,
+    "n": 33,
     "title": "Authentication with JSON Web Tokens (JWT)",
     "math": "Cryptography (Digital signatures)",
     "note": "Introduce JSON Web Tokens (JWT) for stateless authentication. Teach how to create and sign a token upon successful user login and send it back to the client using the `jsonwebtoken` library in Node.js."
   },
   {
-    "n": 31,
+    "n": 34,
     "title": "Protecting Routes with JWT Middleware",
     "math": "Set Theory (Protected vs public route sets)",
     "note": "Write a custom Express.js middleware function to protect API routes. This middleware will verify the JWT from the `Authorization` header and grant or deny access to the route handler."
   },
   {
-    "n": 32,
+    "n": 35,
     "title": "Environment Variables for Security",
     "math": "Abstract Algebra (Variable substitution)",
     "note": "Explain the necessity of using environment variables to store secrets like database connection strings and JWT keys. Teach how to use the `dotenv` package to load these variables from a `.env` file during development."
   },
   {
-    "n": 33,
+    "n": 36,
     "title": "Unit Testing with Jest",
     "math": "Boolean Algebra (Test pass/fail states)",
     "note": "Introduce Jest as a popular testing framework for JavaScript. Teach how to write simple unit tests for pure functions in a Node.js project, covering `describe`, `it`, and basic assertions with `expect`."
   },
   {
-    "n": 34,
+    "n": 37,
     "title": "Testing Express API Endpoints",
     "math": "State Machines (Request/response cycles)",
     "note": "Demonstrate how to write integration tests for an Express.js API. Use the `supertest` library to programmatically make HTTP requests to endpoints and assert the status codes and bodies of the responses."
   },
   {
-    "n": 35,
+    "n": 38,
+    "title": "Production-Grade Logging",
+    "math": "Data Structures (Structured JSON logs)",
+    "note": "Explain the importance of structured, leveled logging for production applications. Introduce a library like Pino or Winston to replace `console.log` for machine-parseable logs that can be easily filtered and sent to logging services."
+  },
+  {
+    "n": 39,
     "title": "Working with Streams",
     "math": "Calculus (Data flow as a continuous function)",
     "note": "Introduce Node.js Streams for handling large I/O operations efficiently without consuming large amounts of memory. Demonstrate reading a large file using `fs.createReadStream` and piping it to a response."
   },
   {
-    "n": 36,
+    "n": 40,
     "title": "Real-time Communication with WebSockets",
     "math": "Graph Theory (Bidirectional communication channels)",
     "note": "Explain the concept of WebSockets for persistent, bi-directional communication. Use the `socket.io` library to build a simple real-time chat server and client in a Node.js application."
   },
   {
-    "n": 37,
+    "n": 41,
     "title": "Improving Performance with Worker Threads",
     "math": "Concurrency Theory",
     "note": "Explain how to use the `worker_threads` module to execute CPU-intensive JavaScript operations in a separate thread, preventing the main event loop from being blocked in a Node.js application."
   },
   {
-    "n": 38,
+    "n": 42,
     "title": "Introduction to TypeScript with Node.js",
     "math": "Type Theory",
     "note": "Introduce TypeScript as a typed superset of JavaScript. Show how to set up a Node.js project using TypeScript, configure the `tsconfig.json` file, and convert a simple Express.js server to use static types."
   },
   {
-    "n": 39,
+    "n": 43,
     "title": "Containerizing with Docker",
     "math": "Set Theory (Encapsulation of environments)",
     "note": "Introduce Docker for creating portable application containers. Teach how to write a basic `Dockerfile` for a Node.js application, including copying source code, installing dependencies, and specifying the run command."
   },
   {
-    "n": 40,
+    "n": 44,
     "title": "Deploying a Node.js Application",
     "math": "Network Topology (Cloud infrastructure)",
     "note": "Provide a high-level overview of deploying a containerized Node.js application. Discuss common cloud platforms like Heroku or AWS and the general steps involved in making an application publicly accessible."

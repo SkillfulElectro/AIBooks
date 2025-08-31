@@ -9,114 +9,126 @@
     "n": 2,
     "title": "Propositional Logic",
     "math": "Propositional logic",
-    "note": "This lesson introduces propositional logic as the study of propositions (statements that are either true or false). It covers the basic logical operators for combining propositions: Conjunction (AND), Disjunction (OR), and Negation (NOT)."
+    "note": "This lesson introduces propositional logic as the study of propositions (statements that are either true or false). It covers the basic logical operators for combining propositions: Conjunction (AND), Disjunction (OR), and Negation (NOT), and the use of truth tables."
   },
   {
     "n": 3,
-    "title": "Conditional Statements and Truth Tables",
-    "math": "Logical implication, biconditional",
-    "note": "This section expands on propositional logic by introducing conditional statements. It covers the Implication (if p, then q) and the Biconditional (p if and only if q). The concept of a Truth Table is detailed as a method for determining the truth value of any compound proposition."
+    "title": "Conditional Statements and Logical Equivalences",
+    "math": "Logical implication, logical equivalence",
+    "note": "This section introduces conditional statements (if-then) and biconditionals. It then explains logical equivalence, where two propositions have the same truth values, covering key laws like De Morgan's Laws for simplifying expressions."
   },
   {
     "n": 4,
-    "title": "Logical Equivalences",
-    "math": "Logical equivalence",
-    "note": "This lesson explains the concept of logical equivalence, where two compound propositions have the same truth value in all possible cases. It introduces key equivalences, such as De Morgan's Laws, which are crucial for manipulating and simplifying logical expressions."
+    "title": "Predicate Logic and Quantifiers",
+    "math": "Predicate logic, quantifiers",
+    "note": "This section introduces Predicate Logic, an extension of propositional logic that allows for variables. It covers the Universal Quantifier ('for all', ∀) and the Existential Quantifier ('there exists', ∃) to express the extent to which a predicate is true over a domain."
   },
   {
     "n": 5,
-    "title": "Predicate Logic and Quantifiers",
-    "math": "Predicate logic, quantifiers",
-    "note": "This section introduces Predicate Logic, an extension of propositional logic that allows for variables within statements. It covers the Universal Quantifier ('for all', ∀) and the Existential Quantifier ('there exists', ∃) to express the extent to which a predicate is true over a range of elements."
+    "title": "Introduction to Set Theory",
+    "math": "Set theory",
+    "note": "This lesson introduces the concept of a Set as an unordered collection of distinct objects. It covers the notation for defining sets, basic concepts like subsets and the power set, and operations like Union, Intersection, Difference, and Complement, often visualized with Venn diagrams."
   },
   {
     "n": 6,
-    "title": "Introduction to Set Theory",
-    "math": "Set theory",
-    "note": "This lesson introduces the concept of a Set as an unordered collection of distinct objects, called elements or members of the set. It covers the notation for defining sets and the concepts of set membership and equality."
+    "title": "Functions",
+    "math": "Functions",
+    "note": "This lesson defines a function as a mapping from a domain to a codomain where each input has exactly one output. It covers key properties like being injective (one-to-one), surjective (onto), or bijective (a one-to-one correspondence)."
   },
   {
     "n": 7,
-    "title": "Set Operations",
-    "math": "Union, Intersection, Difference, Complement",
-    "note": "This section details the fundamental operations that can be performed on sets. It covers the Union (all elements in either set), Intersection (elements in both sets), Difference (elements in one set but not the other), and Complement (elements not in the set). Venn diagrams are used for visualization."
+    "title": "Relations",
+    "math": "Binary relations",
+    "note": "This lesson introduces a binary relation as a more general concept than a function. It covers the key properties a relation can have: reflexivity, symmetry, and transitivity. It defines an equivalence relation as one that has all three properties."
   },
   {
     "n": 8,
-    "title": "Introduction to Functions",
-    "math": "Functions",
-    "note": "This lesson defines a function as a relation from a set of inputs (the domain) to a set of possible outputs (the codomain) where each input is related to exactly one output. The concepts of domain, codomain, and range are clarified."
+    "title": "Algorithms and Big-O Notation",
+    "math": "Asymptotic analysis (Big-O notation)",
+    "note": "This lesson introduces the concept of an algorithm as a step-by-step procedure. It then explains Big-O notation as a way to classify algorithms according to how their run time or space requirements grow as the input size grows, focusing on the worst-case complexity."
   },
   {
     "n": 9,
-    "title": "Types of Functions: Injective, Surjective, Bijective",
-    "math": "Injective, surjective, bijective functions",
-    "note": "This section categorizes functions based on their mapping properties. An Injective (one-to-one) function never maps distinct inputs to the same output. A Surjective (onto) function maps to every element of the codomain. A Bijective function is both injective and surjective."
+    "title": "Proof Techniques",
+    "math": "Mathematical proof",
+    "note": "This section introduces formal mathematical proofs. It covers the Direct Proof method, Proof by Contraposition, and Proof by Contradiction, providing a framework for constructing rigorous logical arguments."
   },
   {
     "n": 10,
-    "title": "Algorithms and Big-O Notation",
-    "math": "Asymptotic analysis (Big-O notation)",
-    "note": "This lesson introduces the concept of an algorithm as a step-by-step procedure for calculations. It then explains Big-O notation as a way to describe the limiting behavior of a function when the argument tends towards a particular value or infinity, used in computer science to classify algorithms according to how their run time or space requirements grow as the input size grows."
+    "title": "Mathematical Induction",
+    "math": "Mathematical induction",
+    "note": "This section introduces Mathematical Induction, a powerful proof technique used to prove that a property holds for all natural numbers. It involves two steps: the Base Case and the Inductive Step."
   },
   {
     "n": 11,
-    "title": "Proof Techniques: Direct Proof",
-    "math": "Mathematical proof",
-    "note": "This section introduces formal mathematical proofs. It details the Direct Proof method, which is used to prove conditional statements of the form 'if p, then q'. The method involves assuming that p is true and then using rules of inference and axioms to show that q must also be true."
+    "title": "Number Theory: Divisibility and Modular Arithmetic",
+    "math": "Number theory",
+    "note": "This lesson introduces Number Theory, the study of the integers. It covers the concepts of divisibility, the division algorithm, and modular arithmetic, which is fundamental to cryptography and computer science."
   },
   {
     "n": 12,
-    "title": "Proof Techniques: Proof by Contradiction",
-    "math": "Proof by contradiction",
-    "note": "This lesson covers Proof by Contradiction. To prove a proposition p, you assume that p is false and then show that this assumption leads to a logical contradiction. Since the assumption leads to a false conclusion, the original proposition p must be true."
+    "title": "Number Theory: Primes and GCDs",
+    "math": "Prime numbers, Euclidean algorithm",
+    "note": "This section covers prime numbers and the Fundamental Theorem of Arithmetic. It then introduces the Greatest Common Divisor (GCD) and explains the highly efficient Euclidean Algorithm for computing the GCD of two integers."
   },
   {
     "n": 13,
-    "title": "Mathematical Induction",
-    "math": "Mathematical induction",
-    "note": "This section introduces Mathematical Induction, a powerful proof technique used to prove that a property holds for all natural numbers. It involves two steps: the Base Case (proving the property holds for the first number) and the Inductive Step (proving that if the property holds for an arbitrary number k, it must also hold for k+1)."
+    "title": "Combinatorics: Counting Principles",
+    "math": "Combinatorics",
+    "note": "This lesson introduces combinatorics, the study of counting. It covers the two most basic principles: the Sum Rule and the Product Rule. It also introduces the Pigeonhole Principle, which states that if n items are put into m containers, with n > m, then at least one container must contain more than one item."
   },
   {
     "n": 14,
-    "title": "Combinatorics: The Sum and Product Rules",
-    "math": "Combinatorics",
-    "note": "This lesson introduces combinatorics, the study of counting. It covers the two most basic principles: the Sum Rule (if a task can be done in one of n1 ways or one of n2 ways, there are n1 + n2 ways to do the task) and the Product Rule (if a procedure can be broken down into two tasks, there are n1 * n2 ways to do the procedure)."
+    "title": "Combinatorics: Permutations and Combinations",
+    "math": "Permutations and combinations",
+    "note": "This section differentiates between two fundamental counting concepts. A Permutation is an arrangement of items where order matters. A Combination is a selection of items where order does not matter. The formulas for calculating each are derived and explained."
   },
   {
     "n": 15,
-    "title": "Permutations and Combinations",
-    "math": "Permutations and combinations",
-    "note": "This section differentiates between two fundamental counting concepts. A Permutation is an arrangement of items where order matters. A Combination is a selection of items where order does not matter. The formulas for calculating permutations and combinations are derived and explained."
+    "title": "Recurrence Relations",
+    "math": "Recurrence relations",
+    "note": "This lesson introduces recurrence relations as a way to define sequences recursively. It shows how to model problems like the Fibonacci sequence and discusses methods for finding an explicit formula for simple linear recurrence relations."
   },
   {
     "n": 16,
-    "title": "Introduction to Graph Theory",
-    "math": "Graph theory",
-    "note": "This lesson introduces a graph as a mathematical structure used to model pairwise relations between objects. A graph consists of 'vertices' (or nodes) and 'edges' that connect these vertices. The distinction between directed and undirected graphs is made."
+    "title": "Discrete Probability",
+    "math": "Probability theory",
+    "note": "This lesson covers the fundamentals of discrete probability theory. It introduces concepts like experiments, sample spaces, events, and the rules for calculating the probability of an event. The concepts of conditional probability and independence are also covered."
   },
   {
     "n": 17,
-    "title": "Graph Terminology",
-    "math": "Graph properties",
-    "note": "This section defines the basic terminology used in graph theory. It covers concepts like the degree of a vertex, adjacent vertices, paths, cycles, and connected graphs. Special types of graphs, like complete graphs and bipartite graphs, are also introduced."
+    "title": "Introduction to Graph Theory",
+    "math": "Graph theory",
+    "note": "This lesson introduces a graph as a mathematical structure used to model pairwise relations between objects. A graph consists of 'vertices' (nodes) and 'edges' connecting them. It covers graph terminology like degree, paths, and cycles, and the distinction between directed and undirected graphs."
   },
   {
     "n": 18,
-    "title": "Euler and Hamiltonian Paths",
-    "math": "Eulerian and Hamiltonian paths",
-    "note": "This lesson covers two famous problems in graph theory. An Eulerian path is a trail in a graph which visits every edge exactly once. A Hamiltonian path is a path that visits each vertex exactly once. The conditions for the existence of such paths are discussed."
+    "title": "Graph Representation and Connectivity",
+    "math": "Adjacency matrix, adjacency list",
+    "note": "This section covers how to represent graphs in a computer using adjacency matrices and adjacency lists. It also formally defines connectivity in both undirected and directed graphs (strongly connected components)."
   },
   {
     "n": 19,
-    "title": "Introduction to Trees",
-    "math": "Tree data structures",
-    "note": "This section defines a Tree as a special type of graph that is connected and has no cycles. Trees are one of the most important data structures in computer science. The concepts of a rooted tree, parent, child, and leaf nodes are introduced."
+    "title": "Euler and Hamiltonian Paths",
+    "math": "Eulerian and Hamiltonian paths",
+    "note": "This lesson covers two famous problems in graph theory. An Eulerian path visits every edge exactly once. A Hamiltonian path visits each vertex exactly once. The conditions for the existence of such paths are discussed."
   },
   {
     "n": 20,
+    "title": "Introduction to Trees",
+    "math": "Tree data structures",
+    "note": "This section defines a Tree as a special type of graph that is connected and acyclic. It covers the properties of trees and introduces concepts like rooted trees, parent-child relationships, and binary trees."
+  },
+  {
+    "n": 21,
     "title": "Tree Traversal",
     "math": "Tree traversal algorithms",
-    "note": "This final lesson explains algorithms for visiting all the nodes in a tree data structure. It covers the three main traversal methods for a binary tree: In-order traversal (left, root, right), Pre-order traversal (root, left, right), and Post-order traversal (left, right, root)."
+    "note": "This lesson explains algorithms for visiting all the nodes in a rooted tree. It covers the main traversal methods: pre-order, in-order, and post-order traversal, which are fundamental to many algorithms on trees."
+  },
+  {
+    "n": 22,
+    "title": "Formal Languages and Automata",
+    "math": "Automata theory",
+    "note": "This final lesson provides a bridge to the theory of computation. It introduces the concept of a formal language and a Finite State Machine (or Finite Automaton) as a simple model of computation used to recognize a class of languages called regular languages. The link to regular expressions is also noted."
   }
 ]

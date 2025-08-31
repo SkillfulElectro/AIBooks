@@ -56,13 +56,13 @@ window.addEventListener("DOMContentLoaded", () => {
     return selector ? selector.dataset.provider : "chatgpt";
   }
 
-  function makeQueryUrl(topic, mode, provider) {
+  function makeQueryUrl(topic, mode, provider, bookName) {
     const title = topic.title || "";
     const math = topic.math || "";
     const note = topic.note || "";
 
 
-    let query = `You are a teacher and going to teach '${title}'`;
+    let query = `You are a teacher and going to teach '${title}' in context of ${bookName}`;
     /* future updates
     if (math) {
       query += ` and you must teach '${math}' alongside it`;
@@ -385,7 +385,7 @@ window.addEventListener("DOMContentLoaded", () => {
       searchBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i> Search`;
       searchBtn.title = `Open ${providerName} search with this lesson note`;
       searchBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t, "search", provider))
+        openAndCheck(makeQueryUrl(t, "search", provider, bookName))
       );
 
       const studyBtn = document.createElement("button");
@@ -393,7 +393,7 @@ window.addEventListener("DOMContentLoaded", () => {
       studyBtn.innerHTML = `<i class="fa-solid fa-book-open"></i> Study`;
       studyBtn.title = `Open ${providerName} study session with this lesson note`;
       studyBtn.addEventListener("click", () =>
-        openAndCheck(makeQueryUrl(t, "study", provider))
+        openAndCheck(makeQueryUrl(t, "study", provider, bookName))
       );
 
       const copyBtn = document.createElement("button");

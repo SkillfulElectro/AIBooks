@@ -121,18 +121,30 @@
   },
   {
     "n": 21,
+    "title": "Debugging Bash Scripts",
+    "math": "Troubleshooting",
+    "note": "This lesson introduces essential techniques for debugging Bash scripts. It covers using `set -x` to trace command execution, `set -e` to exit on error, and how to check the exit code of the last command with the `$?` special variable."
+  },
+  {
+    "n": 22,
+    "title": "Scheduling Scripts with Cron",
+    "math": "Job scheduling",
+    "note": "This section explains how to automate the execution of scripts at specific times using the cron daemon. It covers the syntax of a crontab file and how to edit a user's crontab with the `crontab -e` command to schedule recurring tasks."
+  },
+  {
+    "n": 23,
     "title": "Finding Files",
     "math": "Search algorithms",
     "note": "Covers the powerful `find` command for searching for files and directories based on various criteria like name, size, modification time, and permissions. It also introduces `xargs` for acting on the search results."
   },
   {
-    "n": 22,
+    "n": 24,
     "title": "Archiving and Compression",
     "math": "Compression algorithms",
     "note": "This lesson explains how to create and extract archives using `tar` and how to compress files using `gzip` and `bzip2`. It demonstrates how to combine these tools to create compressed archive files (`.tar.gz`)."
   },
   {
-    "n": 23,
+    "n": 25,
     "title": "Customizing the Bash Environment",
     "math": "Logic",
     "note": "This final section covers how to customize the Bash environment by modifying startup files like `~/.bashrc` and `~/.bash_profile`. It explains how to create aliases for frequently used commands and how to customize the command prompt (`PS1`)."

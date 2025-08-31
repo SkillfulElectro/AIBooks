@@ -7,116 +7,116 @@
   },
   {
     "n": 2,
-    "title": "Types of Performance Testing",
-    "math": "Test classification",
-    "note": "This lesson explains the different categories of performance tests. It covers Load Testing (testing under expected load), Stress Testing (testing beyond normal capacity to find the breaking point), and Soak Testing (testing for extended periods to find memory leaks or performance degradation)."
+    "title": "What Is Apache JMeter?",
+    "math": "Testing tools",
+    "note": "This section introduces Apache JMeter as a 100% pure Java open-source application designed to load test functional behavior and measure performance. It explains its protocol-level testing capabilities and its primary use for web applications."
   },
   {
     "n": 3,
-    "title": "What Is Apache JMeter?",
-    "math": "Testing tools",
-    "note": "This section introduces Apache JMeter as a 100% pure Java open-source application designed to load test functional behavior and measure performance. It was originally designed for testing web applications but has since expanded to other test functions."
+    "title": "Installing JMeter and Java",
+    "math": "Software installation",
+    "note": "This lesson provides a step-by-step guide to installing JMeter. It explains the prerequisite of having a compatible Java Development Kit (JDK) installed and then shows how to download, unpack, and launch the JMeter GUI."
   },
   {
     "n": 4,
-    "title": "Installing JMeter",
-    "math": "Software installation",
-    "note": "This lesson provides a step-by-step guide to installing JMeter. It explains the prerequisite of having a compatible Java Development Kit (JDK) installed and then shows how to download and unpack the JMeter binaries and launch the JMeter GUI."
+    "title": "The JMeter GUI and Test Plan Structure",
+    "math": "User interface tour",
+    "note": "This section provides a guided tour of the JMeter GUI. It explains the core concept of a Test Plan, which is a hierarchical structure of test elements that defines the testing script."
   },
   {
     "n": 5,
-    "title": "The JMeter GUI: Test Plan and Workbench",
-    "math": "User interface tour",
-    "note": "This section provides a guided tour of the JMeter graphical user interface. It explains the two main root elements: the Test Plan (which contains the script that will be executed) and the Workbench (a temporary area for storing test elements)."
+    "title": "Core Element: Thread Group",
+    "math": "User simulation",
+    "note": "This lesson introduces the Thread Group, which simulates a group of users. Key properties are Number of Threads (users), Ramp-Up Period (how long to take to start all users), and Loop Count (how many times each user runs the test)."
   },
   {
     "n": 6,
-    "title": "Core Element: The Thread Group",
-    "math": "User simulation",
-    "note": "This lesson introduces the Thread Group, which is the starting point of any test plan. It explains how the Thread Group is configured to simulate a group of users. Key properties are Number of Threads (users), Ramp-Up Period (how long to take to start all users), and Loop Count (how many times to run the test)."
+    "title": "Core Element: Samplers",
+    "math": "Request generation",
+    "note": "This section explains Samplers, which perform the actual work by sending a request to a server. It introduces the most common sampler, the HTTP Request sampler, which is used to test web applications."
   },
   {
     "n": 7,
-    "title": "Core Element: Samplers",
-    "math": "Request generation",
-    "note": "This section explains Samplers, which perform the actual work in JMeter by sending a request to a server. It introduces the most common sampler, the HTTP Request sampler, which is used to test web applications."
+    "title": "Core Element: Listeners",
+    "math": "Data visualization and logging",
+    "note": "This lesson covers Listeners, which are used to view the results of the samplers. The 'View Results Tree' listener is highlighted as essential for debugging scripts, while 'Aggregate Report' is used for summarizing results."
   },
   {
     "n": 8,
-    "title": "Core Element: Listeners",
-    "math": "Data visualization and logging",
-    "note": "This lesson covers Listeners, which are used to view the results of the samplers. It explains that listeners can present the results in various formats, such as a tree, table, or graph. The 'View Results Tree' listener is highlighted as essential for debugging scripts."
-  },
-  {
-    "n": 9,
     "title": "Building and Running a Simple Web Test Plan",
     "math": "End-to-end test plan",
     "note": "This lesson provides a walkthrough of creating a basic test plan. It combines a Thread Group, an HTTP Request sampler configured to hit a website, and a View Results Tree listener. It demonstrates how to run the test and inspect the results."
   },
   {
-    "n": 10,
+    "n": 9,
     "title": "Assertions: Verifying the Response",
     "math": "Test assertions",
-    "note": "This section introduces Assertions, which are used to verify that the server response is correct. It explains that an assertion can check for things like a specific HTTP response code (e.g., 200 OK) or the presence of certain text in the response body. This turns a load test into a functional load test."
+    "note": "This section introduces Assertions, which are used to verify that the server response is correct. It explains how to use a Response Assertion to check for a specific HTTP response code (e.g., 200) or the presence of certain text in the response body."
+  },
+  {
+    "n": 10,
+    "title": "Correlation: Handling Dynamic Data with Post-Processors",
+    "math": "Dynamic data handling",
+    "note": "This lesson explains correlation, the process of extracting a dynamic value (like a session ID) from one response and using it in a subsequent request. It introduces Post-Processors, focusing on the Regular Expression Extractor for this task."
   },
   {
     "n": 11,
-    "title": "Correlation: Handling Dynamic Data",
-    "math": "Dynamic data handling",
-    "note": "This lesson explains one of the biggest challenges in performance testing: correlation. Modern web applications use dynamic values like session IDs that must be extracted from one server response and then submitted in a subsequent request. Manually handling this is crucial for realistic tests."
+    "title": "Using JMeter Functions and Variables",
+    "math": "Variable substitution",
+    "note": "A dedicated lesson on creating more dynamic test plans. It covers User-Defined Variables for storing static values and introduces some of JMeter's powerful built-in functions, like `__RandomString()` for generating test data and `__time()`."
   },
   {
     "n": 12,
-    "title": "Post-Processors: The Regular Expression Extractor",
-    "math": "Regular expressions",
-    "note": "This section introduces Post-Processors, which are executed after a sampler runs. It focuses on the Regular Expression Extractor, a powerful element used to parse the server response and extract a dynamic value (like a session ID) into a JMeter variable for later use."
-  },
-  {
-    "n": 13,
-    "title": "Using Extracted Variables",
-    "math": "Variable substitution",
-    "note": "This lesson demonstrates how to use a variable that was extracted by a Post-Processor. It shows the syntax `${variableName}` and how it can be used in a subsequent HTTP Request sampler to send the dynamic data back to the server."
-  },
-  {
-    "n": 14,
     "title": "Parameterization with CSV Data Set Config",
     "math": "Data-driven testing",
     "note": "This section explains how to make tests more realistic by using different data (like usernames and passwords) for each simulated user. It introduces the CSV Data Set Config element, which can read data from a text file and assign the values to JMeter variables."
   },
   {
-    "n": 15,
+    "n": 13,
     "title": "Logic Controllers",
     "math": "Control flow",
-    "note": "This lesson introduces Logic Controllers, which allow you to control the order in which samplers are executed. It provides an overview of common controllers like the Loop Controller (to run a sampler multiple times) and the If Controller (to run a sampler only if a condition is met)."
+    "note": "This lesson introduces Logic Controllers, which allow you to control the order in which samplers are executed. It provides an overview of common controllers like the Loop Controller and the If Controller."
+  },
+  {
+    "n": 14,
+    "title": "Timers: Simulating User 'Think Time'",
+    "math": "Wait states",
+    "note": "This section explains the importance of adding Timers to a test plan to simulate a real user's 'think time' between actions. This creates a more realistic load profile instead of sending requests as fast as possible."
+  },
+  {
+    "n": 15,
+    "title": "Pre-Processors and Post-Processors",
+    "math": "Request/response modification",
+    "note": "This lesson formalizes the concepts of elements that act on samplers. Pre-Processors (like a JSR223 PreProcessor) modify a request before it's sent. Post-Processors (like the Regular Expression Extractor) are used to handle the response."
   },
   {
     "n": 16,
-    "title": "Timers: Simulating User 'Think Time'",
-    "math": "Wait states",
-    "note": "This section explains the importance of adding Timers to a test plan. Without timers, JMeter would send requests as fast as possible. Timers pause the execution for a certain amount of time to simulate a real user's 'think time' between actions, resulting in a more realistic load."
+    "title": "Recording a Test Plan",
+    "math": "Test script recording",
+    "note": "This lesson demonstrates how to automatically generate a test plan by recording your actions in a web browser using the JMeter HTTP(S) Test Script Recorder, which works as a proxy server."
   },
   {
     "n": 17,
-    "title": "Recording a Test Plan with the HTTP(S) Test Script Recorder",
-    "math": "Test script recording",
-    "note": "This lesson demonstrates how to automatically generate a test plan by recording your actions in a web browser. It explains how the JMeter recorder works as a proxy server and walks through the steps of configuring your browser to use the JMeter proxy and recording a user session."
+    "title": "Running JMeter in Non-GUI Mode",
+    "math": "Command-line execution",
+    "note": "This crucial lesson explains that the JMeter GUI should only be used for creating and debugging tests. For running actual load tests, you must use the non-GUI (command-line) mode. It covers the syntax for running a test and saving the results to a JTL file."
   },
   {
     "n": 18,
-    "title": "Analyzing Results with Aggregate Listeners",
-    "math": "Statistical reporting",
-    "note": "This section covers listeners that provide statistical summaries of a test run. It explains the 'Summary Report' and 'Aggregate Report' listeners, which show key metrics like the average response time, median, standard deviation, and throughput for each sampler."
+    "title": "Generating the HTML Dashboard Report",
+    "math": "Report generation",
+    "note": "This lesson demonstrates how to generate a comprehensive HTML dashboard report from a JTL results file. This report is the standard way to analyze and share JMeter test results, providing charts and statistics on response times, throughput, and errors."
   },
   {
     "n": 19,
-    "title": "Running JMeter in Non-GUI Mode",
-    "math": "Command-line execution",
-    "note": "This crucial lesson explains that the JMeter GUI should only be used for creating and debugging tests. For running actual load tests, you must use the non-GUI (command-line) mode, which is far less resource-intensive. It covers the command-line syntax for running a test and saving the results to a JTL file."
+    "title": "Extending JMeter with Plugins",
+    "math": "Plugin architecture",
+    "note": "A lesson introducing the JMeter Plugins Manager as the standard way to add new functionality. It highlights some of the most popular plugins, such as the Concurrency Thread Group for more realistic load profiles and custom reporting listeners."
   },
   {
     "n": 20,
-    "title": "Generating the HTML Dashboard Report",
-    "math": "Report generation",
-    "note": "This final lesson demonstrates how to generate a comprehensive HTML dashboard report from a JTL results file. This report provides a wealth of information, including charts and statistics on response times, throughput, and errors, and is the standard way to analyze and share JMeter test results."
+    "title": "Distributed Load Testing",
+    "math": "Distributed systems",
+    "note": "A lesson explaining the concept and architecture of distributed testing. It covers the master/slave (or controller/worker) model, how to configure the remote nodes, and how to run a test from the master controller in non-GUI mode to generate a high load."
   }
 ]

@@ -3,133 +3,133 @@
     "n": 1,
     "title": "Introduction to Kotlin",
     "math": "Logic",
-    "note": "This section introduces Kotlin as a modern, statically typed programming language that runs on the Java Virtual Machine (JVM) and other platforms. It covers its key features, such as conciseness, null safety, and full interoperability with Java. The context is a general-purpose programming environment."
+    "note": "This section introduces Kotlin as a modern, statically typed language that runs on the JVM and other platforms. It covers its key features: conciseness, null safety, and full interoperability with Java. The setup of a JDK and IntelliJ IDEA is also covered."
   },
   {
     "n": 2,
-    "title": "Setting Up the Kotlin Environment",
-    "math": "Logic",
-    "note": "Provides a guide on how to set up a development environment for Kotlin. This includes installing the Java Development Kit (JDK) and setting up IntelliJ IDEA, the recommended IDE for Kotlin development, to create and run a new Kotlin project."
+    "title": "Basic Syntax: Variables, Types, and Control Flow",
+    "math": "Logic and Algebra",
+    "note": "Covers the fundamental syntax: read-only (`val`) and mutable (`var`) variables, basic types (Int, String, Boolean), and control flow expressions like `if` and the powerful `when` statement."
   },
   {
     "n": 3,
-    "title": "Basic Syntax: Variables and Types",
-    "math": "Algebra",
-    "note": "Explains the basic syntax of Kotlin. The lesson covers how to declare read-only (`val`) and mutable (`var`) variables, and Kotlin's powerful type inference system, which often makes explicit type declarations unnecessary."
+    "title": "Control Flow: Loops and Ranges",
+    "math": "Iteration",
+    "note": "Explains how to use `for` and `while` loops in Kotlin. It covers iterating over ranges (`1..5`), collections, and the syntax for standard `while` and `do-while` loops."
   },
   {
     "n": 4,
-    "title": "Basic Data Types",
-    "math": "Set theory",
-    "note": "This lesson introduces the fundamental data types in Kotlin, such as numbers (`Int`, `Double`), booleans, characters, and strings. It highlights that everything in Kotlin is an object, with no primitive types."
-  },
-  {
-    "n": 5,
-    "title": "Control Flow: if and when",
-    "math": "Boolean algebra",
-    "note": "Covers conditional control flow in Kotlin. The lesson explains that `if` can be used as an expression, and introduces the powerful `when` expression as a more flexible and readable alternative to a traditional `switch` statement."
-  },
-  {
-    "n": 6,
-    "title": "Control Flow: Loops",
-    "math": "Iteration",
-    "note": "Explains how to use `for` and `while` loops in Kotlin. The lesson covers iterating over ranges, collections, and the syntax for standard `while` and `do-while` loops."
-  },
-  {
-    "n": 7,
     "title": "Null Safety",
-    "math": "Logic",
+    "math": "Type theory",
     "note": "This section introduces one of Kotlin's most important features: its built-in null safety. It explains the difference between nullable (`String?`) and non-nullable (`String`) types and how to work safely with nullable values using operators like `?.` (safe call) and `?:` (Elvis operator)."
   },
   {
-    "n": 8,
+    "n": 5,
     "title": "Functions",
     "math": "Functional programming",
-    "note": "Explains how to declare and call functions in Kotlin. The lesson covers default arguments, named arguments for improved readability, and single-expression functions for writing concise function bodies."
+    "note": "Explains how to declare and call functions. The lesson covers default arguments, named arguments for improved readability, and single-expression functions for writing concise function bodies."
   },
   {
-    "n": 9,
+    "n": 6,
     "title": "Classes and Objects",
     "math": "Object-oriented programming",
-    "note": "This lesson introduces the basics of object-oriented programming in Kotlin. It covers how to declare classes, define primary and secondary constructors, create instances (objects), and work with properties."
+    "note": "This lesson introduces the basics of OOP in Kotlin. It covers how to declare classes with primary constructors, define properties, and create instances (objects)."
   },
   {
-    "n": 10,
-    "title": "Inheritance",
+    "n": 7,
+    "title": "Inheritance and Interfaces",
     "math": "Object-oriented programming",
-    "note": "Explains how to use inheritance to create subclasses. The lesson covers the `open` keyword, which is required for classes and methods that can be extended or overridden, and the syntax for calling superclass implementations."
+    "note": "Explains how to use inheritance (`open` keyword) and implement interfaces. It covers method overriding and the difference between abstract classes and interfaces."
   },
   {
-    "n": 11,
-    "title": "Interfaces",
-    "math": "Object-oriented programming",
-    "note": "Covers interfaces in Kotlin for defining contracts that classes can implement. The lesson explains that interfaces can contain abstract methods as well as methods with default implementations."
-  },
-  {
-    "n": 12,
+    "n": 8,
     "title": "Data Classes",
     "math": "Data structures",
     "note": "This section introduces data classes, a concise way to create classes whose primary purpose is to hold data. It explains the useful functions the compiler automatically generates, such as `equals()`, `hashCode()`, `toString()`, and `copy()`."
   },
   {
-    "n": 13,
+    "n": 9,
     "title": "Sealed Classes and Enums",
     "math": "Set theory",
     "note": "Explains `enum` classes for type-safe sets of constants, and `sealed` classes for representing restricted class hierarchies. Sealed classes are particularly useful when used with `when` expressions for exhaustive checks."
   },
   {
-    "n": 14,
+    "n": 10,
     "title": "Objects and Companion Objects",
     "math": "Object-oriented programming",
     "note": "This lesson covers object declarations for creating singletons, and companion objects for defining methods and properties that are tied to a class rather than an instance, similar to static members in other languages."
   },
   {
-    "n": 15,
+    "n": 11,
     "title": "Collections: List, Set, Map",
     "math": "Set theory",
-    "note": "Covers the standard collection types in Kotlin: `List`, `Set`, and `Map`. The lesson emphasizes the important distinction between read-only and mutable collection interfaces."
+    "note": "Covers the standard collection types in Kotlin: `List`, `Set`, and `Map`. The lesson emphasizes the important distinction between read-only and mutable collection interfaces (e.g., `List` vs. `MutableList`)."
   },
   {
-    "n": 16,
+    "n": 12,
     "title": "Higher-Order Functions and Lambdas",
     "math": "Functional programming",
-    "note": "This lesson introduces higher-order functions (functions that take other functions as parameters or return them) and lambda expressions. It demonstrates how to use them with collection functions like `filter`, `map`, and `forEach` for powerful, functional-style data processing."
+    "note": "This lesson introduces higher-order functions (functions that take other functions as parameters or return them) and lambda expressions. It demonstrates how to use them with collection functions like `filter`, `map`, and `forEach`."
   },
   {
-    "n": 17,
+    "n": 13,
     "title": "Extension Functions",
     "math": "Functional programming",
-    "note": "Explains extension functions, a powerful feature in Kotlin that allows you to add new functionality to existing classes without having to inherit from them. This is useful for creating clean and readable APIs."
+    "note": "Explains extension functions, a powerful feature that allows you to add new functionality to existing classes without having to inherit from them. This is useful for creating clean and readable APIs."
   },
   {
-    "n": 18,
-    "title": "Scope Functions",
+    "n": 14,
+    "title": "Scope Functions: `let`, `run`, `with`, `apply`, `also`",
     "math": "Logic",
-    "note": "This section covers Kotlin's standard library scope functions: `let`, `run`, `with`, `apply`, and `also`. It explains how these functions can be used to execute a block of code within the context of an object, making code more concise and fluent."
+    "note": "This section covers Kotlin's standard library scope functions. It explains how these functions can be used to execute a block of code within the context of an object, making code more concise and fluent."
   },
   {
-    "n": 19,
+    "n": 15,
     "title": "Generics",
-    "math": "Set theory",
+    "math": "Parametric polymorphism",
     "note": "Explains how to use generics to create classes, interfaces, and functions that can work with any type. The lesson covers the basics of defining generic components and the concepts of variance (`in`, `out`) for type safety."
   },
   {
-    "n": 20,
+    "n": 16,
+    "title": "Delegation",
+    "math": "Composition over inheritance",
+    "note": "A dedicated lesson on Kotlin's first-class support for the delegation pattern. It covers both class delegation (using the `by` keyword to forward interface implementations) and delegated properties (for reusable property logic, like `lazy`)."
+  },
+  {
+    "n": 17,
+    "title": "Type Aliases and Inline Classes",
+    "math": "Type system",
+    "note": "A lesson on two advanced type system features. Type aliases create alternative names for existing types for better readability. Inline classes (`value` classes) create lightweight, type-safe wrappers around a single value without allocation overhead."
+  },
+  {
+    "n": 18,
+    "title": "Exception Handling",
+    "math": "Error handling",
+    "note": "This lesson covers how to handle errors and exceptions in Kotlin using `try-catch-finally` blocks. It explains that all exceptions in Kotlin are unchecked, meaning the compiler does not force you to catch them."
+  },
+  {
+    "n": 19,
     "title": "Introduction to Coroutines",
     "math": "Concurrency",
-    "note": "Provides an introduction to coroutines, Kotlin's recommended solution for asynchronous programming. The lesson explains how coroutines can simplify asynchronous code, making it look sequential, and covers basic concepts like `launch`, `async`, and `suspend` functions."
+    "note": "Provides an introduction to coroutines, Kotlin's recommended solution for asynchronous programming. The lesson explains how coroutines can simplify asynchronous code and covers basic concepts like `launch`, `async`, and `suspend` functions."
+  },
+  {
+    "n": 20,
+    "title": "Advanced Coroutines: Structured Concurrency and Flows",
+    "math": "Asynchronous streams",
+    "note": "A lesson that builds on the coroutine introduction. It explains the principles of Structured Concurrency (scopes and jobs) and introduces Flow, the coroutine-based solution for handling asynchronous streams of data."
   },
   {
     "n": 21,
-    "title": "Exception Handling",
-    "math": "Logic",
-    "note": "This lesson covers how to handle errors and exceptions in Kotlin using `try-catch-finally` blocks. It explains that all exceptions in Kotlin are unchecked, meaning the compiler does not force you to catch them."
+    "title": "Annotations and Reflection",
+    "math": "Metaprogramming",
+    "note": "A lesson introducing how to create custom annotations and how to use Kotlin's reflection APIs (`kotlin-reflect`) to inspect class properties and methods at runtime, a powerful tool for building frameworks and libraries."
   },
   {
     "n": 22,
     "title": "Java Interoperability",
-    "math": "Logic",
-    "note": "This section demonstrates the seamless, 100% interoperability between Kotlin and Java. It explains how to call Java code from Kotlin and vice versa, allowing for gradual adoption of Kotlin in existing Java projects and the use of Java libraries."
+    "math": "Interoperability",
+    "note": "This section demonstrates the seamless, 100% interoperability between Kotlin and Java. It explains how to call Java code from Kotlin and vice versa, allowing for gradual adoption of Kotlin in existing Java projects."
   },
   {
     "n": 23,
@@ -139,8 +139,8 @@
   },
   {
     "n": 24,
-    "title": "Introduction to Android Development with Kotlin",
-    "math": "Mobile development",
-    "note": "This final section provides a brief introduction to using Kotlin for Android app development, as it is now the official language recommended by Google. It shows a simple 'Hello World' example within the Android Studio environment to demonstrate the synergy."
+    "title": "Kotlin Multiplatform (KMP)",
+    "math": "Cross-platform development",
+    "note": "An introduction to the concept of KMP. It explains how Kotlin can be used to write shared business logic that can be compiled for multiple platforms (e.g., Android, iOS, JVM, Web), reducing code duplication while maintaining native UI performance."
   }
 ]

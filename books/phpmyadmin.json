@@ -115,6 +115,24 @@
   },
   {
     "n": 20,
+    "title": "Advanced: The Designer View",
+    "math": "Visual database design",
+    "note": "This lesson introduces the 'Designer' feature. It provides a graphical interface where you can visually create, modify, and display the foreign key relationships between your tables, helping you to better understand and design your database schema."
+  },
+  {
+    "n": 21,
+    "title": "Advanced: Managing Routines, Triggers, and Events",
+    "math": "Database programming",
+    "note": "This section covers the tabs for managing advanced database objects. It demonstrates how to use the GUI to create and edit Stored Procedures/Routines, define Triggers that execute on table events (INSERT, UPDATE, DELETE), and schedule Events for future execution."
+  },
+  {
+    "n": 22,
+    "title": "Advanced: Monitoring Server Status",
+    "math": "Real-time monitoring",
+    "note": "This lesson gives a tour of the 'Status' tab, a powerful dashboard for monitoring the database server in real-time. It explains how to interpret the live traffic graphs and key server variables to diagnose performance issues or understand server load."
+  },
+  {
+    "n": 23,
     "title": "Securing Your phpMyAdmin Installation",
     "math": "Web application security",
     "note": "This final lesson discusses essential security practices for a phpMyAdmin installation. Because it provides powerful access to the database, it is a common target for attackers. The lesson covers best practices, such as protecting the installation directory with an additional layer of authentication."

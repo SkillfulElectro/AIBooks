@@ -103,42 +103,60 @@
   },
   {
     "n": 18,
-    "title": "Introduction to Data Visualization with `ggplot2`",
+    "title": "Working with Strings using `stringr`",
+    "math": "String manipulation",
+    "note": "This lesson introduces the `stringr` package, the Tidyverse's approach to string manipulation. It covers common tasks like detecting, extracting, and replacing patterns with a consistent and easy-to-use set of functions."
+  },
+  {
+    "n": 19,
+    "title": "Working with Dates and Times using `lubridate`",
+    "math": "Date/time manipulation",
+    "note": "Introduce the `lubridate` package for making date-time manipulation in R easier. This lesson covers parsing date-time data from strings, extracting components (like year or month), and performing arithmetic with time intervals."
+  },
+  {
+    "n": 20,
+    "title": "Functional Programming with `purrr`",
+    "math": "Functional programming",
+    "note": "This lesson introduces the `purrr` package as a powerful alternative to loops. It focuses on the `map()` family of functions, which apply a function to each element of a list or vector and return the results in a structured way."
+  },
+  {
+    "n": 21,
+    "title": "Data Visualization with `ggplot2`",
     "math": "Data visualization",
     "note": "Provides an introduction to `ggplot2`, the premier data visualization package in R. The lesson explains the 'grammar of graphics' and how to build plots layer by layer, starting with aesthetics (`aes()`) and geoms (e.g., `geom_point`)."
   },
   {
-    "n": 19,
+    "n": 22,
     "title": "Common Geoms in `ggplot2`",
     "math": "Data visualization",
     "note": "Explores some of the most common geometric objects (geoms) in `ggplot2` for creating different types of plots, such as `geom_bar` for bar charts, `geom_line` for line charts, and `geom_boxplot` for box plots."
   },
   {
-    "n": 20,
+    "n": 23,
     "title": "Customizing `ggplot2` Plots",
     "math": "Data visualization",
     "note": "This section delves into customizing `ggplot2` plots. It covers how to change titles, labels, colors, and themes to create publication-quality graphics in R."
   },
   {
-    "n": 21,
+    "n": 24,
     "title": "Basic Statistics in R",
     "math": "Statistics",
     "note": "Explains how to perform basic statistical analysis in R. The lesson covers descriptive statistics (mean, median, standard deviation) and basic hypothesis testing, such as t-tests and chi-squared tests, using built-in R functions."
   },
   {
-    "n": 22,
+    "n": 25,
     "title": "Linear Regression",
     "math": "Linear regression",
     "note": "This lesson introduces how to build and interpret linear regression models in R using the `lm()` function. It covers model fitting, examining the model summary with `summary()`, and making predictions."
   },
   {
-    "n": 23,
+    "n": 26,
     "title": "Introduction to R Markdown",
     "math": "Literate programming",
     "note": "Introduces R Markdown as a framework for creating dynamic, reproducible reports that combine code, its output (like plots and tables), and narrative text. The lesson shows how to create a simple report and render it to HTML."
   },
   {
-    "n": 24,
+    "n": 27,
     "title": "Building an Interactive Web App with Shiny",
     "math": "User interface design",
     "note": "This final section provides a brief introduction to the Shiny package for building interactive web applications directly from R. It covers the basic structure of a Shiny app, with a UI (user interface) and a server component, to share data analysis results interactively."

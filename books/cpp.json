@@ -47,7 +47,7 @@
     "math": "Boolean Algebra",
     "note": "Introduce operators for making comparisons and combining logical expressions. Cover relational operators (`==`, `!=`, `<`, `>`, `<=`, `>=`) and logical operators (`&&` AND, `||` OR, `!` NOT). Explain short-circuit evaluation for `&&` and `||`."
   },
-{
+  {
     "n": 9,
     "title": "Bitwise Operators",
     "math": "Binary Arithmetic, Boolean Algebra",
@@ -109,21 +109,21 @@
   },
   {
     "n": 19,
-    "title": "Function Parameters: Pass-by-Value",
-    "math": "Algebra (variables and substitution)",
-    "note": "Explain the default parameter-passing mechanism in C++: pass-by-value. Demonstrate that when an argument is passed by value, the function receives a copy, and any modifications inside the function do not affect the original argument."
+    "title": "Function Parameters: Pass-by-Value vs. Pass-by-Reference",
+    "math": "Set Theory (mappings and relations)",
+    "note": "Explain and contrast the two primary parameter-passing mechanisms. Pass-by-value (`T`) creates a copy. Pass-by-reference (`T&`) provides direct access to the original argument, avoiding copies. Discuss using `const T&` for efficient, read-only access."
   },
   {
     "n": 20,
-    "title": "Function Parameters: Pass-by-Reference",
-    "math": "Set Theory (mappings and relations)",
-    "note": "Introduce pass-by-reference using the `&` symbol. Explain that this allows a function to directly access and modify the original argument, avoiding a potentially expensive copy. Discuss using `const` references for efficiency without modification."
-  },
-  {
-    "n": 21,
     "title": "Function Overloading",
     "math": "Polymorphism (ad-hoc)",
     "note": "Teach how to define multiple functions with the same name but different parameter lists (either different types or a different number of parameters). Explain how the compiler resolves which function to call based on the arguments provided."
+  },
+  {
+    "n": 21,
+    "title": "Type Inference with auto",
+    "math": "Logic (type inference systems)",
+    "note": "Introduce the `auto` keyword from modern C++ for automatic type deduction. Explain that it tells the compiler to deduce the type of a variable from its initializer, reducing verbosity, especially with complex types like iterators."
   },
   {
     "n": 22,
@@ -133,204 +133,228 @@
   },
   {
     "n": 23,
-    "title": "Pointers: Address-of and Dereference",
+    "title": "Pointers and References",
     "math": "Discrete Mathematics (references, addresses)",
-    "note": "Introduce pointers as variables that store memory addresses. Explain the address-of operator (`&`) to get a variable's address and the dereference operator (`*`) to access the value at a stored address. Initialize pointers with `nullptr`."
+    "note": "Introduce pointers (`*`) as variables that store memory addresses and references (`&`) as aliases to existing variables. Explain the address-of (`&`) and dereference (`*`) operators. Emphasize that references cannot be null or reseated."
   },
   {
     "n": 24,
     "title": "Dynamic Memory with new and delete",
     "math": "Resource Management",
-    "note": "Teach how to allocate memory on the heap at runtime using the `new` keyword and how to deallocate it using the `delete` keyword to prevent memory leaks. Cover both single objects (`delete`) and arrays of objects (`delete[]`)."
+    "note": "Teach how to allocate memory on the heap at runtime using the `new` keyword and how to deallocate it using the `delete` keyword. Emphasize that this manual management is error-prone and serves as motivation for smart pointers."
   },
   {
     "n": 25,
-    "title": "C-Style Arrays",
-    "math": "Linear Algebra (vectors and matrices)",
-    "note": "Introduce C-style, fixed-size arrays as contiguous blocks of memory holding elements of the same type. Explain their declaration syntax, index-based access, and their tendency to decay into pointers."
-  },
-  {
-    "n": 26,
-    "title": "References vs. Pointers",
-    "math": "Logic (aliases vs. indirections)",
-    "note": "Compare and contrast references (`&`) and pointers (`*`). Explain that references are aliases for existing variables that cannot be null and cannot be reseated, while pointers are separate variables holding an address that can be null or changed."
-  },
-  {
-    "n": 27,
     "title": "User-Defined Types with struct",
     "math": "Set Theory (Cartesian products)",
     "note": "Teach how to group related variables into a single unit using the `struct` keyword. Demonstrate how to define a `struct`, create instances (objects) of it, and access its members using the dot operator (`.`)."
   },
   {
-    "n": 28,
+    "n": 26,
     "title": "Introduction to std::string",
     "math": "Formal Language Theory (strings)",
     "note": "Introduce `std::string` from the `<string>` header as the modern, safe, and powerful way to handle text in C++. Demonstrate its basic usage, including initialization, concatenation with `+`, and getting its length with the `.length()` method."
   },
   {
-    "n": 29,
+    "n": 27,
     "title": "Introduction to std::vector",
     "math": "Sequence and Series",
     "note": "Introduce `std::vector` from the `<vector>` header as a dynamic, automatically resizing array. Show how to create a vector, add elements with `.push_back()`, access elements with `[]` or `.at()`, and get its size with `.size()`."
   },
   {
-    "n": 30,
+    "n": 28,
     "title": "Iterators for STL Containers",
     "math": "Discrete Mathematics (graph traversal)",
     "note": "Explain iterators as a generalization of pointers that allow traversal of STL containers. Demonstrate how to get iterators using `.begin()` and `.end()` on a `std::vector` and use them in a traditional `for` loop to access elements."
   },
   {
-    "n": 31,
+    "n": 29,
     "title": "Introduction to STL Algorithms",
     "math": "Algorithm Analysis (complexity)",
     "note": "Showcase the power of the `<algorithm>` header by demonstrating a few common algorithms like `std::sort`, `std::find`, and `std::count`. Explain how they operate on ranges defined by pairs of iterators."
   },
   {
-    "n": 32,
+    "n": 30,
     "title": "From struct to class",
     "math": "Abstract Algebra (structures with operations)",
     "note": "Transition from C-style data structures to object-oriented programming. Explain that a `class` in C++ is nearly identical to a `struct`, with the key difference being the default member access: `private` for `class`, `public` for `struct`."
   },
   {
-    "n": 33,
+    "n": 31,
     "title": "Encapsulation: public and private",
     "math": "Information Hiding Principles",
     "note": "Introduce the core OOP principle of encapsulation. Use the `public` and `private` access specifiers to control which members of a class are accessible from the outside, separating interface from implementation."
   },
   {
-    "n": 34,
-    "title": "Constructors for Object Initialization",
-    "math": "Logic (axioms of object state)",
-    "note": "Teach how to define constructors, special member functions that are called automatically when an object of a class is created. Cover the default constructor (no arguments) and parameterized constructors for custom initialization."
-  },
-  {
-    "n": 35,
-    "title": "Destructors for Object Cleanup",
+    "n": 32,
+    "title": "Constructors and Destructors",
     "math": "Resource Management",
-    "note": "Introduce destructors, special member functions (e.g., `~MyClass()`) that are called automatically when an object's lifetime ends. Explain their use for releasing resources like dynamically allocated memory."
+    "note": "Teach how to define constructors for object initialization and destructors (`~MyClass()`) for cleanup. Cover default, parameterized, and copy constructors. Explain their role in managing an object's lifecycle."
   },
   {
-    "n": 36,
+    "n": 33,
     "title": "The `this` Pointer",
     "math": "Set Theory (self-reference)",
     "note": "Explain that within a non-static member function, the `this` keyword is a pointer to the current object instance. Demonstrate its use for disambiguating between member variables and parameters with the same name."
   },
   {
-    "n": 37,
+    "n": 34,
     "title": "Static Members",
     "math": "Set Theory (class-level vs. instance-level properties)",
     "note": "Introduce `static` member variables and functions. Explain that static members belong to the class itself, not to any single object instance. All objects of the class share the same static member variable."
   },
   {
-    "n": 38,
+    "n": 35,
     "title": "Inheritance: Base and Derived Classes",
     "math": "Set Theory (subsets and supersets)",
     "note": "Introduce the OOP principle of inheritance, which allows a new class (derived) to be based on an existing class (base). Explain the `class Derived : public Base` syntax and how the derived class inherits members from the base."
   },
   {
-    "n": 39,
+    "n": 36,
     "title": "Polymorphism with virtual Functions",
     "math": "Type Theory (subtyping)",
     "note": "Introduce runtime polymorphism. Explain that marking a base class function with the `virtual` keyword allows derived classes to override it. When called through a base class pointer or reference, the correct derived class version will be executed."
   },
   {
-    "n": 40,
+    "n": 37,
     "title": "Abstract Classes and Pure Virtual Functions",
     "math": "Abstract Algebra (abstract structures)",
     "note": "Teach how to create an interface by defining an abstract class. This is done by declaring at least one pure virtual function (e.g., `virtual void func() = 0;`). Abstract classes cannot be instantiated and must be implemented by derived classes."
   },
   {
-    "n": 41,
+    "n": 38,
     "title": "Operator Overloading",
     "math": "Abstract Algebra (operations on user-defined sets)",
     "note": "Explain how to define custom behavior for C++ operators when used with objects of a class. Demonstrate by overloading an arithmetic operator like `+` for a custom math vector class."
   },
   {
-    "n": 42,
-    "title": "The Rule of Three/Five",
+    "n": 39,
+    "title": "The Rule of Three/Five/Zero",
     "math": "Resource Management",
-    "note": "Explain the copy control rule. If you manually define a destructor, copy constructor, or copy assignment operator (Rule of Three), you should consider defining all three. In modern C++, this extends to the move constructor and move assignment operator (Rule of Five)."
+    "note": "Explain the copy control rule. If you manually manage a resource, you need to define the destructor, copy constructor, and copy assignment operator (Rule of Three). With modern C++, this extends to move semantics (Rule of Five). The Rule of Zero states that classes that don't manage resources shouldn't need any of these."
+  },
+  {
+    "n": 40,
+    "title": "Move Semantics and Rvalue References",
+    "math": "Resource Management",
+    "note": "Introduce rvalue references (`&&`) and `std::move`. Explain how they enable move semantics, an optimization that transfers ownership of resources (like heap memory) from one object to another instead of performing a deep, expensive copy."
+  },
+  {
+    "n": 41,
+    "title": "RAII and Exception Safety",
+    "math": "Resource Management",
+    "note": "Introduce Resource Acquisition Is Initialization (RAII) as the fundamental C++ idiom for managing resources and writing exception-safe code. Explain how objects (like smart pointers or file streams) automatically clean up their resources when they go out of scope, regardless of how scope is exited (normal return or exception)."
+  },
+  {
+    "n": 42,
+    "title": "Smart Pointers: std::unique_ptr",
+    "math": "Resource Management (RAII)",
+    "note": "Introduce `std::unique_ptr` from the `<memory>` header as a smart pointer that provides exclusive ownership of a dynamically allocated object. It automatically calls `delete` when it goes out of scope, preventing memory leaks. It is a lightweight, zero-cost abstraction."
   },
   {
     "n": 43,
-    "title": "Type Inference with auto",
-    "math": "Logic (type inference systems)",
-    "note": "Introduce the `auto` keyword from modern C++ for automatic type deduction. Explain that it tells the compiler to deduce the type of a variable from its initializer, reducing verbosity and improving code readability."
+    "title": "Smart Pointers: std::shared_ptr",
+    "math": "Graph Theory (reference counting)",
+    "note": "Introduce `std::shared_ptr` as a smart pointer for managing shared ownership of a resource. Explain how it uses a reference count to keep the object alive until the last `shared_ptr` pointing to it is destroyed. Discuss its overhead and use cases."
   },
   {
     "n": 44,
-    "title": "Lambda Expressions",
-    "math": "Lambda Calculus",
-    "note": "Teach the syntax for creating anonymous, inline functions using lambda expressions. Cover the basic syntax `[capture](params){body}` and demonstrate their common use with STL algorithms like `std::for_each` or `std::find_if`."
-  },
-  {
-    "n": 45,
-    "title": "Move Semantics and Rvalue References",
-    "math": "Resource Management",
-    "note": "Introduce rvalue references (`&&`) and `std::move`. Explain how they enable move semantics, an optimization that transfers ownership of resources (like heap memory) from one object to another instead of performing a deep copy."
-  },
-  {
-    "n": 46,
-    "title": "Smart Pointers: std::unique_ptr",
-    "math": "Resource Management (RAII)",
-    "note": "Introduce `std::unique_ptr` from the `<memory>` header as a smart pointer that provides exclusive ownership of a dynamically allocated object. It automatically calls `delete` when it goes out of scope, preventing memory leaks."
-  },
-  {
-    "n": 47,
-    "title": "Smart Pointers: std::shared_ptr",
-    "math": "Graph Theory (reference counting)",
-    "note": "Introduce `std::shared_ptr` as a smart pointer for managing shared ownership of a resource. Explain how it uses a reference count to keep the object alive until the last `shared_ptr` pointing to it is destroyed."
-  },
-  {
-    "n": 48,
     "title": "Function Templates",
     "math": "Universal Algebra",
     "note": "Introduce generic programming with function templates. Teach the `template <typename T>` syntax to write a single function that can operate on arguments of various data types, letting the compiler generate specific versions as needed."
   },
   {
-    "n": 49,
+    "n": 45,
     "title": "Class Templates",
     "math": "Category Theory (functors)",
     "note": "Extend the concept of templates to classes. Show how to create a generic class, like a `Stack` or `Pair`, that can store data of any type. Demonstrate the instantiation of a class template, e.g., `Stack<int>`."
   },
   {
-    "n": 50,
+    "n": 46,
+    "title": "Lambda Expressions",
+    "math": "Lambda Calculus",
+    "note": "Teach the syntax for creating anonymous, inline functions using lambda expressions. Cover the basic syntax `[capture](params){body}` and demonstrate their common use with STL algorithms like `std::for_each` or `std::find_if`."
+  },
+  {
+    "n": 47,
     "title": "Exception Handling: try, catch, throw",
     "math": "Control Theory (handling exceptional states)",
-    "note": "Introduce C++'s mechanism for handling runtime errors. Explain how to `throw` an exception when an error occurs, and how to use a `try`/`catch` block to handle that exception and prevent the program from crashing."
+    "note": "Introduce C++'s mechanism for handling runtime errors. Explain how to `throw` an exception when an error occurs, and how to use a `try`/`catch` block to handle that exception. Discuss the concept of stack unwinding."
+  },
+  {
+    "n": 50,
+    "title": "File I/O with fstream",
+    "math": "Information Theory (data streams)",
+    "note": "Teach how to read from and write to files using the `<fstream>` library. Cover `std::ofstream` for writing to files, `std::ifstream` for reading from files, and how their RAII nature automatically closes files when they go out of scope."
   },
   {
     "n": 51,
-    "title": "File I/O with fstream",
-    "math": "Information Theory (data streams)",
-    "note": "Teach how to read from and write to files using the `<fstream>` library. Cover `std::ofstream` for writing to files, `std::ifstream` for reading from files, and how to check if a file was opened successfully."
-  },
-  {
-    "n": 52,
     "title": "Namespaces for Code Organization",
     "math": "Set Theory (partitioning of identifiers)",
     "note": "Explain how namespaces are used to group related code and prevent naming conflicts in large projects. Cover how to define a namespace, how to access its members with the `::` operator, and the use of the `using namespace` directive."
   },
   {
-    "n": 53,
+    "n": 52,
     "title": "Explicit Type Casting",
     "math": "Type Theory (type conversion)",
     "note": "Introduce the four C++-style casts. Explain `static_cast` for safe, compile-time conversions, `dynamic_cast` for safe downcasting in polymorphic hierarchies, `const_cast` to modify constness, and `reinterpret_cast` for low-level reinterpretation."
   },
   {
-    "n": 54,
+    "n": 53,
     "title": "The Preprocessor",
     "math": "Formal Language Theory (macro expansion)",
     "note": "Explain the role of the C++ preprocessor. Cover the most common directives: `#include` for including header files, `#define` for creating macros (and why they should often be avoided), and `#ifndef`/`#define`/`#endif` for header guards."
   },
   {
-    "n": 55,
+    "n": 54,
     "title": "Basic Concurrency with std::thread",
     "math": "Concurrency Theory (process algebra)",
     "note": "Introduce multi-threading using `std::thread` from the `<thread>` header. Show how to create a new thread to execute a function concurrently and how to use `.join()` to wait for the thread to finish its execution. This uses the C++20 standard library on a POSIX system."
   },
   {
+    "n": 55,
+    "title": "Concurrency: Mutexes and Locks",
+    "math": "Concurrency Theory (mutual exclusion)",
+    "note": "Introduce `std::mutex` to protect shared data from race conditions in a multi-threaded environment. Explain how to use `std::lock_guard` as a simple, RAII-based mechanism to ensure the mutex is always released."
+  },
+  {
     "n": 56,
+    "title": "Concurrency: Atomics and Futures",
+    "math": "Concurrency Theory",
+    "note": "Cover more advanced concurrency tools. Introduce `std::atomic` for low-level, lock-free operations on simple types. Introduce `std::async` and `std::future` for running asynchronous tasks and retrieving their results."
+  },
+  {
+    "n": 57,
+    "title": "C++20: Concepts",
+    "math": "Type Theory (constrained polymorphism)",
+    "note": "Introduce Concepts, a major C++20 feature for placing constraints on template parameters. Explain how `requires` clauses make template code safer and produce dramatically better error messages when constraints are not met."
+  },
+  {
+    "n": 58,
+    "title": "C++20: Ranges",
+    "math": "Set Theory (composable operations on sequences)",
+    "note": "Introduce the C++20 Ranges library, a new paradigm for working with sequences of data. Demonstrate how to use views and pipe (`|`) syntax to create elegant, composable, and lazy-evaluated data processing pipelines as an alternative to complex iterator-based algorithm calls."
+  },
+  {
+    "n": 59,
+    "title": "Utilities: `<chrono>` and `<random>`",
+    "math": "Probability and Statistics",
+    "note": "Introduce two powerful standard library headers. `<chrono>` provides tools for working with time durations and time points in a type-safe way. `<random>` provides a robust framework for generating high-quality random numbers, far superior to the old `rand()` function."
+  },
+  {
+    "n": 60,
+    "title": "Utilities: `<filesystem>` and `<optional>`",
+    "math": "Graph Theory (file system as a tree)",
+    "note": "Cover two essential C++17 utilities. The `<filesystem>` library provides a standard, platform-independent way to manipulate files and directories. `std::optional` provides a type-safe way to represent a value that may or may not exist, improving on pointers or magic values."
+  },
+  {
+    "n": 61,
+    "title": "Introduction to Unit Testing",
+    "math": "Formal Verification",
+    "note": "Explain the critical role of unit testing in modern software development. Introduce the Arrange-Act-Assert pattern for structuring tests. Provide a conceptual example of what a test case looks like using a popular framework like Google Test or Catch2."
+  },
+  {
+    "n": 62,
     "title": "Introduction to Build Systems: CMake",
     "math": "Graph Theory (dependency management)",
     "note": "Explain why build system generators are necessary for projects with multiple files. Provide a minimal `CMakeLists.txt` file to define an executable, find libraries, and generate build files (e.g., Makefiles) for a cross-platform C++20 project."

@@ -7,114 +7,138 @@
   },
   {
     "n": 2,
+    "title": "Ruby's Philosophy: TMTOWTDI",
+    "math": "Programming language design",
+    "note": "This lesson explains the core philosophy of Perl: 'There's More Than One Way To Do It' (TMTOWTDI). This principle emphasizes providing the programmer with expressive freedom, which makes the language powerful but can also lead to code that is hard to read if not written carefully."
+  },
+  {
+    "n": 3,
     "title": "Setting Up a Ruby Environment",
     "math": "Version management",
     "note": "This lesson provides a practical guide to installing Ruby. It introduces version managers like `rbenv` or `RVM` as the recommended way to install and switch between different Ruby versions. It also demonstrates how to run a simple script and use `irb` (Interactive Ruby)."
   },
   {
-    "n": 3,
+    "n": 4,
     "title": "Ruby Fundamentals: Variables, Strings, and Numbers",
     "math": "Basic data types",
     "note": "This section covers the basics of Ruby syntax. It explains how to declare variables (which do not require type declarations), and introduces the fundamental data types of numbers (Integer, Float) and strings. String interpolation using `#{}` is also demonstrated."
   },
   {
-    "n": 4,
+    "n": 5,
     "title": "Data Structures: Arrays",
     "math": "Array data structures",
     "note": "This lesson introduces the Array, which is an ordered, integer-indexed collection of any object. It demonstrates how to create an array, access elements by their index, and add new elements."
   },
   {
-    "n": 5,
+    "n": 6,
     "title": "Data Structures: Hashes",
     "math": "Associative arrays (hashes)",
     "note": "This section covers the Hash, which is a collection of key-value pairs, similar to a dictionary in other languages. It demonstrates how to create a hash using symbols as keys (the common convention) and how to access values by their key."
   },
   {
-    "n": 6,
+    "n": 7,
     "title": "Control Flow: Conditionals",
     "math": "Conditional logic",
     "note": "This lesson explains how to control the flow of a Ruby program. It covers the `if`, `else`, and `elsif` statements for conditional execution. It also introduces Ruby's `unless` keyword as a more readable alternative to `if !condition`."
   },
   {
-    "n": 7,
+    "n": 8,
     "title": "Iterators and Blocks: The Ruby Way to Loop",
     "math": "Iteration",
     "note": "This section introduces one of Ruby's most powerful and distinctive features. Instead of traditional `for` loops, Rubyists prefer to use iterators like the `.each` method, which takes a 'block' of code (defined by `do...end` or `{...}`) to be executed for each element in a collection."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "Methods",
     "math": "Methods (functions)",
     "note": "This lesson covers how to define reusable pieces of code using methods. It demonstrates the `def` keyword for defining a method, how to pass parameters, and the concept of implicit returns, where the last evaluated expression in a method is automatically returned."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Introduction to Object-Oriented Programming (OOP)",
     "math": "Object-oriented programming (OOP)",
     "note": "This section explains that in Ruby, everything is an object, including numbers and strings. It introduces the core concepts of OOP: Classes (blueprints for objects) and Objects (instances of classes)."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Classes and Objects",
     "math": "Class and object instantiation",
     "note": "This lesson demonstrates how to define a class using the `class` keyword and how to create a new object (an instance of the class) using the `.new` method. The `initialize` method is introduced as the class's constructor, which is called when a new object is created."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "Instance Variables and Methods",
     "math": "Instance members",
     "note": "This section explains how to define the state and behavior of an object. Instance variables (prefixed with `@`) store the data unique to each object. Instance methods are functions defined within the class that operate on the object's data."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Attribute Accessors",
     "math": "Getters and setters",
     "note": "This lesson introduces a convenient shorthand for creating getter and setter methods. It explains how `attr_reader` creates a getter, `attr_writer` creates a setter, and `attr_accessor` creates both, reducing boilerplate code for accessing instance variables."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Inheritance",
     "math": "Inheritance",
     "note": "This section covers inheritance, a key OOP principle for code reuse. It demonstrates how to create a subclass that inherits the behavior of a superclass using the `<` symbol. It also explains how to override methods and call the superclass's implementation using the `super` keyword."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Modules as Namespaces",
     "math": "Namespacing",
     "note": "This lesson introduces Modules as a way to group related methods, classes, and constants together. When used as a namespace, a module prevents name clashes between different parts of a program."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Modules as Mixins",
     "math": "Mixins",
     "note": "This section explains the most powerful use of modules in Ruby: as 'mixins'. By using the `include` keyword, a class can include a module and instantly gain all of its methods. This is Ruby's way of achieving multiple inheritance and sharing functionality between unrelated classes."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "Blocks, Procs, and Lambdas",
     "math": "Closures",
     "note": "This lesson provides a deeper dive into Ruby's code blocks. It explains that a block is a piece of code that can be passed to a method. It then introduces Procs and Lambdas as objects that can encapsulate a block of code and be stored in a variable to be executed later."
   },
   {
-    "n": 17,
-    "title": "The Ruby Ecosystem: RubyGems and Bundler",
-    "math": "Package management",
-    "note": "This section introduces the tools for managing third-party code in Ruby. RubyGems is the package manager for the Ruby language, and a 'gem' is a packaged library. Bundler is a tool for managing a project's gem dependencies, specified in a `Gemfile`."
+    "n": 18,
+    "title": "Error Handling with `begin` and `rescue`",
+    "math": "Exception handling",
+    "note": "This lesson covers how to handle errors and exceptions in Ruby. It introduces the `begin`/`rescue` block, which allows you to 'rescue' your program from a specific error and execute code in response, preventing a crash. The `ensure` block for cleanup code is also shown."
   },
   {
-    "n": 18,
+    "n": 19,
+    "title": "Regular Expressions",
+    "math": "Pattern matching",
+    "note": "Introduce Ruby's powerful, built-in support for regular expressions. This lesson covers how to create a regex literal (`/.../`) and use the match operator (`=~`) to check if a string contains a specific pattern."
+  },
+  {
+    "n": 20,
     "title": "File I/O",
     "math": "File input/output",
     "note": "This lesson covers basic file operations in Ruby. It demonstrates the common pattern of opening a file with a block, which ensures the file is automatically closed, and shows how to read from and write to the file."
   },
   {
-    "n": 19,
+    "n": 21,
+    "title": "The Ruby Ecosystem: RubyGems and Bundler",
+    "math": "Package management",
+    "note": "This section introduces the tools for managing third-party code in Ruby. RubyGems is the package manager for the Ruby language, and a 'gem' is a packaged library. Bundler is a tool for managing a project's gem dependencies, specified in a `Gemfile`."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Testing with Minitest",
+    "math": "Test-driven development",
+    "note": "This lesson introduces Ruby's strong testing culture and its built-in testing framework, Minitest. It shows how to write a simple test class that inherits from `Minitest::Test` and how to write assertions like `assert_equal` to verify your code's behavior."
+  },
+  {
+    "n": 23,
     "title": "Introduction to Ruby on Rails",
     "math": "Web frameworks",
     "note": "This section provides a high-level overview of Ruby on Rails, the most popular web framework for Ruby. It explains that Rails is a full-stack framework that follows the Model-View-Controller (MVC) pattern and is known for its conventions that promote rapid development."
   },
   {
-    "n": 20,
+    "n": 24,
     "title": "A Brief Look at Rails",
     "math": "Scaffolding",
     "note": "This final lesson provides a glimpse into Rails development. It demonstrates the power of Rails' command-line generators (scaffolding) to quickly create the models, views, and controllers for a simple resource, illustrating the framework's focus on 'convention over configuration'."

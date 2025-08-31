@@ -1,122 +1,122 @@
 [
   {
     "n": 1,
-    "title": "What Is Swift?",
+    "title": "Introduction to Swift",
     "math": "Programming languages",
-    "note": "This section introduces Swift as a modern, general-purpose, compiled programming language developed by Apple. It is described as being fast, safe, and expressive. It is the primary language for developing applications for iOS, macOS, watchOS, and tvOS. Its relationship with its predecessor, Objective-C, is also discussed."
+    "note": "Introduces Swift as a modern, fast, safe, and expressive language from Apple. Covers its use cases for iOS, macOS, etc., and setting up the environment with Xcode and Playgrounds."
   },
   {
     "n": 2,
-    "title": "Setting Up Your Environment with Xcode",
-    "math": "Integrated Development Environments (IDEs)",
-    "note": "This lesson explains that the primary development environment for Swift is Xcode, Apple's IDE. It also introduces Swift Playgrounds as an interactive environment within Xcode that is perfect for learning and experimenting with Swift code without needing to create a full application."
+    "title": "Basic Syntax: Constants, Variables, and Type Inference",
+    "math": "Immutability & Type systems",
+    "note": "Covers declaring constants with `let` and variables with `var`. Explains Swift's type safety and how the compiler uses type inference to determine types automatically."
   },
   {
     "n": 3,
-    "title": "Constants and Variables",
-    "math": "Immutability",
-    "note": "This section covers the two ways to store values in Swift. It introduces the `let` keyword to declare a constant (a value that cannot be changed), which is the preferred method for safety. The `var` keyword is used to declare a variable (a value that can be changed)."
+    "title": "Collection Types: Arrays, Sets, and Dictionaries",
+    "math": "Collection data structures",
+    "note": "Covers the three primary collection types in Swift: Arrays (ordered), Sets (unordered, unique), and Dictionaries (unordered key-value pairs)."
   },
   {
     "n": 4,
-    "title": "Type Safety and Type Inference",
-    "math": "Type systems",
-    "note": "This lesson explains two core features of Swift. Type safety prevents you from assigning a value of one type to a variable of another type, catching errors at compile time. Type inference means that in many cases, you don't have to explicitly write the type of a variable, as the compiler can infer it from the initial value."
+    "title": "Control Flow: `if`, `switch`, and `for-in` Loops",
+    "math": "Conditional logic & Iteration",
+    "note": "Covers conditional logic with `if/else` and the powerful, exhaustive `switch` statement. Also covers iterating over sequences with `for-in` loops."
   },
   {
     "n": 5,
-    "title": "Collection Types: Arrays, Sets, and Dictionaries",
-    "math": "Collection data structures",
-    "note": "This section covers the three primary collection types in Swift. It explains Arrays (ordered collections), Sets (unordered collections of unique values), and Dictionaries (unordered collections of key-value pairs)."
+    "title": "Handling Absence of Value: Optionals",
+    "math": "Nullable types (Optionals)",
+    "note": "Introduces one of Swift's most important safety features. An optional type holds either a value or `nil`, forcing the programmer to safely handle potential nulls."
   },
   {
     "n": 6,
-    "title": "Control Flow: `if` and `switch`",
-    "math": "Conditional statements",
-    "note": "This lesson covers conditional logic. It demonstrates the standard `if/else` statement. It also introduces the `switch` statement in Swift, which is very powerful and must be exhaustive, meaning it must handle all possible values for the variable it is checking."
+    "title": "Safely Unwrapping Optionals",
+    "math": "Optional binding",
+    "note": "Demonstrates safe ways to work with optionals, including optional binding (`if let`, `guard let`), the nil-coalescing operator (`??`), and optional chaining."
   },
   {
     "n": 7,
-    "title": "Control Flow: `for-in` Loops",
-    "math": "Iteration",
-    "note": "This section covers the most common type of loop in Swift, the `for-in` loop, which is used to iterate over a sequence, such as the items in an array, a range of numbers, or the characters in a string."
+    "title": "Functions and Closures",
+    "math": "Functions & Closures (lambdas)",
+    "note": "Covers defining functions with `func`. Introduces closures as self-contained blocks of functionality, and their use with higher-order functions like `map`, `filter`, and `reduce`."
   },
   {
     "n": 8,
-    "title": "The Problem of `nil`: Optionals",
-    "math": "Nullable types (Optionals)",
-    "note": "This crucial lesson introduces one of Swift's most important safety features: Optionals. An optional is a type that can hold either a value or `nil` (the absence of a value). This forces the programmer to safely handle cases where a value might not exist, preventing null reference errors common in other languages."
+    "title": "Custom Types: Structures and Classes",
+    "math": "Value types vs. reference types",
+    "note": "Contrasts Structures (`struct`), which are value types (copied), and Classes (`class`), which are reference types (shared). Emphasizes the preference for structs for safety."
   },
   {
     "n": 9,
-    "title": "Unwrapping Optionals Safely with `if let`",
-    "math": "Optional binding",
-    "note": "This section demonstrates the primary method for safely working with optional values. Optional binding, using `if let` or `guard let`, checks if an optional contains a value. If it does, it makes that value available as a temporary, non-optional constant, and if it doesn't, it skips the code block."
+    "title": "Properties and Methods",
+    "math": "Instance members",
+    "note": "Covers defining stored properties and methods on structs and classes. Explains the difference between instance members and type-level (static) members."
   },
   {
     "n": 10,
-    "title": "Functions",
-    "math": "Functions",
-    "note": "This lesson covers how to define and call functions in Swift using the `func` keyword. It explains how to define parameters (including their argument labels and parameter names) and how to specify a return type."
+    "title": "Modeling State with Enums",
+    "math": "Enumerated types with associated values",
+    "note": "Explores Swift's powerful enumerations. Covers defining cases and using associated values to store additional, type-safe information with each case, enabling robust state modeling."
   },
   {
     "n": 11,
-    "title": "Closures",
-    "math": "Closures (lambdas)",
-    "note": "This section introduces closures, which are self-contained blocks of functionality that can be passed around and used in your code. They are similar to lambdas in other languages. The concise syntax of closures in Swift is demonstrated."
+    "title": "Protocols and Protocol-Oriented Programming",
+    "math": "Protocols (interfaces)",
+    "note": "Introduces Protocols as blueprints of functionality. Explains how types can 'conform' to protocols, a core concept in Swift's protocol-oriented programming paradigm."
   },
   {
     "n": 12,
-    "title": "Using Closures with Collection Methods",
-    "math": "Higher-order functions",
-    "note": "This lesson shows the power of closures by using them with standard collection methods. It demonstrates how to use `map` (to transform each element), `filter` (to select elements), and `reduce` (to combine all elements into a single value), often with a very concise trailing closure syntax."
+    "title": "Extending Existing Types with Extensions",
+    "math": "Extensions",
+    "note": "Covers Extensions, which allow you to add new functionality (methods, computed properties, protocol conformance) to existing types, even those from the standard library."
   },
   {
     "n": 13,
-    "title": "Structures and Classes",
-    "math": "Value types vs. reference types",
-    "note": "This section explains the two main ways to define custom data types in Swift. It contrasts Structures (`struct`), which are value types (they are copied when passed around), and Classes (`class`), which are reference types (they are shared when passed around). Structs are generally preferred for their simplicity and safety."
+    "title": "Generics",
+    "math": "Generics",
+    "note": "Explains how to write flexible, reusable functions and types that can work with any type. Covers creating generic functions and custom generic types to avoid code duplication."
   },
   {
     "n": 14,
-    "title": "Properties and Methods",
-    "math": "Instance members",
-    "note": "This lesson covers how to define the properties (stored values like variables) and methods (functions) that belong to a struct or class. The difference between instance methods and type methods (static methods) is also explained."
+    "title": "Error Handling with `do-catch`",
+    "math": "Error handling",
+    "note": "Explains Swift's error handling model. Covers creating custom errors, throwing errors with `throw`, and handling them with a `do-catch` statement or propagating them with `throws`."
   },
   {
     "n": 15,
-    "title": "Inheritance (for Classes)",
-    "math": "Inheritance",
-    "note": "This section explains inheritance, an OOP feature that applies only to classes in Swift. It demonstrates how a subclass can inherit the properties and methods of a superclass, and how to override methods to provide a custom implementation."
+    "title": "Memory Management: ARC and Reference Cycles",
+    "math": "Automatic Reference Counting (ARC)",
+    "note": "Explains how Swift uses Automatic Reference Counting to manage memory. Crucially, it covers how to resolve strong reference cycles (memory leaks) using `weak` and `unowned` references."
   },
   {
     "n": 16,
-    "title": "Protocols",
-    "math": "Protocols (interfaces)",
-    "note": "This lesson introduces Protocols as a way to define a 'blueprint' of methods, properties, and other requirements that suit a particular task or piece of functionality. A class or struct can then 'conform' to a protocol, guaranteeing that it provides the required functionality. This enables a powerful pattern called protocol-oriented programming."
+    "title": "Concurrency: `async` and `await`",
+    "math": "Asynchronous programming",
+    "note": "Introduces Swift's modern concurrency model. Explains how to define and call asynchronous functions with `async` and `await`, allowing complex operations to run without blocking the UI."
   },
   {
     "n": 17,
-    "title": "Extensions",
-    "math": "Extensions",
-    "note": "This section covers Extensions, which allow you to add new functionality to an existing class, structure, enumeration, or protocol type. This includes the ability to add new methods and computed properties, even for types for which you do not have the original source code."
+    "title": "Safe Concurrent State with Actors",
+    "math": "Actor model",
+    "note": "Introduces Actors as a special kind of type that protects its state from concurrent access. Explains how actors prevent data races by ensuring only one operation can access their state at a time."
   },
   {
     "n": 18,
-    "title": "Error Handling",
-    "math": "Error handling",
-    "note": "This lesson explains Swift's model for error handling. It covers how to define custom error types by conforming to the `Error` protocol, how to use the `throw` keyword to signal that an error has occurred, and how to handle errors using a `do-catch` statement."
+    "title": "Managing Dependencies with Swift Package Manager",
+    "math": "Dependency management",
+    "note": "Covers the Swift Package Manager (SPM), the official tool for integrating third-party libraries into your project. Demonstrates how to add a package dependency in Xcode."
   },
   {
     "n": 19,
     "title": "Introduction to SwiftUI",
     "math": "Declarative UI frameworks",
-    "note": "This section provides a high-level introduction to SwiftUI, Apple's modern, declarative framework for building user interfaces. It explains the concept of describing your UI in terms of its state, and how SwiftUI automatically updates the UI when the state changes."
+    "note": "Provides a high-level introduction to SwiftUI, Apple's modern, declarative framework for building user interfaces. Explains how to describe a UI based on its state."
   },
   {
     "n": 20,
     "title": "Building a Simple SwiftUI View",
     "math": "UI composition",
-    "note": "This final lesson provides a simple 'Hello, World!' example in SwiftUI. It demonstrates how to create a `View` using a `struct`, and how to combine basic views like `Text`, `Image`, and layout containers like `VStack` and `HStack` to build a simple user interface."
+    "note": "Provides a 'Hello, World!' example in SwiftUI. Demonstrates creating a `View` and combining basic views like `Text`, `Image`, and layout containers like `VStack` and `HStack`."
   }
 ]

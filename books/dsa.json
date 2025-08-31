@@ -3,156 +3,144 @@
     "n": 1,
     "title": "Introduction to Data Structures and Algorithms",
     "math": "Computational complexity theory",
-    "note": "This section introduces the concepts of data structures as a way to organize data and algorithms as a set of instructions to solve problems. It covers the importance of efficiency in terms of time and space. The context is a general programming environment (e.g., Python or Java)."
+    "note": "This section introduces data structures as a way to organize data and algorithms as a set of instructions to solve problems. It covers the importance of efficiency in terms of time and space complexity. The context is a general programming environment (e.g., Python or Java)."
   },
   {
     "n": 2,
     "title": "Algorithm Analysis and Big O Notation",
     "math": "Asymptotic analysis",
-    "note": "Explains how to analyze the efficiency of algorithms using Big O notation. The lesson covers how to describe the worst-case, average-case, and best-case performance of an algorithm in terms of its input size."
+    "note": "Explains how to analyze the efficiency of algorithms using Big O notation. The lesson covers how to describe the worst-case, average-case, and best-case performance of an algorithm in terms of its input size. Common complexities like O(1), O(log n), O(n), O(n log n), and O(n^2) are defined."
   },
   {
     "n": 3,
-    "title": "Arrays",
-    "math": "Matrix algebra",
-    "note": "Explains the array as a fundamental, contiguous data structure. The lesson covers its memory layout, O(1) random access, and the performance trade-offs for insertions and deletions."
+    "title": "Arrays and Linked Lists",
+    "math": "Contiguous vs. linked data structures",
+    "note": "This lesson introduces and contrasts the two most basic data structures. Arrays provide O(1) random access but have slow insertions/deletions. Linked Lists provide O(1) insertions/deletions at the ends but have O(n) access time. Doubly linked lists are also discussed."
   },
   {
     "n": 4,
-    "title": "Linked Lists (Singly)",
-    "math": "Graph theory",
-    "note": "This lesson introduces the singly linked list as a dynamic data structure. It covers the node structure, traversal, and the O(1) time complexity for insertions and deletions at the head of the list."
+    "title": "Stacks and Queues",
+    "math": "LIFO vs. FIFO",
+    "note": "This lesson covers two fundamental abstract data types. The Stack is a Last-In, First-Out (LIFO) structure with `push` and `pop` operations. The Queue is a First-In, First-Out (FIFO) structure with `enqueue` and `dequeue` operations. Both can be implemented with arrays or linked lists."
   },
   {
     "n": 5,
-    "title": "Linked Lists (Doubly)",
-    "math": "Graph theory",
-    "note": "Covers doubly linked lists, where each node has a pointer to both the next and the previous node. This allows for more efficient traversal in both directions."
+    "title": "Hash Tables",
+    "math": "Hash functions",
+    "note": "Explains the hash table data structure for efficient key-value storage and retrieval, with an average time complexity of O(1). The lesson covers hash functions, the concept of collisions, and collision resolution strategies like separate chaining."
   },
   {
     "n": 6,
-    "title": "Stacks",
-    "math": "Last-In, First-Out (LIFO)",
-    "note": "Explains the stack as a Last-In, First-Out (LIFO) abstract data type. The lesson demonstrates its implementation using arrays or linked lists and covers its primary operations: `push`, `pop`, and `peek`."
+    "title": "Trees: Terminology and Representation",
+    "math": "Tree data structures",
+    "note": "This lesson introduces the tree as a hierarchical data structure. It covers basic terminology (root, node, leaf, height, depth) and focuses on the binary tree. Common representations like using nodes with pointers are discussed."
   },
   {
     "n": 7,
-    "title": "Queues",
-    "math": "First-In, First-Out (FIFO)",
-    "note": "This section introduces the queue as a First-In, First-Out (FIFO) abstract data type. It covers its implementation and primary operations: `enqueue`, `dequeue`, and `peek`."
+    "title": "Tree Traversal Algorithms",
+    "math": "Graph theory",
+    "note": "Covers the fundamental algorithms for visiting all nodes in a tree: pre-order, in-order, and post-order traversal (which are types of Depth-First Search), and level-order traversal (which is a Breadth-First Search)."
   },
   {
     "n": 8,
-    "title": "Hash Tables",
-    "math": "Hash functions",
-    "note": "Explains the hash table data structure for efficient key-value storage and retrieval. The lesson covers hash functions, the concept of collisions, and collision resolution strategies like chaining."
+    "title": "Binary Search Trees (BSTs)",
+    "math": "Set theory",
+    "note": "Explains the Binary Search Tree (BST), a sorted tree structure that allows for fast search, insert, and delete operations (average O(log n)). The lesson covers the BST property (left child < parent < right child) and the implementation of its core operations."
   },
   {
     "n": 9,
-    "title": "Trees: Terminology and Representation",
-    "math": "Graph theory",
-    "note": "This lesson introduces the tree as a hierarchical data structure. It covers basic terminology (root, node, leaf, height, depth) and focuses on the binary tree, where each node has at most two children."
+    "title": "Balanced Binary Search Trees (AVL, Red-Black)",
+    "math": "Self-balancing trees",
+    "note": "This section introduces self-balancing BSTs, such as AVL trees and Red-Black trees. It explains why balancing is necessary to guarantee O(log n) performance in the worst case by performing rotations to prevent the tree from becoming degenerate."
   },
   {
     "n": 10,
-    "title": "Tree Traversal Algorithms",
-    "math": "Graph theory",
-    "note": "Covers the fundamental algorithms for traversing a tree: pre-order, in-order, and post-order traversal (typically associated with DFS), and level-order traversal (associated with BFS)."
+    "title": "Heaps and Priority Queues",
+    "math": "Heap property",
+    "note": "Explains the heap data structure (specifically, a binary heap), which satisfies the heap property (e.g., in a max-heap, every parent is greater than its children). The lesson demonstrates how heaps are an efficient way to implement priority queues."
   },
   {
     "n": 11,
-    "title": "Binary Search Trees (BSTs)",
-    "math": "Set theory",
-    "note": "Explains the Binary Search Tree (BST), a sorted tree structure that allows for fast search, insert, and delete operations (average O(log n)). The lesson covers the BST property and the implementation of its core operations."
+    "title": "Graphs: Representation and Traversal",
+    "math": "Graph theory",
+    "note": "This lesson introduces the graph for modeling networks. It covers representations (adjacency matrix, adjacency list) and the two main traversal algorithms: Breadth-First Search (BFS) for shortest path in unweighted graphs, and Depth-First Search (DFS) for exploring branches."
   },
   {
     "n": 12,
-    "title": "Balanced Binary Search Trees (AVL, Red-Black)",
-    "math": "Graph theory",
-    "note": "This section introduces self-balancing BSTs, such as AVL trees and Red-Black trees. It explains why balancing is necessary to guarantee O(log n) performance in the worst case by preventing the tree from becoming degenerate."
+    "title": "Introduction to Sorting Algorithms",
+    "math": "Sorting algorithms",
+    "note": "Provides an overview of sorting. The lesson covers basic, quadratic (O(n^2)) sorting algorithms like Bubble Sort, Selection Sort, and Insertion Sort to build intuition before moving to more efficient methods."
   },
   {
     "n": 13,
-    "title": "Heaps and Priority Queues",
-    "math": "Set theory",
-    "note": "Explains the heap data structure (specifically, a binary heap), which satisfies the heap property. The lesson demonstrates how heaps are an efficient way to implement priority queues."
+    "title": "Efficient Sorting: Merge Sort and Quick Sort",
+    "math": "Divide and conquer",
+    "note": "This lesson covers the two most important divide-and-conquer sorting algorithms. Merge Sort has a guaranteed O(n log n) performance. Quick Sort has an average-case O(n log n) performance and is often faster in practice due to its in-place nature."
   },
   {
     "n": 14,
-    "title": "Graphs: Representation",
-    "math": "Graph theory",
-    "note": "This lesson introduces the graph as a versatile data structure for modeling networks. It covers terminology (vertex, edge, directed vs. undirected, weighted) and common representations (adjacency matrix and adjacency list)."
+    "title": "Searching Algorithms: Linear and Binary Search",
+    "math": "Search algorithms",
+    "note": "Covers the two basic searching algorithms. Linear Search (O(n)) for unsorted data, and the much more efficient Binary Search (O(log n)), which requires the data to be sorted first."
   },
   {
     "n": 15,
-    "title": "Graph Traversal: Breadth-First Search (BFS)",
-    "math": "Graph theory",
-    "note": "Explains the Breadth-First Search (BFS) algorithm for traversing a graph. The lesson demonstrates how BFS explores the graph level by level and its application in finding the shortest path in an unweighted graph."
+    "title": "Algorithm Design: Recursion",
+    "math": "Recursion theory",
+    "note": "This section provides a deeper look at recursion as a problem-solving technique where a function calls itself. It covers the concept of a base case and a recursive step, using examples like factorial and linking it back to divide-and-conquer algorithms."
   },
   {
     "n": 16,
-    "title": "Graph Traversal: Depth-First Search (DFS)",
-    "math": "Graph theory",
-    "note": "Covers the Depth-First Search (DFS) algorithm for traversing a graph. The lesson demonstrates how DFS explores as far as possible along each branch before backtracking and its application in cycle detection."
+    "title": "Algorithm Design: Dynamic Programming",
+    "math": "Optimization, overlapping subproblems",
+    "note": "Introduces dynamic programming (DP) as a technique for solving complex problems by breaking them down into simpler, overlapping subproblems. It covers the concepts of memoization (top-down) and tabulation (bottom-up) using the Fibonacci sequence as an example."
   },
   {
     "n": 17,
-    "title": "Introduction to Sorting",
-    "math": "Sorting algorithms",
-    "note": "Provides an overview of sorting algorithms. The lesson discusses the concept of stability in sorting and categorizes algorithms as comparison-based or non-comparison-based."
+    "title": "Algorithm Design: Greedy Algorithms",
+    "math": "Optimization, greedy choice property",
+    "note": "Explains the greedy algorithm paradigm, where the algorithm makes the locally optimal choice at each stage with the hope of finding a global optimum. The lesson discusses classic examples like making change with the fewest coins and when the greedy approach works."
   },
   {
     "n": 18,
-    "title": "Basic Sorting Algorithms (Bubble, Insertion, Selection)",
-    "math": "Sorting algorithms",
-    "note": "This section covers the basic, quadratic (O(n^2)) sorting algorithms: Bubble Sort, Selection Sort, and Insertion Sort. It explains how each algorithm works and analyzes their (in)efficiency."
+    "title": "Graph Algorithms: Dijkstra's Shortest Path",
+    "math": "Shortest path algorithms",
+    "note": "This lesson introduces Dijkstra's algorithm for finding the shortest path from a single source to all other nodes in a weighted graph with non-negative edge weights. It explains how the algorithm works using a priority queue to always explore the next-closest vertex."
   },
   {
     "n": 19,
-    "title": "Merge Sort",
-    "math": "Divide and conquer",
-    "note": "Explains Merge Sort, a recursive sorting algorithm based on the divide and conquer paradigm. The lesson demonstrates its O(n log n) time complexity and its stability, making it a highly efficient general-purpose sort."
+    "title": "Graph Algorithms: Minimum Spanning Tree (MST)",
+    "math": "Minimum spanning trees",
+    "note": "This lesson introduces the concept of a Minimum Spanning Tree. It conceptually explains the two main greedy algorithms for finding it: Kruskal's algorithm (which sorts all edges and adds them if they don't form a cycle) and Prim's algorithm (which grows the tree from a single vertex)."
   },
   {
     "n": 20,
-    "title": "Quick Sort",
-    "math": "Divide and conquer",
-    "note": "This lesson introduces Quick Sort, another divide and conquer algorithm. It explains the concept of a pivot and partitioning, and discusses its average-case O(n log n) performance and its in-place sorting nature."
+    "title": "Graph Algorithms: Topological Sort",
+    "math": "Directed acyclic graphs (DAGs)",
+    "note": "This lesson covers Topological Sort, an algorithm for Directed Acyclic Graphs (DAGs) that produces a linear ordering of vertices such that for every directed edge from u to v, u comes before v. This is used for scheduling tasks with dependencies."
   },
   {
     "n": 21,
-    "title": "Searching Algorithms",
-    "math": "Search algorithms",
-    "note": "Covers the two basic searching algorithms. Linear Search (O(n)) for unsorted data, and Binary Search (O(log n)) for sorted data. The lesson emphasizes the prerequisite of sorted data for binary search."
+    "title": "Advanced Data Structure: Tries",
+    "math": "Prefix trees",
+    "note": "This lesson provides an introduction to the Trie (prefix tree), a specialized tree-based data structure for efficient retrieval of keys in a dataset of strings. It's commonly used for autocomplete features and dictionary lookups."
   },
   {
     "n": 22,
-    "title": "Recursion",
-    "math": "Recursion theory",
-    "note": "This section provides a deeper look at recursion as a problem-solving technique where a function calls itself. It covers the concept of a base case and a recursive step, using examples like factorial."
+    "title": "Advanced Data Structure: Union-Find",
+    "math": "Disjoint Set Union (DSU)",
+    "note": "This lesson introduces the Union-Find data structure, which is highly efficient at tracking a set of elements partitioned into a number of disjoint subsets. It covers the `find` and `union` operations and key optimizations like path compression."
   },
   {
     "n": 23,
-    "title": "Dynamic Programming",
-    "math": "Optimization",
-    "note": "Introduces dynamic programming as a technique for solving complex problems by breaking them down into simpler, overlapping subproblems. It covers the concepts of memoization (top-down) and tabulation (bottom-up) using the Fibonacci sequence as an example."
+    "title": "Advanced String Algorithm: KMP Search",
+    "math": "String searching",
+    "note": "This lesson covers the Knuth-Morris-Pratt (KMP) algorithm for efficient string searching. It explains how it cleverly preprocesses the pattern to build a table that avoids re-checking characters after a mismatch, achieving linear time complexity."
   },
   {
     "n": 24,
-    "title": "Greedy Algorithms",
-    "math": "Optimization",
-    "note": "Explains the greedy algorithm paradigm, where the algorithm makes the locally optimal choice at each stage with the hope of finding a global optimum. The lesson discusses classic examples like making change with the fewest coins."
-  },
-  {
-    "n": 25,
-    "title": "Shortest Path: Dijkstra's Algorithm",
-    "math": "Graph theory",
-    "note": "This lesson introduces Dijkstra's algorithm for finding the shortest path from a single source to all other nodes in a weighted graph with non-negative edge weights. It explains how the algorithm works using a priority queue."
-  },
-  {
-    "n": 26,
-    "title": "String Algorithms: Tries",
-    "math": "String theory",
-    "note": "This final section provides an introduction to the Trie (prefix tree), a specialized tree-based data structure for efficient retrieval of keys in a dataset of strings. It's commonly used for autocomplete features."
+    "title": "Bit Manipulation Techniques",
+    "math": "Bitwise operations",
+    "note": "This lesson covers common bitwise tips and tricks used for optimization and problem-solving. It includes techniques for setting/clearing/toggling/checking bits, and other efficient operations using bitwise AND, OR, XOR, and shift operators."
   }
 ]

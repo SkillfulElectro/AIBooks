@@ -3,120 +3,120 @@
     "n": 1,
     "title": "What Is Unix? The Unix Philosophy",
     "math": "Operating system philosophy",
-    "note": "This section introduces Unix as a family of multitasking, multiuser computer operating systems. It focuses on the core Unix Philosophy: 'Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface.'"
+    "note": "Introduces Unix as a family of operating systems and its core philosophy: programs should do one thing well, work together, and use text streams as a universal interface."
   },
   {
     "n": 2,
     "title": "The Kernel and the Shell",
     "math": "OS architecture",
-    "note": "This lesson explains the two core components of a Unix-like system. The Kernel is the heart of the OS, managing the system's resources. The Shell is the user interface to the kernel, a command-line interpreter that reads your commands and tells the kernel what to do. The Bash shell is introduced."
+    "note": "Explains the two core components: the Kernel (manages system resources) and the Shell (a command-line interpreter like Bash that provides the user interface to the kernel)."
   },
   {
     "n": 3,
-    "title": "Basic Navigation and File Inspection",
-    "math": "Command-line navigation",
-    "note": "This section covers the most fundamental commands for interacting with the file system. It demonstrates `pwd` (print working directory), `ls` (list directory contents), `cd` (change directory), and `file` (determine file type)."
+    "title": "Basic Navigation and File Management",
+    "math": "File system manipulation",
+    "note": "Covers the most fundamental commands: `pwd` (print directory), `ls` (list contents), `cd` (change directory), `mkdir` (make directory), `cp` (copy), `mv` (move/rename), and `rm` (remove)."
   },
   {
     "n": 4,
     "title": "Viewing File Contents",
     "math": "File viewing",
-    "note": "This lesson introduces tools for viewing the contents of text files. It covers `cat` (concatenate and print), `less` (a powerful pager that allows backward movement), and `more` (a simpler pager). It also introduces `head` and `tail` for viewing the beginning or end of a file."
+    "note": "Introduces tools for viewing text files: `cat` (concatenate/print), `less` (pager), and `head`/`tail` for viewing the beginning or end of a file."
   },
   {
     "n": 5,
-    "title": "Managing Files and Directories",
-    "math": "File system manipulation",
-    "note": "This section covers the commands for creating, deleting, and moving files. It demonstrates `mkdir` (make directory), `touch` (create an empty file), `cp` (copy), `mv` (move or rename), and `rm` (remove)."
+    "title": "Creating Links: Hard and Symbolic",
+    "math": "Pointers & References",
+    "note": "Explains how to create links between files. Covers hard links (another name for the same file data) and symbolic links (`ln -s`), which are pointers to a file path."
   },
   {
     "n": 6,
     "title": "The Unix Permission Model",
     "math": "File system permissions",
-    "note": "This lesson details the standard Unix file permission model. It explains the three types of permissions—read (r), write (w), and execute (x)—and the three sets of owners—user (the owner), group, and other (everyone else). The `chmod` command for changing permissions is introduced."
+    "note": "Details the standard Unix permissions: read (r), write (w), and execute (x) for the user, group, and others. Introduces `chmod` for changing permissions and `chown` for changing ownership."
   },
   {
     "n": 7,
-    "title": "Standard I/O Streams",
+    "title": "Standard I/O and Redirection",
     "math": "Standard streams (stdin, stdout, stderr)",
-    "note": "This section introduces the three standard streams that every Unix process has: Standard Input (stdin), Standard Output (stdout), and Standard Error (stderr). By default, these are connected to the keyboard and the terminal screen."
+    "note": "Introduces the three standard streams and explains how to redirect them using `>` (overwrite), `>>` (append), and `<` (input from file)."
   },
   {
     "n": 8,
-    "title": "I/O Redirection",
-    "math": "I/O redirection",
-    "note": "This lesson explains how to redirect the standard I/O streams. It demonstrates how to redirect stdout to a file using `>` (overwrite) and `>>` (append), and how to redirect stdin to take input from a file using `<`."
+    "title": "Pipes: Chaining Commands",
+    "math": "Pipelines",
+    "note": "Introduces the pipe `|` operator, a core feature of the Unix philosophy. It connects the stdout of one command to the stdin of another, allowing you to build powerful command chains."
   },
   {
     "n": 9,
-    "title": "Pipes: Chaining Commands Together",
-    "math": "Pipelines",
-    "note": "This crucial lesson introduces the pipe `|` operator, a core feature of the Unix philosophy. A pipe connects the standard output of one command to the standard input of another, allowing you to chain together simple tools to perform complex tasks (e.g., `ls -l | grep 'txt'`)."
+    "title": "Text Processing: `grep`",
+    "math": "Pattern matching (grep)",
+    "note": "Introduces `grep`, a fundamental tool for searching plain-text data for lines that match a regular expression."
   },
   {
     "n": 10,
-    "title": "Text Processing: `grep`",
-    "math": "Pattern matching (grep)",
-    "note": "This section introduces `grep` (Global Regular Expression Print), a powerful command-line utility for searching plain-text data sets for lines that match a regular expression. It is a fundamental tool for finding information."
+    "title": "More Text Tools: `sort`, `uniq`, `cut`, `tr`, `wc`",
+    "math": "Text manipulation",
+    "note": "Covers a suite of essential text utilities: `sort` (sorts lines), `uniq` (filters duplicate adjacent lines), `cut` (extracts sections from each line), `tr` (translates characters), and `wc` (counts lines, words, and bytes)."
   },
   {
     "n": 11,
-    "title": "Text Processing: `sort` and `uniq`",
-    "math": "Sorting and uniqueness",
-    "note": "This lesson covers two common text processing utilities. `sort` is used to sort the lines of a text file. `uniq` is used to filter out adjacent, duplicate lines from a file. They are often used together (`sort file | uniq`) to get a sorted list of unique lines."
+    "title": "Advanced Text Processing: `sed` and `awk`",
+    "math": "Stream editing & AWK language",
+    "note": "Introduces two powerful tools: `sed` (the stream editor) for find-and-replace and other text transformations, and `awk` for processing structured, column-based text data."
   },
   {
     "n": 12,
-    "title": "Text Processing: `sed`",
-    "math": "Stream editor (sed)",
-    "note": "This section introduces `sed`, the stream editor. It is a powerful tool for performing basic text transformations on an input stream (a file or input from a pipe). The most common use case, substitution (find and replace), is demonstrated."
+    "title": "Process Management",
+    "math": "Process control",
+    "note": "Covers how to manage running processes. Introduces `ps` (list processes), `kill` (sends signals to terminate), `&` (run in background), and `jobs` (view background jobs)."
   },
   {
     "n": 13,
-    "title": "Text Processing: `awk`",
-    "math": "AWK programming language",
-    "note": "This lesson provides an introduction to `awk`, a versatile programming language designed for text processing. `awk` operates on a line-by-line basis and is particularly well-suited for processing structured, column-based text data."
+    "title": "Finding Files with `find`",
+    "math": "File searching",
+    "note": "Introduces the `find` command, a powerful utility for searching for files and directories based on criteria like name, size, modification time, or owner."
   },
   {
     "n": 14,
-    "title": "Process Management",
-    "math": "Process control",
-    "note": "This section covers how to manage running processes. It introduces the `ps` command to list current processes and the `kill` command to send signals to a process, most commonly to terminate it."
+    "title": "Checking Disk Usage with `df` and `du`",
+    "math": "Disk space analysis",
+    "note": "Covers two essential utilities for monitoring disk space: `df` (display free disk space for filesystems) and `du` (display disk usage for a directory and its subdirectories)."
   },
   {
     "n": 15,
-    "title": "Foreground and Background Jobs",
-    "math": "Job control",
-    "note": "This lesson explains how to manage jobs in the shell. It demonstrates how to run a command in the background using `&`, how to view background jobs with `jobs`, and how to bring a job to the foreground (`fg`) or put it in the background (`bg`)."
+    "title": "Archiving and Compressing Files",
+    "math": "Archiving & Compression",
+    "note": "Covers `tar` for creating archives from files, and `gzip` for compressing files. Explains how they are often used together to create compressed archives (`.tar.gz`)."
   },
   {
     "n": 16,
-    "title": "Finding Files with `find`",
-    "math": "File searching",
-    "note": "This section introduces the `find` command, a powerful utility for searching for files and directories based on various criteria, such as name, size, modification time, or owner."
+    "title": "Remote Administration with SSH",
+    "math": "Secure Shell (SSH)",
+    "note": "Introduces `ssh` as the standard protocol for securely connecting to the command line of a remote Unix server. Covers the basic `ssh user@hostname` command."
   },
   {
     "n": 17,
-    "title": "Archiving with `tar`",
-    "math": "File archiving",
-    "note": "This lesson covers the `tar` (tape archive) command, the standard Unix utility for creating an archive file (a 'tarball') from a set of files and directories. It is used for backups and for packaging software."
+    "title": "Secure File Transfer with `scp` and `rsync`",
+    "math": "Secure file transfer",
+    "note": "Explains how to transfer files to and from remote systems. Covers `scp` (secure copy) for simple transfers and `rsync` for more efficient, resumable, and directory-level synchronization."
   },
   {
     "n": 18,
-    "title": "Compression with `gzip` and `bzip2`",
-    "math": "File compression",
-    "note": "This section introduces `gzip` and `bzip2`, the standard Unix utilities for compressing files to save space. They are often used in combination with `tar` to create a compressed archive (e.g., a `.tar.gz` file)."
+    "title": "Introduction to the `vi`/`vim` Text Editor",
+    "math": "Text editing",
+    "note": "Provides a survival guide to the most ubiquitous Unix editor. Covers the basic modes (Normal, Insert), and essential commands for opening a file, editing text, saving, and quitting."
   },
   {
     "n": 19,
     "title": "Introduction to Shell Scripting",
     "math": "Shell scripting",
-    "note": "This lesson explains how to combine Unix commands into a file to create a 'shell script'. This allows you to automate repetitive tasks. The lesson covers making a script executable with `chmod` and the importance of the 'shebang' (`#!/bin/bash`) line."
+    "note": "Explains how to combine Unix commands into a file to create a shell script for automating tasks. Covers making a script executable and the importance of the 'shebang' (`#!/bin/bash`)."
   },
   {
     "n": 20,
-    "title": "The `PATH` Environment Variable",
+    "title": "Environment Variables and the `PATH`",
     "math": "Environment variables",
-    "note": "This final lesson explains one of the most important environment variables. The `PATH` is a list of directories that the shell searches through whenever you type a command. This is how the shell finds executable programs like `ls` or `grep` without you having to type their full path."
+    "note": "Explains environment variables for configuring the shell environment. Focuses on the `PATH` variable, which tells the shell where to find executable programs."
   }
 ]

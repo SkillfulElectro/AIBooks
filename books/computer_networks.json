@@ -51,7 +51,7 @@
     "n": 9,
     "title": "MAC Addresses and Ethernet",
     "math": "Physical addressing",
-    "note": "This section introduces the Media Access Control (MAC) address as a unique, hard-coded address for a network interface card (NIC). It explains how MAC addresses are used for communication within a single local network (LAN). Ethernet is presented as the dominant Data Link Layer technology for LANs."
+    "note": "This section introduces the Media Access Control (MAC) address as a unique, hard-coded address for a network interface card (NIC). It explains how MAC addresses are used for communication within a single local network (LAN). Ethernet is presented as the dominant Data Link Layer technology for wired LANs."
   },
   {
     "n": 10,
@@ -61,66 +61,108 @@
   },
   {
     "n": 11,
+    "title": "Wireless LANs (Wi-Fi)",
+    "math": "CSMA/CA and 802.11 standards",
+    "note": "This lesson introduces wireless networking. It covers the IEEE 802.11 family of standards (Wi-Fi), explaining concepts like SSIDs for network identification, channels, and the CSMA/CA access method. It also discusses wireless security protocols like WPA2 and WPA3."
+  },
+  {
+    "n": 12,
     "title": "Layer 3: The Network Layer",
     "math": "Logical addressing and routing",
     "note": "This section details the role of the Network Layer, which is responsible for the source-to-destination delivery of packets across multiple networks. Its two main functions are logical addressing (using IP addresses) and routing (determining the best path for packets to travel)."
   },
   {
-    "n": 12,
-    "title": "The Internet Protocol (IP) and IPv4 Addresses",
-    "math": "IP addressing",
-    "note": "This lesson introduces the Internet Protocol (IP) as the primary protocol of the Network Layer. It focuses on the structure of an IPv4 address (a 32-bit number) and explains how it provides a unique logical address for every device on the Internet. The concept of a subnet mask is also introduced."
-  },
-  {
     "n": 13,
-    "title": "Routers: The Workhorses of the Internet",
-    "math": "Routing algorithms",
-    "note": "This section explains the function of a router, the primary Network Layer device. A router connects different networks together and uses routing tables and routing algorithms (like RIP and OSPF) to make decisions about forwarding packets toward their final destination."
+    "title": "The Internet Protocol (IP) and IPv4 Addresses",
+    "math": "IPv4 addressing",
+    "note": "This lesson introduces the Internet Protocol (IP) as the primary protocol of the Network Layer. It focuses on the structure of an IPv4 address (a 32-bit number) and explains how it provides a unique logical address. The concepts of address classes and subnet masks are also introduced."
   },
   {
     "n": 14,
+    "title": "The Challenge of IPv4 and Introduction to IPv6",
+    "math": "IPv6 addressing",
+    "note": "This lesson discusses the problem of IPv4 address exhaustion. It then introduces IPv6 as the solution, explaining its 128-bit address space, its hexadecimal notation, and the simplification of the header compared to IPv4. The long-term importance of transitioning to IPv6 is emphasized."
+  },
+  {
+    "n": 15,
+    "title": "Routers: The Workhorses of the Internet",
+    "math": "Routing algorithms",
+    "note": "This section explains the function of a router, the primary Network Layer device. A router connects different networks together and uses routing tables and routing protocols (like RIP, OSPF, and BGP) to make decisions about forwarding packets toward their final destination."
+  },
+  {
+    "n": 16,
+    "title": "Network Address Translation (NAT)",
+    "math": "IP address translation",
+    "note": "This lesson explains NAT, a ubiquitous technology used in home and corporate networks. It describes how NAT allows multiple devices with private, non-routable IP addresses to share a single public IP address, conserving the limited supply of IPv4 addresses."
+  },
+  {
+    "n": 17,
     "title": "Layer 4: The Transport Layer",
     "math": "Process-to-process communication",
     "note": "This lesson explains the role of the Transport Layer, which provides logical communication between processes running on different hosts. It introduces the concept of port numbers, which are used to identify the specific application process that data is intended for on a destination machine."
   },
   {
-    "n": 15,
+    "n": 18,
     "title": "The User Datagram Protocol (UDP)",
     "math": "Connectionless protocols",
     "note": "This section covers UDP, a simple, connectionless Transport Layer protocol. UDP provides a best-effort delivery service with no reliability, flow control, or error correction. It is fast and suitable for applications where speed is more important than reliability, such as video streaming or online gaming."
   },
   {
-    "n": 16,
+    "n": 19,
     "title": "The Transmission Control Protocol (TCP)",
     "math": "Connection-oriented protocols",
     "note": "This lesson details TCP, a reliable, connection-oriented protocol that forms the backbone of most internet communication. It explains its key features, including the three-way handshake to establish a connection, sequence numbers to ensure ordered delivery, and acknowledgements to guarantee reliability."
   },
   {
-    "n": 17,
+    "n": 20,
     "title": "TCP Flow and Congestion Control",
     "math": "Sliding window protocol",
     "note": "This section dives deeper into TCP's reliability features. It explains Flow Control, which prevents a fast sender from overwhelming a slow receiver, and Congestion Control, which helps the network as a whole prevent and recover from traffic overload."
   },
   {
-    "n": 18,
+    "n": 21,
     "title": "Layer 5: The Application Layer",
     "math": "Application-layer protocols",
     "note": "This section covers the Application Layer, the top layer of the network model. This is the layer that user applications interact with. It provides the protocols that enable software to send and receive information and present meaningful data to users."
   },
   {
-    "n": 19,
+    "n": 22,
     "title": "The Domain Name System (DNS)",
     "math": "Distributed databases",
     "note": "This lesson explains DNS as the 'phonebook of the Internet'. It is a distributed database system that translates human-readable domain names (like `www.google.com`) into machine-readable IP addresses (like `172.217.10.142`), which are required for locating computer services and devices worldwide."
   },
   {
-    "n": 20,
+    "n": 23,
+    "title": "Dynamic Host Configuration Protocol (DHCP)",
+    "math": "Automatic IP configuration",
+    "note": "This lesson explains how DHCP automates the process of assigning IP addresses to devices on a network. It covers the DORA (Discover, Offer, Request, Acknowledge) process, which allows a device to join a network and get an IP address, subnet mask, and default gateway without manual configuration."
+  },
+  {
+    "n": 24,
     "title": "The Hypertext Transfer Protocol (HTTP)",
     "math": "Client-server protocols",
     "note": "This section introduces HTTP as the foundation of data communication for the World Wide Web. It explains the request-response model, where a client (like a web browser) sends an HTTP request to a server, which then returns an HTTP response containing the requested resource (like an HTML page)."
   },
   {
-    "n": 21,
+    "n": 25,
+    "title": "Email Protocols (SMTP, POP3, IMAP)",
+    "math": "Store-and-forward messaging",
+    "note": "This lesson covers the suite of protocols that handle email. It explains the role of SMTP (Simple Mail Transfer Protocol) for sending email, and contrasts the two main protocols for receiving email: POP3 (which downloads mail) and IMAP (which synchronizes mail with the server)."
+  },
+  {
+    "n": 26,
+    "title": "File Transfer Protocols (FTP and SFTP)",
+    "math": "File transfer",
+    "note": "This lesson introduces protocols designed for transferring files between computers. It explains the original File Transfer Protocol (FTP) and its use of separate control and data connections. It then introduces SFTP (SSH File Transfer Protocol) as the modern, secure alternative that performs file transfers over an encrypted channel."
+  },
+  {
+    "n": 27,
+    "title": "Basic Network Troubleshooting Tools",
+    "math": "Network diagnostics",
+    "note": "This lesson introduces essential command-line tools for diagnosing network problems. It covers 'ping' for testing reachability and latency, 'traceroute' (or 'tracert') for tracing the path a packet takes across the network, and 'ipconfig' (or 'ifconfig') for viewing a host's own IP configuration."
+  },
+  {
+    "n": 28,
     "title": "Network Security: Firewalls and VPNs",
     "math": "Network security",
     "note": "This final lesson provides an overview of key network security technologies. It explains how Firewalls act as a barrier to filter malicious traffic. It also introduces Virtual Private Networks (VPNs) as a technology to create a secure, encrypted connection (a 'tunnel') over a less secure network, such as the public internet."

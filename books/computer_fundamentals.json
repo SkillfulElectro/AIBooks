@@ -61,62 +61,128 @@
   },
   {
     "n": 11,
-    "title": "Software: The Operating System (OS)",
-    "math": "Resource management",
-    "note": "This section introduces the Operating System as the most important piece of system software. It explains that the OS manages all the computer's hardware and software resources, and provides a user interface for the user to interact with the computer. Examples like Windows, macOS, and Linux are given."
-  },
-  {
-    "n": 12,
-    "title": "Software: Application Software",
-    "math": "User applications",
-    "note": "This lesson defines application software as programs designed to perform specific tasks for the user. This is contrasted with system software, which runs the computer itself. Examples include word processors (like Microsoft Word), web browsers (like Google Chrome), and games."
-  },
-  {
-    "n": 13,
     "title": "How Computers Represent Data: Bits and Bytes",
     "math": "Binary number system",
     "note": "This section explains the fundamental concept of how computers store information. It introduces the binary system, where all data is represented as a sequence of bits (binary digits), which can be either a 0 or a 1. A group of 8 bits is defined as a byte."
   },
   {
-    "n": 14,
+    "n": 12,
     "title": "Units of Data Storage",
     "math": "Powers of 2",
     "note": "This lesson defines the standard units used to measure digital data. It explains the hierarchy of storage units: Kilobyte (KB), Megabyte (MB), Gigabyte (GB), and Terabyte (TB), and provides real-world analogies to understand the scale of each unit (e.g., a text file vs. a movie)."
   },
   {
-    "n": 15,
+    "n": 13,
+    "title": "Software: The Operating System (OS)",
+    "math": "Resource management",
+    "note": "This section introduces the Operating System as the most important piece of system software. It explains that the OS manages all the computer's hardware and software resources, and provides a user interface for the user to interact with the computer. Examples like Windows, macOS, and Linux are given."
+  },
+  {
+    "n": 14,
     "title": "The User Interface: GUI vs. CLI",
     "math": "Human-computer interaction",
     "note": "This section explains the two main ways users can interact with an operating system. It covers the Graphical User Interface (GUI), which uses icons, windows, and a mouse, and the Command-Line Interface (CLI), which uses text-based commands."
   },
   {
-    "n": 16,
+    "n": 15,
     "title": "File Systems: Organizing Your Data",
     "math": "Hierarchical data structures (trees)",
     "note": "This lesson explains how an operating system organizes data for storage using a file system. It introduces the concepts of files (a collection of related information) and directories or folders (a container for organizing files and other folders) in a hierarchical structure."
   },
   {
+    "n": 16,
+    "title": "Software: Application Software",
+    "math": "User applications",
+    "note": "This lesson defines application software as programs designed to perform specific tasks for the user. This is contrasted with system software, which runs the computer itself. It introduces the main categories that will be explored in subsequent lessons."
+  },
+  {
     "n": 17,
+    "title": "Core Applications: Word Processing",
+    "math": "Document creation",
+    "note": "This lesson explores word processing software (like Microsoft Word or Google Docs). It explains their primary purpose: to create, edit, and format text-based documents. Key features like spell check, formatting (bold, italics), and page layout are discussed."
+  },
+  {
+    "n": 18,
+    "title": "Core Applications: Spreadsheets",
+    "math": "Data analysis and calculation",
+    "note": "This lesson introduces spreadsheet software (like Microsoft Excel or Google Sheets). It explains how they are used to organize data in rows and columns, perform calculations with formulas, and create charts and graphs to visualize data."
+  },
+  {
+    "n": 19,
+    "title": "Core Applications: Presentation Software",
+    "math": "Visual communication",
+    "note": "This lesson covers presentation software (like Microsoft PowerPoint or Google Slides). It explains its role in creating a series of slides with text, images, and charts to accompany a speech or public presentation, helping to convey information visually."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Databases",
+    "math": "Structured data storage",
+    "note": "This lesson provides a basic introduction to databases. It explains that a database is an organized collection of structured information, or data, typically stored electronically in a computer system, and managed by a Database Management System (DBMS)."
+  },
+  {
+    "n": 21,
+    "title": "The Concept of an Algorithm",
+    "math": "Problem-solving logic",
+    "note": "This lesson introduces the concept of an algorithm as a finite sequence of well-defined, computer-implementable instructions, typically to solve a class of problems or to perform a computation. It is the foundation of all computer programming."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Programming Languages",
+    "math": "Communicating with computers",
+    "note": "This section explains what programming languages are and why we need them. It covers the distinction between low-level languages (like Assembly) that are close to machine hardware and high-level languages (like Python or Java) that are more human-readable."
+  },
+  {
+    "n": 23,
     "title": "Introduction to Computer Networks",
     "math": "Network topology",
     "note": "This section defines a computer network as a collection of interconnected computers that can share resources and data. It explains the difference between a Local Area Network (LAN), which covers a small area like a home or office, and a Wide Area Network (WAN), which covers a large geographical area."
   },
   {
-    "n": 18,
+    "n": 24,
     "title": "What Is the Internet?",
     "math": "Global networks",
-    "note": "This lesson defines the Internet as a massive, global network of interconnected computer networks. It explains that the Internet allows computers all over the world to communicate with each other. The distinction between the Internet (the infrastructure) and the World Wide Web (the information on the Internet) is clarified."
+    "note": "This lesson defines the Internet as a massive, global network of interconnected computer networks. It explains that the Internet allows computers all over the world to communicate with each other using standardized communication protocols."
   },
   {
-    "n": 19,
-    "title": "Basic Computer Security: Malware",
+    "n": 25,
+    "title": "The World Wide Web (WWW)",
+    "math": "Information systems",
+    "note": "This lesson clarifies the distinction between the Internet (the infrastructure) and the World Wide Web (an information system on the Internet). It introduces key concepts like web pages, websites, web browsers, URLs (Uniform Resource Locators), and HTTP (Hypertext Transfer Protocol)."
+  },
+  {
+    "n": 26,
+    "title": "Email and Digital Communication",
+    "math": "Electronic messaging",
+    "note": "This lesson explains the fundamentals of electronic mail (email), including how email addresses are formatted and how messages are sent and received. It also briefly touches on other forms of digital communication like instant messaging and voice over IP (VoIP)."
+  },
+  {
+    "n": 27,
+    "title": "Introduction to Cloud Computing",
+    "math": "On-demand computing services",
+    "note": "This lesson defines cloud computing as the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet ('the cloud') to offer faster innovation, flexible resources, and economies of scale."
+  },
+  {
+    "n": 28,
+    "title": "Basic Computer Security: Malware and Threats",
     "math": "Threat modeling",
-    "note": "This section introduces the concept of malware (malicious software). It provides simple definitions for common types of malware, such as viruses (which attach to other programs) and ransomware (which encrypts files and demands payment). The importance of using antivirus software is emphasized."
+    "note": "This section introduces the concept of malware (malicious software). It provides simple definitions for common types of malware, such as viruses, worms, trojans, and ransomware. The importance of using antivirus software is emphasized."
   },
   {
-    "n": 20,
-    "title": "Staying Safe Online",
+    "n": 29,
+    "title": "Staying Safe Online: Best Practices",
     "math": "Risk management",
-    "note": "This final lesson provides essential tips for online safety. It covers the importance of creating strong, unique passwords, being cautious of 'phishing' emails that try to steal information, and the critical practice of regularly backing up important files to prevent data loss from hardware failure or malware."
+    "note": "This lesson provides essential tips for online safety. It covers the importance of creating strong, unique passwords, enabling two-factor authentication, being cautious of 'phishing' scams, and the critical practice of regularly backing up important files."
+  },
+  {
+    "n": 30,
+    "title": "Digital Citizenship and Ethics",
+    "math": "Societal impact",
+    "note": "This lesson explores the societal rules and responsibilities of using technology. It covers topics such as the digital divide (the gap between those with and without internet access), intellectual property (copyright), and the importance of responsible and ethical online behavior."
+  },
+  {
+    "n": 31,
+    "title": "The Future of Computing",
+    "math": "Emerging technologies",
+    "note": "This final lesson provides a brief, high-level overview of emerging trends in technology. It touches upon concepts like Artificial Intelligence (AI), the Internet of Things (IoT), and quantum computing, giving a glimpse into the future direction of the field."
   }
 ]

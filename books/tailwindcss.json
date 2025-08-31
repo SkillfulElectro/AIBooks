@@ -3,150 +3,114 @@
     "n": 1,
     "title": "Introduction to Tailwind CSS",
     "math": "Utility-first design",
-    "note": "This section introduces Tailwind CSS as a utility-first CSS framework for rapidly building custom user interfaces. It covers the core philosophy of using small, single-purpose utility classes directly in your HTML. The context is modern front-end development."
+    "note": "Introduces Tailwind CSS as a utility-first CSS framework for rapidly building custom user interfaces. Covers the core philosophy of using small, single-purpose utility classes directly in your HTML."
   },
   {
     "n": 2,
-    "title": "Setting Up Tailwind CSS",
-    "math": "Logic",
-    "note": "Explains the primary way to install Tailwind CSS in a project using npm and integrating it into a build process with tools like PostCSS and Autoprefixer. The lesson covers creating the necessary configuration files (`tailwind.config.js`, `postcss.config.js`)."
+    "title": "Setting Up Your Project",
+    "math": "Build process",
+    "note": "Explains the primary way to install Tailwind using npm and integrating it into a build process with PostCSS. Covers creating the `tailwind.config.js` file and processing your CSS."
   },
   {
     "n": 3,
-    "title": "Using the Play CDN",
-    "math": "Logic",
-    "note": "Introduces the Tailwind CSS Play CDN as a simpler way to try out Tailwind for demos or small projects without a build step. The lesson explains its limitations and when to use a proper build setup."
+    "title": "Core Concepts: Utility-First Fundamentals",
+    "math": "Set theory",
+    "note": "Covers the fundamental concept of applying utility classes for styling text, colors, and spacing. Explains how the Just-in-Time (JIT) engine generates styles on-demand as you write them."
   },
   {
     "n": 4,
-    "title": "Core Concepts: Utility-First Fundamentals",
-    "math": "Set theory",
-    "note": "This lesson covers the fundamental concept of applying utility classes directly to HTML elements to build a design. It demonstrates basic utilities for styling text, colors, and spacing to build a simple component."
+    "title": "Handling Hover, Focus, and Other States",
+    "math": "State machines",
+    "note": "Explains how to style elements on different states using variant modifiers. Covers common state variants like `hover:`, `focus:`, `active:`, and `disabled:`."
   },
   {
     "n": 5,
-    "title": "Handling Hover, Focus, and Other States",
-    "math": "State machines",
-    "note": "Explains how to style elements on different states using variant modifiers. The lesson covers common state variants like `hover:`, `focus:`, and `active:` to create interactive UI elements."
+    "title": "Responsive Design: Mobile-First with Breakpoints",
+    "math": "Geometry",
+    "note": "Introduces Tailwind's mobile-first approach to responsive design. Explains how to use breakpoint prefixes (like `md:`, `lg:`) to apply different utility classes at different screen sizes (viewports)."
   },
   {
     "n": 6,
-    "title": "Responsive Design",
-    "math": "Geometry",
-    "note": "This section introduces Tailwind's mobile-first approach to responsive design. It explains how to use breakpoint prefixes (like `md:`, `lg:`) to apply different utility classes at different screen sizes."
+    "title": "Responsive Components with Container Queries",
+    "math": "Component-based responsive design",
+    "note": "Introduces the concept of container queries via the official `@tailwindcss/container-queries` plugin. Explains how to mark a parent as a `@container` and use variants like `@lg` to make components respond to their own size, not just the viewport."
   },
   {
     "n": 7,
     "title": "Dark Mode",
     "math": "Boolean algebra",
-    "note": "Covers how to implement a dark mode theme for a website using Tailwind's `dark:` variant. The lesson demonstrates how to toggle dark mode based on user preference or a manual switch."
+    "note": "Covers how to implement a dark mode theme using Tailwind's `dark:` variant. Demonstrates how to toggle dark mode based on user preference or a manual class."
   },
   {
     "n": 8,
-    "title": "Layout: Sizing and Spacing",
-    "math": "Geometry",
-    "note": "Explains the comprehensive utility classes for controlling an element's size (width and height) and spacing (margin and padding). The lesson covers the default spacing scale and how to apply it."
+    "title": "Layout: Sizing, Spacing, and Position",
+    "math": "Coordinate geometry",
+    "note": "Covers utilities for controlling size (width, height), spacing (margin, padding), and the CSS `position` property (`relative`, `absolute`, `fixed`)."
   },
   {
     "n": 9,
-    "title": "Layout: Display and Position",
-    "math": "Coordinate geometry",
-    "note": "This lesson covers utilities for controlling the CSS `display` property (e.g., `block`, `inline-block`, `flex`, `grid`) and the `position` property (`relative`, `absolute`, `fixed`)."
+    "title": "Layout: Flexbox",
+    "math": "Linear algebra",
+    "note": "Provides a deep dive into Tailwind's powerful flexbox utilities. Covers creating flex containers, controlling direction, wrapping, and the alignment and justification of flex items."
   },
   {
     "n": 10,
-    "title": "Flexbox",
-    "math": "Linear algebra",
-    "note": "Provides a deep dive into Tailwind's powerful flexbox utilities. The lesson covers creating flex containers, controlling direction, wrapping, and the alignment and justification of flex items."
+    "title": "Layout: Grid",
+    "math": "Matrix algebra",
+    "note": "Explains how to create complex grid layouts. Covers defining grid columns and rows, placing items, and creating gaps between grid elements."
   },
   {
     "n": 11,
-    "title": "Grid",
-    "math": "Matrix algebra",
-    "note": "Explains how to create complex grid layouts using Tailwind's grid utilities. The lesson covers defining grid columns and rows, placing items in the grid, and creating gaps between grid elements."
+    "title": "Styling: Colors and Typography",
+    "math": "Color theory & Typography",
+    "note": "Covers Tailwind's extensive color palette for text, backgrounds, and borders. Also covers utilities for controlling font family, size, weight, and other text properties."
   },
   {
     "n": 12,
-    "title": "Styling: Colors and Backgrounds",
-    "math": "Color theory",
-    "note": "This section covers Tailwind's extensive default color palette and the utility classes for applying text colors, background colors, and border colors. It also introduces gradient utilities."
+    "title": "Styling: Borders, Rings, and Effects",
+    "math": "Geometry & Image processing",
+    "note": "Covers utilities for styling element borders (width, color, radius), rings for outlines, and visual effects like box shadows, opacity, and CSS filters (blur, grayscale)."
   },
   {
     "n": 13,
-    "title": "Styling: Typography",
-    "math": "Typography",
-    "note": "Explains the utility classes for controlling typography, including font family, size, weight, letter spacing, and line height. The lesson demonstrates how to create a consistent and readable typographic scale."
+    "title": "Transitions and Animations",
+    "math": "Animation",
+    "note": "Explains how to use utilities to apply smooth CSS transitions and built-in animations for effects like spinning and bouncing."
   },
   {
     "n": 14,
-    "title": "Styling: Borders and Rings",
-    "math": "Geometry",
-    "note": "Covers the utilities for styling element borders, including width, color, and radius. The lesson also introduces ring utilities for creating outline-like effects."
+    "title": "Extracting Reusable Components with @apply",
+    "math": "Abstraction",
+    "note": "Explains how to use the `@apply` directive in a CSS file to extract a set of utility classes into a reusable custom CSS class, and discusses the pros and cons of this approach."
   },
   {
     "n": 15,
-    "title": "Styling: Effects and Filters",
-    "math": "Image processing",
-    "note": "This lesson introduces utilities for applying visual effects, such as box shadows, opacity, and CSS filters like blur and grayscale."
+    "title": "Customizing Your Theme",
+    "math": "Configuration",
+    "note": "Provides a deep dive into the `tailwind.config.js` file. Explains how to customize Tailwind's default theme by extending the color palette, spacing scale, or adding new fonts."
   },
   {
     "n": 16,
-    "title": "Transitions and Animations",
-    "math": "Animation",
-    "note": "Explains how to use Tailwind's utilities to apply smooth CSS transitions to elements. The lesson also covers the built-in animation utilities for effects like spinning and bouncing."
+    "title": "Using Arbitrary Values",
+    "math": "Ad-hoc values",
+    "note": "Demonstrates how to use arbitrary values with the JIT engine to create one-off styles that are not part of your theme, using the square-bracket notation (e.g., `w-[117px]`)."
   },
   {
     "n": 17,
-    "title": "Component-Based Workflow",
-    "math": "Component-based architecture",
-    "note": "This section discusses the workflow of building components with Tailwind. It demonstrates how to build common UI components like buttons, cards, and navigation bars by composing utility classes."
+    "title": "Writing a Basic Plugin",
+    "math": "Software architecture",
+    "note": "Provides an introduction to writing a basic Tailwind CSS plugin to add new utility classes, components, or variants to the framework."
   },
   {
     "n": 18,
-    "title": "Extracting Components with `@apply`",
-    "math": "Logic",
-    "note": "Explains how to use the `@apply` directive in a CSS file to extract a set of utility classes into a reusable custom CSS class. The lesson discusses the pros and cons of this approach compared to building components in your HTML/JS."
-  },
-  {
-    "n": 19,
-    "title": "Customizing the Configuration",
-    "math": "Logic",
-    "note": "Provides a deep dive into the `tailwind.config.js` file. The lesson explains how to customize Tailwind's default theme, such as extending the color palette, spacing scale, or adding new fonts."
-  },
-  {
-    "n": 20,
-    "title": "Just-in-Time (JIT) Mode",
-    "math": "Optimization",
-    "note": "Explains Tailwind's Just-in-Time (JIT) compiler, which is the default in modern versions. The lesson covers how JIT mode generates styles on-demand, enabling arbitrary value support and much faster build times."
-  },
-  {
-    "n": 21,
-    "title": "Arbitrary Values",
-    "math": "Logic",
-    "note": "Demonstrates how to use arbitrary values with JIT mode to create one-off styles that are not part of your theme. The lesson covers the square-bracket notation (e.g., `top-[117px]`) for using custom values."
-  },
-  {
-    "n": 22,
-    "title": "Functions and Directives",
-    "math": "Functional programming",
-    "note": "This lesson covers Tailwind's built-in functions (like `theme()`) and directives (like `@tailwind` and `@layer`) for use within your CSS files. This allows for more advanced customization and organization."
-  },
-  {
-    "n": 23,
-    "title": "Writing Plugins",
-    "math": "Software architecture",
-    "note": "Provides an introduction to writing a basic Tailwind CSS plugin. The lesson explains how plugins can be used to add new utility classes, components, or variants to the framework, promoting reusability."
-  },
-  {
-    "n": 24,
-    "title": "Official Plugins (Typography, Forms)",
-    "math": "Set theory",
+    "title": "Using Official Plugins (Typography, Forms)",
+    "math": "Ecosystem",
     "note": "Introduces some of the official plugins maintained by the Tailwind CSS team, such as `@tailwindcss/typography` for beautiful prose styling and `@tailwindcss/forms` for resetting default form styles."
   },
   {
-    "n": 25,
+    "n": 19,
     "title": "Optimizing for Production",
     "math": "Optimization",
-    "note": "This final section covers the crucial step of optimizing your CSS for production. It explains how Tailwind automatically removes unused CSS with PurgeCSS (via the `content` configuration) to create the smallest possible file size."
+    "note": "Covers the crucial step of optimizing your CSS for production. Explains how Tailwind automatically removes unused CSS based on your `content` configuration to create the smallest possible file size."
   }
 ]

@@ -91,80 +91,110 @@
   },
   {
     "n": 16,
-    "title": "Passing Data to Views",
+    "title": "Passing Data to MVC Views",
     "math": "Data binding",
     "note": "This lesson covers the different ways to pass data from a controller to a view. It explains the use of `ViewData` and `ViewBag` for weakly-typed data, and strongly-typed models (view models), which is the recommended approach for robust applications."
   },
   {
     "n": 17,
+    "title": "Introduction to Razor Pages",
+    "math": "Page-centric architecture",
+    "note": "This lesson introduces Razor Pages, a simpler, page-focused model for building web UIs in ASP.NET Core. It contrasts with the controller-centric MVC pattern and explains how the code-behind file for a page is tightly coupled to the Razor view, which is ideal for simple forms and pages."
+  },
+  {
+    "n": 18,
     "title": "Introduction to Entity Framework (EF) Core",
     "math": "Object-Relational Mapping (ORM)",
     "note": "This section introduces Entity Framework Core as the standard ORM for .NET. It explains how EF Core allows developers to work with a database using .NET objects, eliminating the need to write most data-access code (like SQL queries) manually."
   },
   {
-    "n": 18,
+    "n": 19,
     "title": "The DbContext and Data Models",
     "math": "Database schema mapping",
     "note": "This lesson explains the core components of EF Core. It demonstrates how to create data model classes (POCOs) that represent database tables and a `DbContext` class that represents a session with the database and allows you to query and save data."
   },
   {
-    "n": 19,
+    "n": 20,
     "title": "Querying Data with LINQ",
     "math": "Language-Integrated Query (LINQ)",
     "note": "This section covers how to retrieve data from the database using LINQ. It demonstrates how to write queries in C# using LINQ syntax (e.g., `Where`, `OrderBy`, `Select`), which EF Core then translates into SQL to execute against the database."
   },
   {
-    "n": 20,
+    "n": 21,
     "title": "Adding, Updating, and Deleting Data",
     "math": "CRUD operations",
     "note": "This lesson explains how to perform data modification operations with EF Core. It covers the `Add`, `Update`, and `Remove` methods on the `DbSet`, and the `SaveChanges` method on the `DbContext`, which persists all the tracked changes to the database."
   },
   {
-    "n": 21,
+    "n": 22,
     "title": "EF Core Migrations",
     "math": "Schema versioning",
     "note": "This section introduces EF Core Migrations, a feature for managing database schema changes over time. It demonstrates how to use `dotnet ef migrations add` to create a new migration based on changes to your data models and `dotnet ef database update` to apply those changes to the database."
   },
   {
-    "n": 22,
+    "n": 23,
     "title": "Authentication vs. Authorization",
     "math": "Security principles",
     "note": "This lesson clarifies two fundamental security concepts. Authentication is the process of verifying who a user is. Authorization is the process of determining whether a user has permission to do something. This provides the foundation for securing an application."
   },
   {
-    "n": 23,
+    "n": 24,
     "title": "Introduction to ASP.NET Core Identity",
     "math": "Membership systems",
     "note": "This section introduces ASP.NET Core Identity, the built-in framework for adding user login functionality to an application. It provides services for user management (registration, passwords) and is the standard way to implement cookie-based authentication in a web UI application."
   },
   {
-    "n": 24,
+    "n": 25,
     "title": "JWT Authentication for Web APIs",
     "math": "JSON Web Tokens (JWT)",
     "note": "This lesson covers how to secure stateless Web APIs using JSON Web Tokens. It explains the structure of a JWT and the process: a user logs in, receives a token, and then includes that token in the header of subsequent requests to prove their identity."
   },
   {
-    "n": 25,
+    "n": 26,
     "title": "Authorization with the `[Authorize]` Attribute",
     "math": "Declarative security",
     "note": "This section demonstrates the simplest way to implement authorization. It explains how to apply the `[Authorize]` attribute to controllers or action methods to restrict access to authenticated users only. Role-based authorization (e.g., `[Authorize(Roles = 'Admin')]`) is also covered."
   },
   {
-    "n": 26,
+    "n": 27,
     "title": "Logging and Error Handling",
     "math": "Exception handling and logging frameworks",
     "note": "This lesson covers two crucial aspects of production applications. It introduces the built-in logging framework and the `ILogger` interface for writing log messages. It also demonstrates how to use developer exception pages and custom error handling middleware to manage errors gracefully."
   },
   {
-    "n": 27,
+    "n": 28,
     "title": "Introduction to Blazor",
     "math": "Component-based UI",
     "note": "This section provides a brief introduction to Blazor, a framework for building interactive, client-side web UI with C# instead of JavaScript. It explains the two hosting models, Blazor Server and Blazor WebAssembly, and their respective trade-offs."
   },
   {
-    "n": 28,
-    "title": "Deploying an ASP.NET Core Application",
-    "math": "Application deployment",
-    "note": "This final lesson discusses the process of deploying an ASP.NET Core application to a production environment. It covers publishing the application using `dotnet publish` and provides an overview of hosting options, including deploying to a web server like IIS or Nginx, or to a cloud service like Azure App Service."
+    "n": 29,
+    "title": "Real-time Apps with SignalR",
+    "math": "WebSocket communication",
+    "note": "This lesson introduces SignalR, a framework for adding real-time web functionality to apps. It explains how SignalR simplifies using protocols like WebSockets to enable server-side code to push content to clients instantly, which is ideal for chat apps or live dashboards."
+  },
+  {
+    "n": 30,
+    "title": "High-Performance APIs with gRPC",
+    "math": "Remote Procedure Call (RPC)",
+    "note": "This section covers gRPC as a modern, high-performance alternative to REST for building APIs. It explains its contract-first approach using Protocol Buffers and its benefits, such as efficiency and strong typing, making it suitable for microservices communication."
+  },
+  {
+    "n": 31,
+    "title": "Testing in ASP.NET Core",
+    "math": "Test-driven development (TDD)",
+    "note": "This lesson provides an overview of testing strategies. It introduces unit testing for business logic and controllers, and integration testing for testing multiple components of the application together, including the request pipeline and database access, using the `WebApplicationFactory`."
+  },
+  {
+    "n": 32,
+    "title": "Deploying to Linux",
+    "math": "Reverse proxy configuration",
+    "note": "This lesson covers the common scenario of deploying an ASP.NET Core application to a Linux server. It explains the role of a reverse proxy server like Nginx or Apache to handle incoming requests and forward them to the Kestrel web server running the .NET application."
+  },
+  {
+    "n": 33,
+    "title": "Containerizing with Docker",
+    "math": "Containerization",
+    "note": "This final lesson introduces Docker as a way to package and run an ASP.NET Core application in a container. It covers creating a `Dockerfile`, building a container image, and running the container, which provides a consistent environment for development and production."
   }
 ]

@@ -7,45 +7,45 @@
   },
   {
     "n": 2,
-    "title": "The Challenges of Traditional E2E Testing",
-    "math": "Test flakiness and reliability",
-    "note": "This lesson discusses the common problems associated with traditional E2E testing tools, such as Selenium. It covers issues like test flakiness (tests that pass or fail randomly), long execution times, and complex setup, which Cypress aims to solve."
+    "title": "What Is Cypress?",
+    "math": "Test framework architecture",
+    "note": "This section introduces Cypress as a next-generation, JavaScript-based testing framework. It explains its unique architecture: Cypress runs in the same run loop as the application, giving it direct access to the DOM and network traffic, which results in faster and more reliable tests."
   },
   {
     "n": 3,
-    "title": "What Is Cypress?",
-    "math": "Test framework architecture",
-    "note": "This section introduces Cypress as a next-generation, JavaScript-based E2E testing framework. It explains its unique architecture: Cypress runs in the same run loop as the application being tested, giving it direct access to the DOM and network traffic, which results in faster and more reliable tests."
-  },
-  {
-    "n": 4,
     "title": "Setting Up a Cypress Project",
     "math": "Node.js package management (npm)",
     "note": "This lesson provides a step-by-step guide to installing Cypress. It covers initializing a Node.js project with `npm init` and then adding Cypress as a development dependency using `npm install cypress --save-dev`. The initial folder structure created by Cypress is also explained."
   },
   {
+    "n": 4,
+    "title": "Cypress Configuration with `cypress.config.js`",
+    "math": "Configuration management",
+    "note": "This lesson introduces the main configuration file, `cypress.config.js`. It explains how to set global options like `baseUrl` to avoid repeating URLs, configure viewport size with `viewportWidth` and `viewportHeight`, and define the testing type (E2E vs. Component)."
+  },
+  {
     "n": 5,
-    "title": "The Cypress Test Runner",
-    "math": "Graphical user interfaces (GUIs)",
-    "note": "This section introduces the interactive Cypress Test Runner, which is launched with `npx cypress open`. It provides a visual interface to see all test files (specs), run them in a selected browser, and see a live-reloading preview of the application as the tests execute."
+    "title": "Managing Environment Variables",
+    "math": "Variable scope",
+    "note": "This lesson covers how to pass dynamic data to Cypress using environment variables. It demonstrates setting variables in the config file, via the command line (`--env`), or in `cypress.env.json`, and accessing them in tests with `Cypress.env('variableName')`."
   },
   {
     "n": 6,
-    "title": "Writing Your First Test",
-    "math": "Test structure (describe, it)",
-    "note": "This lesson covers the basic structure of a Cypress test file, which uses syntax from the Mocha testing framework. It explains the `describe()` block for grouping tests into a suite and the `it()` block for defining an individual test case."
+    "title": "The Cypress Test Runner",
+    "math": "Graphical user interfaces (GUIs)",
+    "note": "This section introduces the interactive Cypress Test Runner, launched with `npx cypress open`. It provides a visual interface to see all test files, run them, and see a live-reloading preview of the application. It also introduces the Selector Playground for finding element selectors."
   },
   {
     "n": 7,
-    "title": "Core Command: `cy.visit()`",
-    "math": "URL navigation",
-    "note": "This section introduces the most fundamental Cypress command, `cy.visit()`, which is used to navigate the browser to a specific URL. This is typically the first step in any E2E test."
+    "title": "Writing Your First E2E Test",
+    "math": "Test structure (describe, it)",
+    "note": "This lesson covers the basic structure of a Cypress test file, using syntax from Mocha. It explains `describe()` for grouping tests, `it()` for a single test case, and the fundamental `cy.visit()` command to navigate to a page."
   },
   {
     "n": 8,
-    "title": "Core Command: `cy.get()`",
+    "title": "Selecting Elements with `cy.get()`",
     "math": "DOM querying (CSS selectors)",
-    "note": "This lesson explains how to select elements on the page using `cy.get()`. It demonstrates using CSS selectors to target specific elements (e.g., `cy.get('.my-button')` or `cy.get('#user-name')`) that you want to interact with or assert on."
+    "note": "This lesson explains how to select elements on the page using `cy.get()`. It demonstrates using CSS selectors to target specific elements and discusses the best practice of using dedicated `data-cy` attributes for more resilient tests."
   },
   {
     "n": 9,
@@ -57,66 +57,90 @@
     "n": 10,
     "title": "Assertions with `.should()`",
     "math": "Boolean logic, assertions",
-    "note": "This lesson introduces assertions, the way you verify that your application is in the correct state. It focuses on the `.should()` command, which uses the Chai assertion library. Common assertions like `should('exist')`, `should('be.visible')`, and `should('have.text', 'Expected Text')` are demonstrated."
+    "note": "This lesson introduces assertions, the way you verify application state. It focuses on the `.should()` command, which uses the Chai assertion library. Common assertions like `should('be.visible')` and `should('have.text', 'Expected Text')` are demonstrated."
   },
   {
     "n": 11,
-    "title": "Automatic Waiting and Retries",
+    "title": "Automatic Waiting and Timeouts",
     "math": "Asynchronous event handling",
-    "note": "This section explains a key feature of Cypress that eliminates flakiness. Cypress automatically waits for commands and assertions to pass before moving on. For example, `cy.get('.my-element')` will automatically retry for a few seconds if the element is not immediately present, waiting for the application to render."
+    "note": "This section explains a key Cypress feature that eliminates flakiness. Cypress automatically waits and retries for a default period (e.g., 4 seconds) for commands and assertions to pass, waiting for the application to render without needing manual waits or sleeps."
   },
   {
     "n": 12,
-    "title": "The Cypress 'Promise' Problem and Aliases",
+    "title": "Understanding the Command Queue and Aliases",
     "math": "Asynchronous programming",
-    "note": "This lesson explains that Cypress commands are asynchronous and are queued, not executed immediately. This means you cannot assign their results to a variable using `const` or `let`. It introduces the correct way to handle this: using aliases with the `.as()` command to save a reference to an element or value."
+    "note": "This lesson explains that Cypress commands are asynchronous and queued. It introduces the `.as()` command to create an alias, which is the correct way to save a reference to an element or value to be used later in a test (e.g., `cy.get('@myAlias')`)."
   },
   {
     "n": 13,
-    "title": "Using Aliases",
-    "math": "Variable aliasing",
-    "note": "This section demonstrates how to use aliases. It shows how to save an alias using `.as('myAlias')` and then retrieve it later in the test using `cy.get('@myAlias')`. This is the standard Cypress pattern for working with values or elements across multiple steps."
+    "title": "Test Organization with Hooks",
+    "math": "Lifecycle hooks",
+    "note": "This lesson covers the use of hooks (from Mocha) to manage test setup and teardown. It explains `beforeEach()` (runs before each test in a `describe` block), `afterEach()`, `before()` (runs once before all tests), and `after()`. These are commonly used for tasks like resetting state."
   },
   {
     "n": 14,
-    "title": "Test Organization with Hooks",
-    "math": "Lifecycle hooks",
-    "note": "This lesson covers the use of hooks (from Mocha) to manage test setup and teardown. It explains `beforeEach()` (runs before each test in a `describe` block), `afterEach()`, `before()` (runs once before all tests), and `after()`. These are commonly used for tasks like resetting state or visiting a page."
+    "title": "Creating Custom Commands",
+    "math": "Function abstraction",
+    "note": "This section explains how to create reusable custom commands in the `cypress/support/commands.js` file using `Cypress.Commands.add()`. It demonstrates creating a `cy.login()` command to make tests cleaner and more maintainable."
   },
   {
     "n": 15,
-    "title": "Creating Custom Commands",
-    "math": "Function abstraction",
-    "note": "This section explains how to create reusable custom commands to avoid duplicating code. It demonstrates how to add a new command, like a `cy.login()` command, in the `cypress/support/commands.js` file using `Cypress.Commands.add()`. This makes tests cleaner and more maintainable."
-  },
-  {
-    "n": 16,
     "title": "Mocking Data with Fixtures",
     "math": "Test data mocking",
     "note": "This lesson introduces fixtures as a way to manage test data. It explains how to store JSON data in the `cypress/fixtures` folder and then load it into a test using `cy.fixture('filename.json')`. This is useful for providing consistent data for your tests."
   },
   {
-    "n": 17,
+    "n": 16,
     "title": "Network Requests: `cy.intercept()`",
     "math": "Network request interception",
     "note": "This section covers one of Cypress's most powerful features: `cy.intercept()`. It allows you to spy on and even stub (modify) network requests made by your application. This is crucial for testing the frontend independently of the backend and for testing edge cases like API failures."
   },
   {
-    "n": 18,
+    "n": 17,
     "title": "Stubbing API Responses",
     "math": "API mocking",
     "note": "This lesson demonstrates how to use `cy.intercept()` to provide a fake response to a network request. It shows how to match a specific API call (e.g., `GET /api/users`) and return a canned response from a fixture file. This allows you to test how your application handles different data scenarios without needing a live backend."
   },
   {
-    "n": 19,
-    "title": "Handling Authentication",
+    "n": 18,
+    "title": "Handling Authentication Programmatically",
     "math": "Programmatic login",
     "note": "This section explains the best practice for handling login in E2E tests. Instead of logging in through the UI in every test (which is slow), it demonstrates how to bypass the UI and log in programmatically by sending an HTTP request directly to the authentication endpoint using `cy.request()`."
   },
   {
-    "n": 20,
+    "n": 19,
     "title": "Running Tests Headlessly with `cypress run`",
     "math": "Command-line execution",
-    "note": "This final lesson covers how to run Cypress tests in a non-interactive, or 'headless', mode. It introduces the `cypress run` command, which is used to execute all tests from the command line. This is the command that is used in CI/CD pipelines to automate the test execution process."
+    "note": "This lesson covers how to run Cypress tests in a non-interactive, or 'headless', mode. It introduces the `npx cypress run` command, which is used to execute all tests from the command line. This is the command that is used in CI/CD pipelines to automate the test execution process."
+  },
+  {
+    "n": 20,
+    "title": "Introduction to Component Testing",
+    "math": "Component-based testing",
+    "note": "This section introduces Cypress's other major feature: Component Testing. It explains how this allows you to test individual UI components (e.g., React, Vue, Angular) in isolation, without needing to run your entire application, leading to faster, more focused tests."
+  },
+  {
+    "n": 21,
+    "title": "Writing Your First Component Test",
+    "math": "Component mounting",
+    "note": "This lesson provides a practical guide to component testing. It demonstrates the `cy.mount()` command, which renders a single component into the test runner. Once mounted, you can interact with and assert on the component using the same Cypress commands as in an E2E test."
+  },
+  {
+    "n": 22,
+    "title": "Extending Cypress with Plugins",
+    "math": "Plugin architecture",
+    "note": "This lesson explains the Cypress plugin ecosystem. It describes how plugins can be used to extend Cypress's capabilities, such as adding new commands, modifying internal behavior, or integrating with third-party services."
+  },
+  {
+    "n": 23,
+    "title": "Advanced Use Case: Accessibility Testing",
+    "math": "Accessibility (a11y)",
+    "note": "This lesson demonstrates a common and important use case for plugins. It shows how to integrate the `cypress-axe` plugin to automatically test for accessibility violations. A simple call to `cy.checkA11y()` can be added to tests to fail them if any WCAG rules are violated."
+  },
+  {
+    "n": 24,
+    "title": "Advanced Use Case: Visual Regression Testing",
+    "math": "Image differencing",
+    "note": "This lesson provides a conceptual overview of Visual Regression Testing. It explains the workflow: taking a screenshot of a component or page, comparing it against a previously approved 'baseline' image, and failing the test if there are any pixel differences. This is a powerful way to catch unintended UI changes."
   }
 ]

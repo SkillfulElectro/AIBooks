@@ -61,62 +61,104 @@
   },
   {
     "n": 11,
+    "title": "Performance: Indexing",
+    "math": "Query optimization",
+    "note": "This lesson explains how indexes are used to dramatically speed up data retrieval operations. It covers the `CREATE INDEX` syntax and discusses how the database uses indexes, like a book's index, to avoid scanning the entire table for the data it needs."
+  },
+  {
+    "n": 12,
+    "title": "Performance: Query Analysis with `EXPLAIN`",
+    "math": "Execution plan analysis",
+    "note": "This lesson introduces the `EXPLAIN` command, a powerful tool for understanding how MariaDB will execute a query. It shows how to read the output of `EXPLAIN` to identify performance bottlenecks, such as queries not using an available index."
+  },
+  {
+    "n": 13,
     "title": "Transactions",
     "math": "ACID properties",
     "note": "This lesson introduces the concept of a transaction as a single logical unit of work. It explains how to use `START TRANSACTION`, `COMMIT` (to make changes permanent), and `ROLLBACK` (to undo changes), which ensures data integrity through ACID properties when using a transactional storage engine like InnoDB."
   },
   {
-    "n": 12,
+    "n": 14,
     "title": "Storage Engines: InnoDB and Aria",
     "math": "Database storage engines",
     "note": "This section explains that MariaDB supports multiple storage engines, which handle the underlying storage and retrieval of data. It contrasts the default InnoDB engine (which is transactional and best for general use) with Aria, MariaDB's modern, crash-safe replacement for the older MyISAM engine."
   },
   {
-    "n": 13,
+    "n": 15,
     "title": "Advanced SQL: Common Table Expressions (CTEs)",
     "math": "Common Table Expressions",
     "note": "This lesson introduces CTEs (using the `WITH` clause) as a feature to simplify complex queries. A CTE allows you to define a temporary, named result set that you can then reference within a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, improving readability."
   },
   {
-    "n": 14,
+    "n": 16,
     "title": "Advanced SQL: Window Functions",
     "math": "Window functions",
     "note": "This section covers Window Functions, an advanced SQL feature that performs a calculation across a set of table rows that are somehow related to the current row. This is in contrast to an aggregate function, which returns a single value for a group of rows. Examples include `ROW_NUMBER()`, `RANK()`, and `LEAD()`."
   },
   {
-    "n": 15,
+    "n": 17,
+    "title": "Advanced SQL: Temporal Tables",
+    "math": "System-versioned tables",
+    "note": "This lesson introduces system-versioned tables, a powerful feature for tracking the history of data. By adding `WITH SYSTEM VERSIONING` to a table, MariaDB automatically keeps a history of all changes, allowing you to query the state of the data at any point in the past."
+  },
+  {
+    "n": 18,
     "title": "Working with JSON",
     "math": "JSON functions",
     "note": "This lesson explains MariaDB's support for the JSON data type. It demonstrates how to use built-in functions like `JSON_OBJECT`, `JSON_ARRAY`, and `JSON_EXTRACT` to store, create, and query semi-structured JSON data directly within the relational database."
   },
   {
-    "n": 16,
+    "n": 19,
     "title": "Stored Procedures",
     "math": "Database procedures",
     "note": "This lesson defines a Stored Procedure as a set of SQL statements that can be stored in the database and executed as a single unit. It demonstrates how to create and call a simple stored procedure, which can encapsulate complex business logic on the database server."
   },
   {
-    "n": 17,
+    "n": 20,
     "title": "User Account Management",
     "math": "Access control",
     "note": "This section for administrators covers how to manage security. It demonstrates the `CREATE USER` command to create new user accounts and the `GRANT` and `REVOKE` commands to assign specific privileges (like `SELECT`, `INSERT`, `UPDATE`) on specific databases or tables to those users."
   },
   {
-    "n": 18,
-    "title": "Backup and Recovery with `mariadb-dump`",
-    "math": "Database backups",
+    "n": 21,
+    "title": "Advanced Security: Roles and SSL/TLS",
+    "math": "Advanced access control",
+    "note": "This lesson builds on user management by introducing Roles, which are named collections of privileges that can be granted to users to simplify permissions management. It also explains the importance of configuring SSL/TLS to encrypt data in transit between the client and the server."
+  },
+  {
+    "n": 22,
+    "title": "Backup: Logical with `mariadb-dump`",
+    "math": "Logical database backups",
     "note": "This lesson covers the essential administrative task of backing up a database. It focuses on the `mariadb-dump` utility, which creates a logical backup of the database by generating a file containing the SQL statements needed to recreate it."
   },
   {
-    "n": 19,
-    "title": "Introduction to Replication",
+    "n": 23,
+    "title": "Backup: Physical with `mariabackup`",
+    "math": "Physical database backups",
+    "note": "This lesson introduces `mariabackup`, a tool for creating 'hot', physical backups. Unlike logical backups, physical backups copy the actual data files, which is much faster for very large databases and is the preferred method for serious production environments."
+  },
+  {
+    "n": 24,
+    "title": "Specialized Engine: ColumnStore",
+    "math": "Columnar storage for analytics",
+    "note": "This lesson introduces MariaDB ColumnStore, a specialized storage engine designed for Big Data and analytical (OLAP) workloads. It explains how storing data in columns instead of rows allows for massive data compression and extremely fast analytical queries."
+  },
+  {
+    "n": 25,
+    "title": "Compatibility: Oracle Mode",
+    "math": "PL/SQL compatibility",
+    "note": "This lesson covers a key feature for enterprise migrations: Oracle compatibility mode. By setting `sql_mode=ORACLE`, MariaDB can understand and execute a subset of Oracle's PL/SQL procedural language, greatly simplifying the process of migrating applications from Oracle."
+  },
+  {
+    "n": 26,
+    "title": "High Availability: Replication",
     "math": "Data replication",
     "note": "This section provides a high-level overview of replication for achieving high availability and read scaling. It explains the basic master-slave replication model, where one server (the master) logs all its changes, and other servers (slaves) read this log to apply the same changes."
   },
   {
-    "n": 20,
-    "title": "Introduction to Galera Cluster",
-    "math": "Database clustering",
+    "n": 27,
+    "title": "High Availability: Galera Cluster",
+    "math": "Synchronous replication",
     "note": "This final lesson introduces MariaDB Galera Cluster as a solution for high-availability synchronous replication. It explains that in a Galera cluster, all nodes are masters (multi-master), meaning you can write to any node, and the changes are synchronously replicated to all other nodes in the cluster."
   }
 ]

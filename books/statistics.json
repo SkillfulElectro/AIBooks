@@ -3,120 +3,120 @@
     "n": 1,
     "title": "What Is Statistics?",
     "math": "Statistics",
-    "note": "This section defines Statistics as the science of collecting, analyzing, interpreting, presenting, and organizing data. It explains the two main branches: Descriptive Statistics (summarizing data) and Inferential Statistics (drawing conclusions from data)."
+    "note": "Defines Statistics as the science of collecting, analyzing, interpreting, and organizing data. Explains the two main branches: Descriptive Statistics (summarizing data) and Inferential Statistics (drawing conclusions from data)."
   },
   {
     "n": 2,
-    "title": "Populations and Samples",
-    "math": "Sampling",
-    "note": "This lesson introduces two fundamental concepts. A 'Population' is the entire group that you want to draw conclusions about. A 'Sample' is a specific, smaller group that you will collect data from. The goal of inferential statistics is to use the sample to make inferences about the population."
+    "title": "Populations, Samples, and Experimental Design",
+    "math": "Sampling theory",
+    "note": "Introduces populations vs. samples. Covers sampling methods (simple random, stratified) and principles of experimental design, including control groups, randomization, and blinding, to ensure valid inferences."
   },
   {
     "n": 3,
-    "title": "Descriptive Statistics: Measures of Central Tendency",
-    "math": "Mean, median, mode",
-    "note": "This section covers how to describe the 'center' of a dataset. It defines the three main measures: the Mean (the average), the Median (the middle value), and the Mode (the most frequent value). The sensitivity of the mean to outliers is also discussed."
+    "title": "Descriptive Statistics: Central Tendency and Spread",
+    "math": "Mean, median, mode, variance, standard deviation",
+    "note": "Covers describing a dataset's center (Mean, Median, Mode) and its variability or dispersion (Range, Variance, Standard Deviation)."
   },
   {
     "n": 4,
-    "title": "Descriptive Statistics: Measures of Spread",
-    "math": "Variance, standard deviation",
-    "note": "This lesson explains how to measure the variability or dispersion of a dataset. It covers the Range, Variance (the average of the squared differences from the Mean), and the Standard Deviation (the square root of the variance), which is the most common measure of spread."
+    "title": "Visualizing Data: Histograms and Box Plots",
+    "math": "Histograms, quartiles, box plots",
+    "note": "Covers graphical representations of data distributions. Explains histograms for frequency and box plots for visualizing the five-number summary (minimum, Q1, median, Q3, maximum)."
   },
   {
     "n": 5,
-    "title": "Percentiles and Box Plots",
-    "math": "Percentiles, quartiles, box plots",
-    "note": "This section introduces percentiles as a way to describe the position of a value in a dataset. It focuses on Quartiles, which divide the data into four equal parts. The 'five-number summary' (minimum, Q1, median, Q3, maximum) is used to create a Box Plot, a powerful tool for visualizing distributions."
+    "title": "Introduction to Probability",
+    "math": "Probability theory",
+    "note": "Introduces probability as a measure of the likelihood of an event, from 0 (impossible) to 1 (certain). Defines experiment, sample space, and event."
   },
   {
     "n": 6,
-    "title": "Visualizing Data: Histograms",
-    "math": "Histograms",
-    "note": "This lesson covers the Histogram, a graphical representation of the distribution of numerical data. It explains how a histogram groups numbers into ranges ('bins') and shows the frequency of data points falling into each bin."
+    "title": "Conditional Probability and Bayes' Theorem",
+    "math": "Conditional probability, Bayes' theorem",
+    "note": "Covers the probability of an event occurring given another has occurred. Introduces Bayes' Theorem for relating conditional probabilities, a foundation of Naive Bayes classifiers."
   },
   {
     "n": 7,
-    "title": "Introduction to Probability",
-    "math": "Probability theory",
-    "note": "This section introduces probability as a measure of the likelihood of an event occurring, with values ranging from 0 (impossible) to 1 (certain). The basic concepts of an experiment, sample space, and event are defined."
+    "title": "Probability Distributions (Normal Distribution)",
+    "math": "Normal distribution",
+    "note": "Introduces probability distributions, focusing on the Normal (Gaussian) distribution. Explains its symmetric, bell-shaped curve and its importance in statistics."
   },
   {
     "n": 8,
-    "title": "Conditional Probability and Bayes' Theorem",
-    "math": "Conditional probability, Bayes' theorem",
-    "note": "This lesson covers conditional probability, which is the probability of an event occurring given that another event has already occurred. It then introduces Bayes' Theorem, a fundamental formula for relating the conditional probabilities of two events. It is the foundation of Naive Bayes classifiers in machine learning."
+    "title": "The Central Limit Theorem",
+    "math": "Central Limit Theorem (CLT)",
+    "note": "Covers the CLT, which states that the sampling distribution of the mean will be approximately normal for large samples, regardless of the population's distribution. This is the foundation of inferential statistics."
   },
   {
     "n": 9,
-    "title": "Probability Distributions",
-    "math": "Probability distributions",
-    "note": "This section defines a probability distribution as a mathematical function that provides the probabilities of occurrence of different possible outcomes in an experiment. The distinction between discrete probability distributions (for countable outcomes) and continuous probability distributions (for uncountable outcomes) is made."
+    "title": "Confidence Intervals",
+    "math": "Confidence intervals",
+    "note": "Introduces Confidence Intervals as an estimated range of values which is likely to include an unknown population parameter (like the mean), based on a certain confidence level (e.g., 95%)."
   },
   {
     "n": 10,
-    "title": "The Normal Distribution",
-    "math": "Normal distribution",
-    "note": "This lesson introduces the Normal Distribution (or Gaussian distribution), the most important probability distribution in statistics. It is a continuous distribution characterized by its symmetric, bell-shaped curve. Many natural phenomena follow a normal distribution."
+    "title": "Introduction to Hypothesis Testing",
+    "math": "Hypothesis testing",
+    "note": "Introduces the formal procedure for using sample data to evaluate a claim. Explains setting up a Null Hypothesis (H0, the default) and an Alternative Hypothesis (H1, the claim to test)."
   },
   {
     "n": 11,
-    "title": "The Standard Normal Distribution and Z-scores",
-    "math": "Standard score (Z-score)",
-    "note": "This section explains the Standard Normal Distribution, which is a special case of the normal distribution with a mean of 0 and a standard deviation of 1. It introduces the Z-score, a measure of how many standard deviations an observation is from the mean. Z-scores are used to compare values from different normal distributions."
+    "title": "Understanding the p-value",
+    "math": "p-value",
+    "note": "Defines the p-value: the probability of observing results as extreme as those found, assuming the null hypothesis is true. A small p-value (typically ≤ 0.05) is evidence against the null hypothesis."
   },
   {
     "n": 12,
-    "title": "The Central Limit Theorem",
-    "math": "Central Limit Theorem (CLT)",
-    "note": "This lesson covers one of the most important theorems in statistics. The Central Limit Theorem states that, for a large enough sample size, the sampling distribution of the mean will be approximately normal, regardless of the distribution of the population from which the samples are drawn. This theorem is the foundation of inferential statistics."
+    "title": "Type I & Type II Errors and Statistical Power",
+    "math": "Type I/II errors, Statistical Power",
+    "note": "Explains errors in hypothesis testing: Type I (false positive) and Type II (false negative). Introduces Statistical Power as the probability of correctly rejecting a false null hypothesis (avoiding a Type II error)."
   },
   {
     "n": 13,
-    "title": "Confidence Intervals",
-    "math": "Confidence intervals",
-    "note": "This section introduces Confidence Intervals as a method for estimating a population parameter (like the mean). A confidence interval gives an estimated range of values which is likely to include the unknown population parameter. The concept of a 'confidence level' (e.g., 95%) is also explained."
+    "title": "Hypothesis Test: The t-test",
+    "math": "Student's t-test",
+    "note": "Introduces the t-test, used to determine if there is a significant difference between the means of two groups, especially with small sample sizes."
   },
   {
     "n": 14,
-    "title": "Introduction to Hypothesis Testing",
-    "math": "Hypothesis testing",
-    "note": "This lesson introduces Hypothesis Testing as a formal procedure for using sample data to evaluate a claim about a population. It explains the framework, which involves setting up a Null Hypothesis (the default assumption) and an Alternative Hypothesis (the claim you want to test)."
+    "title": "Hypothesis Test: ANOVA (Analysis of Variance)",
+    "math": "ANOVA",
+    "note": "Introduces ANOVA, a statistical test used to compare the means of three or more groups to see if at least one group is different from the others."
   },
   {
     "n": 15,
-    "title": "The p-value",
-    "math": "p-value",
-    "note": "This crucial lesson defines the p-value. The p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct. A small p-value (typically ≤ 0.05) indicates that you can reject the null hypothesis."
+    "title": "Hypothesis Test: The Chi-Squared Test",
+    "math": "Chi-squared test",
+    "note": "Introduces the Chi-Squared test, used for analyzing categorical data. It assesses the goodness of fit or tests the independence of two categorical variables."
   },
   {
     "n": 16,
-    "title": "Type I and Type II Errors",
-    "math": "Type I and type II errors",
-    "note": "This section explains the two types of errors that can be made in hypothesis testing. A Type I error is rejecting the null hypothesis when it is actually true (a 'false positive'). A Type II error is failing to reject the null hypothesis when it is actually false (a 'false negative')."
+    "title": "Introduction to Non-parametric Tests",
+    "math": "Non-parametric statistics",
+    "note": "Introduces non-parametric tests (e.g., Wilcoxon rank-sum, Kruskal-Wallis) which do not assume the data follows a specific distribution. Useful for ordinal data or when assumptions for parametric tests are not met."
   },
   {
     "n": 17,
-    "title": "The t-test",
-    "math": "Student's t-test",
-    "note": "This lesson introduces the t-test, a common statistical test used to determine if there is a significant difference between the means of two groups. It is typically used when the sample size is small and the population standard deviation is unknown."
+    "title": "Correlation and Causation",
+    "math": "Correlation vs. causation",
+    "note": "Explains correlation as a measure of linear relationship (from -1 to 1). Emphasizes the critical principle that correlation does not imply causation, often due to confounding variables."
   },
   {
     "n": 18,
-    "title": "Correlation",
-    "math": "Correlation",
-    "note": "This section explains correlation as a statistical measure that expresses the extent to which two variables are linearly related. The Pearson correlation coefficient is introduced as a value between -1 and 1 that measures the strength and direction of the relationship."
+    "title": "Simple Linear Regression",
+    "math": "Simple linear regression",
+    "note": "Introduces Simple Linear Regression to model the relationship between two continuous variables by fitting a best-fit line. Defines concepts like slope and intercept."
   },
   {
     "n": 19,
-    "title": "Correlation Does Not Imply Causation",
-    "math": "Correlation vs. causation",
-    "note": "This lesson emphasizes one of the most important principles in statistics. Just because two variables are correlated does not mean that one causes the other. The possibility of a third, confounding variable is discussed as a common reason for spurious correlations."
+    "title": "Multiple Linear Regression",
+    "math": "Multiple linear regression",
+    "note": "Expands to Multiple Linear Regression, using several independent variables to predict a single continuous dependent variable. Introduces model evaluation concepts like R-squared."
   },
   {
     "n": 20,
-    "title": "Simple Linear Regression",
-    "math": "Simple linear regression",
-    "note": "This final lesson introduces Simple Linear Regression as a statistical method that allows us to summarize and study relationships between two continuous (quantitative) variables. It involves finding the best-fitting line to describe how a response variable `y` changes as an explanatory variable `x` changes."
+    "title": "Logistic Regression",
+    "math": "Logistic regression",
+    "note": "Introduces Logistic Regression, the fundamental method for classification problems. Explains how it's used to predict a binary (categorical) outcome based on one or more predictor variables."
   }
 ]
