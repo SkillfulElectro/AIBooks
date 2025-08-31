@@ -141,6 +141,24 @@
     "n": 24,
     "title": "PostgreSQL Extensions",
     "math": "Software architecture",
-    "note": "This final section introduces the concept of extensions in PostgreSQL, which allow you to add new functionality to the database. It provides examples of popular extensions like PostGIS (for geospatial data) and `hstore` (for key-value data)."
+    "note": "This section introduces the concept of extensions in PostgreSQL, which allow you to add new functionality to the database. It provides examples of popular extensions like PostGIS (for geospatial data) and `hstore` (for key-value data)."
+  },
+  {
+    "n": 25,
+    "title": "High Availability: Streaming Replication",
+    "math": "Replication",
+    "note": "This lesson covers a core feature for production environments. It explains streaming replication, where changes from a primary server are sent to one or more standby (replica) servers in real-time. This is used for high availability (failover) and for scaling read operations."
+  },
+  {
+    "n": 26,
+    "title": "Performance: Connection Pooling",
+    "math": "Resource management",
+    "note": "Explains why creating new database connections is expensive for an application. This lesson introduces connection pooling as a critical technique for performance, and describes the role of external tools like PgBouncer to manage a pool of connections that applications can share."
+  },
+  {
+    "n": 27,
+    "title": "Advanced: Foreign Data Wrappers (FDW)",
+    "math": "Data integration",
+    "note": "This lesson introduces Foreign Data Wrappers, a powerful PostgreSQL feature that allows you to access data from remote data sources as if they were local tables. It demonstrates how an FDW (like `postgres_fdw`) can be used to query a table on another PostgreSQL server directly."
   }
 ]

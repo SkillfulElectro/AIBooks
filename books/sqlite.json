@@ -1,86 +1,110 @@
 [
   {
     "n": 1,
-    "title": "Introduction to Databases and SQL",
-    "math": "Set theory, relational algebra",
-    "note": "This section introduces the fundamental concepts of databases. It explains what a database is, the purpose of a Structured Query Language (SQL), and the core differences between relational (SQL) and non-relational (NoSQL) database models. This lesson uses the context of data storage and retrieval systems."
+    "title": "What is SQLite?",
+    "math": "File I/O operations",
+    "note": "Defines SQLite's unique serverless, self-contained, zero-configuration, and transactional nature. Discusses ideal use cases like embedded devices, application file formats, and development/testing."
   },
   {
     "n": 2,
-    "title": "What is SQLite?",
-    "math": "File I/O operations",
-    "note": "This lesson defines SQLite and its unique characteristics. It covers the serverless, self-contained, zero-configuration, and transactional nature of the SQLite database engine. Ideal use cases are discussed, such as for embedded devices, IoT, application file formats, and development or testing."
+    "title": "Getting Started with the SQLite CLI",
+    "math": "Command-line syntax",
+    "note": "A hands-on guide to the SQLite command-line interface (CLI). Covers creating a database, and executing '.dot' commands like '.help', '.databases', and '.tables'."
   },
   {
     "n": 3,
-    "title": "Getting Started with the SQLite CLI",
-    "math": "Command-line syntax",
-    "note": "This section provides a hands-on guide to using the SQLite command-line interface (CLI). It covers how to install the necessary tools, create a new database file from the terminal, and execute special '.dot' commands like '.help', '.databases', and '.tables' to interact with the database."
+    "title": "Data Definition (DDL): CREATE, ALTER, DROP",
+    "math": "Schema design",
+    "note": "Covers the primary DDL commands: `CREATE TABLE` to define tables, `ALTER TABLE` to modify them, and `DROP TABLE` to delete them. Introduces SQLite's dynamic data types (NULL, INTEGER, REAL, TEXT, BLOB)."
   },
   {
     "n": 4,
-    "title": "Data Definition Language (DDL)",
-    "math": "Schema design",
-    "note": "Learn how to define the structure of a database. This lesson covers the primary DDL commands in SQL: `CREATE TABLE` to define a new table and its columns, `ALTER TABLE` to modify an existing table's structure, and `DROP TABLE` to delete a table. It also introduces the dynamic data types used in SQLite (NULL, INTEGER, REAL, TEXT, BLOB)."
+    "title": "Data Manipulation (DML): INSERT, UPDATE, DELETE",
+    "math": "CRUD operations",
+    "note": "Focuses on managing data within tables. Provides examples of `INSERT` to add rows, `UPDATE` to modify rows, and `DELETE` to remove rows."
   },
   {
     "n": 5,
-    "title": "Data Manipulation Language (DML)",
-    "math": "CRUD operations (Create, Read, Update, Delete)",
-    "note": "This section focuses on managing the data within tables. It provides detailed examples of the core DML commands: `INSERT` to add new rows of data, `UPDATE` to modify existing rows, and `DELETE` to remove rows from a table. The context is direct data manipulation using the SQLite engine."
+    "title": "Basic Queries: SELECT, WHERE, ORDER BY, LIMIT",
+    "math": "Boolean logic & Sorting",
+    "note": "Introduces the `SELECT` statement, filtering with `WHERE`, sorting with `ORDER BY`, and restricting results with `LIMIT`. Also covers `DISTINCT` for unique values."
   },
   {
     "n": 6,
-    "title": "Basic Data Retrieval with SELECT",
-    "math": "Boolean logic, predicate logic",
-    "note": "This lesson introduces the foundation of querying data in SQL. It covers the `SELECT` statement for retrieving data from one or more columns and the `WHERE` clause for filtering rows based on specific conditions. The concept of a result set is explained. This is performed within the SQLite SQL dialect."
+    "title": "Aggregate Functions and GROUP BY",
+    "math": "Statistical functions",
+    "note": "Teaches how to perform calculations on sets of rows using `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX`. Explains the use of `GROUP BY` to apply aggregates to groups of rows."
   },
   {
     "n": 7,
-    "title": "Filtering and Sorting Results",
-    "math": "Comparison operators, sorting algorithms",
-    "note": "Learn to refine and organize query results. This section covers using `ORDER BY` to sort data in ascending or descending order and `LIMIT` to restrict the number of rows returned. It also explains how to use `DISTINCT` to remove duplicate values from a result set. Logical operators (`AND`, `OR`, `NOT`) and comparison operators (`=`, `!=`, `<`, `>`) are covered in detail."
+    "title": "Combining Data with JOINs (INNER, LEFT)",
+    "math": "Set intersection",
+    "note": "Explains how to retrieve data from multiple tables in a single query using `INNER JOIN` for matching values and `LEFT JOIN` for including all records from the left table."
   },
   {
     "n": 8,
-    "title": "Combining Data with JOINs",
-    "math": "Set intersection and union",
-    "note": "This lesson explains how to retrieve data from multiple tables in a single query. It focuses on the most common join types: `INNER JOIN` to select records that have matching values in both tables, and `LEFT JOIN` to select all records from the left table and the matched records from the right table."
+    "title": "Advanced Querying: Common Table Expressions (CTEs)",
+    "math": "Modular arithmetic",
+    "note": "Introduces CTEs (using the `WITH` clause) as a way to create temporary, named result sets to improve the readability and structure of complex queries."
   },
   {
     "n": 9,
-    "title": "Using Aggregate Functions",
-    "math": "Statistical functions (average, sum, count)",
-    "note": "This section teaches how to perform calculations on a set of rows and return a single summary value. It covers the main SQL aggregate functions: `COUNT`, `SUM`, `AVG`, `MIN`, and `MAX`. The use of the `GROUP BY` clause to group rows and apply aggregates to each group is also explained."
+    "title": "Advanced Querying: Window Functions",
+    "math": "Data analysis",
+    "note": "Explores window functions (`OVER`, `PARTITION BY`) which perform calculations across a set of rows related to the current row. Covers `ROW_NUMBER`, `RANK`, `LEAD`, and `LAG`."
   },
   {
     "n": 10,
-    "title": "Ensuring Data Integrity with Constraints",
+    "title": "Data Integrity with Constraints",
     "math": "Rule-based systems",
-    "note": "Learn how to enforce rules on the data in a table using SQL constraints. This lesson covers `PRIMARY KEY` for unique row identification, `FOREIGN KEY` to link tables, `UNIQUE` to ensure all values in a column are different, `NOT NULL` to prevent empty values, and `CHECK` to validate data against a condition."
+    "note": "Covers enforcing data rules with constraints: `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL`, and `CHECK`."
   },
   {
     "n": 11,
     "title": "Speeding Up Queries with Indexes",
     "math": "B-tree data structure",
-    "note": "This section explains how indexes can improve the performance of data retrieval operations. It covers the `CREATE INDEX` command and discusses the trade-offs of using indexes, including the impact on data insertion and update speed. The context is query optimization within the SQLite engine."
+    "note": "Explains how `CREATE INDEX` can improve data retrieval performance and discusses the trade-offs of using indexes."
   },
   {
     "n": 12,
-    "title": "Understanding Transactions",
-    "math": "ACID properties (Atomicity, Consistency, Isolation, Durability)",
-    "note": "This lesson covers how to group multiple SQL statements into a single, all-or-nothing operation called a transaction. It explains the commands `BEGIN TRANSACTION`, `COMMIT` to save the changes, and `ROLLBACK` to undo the changes, ensuring data integrity even if errors occur. The ACID properties are explained in the context of SQLite."
+    "title": "Understanding Transactions (ACID)",
+    "math": "ACID properties",
+    "note": "Covers grouping SQL statements into an all-or-nothing transaction using `BEGIN`, `COMMIT`, and `ROLLBACK`. Explains the ACID properties in the context of SQLite."
   },
   {
     "n": 13,
     "title": "Simplifying Queries with Views",
     "math": "Abstraction",
-    "note": "Learn how to use views to encapsulate complex queries. This section explains that a view is a stored SQL query that acts like a virtual table. It covers the `CREATE VIEW` and `DROP VIEW` commands and demonstrates how views can be used to simplify data access and enhance security by restricting access to underlying table columns."
+    "note": "Learn how to use `CREATE VIEW` to encapsulate complex queries. A view is a stored SQL query that acts like a virtual table, simplifying data access and enhancing security."
   },
   {
     "n": 14,
+    "title": "Configuring SQLite with PRAGMA",
+    "math": "Parameter tuning",
+    "note": "Introduces the `PRAGMA` command for querying and modifying the SQLite library's operation. Covers key pragmas like `foreign_keys=ON`, `journal_mode`, and `synchronous` for configuration."
+  },
+  {
+    "n": 15,
+    "title": "Extension: Full-Text Search with FTS5",
+    "math": "Information retrieval",
+    "note": "Explores the powerful FTS5 extension for advanced text searching. Covers creating virtual FTS tables and using the `MATCH` operator to perform efficient and complex searches on text data."
+  },
+  {
+    "n": 16,
+    "title": "Extension: Working with JSON Data (json1)",
+    "math": "Semi-structured data querying",
+    "note": "Introduces the `json1` extension for storing and manipulating JSON. Covers functions like `json_extract()` and `json_object()` for querying and working with JSON documents inside SQLite."
+  },
+  {
+    "n": 17,
+    "title": "Backup and Restore Strategies",
+    "math": "Data redundancy",
+    "note": "Discusses strategies for backing up a file-based database. Covers simple file copying and introduces the Online Backup API for performing live backups without service interruption."
+  },
+  {
+    "n": 18,
     "title": "Using SQLite with Python",
     "math": "API integration",
-    "note": "This lesson demonstrates how to interact with an SQLite database programmatically using Python's built-in `sqlite3` module. It covers the standard workflow: establishing a connection to a database file, creating a cursor object, executing SQL queries (DDL, DML, and SELECT), and fetching the results into Python variables."
+    "note": "Demonstrates how to interact with an SQLite database programmatically using Python's built-in `sqlite3` module. Covers connecting, executing queries, and fetching results."
   }
 ]

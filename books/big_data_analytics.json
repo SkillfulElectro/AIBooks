@@ -97,24 +97,30 @@
   },
   {
     "n": 17,
+    "title": "Scripting with Apache Pig",
+    "math": "Data flow language",
+    "note": "This lesson covers Apache Pig, a high-level platform for creating MapReduce programs used with Hadoop. It explains Pig Latin, a simple scripting language that allows for complex data transformations, abstracting away the complexity of writing Java MapReduce code."
+  },
+  {
+    "n": 18,
     "title": "Stream Processing with Spark Streaming",
     "math": "Micro-batching",
     "note": "This section covers how to process data in near real-time with Apache Spark. It explains the concept of Spark Streaming, which uses a 'micro-batching' approach to ingest data from sources like Kafka or Flume, process it in small batches, and push the results out to downstream systems."
   },
   {
-    "n": 18,
+    "n": 19,
     "title": "Machine Learning at Scale with Spark MLlib",
     "math": "Distributed machine learning algorithms",
     "note": "This lesson introduces MLlib, Spark's scalable machine learning library. It explains how MLlib provides implementations of common algorithms (like classification, regression, clustering) that are designed to run in parallel on a cluster, enabling machine learning on massive datasets."
   },
   {
-    "n": 19,
+    "n": 20,
     "title": "Big Data in the Cloud: AWS EMR and S3",
     "math": "Cloud computing services",
     "note": "This section explains how cloud platforms simplify Big Data analytics. It introduces Amazon Web Services (AWS) and its key services: S3 (Simple Storage Service) as a highly scalable data lake, and EMR (Elastic MapReduce) as a managed service for running Hadoop and Spark clusters without managing the underlying infrastructure."
   },
   {
-    "n": 20,
+    "n": 21,
     "title": "The Modern Data Lakehouse",
     "math": "Hybrid data architecture",
     "note": "This final lesson introduces the concept of the Data Lakehouse as a modern architecture that combines the best features of data lakes (low-cost, flexible storage) and data warehouses (ACID transactions, data management features). It explains how technologies like Delta Lake enable this hybrid approach."

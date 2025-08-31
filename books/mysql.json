@@ -67,84 +67,126 @@
   },
   {
     "n": 12,
+    "title": "Transactions",
+    "math": "ACID Properties",
+    "note": "Introduces transactions for executing a set of operations as a single, atomic unit. This lesson covers `START TRANSACTION`, `COMMIT` (to save the changes), and `ROLLBACK` (to undo the changes), which are fundamental for data integrity with the InnoDB storage engine."
+  },
+  {
+    "n": 13,
     "title": "Pattern Matching with LIKE",
     "math": "String theory",
     "note": "Explains how to use the `LIKE` operator in a `WHERE` clause for pattern matching in string data. The lesson covers the use of wildcard characters: `%` (matches any sequence of characters) and `_` (matches a single character)."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Sorting and Limiting Results",
     "math": "Sorting algorithms",
     "note": "Explains how to use the `ORDER BY` clause to sort query results and the `LIMIT` clause to restrict the number of rows returned, which is useful for pagination."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "MySQL Aggregate Functions",
     "math": "Statistics",
     "note": "This lesson introduces the standard SQL aggregate functions (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`) as implemented in MySQL. It demonstrates how to perform calculations on data sets within a MySQL database."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Grouping Data with GROUP BY",
     "math": "Data aggregation",
     "note": "Explains the `GROUP BY` clause for summarizing data in MySQL. The lesson demonstrates how to use `GROUP BY` with aggregate functions to create reports and analyze data."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "Joins in MySQL",
     "math": "Set theory",
     "note": "This section covers how to combine data from multiple tables using `INNER JOIN`, `LEFT JOIN`, and `RIGHT JOIN`. It explains the logic of these joins for querying related data in a MySQL relational database."
   },
   {
-    "n": 17,
+    "n": 18,
     "title": "MySQL Views",
     "math": "Set theory",
     "note": "Explains how to create and use views in MySQL to encapsulate complex queries and provide a simplified interface to the data. The context is on improving security and reusability."
   },
   {
-    "n": 18,
+    "n": 19,
+    "title": "Advanced SQL: Common Table Expressions (CTEs)",
+    "math": "Query structuring",
+    "note": "Introduces Common Table Expressions (using the `WITH` clause) as a modern feature to simplify complex queries. A CTE allows you to define a temporary, named result set that improves the readability and structure of multi-step queries."
+  },
+  {
+    "n": 20,
+    "title": "Advanced SQL: Window Functions",
+    "math": "Analytical functions",
+    "note": "Covers Window Functions, an advanced SQL feature for performing calculations across a set of rows related to the current row. This lesson introduces functions like `ROW_NUMBER()`, `RANK()`, `LEAD()`, and `LAG()` for sophisticated analysis."
+  },
+  {
+    "n": 21,
+    "title": "Advanced SQL: JSON Data Type",
+    "math": "JSON functions",
+    "note": "Explains MySQL's support for the native JSON data type for storing semi-structured data. This lesson demonstrates how to use built-in functions like `JSON_OBJECT`, `JSON_ARRAY`, and `JSON_EXTRACT` to manage JSON directly in the database."
+  },
+  {
+    "n": 22,
     "title": "Introduction to Indexes",
     "math": "Data structures",
     "note": "This section covers the concept of indexes in MySQL for improving query performance. It explains how to create and manage indexes on tables and discusses different index types like B-Tree."
   },
   {
-    "n": 19,
+    "n": 23,
+    "title": "Advanced Topic: Partitioning",
+    "math": "Database scaling",
+    "note": "Provides a high-level introduction to table partitioning. This lesson explains how partitioning horizontally divides a large table into smaller, more manageable pieces, which can significantly improve query performance on very large datasets."
+  },
+  {
+    "n": 24,
     "title": "MySQL Storage Engines (InnoDB vs. MyISAM)",
     "math": "Database design",
     "note": "Explains the concept of storage engines in MySQL. The lesson contrasts the two most common engines, InnoDB (which supports transactions and foreign keys) and MyISAM, and discusses their respective use cases."
   },
   {
-    "n": 20,
+    "n": 25,
     "title": "MySQL User Management",
     "math": "Access control",
     "note": "Explains how to create and manage user accounts in MySQL. The lesson covers `CREATE USER`, `GRANT`, and `REVOKE` statements to control user access to databases and tables, a key aspect of MySQL security."
   },
   {
-    "n": 21,
+    "n": 26,
+    "title": "Security: Prepared Statements & SQL Injection",
+    "math": "Application security",
+    "note": "A critical security lesson that explains the threat of SQL Injection. It demonstrates how attackers exploit vulnerabilities and shows that using prepared statements in application code (not dynamic SQL) is the primary method of prevention."
+  },
+  {
+    "n": 27,
     "title": "Backup and Restore",
     "math": "Logic",
     "note": "This lesson introduces the `mysqldump` utility for creating logical backups of a MySQL database. It also covers how to restore a database from a backup file, a critical skill for any MySQL administrator."
   },
   {
-    "n": 22,
+    "n": 28,
     "title": "Introduction to Stored Procedures",
     "math": "Procedural programming",
     "note": "Provides an introduction to stored procedures in MySQL. The lesson explains how to create simple procedures that encapsulate a series of SQL statements for reuse, improving performance and security."
   },
   {
-    "n": 23,
+    "n": 29,
+    "title": "Advanced Procedures: Cursors",
+    "math": "Iterators",
+    "note": "Explains how to use a cursor within a stored procedure to iterate through a result set one row at a time. This allows for complex, row-by-row procedural logic to be executed directly within the database."
+  },
+  {
+    "n": 30,
     "title": "Introduction to Triggers",
     "math": "Event-driven programming",
     "note": "Explains how to create triggers, which are stored programs that are automatically executed in response to specific events (e.g., `INSERT`, `UPDATE`) on a table. Triggers are useful for maintaining data integrity."
   },
   {
-    "n": 24,
+    "n": 31,
     "title": "Full-Text Search",
     "math": "Search algorithms",
     "note": "This lesson introduces MySQL's full-text search capabilities. It explains how to create a `FULLTEXT` index and use `MATCH() ... AGAINST()` syntax to perform more natural language searches on text data."
   },
   {
-    "n": 25,
+    "n": 32,
     "title": "MySQL Workbench (GUI)",
     "math": "Graphical user interface",
     "note": "This final section provides an overview of MySQL Workbench, a graphical tool for database design, development, and administration. It demonstrates how to perform common tasks through a user-friendly interface, as an alternative to the command-line client."

@@ -3,120 +3,126 @@
     "n": 1,
     "title": "What Is Jira?",
     "math": "Project management software",
-    "note": "This section introduces Jira as a powerful software application used for bug tracking, issue tracking, and agile project management. It explains that Jira is highly configurable and is used by development teams to plan, track, and release software."
+    "note": "This section introduces Jira as a powerful application for bug tracking, issue tracking, and agile project management. It explains that Jira is highly configurable and is used by teams to plan, track, and release software."
   },
   {
     "n": 2,
-    "title": "Jira Products: Software, Service Management, and Work Management",
+    "title": "Jira Products and Project Types",
     "math": "Product lines",
-    "note": "This lesson clarifies the different products in the Jira family. It focuses on Jira Software (designed for software development teams) but also introduces Jira Service Management (for IT service desks) and Jira Work Management (for business teams), explaining their distinct purposes."
+    "note": "This lesson clarifies the different Jira products (Software, Service Management) and project templates (Kanban, Scrum). It also explains the difference between company-managed and team-managed projects."
   },
   {
     "n": 3,
-    "title": "Key Concepts: Projects, Issues, and Workflows",
+    "title": "Key Concepts: Issues, Projects, and Workflows",
     "math": "Core entities",
-    "note": "This section defines the fundamental building blocks of Jira. A 'Project' is a container for work. An 'Issue' is a single work item within a project (like a bug, a task, or a user story). A 'Workflow' is the set of statuses and transitions that an issue moves through from creation to completion."
+    "note": "This section defines the fundamental building blocks of Jira. A 'Project' is a container for work. An 'Issue' is a single work item (e.g., bug, task, story). A 'Workflow' is the set of statuses and transitions an issue moves through."
   },
   {
     "n": 4,
-    "title": "Creating Your First Jira Project",
-    "math": "Project setup",
-    "note": "This lesson provides a practical guide to creating a new project in Jira. It explains the difference between the 'Kanban' and 'Scrum' project templates and provides guidance on which to choose based on your team's methodology."
+    "title": "Navigating the Jira UI",
+    "math": "User interface tour",
+    "note": "This lesson provides a practical guide to creating a project and finding your way around the Jira interface, explaining the purpose of the main navigation elements like the project sidebar, boards, and backlog."
   },
   {
     "n": 5,
-    "title": "Understanding Issue Types",
-    "math": "Work item classification",
-    "note": "This section details the different types of issues available in a typical Jira Software project. It explains the hierarchy: an 'Epic' is a large body of work, a 'Story' is a feature from the user's perspective, a 'Task' is a specific to-do item, and a 'Bug' is a problem that needs fixing."
+    "title": "Creating and Managing Issues",
+    "math": "Data entry and management",
+    "note": "This lesson walks through creating an issue. It covers filling out key fields like Summary, Description, Assignee, and Priority. It also demonstrates how to add comments, attach files, and link issues."
   },
   {
     "n": 6,
-    "title": "Creating and Managing an Issue",
-    "math": "Data entry and management",
-    "note": "This lesson walks through the process of creating a new issue. It covers filling out the key fields like Summary, Description, Assignee, and Priority. It also demonstrates how to add comments, attach files, and link the issue to other issues."
+    "title": "Using a Kanban Board",
+    "math": "Kanban methodology",
+    "note": "This lesson provides a guide to the Jira Kanban board. It explains how columns represent workflow stages (e.g., 'To Do', 'In Progress', 'Done') and how to set Work in Progress (WIP) limits to prevent bottlenecks."
   },
   {
     "n": 7,
-    "title": "Introduction to Kanban in Jira",
-    "math": "Kanban methodology",
-    "note": "This section introduces the Kanban methodology as a process for visualizing workflow, limiting work in progress, and maximizing efficiency. It explains how Jira's Kanban board is a tool for implementing this methodology."
+    "title": "Introduction to Scrum in Jira",
+    "math": "Scrum methodology",
+    "note": "This lesson introduces the Scrum framework. It explains the core concepts of Sprints (fixed-length iterations), the Product Backlog, and the roles of the Scrum team, all within the context of how Jira supports this framework."
   },
   {
     "n": 8,
-    "title": "Using the Kanban Board",
-    "math": "Visual workflow management",
-    "note": "This lesson provides a guide to the Jira Kanban board. It explains how the columns on the board represent the stages of your workflow (e.g., 'To Do', 'In Progress', 'Done') and how issues (represented as cards) are moved from left to right as work is completed."
+    "title": "Managing the Backlog",
+    "math": "Backlog grooming",
+    "note": "This section focuses on the Backlog view in a Jira Scrum project. It demonstrates how to create, prioritize (by dragging and dropping), and estimate issues (using Story Points) in the backlog."
   },
   {
     "n": 9,
-    "title": "Configuring Your Kanban Board",
-    "math": "Board configuration",
-    "note": "This section covers how to customize a Kanban board. It demonstrates how to map workflow statuses to columns and how to set Work in Progress (WIP) limits on columns, which is a core practice of Kanban to prevent bottlenecks."
+    "title": "Planning and Running a Sprint",
+    "math": "Sprint planning and tracking",
+    "note": "This section demonstrates the process of Sprint Planning: creating a Sprint, moving issues from the Backlog into it, and starting the sprint. It also covers using the Active Sprints board to track progress during the sprint."
   },
   {
     "n": 10,
-    "title": "Introduction to Scrum in Jira",
-    "math": "Scrum methodology",
-    "note": "This lesson introduces the Scrum framework as an iterative approach to project management. It explains the core concepts of Sprints (fixed-length iterations), the Product Backlog, and the roles of the Scrum team, all within the context of how Jira supports this framework."
+    "title": "Basic Searching and Filtering",
+    "math": "Boolean logic",
+    "note": "This lesson covers the basic search functionality in Jira, allowing users to filter issues by key fields like project, status, assignee, and issue type."
   },
   {
     "n": 11,
-    "title": "The Product Backlog",
-    "math": "Backlog grooming",
-    "note": "This section focuses on the Backlog view in a Jira Scrum project. It is an ordered list of all the work to be done for the product. The lesson demonstrates how to create, prioritize (by dragging and dropping), and estimate issues in the backlog."
+    "title": "Advanced Searching with JQL",
+    "math": "Query languages",
+    "note": "This section introduces JQL (Jira Query Language) for more powerful searching. It covers the basic syntax (e.g., `project = 'PROJ' AND status = 'Done'`) and introduces more advanced functions (`membersOf()`) and history-based queries (`WAS`)."
   },
   {
     "n": 12,
-    "title": "Estimation with Story Points",
-    "math": "Relative estimation",
-    "note": "This lesson explains the concept of Story Points as a unit of relative effort used in Scrum to estimate the size of a user story. It is a measure of complexity, uncertainty, and effort, not a measure of time. Jira's 'Estimation' field is shown."
+    "title": "Saving Searches as Filters",
+    "math": "Saved queries",
+    "note": "This lesson explains how a JQL query can be saved as a 'filter'. This allows you to easily re-run the search later. Saved filters are also used as the basis for dashboards, boards, and subscriptions."
   },
   {
     "n": 13,
-    "title": "Planning and Starting a Sprint",
-    "math": "Sprint planning",
-    "note": "This section demonstrates the process of Sprint Planning in Jira. It shows how to create a new Sprint, set its duration, and drag issues from the Backlog into the Sprint to form the Sprint Backlog. Starting the sprint moves the issues to the 'Active Sprints' board."
+    "title": "Dashboards and Gadgets",
+    "math": "Data visualization",
+    "note": "This section introduces Jira Dashboards for creating a high-level, visual overview. It explains that dashboards are composed of 'gadgets', which are configurable widgets that can display charts, statistics, or the results of a saved filter."
   },
   {
     "n": 14,
-    "title": "Using the Active Sprints Board",
-    "math": "Sprint tracking",
-    "note": "This lesson provides a guide to the Active Sprints board, which is the Scrum team's view of all the work in the current sprint. Like the Kanban board, it has columns representing the workflow, and the team moves issues across the board throughout the sprint."
+    "title": "Agile Reports",
+    "math": "Agile metrics",
+    "note": "This lesson covers key reports for agile teams. For Scrum, it explains the Burndown Chart and Velocity Chart. For Kanban, it introduces the Cumulative Flow Diagram, which shows the status of issues over time."
   },
   {
     "n": 15,
-    "title": "Searching with JQL (Jira Query Language)",
-    "math": "Query languages",
-    "note": "This section introduces JQL as a powerful, structured query language for searching for issues in Jira. It provides a more advanced alternative to the basic search. The lesson covers the basic syntax, including fields, operators, and values (e.g., `project = 'PROJ' AND status = 'Done'`)."
+    "title": "Advanced Planning with Roadmaps",
+    "math": "Gantt charts",
+    "note": "An introduction to Jira's high-level planning tools. It explains how Roadmaps (or Timelines) are used to visualize epics and dependencies over time, providing a long-term strategic view of project initiatives across multiple teams."
   },
   {
     "n": 16,
-    "title": "Saving Searches as Filters",
-    "math": "Saved queries",
-    "note": "This lesson explains how a JQL query can be saved as a 'filter'. This allows you to easily re-run the search later without retyping the query. Saved filters are also used to populate dashboards and boards."
+    "title": "Automation for Jira",
+    "math": "Rule-based logic",
+    "note": "A dedicated lesson on Jira's native automation engine. It explains the 'trigger-condition-action' rule structure and demonstrates how to create a simple automation rule, such as automatically transitioning an issue or notifying a Slack channel."
   },
   {
     "n": 17,
-    "title": "Dashboards and Gadgets",
-    "math": "Data visualization",
-    "note": "This section introduces Jira Dashboards as a way to create a high-level, visual overview of projects and work. It explains that dashboards are composed of 'gadgets', which are small, configurable widgets that can display information like a pie chart of issue statuses or the results of a saved filter."
+    "title": "Integrating Jira with Source Control",
+    "math": "Toolchain integration",
+    "note": "This section explains how to connect Jira to a version control system like GitHub or Bitbucket. It demonstrates how including an issue key (e.g., 'PROJ-123') in a commit message or branch name automatically links the development work back to the Jira issue."
   },
   {
     "n": 18,
-    "title": "Scrum Reports: Burndown and Velocity",
-    "math": "Agile metrics",
-    "note": "This lesson covers two key reports for Scrum teams. The Burndown Chart shows the work remaining in a sprint, helping the team to see if they are on track. The Velocity Chart shows the average amount of work a team completes per sprint, which is useful for future sprint planning."
+    "title": "Jira Administration: Users and Groups",
+    "math": "User management",
+    "note": "This lesson introduces the basics of Jira administration, covering how to invite new users and organize them into groups to simplify permission management."
   },
   {
     "n": 19,
-    "title": "Integrating Jira with Source Control",
-    "math": "Toolchain integration",
-    "note": "This section explains how to connect Jira to a version control system like GitHub or Bitbucket. It demonstrates how including an issue key (e.g., 'PROJ-123') in a commit message or branch name automatically links the development work back to the Jira issue, providing traceability."
+    "title": "Jira Administration: Workflows",
+    "math": "Workflow customization",
+    "note": "This section focuses on customizing workflows. It explains how an administrator can use the workflow editor to add new statuses (steps) and transitions (paths between steps) to model a team's specific process. Post functions and validators are also introduced."
   },
   {
     "n": 20,
-    "title": "Jira Administration: Workflows",
-    "math": "Workflow customization",
-    "note": "This final lesson provides an overview of project administration. It focuses on customizing workflows. It explains how an administrator can use the workflow editor to add new statuses and transitions, tailoring the issue lifecycle to match a team's specific process."
+    "title": "Jira Administration: Custom Fields and Screens",
+    "math": "Schema customization",
+    "note": "A lesson that expands on administration. It explains how to create custom fields to capture specific information and how to design different 'screens' (sets of fields) for the create, edit, and view operations of an issue."
+  },
+  {
+    "n": 21,
+    "title": "Jira Administration: Schemes",
+    "math": "Configuration management",
+    "note": "A conceptual lesson on Jira's powerful 'schemes' model. It explains that schemes (e.g., Permission Schemes, Notification Schemes, Workflow Schemes) are reusable configurations that can be associated with multiple projects, which is the key to managing Jira at scale."
   }
 ]

@@ -13,229 +13,157 @@
   },
   {
     "n": 3,
-    "title": "JavaScript Syntax and Statements",
-    "math": "Syntax analysis",
-    "note": "Covers the fundamental syntax of JavaScript, including statements, comments, and the importance of semicolons. The lesson introduces the concept of a program as a sequence of statements."
+    "title": "Variables and Data Types",
+    "math": "Algebra",
+    "note": "Explains how to declare variables using `var`, `let`, and `const`, covering scope differences. It also introduces the primitive data types: `String`, `Number`, `Boolean`, `Null`, `Undefined`, and `Symbol`."
   },
   {
     "n": 4,
-    "title": "Variables: var, let, and const",
-    "math": "Algebra",
-    "note": "Explains how to declare variables using `var`, `let`, and `const`. This lesson covers the concepts of scope (global, function, block) and the differences between the three declaration keywords in modern JavaScript."
+    "title": "Operators",
+    "math": "Arithmetic and Boolean algebra",
+    "note": "Covers the main operators: arithmetic (`+`, `-`, `*`), assignment (`=`), comparison (`==`, `===`), and logical (`&&`, `||`, `!`). It emphasizes the crucial difference between strict (`===`) and loose (`==`) equality."
   },
   {
     "n": 5,
-    "title": "JavaScript Data Types",
-    "math": "Set theory",
-    "note": "Introduces the primitive data types in JavaScript: `String`, `Number`, `Boolean`, `Null`, `Undefined`, and `Symbol`, as well as the `BigInt` type. It also introduces the `Object` type."
+    "title": "Conditional Statements (if/else, switch)",
+    "math": "Conditional logic",
+    "note": "This section explains how to use `if`, `else if`, `else`, and `switch` statements to control the flow of a program based on different conditions."
   },
   {
     "n": 6,
-    "title": "Type Conversion",
-    "math": "Logic",
-    "note": "This lesson covers how JavaScript handles type conversion, both implicitly (coercion) and explicitly. It explains how to convert values between strings, numbers, and booleans, and the potential pitfalls of coercion."
+    "title": "Loops: for and while",
+    "math": "Iteration",
+    "note": "Covers the fundamental loop structures in JavaScript: the `for` loop, the `while` loop, and the `do...while` loop for repeating blocks of code."
   },
   {
     "n": 7,
-    "title": "Operators: Arithmetic and Assignment",
-    "math": "Arithmetic",
-    "note": "Covers the basic arithmetic operators (`+`, `-`, `*`, `/`, `%`) and assignment operators (`=`, `+=`, `-=`) in JavaScript. The lesson demonstrates how to perform calculations and assign values to variables."
+    "title": "Functions",
+    "math": "Functional programming",
+    "note": "Introduces functions for creating reusable blocks of code. The lesson covers function declarations, function expressions, parameters, return values, and the concept of hoisting."
   },
   {
     "n": 8,
-    "title": "Operators: Comparison and Logical",
-    "math": "Boolean algebra",
-    "note": "Explains comparison operators (`==`, `===`, `!=`, `!==`, `>`, `<`) for comparing values, and logical operators (`&&`, `||`, `!`) for combining boolean expressions. The lesson emphasizes the difference between `==` and `===`."
+    "title": "Arrow Functions (ES6)",
+    "math": "Functional programming",
+    "note": "Introduces arrow functions (`=>`), a more concise syntax for writing functions introduced in ES6. The lesson also highlights the key difference in how arrow functions handle the `this` keyword."
   },
   {
     "n": 9,
-    "title": "Conditional Statements: if/else",
-    "math": "Boolean algebra",
-    "note": "This section explains how to use `if`, `else if`, and `else` statements to control the flow of a program based on different conditions. All examples are for scripts running in a web browser."
+    "title": "Objects",
+    "math": "Key-value pairs",
+    "note": "Explains JavaScript objects as collections of key-value pairs (properties). The lesson covers object literals, dot vs. bracket notation, and adding methods (functions as properties)."
   },
   {
     "n": 10,
-    "title": "Conditional Statements: switch",
-    "math": "Logic",
-    "note": "Introduces the `switch` statement as an alternative to a long `if...else if` chain for handling multiple conditions against a single value."
+    "title": "The `this` Keyword",
+    "math": "Object-oriented programming",
+    "note": "This lesson introduces the `this` keyword and explains how its value is determined by the context in which it is called (e.g., in a method, in a standalone function, or in an arrow function)."
   },
   {
     "n": 11,
-    "title": "Loops: for and while",
-    "math": "Iteration",
-    "note": "Covers the fundamental loop structures in JavaScript: the `for` loop for iterating a specific number of times, and the `while` loop for iterating as long as a condition is true."
+    "title": "Arrays",
+    "math": "Set theory",
+    "note": "Introduces arrays for storing ordered collections of data. It covers creating arrays, accessing elements by index, and common properties and methods like `length`, `push`, and `pop`."
   },
   {
     "n": 12,
-    "title": "Functions: Declaration and Expression",
+    "title": "Array Iteration Methods",
     "math": "Functional programming",
-    "note": "Introduces functions for creating reusable blocks of code. The lesson covers function declarations, function expressions, and the concept of hoisting."
+    "note": "This section introduces modern, functional methods for iterating over arrays. It explains `forEach` for simple iteration, `map` for creating a new transformed array, `filter` for selecting elements, and `reduce` for aggregating values."
   },
   {
     "n": 13,
-    "title": "Function Parameters and Arguments",
-    "math": "Functional programming",
-    "note": "Explains how to pass data to functions using parameters and arguments. This lesson also covers default parameters and the `arguments` object."
-  },
-  {
-    "n": 14,
-    "title": "Arrow Functions",
-    "math": "Functional programming",
-    "note": "Introduces arrow functions, a more concise syntax for writing functions introduced in ES6. The lesson also highlights the key difference in how arrow functions handle the `this` keyword."
-  },
-  {
-    "n": 15,
-    "title": "Introduction to Objects",
-    "math": "Key-value pairs",
-    "note": "Explains JavaScript objects as collections of key-value pairs (properties). The lesson covers object literals for creating objects, and how to access, add, and delete properties."
-  },
-  {
-    "n": 16,
-    "title": "Object Methods and `this`",
-    "math": "Object-oriented programming",
-    "note": "This lesson covers how to add functions as properties on an object (methods). It also introduces the `this` keyword and how its value is determined in different contexts, particularly within object methods."
-  },
-  {
-    "n": 17,
-    "title": "Introduction to Arrays",
-    "math": "Set theory",
-    "note": "Introduces arrays for storing ordered collections of data. It covers creating arrays, accessing elements by index, and finding the length of an array."
-  },
-  {
-    "n": 18,
-    "title": "Common Array Methods",
-    "math": "Set theory",
-    "note": "Covers essential array methods for adding/removing elements, such as `push`, `pop`, `shift`, and `unshift`. The lesson also introduces `slice` and `splice` for manipulating parts of an array."
-  },
-  {
-    "n": 19,
-    "title": "Array Iteration: forEach, map, filter, reduce",
-    "math": "Functional programming",
-    "note": "This section introduces modern, functional methods for iterating over arrays. It explains `forEach` for simple iteration, `map` for creating a new array, `filter` for selecting elements, and `reduce` for aggregating values."
-  },
-  {
-    "n": 20,
-    "title": "Introduction to the DOM",
-    "math": "Graph theory",
-    "note": "Introduces the Document Object Model (DOM), the browser's object-based representation of an HTML document. It explains how JavaScript can interact with the DOM to dynamically manipulate web page content."
-  },
-  {
-    "n": 21,
-    "title": "Selecting DOM Elements",
-    "math": "Graph theory",
-    "note": "Covers the essential methods for selecting HTML elements from the DOM, including `getElementById`, `getElementsByClassName`, `getElementsByTagName`, and the more versatile `querySelector` and `querySelectorAll`."
-  },
-  {
-    "n": 22,
-    "title": "Manipulating DOM Elements",
-    "math": "Graph theory",
-    "note": "Explains how to modify DOM elements once they are selected. This lesson covers changing text content (`textContent`, `innerHTML`), modifying attributes (`setAttribute`), and changing CSS styles."
-  },
-  {
-    "n": 23,
-    "title": "Creating and Deleting DOM Elements",
-    "math": "Graph theory",
-    "note": "This lesson demonstrates how to dynamically create new HTML elements with `createElement` and add them to the DOM with `appendChild`. It also covers how to remove elements with `removeChild`."
-  },
-  {
-    "n": 24,
-    "title": "JavaScript Events",
-    "math": "Event-driven programming",
-    "note": "Explains the event-driven nature of JavaScript in the browser. The lesson covers how to listen for user actions and other events (like `click`, `mouseover`, `keydown`) using `addEventListener`."
-  },
-  {
-    "n": 25,
-    "title": "The Event Object",
-    "math": "Event-driven programming",
-    "note": "This section explains the event object that is automatically passed to an event handler function. It demonstrates how to use the event object to get information about the event, such as the target element or mouse coordinates."
-  },
-  {
-    "n": 26,
-    "title": "Event Bubbling and Capturing",
-    "math": "Graph theory",
-    "note": "Covers the two phases of event propagation in the DOM: capturing and bubbling. The lesson explains how this works and how to use `stopPropagation()` to control it. This is a key concept for understanding complex event interactions."
-  },
-  {
-    "n": 27,
-    "title": "Introduction to Asynchronous JavaScript",
-    "math": "Concurrency",
-    "note": "Introduces the concept of asynchronous programming in JavaScript. It explains why it's necessary for non-blocking operations like fetching data from a server, and introduces the original asynchronous pattern: callbacks."
-  },
-  {
-    "n": 28,
-    "title": "Promises",
-    "math": "Asynchronous programming",
-    "note": "This lesson explains Promises as a more robust way to handle asynchronous operations than callbacks. It covers creating promises and handling success (`.then()`) and failure (`.catch()`) states."
-  },
-  {
-    "n": 29,
-    "title": "Async/Await",
-    "math": "Asynchronous programming",
-    "note": "Introduces `async/await`, modern syntactic sugar built on top of Promises that makes asynchronous code look and behave more like synchronous code. This is the standard way to handle async operations in modern JavaScript."
-  },
-  {
-    "n": 30,
-    "title": "Making HTTP Requests with the Fetch API",
-    "math": "API design",
-    "note": "Covers how to use the modern Fetch API to make network requests to a server. The lesson demonstrates how to make a simple GET request to retrieve data (like JSON) and process the response."
-  },
-  {
-    "n": 31,
-    "title": "Working with JSON",
-    "math": "Set theory",
-    "note": "This section introduces JavaScript Object Notation (JSON) as the standard format for data exchange on the web. It covers how to parse a JSON string into a JavaScript object (`JSON.parse()`) and vice-versa (`JSON.stringify()`)."
-  },
-  {
-    "n": 32,
-    "title": "Error Handling with try/catch",
-    "math": "Logic",
-    "note": "Explains how to handle runtime errors gracefully using `try...catch` blocks. It covers how to catch exceptions and prevent them from breaking the entire application, which is crucial for robust code."
-  },
-  {
-    "n": 33,
-    "title": "ES6 Modules",
-    "math": "Set theory",
-    "note": "Explains how to use ES6 modules to organize code into separate, reusable files. The lesson covers the `import` and `export` keywords for sharing code between modules, a key practice for building large-scale applications."
-  },
-  {
-    "n": 34,
-    "title": "ES6 Destructuring and Spread/Rest",
+    "title": "Destructuring and Spread/Rest (ES6)",
     "math": "Set theory",
     "note": "Introduces powerful ES6 syntax for working with arrays and objects. This lesson covers destructuring for easily extracting values, and the spread (`...`) and rest (`...`) operators for expanding or collecting elements."
   },
   {
-    "n": 35,
+    "n": 14,
     "title": "Prototypes and Prototypal Inheritance",
     "math": "Object-oriented programming",
     "note": "This section delves into the core of JavaScript's object model: prototypal inheritance. It explains how objects can inherit properties and methods from other objects via their prototype chain."
   },
   {
-    "n": 36,
+    "n": 15,
     "title": "ES6 Classes",
     "math": "Object-oriented programming",
     "note": "Introduces the `class` keyword from ES6, which provides a cleaner, more modern syntax for creating constructor functions and implementing inheritance. The lesson explains that this is syntactic sugar over JavaScript's existing prototype-based inheritance."
   },
   {
-    "n": 37,
+    "n": 16,
+    "title": "Introduction to the DOM",
+    "math": "Graph theory",
+    "note": "Introduces the Document Object Model (DOM), the browser's object-based representation of an HTML document. It explains how JavaScript can interact with the DOM to dynamically manipulate web page content."
+  },
+  {
+    "n": 17,
+    "title": "Selecting and Manipulating DOM Elements",
+    "math": "Graph theory",
+    "note": "Covers the essential methods for selecting elements (`querySelector`, `getElementById`, etc.) and how to modify them by changing text content, attributes, and CSS styles."
+  },
+  {
+    "n": 18,
+    "title": "JavaScript Events and Event Handling",
+    "math": "Event-driven programming",
+    "note": "Explains the event-driven nature of JavaScript in the browser. The lesson covers how to listen for user actions (like `click`, `mouseover`, `keydown`) using `addEventListener` and how to use the event object passed to the handler function."
+  },
+  {
+    "n": 19,
+    "title": "Understanding the Event Loop",
+    "math": "Concurrency model",
+    "note": "A conceptual lesson explaining the JavaScript concurrency model. It covers the roles of the Call Stack, Web APIs, the Callback Queue (Macrotask Queue), and the Microtask Queue (for Promises), and explains how the Event Loop orchestrates them all."
+  },
+  {
+    "n": 20,
+    "title": "Asynchronous JavaScript: Callbacks, Promises, and Async/Await",
+    "math": "Asynchronous programming",
+    "note": "Introduces asynchronous programming. It covers the evolution from callbacks to the more robust Promises (`.then`, `.catch`), and finally to the modern `async/await` syntax, which makes asynchronous code easier to read and write."
+  },
+  {
+    "n": 21,
+    "title": "Making HTTP Requests with the Fetch API",
+    "math": "API design",
+    "note": "Covers how to use the modern Fetch API to make network requests to a server. The lesson demonstrates how to make a simple GET request to retrieve data (like JSON) and process the Promise-based response."
+  },
+  {
+    "n": 22,
+    "title": "Working with JSON",
+    "math": "Set theory",
+    "note": "This section introduces JavaScript Object Notation (JSON) as the standard format for data exchange on the web. It covers how to parse a JSON string into a JavaScript object (`JSON.parse()`) and vice-versa (`JSON.stringify()`)."
+  },
+  {
+    "n": 23,
+    "title": "Error Handling with try/catch",
+    "math": "Logic",
+    "note": "Explains how to handle runtime errors gracefully using `try...catch` blocks. It covers how to catch exceptions and prevent them from breaking the entire application, which is crucial for robust code."
+  },
+  {
+    "n": 24,
+    "title": "ES6 Modules",
+    "math": "Set theory",
+    "note": "Explains how to use ES6 modules to organize code into separate, reusable files. The lesson covers the `import` and `export` keywords for sharing code between modules, a key practice for building large-scale applications."
+  },
+  {
+    "n": 25,
     "title": "Web Storage API: localStorage and sessionStorage",
     "math": "Key-value pairs",
-    "note": "Explains how to use the Web Storage API to store data on the client-side. The lesson covers the difference between `localStorage` (persistent) and `sessionStorage` (per-session) for storing key-value pairs."
+    "note": "Explains how to use the Web Storage API to store key-value data on the client-side. The lesson covers the difference between `localStorage` (persistent) and `sessionStorage` (per-session)."
   },
   {
-    "n": 38,
-    "title": "Introduction to Browser DevTools",
-    "math": "Debugging",
-    "note": "Provides a guide to using the browser's built-in developer tools for debugging JavaScript. The lesson covers the Console for logging, the Sources panel for setting breakpoints, and the Network panel for inspecting requests."
+    "n": 26,
+    "title": "Strict Mode",
+    "math": "Formal language semantics",
+    "note": "A short but important lesson on Strict Mode. It explains what it is, how to enable it with `'use strict';`, and how it helps developers avoid common errors and write more secure and robust code by changing certain 'bad' syntaxes into real errors."
   },
   {
-    "n": 39,
-    "title": "JavaScript Best Practices",
-    "math": "Software engineering",
-    "note": "This lesson covers best practices for writing clean, efficient, and maintainable JavaScript code. It discusses topics like code commenting, naming conventions, and avoiding common pitfalls."
+    "n": 27,
+    "title": "Modern JavaScript Tooling: Transpilers and Bundlers",
+    "math": "Code transformation",
+    "note": "A conceptual lesson on the modern JavaScript ecosystem. It introduces the need for tools like Babel (a transpiler to convert modern JS to older, more compatible versions) and Webpack/Vite (module bundlers to process and combine code for production)."
   },
   {
-    "n": 40,
-    "title": "Introduction to a JavaScript Framework (React/Vue/Angular)",
+    "n": 28,
+    "title": "Next Steps: Introduction to a Framework",
     "math": "Component-based architecture",
     "note": "This final section provides a high-level overview of what a front-end framework is and why they are used. It briefly introduces one of the major frameworks (like React, Vue, or Angular) and explains how it builds upon the core JavaScript concepts learned in the course."
   }

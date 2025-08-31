@@ -3,205 +3,150 @@
     "n": 1,
     "title": "Introduction to Excel",
     "math": "Matrix algebra",
-    "note": "This section introduces Microsoft Excel as a powerful spreadsheet application. It covers the basic interface: the ribbon, Quick Access Toolbar, worksheets, rows, columns, and cells. The context is the desktop version of Excel."
+    "note": "This section introduces Microsoft Excel as a powerful spreadsheet application. It covers the basic interface: the ribbon, worksheets, rows, columns, and cells. The context is the modern desktop version of Excel."
   },
   {
     "n": 2,
-    "title": "Navigating and Making Selections",
-    "math": "Coordinate geometry",
-    "note": "Explains efficient ways to navigate within a worksheet and make selections of cells, rows, and columns using both the mouse and keyboard shortcuts. This is a foundational skill for working quickly in Excel."
+    "title": "Data Entry and Formatting",
+    "math": "Data entry",
+    "note": "Covers how to enter text, numbers, and dates into cells. The lesson also introduces basic cell formatting, including font styles, alignment, cell borders, and number formats (e.g., Currency, Percentage)."
   },
   {
     "n": 3,
-    "title": "Data Entry and Formatting",
-    "math": "Data entry",
-    "note": "Covers how to enter text, numbers, and dates into cells. The lesson also introduces basic cell formatting, including font styles, alignment, cell borders, and background colors, using the tools on the Home tab of the Excel ribbon."
+    "title": "Introduction to Formulas and Cell References",
+    "math": "Arithmetic, coordinate geometry",
+    "note": "Introduces formulas using arithmetic operators (`+`, `-`, `*`, `/`). It also explains the critical difference between relative (`A1`), absolute (`$A$1`), and mixed (`A$1` or `$A1`) cell references."
   },
   {
     "n": 4,
-    "title": "Number Formatting",
-    "math": "Number theory",
-    "note": "This lesson focuses on the various number formats available in Excel, such as General, Number, Currency, Accounting, and Percentage. It explains how formatting changes the appearance of a number without changing the underlying value."
+    "title": "Basic Functions: SUM, AVERAGE, COUNT, MAX, MIN",
+    "math": "Statistics",
+    "note": "Introduces some of the most common built-in functions in Excel: `SUM` for adding numbers, `AVERAGE` for finding the mean, `COUNT` for counting cells with numbers, and `MAX`/`MIN` for finding the largest/smallest value."
   },
   {
     "n": 5,
-    "title": "Introduction to Formulas",
-    "math": "Arithmetic",
-    "note": "Introduces the core of Excel's power: formulas. This lesson covers how to create a simple formula using basic arithmetic operators (`+`, `-`, `*`, `/`) and the concept of cell references."
+    "title": "Managing Worksheets and Workbooks",
+    "math": "Set theory",
+    "note": "Covers how to manage worksheets (renaming, adding, deleting, moving, copying) and workbook-level features like freezing panes to keep headers visible while scrolling through large datasets."
   },
   {
     "n": 6,
-    "title": "Understanding Cell References",
-    "math": "Coordinate geometry",
-    "note": "Explains the critical difference between relative (`A1`), absolute (`$A$1`), and mixed (`A$1` or `$A1`) cell references. The lesson demonstrates how these references behave when formulas are copied across cells."
+    "title": "Sorting and Filtering Data",
+    "math": "Sorting and filtering",
+    "note": "Explains how to sort data based on one or more columns and how to use AutoFilter to quickly display only the data that meets specific criteria."
   },
   {
     "n": 7,
-    "title": "Basic Functions: SUM, AVERAGE, COUNT",
-    "math": "Statistics",
-    "note": "Introduces some of the most common built-in functions in Excel: `SUM` for adding numbers, `AVERAGE` for finding the mean, and `COUNT` for counting cells with numbers."
-  },
-  {
-    "n": 8,
-    "title": "Other Basic Functions: MAX and MIN",
-    "math": "Statistics",
-    "note": "This lesson covers the `MAX` function for finding the largest value in a range and the `MIN` function for finding the smallest value. These are fundamental for basic data analysis in Excel."
-  },
-  {
-    "n": 9,
-    "title": "Managing Worksheets",
-    "math": "Set theory",
-    "note": "Covers how to manage worksheets within an Excel workbook. It includes renaming, adding, deleting, moving, and copying worksheets, as well as changing their tab color for better organization."
-  },
-  {
-    "n": 10,
-    "title": "Adjusting Rows and Columns",
-    "math": "Geometry",
-    "note": "Explains how to adjust the width of columns and the height of rows to fit the content. The lesson covers manual adjustments, AutoFit, and setting specific dimensions."
-  },
-  {
-    "n": 11,
-    "title": "Freezing Panes and Splitting the Screen",
-    "math": "Coordinate geometry",
-    "note": "This lesson demonstrates how to use the Freeze Panes feature to keep header rows or columns visible while scrolling through a large dataset. It also covers the Split feature for viewing different parts of a sheet at the same time."
-  },
-  {
-    "n": 12,
-    "title": "Sorting Data",
-    "math": "Sorting algorithms",
-    "note": "Explains how to sort data in ascending or descending order based on the values in one or more columns. The lesson covers simple sorting and custom sorting in an Excel spreadsheet."
-  },
-  {
-    "n": 13,
-    "title": "Filtering Data",
-    "math": "Set theory",
-    "note": "Introduces AutoFilter for quickly displaying only the data that meets specific criteria. The lesson demonstrates how to filter by value, color, or condition in an Excel table."
-  },
-  {
-    "n": 14,
-    "title": "Introduction to Charts",
-    "math": "Data visualization",
-    "note": "This lesson covers how to create basic charts to visualize data. It explains how to select data for a chart and how to create common chart types like column, line, and pie charts using Excel's charting tools."
-  },
-  {
-    "n": 15,
-    "title": "Formatting and Customizing Charts",
-    "math": "Data visualization",
-    "note": "Explains how to customize the appearance of an Excel chart. The lesson covers changing the chart title, adding data labels, modifying axes, and changing colors and styles to make the chart more effective."
-  },
-  {
-    "n": 16,
-    "title": "Logical Functions: The IF Function",
-    "math": "Boolean algebra",
-    "note": "Introduces the powerful `IF` function for performing a logical test and returning one value if the result is true, and another if it's false. This is a cornerstone of decision-making in Excel formulas."
-  },
-  {
-    "n": 17,
-    "title": "Nested IFs and the IFS Function",
-    "math": "Boolean algebra",
-    "note": "Covers how to nest multiple `IF` functions to handle more than two outcomes. The lesson also introduces the newer `IFS` function as a more readable alternative for multiple conditions."
-  },
-  {
-    "n": 18,
-    "title": "Combining Logic with AND, OR, NOT",
-    "math": "Boolean algebra",
-    "note": "Explains how to use the `AND`, `OR`, and `NOT` functions, often within an `IF` function, to test multiple logical conditions at once in an Excel formula."
-  },
-  {
-    "n": 19,
-    "title": "Lookup Functions: VLOOKUP",
-    "math": "Search algorithms",
-    "note": "This section explains the classic `VLOOKUP` function for finding and retrieving data from a specific column in a table. It covers the function's arguments, including the importance of the `range_lookup` parameter."
-  },
-  {
-    "n": 20,
-    "title": "Modern Lookup Functions: XLOOKUP",
-    "math": "Search algorithms",
-    "note": "Introduces the modern and more flexible `XLOOKUP` function, which is designed to overcome the limitations of `VLOOKUP` and `HLOOKUP`. This is the recommended lookup function in modern versions of Excel."
-  },
-  {
-    "n": 21,
     "title": "Working with Excel Tables",
-    "math": "Set theory",
+    "math": "Structured data",
     "note": "Explains the benefits of formatting a data range as an Excel Table. The lesson covers creating tables, using table styles, and how tables automatically expand and provide features like built-in filtering and total rows."
   },
   {
-    "n": 22,
+    "n": 8,
     "title": "Structured References in Tables",
     "math": "Algebra",
     "note": "Demonstrates how to use structured references (e.g., `TableName[ColumnName]`) when working with Excel Tables. This makes formulas more readable and resilient to changes in the table structure."
   },
   {
-    "n": 23,
+    "n": 9,
+    "title": "Introduction to Charts",
+    "math": "Data visualization",
+    "note": "This lesson covers how to create basic charts to visualize data. It explains how to select data for a chart and how to create and format common chart types like column, line, and pie charts."
+  },
+  {
+    "n": 10,
     "title": "Conditional Formatting",
     "math": "Logic",
     "note": "This lesson covers how to use conditional formatting to automatically change the appearance of cells based on their values. It demonstrates data bars, color scales, icon sets, and rule-based formatting."
   },
-
   {
-    "n": 24,
-    "title": "Introduction to PivotTables",
-    "math": "Data aggregation",
-    "note": "Provides an introduction to PivotTables, one of Excel's most powerful features for summarizing, analyzing, and exploring large datasets. The lesson covers creating a basic PivotTable and arranging fields in the PivotTable Fields pane."
+    "n": 11,
+    "title": "Logical Functions: IF, AND, OR",
+    "math": "Boolean algebra",
+    "note": "Introduces the powerful `IF` function for performing a logical test. It also explains how to use the `AND` and `OR` functions, often within an `IF` function, to test multiple logical conditions at once."
   },
   {
-    "n": 25,
-    "title": "Analyzing Data with PivotTables",
-    "math": "Data aggregation",
-    "note": "Dives deeper into PivotTables by explaining how to sort, filter, and group data within the PivotTable. The lesson also covers changing the summary calculation (e.g., from SUM to AVERAGE)."
+    "n": 12,
+    "title": "Lookup Functions: VLOOKUP and XLOOKUP",
+    "math": "Search algorithms",
+    "note": "This section explains how to find and retrieve data from a table. It covers the classic `VLOOKUP` function and introduces the modern and more flexible `XLOOKUP` function as the recommended best practice."
   },
   {
-    "n": 26,
-    "title": "Slicers and Timelines",
-    "math": "User interface design",
-    "note": "Introduces slicers and timelines as interactive controls for filtering PivotTables. This makes it much easier for users to explore the data and create dynamic reports and dashboards in Excel."
-  },
-  {
-    "n": 27,
-    "title": "PivotCharts",
-    "math": "Data visualization",
-    "note": "Explains how to create a PivotChart, which is a chart that is linked to a PivotTable. PivotCharts provide a visual representation of the summarized data and are also interactive."
-  },
-  {
-    "n": 28,
-    "title": "Data Validation",
-    "math": "Logic",
-    "note": "Explains how to use data validation to restrict the type of data or the values that users can enter into a cell. The lesson covers creating dropdown lists from a range and setting custom validation rules."
-  },
-  {
-    "n": 29,
+    "n": 13,
     "title": "Text Functions",
-    "math": "String theory",
-    "note": "This lesson covers a range of functions for manipulating text, such as `CONCATENATE` (and the `&` operator), `LEFT`, `RIGHT`, `TRIM`, and `FIND`. It demonstrates how to clean and reformat text data."
+    "math": "String manipulation",
+    "note": "This lesson covers a range of functions for manipulating text, such as `CONCAT` (and the `&` operator), `LEFT`, `RIGHT`, `TRIM`, and `FIND`. It demonstrates how to clean and reformat text data."
   },
   {
-    "n": 30,
+    "n": 14,
     "title": "Date and Time Functions",
     "math": "Time series analysis",
     "note": "Explains how to work with dates and times in Excel. The lesson covers functions like `TODAY`, `NOW`, `DATE`, `YEAR`, and `DATEDIF` for performing calculations with date and time values."
   },
   {
-    "n": 31,
+    "n": 15,
+    "title": "Data Validation",
+    "math": "Data integrity",
+    "note": "Explains how to use data validation to restrict the type of data or the values that users can enter into a cell. The lesson covers creating dropdown lists from a range and setting custom validation rules."
+  },
+  {
+    "n": 16,
+    "title": "Introduction to PivotTables",
+    "math": "Data aggregation",
+    "note": "Provides an introduction to PivotTables, one of Excel's most powerful features for summarizing, analyzing, and exploring large datasets. The lesson covers creating a basic PivotTable and arranging fields in the PivotTable Fields pane."
+  },
+  {
+    "n": 17,
+    "title": "Analyzing Data with PivotTables",
+    "math": "Data summarization",
+    "note": "Dives deeper into PivotTables by explaining how to sort, filter, and group data. The lesson also covers changing the summary calculation (e.g., from SUM to AVERAGE) and showing values as a percentage of the total."
+  },
+  {
+    "n": 18,
+    "title": "Slicers, Timelines, and PivotCharts",
+    "math": "Interactive data visualization",
+    "note": "Introduces slicers and timelines as interactive controls for filtering PivotTables. It also explains how to create a PivotChart, which is a chart that is linked to a PivotTable, to create dynamic dashboards."
+  },
+  {
+    "n": 19,
     "title": "What-If Analysis: Goal Seek and Scenarios",
     "math": "Optimization",
     "note": "Introduces Excel's What-If Analysis tools. This lesson covers Goal Seek for finding the required input for a desired result, and Scenario Manager for comparing the outcomes of different sets of assumptions."
   },
   {
-    "n": 32,
+    "n": 20,
+    "title": "Advanced What-If: The Solver Add-in",
+    "math": "Linear programming",
+    "note": "This lesson introduces the Solver Add-in as a more powerful optimization tool. It explains how Solver can be used to find an optimal value for a formula by changing multiple input cells, subject to a set of constraints."
+  },
+  {
+    "n": 21,
+    "title": "Dynamic Array Formulas",
+    "math": "Array formulas",
+    "note": "A dedicated lesson on the modern dynamic array engine in Microsoft 365. It explains how formulas can now 'spill' results into multiple cells and introduces key functions like `FILTER`, `SORT`, `UNIQUE`, and `SEQUENCE`."
+  },
+  {
+    "n": 22,
     "title": "Introduction to Power Query",
-    "math": "Data transformation",
+    "math": "Data transformation (ETL)",
     "note": "Provides an introduction to Power Query (Get & Transform Data) for importing, connecting, and transforming data from various sources. The lesson shows how to perform basic cleaning and shaping operations before loading data into Excel."
   },
   {
-    "n": 33,
+    "n": 23,
+    "title": "The Data Model and Power Pivot",
+    "math": "Relational modeling",
+    "note": "This lesson explains how to go beyond single-table analysis by using Excel's Data Model. It introduces Power Pivot as the tool to create relationships between multiple tables, forming a relational model directly within Excel."
+  },
+  {
+    "n": 24,
+    "title": "Introduction to DAX",
+    "math": "Data Analysis Expressions (DAX)",
+    "note": "This lesson introduces DAX as the formula language for Power Pivot. It explains the difference between a calculated column and a measure (a key DAX concept) and demonstrates a few simple DAX formulas like `SUMX` and `CALCULATE`."
+  },
+  {
+    "n": 25,
     "title": "Introduction to Macros and VBA",
     "math": "Automation",
     "note": "This lesson introduces macros for automating repetitive tasks in Excel. It covers how to use the Macro Recorder to create a simple macro and provides a brief introduction to the Visual Basic for Applications (VBA) editor."
-  },
-  {
-    "n": 34,
-    "title": "Spreadsheet Best Practices",
-    "math": "Logic",
-    "note": "This final section covers best practices for creating effective, maintainable, and error-free Excel spreadsheets. It discusses topics like spreadsheet design, documentation, and using error checking tools like `IFERROR`."
   }
 ]

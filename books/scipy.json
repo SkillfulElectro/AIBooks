@@ -25,78 +25,84 @@
   },
   {
     "n": 5,
+    "title": "Sparse Matrices with `scipy.sparse`",
+    "math": "Sparse data structures",
+    "note": "This lesson introduces sparse matrices, which are matrices comprised mostly of zero values. It explains why they are crucial for memory efficiency in large-scale computations and introduces common formats like CSR (Compressed Sparse Row) and COO (Coordinate)."
+  },
+  {
+    "n": 6,
     "title": "Statistics with `scipy.stats`",
     "math": "Statistics",
     "note": "This section introduces the `scipy.stats` module for statistical analysis. It covers working with probability distributions (like the normal distribution), calculating descriptive statistics, and performing common hypothesis tests (like t-tests)."
   },
   {
-    "n": 6,
+    "n": 7,
     "title": "Numerical Integration with `scipy.integrate`",
     "math": "Calculus",
     "note": "Explains how to perform numerical integration (finding the area under a curve) using functions from the `scipy.integrate` module. The lesson focuses on `quad` for single integrals and `dblquad` for double integrals."
   },
   {
-    "n": 7,
+    "n": 8,
     "title": "Solving Ordinary Differential Equations (ODEs)",
     "math": "Differential equations",
     "note": "This lesson introduces how to solve initial value problems for ordinary differential equations using the `solve_ivp` function from `scipy.integrate`. The context is on modeling dynamic systems in science and engineering."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "Optimization with `scipy.optimize`",
     "math": "Optimization",
     "note": "Covers how to find the minimum of a scalar function or a multivariate function using the `scipy.optimize` module. The lesson explains how to use functions like `minimize` to solve optimization problems."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Curve Fitting",
     "math": "Regression analysis",
     "note": "This section explains how to perform curve fitting to find the best-fit parameters for a function to a set of data points. It demonstrates the use of `curve_fit` from the `scipy.optimize` module."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Interpolation with `scipy.interpolate`",
     "math": "Numerical analysis",
     "note": "Explains how to use the `scipy.interpolate` module to estimate values between known data points. The lesson covers 1D interpolation using functions like `interp1d` and 2D interpolation with `interp2d`."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "Signal Processing with `scipy.signal`",
     "math": "Signal processing",
     "note": "This lesson introduces the `scipy.signal` module for signal processing tasks. It covers concepts like filtering a signal to remove noise, detrending, and analyzing signal properties."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Fourier Analysis with `scipy.fft`",
     "math": "Fourier analysis",
     "note": "Explains how to use the Fast Fourier Transform (FFT) from the `scipy.fft` module to analyze the frequency spectrum of a signal. The context is on applications in audio processing, image analysis, and physics."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Image Processing with `scipy.ndimage`",
     "math": "Computer vision",
     "note": "This section covers how to perform multi-dimensional image processing tasks using the `scipy.ndimage` module. It demonstrates operations like blurring (e.g., Gaussian filter), sharpening, and edge detection on images represented as NumPy arrays."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Spatial Data with `scipy.spatial`",
     "math": "Computational geometry",
     "note": "Introduces the `scipy.spatial` module for working with spatial data. The lesson covers concepts like calculating distances between points, working with convex hulls, and Voronoi diagrams."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Clustering with `scipy.cluster`",
     "math": "Cluster analysis",
     "note": "Explains how to perform clustering analysis on a dataset using the `scipy.cluster` module. The lesson covers hierarchical clustering (creating dendrograms) and vector quantization (k-means)."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "File I/O with `scipy.io`",
     "math": "File I/O",
     "note": "Explains how to read from and write to various file formats used in scientific computing. The lesson focuses on loading and saving MATLAB files (`.mat`), NetCDF files, and files from other specific scientific domains."
   },
   {
-    "n": 17,
+    "n": 18,
     "title": "Special Functions",
     "math": "Special functions",
     "note": "This final section introduces the `scipy.special` module, which contains a large number of special mathematical functions used in physics and engineering, such as Bessel functions, gamma functions, and error functions."

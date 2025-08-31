@@ -117,6 +117,30 @@
     "n": 20,
     "title": "I/O Systems",
     "math": "Input/Output (I/O)",
-    "note": "This final lesson provides an overview of how the OS manages Input/Output. It explains the role of device drivers in providing a uniform interface to the kernel, and the difference between polling, interrupt-driven I/O, and Direct Memory Access (DMA) for transferring data between I/O devices and memory."
+    "note": "This lesson provides an overview of how the OS manages Input/Output. It explains the role of device drivers in providing a uniform interface to the kernel, and the difference between polling, interrupt-driven I/O, and Direct Memory Access (DMA) for transferring data between I/O devices and memory."
+  },
+  {
+    "n": 21,
+    "title": "Modern Topic: Virtualization",
+    "math": "Hypervisors",
+    "note": "Introduce virtualization as the technology of creating a virtual version of a computer, including hardware, operating system, and storage. Differentiate between Type 1 (bare-metal) hypervisors that run directly on the host's hardware and Type 2 (hosted) hypervisors that run as an application on a conventional OS."
+  },
+  {
+    "n": 22,
+    "title": "Modern Topic: Containers",
+    "math": "OS-level virtualization",
+    "note": "Explain containers as a lightweight form of virtualization. Contrast them with Virtual Machines: containers virtualize the OS, allowing them to share the host system's kernel, while VMs virtualize the hardware. This makes containers faster to start and more resource-efficient."
+  },
+  {
+    "n": 23,
+    "title": "Operating System Security",
+    "math": "Access control",
+    "note": "Introduce the role of the OS in providing security. Cover core concepts like user authentication (verifying identity), access control (defining permissions for files and resources), and the principle of least privilege. Briefly touch upon how the OS helps protect against malware."
+  },
+  {
+    "n": 24,
+    "title": "Case Study: Comparing OS Architectures",
+    "math": "System architecture",
+    "note": "This final lesson compares the design philosophies of real-world operating systems. It contrasts monolithic kernels (like Linux), where all services run in kernel space for performance, with microkernels, which run most services in user space for robustness, and hybrid kernels (like Windows and macOS) that combine aspects of both."
   }
 ]

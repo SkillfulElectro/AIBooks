@@ -3,114 +3,120 @@
     "n": 1,
     "title": "Introduction to Generative AI",
     "math": "Artificial intelligence",
-    "note": "This section introduces Generative AI as a branch of AI focused on creating new, original content, such as text, images, and music. It contrasts generative models with discriminative models and discusses the recent explosion in capabilities. The context is the modern AI landscape."
+    "note": "This section introduces Generative AI as a branch of AI focused on creating new, original content. It contrasts generative models (which create) with discriminative models (which classify) and discusses the recent explosion in capabilities."
   },
   {
     "n": 2,
-    "title": "Core Concepts: Neural Networks and Deep Learning",
-    "math": "Linear algebra",
-    "note": "Provides a refresher on the basics of neural networks and deep learning, the foundational technologies for modern generative models. The lesson covers neurons, layers, activation functions, and the process of training with backpropagation and gradient descent. The context is a general machine learning framework like TensorFlow or PyTorch."
+    "title": "Foundations: Neural Networks and Deep Learning",
+    "math": "Linear algebra, calculus",
+    "note": "Provides a refresher on the basics of neural networks, the foundational technology for generative models. The lesson covers neurons, layers, activation functions, and the process of training with backpropagation and gradient descent."
   },
   {
     "n": 3,
-    "title": "Introduction to Large Language Models (LLMs)",
-    "math": "Natural language processing",
-    "note": "This lesson introduces Large Language Models (LLMs) as the core technology behind models like GPT and Llama. It explains the concept of a language model, the significance of scale (parameters and data), and the emergent abilities of LLMs. The context is the field of Natural Language Processing (NLP)."
+    "title": "Foundational Models: GANs",
+    "math": "Game theory, minimax",
+    "note": "This lesson introduces Generative Adversarial Networks (GANs). It explains the two-part architecture (a Generator and a Discriminator) and their adversarial training process, where the generator tries to fool the discriminator. This was a foundational technology for image generation."
   },
   {
     "n": 4,
-    "title": "The Transformer Architecture",
+    "title": "Foundational Models: The Transformer Architecture",
     "math": "Attention mechanisms",
-    "note": "Explains the Transformer architecture, the key innovation that enabled the development of powerful LLMs. The lesson covers the concepts of self-attention, multi-head attention, positional encodings, and the encoder-decoder structure. The context is deep learning for NLP."
+    "note": "Explains the Transformer architecture, the key innovation behind modern LLMs. The lesson covers the concepts of self-attention, which allows the model to weigh the importance of different words in a sequence, and the overall encoder-decoder structure."
   },
   {
     "n": 5,
-    "title": "Generative Pre-trained Transformers (GPT)",
-    "math": "Natural language processing",
-    "note": "This section focuses on the GPT family of models. It explains the 'decoder-only' architecture and the two-stage process of pre-training on a massive text corpus and then fine-tuning for specific tasks. The context is on using pre-trained models like those from OpenAI."
+    "title": "LLM Architectures: GPT, BERT, and T5",
+    "math": "Model architectures",
+    "note": "This lesson compares the main families of Transformer-based models. It covers GPT models (decoder-only, for text generation), BERT models (encoder-only, for text understanding and classification), and T5 models (encoder-decoder, for sequence-to-sequence tasks like translation)."
   },
   {
     "n": 6,
     "title": "Prompt Engineering Fundamentals",
-    "math": "Logic",
-    "note": "Explains the crucial skill of prompt engineering, which is the art of designing effective inputs (prompts) to get the desired output from a generative model. The lesson covers basic techniques like zero-shot and few-shot prompting."
+    "math": "Instructional design",
+    "note": "Explains the crucial skill of prompt engineering: designing effective inputs (prompts) to get desired outputs. The lesson covers basic techniques like providing clear instructions, defining the persona, and using zero-shot and few-shot prompting (providing examples)."
   },
   {
     "n": 7,
-    "title": "Advanced Prompting Techniques",
-    "math": "Logic",
-    "note": "Dives deeper into prompt engineering by introducing more advanced techniques like Chain-of-Thought (CoT) prompting, which encourages the model to 'think step by step' to solve complex reasoning problems."
+    "title": "Advanced Prompting: Chain-of-Thought",
+    "math": "Logical reasoning",
+    "note": "Dives deeper into prompt engineering by introducing Chain-of-Thought (CoT) prompting. This technique encourages the model to 'think step by step' by including reasoning steps in the examples, which significantly improves performance on complex reasoning problems."
   },
   {
     "n": 8,
-    "title": "Introduction to Image Generation",
-    "math": "Computer vision",
-    "note": "This lesson introduces the field of AI image generation. It provides an overview of different approaches for creating realistic or stylized images from text descriptions (text-to-image)."
+    "title": "Image Generation: Diffusion Models",
+    "math": "Stochastic processes, denoising",
+    "note": "Explains diffusion models, the state-of-the-art technology behind image generators like Stable Diffusion and Midjourney. The lesson covers the high-level concept of iteratively adding noise to an image and then training a model to reverse the process, generating an image from noise."
   },
   {
     "n": 9,
-    "title": "Diffusion Models",
-    "math": "Stochastic processes",
-    "note": "Explains diffusion models, the state-of-the-art technology behind image generation models like Stable Diffusion and DALL-E 2. The lesson covers the high-level concept of iteratively adding noise to an image and then training a model to reverse the process."
+    "title": "Audio and Music Generation",
+    "math": "Signal processing",
+    "note": "This lesson introduces the application of generative AI to audio. It briefly discusses models that can generate realistic human speech (text-to-speech), sound effects, and complex musical compositions in various styles."
   },
   {
     "n": 10,
-    "title": "Using Generative AI APIs",
-    "math": "API design",
-    "note": "This section demonstrates how to use an API (e.g., from OpenAI, Google, or Cohere) to interact with a generative model programmatically. It covers making an API call with a prompt and handling the response in a programming environment like Python."
+    "title": "Code Generation",
+    "math": "Program synthesis",
+    "note": "This lesson focuses on the application of generative AI for writing and assisting with computer programming. It covers tools like GitHub Copilot, explaining how they are trained on vast amounts of code and how they can be used for code completion, generation, and explanation."
   },
   {
     "n": 11,
-    "title": "Embeddings and Vector Similarity",
-    "math": "Vector calculus",
-    "note": "Explains the concept of embeddings, which are numerical vector representations of data (like words or sentences). The lesson covers how these embeddings capture semantic meaning and can be used to find similar pieces of text through vector similarity."
+    "title": "Using Generative AI APIs",
+    "math": "API usage",
+    "note": "This section demonstrates how to use an API (e.g., from OpenAI, Google, or Cohere) to interact with a generative model programmatically. It covers making an API call with a prompt and handling the response in a programming environment like Python."
   },
   {
     "n": 12,
-    "title": "Vector Databases",
-    "math": "Search algorithms",
-    "note": "Introduces vector databases (like Pinecone or Chroma) and their role in generative AI applications. The lesson explains how vector databases are optimized for storing and efficiently searching through large collections of embeddings."
+    "title": "Embeddings and Vector Similarity",
+    "math": "Vector calculus, cosine similarity",
+    "note": "Explains the concept of embeddings, which are numerical vector representations of data (like words or sentences). The lesson covers how these embeddings capture semantic meaning and how vector similarity (like cosine similarity) can be used to find related pieces of text."
   },
   {
     "n": 13,
-    "title": "Retrieval-Augmented Generation (RAG)",
-    "math": "Information retrieval",
-    "note": "This lesson introduces RAG, a powerful technique for improving the factual accuracy and relevance of LLMs by grounding them in external knowledge. It explains the workflow: retrieve relevant documents from a knowledge base (often using a vector database) and then augment the prompt with this information."
+    "title": "Vector Databases",
+    "math": "Nearest neighbor search",
+    "note": "Introduces vector databases (like Pinecone or Chroma). The lesson explains how vector databases are optimized for storing and efficiently performing similarity searches on large collections of embeddings using Approximate Nearest Neighbor (ANN) algorithms."
   },
   {
     "n": 14,
+    "title": "Retrieval-Augmented Generation (RAG)",
+    "math": "Information retrieval",
+    "note": "This lesson introduces RAG, a powerful technique for improving the factual accuracy of LLMs. It explains the workflow: retrieve relevant documents from a knowledge base (often using a vector database) and then augment the prompt with this information before sending it to the LLM."
+  },
+  {
+    "n": 15,
+    "title": "Building LLM-Powered Agents",
+    "math": "Planning algorithms",
+    "note": "This lesson introduces the 'agentic' workflow, where an LLM acts as a reasoning engine. It explains how to build systems where an LLM is given access to a set of tools (e.g., a calculator, web search API) and can decide which tool to use to accomplish a complex task."
+  },
+  {
+    "n": 16,
     "title": "Fine-Tuning Generative Models",
     "math": "Transfer learning",
     "note": "Explains the concept of fine-tuning a pre-trained generative model on a custom dataset. The lesson discusses the benefits of fine-tuning for adapting a model to a specific style, domain, or task, and the trade-offs with RAG."
   },
   {
-    "n": 15,
-    "title": "Generative AI for Code",
-    "math": "Automation",
-    "note": "This lesson focuses on the application of generative AI for writing and assisting with computer programming. It covers tools like GitHub Copilot, explaining how they are trained and how they can be used for code generation, debugging, and explanation."
+    "n": 17,
+    "title": "Deployment: Model Quantization",
+    "math": "Numerical precision",
+    "note": "A practical lesson on the importance of quantization for deploying LLMs. It explains the concept of reducing the precision of a model's weights (e.g., from 16-bit to 4-bit numbers) to significantly decrease model size and increase inference speed, with minimal loss in quality."
   },
   {
-    "n": 16,
+    "n": 18,
     "title": "Multimodal Models",
     "math": "Set theory",
     "note": "Explains the concept of multimodal models, which can process and generate content across different data types (e.g., text, images, audio). The lesson discusses models like GPT-4 and their ability to understand and reason about mixed inputs."
   },
   {
-    "n": 17,
+    "n": 19,
     "title": "Evaluating Generative Models",
     "math": "Statistics",
     "note": "This section discusses the challenges of evaluating the quality of generative model outputs. It covers some of the metrics used for text (e.g., BLEU, ROUGE) and images (e.g., FID), but emphasizes the importance and difficulty of robust human evaluation."
   },
   {
-    "n": 18,
+    "n": 20,
     "title": "Ethical Considerations",
     "math": "Ethics",
     "note": "This section discusses the important ethical challenges posed by generative AI. It covers topics like bias in training data, the potential for misuse (e.g., deepfakes, misinformation), copyright issues, and the environmental impact of training large models."
-  },
-  {
-    "n": 19,
-    "title": "The Future of Generative AI",
-    "math": "Futures studies",
-    "note": "This final section explores the potential future directions of generative AI. It discusses topics like the development of more general AI agents, the trend towards smaller, more efficient models, and the long-term societal impact of these technologies."
   }
 ]

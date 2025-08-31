@@ -2,91 +2,109 @@
   {
     "n": 1,
     "title": "Introduction to WordPress",
-    "math": "Set theory",
-    "note": "This section explains the fundamental concepts of WordPress. It covers what WordPress is, its history, and the key differences between the self-hosted version (WordPress.org) and the commercial service (WordPress.com). The concept of a Content Management System (CMS) is introduced using WordPress as the primary example."
+    "math": "Content Management Systems (CMS)",
+    "note": "Explains WordPress as a CMS, covering the difference between WordPress.org (self-hosted) and WordPress.com (service). Sets the stage for using WordPress to manage a website."
   },
   {
     "n": 2,
     "title": "Local Development Setup",
-    "math": "System configuration variables",
-    "note": "Learn how to install WordPress on a local computer for development and testing. This lesson provides step-by-step instructions for setting up a local server environment using software like XAMPP, WAMP, or MAMP, including creating a local database and running the WordPress installation."
+    "math": "System configuration",
+    "note": "A guide to installing WordPress locally using tools like XAMPP or Local by Flywheel. Covers creating a database and running the WordPress installation."
   },
   {
     "n": 3,
     "title": "Navigating the WordPress Dashboard",
-    "math": "Graph theory (for menu navigation)",
-    "note": "This section provides a detailed tour of the WordPress admin dashboard. It explains the purpose of each menu item, including the Dashboard home, Posts, Media, Pages, Comments, Appearance, Plugins, Users, Tools, and Settings, providing a foundational understanding of where to find key features."
+    "math": "User interface tour",
+    "note": "A guided tour of the WordPress admin dashboard, explaining the purpose of each main menu item from Posts and Pages to Settings and Plugins."
   },
   {
     "n": 4,
-    "title": "Creating Content: Posts and Pages",
-    "math": "Boolean logic",
-    "note": "Understand the distinction between Posts and Pages in WordPress. This lesson details how to create, edit, and publish both content types using the Gutenberg block editor. It covers adding text, headings, lists, and other fundamental content blocks, and explains the use of categories and tags for organizing posts."
+    "title": "Creating Content: Posts vs. Pages",
+    "math": "Content types",
+    "note": "Details the difference between time-based Posts and static Pages. Covers using the Gutenberg block editor, and organizing Posts with categories and tags."
   },
   {
     "n": 5,
-    "title": "Managing Media",
-    "math": "File system structures",
-    "note": "This lesson focuses on the WordPress Media Library. It covers how to upload, view, edit, and delete media files such as images, videos, and documents. The section also explains image details like alt text, captions, and descriptions for SEO and accessibility purposes."
+    "title": "Managing Themes and the Customizer",
+    "math": "Modular design",
+    "note": "Explains how themes control a site's design. Covers installing themes and using the Theme Customizer to change visual settings like colors, fonts, and logos."
   },
   {
     "n": 6,
-    "title": "Introduction to Themes",
-    "math": "Modular design principles",
-    "note": "Learn how WordPress themes control the visual design of a website. This section covers how to search for, install, and activate themes from the official WordPress repository. It also introduces the Theme Customizer for making live visual changes like updating the site title, colors, and header image."
+    "title": "Extending Functionality with Plugins",
+    "math": "Modular functionality",
+    "note": "Explains the role of plugins in adding new features. Demonstrates how to find, install, and manage plugins from the official repository."
   },
   {
     "n": 7,
-    "title": "Understanding WordPress Plugins",
-    "math": "API and function hooks",
-    "note": "This lesson explains the role of plugins in extending WordPress functionality. It demonstrates how to find, install, and manage plugins from the WordPress plugin directory. The concept of modular functionality is explained, with examples of essential plugin types like SEO, security, and contact forms."
+    "title": "Managing Users, Comments, and Settings",
+    "math": "Access control & Configuration",
+    "note": "Covers user roles and permissions, comment moderation, and configuring essential site settings like Permalinks and Reading/Writing options."
   },
   {
     "n": 8,
-    "title": "Managing Users and Roles",
-    "math": "Access control matrix",
-    "note": "This section covers user management in WordPress. It details the different user roles (Administrator, Editor, Author, Contributor, Subscriber), their respective permissions, and how to add, edit, and delete users from the dashboard. This is crucial for multi-author or membership sites."
+    "title": "WordPress SEO, Security, and Maintenance",
+    "math": "Optimization & Risk management",
+    "note": "Covers three critical aspects of site ownership: basic SEO with a plugin, essential security practices (updates, strong passwords), and the importance of regular backups."
   },
   {
     "n": 9,
-    "title": "Configuring Core Settings",
-    "math": "Key-value pairs",
-    "note": "Explore the main WordPress settings panels. This lesson explains how to configure the General (site title, timezone), Writing (default category), Reading (homepage display), Discussion (comments), and Permalink (URL structure) settings to optimize a new website."
+    "title": "Developer: The Template Hierarchy",
+    "math": "Conditional logic tree",
+    "note": "Introduces the core concept of theme development. Explains how WordPress uses a hierarchy of template files (e.g., `single.php`, `page.php`, `archive.php`, `index.php`) to decide which PHP file to use for rendering a specific page."
   },
   {
     "n": 10,
-    "title": "Working with Widgets and Menus",
-    "math": "Tree data structures",
-    "note": "This section teaches how to manage website navigation and content blocks in sidebars or footers. It covers creating and arranging custom navigation menus using the Menu Editor. It also explains how to add, remove, and configure widgets in designated widget areas provided by the theme."
+    "title": "Developer: The Loop",
+    "math": "Iteration",
+    "note": "Explains the standard PHP code block (`while ( have_posts() ) : the_post();`) that WordPress uses to display posts. This is the fundamental mechanism for outputting content in theme templates."
   },
   {
     "n": 11,
-    "title": "Basic WordPress SEO",
-    "math": "Keyword density and analysis",
-    "note": "An introduction to Search Engine Optimization (SEO) within the WordPress context. This lesson explains how to use a popular SEO plugin (like Yoast SEO or All in One SEO) to set focus keywords, edit meta titles and descriptions, and analyze content for better search engine visibility."
+    "title": "Developer: Hooks (Actions and Filters)",
+    "math": "Event-driven programming",
+    "note": "Introduces the core of WordPress extensibility. Explains Action hooks (`add_action`) for running code at specific events and Filter hooks (`add_filter`) for modifying data before it's used."
   },
   {
     "n": 12,
-    "title": "Essential Security Practices",
-    "math": "Cryptography and hashing",
-    "note": "This lesson covers fundamental security measures for any WordPress site. Topics include the importance of using strong passwords, keeping WordPress core, themes, and plugins updated, and installing a reputable security plugin to monitor for threats and harden the installation."
+    "title": "Developer: Child Themes",
+    "math": "Inheritance",
+    "note": "Explains why a child theme is the best practice for making custom modifications. Covers how to create a child theme to safely customize CSS or template files without losing changes when the parent theme is updated."
   },
   {
     "n": 13,
-    "title": "Website Maintenance and Backups",
-    "math": "Automation and scheduling algorithms",
-    "note": "Understand the importance of regular maintenance. This section explains how to perform updates for WordPress core, themes, and plugins safely. It also covers the critical process of setting up automated website backups using a plugin to prevent data loss."
+    "title": "Developer: Custom Post Types and Taxonomies",
+    "math": "Custom data modeling",
+    "note": "Covers how to go beyond Posts and Pages by registering your own Custom Post Types (e.g., 'Portfolio', 'Events') and custom taxonomies (e.g., 'Event Type') to create structured, bespoke websites."
   },
   {
     "n": 14,
-    "title": "Advanced: Introduction to Child Themes",
-    "math": "Inheritance",
-    "note": "This lesson introduces the concept of child themes. It explains what a child theme is, why it is the best practice for making custom CSS or function modifications, and how to create a basic child theme for an existing parent theme to ensure custom changes are not lost during updates."
+    "title": "Developer: Introduction to the REST API",
+    "math": "API design",
+    "note": "Introduces the built-in WordPress REST API. Explains how it can be used to fetch content in JSON format, enabling 'headless' WordPress setups where the front-end is a separate JavaScript application."
   },
   {
     "n": 15,
-    "title": "Advanced: Introduction to E-commerce with WooCommerce",
-    "math": "Transaction processing logic",
-    "note": "This section provides an overview of turning a WordPress site into an online store using the WooCommerce plugin. It covers the initial setup, how to add a simple product, configure payment gateways, and manage orders, providing a foundational understanding of WordPress e-commerce."
+    "title": "Developer: Managing WordPress with WP-CLI",
+    "math": "Command-line interfaces",
+    "note": "Introduces the WordPress Command-Line Interface (WP-CLI) as a powerful tool for developers and admins. Demonstrates common commands for installing/updating core, managing plugins, and running database operations."
+  },
+  {
+    "n": 16,
+    "title": "Developer: Introduction to Gutenberg Block Development",
+    "math": "Component-based architecture",
+    "note": "Provides a high-level overview of creating a custom block for the Gutenberg editor. Explains the basic concepts of using JavaScript (typically React) to define a block's structure, attributes, and behavior."
+  },
+  {
+    "n": 17,
+    "title": "Advanced: E-commerce with WooCommerce",
+    "math": "Transaction processing",
+    "note": "Provides an overview of turning a WordPress site into an online store using the WooCommerce plugin. Covers initial setup, adding products, and managing orders."
+  },
+  {
+    "n": 18,
+    "title": "Advanced: Performance Optimization",
+    "math": "Performance analysis",
+    "note": "Discusses key strategies for speeding up a WordPress site. Covers the importance of good hosting, implementing page caching with plugins, and optimizing images."
   }
 ]

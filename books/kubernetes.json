@@ -1,200 +1,152 @@
 [
   {
     "n": 1,
-    "title": "Introduction to Containerization",
-    "math": "Set theory",
-    "note": "This lesson introduces the concept of containerization, explaining how it isolates applications and their dependencies into a self-contained unit. We will discuss the difference between containers and virtual machines. The context for this lesson is general cloud-native application development, using Docker as the primary example of a container runtime."
+    "title": "Introduction to Containers and Orchestration",
+    "math": "Abstraction",
+    "note": "This lesson introduces containerization (using Docker as an example) and explains why a container orchestrator is needed to manage applications at scale. It covers challenges like deployment, scaling, and self-healing, which Kubernetes is designed to solve."
   },
   {
     "n": 2,
-    "title": "Getting Started with Docker",
-    "math": "File systems",
-    "note": "This lesson provides a hands-on introduction to Docker. You will learn how to build Docker images using a Dockerfile, and how to run containers from these images. We will cover basic Docker commands like `docker build`, `docker run`, and `docker ps`. The platform used is a local development environment with Docker Desktop installed."
+    "title": "Kubernetes Architecture",
+    "math": "Distributed systems",
+    "note": "A deep dive into the Kubernetes architecture. It covers the components of the Control Plane (API Server, etcd, Scheduler, Controller Manager) and the Worker Nodes (Kubelet, Kube-proxy, Container Runtime), explaining the role of each."
   },
   {
     "n": 3,
-    "title": "Introduction to Kubernetes",
-    "math": "Graph theory",
-    "note": "This lesson explains what Kubernetes is and why it's needed for container orchestration at scale. We will introduce the basic architecture of a Kubernetes cluster, including nodes, the control plane, and worker nodes. The context is managing containerized applications in a production environment."
+    "title": "Setting Up a Kubernetes Environment",
+    "math": "System setup",
+    "note": "This lesson guides you through setting up a local Kubernetes cluster using tools like Minikube or Docker Desktop. It also introduces `kubectl`, the essential command-line tool for interacting with a Kubernetes cluster."
   },
   {
     "n": 4,
-    "title": "Kubernetes Architecture: Control Plane",
-    "math": "Distributed systems",
-    "note": "A deep dive into the components of the Kubernetes control plane: API Server, etcd, Scheduler, and Controller Manager. This lesson explains the role of each component in managing the state of the cluster. The context is understanding the core logic of Kubernetes."
+    "title": "Core Object: Pods",
+    "math": "Atomic units",
+    "note": "This lesson explains the Pod, the smallest deployable unit in Kubernetes. It discusses why Pods are necessary and how they can contain one or more containers that share storage and network resources. Creating a Pod with a YAML manifest is demonstrated."
   },
   {
     "n": 5,
-    "title": "Kubernetes Architecture: Worker Nodes",
-    "math": "Network topology",
-    "note": "This lesson focuses on the components of a Kubernetes worker node: Kubelet, Kube-proxy, and the container runtime. We will explain how these components work together to run and manage containerized applications. The context is understanding how user workloads are executed in Kubernetes."
+    "title": "Pod Lifecycle and Health Checks",
+    "math": "State machines",
+    "note": "This lesson covers the lifecycle of a Pod (Pending, Running, Succeeded, Failed). It also introduces liveness, readiness, and startup probes for monitoring the health of applications running in Pods to enable self-healing."
   },
   {
     "n": 6,
-    "title": "Setting up a Local Kubernetes Cluster",
-    "math": "Resource allocation",
-    "note": "This lesson guides you through setting up a single-node Kubernetes cluster on your local machine for development and testing. We will use Minikube as the tool for creating the local cluster. The platform is a standard developer laptop (Windows, macOS, or Linux)."
+    "title": "Workload: Deployments",
+    "math": "Declarative configuration",
+    "note": "This lesson introduces Deployments for managing stateless applications. It explains how a Deployment declaratively manages a set of identical Pods via a ReplicaSet, providing self-healing and the ability to scale."
   },
   {
     "n": 7,
-    "title": "Introduction to kubectl",
-    "math": "Command-line interfaces",
-    "note": "This lesson introduces `kubectl`, the command-line tool for interacting with the Kubernetes API. We will cover the basic syntax of `kubectl` commands and how to get information about your cluster and its resources. The context is managing a Kubernetes cluster from the command line."
+    "title": "Managing Application Updates with Deployments",
+    "math": "Rolling updates",
+    "note": "This lesson shows how Deployments manage application updates. It explains the 'rolling update' strategy, which updates Pods incrementally with zero downtime, and how to roll back to a previous version if something goes wrong."
   },
   {
     "n": 8,
-    "title": "Understanding Pods",
-    "math": "Atomic units",
-    "note": "This lesson explains the concept of a Pod, the smallest deployable unit in Kubernetes. We will discuss why Pods are necessary and how they can contain one or more containers that share storage and network resources. The context is deploying applications on Kubernetes."
+    "title": "Networking: Services",
+    "math": "Service discovery",
+    "note": "This lesson explains how Services provide a stable network endpoint for a set of Pods. It discusses the different types of Services (ClusterIP, NodePort, LoadBalancer) and how they enable communication between different parts of your application using labels and selectors."
   },
   {
     "n": 9,
-    "title": "Creating and Managing Pods",
-    "math": "YAML syntax",
-    "note": "This lesson provides a hands-on guide to creating and managing Pods using `kubectl` and YAML manifests. You will learn how to define a Pod in a YAML file and how to apply it to your cluster. The context is practical application deployment in Kubernetes."
+    "title": "Networking: Ingress",
+    "math": "HTTP routing",
+    "note": "This lesson explains how Ingress manages external HTTP/S access to services in a cluster. It discusses how an Ingress Controller (like NGINX) uses Ingress rules to provide load balancing, SSL termination, and name-based virtual hosting."
   },
   {
     "n": 10,
-    "title": "Pod Lifecycle and Health Checks",
-    "math": "State machines",
-    "note": "This lesson covers the lifecycle of a Pod, including its different phases (Pending, Running, Succeeded, Failed). We will also introduce liveness and readiness probes for monitoring the health of applications running in Pods. The context is building robust and self-healing applications on Kubernetes."
+    "title": "Configuration: ConfigMaps and Secrets",
+    "math": "Key-value stores",
+    "note": "This lesson explains how to decouple configuration from application code. It covers ConfigMaps for non-sensitive configuration data and Secrets for sensitive data like passwords and API keys, and how to inject them into Pods."
   },
   {
     "n": 11,
-    "title": "Introduction to Deployments",
-    "math": "Declarative configuration",
-    "note": "This lesson introduces Deployments, a Kubernetes resource for managing a set of identical Pods. We will explain how Deployments provide self-healing and scaling capabilities for your applications. The context is managing stateless applications in Kubernetes."
+    "title": "Storage: Volumes",
+    "math": "Data persistence",
+    "note": "This lesson introduces Volumes as a way to provide storage for containers that persists beyond the life of a single Pod. It covers different volume types, such as `emptyDir` for temporary space and host-backed volumes."
   },
   {
     "n": 12,
-    "title": "Creating and Managing Deployments",
-    "math": "Rolling updates",
-    "note": "This lesson shows how to create and manage Deployments using YAML manifests. You will learn how to scale the number of replicas in a Deployment and how to perform rolling updates to your application without downtime. The context is practical application lifecycle management in Kubernetes."
+    "title": "Storage: PersistentVolumes and PersistentVolumeClaims",
+    "math": "Storage abstraction",
+    "note": "This lesson explains the PV and PVC subsystems, which decouple storage provisioning from consumption. A PersistentVolume (PV) is a piece of storage provisioned by an admin. A PersistentVolumeClaim (PVC) is a request for storage by a user, which gets bound to a PV."
   },
   {
     "n": 13,
-    "title": "Introduction to Services",
-    "math": "Service discovery",
-    "note": "This lesson explains how Services provide a stable endpoint for accessing a set of Pods. We will discuss the different types of Services (ClusterIP, NodePort, LoadBalancer) and how they enable communication between different parts of your application. The context is networking within a Kubernetes cluster."
+    "title": "Storage: StorageClasses",
+    "math": "Dynamic provisioning",
+    "note": "This lesson introduces StorageClasses for automatic, dynamic provisioning of PersistentVolumes. It explains how a StorageClass can be used to create storage on-demand from a cloud provider, without manual intervention from an administrator."
   },
   {
     "n": 14,
-    "title": "Creating and Using Services",
-    "math": "Network ports",
-    "note": "This lesson provides a hands-on guide to creating Services to expose your Deployments. You will learn how to define a Service in a YAML file and how it connects to Pods using labels and selectors. The context is practical service exposure in Kubernetes."
+    "title": "Workload: StatefulSets",
+    "math": "Ordinal indices",
+    "note": "This lesson introduces StatefulSets for managing stateful applications (like databases) that require stable, unique network identifiers and stable, persistent storage. It contrasts their behavior with Deployments."
   },
   {
     "n": 15,
-    "title": "Introduction to Namespaces",
-    "math": "Logical partitioning",
-    "note": "This lesson introduces Namespaces as a way to divide cluster resources between multiple users or teams. We will explain how to create and manage Namespaces to create isolated environments within a single Kubernetes cluster. The context is multi-tenancy and resource organization in Kubernetes."
+    "title": "Workload: DaemonSets",
+    "math": "Set theory",
+    "note": "This lesson explains how to use DaemonSets to run a copy of a Pod on all (or some) nodes in a cluster. This is used for cluster-level services like log collectors and monitoring agents."
   },
   {
     "n": 16,
-    "title": "Managing Configuration with ConfigMaps",
-    "math": "Key-value stores",
-    "note": "This lesson explains how to use ConfigMaps to decouple configuration artifacts from application code. You will learn how to create ConfigMaps and how to inject configuration data into your Pods as environment variables or files. The context is managing application configuration in a Kubernetes-native way."
+    "title": "Workload: Jobs and CronJobs",
+    "math": "Scheduling algorithms",
+    "note": "This lesson introduces Jobs for running finite tasks to completion, and CronJobs for running jobs on a time-based schedule. This is used for batch processing and other non-continuous workloads."
   },
   {
     "n": 17,
-    "title": "Managing Secrets with Secrets",
-    "math": "Cryptography",
-    "note": "This lesson introduces Secrets for managing sensitive information like passwords, API keys, and TLS certificates. We will explain how to create Secrets and how to securely mount them into your Pods. The context is managing sensitive data in a Kubernetes cluster."
+    "title": "Resource Management: Requests and Limits",
+    "math": "Resource allocation",
+    "note": "A dedicated lesson on managing compute resources. It explains the critical difference between setting CPU/Memory requests (which guarantees a minimum for scheduling) and limits (which enforces a maximum to prevent resource starvation)."
   },
   {
     "n": 18,
-    "title": "Introduction to Ingress",
-    "math": "HTTP routing",
-    "note": "This lesson explains how Ingress manages external access to the services in a cluster, typically HTTP. We will discuss how Ingress can provide load balancing, SSL termination, and name-based virtual hosting. The context is exposing web applications running in Kubernetes to the internet."
+    "title": "Scheduling: Taints, Tolerations, and Affinity",
+    "math": "Advanced scheduling",
+    "note": "A lesson on the advanced scheduling features. It explains Taints and Tolerations (to repel pods from certain nodes) and Node Affinity/Anti-Affinity (to attract or repel pods from nodes with specific labels), giving administrators fine-grained control over pod placement."
   },
   {
     "n": 19,
-    "title": "Using an Ingress Controller",
-    "math": "Reverse proxy",
-    "note": "This lesson shows how to use an Ingress controller (like NGINX Ingress Controller) to implement Ingress rules in your cluster. You will learn how to create Ingress resources to route traffic to your services based on hostnames and paths. The platform is a Kubernetes cluster with an Ingress controller deployed."
+    "title": "Security: Role-Based Access Control (RBAC)",
+    "math": "Access control matrices",
+    "note": "This lesson introduces RBAC for regulating access to the Kubernetes API. You will learn how to define Roles and ClusterRoles (sets of permissions), and how to bind them to users or services using RoleBindings and ClusterRoleBindings."
   },
   {
     "n": 20,
-    "title": "Introduction to Volumes",
-    "math": "Data persistence",
-    "note": "This lesson introduces Volumes as a way to provide persistent storage for containers in a Pod. We will discuss the ephemeral nature of container filesystems and the need for persistent storage for stateful applications. The context is managing data in Kubernetes."
+    "title": "Security: Network Policies",
+    "math": "Firewall rules",
+    "note": "A lesson on the `NetworkPolicy` resource. It explains how network policies are used to control the flow of traffic between pods, acting as a firewall within the cluster. It covers how to create policies that allow or deny traffic based on pod labels."
   },
   {
     "n": 21,
-    "title": "Using PersistentVolumes and PersistentVolumeClaims",
-    "math": "Storage abstraction",
-    "note": "This lesson explains the PersistentVolume (PV) and PersistentVolumeClaim (PVC) subsystems, which provide a way for administrators to provision storage and for users to request it. You will learn how to create PVs and PVCs to provide persistent storage for your applications. The context is managing stateful applications in Kubernetes."
+    "title": "Package Management with Helm",
+    "math": "Templating engines",
+    "note": "This lesson introduces Helm as the package manager for Kubernetes. It explains how to use Helm charts to define, install, and upgrade even the most complex Kubernetes applications, simplifying deployment and management."
   },
   {
     "n": 22,
-    "title": "Dynamic Provisioning with StorageClasses",
-    "math": "Automation",
-    "note": "This lesson introduces StorageClasses for automatic provisioning of PersistentVolumes. We will explain how to define a StorageClass and how it can be used to create storage on-demand for your applications, without manual intervention from an administrator. The context is scalable storage management in Kubernetes."
+    "title": "Observability: Monitoring with Prometheus",
+    "math": "Time-series data",
+    "note": "This lesson introduces Prometheus for monitoring and alerting. You will learn how to deploy Prometheus in your cluster and how it scrapes metrics from your applications and Kubernetes components, providing a foundation for observability."
   },
   {
     "n": 23,
-    "title": "Managing Stateful Applications with StatefulSets",
-    "math": "Ordinal indices",
-    "note": "This lesson introduces StatefulSets for managing stateful applications that require stable, unique network identifiers and stable, persistent storage. We will discuss the differences between Deployments and StatefulSets. The context is running databases and other stateful workloads on Kubernetes."
+    "title": "Observability: Visualizing with Grafana",
+    "math": "Data visualization",
+    "note": "This lesson shows how to use Grafana to create dashboards for visualizing the metrics collected by Prometheus. You will learn how to build custom dashboards to get insights into the performance of your cluster and applications."
   },
   {
     "n": 24,
-    "title": "Running Cluster-wide Daemons with DaemonSets",
-    "math": "Set theory",
-    "note": "This lesson explains how to use DaemonSets to run a copy of a Pod on all (or some) nodes in a cluster. We will discuss common use cases for DaemonSets, such as log collectors and monitoring agents. The context is managing cluster-level services in Kubernetes."
+    "title": "Observability: Centralized Logging",
+    "math": "Log aggregation",
+    "note": "This lesson introduces a common logging solution for Kubernetes, such as the EFK (Elasticsearch, Fluentd, Kibana) stack. You will learn how to deploy a log collection agent to gather, store, and visualize logs from all your pods in a centralized location."
   },
   {
     "n": 25,
-    "title": "Managing Batch Jobs with Jobs and CronJobs",
-    "math": "Scheduling algorithms",
-    "note": "This lesson introduces Jobs for running finite tasks to completion, and CronJobs for running jobs on a time-based schedule. You will learn how to define and manage Jobs and CronJobs for batch processing and scheduled tasks. The context is running non-continuous workloads in Kubernetes."
-  },
-  {
-    "n": 26,
-    "title": "Package Management with Helm",
-    "math": "Templating engines",
-    "note": "This lesson introduces Helm as the package manager for Kubernetes. We will explain how to use Helm charts to define, install, and upgrade even the most complex Kubernetes applications. The context is simplifying the deployment and management of applications on Kubernetes."
-  },
-  {
-    "n": 27,
-    "title": "Securing Cluster Access with RBAC",
-    "math": "Access control matrices",
-    "note": "This lesson introduces Role-Based Access Control (RBAC) for regulating access to the Kubernetes API. You will learn how to define Roles and ClusterRoles, and how to bind them to users and groups using RoleBindings and ClusterRoleBindings. The context is securing a multi-user Kubernetes cluster."
-  },
-  {
-    "n": 28,
-    "title": "Restricting Pod Permissions with PodSecurityPolicies",
-    "math": "Security contexts",
-    "note": "This lesson explains how to use PodSecurityPolicies to control security-sensitive aspects of the pod specification. We will discuss how to define policies and how they are enforced in the cluster. The context is enhancing the security of a Kubernetes cluster by enforcing best practices for pod security."
-  },
-  {
-    "n": 29,
-    "title": "Monitoring Your Cluster with Prometheus",
-    "math": "Time-series data",
-    "note": "This lesson introduces Prometheus for monitoring and alerting. You will learn how to deploy Prometheus in your cluster and how to scrape metrics from your applications and Kubernetes components. The context is observability and performance monitoring in Kubernetes."
-  },
-  {
-    "n": 30,
-    "title": "Visualizing Metrics with Grafana",
-    "math": "Data visualization",
-    "note": "This lesson shows how to use Grafana to create dashboards for visualizing the metrics collected by Prometheus. You will learn how to build custom dashboards to get insights into the performance of your cluster and applications. The context is building a comprehensive monitoring solution for Kubernetes."
-  },
-  {
-    "n": 31,
-    "title": "Centralized Logging with the EFK Stack",
-    "math": "Log aggregation",
-    "note": "This lesson introduces a common logging solution for Kubernetes: Elasticsearch, Fluentd, and Kibana (EFK). You will learn how to deploy the EFK stack to collect, store, and visualize logs from all your pods in a centralized location. The context is troubleshooting and auditing applications in Kubernetes."
-  },
-  {
-    "n": 32,
-    "title": "Extending Kubernetes with Custom Resource Definitions (CRDs)",
-    "math": "API extension",
-    "note": "This lesson explains how to extend the Kubernetes API with your own custom resources using Custom Resource Definitions (CRDs). We will discuss how CRDs allow you to introduce your own application-specific APIs into your cluster. The context is building custom controllers and operators for Kubernetes."
-  },
-  {
-    "n": 33,
-    "title": "Building Custom Controllers (Operators)",
-    "math": "Control theory",
-    "note": "This lesson introduces the Operator pattern for managing complex applications on Kubernetes. You will learn the basic principles of building a custom controller that watches for changes to your custom resources and takes action to reconcile the cluster state. The context is automating the entire lifecycle of your applications on Kubernetes."
+    "title": "Extending Kubernetes: CRDs and Operators",
+    "math": "API extension, control theory",
+    "note": "This lesson explains how to extend the Kubernetes API with Custom Resource Definitions (CRDs) and introduces the Operator pattern for managing complex applications by building custom controllers that encode operational knowledge."
   }
 ]

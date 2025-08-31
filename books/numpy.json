@@ -37,84 +37,96 @@
   },
   {
     "n": 7,
+    "title": "Conditional Selection with `np.where()`",
+    "math": "Conditional logic",
+    "note": "This lesson introduces the `np.where()` function as a versatile tool for conditional element selection. It demonstrates the `np.where(condition, x, y)` pattern, which returns elements from `x` or `y` depending on the boolean condition, acting as a vectorized ternary operator."
+  },
+  {
+    "n": 8,
     "title": "Fancy Indexing",
     "math": "Set theory",
     "note": "Explains fancy indexing, which allows you to select elements using an array of indices. The lesson shows how to use this technique to access multiple, non-contiguous elements from a NumPy array."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "Array Arithmetic",
     "math": "Arithmetic",
     "note": "Explains how to perform basic arithmetic operations (`+`, `-`, `*`, `/`) on NumPy arrays. The lesson demonstrates that these operations are applied element-wise, which is a key feature for efficient numerical computation."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Universal Functions (ufuncs)",
     "math": "Functional programming",
     "note": "This lesson introduces NumPy's universal functions, which perform fast element-wise operations on arrays. It covers common mathematical functions like `np.sqrt()`, `np.exp()`, and trigonometric functions."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Broadcasting",
     "math": "Linear algebra",
     "note": "Introduces broadcasting, a powerful mechanism that allows NumPy to perform operations on arrays of different shapes. It explains the rules of broadcasting and how it simplifies code and avoids unnecessary copying of data."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "Array Manipulation: Reshaping",
     "math": "Matrix algebra",
     "note": "Covers how to change the shape of a NumPy array without changing its data, using the `.reshape()` method and the `.T` attribute for transposing."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Array Manipulation: Stacking and Splitting",
     "math": "Matrix algebra",
     "note": "This lesson explains how to combine multiple arrays into one using stacking functions like `np.vstack()`, `np.hstack()`, and `np.concatenate()`. It also covers how to split a single array into multiple smaller arrays."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Copies vs. Views",
     "math": "Memory management",
     "note": "Explains the important distinction between a copy and a view of a NumPy array. The lesson clarifies which operations return a view (a new object that looks at the same data) and which return a copy (a new object with new data)."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Aggregate Functions",
     "math": "Statistics",
     "note": "Explains how to use aggregate functions like `.sum()`, `.mean()`, `.std()`, `.min()`, and `.max()` to perform calculations on entire arrays or along a specific axis. The context is on data analysis with NumPy."
   },
   {
-    "n": 15,
+    "n": 16,
+    "title": "Working with Missing Data (`np.nan`)",
+    "math": "Statistics with missing values",
+    "note": "This lesson addresses how to handle missing data, represented by `np.nan`. It explains that `np.nan` is contagious in calculations and that `np.isnan()` must be used for checks. It introduces nan-safe aggregate functions like `np.nansum()` and `np.nanmean()` for practical data analysis."
+  },
+  {
+    "n": 17,
     "title": "Sorting Arrays",
     "math": "Sorting algorithms",
     "note": "This lesson covers how to sort NumPy arrays using `np.sort()` (which returns a copy) and the `.sort()` method (which performs an in-place sort). It demonstrates sorting multi-dimensional arrays along a specific axis."
   },
   {
-    "n": 16,
+    "n": 18,
     "title": "Linear Algebra with `np.linalg`",
     "math": "Linear algebra",
     "note": "Introduces the `linalg` module in NumPy for performing linear algebra operations. The lesson covers matrix multiplication (`@` operator), finding the determinant, inverse, and solving systems of linear equations."
   },
   {
-    "n": 17,
+    "n": 19,
     "title": "Random Number Generation",
     "math": "Probability",
     "note": "This section explains how to generate random numbers and arrays using NumPy's `random` module. It covers creating arrays with random values from different distributions, such as uniform, normal, and integer."
   },
   {
-    "n": 18,
+    "n": 20,
     "title": "Structured Arrays",
     "math": "Data structures",
     "note": "Explains how to create and work with structured arrays in NumPy, which allow you to have columns with different data types, similar to a spreadsheet or a C struct. This is useful for handling heterogeneous data."
   },
   {
-    "n": 19,
+    "n": 21,
     "title": "Reading and Writing Files",
     "math": "File I/O",
     "note": "This lesson covers how to save NumPy arrays to disk and load them back. It demonstrates using `np.save()` and `np.load()` for NumPy's efficient binary format, and `np.savetxt()` and `np.loadtxt()` for text files."
   },
   {
-    "n": 20,
+    "n": 22,
     "title": "Integration with Pandas",
     "math": "Data structures",
     "note": "This final section explains the relationship between NumPy and the Pandas library. It demonstrates how a Pandas DataFrame is built on top of NumPy arrays and how to efficiently move data between these two powerful data science libraries in Python."

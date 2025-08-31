@@ -13,108 +13,120 @@
   },
   {
     "n": 3,
-    "title": "CouchDB vs. MongoDB",
-    "math": "Comparative analysis",
-    "note": "This section provides a high-level comparison between CouchDB and MongoDB, two popular document databases. It contrasts their philosophies on querying (CouchDB's pre-computed views vs. MongoDB's ad-hoc queries) and replication (CouchDB's multi-master vs. MongoDB's single-master), helping to identify the ideal use case for each."
-  },
-  {
-    "n": 4,
     "title": "Setting Up CouchDB",
     "math": "Software installation",
     "note": "This lesson provides a practical guide to installing CouchDB. It covers installation using official binaries as well as the recommended method of running CouchDB inside a Docker container for ease of setup and management. The initial setup of the admin user is also covered."
   },
   {
-    "n": 5,
+    "n": 4,
     "title": "Introduction to Fauxton: The Web Interface",
     "math": "Graphical user interfaces (GUIs)",
     "note": "This section provides a guided tour of Fauxton, CouchDB's built-in web-based administration interface. It demonstrates how to use Fauxton to create and manage databases, create, edit, and delete documents, and manage the configuration of a CouchDB node or cluster."
   },
   {
-    "n": 6,
+    "n": 5,
     "title": "The CouchDB Data Model: Databases and Documents",
     "math": "JSON data structures",
     "note": "This lesson details the simple data model of CouchDB. It explains that a CouchDB server holds multiple databases, and each database is a collection of independent JSON documents. Each document must have a unique `_id` field and a revision number `_rev`."
   },
   {
-    "n": 7,
+    "n": 6,
     "title": "Interacting with the RESTful API using `curl`",
     "math": "HTTP methods (GET, POST, PUT, DELETE)",
     "note": "This section demonstrates how to interact with CouchDB directly from the command line using the `curl` utility. It shows how every operation—from creating a database to inserting a document—maps directly to an HTTP request, reinforcing the API-centric nature of the database."
   },
   {
+    "n": 7,
+    "title": "CRUD Operations: Creating and Reading Documents",
+    "math": "Create and Read operations",
+    "note": "This lesson details how to create and retrieve documents. It explains creating with `POST` (auto-ID) or `PUT` (user-ID), and reading with a `GET` request to the document's URL (`/database/document_id`)."
+  },
+  {
     "n": 8,
-    "title": "CRUD Operations: Creating a Document",
-    "math": "Create operation",
-    "note": "This lesson details how to create new documents. It explains the two methods: using a `POST` request to a database (where CouchDB generates the `_id`) and using a `PUT` request to a specific document URL (where you provide the `_id`)."
-  },
-  {
-    "n": 9,
-    "title": "CRUD Operations: Reading a Document",
-    "math": "Read operation",
-    "note": "This section explains how to retrieve a document from the database. It demonstrates making a `GET` request to the document's URL (`/database/document_id`) to fetch the latest revision of the JSON document."
-  },
-  {
-    "n": 10,
     "title": "CRUD Operations: Updating and Deleting Documents",
     "math": "Update and Delete operations",
     "note": "This lesson covers how to modify and remove documents. It explains that an update is performed with a `PUT` request and requires the latest `_rev` number to prevent conflicts. A delete is performed with a `DELETE` request, which also requires the latest `_rev` number and creates a special 'tombstone' revision."
   },
   {
-    "n": 11,
+    "n": 9,
     "title": "The Importance of Revisions (`_rev`)",
     "math": "Optimistic concurrency control",
     "note": "This section provides a deep dive into the `_rev` field. It explains how CouchDB uses this revision number to implement Multi-Version Concurrency Control (MVCC). Every update creates a new revision, and updates must provide the previous revision ID, which prevents lost updates in a distributed environment."
   },
   {
-    "n": 12,
-    "title": "Querying in CouchDB: Introduction to Views",
-    "math": "Indexing",
-    "note": "This lesson explains that CouchDB does not support ad-hoc queries like SQL databases. Instead, it uses 'views' for querying. A view is a pre-computed index of the data in a database, defined using JavaScript functions. This makes queries very fast but requires defining them upfront."
+    "n": 10,
+    "title": "Working with Document Attachments",
+    "math": "Binary data handling",
+    "note": "This lesson explains how to attach binary files (like images or PDFs) directly to a CouchDB document. It demonstrates how to upload, retrieve, and delete attachments using the RESTful API, making it possible to store related files alongside your JSON data."
   },
   {
-    "n": 13,
-    "title": "Views: The `map` Function",
+    "n": 11,
+    "title": "Querying with Views: The `map` Function",
     "math": "MapReduce (Map phase)",
-    "note": "This section introduces the `map` function, the core of a CouchDB view. The `map` function is a JavaScript function that is executed once for every document in the database. Its job is to call `emit(key, value)` to create an entry in the view's index, which is stored sorted by key."
+    "note": "This section introduces the `map` function, the traditional way to build indexes in CouchDB. The `map` function is a JavaScript function that is executed once for every document. Its job is to call `emit(key, value)` to create an entry in the view's index, which is stored sorted by key."
   },
   {
-    "n": 14,
-    "title": "Views: The `reduce` Function",
+    "n": 12,
+    "title": "Querying with Views: The `reduce` Function",
     "math": "MapReduce (Reduce phase)",
     "note": "This lesson explains the optional `reduce` function. A `reduce` function is used to aggregate the values emitted by the map function. It is used for calculations like `sum` or `count`. The lesson explains how CouchDB can efficiently re-reduce the data when new documents are added."
   },
   {
+    "n": 13,
+    "title": "Querying with Views: Design Documents and Querying",
+    "math": "Query parameters",
+    "note": "This section shows how to store views in special 'design documents' and how to retrieve results from them. It covers essential query parameters like `key`, `keys`, and `startkey`/`endkey` for querying ranges."
+  },
+  {
+    "n": 14,
+    "title": "Modern Querying: Introduction to Mango",
+    "math": "Declarative querying",
+    "note": "This lesson introduces Mango, a modern, declarative query language for CouchDB that is often simpler than MapReduce. It explains how to send a JSON object describing your query to the `/_find` endpoint, without needing to write JavaScript."
+  },
+  {
     "n": 15,
-    "title": "Creating a Design Document",
-    "math": "Data definition",
-    "note": "This section demonstrates how to create a 'design document', which is a special type of CouchDB document used to store views, validation functions, and other application code. The structure of a design document, with its `views` object containing map and reduce functions, is detailed."
+    "title": "Modern Querying: Mango Indexes",
+    "math": "Query optimization",
+    "note": "This section explains that for Mango queries to be efficient, they need to be supported by an index. It demonstrates how to create a Mango index using the `/_index` endpoint and how the query planner uses the index to satisfy a query without scanning the entire database."
   },
   {
     "n": 16,
-    "title": "Querying a View",
-    "math": "Query parameters",
-    "note": "This lesson shows how to retrieve results from a view by making a `GET` request to its URL. It covers essential query parameters like `key` (to find a specific key), `keys` (to find multiple keys), and `startkey`/`endkey` (to query a range of keys)."
-  },
-  {
-    "n": 17,
-    "title": "CouchDB's Killer Feature: Replication",
+    "title": "Replication",
     "math": "Data synchronization",
     "note": "This section introduces CouchDB's most powerful feature: multi-master replication. It explains how CouchDB is designed to allow two databases to be reliably and incrementally synchronized with each other. This is the foundation for building distributed and offline-first applications."
   },
   {
-    "n": 18,
+    "n": 17,
     "title": "Conflict Detection and Resolution",
     "math": "Conflict resolution strategies",
     "note": "This lesson explains what happens when the same document is updated in two different database replicas before they have a chance to sync. It details how CouchDB detects this conflict and stores all conflicting revisions. It is then the application's responsibility to fetch the conflicting versions and merge them to resolve the conflict."
   },
   {
+    "n": 18,
+    "title": "Understanding CouchDB Clusters",
+    "math": "Distributed architecture",
+    "note": "This lesson explains the clustered architecture of modern CouchDB (2.0+). It describes how a cluster consists of multiple nodes working together for scalability and high availability. The concepts of sharding (splitting a database across nodes) and replicas are introduced."
+  },
+  {
     "n": 19,
+    "title": "Partitioned Databases",
+    "math": "Data locality",
+    "note": "This lesson covers Partitioned Databases, a feature for optimizing large datasets in a cluster. It explains how documents can be grouped into partitions, ensuring that related data is stored on the same node. This makes queries that operate on a single partition much more efficient."
+  },
+  {
+    "n": 20,
     "title": "Data Validation with `validate_doc_update`",
     "math": "Validation functions",
     "note": "This section covers how to enforce a schema or rules on your data. It introduces the `validate_doc_update` function, a JavaScript function stored in a design document that is run every time a document is created or updated. If the function throws an error, the update is rejected."
   },
   {
-    "n": 20,
+    "n": 21,
+    "title": "The CouchDB Security Model",
+    "math": "Authentication and Authorization",
+    "note": "This lesson provides an overview of CouchDB's security features. It explains the roles of the special `_users` and `_security` databases. It covers how to create user accounts and how to specify which users and/or roles have admin or member rights for a specific database."
+  },
+  {
+    "n": 22,
     "title": "The CouchDB Ecosystem: PouchDB",
     "math": "Client-side databases",
     "note": "This final lesson introduces PouchDB, a JavaScript implementation of the CouchDB API that runs directly in a web browser. It explains how PouchDB can be used to build 'offline-first' applications, where the application's data is stored locally in the browser and then seamlessly synced with a remote CouchDB server whenever a network connection is available."

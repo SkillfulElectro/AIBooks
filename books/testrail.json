@@ -1,122 +1,116 @@
 [
   {
     "n": 1,
-    "title": "Introduction to Test Case Management",
+    "title": "Introduction to Test Case Management with TestRail",
     "math": "Test management",
-    "note": "This section explains the need for a systematic approach to managing the testing process, especially in large projects. It introduces a Test Case Management tool as a central hub for organizing test cases, planning test executions, and tracking results."
+    "note": "Explains the need for a Test Case Management tool and introduces TestRail as a web-based solution for managing test cases, plans, and results."
   },
   {
     "n": 2,
-    "title": "What Is TestRail?",
-    "math": "Test management tools",
-    "note": "This lesson introduces TestRail as a popular web-based test case management tool. It is used by QA teams to manage, track, and organize their software testing efforts. Its key features, such as its intuitive web interface and powerful reporting, are highlighted."
+    "title": "Navigating the Dashboard and Projects",
+    "math": "User interface tour",
+    "note": "Provides a guided tour of the TestRail interface, including the main Dashboard for an overview and how to navigate into a specific Project."
   },
   {
     "n": 3,
-    "title": "Navigating the TestRail Dashboard and Projects",
-    "math": "User interface tour",
-    "note": "This section provides a guided tour of the TestRail interface. It explains the main Dashboard, which gives a high-level overview of recent activity and project status, and how to navigate into a specific Project, which is the container for all test-related artifacts for a single product."
+    "title": "Organizing Test Cases in Suites and Sections",
+    "math": "Hierarchical organization",
+    "note": "Focuses on the 'Test Cases' tab. Explains how to use 'Test Suites' to group cases (e.g., by feature) and 'Sections' to create a folder-like hierarchy for organization."
   },
   {
     "n": 4,
-    "title": "The Test Cases Tab",
-    "math": "Test case organization",
-    "note": "This lesson focuses on the 'Test Cases' tab within a project. It explains how this area serves as the repository for all the test cases your team writes. The concept of organizing test cases into 'suites' and hierarchical 'sections' (folders) is introduced."
+    "title": "Creating and Importing Test Cases",
+    "math": "Test case design",
+    "note": "A practical guide to creating a test case with its standard fields (Title, Preconditions, Steps, Expected Result). Also covers bulk importing cases from a CSV file."
   },
   {
     "n": 5,
-    "title": "Creating a Test Case",
-    "math": "Test case design",
-    "note": "This section provides a practical guide to creating a new test case in TestRail. It details the standard fields of a test case, including the 'Title', 'Preconditions', 'Steps' (the actions to perform), and 'Expected Result' (the desired outcome)."
+    "title": "Efficiently Managing Suites with Bulk Editing",
+    "math": "Batch processing",
+    "note": "Demonstrates the bulk edit feature, a crucial tool for maintaining large test suites. Covers selecting multiple test cases to move, copy, or edit their properties all at once."
   },
   {
     "n": 6,
-    "title": "Using Different Field Templates",
-    "math": "Test case templates",
-    "note": "This lesson explains that TestRail supports different templates for test cases. It contrasts the default 'Steps' template with the 'Text' template, which is simpler and used for more exploratory or unstructured test cases."
+    "title": "Test Case Versioning with Baselines",
+    "math": "Version control",
+    "note": "Introduces Test Case Baselines, which allow you to create a 'version' of your test suite. This is critical for projects with multiple releases in maintenance, as it lets you preserve the test suite as it was for a specific version while evolving it for the next."
   },
   {
     "n": 7,
-    "title": "Importing Test Cases from a CSV File",
-    "math": "Data import",
-    "note": "This section covers how to bulk-import test cases from an external file. It demonstrates how to structure a CSV file with the test case fields and then use TestRail's import wizard to map the CSV columns to the TestRail fields."
+    "title": "Creating a Test Run",
+    "math": "Test execution planning",
+    "note": "Introduces the 'Test Runs & Results' tab. Demonstrates how to create a Test Run by selecting which test cases to include, either all cases or a specific subset."
   },
   {
     "n": 8,
-    "title": "The Test Runs & Results Tab",
-    "math": "Test execution planning",
-    "note": "This lesson introduces the 'Test Runs & Results' tab, which is where you plan and execute your tests. It explains that a 'Test Run' is a collection of test cases that you intend to execute for a specific purpose, like testing a new feature."
+    "title": "Executing Tests and Adding Results",
+    "math": "Test execution",
+    "note": "Walks through the process of executing a test. Details the different statuses ('Passed', 'Failed', 'Blocked') and shows how to add comments and attach files like screenshots."
   },
   {
     "n": 9,
-    "title": "Creating a Test Run",
-    "math": "Test run creation",
-    "note": "This section demonstrates how to create a new Test Run. It covers giving the run a name, assigning it to a specific person, and, most importantly, selecting which test cases to include in the run, either by including all cases or by selecting specific suites or sections."
+    "title": "Grouping Runs with Test Plans",
+    "math": "Test planning",
+    "note": "Introduces Test Plans as a way to group multiple Test Runs together, typically to manage the entire testing effort for a milestone or release."
   },
   {
     "n": 10,
-    "title": "Executing a Test Run",
-    "math": "Test execution",
-    "note": "This lesson walks through the process of executing a test. It shows the test execution screen where the tester sees the steps and expected results, and can then add a result for the test."
+    "title": "Managing Test Configurations",
+    "math": "Combinatorics",
+    "note": "Explains the powerful 'Configurations' feature within Test Plans. This allows you to create groups of test runs against different environments (e.g., Browsers: Chrome, Firefox; OS: Windows, macOS) and track results for each combination."
   },
   {
     "n": 11,
-    "title": "Adding Results",
-    "math": "Test status",
-    "note": "This section details the different statuses you can assign to a test result. These include 'Passed', 'Failed', 'Blocked' (if the test cannot be run), and 'Retest' (to mark a test that needs to be run again). It also shows how to add comments and attach files (like screenshots) to a result."
+    "title": "Tracking Progress with Milestones",
+    "math": "Milestone tracking",
+    "note": "Explains how to use Milestones to track major project phases. You can associate Test Plans with a milestone to get a high-level view of progress toward a release."
   },
   {
     "n": 12,
-    "title": "Test Plans",
-    "math": "Test planning",
-    "note": "This lesson introduces Test Plans as a way to group multiple Test Runs together. Test Plans are typically used to manage the testing for an entire release or milestone, allowing you to track the progress of several different test runs (e.g., for different features or platforms) in one place."
+    "title": "The 'Todos' Page for Task Management",
+    "math": "Task management",
+    "note": "Explains the 'Todos' page, which acts as a personal dashboard showing all tests assigned to you across all projects, making it easy to see your current workload."
   },
   {
     "n": 13,
-    "title": "Milestones",
-    "math": "Milestone tracking",
-    "note": "This section explains how to use Milestones to track major project phases or releases. You can associate Test Plans and Runs with a milestone, and TestRail will provide reports showing the overall progress toward completing all the testing for that milestone."
+    "title": "Integration with Issue Trackers (e.g., Jira)",
+    "math": "Toolchain integration",
+    "note": "Covers the importance of integrating with an issue tracker. Demonstrates how to 'Push' a defect from a failed test result in TestRail to automatically create a bug report in Jira."
   },
   {
     "n": 14,
     "title": "Reporting and Metrics",
     "math": "Test reporting",
-    "note": "This lesson covers TestRail's reporting capabilities. It demonstrates how to generate various built-in reports, such as a summary of a test plan or run, which can be used to communicate the status of the testing effort to stakeholders."
+    "note": "Covers TestRail's built-in reporting capabilities to generate summaries of test plans and runs, which can be used to communicate status to stakeholders."
   },
   {
     "n": 15,
-    "title": "The 'Todos' Page",
-    "math": "Task management",
-    "note": "This section explains the 'Todos' page, which acts as a personal dashboard for each user. It shows all the tests that are currently assigned to you, across all projects, making it easy to see what work you need to do."
+    "title": "Custom Reports and Dashboards",
+    "math": "Data visualization",
+    "note": "Explores advanced reporting. Covers how to create custom reports to meet specific needs, schedule reports to be sent automatically, and customize the project dashboard with charts to provide a real-time view of testing progress."
   },
   {
     "n": 16,
-    "title": "Integration with Issue Trackers like Jira",
-    "math": "Toolchain integration",
-    "note": "This lesson explains the importance of integrating your test case management tool with your issue tracking tool. This provides traceability between defects and the tests that found them."
+    "title": "Introduction to the TestRail API",
+    "math": "API for test automation",
+    "note": "Provides a high-level overview of the TestRail API, explaining its role in integrating automated tests with TestRail for centralized reporting."
   },
   {
     "n": 17,
-    "title": "Pushing Defects to Jira",
-    "math": "Defect reporting",
-    "note": "This section demonstrates a key integration feature. When a test fails in TestRail, you can click the 'Push' button to automatically create a new bug report in Jira. TestRail pre-fills the bug report with the details from the test case and result, saving time and ensuring consistency."
+    "title": "Practical API Usage: Adding a Test Result",
+    "math": "API programming",
+    "note": "Demonstrates a conceptual code example (e.g., in Python) showing how an automated test script would use the API to find a test case and post a result (e.g., 'Passed' or 'Failed') back to a specific Test Run in TestRail."
   },
   {
     "n": 18,
-    "title": "The TestRail API",
-    "math": "API for test automation",
-    "note": "This lesson provides a high-level overview of the TestRail API. It explains that this API can be used to integrate automated tests with TestRail. An automated test script can use the API to fetch test cases to run and then post the results back to TestRail."
+    "title": "Administration: Customizing Fields",
+    "math": "Customization",
+    "note": "Covers how administrators can add custom fields to test cases, results, or projects to capture information specific to a team's workflow."
   },
   {
     "n": 19,
-    "title": "Customizing Fields",
-    "math": "Customization",
-    "note": "This section for administrators covers how to customize TestRail. It demonstrates how to add custom fields to your test cases or results to capture information that is specific to your team's workflow."
-  },
-  {
-    "n": 20,
-    "title": "Managing Users and Roles",
+    "title": "Administration: Managing Users and Roles",
     "math": "User administration",
-    "note": "This final lesson provides an overview of user management. It shows how administrators can add users, organize them into groups, and assign roles and permissions to control what each user is allowed to see and do within TestRail."
+    "note": "Provides an overview of user management. Shows how administrators can add users, organize them into groups, and assign roles and permissions to control access."
   }
 ]

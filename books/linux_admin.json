@@ -15,108 +15,114 @@
     "n": 3,
     "title": "User and Group Management",
     "math": "User account management",
-    "note": "This section covers the fundamental task of managing user accounts. It explains the concepts of users and groups in Linux and introduces the primary commands for creating, modifying, and deleting users (`useradd`, `usermod`, `userdel`) and groups (`groupadd`, `groupmod`)."
+    "note": "This section covers the fundamental task of managing user accounts. It explains the concepts of users and groups and introduces the commands for creating, modifying, and deleting users (`useradd`, `usermod`, `userdel`) and groups. The `/etc/passwd`, `/etc/shadow`, and `/etc/group` files are explained."
   },
   {
     "n": 4,
-    "title": "Understanding Key User Files",
-    "math": "Configuration files",
-    "note": "This lesson explains the three critical files that store user and group information: `/etc/passwd` (user account information), `/etc/shadow` (secure user account information, including hashed passwords), and `/etc/group` (group information)."
+    "title": "Privilege Escalation with `sudo`",
+    "math": "Access control",
+    "note": "This section covers the `sudo` command, the standard way to run commands with administrative (root) privileges. It explains the importance of not logging in as the root user directly and how to configure the `/etc/sudoers` file."
   },
   {
     "n": 5,
-    "title": "Privilege Escalation with `sudo`",
-    "math": "Access control",
-    "note": "This section covers the `sudo` command, the standard way to run commands with administrative (root) privileges. It explains the importance of not logging in as the root user directly and how to configure the `/etc/sudoers` file to grant specific privileges to users."
+    "title": "The Linux File System Hierarchy (FHS)",
+    "math": "File system hierarchy",
+    "note": "This lesson explains the Filesystem Hierarchy Standard (FHS), which defines the directory structure in Linux. It covers the purpose of key directories like `/bin`, `/etc`, `/home`, `/var`, and `/usr`."
   },
   {
     "n": 6,
-    "title": "The Linux File System Hierarchy (FHS)",
-    "math": "File system hierarchy",
-    "note": "This lesson explains the Filesystem Hierarchy Standard (FHS), which defines the directory structure and directory contents in Linux distributions. It covers the purpose of key directories like `/bin`, `/etc`, `/home`, `/var`, and `/usr`."
+    "title": "File Permissions and Ownership",
+    "math": "File system permissions",
+    "note": "This section details the Linux file permission model (read, write, execute for user, group, and other). It demonstrates how to view permissions with `ls -l` and change them with `chmod` (using both symbolic and octal notation)."
   },
   {
     "n": 7,
-    "title": "File Permissions",
-    "math": "File system permissions (r, w, x)",
-    "note": "This section details the Linux file permission model. It explains the three types of permissions—read (r), write (w), and execute (x)—and the three sets of owners—user (owner), group, and other (everyone else). The `ls -l` command is used to view permissions."
+    "title": "Process Management",
+    "math": "Process control",
+    "note": "This section introduces the concept of a process. It covers how to view running processes using `ps` and `top`, and how to send signals to manage them using the `kill` command (e.g., `SIGTERM`, `SIGKILL`)."
   },
   {
     "n": 8,
-    "title": "Changing Permissions with `chmod`",
-    "math": "Symbolic and octal notation",
-    "note": "This lesson demonstrates how to change file permissions using the `chmod` command. It covers both the symbolic method (e.g., `chmod u+x file`) and the more common octal notation (e.g., `chmod 755 file`), explaining how the numbers correspond to read, write, and execute permissions."
+    "title": "Package Management: APT and DNF/YUM",
+    "math": "Package management systems",
+    "note": "This section explains how to manage software using a package manager. It contrasts Debian-based systems (`apt`) and Red Hat-based systems (`yum`/`dnf`). The commands for installing, updating, and removing software are demonstrated."
   },
   {
     "n": 9,
-    "title": "Process Management",
-    "math": "Process control",
-    "note": "This section introduces the concept of a process as a running instance of a program. It covers how to view running processes using commands like `ps` (to see a snapshot) and `top` (to see a live, interactive view of system processes)."
+    "title": "Service Management with `systemd`",
+    "math": "Init systems",
+    "note": "This lesson introduces `systemd` as the modern standard for managing system services (daemons). It covers using `systemctl` to `start`, `stop`, `restart`, `status`, `enable`, and `disable` services."
   },
   {
     "n": 10,
-    "title": "Managing Processes with `kill`",
-    "math": "Process signals",
-    "note": "This lesson explains how to send signals to processes to manage them, primarily using the `kill` command. It covers the most common signals, like `SIGTERM` (15, for a graceful shutdown) and `SIGKILL` (9, for a forced shutdown)."
+    "title": "Network Configuration and Troubleshooting",
+    "math": "Network configuration",
+    "note": "This lesson covers basic Linux networking. It introduces the `ip` command for viewing and configuring network interfaces, `/etc/resolv.conf` for DNS, and the `ping` and `traceroute` commands for troubleshooting."
   },
   {
     "n": 11,
-    "title": "Package Management: APT and DNF/YUM",
-    "math": "Package management systems",
-    "note": "This section explains how to manage software on a Linux system using a package manager. It contrasts the two main families: Debian-based systems (like Ubuntu), which use `apt`, and Red Hat-based systems (like CentOS/Fedora), which use `yum` or `dnf`. The commands for installing, updating, and removing software are demonstrated."
+    "title": "Storage: Partitioning and Mounting",
+    "math": "File system mounting",
+    "note": "This lesson introduces commands for monitoring disk space (`df`, `du`). It then explains how to partition a disk with `fdisk` or `parted` and how to mount a file system using the `mount` command and the `/etc/fstab` file for persistence."
   },
   {
     "n": 12,
-    "title": "Service Management with `systemd`",
-    "math": "Init systems",
-    "note": "This lesson introduces `systemd` as the modern standard for initializing and managing system services (daemons). It explains the role of an init system and introduces the `systemctl` command as the primary tool for interacting with `systemd`."
+    "title": "Advanced Storage: RAID",
+    "math": "Redundant Array of Independent Disks",
+    "note": "A conceptual lesson on RAID. It explains the purpose of RAID and covers the most common levels: RAID 0 (striping), RAID 1 (mirroring), RAID 5 (striping with parity), and RAID 10 (striping and mirroring) and their trade-offs."
   },
   {
     "n": 13,
-    "title": "Using `systemctl`",
-    "math": "Service control",
-    "note": "This section demonstrates the most common `systemctl` commands. It covers `start`, `stop`, and `restart` for controlling a service in the current session, `status` for checking its state, and `enable`/`disable` for controlling whether a service starts automatically at boot."
+    "title": "Advanced Storage: Logical Volume Management (LVM)",
+    "math": "Logical volume management",
+    "note": "A dedicated lesson on LVM. It explains how LVM provides a layer of abstraction over physical disks, allowing for flexible volume creation, easy resizing, and snapshots. The concepts of Physical Volumes, Volume Groups, and Logical Volumes are detailed."
   },
   {
     "n": 14,
-    "title": "Network Configuration and Troubleshooting",
-    "math": "Network configuration",
-    "note": "This lesson covers basic Linux networking. It introduces the `ip` command for viewing and configuring network interfaces and the `ping` and `traceroute` commands for troubleshooting network connectivity issues."
+    "title": "System Logging",
+    "math": "Log management",
+    "note": "This lesson covers how to view and analyze system logs. It focuses on the modern `journalctl` command for interacting with the `systemd` journal, demonstrating how to filter logs by time, service, or priority."
   },
   {
     "n": 15,
-    "title": "DNS Configuration",
-    "math": "DNS resolution",
-    "note": "This section explains how a Linux system resolves domain names. It covers the purpose of the `/etc/resolv.conf` file, which is used to configure the IP addresses of the DNS servers the system should use."
+    "title": "Automation: Shell Scripting",
+    "math": "Scripting",
+    "note": "This section provides an introduction to writing simple Bash scripts to automate repetitive administrative tasks. It covers variables, loops, and conditional statements within the context of a shell script."
   },
   {
     "n": 16,
-    "title": "Storage Management: `df` and `du`",
-    "math": "Disk space analysis",
-    "note": "This lesson introduces commands for monitoring disk space. It explains how `df` (disk free) is used to see the amount of space used and available on mounted file systems, and how `du` (disk usage) is used to see the space used by specific directories."
+    "title": "Automation: Task Scheduling with `cron`",
+    "math": "Task scheduling",
+    "note": "This lesson explains how to use the `cron` daemon to schedule scripts or other commands to run automatically at specific times or intervals. The syntax of a crontab file is detailed."
   },
   {
     "n": 17,
-    "title": "Mounting File Systems and `/etc/fstab`",
-    "math": "File system mounting",
-    "note": "This section explains how to attach a file system on a storage device (like a hard drive partition) to a specific directory (a mount point). It covers the `mount` command and the `/etc/fstab` file, which is used to define which file systems should be mounted automatically at boot."
+    "title": "Security: Firewalls",
+    "math": "Firewall rules",
+    "note": "This lesson introduces the concept of a host-based firewall. It provides an overview of common firewall management tools like `ufw` (Uncomplicated Firewall) and `firewalld` for defining rules to allow or block traffic."
   },
   {
     "n": 18,
-    "title": "System Logging with `journalctl`",
-    "math": "Log management",
-    "note": "This lesson covers how to view and analyze system logs using the `journalctl` command, which is the tool for interacting with the `systemd` journal. It demonstrates how to filter logs by time, service, or priority."
+    "title": "Security: SSH Hardening",
+    "math": "Secure shell configuration",
+    "note": "This lesson covers how to secure the Secure Shell (SSH) service for remote administration. Key practices like disabling root login, disabling password authentication in favor of key-based authentication, and changing the default port are explained."
   },
   {
     "n": 19,
-    "title": "Automation with Shell Scripting and `cron`",
-    "math": "Automation and task scheduling",
-    "note": "This section introduces automation. It provides a brief overview of writing simple Bash scripts to automate repetitive tasks. It then explains how to use the `cron` daemon to schedule these scripts or other commands to run automatically at specific times or intervals."
+    "title": "Advanced Security: SELinux and AppArmor",
+    "math": "Mandatory Access Control (MAC)",
+    "note": "A lesson introducing Mandatory Access Control. It conceptually explains how systems like SELinux (for Red Hat-based systems) and AppArmor (for Debian-based systems) provide more granular security policies by confining what processes are allowed to do."
   },
   {
     "n": 20,
-    "title": "Basic Security: Firewalls and SSH",
-    "math": "System security",
-    "note": "This final lesson covers two essential security tasks. It introduces the concept of a host-based firewall and simple tools like `ufw` to manage it. It also covers how to secure the Secure Shell (SSH) service, for example by disabling password authentication and using key-based authentication only."
+    "title": "Performance Monitoring and Analysis",
+    "math": "Performance analysis",
+    "note": "A lesson that goes beyond `top`. It introduces other key command-line tools for diagnosing performance issues, such as `vmstat` (for virtual memory statistics), `iostat` (for storage I/O), and `ss` (for network socket statistics)."
+  },
+  {
+    "n": 21,
+    "title": "Backup and Recovery Strategies",
+    "math": "Data backup",
+    "note": "A practical lesson on system backups. It introduces common backup tools like `tar` and `rsync` and discusses different backup strategies, such as creating full, incremental, and differential backups."
   }
 ]

@@ -73,60 +73,84 @@
   },
   {
     "n": 13,
+    "title": "Advanced Indexing: Types",
+    "math": "Data structures",
+    "note": "Explores specialized index types beyond the basics. This includes `multikey` indexes for array fields, `text` indexes for full-text search, and `geospatial` indexes for querying location-based data."
+  },
+  {
+    "n": 14,
+    "title": "Advanced Indexing: Properties",
+    "math": "Index properties",
+    "note": "Covers important index properties that provide extra functionality. This includes `unique` constraints to prevent duplicate values, `partial` indexes to index a subset of documents, and `TTL` (Time-To-Live) indexes to automatically expire old data."
+  },
+  {
+    "n": 15,
+    "title": "Performance: Analyzing Queries with `explain()`",
+    "math": "Performance analysis",
+    "note": "Introduces the `explain()` method, a crucial tool for understanding query performance. This lesson shows how to interpret the output to see how MongoDB is executing a query, whether it's using an index, and how many documents it had to scan."
+  },
+  {
+    "n": 16,
     "title": "The Aggregation Framework",
     "math": "Data aggregation",
     "note": "Introduces MongoDB's powerful Aggregation Framework for performing multi-stage data processing and analysis. The lesson explains the concept of a pipeline and covers common stages like `$match`, `$group`, `$sort`, and `$project`."
   },
   {
-    "n": 14,
-    "title": "Aggregation Pipeline Examples",
+    "n": 17,
+    "title": "Advanced Aggregation: `$lookup` and `$unwind`",
     "math": "Data aggregation",
-    "note": "Walks through several practical examples of using the aggregation pipeline to perform complex data analysis, such as calculating averages, grouping by categories, and reshaping documents."
+    "note": "Covers two of the most powerful aggregation stages. `$lookup` is used to perform a left outer join to another collection, allowing you to combine related data. `$unwind` is used to deconstruct an array field into a stream of separate documents."
   },
   {
-    "n": 15,
+    "n": 18,
     "title": "Data Modeling: Embedded Documents",
     "math": "Data structures",
     "note": "This lesson discusses the embedded data model, where related data is stored inside a single parent document. It covers the benefits of this approach for read performance and data atomicity."
   },
   {
-    "n": 16,
+    "n": 19,
     "title": "Data Modeling: References",
     "math": "Data structures",
     "note": "Explains the normalized data model using references (similar to foreign keys), where related data is stored in separate collections. The lesson discusses when to use this approach and how to perform application-level joins."
   },
   {
-    "n": 17,
+    "n": 20,
+    "title": "Data Governance: Schema Validation",
+    "math": "Schema validation",
+    "note": "Explains how to enforce data quality using MongoDB's schema validation feature. This lesson shows how to define a `$jsonSchema` for a collection to ensure that all inserted or updated documents conform to a specific structure."
+  },
+  {
+    "n": 21,
     "title": "MongoDB Compass (GUI)",
     "math": "Graphical user interface",
     "note": "Provides an introduction to MongoDB Compass, the official graphical user interface for MongoDB. It demonstrates how to connect to a database, visually explore data, run queries, and build aggregation pipelines."
   },
   {
-    "n": 18,
+    "n": 22,
     "title": "User Authentication and Authorization",
     "math": "Access control",
     "note": "This section covers how to secure a MongoDB deployment by enabling authentication. It explains how to create users and assign built-in roles to control access to different databases and collections."
   },
   {
-    "n": 19,
+    "n": 23,
     "title": "Replication",
     "math": "Distributed systems",
     "note": "Introduces replication as a key feature for high availability and redundancy. The lesson explains the concept of a replica set, with a primary and secondary nodes, and how it provides automatic failover for production deployments."
   },
   {
-    "n": 20,
+    "n": 24,
     "title": "Introduction to Sharding",
     "math": "Distributed systems",
     "note": "This lesson provides a high-level overview of sharding for horizontal scaling. It explains how sharding distributes data across multiple servers (a 'sharded cluster') to handle very large datasets and high throughput."
   },
   {
-    "n": 21,
+    "n": 25,
     "title": "Transactions",
     "math": "ACID properties",
     "note": "Explains how to use multi-document ACID transactions in MongoDB (on replica sets). The lesson covers starting a session and using `withTransaction` to perform a series of operations as a single, atomic unit."
   },
   {
-    "n": 22,
+    "n": 26,
     "title": "Connecting to MongoDB with a Driver",
     "math": "API design",
     "note": "This final section explains how to connect to a MongoDB database from an application using an official driver (e.g., for Node.js or Python). It covers the basic steps of establishing a connection and performing CRUD operations programmatically."

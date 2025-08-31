@@ -67,12 +67,30 @@
   },
   {
     "n": 12,
+    "title": "Introduction to Decentralized Finance (DeFi)",
+    "math": "Financial engineering",
+    "note": "This lesson introduces DeFi, an ecosystem of financial applications built on blockchain. It covers core concepts like decentralized lending/borrowing platforms, automated market makers (AMMs) like Uniswap, and the goal of creating a permissionless financial system."
+  },
+  {
+    "n": 13,
+    "title": "Decentralized Autonomous Organizations (DAOs)",
+    "math": "Organizational theory, voting theory",
+    "note": "This section explains DAOs as internet-native organizations managed by their members and governed by rules encoded in smart contracts. It covers how DAOs handle proposals, voting, and treasury management, representing a new model for collective action and governance."
+  },
+  {
+    "n": 14,
+    "title": "Privacy with Zero-Knowledge Proofs",
+    "math": "Zero-knowledge proofs (ZKPs)",
+    "note": "This lesson provides a high-level introduction to ZKPs, a cryptographic method by which one party can prove to another that they know a value, without conveying any information apart from the fact that they know the value. Its application for enhancing privacy and scalability (ZK-Rollups) on blockchains is discussed."
+  },
+  {
+    "n": 15,
     "title": "Blockchain Security and Challenges",
     "math": "Risk analysis",
     "note": "This lesson discusses the security vulnerabilities and limitations of blockchain technology. It explains the concept of a '51% attack,' where a single entity could control the majority of the network's mining power. It also covers major challenges, including scalability, energy consumption (for PoW), and the evolving regulatory landscape."
   },
   {
-    "n": 13,
+    "n": 16,
     "title": "The Future of Blockchain",
     "math": "Scalability solutions and interoperability protocols",
     "note": "This section explores the ongoing evolution of blockchain technology. It introduces Layer 2 scaling solutions (like Rollups and State Channels) designed to increase transaction speed and reduce costs. It also discusses the concept of blockchain interoperability, with examples like Polkadot and Cosmos, which aim to enable different blockchains to communicate with each other."

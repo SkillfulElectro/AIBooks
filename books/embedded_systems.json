@@ -3,120 +3,132 @@
     "n": 1,
     "title": "What Is an Embedded System?",
     "math": "System definition",
-    "note": "This section provides a formal definition of an Embedded System as a computer system—a combination of a computer processor, computer memory, and input/output peripheral devices—that has a dedicated function within a larger mechanical or electronic system. Examples like microwaves, digital watches, and engine controllers in cars are used."
+    "note": "This section provides a formal definition of an Embedded System as a computer system with a dedicated function within a larger mechanical or electronic system. It contrasts embedded systems with general-purpose computers, highlighting constraints in power, cost, and resources."
   },
   {
     "n": 2,
-    "title": "Embedded Systems vs. General-Purpose Computers",
-    "math": "Comparative analysis",
-    "note": "This lesson contrasts embedded systems with general-purpose computers (like a desktop PC). It highlights the key differences: embedded systems have a dedicated function, are resource-constrained (in memory, power, and processing), and must often meet real-time computing constraints."
+    "title": "Core Components: The Microcontroller (MCU)",
+    "math": "System on a Chip (SoC)",
+    "note": "This lesson introduces the Microcontroller (MCU) as the heart of most embedded systems. It explains that an MCU is a 'computer on a chip' that integrates a CPU core, memory (Flash and RAM), and I/O peripherals into a single integrated circuit. The ARM Cortex-M architecture is highlighted as an industry standard."
   },
   {
     "n": 3,
-    "title": "Core Components of an Embedded System",
-    "math": "System architecture",
-    "note": "This section outlines the main hardware components of a typical embedded system. It covers the processor (the 'brain'), memory (for program and data), input/output (I/O) ports for interacting with the outside world, timers, and communication interfaces."
+    "title": "Embedded Programming: Languages and Toolchains",
+    "math": "Cross-compilation",
+    "note": "This lesson explains why C and C++ are the dominant languages for embedded systems due to their performance and low-level hardware access. It introduces the concept of a 'cross-compilation' toolchain (compiler, assembler, linker) which runs on a host PC to create an executable for the target MCU."
   },
   {
     "n": 4,
-    "title": "Microprocessor vs. Microcontroller (MCU)",
-    "math": "Integrated circuits",
-    "note": "This lesson explains the crucial difference between a microprocessor and a microcontroller. A microprocessor is just a CPU and requires external chips for memory and I/O. A microcontroller (MCU) is a 'computer on a chip' that integrates a CPU, memory, and I/O peripherals into a single integrated circuit, which is ideal for embedded systems."
+    "title": "Memory-Mapped I/O",
+    "math": "Memory mapping",
+    "note": "This lesson explains the fundamental concept of how software controls hardware. It details how peripherals on an MCU (like GPIO, timers, etc.) are controlled by reading from and writing to special memory addresses known as control registers. This is the foundation of all low-level driver development."
   },
   {
     "n": 5,
-    "title": "Popular MCU Architectures: ARM Cortex-M",
-    "math": "Processor architecture",
-    "note": "This section introduces the ARM Cortex-M family as the de facto industry standard for 32-bit microcontrollers. It provides a high-level overview of its architecture and explains why its balance of performance and power efficiency has made it so popular in the embedded world."
+    "title": "Low-Level Programming: Bit Manipulation",
+    "math": "Bitwise operations (AND, OR, XOR, SHIFT)",
+    "note": "This lesson covers the essential skill of bit manipulation in embedded C. It explains how to use bitwise operators (AND, OR, XOR, NOT, bit shifts) to read, set, clear, and toggle individual bits within the memory-mapped hardware registers to control peripherals."
   },
   {
     "n": 6,
-    "title": "Embedded I/O: General Purpose Input/Output (GPIO)",
+    "title": "I/O Peripheral: General Purpose Input/Output (GPIO)",
     "math": "Digital logic (high/low)",
-    "note": "This lesson covers the most fundamental type of I/O. It explains how GPIO pins on an MCU can be configured as either an input (to read a digital signal, like from a button) or an output (to send a digital signal, like to turn on an LED). The concept of setting a pin 'high' or 'low' is detailed."
+    "note": "This lesson covers the most fundamental peripheral. It explains how GPIO pins on an MCU can be configured as either an input (to read a digital signal, like from a button) or an output (to send a digital signal, like to turn on an LED)."
   },
   {
     "n": 7,
-    "title": "Interrupts and Interrupt Service Routines (ISRs)",
-    "math": "Event-driven programming",
-    "note": "This section introduces interrupts as a mechanism for a peripheral or external event to pause the main program flow and request immediate attention from the processor. It explains how an Interrupt Service Routine (ISR) is a special function that is automatically executed in response to an interrupt, enabling efficient handling of asynchronous events."
-  },
-  {
-    "n": 8,
-    "title": "Analog-to-Digital Converters (ADC)",
+    "title": "I/O Peripheral: Analog-to-Digital Converter (ADC)",
     "math": "Analog-to-digital conversion",
     "note": "This lesson explains the function of an ADC, a peripheral that converts a continuous analog voltage (from a sensor like a potentiometer or temperature sensor) into a discrete digital value that the microcontroller can process."
   },
   {
+    "n": 8,
+    "title": "I/O Peripheral: Timers",
+    "math": "Frequency and period",
+    "note": "This lesson introduces the general-purpose timer as a versatile peripheral. It explains how timers can be used to generate precise time delays, schedule periodic tasks, and measure the frequency or duration of external events."
+  },
+  {
     "n": 9,
-    "title": "Communication Protocol: UART",
-    "math": "Asynchronous serial communication",
-    "note": "This section introduces the Universal Asynchronous Receiver-Transmitter (UART) protocol. It is a simple, two-wire protocol for serial communication, commonly used for debugging (e.g., printing messages to a PC) or for connecting to modules like GPS or Bluetooth."
+    "title": "I/O Peripheral: Pulse-Width Modulation (PWM)",
+    "math": "Duty cycle",
+    "note": "This lesson explains Pulse-Width Modulation (PWM) as a technique to generate a variable analog-like voltage from a digital output. It is a key application of timers and is used extensively for controlling the brightness of LEDs, the speed of DC motors, and positioning servo motors."
   },
   {
     "n": 10,
-    "title": "Communication Protocol: I2C",
-    "math": "Synchronous serial communication (I2C)",
-    "note": "This lesson covers the Inter-Integrated Circuit (I2C) protocol. It is a synchronous, multi-device, two-wire bus (SDA for data, SCL for clock) commonly used to connect low-speed peripherals like sensors and EEPROMs to a microcontroller over short distances."
+    "title": "Interrupts and Interrupt Service Routines (ISRs)",
+    "math": "Event-driven programming",
+    "note": "This section introduces interrupts as a mechanism for a peripheral to pause the main program and request immediate attention. It explains how an Interrupt Service Routine (ISR) is a special function that is automatically executed in response to an interrupt, enabling efficient handling of asynchronous events."
   },
   {
     "n": 11,
-    "title": "Communication Protocol: SPI",
-    "math": "Synchronous serial communication (SPI)",
-    "note": "This section explains the Serial Peripheral Interface (SPI) protocol. It is another synchronous serial communication protocol that is generally faster than I2C and uses four wires (MISO, MOSI, SCLK, CS). It is often used for higher-bandwidth devices like SD cards and display screens."
+    "title": "Direct Memory Access (DMA)",
+    "math": "Data transfer offloading",
+    "note": "This lesson explains the role of a Direct Memory Access (DMA) controller. It describes how DMA allows for high-speed data transfers between peripherals and memory without involving the CPU, freeing up the processor for other computational tasks."
   },
   {
     "n": 12,
-    "title": "Embedded Programming Languages: C and C++",
-    "math": "Low-level programming",
-    "note": "This lesson explains why C and C++ are the dominant languages for embedded systems development. Their ability to perform low-level memory manipulation, their performance, and their direct access to hardware are highlighted as key advantages for resource-constrained environments."
+    "title": "Communication Protocol: UART",
+    "math": "Asynchronous serial communication",
+    "note": "This section introduces the Universal Asynchronous Receiver-Transmitter (UART) protocol. It is a simple, two-wire protocol for serial communication, commonly used for debugging or for connecting to modules like GPS or Bluetooth."
   },
   {
     "n": 13,
-    "title": "The Embedded C Toolchain",
-    "math": "Compilation process",
-    "note": "This section explains the 'cross-compilation' toolchain used in embedded development. It covers the roles of the compiler (which turns C code into assembly), the assembler (which turns assembly into machine code), and the linker (which combines object files and resolves addresses to create a final executable file)."
+    "title": "Communication Protocol: I2C",
+    "math": "Synchronous serial communication (I2C)",
+    "note": "This lesson covers the Inter-Integrated Circuit (I2C) protocol. It is a synchronous, multi-device, two-wire bus (SDA for data, SCL for clock) commonly used to connect low-speed peripherals like sensors and EEPROMs to an MCU over short distances."
   },
   {
     "n": 14,
-    "title": "Low-Level Programming: Bit Manipulation",
-    "math": "Bitwise operations (AND, OR, XOR, SHIFT)",
-    "note": "This lesson covers the essential skill of bit manipulation in embedded C. It explains how to use bitwise operators (AND, OR, XOR, NOT, bit shifts) to read, set, clear, and toggle individual bits within a hardware register, which is how peripherals are controlled."
+    "title": "Communication Protocol: SPI",
+    "math": "Synchronous serial communication (SPI)",
+    "note": "This section explains the Serial Peripheral Interface (SPI) protocol. It is another synchronous serial communication protocol that is generally faster than I2C and uses four wires (MISO, MOSI, SCLK, CS). It is often used for higher-bandwidth devices like SD cards and displays."
   },
   {
     "n": 15,
-    "title": "Memory in Embedded Systems",
+    "title": "Memory: Flash and RAM",
     "math": "Memory map",
     "note": "This section details the memory layout of a typical microcontroller. It explains the difference between non-volatile Flash memory (where the program code is stored) and volatile SRAM (where program variables and the stack are stored)."
   },
   {
     "n": 16,
-    "title": "What Is a Real-Time Operating System (RTOS)?",
-    "math": "Real-time systems",
-    "note": "This lesson introduces the concept of an RTOS. Unlike a general-purpose OS, an RTOS is designed to manage hardware resources for applications that must process data as it comes in, typically without buffer delays. It provides deterministic scheduling of tasks."
+    "title": "Hardware Abstraction Layers (HALs) and Build Systems",
+    "math": "Software abstraction",
+    "note": "This lesson covers the practical aspects of larger embedded software projects. It introduces the role of a Hardware Abstraction Layer (HAL), often provided by MCU vendors, to offer a standardized set of functions for interacting with peripherals. It also mentions the use of build systems like CMake."
   },
   {
     "n": 17,
-    "title": "Core RTOS Concepts: Tasks and Scheduling",
-    "math": "Task scheduling algorithms",
-    "note": "This section explains the core concepts of an RTOS. A 'task' (or thread) is an independent function that runs in a loop. The 'scheduler' is the part of the RTOS that decides which task should be running at any given point in time, based on priorities."
+    "title": "Introduction to Real-Time Operating Systems (RTOS)",
+    "math": "Real-time systems",
+    "note": "This lesson introduces the concept of an RTOS. Unlike a general-purpose OS, an RTOS is designed to manage hardware resources for applications that must process data as it comes in, providing deterministic scheduling of tasks to meet deadlines."
   },
   {
     "n": 18,
-    "title": "Core RTOS Concepts: Semaphores and Mutexes",
-    "math": "Synchronization primitives",
-    "note": "This lesson covers mechanisms for task synchronization and communication. A Mutex (mutual exclusion) is used to protect a shared resource from being accessed by multiple tasks at the same time. A Semaphore is used for signaling between tasks."
+    "title": "RTOS Concepts: Tasks and Scheduling",
+    "math": "Task scheduling algorithms",
+    "note": "This section explains the core concepts of an RTOS. A 'task' (or thread) is an independent function. The 'scheduler' is the part of the RTOS that decides which task should be running at any point in time, based on priorities or other scheduling policies."
   },
   {
     "n": 19,
-    "title": "Debugging with JTAG/SWD",
-    "math": "On-chip debugging",
-    "note": "This section explains modern techniques for debugging embedded systems. It introduces JTAG and Serial Wire Debug (SWD) as hardware debugging interfaces that allow a developer to control the MCU's execution (e.g., set breakpoints, step through code) and inspect memory and registers in real-time."
+    "title": "RTOS Concepts: Semaphores, Mutexes, and Queues",
+    "math": "Synchronization primitives",
+    "note": "This lesson covers mechanisms for inter-task communication and synchronization. A Mutex protects a shared resource. A Semaphore is used for signaling between tasks. A Message Queue is used to pass data between tasks."
   },
   {
     "n": 20,
-    "title": "The Internet of Things (IoT)",
-    "math": "Network of physical objects",
-    "note": "This final lesson looks at the modern application of embedded systems in the Internet of Things (IoT). It defines IoT as the network of physical objects—'things'—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the Internet."
+    "title": "Power Management",
+    "math": "Power consumption optimization",
+    "note": "This lesson focuses on power efficiency, a critical constraint in many embedded systems. It introduces the concept of MCU low-power modes (e.g., sleep, stop, standby) and discusses firmware strategies for minimizing power consumption in battery-powered devices."
+  },
+  {
+    "n": 21,
+    "title": "Debugging with JTAG/SWD",
+    "math": "On-chip debugging",
+    "note": "This section explains modern techniques for debugging embedded systems. It introduces JTAG and Serial Wire Debug (SWD) as hardware debugging interfaces that allow a developer to control the MCU's execution (set breakpoints, step through code) and inspect memory in real-time."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Embedded Linux",
+    "math": "Embedded operating systems",
+    "note": "This lesson introduces the concept of using a full-fledged Linux OS on more powerful embedded processors (MPUs). It discusses the trade-offs (more powerful and feature-rich, but less real-time deterministic than an RTOS) and common use cases like gateways and complex user interfaces."
   }
 ]

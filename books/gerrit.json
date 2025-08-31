@@ -1,45 +1,45 @@
 [
   {
     "n": 1,
-    "title": "Introduction to Code Review",
+    "title": "Introduction to Code Review and Gerrit",
     "math": "Software quality assurance",
-    "note": "This section explains the importance of code review as a systematic examination of source code. It covers the primary goals: to find and fix mistakes overlooked in the initial development phase, to improve the overall quality of the software, and to share knowledge among developers."
+    "note": "This section explains the importance of code review for software quality and introduces Gerrit as a web-based tool, tightly integrated with Git, that enforces a structured, commit-based review process before code is merged."
   },
   {
     "n": 2,
-    "title": "What Is Gerrit?",
-    "math": "Code review systems",
-    "note": "This lesson introduces Gerrit as a free, web-based team code collaboration tool. It explains that Gerrit is tightly integrated with Git and is designed to enforce a specific, structured code review process before code is merged into the official repository. It is contrasted with the more flexible pull/merge request model of tools like GitHub."
+    "title": "Gerrit vs. Pull Requests",
+    "math": "Workflow comparison",
+    "note": "This lesson provides a detailed comparison of Gerrit's commit-based workflow with the branch-based Pull/Merge Request model of GitHub/GitLab. It discusses the pros and cons, such as Gerrit's clean, linear history versus the flexibility of PRs."
   },
   {
     "n": 3,
     "title": "The Gerrit Workflow: A High-Level Overview",
     "math": "Process flow",
-    "note": "This section provides a high-level overview of the entire Gerrit workflow. It outlines the main steps: a developer pushes a commit to a special 'magic' branch for review, reviewers provide feedback and scores, the developer uploads new versions (patch sets) by amending the original commit, and finally, the change is submitted and merged."
+    "note": "This section outlines the main steps: a developer pushes a commit for review, reviewers provide feedback and scores, the developer uploads new versions (patch sets) by amending the commit, and finally, the change is submitted and merged."
   },
   {
     "n": 4,
     "title": "Core Concept: The Change and Patch Set",
     "math": "Revision control",
-    "note": "This lesson explains the fundamental data model of Gerrit. A 'Change' represents a single conceptual modification, tracked by a unique 'Change-Id'. A 'Patch Set' is a specific version or revision of that change. A single Change can have multiple Patch Sets as the developer responds to feedback."
+    "note": "This lesson explains Gerrit's data model. A 'Change' represents a single conceptual modification, tracked by a unique 'Change-Id'. A 'Patch Set' is a specific version of that change. A single Change can have multiple Patch Sets."
   },
   {
     "n": 5,
     "title": "Core Concept: The `Change-Id`",
     "math": "Unique identifiers",
-    "note": "This section details the 'Change-Id', a unique hash that Gerrit uses to associate different commits together as patch sets of the same change. It explains how a special `commit-msg` Git hook automatically generates this ID in the commit message, which is crucial for the entire workflow."
+    "note": "This section details the 'Change-Id', a unique hash in the commit message that Gerrit uses to associate different commits as patch sets of the same change. The `commit-msg` hook that automatically generates this ID is explained."
   },
   {
     "n": 6,
     "title": "Setting Up Your Gerrit Environment",
     "math": "Client-side configuration",
-    "note": "This lesson provides a practical guide to setting up a local workstation to interact with Gerrit. It covers cloning a Gerrit-managed repository and, most importantly, installing the `commit-msg` hook that automatically adds the `Change-Id` to commit messages."
+    "note": "This lesson provides a practical guide to setting up a local workstation. It covers cloning a Gerrit-managed repository and, most importantly, installing the `commit-msg` hook that automatically adds the `Change-Id`."
   },
   {
     "n": 7,
     "title": "Pushing a Change for Review",
     "math": "Git push semantics",
-    "note": "This section explains the specific Git command used to send a commit for review. It details the syntax `git push origin HEAD:refs/for/<branch>`, explaining that you are not pushing directly to the branch, but to a special 'magic' reference that Gerrit intercepts to create a new code review change."
+    "note": "This section explains the specific Git command used to send a commit for review: `git push origin HEAD:refs/for/<branch>`. It clarifies that this special 'magic' reference is intercepted by Gerrit to create a new code review change."
   },
   {
     "n": 8,
@@ -49,74 +49,74 @@
   },
   {
     "n": 9,
-    "title": "The Review Process: Providing Feedback",
-    "math": "Peer review",
-    "note": "This section covers the process from a reviewer's perspective. It demonstrates how to use the side-by-side or unified diff view to compare changes, how to add inline comments on specific lines of code, and how to write a summary comment for the entire change."
+    "title": "The Review Process: Feedback and Scoring",
+    "math": "Peer review, scoring systems",
+    "note": "This section covers the reviewer's perspective. It demonstrates how to add inline comments and explains the scoring system, focusing on the `Code-Review` label (typically -2 to +2) and the `Verified` label (often used by CI systems)."
   },
   {
     "n": 10,
-    "title": "The Review Process: Scoring a Change",
-    "math": "Scoring systems",
-    "note": "This lesson explains the scoring system in Gerrit. It focuses on the `Code-Review` label, which typically ranges from -2 (Do not submit) to +2 (Looks good to me, approved). It also introduces the `Verified` label, which is often used by automated CI systems to indicate if the change builds and passes tests."
+    "title": "Responding to Feedback: Amending and Pushing a New Patch Set",
+    "math": "Code revision",
+    "note": "This lesson explains the developer's workflow for responding to feedback. It covers making changes, using `git commit --amend` to update the previous commit, and pushing to the same `refs/for/<branch>` to create a new patch set."
   },
   {
     "n": 11,
-    "title": "Responding to Feedback: Amending a Commit",
-    "math": "Git commit amending",
-    "note": "This lesson explains the workflow for a developer responding to review comments. Instead of creating a new commit, the developer makes the requested changes and then uses `git commit --amend` to update the previous commit. This keeps the history clean and is essential for creating a new patch set."
+    "title": "Submitting a Change",
+    "math": "Code merging",
+    "note": "This lesson explains the final step. Once a change has received the necessary positive scores (e.g., a +2 on `Code-Review`), the 'Submit' button becomes available, which tells Gerrit to merge the latest patch set into the target branch."
   },
   {
     "n": 12,
-    "title": "Pushing a New Patch Set",
-    "math": "Code revision",
-    "note": "This section demonstrates what to do after amending a commit. The developer pushes the amended commit to the same `refs/for/<branch>` reference. Because the commit message contains the same `Change-Id`, Gerrit recognizes it as a new version of the existing change and creates a new patch set."
+    "title": "Handling Merge Conflicts: Rebasing",
+    "math": "Git rebase",
+    "note": "This section covers what to do if the target branch is updated while a change is in review. It explains that the developer must rebase their change on top of the updated branch using `git pull --rebase` before pushing a new patch set."
   },
   {
     "n": 13,
-    "title": "Submitting a Change",
-    "math": "Code merging",
-    "note": "This lesson explains the final step of the workflow. Once a change has received the necessary positive scores (e.g., a +2 on `Code-Review` and a +1 on `Verified`), a 'Submit' button becomes available. Clicking this tells Gerrit to merge the latest patch set into the target branch."
+    "title": "Chained Changes",
+    "math": "Dependency graphs",
+    "note": "This lesson introduces the advanced topic of chained changes, where one Gerrit change depends on another. It explains how Gerrit automatically detects this relationship and how it affects the review and submission process."
   },
   {
     "n": 14,
-    "title": "Handling Merge Conflicts: Rebasing",
-    "math": "Git rebase",
-    "note": "This section covers what to do if the target branch (e.g., `master`) has been updated while your change was in review. It explains that you must rebase your change on top of the updated branch to resolve any conflicts. This is done locally using `git pull --rebase` before pushing a new patch set."
+    "title": "Work-in-Progress (WIP) and Private Changes",
+    "math": "Draft states",
+    "note": "This section covers features for managing draft changes. A Work-in-Progress (WIP) change does not send notifications to reviewers. A Private change is only visible to the owner and specified reviewers."
   },
   {
     "n": 15,
-    "title": "Chained Changes",
-    "math": "Dependency graphs",
-    "note": "This lesson introduces an advanced topic: chained changes. This is where one Gerrit change depends on another. It explains how Gerrit automatically detects this relationship and how it affects the review and submission process, as changes must typically be submitted in order."
+    "title": "The `git-review` Tool",
+    "math": "Command-line utilities",
+    "note": "This lesson introduces `git-review`, a command-line tool that simplifies interaction with Gerrit by providing simple commands like `git review` to automatically push a change to the correct reference."
   },
   {
     "n": 16,
-    "title": "Work-in-Progress (WIP) and Private Changes",
-    "math": "Draft states",
-    "note": "This section covers features for managing draft changes. A Work-in-Progress (WIP) change does not send notifications to reviewers, allowing developers to get early feedback from a CI system. A Private change is only visible to the owner and specified reviewers."
+    "title": "Gerrit for Administrators: Access Control",
+    "math": "Access control lists",
+    "note": "This section provides an overview of Gerrit administration. It focuses on access control, explaining how project administrators can configure permissions for specific references (branches), controlling who can read, push, and submit reviews."
   },
   {
     "n": 17,
-    "title": "The `git-review` Tool",
-    "math": "Command-line utilities",
-    "note": "This lesson introduces `git-review`, a command-line tool that simplifies interaction with Gerrit. It provides simple commands like `git review` to automatically push a change to the correct reference, which is easier than typing the full `git push` command."
+    "title": "Gerrit for Administrators: Submit Rules",
+    "math": "Rule-based logic",
+    "note": "This lesson explains how administrators can customize the conditions under which a change can be submitted. This is done using 'submit rules', typically written in Prolog, which define the combination of scores required for submission."
   },
   {
     "n": 18,
-    "title": "Gerrit for Administrators: Access Control",
-    "math": "Access control lists",
-    "note": "This section provides an overview of Gerrit administration. It focuses on access control, explaining how project administrators can configure permissions for specific references (branches), controlling who can read, push changes, and submit reviews for a project."
+    "title": "The Gerrit Ecosystem: Plugins",
+    "math": "Plugin architecture",
+    "note": "This lesson introduces the concept of extending Gerrit's functionality through plugins. It mentions common plugin categories, such as for different authentication backends (LDAP, OAuth), integrations with CI/CD systems, and custom UI enhancements."
   },
   {
     "n": 19,
-    "title": "Gerrit for Administrators: Submit Rules",
-    "math": "Rule-based logic",
-    "note": "This lesson explains how administrators can customize the conditions under which a change can be submitted. This is done using 'submit rules', which are typically written in Prolog. These rules define the combination of scores on different labels that are required for the 'Submit' button to become active."
+    "title": "CI/CD Integration: The Checks API",
+    "math": "API-based integration",
+    "note": "This lesson focuses on modern CI/CD integration. It explains how automated systems can interact with Gerrit's REST API, specifically focusing on the 'Checks' API, which allows CI tools to report status (pending, running, success, failure) and post results on a patch set."
   },
   {
     "n": 20,
     "title": "A Complete Workflow Walkthrough",
     "math": "End-to-end process simulation",
-    "note": "This final lesson provides a complete, step-by-step walkthrough of a single change, showing both the developer and reviewer perspectives. It covers creating the change, adding a comment, uploading a new patch set in response to the comment, and finally submitting the change, reinforcing the entire lifecycle."
+    "note": "This final lesson provides a complete, step-by-step walkthrough of a single change, showing both the developer and reviewer perspectives. It covers creating the change, adding a comment, uploading a new patch set, and finally submitting the change."
   }
 ]

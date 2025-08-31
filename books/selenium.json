@@ -49,72 +49,84 @@
   },
   {
     "n": 9,
+    "title": "Selenium 4: Relative Locators",
+    "math": "Relative positioning",
+    "note": "This lesson introduces a powerful new feature in Selenium 4. Relative locators allow you to find elements based on their visual position relative to other elements, using friendly terms like `above`, `below`, `to_left_of`, and `to_right_of`. This can make some locators much more intuitive."
+  },
+  {
+    "n": 10,
     "title": "Interacting with Elements: `.click()` and `.send_keys()`",
     "math": "User input simulation",
     "note": "This lesson covers the most common interactions with web elements. Once an element is found, the `.click()` method can be used to simulate a mouse click, and the `.send_keys()` method can be used to simulate typing text into an input field."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Getting Text and Attributes from Elements",
     "math": "Data extraction",
-    "note": "This section explains how to retrieve information from an element. It covers the `.text` property to get the visible text of an element, and the `.get_attribute('value')` method to get the value of a specific attribute, which is useful for getting the current text from an input box."
+    "note": "This section explains how to retrieve information from an element. It covers the `.text` property to get the visible text of an element, and the `.get_attribute('value')` method to get the current text from an input box."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "The Problem of Timing: Waits",
     "math": "Synchronization",
     "note": "This crucial lesson explains that modern web applications are dynamic and elements may not be present on the page immediately. Simply adding fixed delays (`time.sleep()`) is a bad practice that leads to slow and unreliable tests. The concept of 'waits' is introduced as the proper solution."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Explicit Waits",
     "math": "Conditional waits",
     "note": "This section introduces Explicit Waits as the recommended waiting strategy. An explicit wait tells Selenium to wait for a certain condition to occur before proceeding. It is implemented using the `WebDriverWait` class in combination with 'expected conditions'."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Expected Conditions",
     "math": "Expected conditions",
     "note": "This lesson details the `expected_conditions` module, which provides a set of pre-defined conditions to use with `WebDriverWait`. Examples include waiting for an element to be visible (`visibility_of_element_located`), clickable (`element_to_be_clickable`), or for an alert to be present."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Handling Dropdowns",
     "math": "Select elements",
     "note": "This section covers how to interact with HTML `<select>` elements (dropdowns). It introduces the `Select` class from Selenium's support module, which provides convenient methods for selecting options by their visible text, their value, or their index."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Advanced Interactions with `ActionChains`",
     "math": "Complex user gestures",
     "note": "This lesson introduces the `ActionChains` class for performing more complex interactions than simple clicks. It demonstrates how to build a chain of actions to perform operations like mouse hovering, double-clicking, and drag-and-drop."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "Working with Windows and Frames",
     "math": "Browser context switching",
     "note": "This section explains how to handle multiple browser windows or tabs, and how to work with `<iframe>` elements. It demonstrates how to use the `driver.window_handles` property and the `driver.switch_to.window()` and `driver.switch_to.frame()` methods to change the active context."
   },
   {
-    "n": 17,
+    "n": 18,
+    "title": "Advanced: Chrome DevTools Protocol (CDP)",
+    "math": "Low-level browser control",
+    "note": "This lesson introduces a powerful feature of Selenium 4 that provides access to the Chrome DevTools Protocol. This allows for low-level control of the browser, enabling advanced features like intercepting network requests, mocking geolocation, or capturing performance metrics."
+  },
+  {
+    "n": 19,
     "title": "Introduction to the Page Object Model (POM)",
     "math": "Design patterns",
     "note": "This lesson introduces the Page Object Model (POM) as a widely used design pattern in test automation. The idea is to create an object repository for the UI elements on each page of an application. This separates the test script logic from the UI element locators, making tests more readable and maintainable."
   },
   {
-    "n": 18,
+    "n": 20,
     "title": "Implementing a Page Object",
     "math": "Object-oriented design",
     "note": "This section provides a practical example of creating a page object class. It shows how to store the locators for the elements on a page and how to create methods that represent the user interactions on that page (e.g., a `login()` method on a `LoginPage` object)."
   },
   {
-    "n": 19,
+    "n": 21,
     "title": "Introduction to Selenium Grid",
     "math": "Parallel test execution",
     "note": "This section provides a high-level overview of Selenium Grid, a tool used to run tests across different machines with different browsers in parallel. This allows you to significantly reduce the time it takes to run a large test suite and to test your application on various browser/OS combinations."
   },
   {
-    "n": 20,
+    "n": 22,
     "title": "A Complete Test with `pytest` and POM",
     "math": "End-to-end test implementation",
     "note": "This final lesson ties everything together by demonstrating a complete, well-structured test. It shows how to use the `pytest` framework to structure the test, how to use Page Objects to interact with the application, and how to include assertions to verify the outcome."

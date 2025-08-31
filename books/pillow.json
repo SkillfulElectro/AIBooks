@@ -13,84 +13,108 @@
   },
   {
     "n": 3,
+    "title": "Opening Images from Memory or URLs",
+    "math": "File I/O, Network requests",
+    "note": "This lesson shows how to open image data that does not come from a local file. It demonstrates using the `requests` library to download an image from a URL and the `io.BytesIO` module to treat the in-memory bytes as a file, which can then be opened by `Image.open()`."
+  },
+  {
+    "n": 4,
     "title": "Getting Image Information",
     "math": "Image metadata",
     "note": "This section explains how to get basic information about an image object. It covers accessing the `.format` attribute (e.g., 'JPEG', 'PNG'), the `.size` attribute (a tuple of width and height in pixels), and the `.mode` attribute (the color mode, e.g., 'RGB' or 'L' for grayscale)."
   },
   {
-    "n": 4,
+    "n": 5,
     "title": "Cropping an Image",
     "math": "Image cropping",
     "note": "This lesson demonstrates how to cut out a rectangular part of an image. It explains the `.crop()` method, which takes a 4-tuple defining the left, upper, right, and lower pixel coordinates of the box to be cropped."
   },
   {
-    "n": 5,
+    "n": 6,
     "title": "Resizing an Image",
     "math": "Image resizing",
     "note": "This section covers how to change the dimensions of an image. It introduces the `.resize()` method, which takes a tuple of the new width and height. The importance of maintaining the aspect ratio to avoid distortion is discussed."
   },
   {
-    "n": 6,
+    "n": 7,
     "title": "Rotating and Transposing an Image",
     "math": "Image rotation",
     "note": "This lesson explains how to change the orientation of an image. It demonstrates the `.rotate()` method for rotating an image by a specified angle and the `.transpose()` method for flipping the image horizontally or vertically."
   },
   {
-    "n": 7,
+    "n": 8,
     "title": "Pasting an Image",
     "math": "Image composition",
     "note": "This section covers how to paste one image onto another. It introduces the `.paste()` method, which is often used for watermarking or creating collages. It explains how to specify the location for the paste operation."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "Color Modes and Conversions",
     "math": "Color models",
     "note": "This lesson explains the different 'modes' an image can have. It covers the most common modes: 'L' (luminance, for grayscale), 'RGB' (for 3x8-bit color), and 'RGBA' (RGB with an alpha channel for transparency). The `.convert()` method is demonstrated for changing between modes."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Splitting and Merging Color Bands",
     "math": "Color channels",
     "note": "This section explains how to work with individual color channels. It shows how to use the `.split()` method on an RGB image to get three separate images representing the red, green, and blue channels, and how to use `Image.merge()` to recombine them."
   },
   {
-    "n": 10,
+    "n": 11,
+    "title": "Pixel-wise Operations with `.point()`",
+    "math": "Mapping functions",
+    "note": "This lesson introduces an efficient way to perform operations on every pixel in an image. It explains the `.point()` method, which takes a function (often a lambda) and applies it to each pixel value, useful for tasks like brightness and contrast adjustments without slow Python loops."
+  },
+  {
+    "n": 12,
     "title": "Image Enhancement",
     "math": "Image enhancement",
     "note": "This lesson introduces the `ImageEnhance` module for performing simple image enhancements. It provides separate classes for adjusting the `Contrast`, `Brightness`, `Color` balance, and `Sharpness` of an image."
   },
   {
-    "n": 11,
+    "n": 13,
     "title": "Applying Filters",
     "math": "Image filtering",
     "note": "This section covers the `ImageFilter` module, which contains a number of pre-defined enhancement filters. It demonstrates how to apply filters like `BLUR`, `CONTOUR`, and `SHARPEN` to an image using the `.filter()` method."
   },
   {
-    "n": 12,
+    "n": 14,
     "title": "The `ImageDraw` Module",
     "math": "2D graphics drawing",
     "note": "This lesson introduces the `ImageDraw` module, which provides simple 2D graphics capabilities for an image. It explains how to create a `Draw` object from an `Image` object, which can then be used to draw shapes and text."
   },
   {
-    "n": 13,
+    "n": 15,
     "title": "Drawing Shapes",
     "math": "Geometric primitives",
     "note": "This section demonstrates how to use the `ImageDraw` module to draw basic shapes. It covers the methods for drawing lines, ellipses, and rectangles, explaining how to specify the coordinates and colors for each shape."
   },
   {
-    "n": 14,
+    "n": 16,
     "title": "Drawing Text",
     "math": "Text rendering",
     "note": "This lesson shows how to add text to an image using the `draw.text()` method. It covers how to specify the position, the text string, and the fill color. It also introduces how to load a TrueType font to use a custom font and size."
   },
   {
-    "n": 15,
+    "n": 17,
+    "title": "Integration with NumPy",
+    "math": "Data structure conversion",
+    "note": "This crucial lesson shows how to bridge Pillow with the data science ecosystem. It demonstrates how to convert a Pillow `Image` object into a NumPy array using `np.array()` for complex numerical processing, and how to convert a NumPy array back into an image using `Image.fromarray()`."
+  },
+  {
+    "n": 18,
+    "title": "Working with Animated GIFs",
+    "math": "Image sequences",
+    "note": "This lesson covers how to handle animated image formats like GIF. It demonstrates how to open an animated GIF and use the `.seek()` method to iterate through its individual frames. It also shows how to create a new animated GIF from a list of images using the `save()` method with the `append_images` parameter."
+  },
+  {
+    "n": 19,
     "title": "Project: Creating Thumbnails",
     "math": "Image processing script",
     "note": "This lesson provides a practical project that combines several concepts. It walks through writing a Python script that iterates through all the images in a directory and uses the `.thumbnail()` method (a convenient alternative to `resize`) to create a smaller thumbnail version of each image."
   },
   {
-    "n": 16,
+    "n": 20,
     "title": "Project: Adding a Watermark",
     "math": "Image composition application",
     "note": "This final lesson provides another practical project. It demonstrates how to create a script that adds a text or image watermark to an image. This involves opening both the base image and the watermark image, and then using the `.paste()` method to overlay the watermark, often with transparency."

@@ -7,260 +7,146 @@
   },
   {
     "n": 2,
-    "title": "Installing Git on Your System",
+    "title": "Installing and Configuring Git",
     "math": "System Configuration",
-    "note": "Provides step-by-step instructions for downloading and installing the Git command-line tools on Windows, macOS, and Linux. Verification of the installation will be done by running `git --version` in the system's terminal."
+    "note": "Provides step-by-step instructions for installing Git and performing the essential first-time configuration of your user name and email address using `git config --global`."
   },
   {
     "n": 3,
-    "title": "First-Time Git Configuration",
-    "math": "Identity, Key-Value Pairs",
-    "note": "Covers the initial setup required after installation. Using the terminal, you will learn to configure your user name and email address globally using the `git config --global user.name` and `git config --global user.email` commands, which are essential for identifying commit authors."
+    "title": "Creating a New Repository",
+    "math": "Initialization",
+    "note": "Teaches how to initialize a new Git repository in an existing project directory by running the `git init` command, which creates a hidden `.git` subdirectory to store all repository data."
   },
   {
     "n": 4,
-    "title": "Creating a New Repository",
-    "math": "Initialization, Data Structures",
-    "note": "Teaches how to initialize a new Git repository in an existing project directory. This is done by running the `git init` command in the terminal, which creates a hidden `.git` subdirectory to store all necessary repository files and metadata."
+    "title": "The Three States of Git",
+    "math": "State Machines, Set Theory",
+    "note": "Introduces the three fundamental states of a file in Git: the Working Directory (your files), the Staging Area (files marked for the next commit), and the Repository (committed files). This is a core conceptual lesson."
   },
   {
     "n": 5,
-    "title": "The Three States of Git",
-    "math": "State Machines, Set Theory",
-    "note": "Introduces the three fundamental states of a file in Git: the Working Directory (untracked/modified files), the Staging Area (files marked for the next commit), and the Repository (committed files). This is a conceptual lesson explaining the lifecycle of a change."
+    "title": "The Basic Workflow: Modify, Stage, Commit",
+    "math": "State transitions",
+    "note": "Covers the fundamental workflow: modifying files, using `git status` to check their state, using `git add` to move them to the staging area, and using `git commit` to save a permanent snapshot of the staged changes in the repository."
   },
   {
     "n": 6,
-    "title": "Checking Project Status",
-    "math": "State Inspection",
-    "note": "Explains how to check the current state of the working directory and staging area. Using the terminal, the `git status` command will be used to see which files are modified, staged, or untracked."
+    "title": "Viewing Commit History with `git log`",
+    "math": "Graph Traversal (Linear)",
+    "note": "Shows how to view the chronological history of commits. The `git log` command is used to display commits, and flags like `--oneline` and `--graph` are introduced to format the output."
   },
   {
     "n": 7,
-    "title": "Staging Changes for Commit",
-    "math": "Set Operations (Addition)",
-    "note": "Covers the process of adding file changes to the staging area. This lesson demonstrates using the `git add <file>` command in the terminal to stage specific files or `git add .` to stage all modified files in the current directory."
+    "title": "Inspecting Changes: `git diff`, `git show`, `git blame`",
+    "math": "Set Theory (Difference)",
+    "note": "Covers commands for inspecting changes. `git diff` shows unstaged changes. `git show <commit>` displays the full details and content changes of a specific commit. `git blame <file>` shows who last modified each line of a file."
   },
   {
     "n": 8,
-    "title": "Committing Staged Changes",
-    "math": "Snapshotting, Data Integrity (Hashing)",
-    "note": "Teaches how to save the staged changes permanently to the repository's history. This is done using the `git commit -m 'Descriptive message'` command in the terminal, emphasizing the importance of writing clear commit messages."
+    "title": "Ignoring Files with .gitignore",
+    "math": "Pattern Matching, Set Exclusion",
+    "note": "Teaches how to intentionally untrack files by creating a `.gitignore` file and adding patterns (like `*.log` or `/node_modules`) to specify which files and directories Git should ignore."
   },
   {
     "n": 9,
-    "title": "Viewing Commit History",
-    "math": "Graph Traversal (Linear)",
-    "note": "Shows how to view the chronological history of commits. The `git log` command will be used in the terminal to display a list of commits, including their unique hash, author, date, and commit message."
+    "title": "Undoing Changes: `restore`, `revert`, `reset`",
+    "math": "Reversion, Inverse Operations",
+    "note": "Explains how to undo mistakes. `git restore` discards local changes. `git revert` creates a new commit that undoes a previous one (safe for public history). `git reset` moves the branch pointer, potentially altering history (for local changes)."
   },
   {
     "n": 10,
-    "title": "Inspecting File Differences",
-    "math": "Set Theory (Difference)",
-    "note": "Explains how to view the exact changes between different states. The lesson covers using `git diff` in the terminal to see unstaged changes and `git diff --staged` to see changes that are staged but not yet committed."
+    "title": "Introduction to Branching",
+    "math": "Graph Theory (Pointers)",
+    "note": "Explains the core concept of branching in Git as a lightweight movable pointer to a commit. This allows for parallel lines of development without affecting the main branch. This is a conceptual lesson."
   },
   {
     "n": 11,
-    "title": "Ignoring Files with .gitignore",
-    "math": "Pattern Matching, Set Exclusion",
-    "note": "Teaches how to intentionally untrack files in a Git repository. This is achieved by creating a file named `.gitignore` and adding patterns (like `*.log` or `/node_modules`) to specify which files and directories Git should ignore."
+    "title": "Working with Branches",
+    "math": "Pointer Manipulation",
+    "note": "Teaches the practical commands for branching: `git branch <name>` to create a branch, `git switch <name>` to switch to it, `git branch` to list branches, and `git branch -d <name>` to delete a merged branch."
   },
   {
     "n": 12,
-    "title": "Renaming and Removing Files",
-    "math": "File System Operations",
-    "note": "Covers the Git-aware way of removing and renaming files. Using the terminal, this lesson demonstrates `git rm <file>` and `git mv <old-name> <new-name>`, which handle both the file system operation and the staging of that change."
+    "title": "Merging Branches",
+    "math": "Graph Theory (Merging Nodes)",
+    "note": "Explains how to integrate changes from one branch into another using `git merge <branch-name>`. The lesson explains the difference between a 'fast-forward' merge and a three-way merge that creates a merge commit."
   },
   {
     "n": 13,
-    "title": "Introduction to Branching",
-    "math": "Graph Theory (Pointers, Nodes)",
-    "note": "Explains the core concept of branching in Git as a lightweight movable pointer to a commit. This is a conceptual lesson illustrating how branches diverge from the main line of development without requiring command-line interaction."
+    "title": "Handling Merge Conflicts",
+    "math": "Conflict Resolution",
+    "note": "Teaches how to identify and resolve merge conflicts that occur when competing changes are made to the same lines in a file. The lesson involves manually editing the conflict-marked files, then using `git add` and `git commit` to finalize the merge."
   },
   {
     "n": 14,
-    "title": "Creating and Switching Branches",
-    "math": "Pointer Manipulation",
-    "note": "Teaches the practical application of creating and navigating between branches. Using the terminal, this lesson covers `git branch <branch-name>` to create a branch and `git switch <branch-name>` to move the HEAD pointer to it."
+    "title": "Introduction to Remote Repositories",
+    "math": "Distributed Systems",
+    "note": "Introduces the concept of remote repositories as versions of your project hosted on a server (e.g., GitHub, GitLab). It covers cloning a remote repository with `git clone <url>` and managing remotes with `git remote`."
   },
   {
     "n": 15,
-    "title": "Managing and Listing Branches",
-    "math": "List Operations",
-    "note": "Shows how to view and manage existing branches. This lesson uses the `git branch` command in the terminal to list all local branches, `git branch -r` for remote-tracking branches, and `git branch -a` for all branches."
+    "title": "Synchronizing with Remotes: Fetch, Pull, Push",
+    "math": "Data Synchronization",
+    "note": "Covers the main commands for remote interaction. `git fetch` downloads new data from a remote without integrating it. `git pull` fetches and then merges. `git push` uploads your local commits to the remote."
   },
   {
     "n": 16,
-    "title": "Merging Branches Together",
-    "math": "Graph Theory (Merging Nodes)",
-    "note": "Explains how to integrate changes from one branch into another. The lesson focuses on the `git merge <branch-name>` command in the terminal and explains the concept of a 'fast-forward' merge versus a three-way merge commit."
+    "title": "The Forking Workflow for Collaboration",
+    "math": "Distributed collaboration model",
+    "note": "Explains the standard workflow for contributing to open source projects. It covers forking a repository, cloning the fork, adding the original repository as an 'upstream' remote, and creating Pull Requests to propose changes."
   },
   {
     "n": 17,
-    "title": "Handling Basic Merge Conflicts",
-    "math": "Conflict Resolution, Logic",
-    "note": "Teaches how to identify and resolve merge conflicts that occur when competing changes are made to the same lines in a file. The lesson involves using a text editor to manually edit the conflict-marked files after a failed merge, then using `git add` and `git commit` to finalize the merge."
+    "title": "The Rebase Workflow",
+    "math": "Graph Transformation",
+    "note": "Explains the `git rebase <base-branch>` command as an alternative to merging. It replays commits from the current branch on top of the base branch, creating a clean, linear history. The pros and cons versus merging are discussed."
   },
   {
     "n": 18,
-    "title": "Deleting Local Branches",
-    "math": "Pointer Deletion",
-    "note": "Covers how to clean up branches that are no longer needed. The lesson demonstrates using `git branch -d <branch-name>` in the terminal for a safe deletion (only if merged) and `git branch -D <branch-name>` for a forced deletion."
+    "title": "Rewriting History: Interactive Rebase",
+    "math": "Sequence Editing",
+    "note": "Introduces rewriting commit history with `git rebase -i <commit-ref>`. This opens an interactive editor to reorder, squash (combine), edit, or remove a series of recent commits on a branch before sharing them."
   },
   {
     "n": 19,
-    "title": "Understanding Remote Repositories",
-    "math": "Distributed Systems, Network Theory",
-    "note": "Introduces the concept of remote repositories as versions of your project hosted on a server, such as on platforms like GitHub or GitLab. This is a conceptual lesson explaining the client-server model in a distributed context."
+    "title": "Stashing Changes",
+    "math": "Stack Data Structure",
+    "note": "Covers how to temporarily save uncommitted changes that are not ready to be committed. The lesson demonstrates `git stash` to save changes and `git stash pop` to reapply them."
   },
   {
     "n": 20,
-    "title": "Cloning a Remote Repository",
-    "math": "Replication",
-    "note": "Teaches how to create a local copy of a remote repository. Using the terminal, the `git clone <repository-url>` command will be demonstrated to download the entire project history and set up a tracking connection to the remote."
+    "title": "Tagging Versions",
+    "math": "Named Pointers, Versioning",
+    "note": "Teaches how to create permanent markers for specific points in history, like software releases. The lesson covers creating lightweight and annotated tags (`git tag`) and pushing them to a remote."
   },
   {
     "n": 21,
-    "title": "Managing Remote Connections",
-    "math": "Reference Management",
-    "note": "Explains how to view and manage configured remote repositories. The lesson covers `git remote -v` to list remotes with their URLs, and `git remote add` and `git remote remove` to manage these connections from the terminal."
+    "title": "Cherry-Picking a Commit",
+    "math": "Patch Application",
+    "note": "Shows how to apply a specific commit from one branch onto another. The `git cherry-pick <commit-hash>` command is used to take the changes from a single commit and re-apply them as a new commit on the current branch."
   },
   {
     "n": 22,
-    "title": "Fetching Changes from a Remote",
-    "math": "Data Synchronization",
-    "note": "Covers how to download new data (commits, branches, tags) from a remote repository without integrating it into your local working branches. The `git fetch <remote-name>` command is used in the terminal to update local remote-tracking branches."
+    "title": "The Reflog: Your Safety Net",
+    "math": "Operation Logging",
+    "note": "Introduces the reference log. The `git reflog` command is used to view a log of all actions where HEAD was updated, allowing for the recovery of commits that appear to be lost after a `reset` or `rebase`."
   },
   {
     "n": 23,
-    "title": "Pulling Changes from a Remote",
-    "math": "Synchronization and Integration",
-    "note": "Teaches how to fetch changes from a remote and immediately merge them into the current local branch. This is achieved with the `git pull` command in the terminal, which is explained as a combination of `git fetch` and `git merge`."
+    "title": "Automated Bug Finding with Bisect",
+    "math": "Binary Search Algorithm",
+    "note": "Explains how to use `git bisect` to find the commit that introduced a bug. The lesson walks through starting a session, marking commits as 'good' or 'bad', and letting Git perform a binary search on the commit history."
   },
   {
     "n": 24,
-    "title": "Pushing Changes to a Remote",
-    "math": "Data Upload, Network Transfer",
-    "note": "Explains how to share your local commits with a remote repository. The `git push <remote-name> <branch-name>` command is demonstrated in the terminal to upload commits from a local branch to its remote counterpart."
+    "title": "Handling Large Files with Git LFS",
+    "math": "Pointer-Based Storage",
+    "note": "Teaches the use of Git Large File Storage (LFS) for versioning large binary files. The lesson covers installing the LFS extension and using `git lfs track` to tell Git to store pointers to large files instead of the files themselves."
   },
   {
     "n": 25,
-    "title": "Amending the Last Commit",
-    "math": "State Modification",
-    "note": "Teaches how to modify the most recent commit. Using the `git commit --amend` command in the terminal, this lesson shows how to change the last commit's message or add forgotten files to it, effectively replacing the previous commit."
-  },
-  {
-    "n": 26,
-    "title": "Unstaging a Staged File",
-    "math": "Set Operations (Subtraction)",
-    "note": "Covers how to remove a file from the staging area, returning it to the modified state. This lesson demonstrates the `git restore --staged <file>` command in the terminal, moving changes from the staging area back to the working directory."
-  },
-  {
-    "n": 27,
-    "title": "Discarding Local Changes",
-    "math": "Reversion",
-    "note": "Shows how to discard uncommitted changes in a specific file in the working directory. The lesson uses the `git restore <file>` command in the terminal to revert the file to its state from the last commit (HEAD)."
-  },
-  {
-    "n": 28,
-    "title": "Reverting a Public Commit",
-    "math": "Inverse Operations",
-    "note": "Explains how to safely undo a previous commit that has already been shared publicly. The `git revert <commit-hash>` command is used in the terminal to create a new commit that applies the inverse of the changes from a specified commit."
-  },
-  {
-    "n": 29,
-    "title": "Resetting to a Previous State",
-    "math": "Pointer Relocation, Graph Theory",
-    "note": "Teaches the `git reset` command to move the current branch pointer to a previous commit. The lesson explains the differences between `--soft`, `--mixed`, and `--hard` flags using the terminal to demonstrate their impact on the repository, staging area, and working directory."
-  },
-  {
-    "n": 30,
-    "title": "Interactive Rebasing for History Rewriting",
-    "math": "Sequence Editing",
-    "note": "Introduces rewriting commit history before sharing it. Using `git rebase -i <commit-ref>` in the terminal, this lesson opens an interactive editor to reorder, squash, edit, or remove a series of recent commits on the current branch."
-  },
-  {
-    "n": 31,
-    "title": "Stashing Changes Temporarily",
-    "math": "Stack Data Structure",
-    "note": "Covers how to temporarily save uncommitted changes. The lesson demonstrates `git stash` to save changes, `git stash list` to view stashes, and `git stash pop` or `git stash apply` to reapply them from the terminal."
-  },
-  {
-    "n": 32,
-    "title": "Understanding the Rebase Workflow",
-    "math": "Graph Transformation",
-    "note": "Explains the `git rebase` command as an alternative to merging. In the terminal, `git rebase <base-branch>` is used to take all commits from the current branch and replay them, one by one, on top of the base branch, creating a linear history."
-  },
-  {
-    "n": 33,
-    "title": "Comparing Rebase vs. Merge",
-    "math": "Linear vs. Non-linear History",
-    "note": "Compares the two primary methods for integrating changes: merging and rebasing. This conceptual lesson discusses the pros and cons of each, focusing on the resulting project history (merge preserves history, rebase creates a cleaner history)."
-  },
-  {
-    "n": 34,
-    "title": "Tagging Releases and Versions",
-    "math": "Named Pointers, Versioning",
-    "note": "Teaches how to create permanent markers for specific points in history. The lesson covers creating lightweight tags (`git tag <tag-name>`) and annotated tags (`git tag -a`) via the terminal, as well as pushing them to a remote."
-  },
-  {
-    "n": 35,
-    "title": "Advanced Log Formatting and Filtering",
-    "math": "Data Visualization, Filtering",
-    "note": "Explores advanced capabilities of the `git log` command. This lesson uses the terminal to demonstrate various flags like `--oneline`, `--graph`, and `--pretty=format` to create more useful and readable history outputs."
-  },
-  {
-    "n": 36,
-    "title": "Cherry-Picking a Specific Commit",
-    "math": "Patch Application, Set Theory",
-    "note": "Shows how to apply a specific commit from one branch onto another branch. The `git cherry-pick <commit-hash>` command is used in the terminal to take the changes from a single commit and re-apply them as a new commit on the current branch."
-  },
-  {
-    "n": 37,
-    "title": "Creating Custom Git Aliases",
-    "math": "Command Abstraction",
-    "note": "Teaches how to create custom shortcuts for longer Git commands. This is done in the terminal using `git config --global alias.<alias-name> '<command>'` to configure aliases in the global Git configuration file."
-  },
-  {
-    "n": 38,
-    "title": "Using the Reflog Safety Net",
-    "math": "Operation Logging",
-    "note": "Introduces the reference log. The `git reflog` command is used in the terminal to view a log of all actions where branch tips and HEAD were updated, allowing for the recovery of commits that appear to be lost after a reset or rebase."
-  },
-  {
-    "n": 39,
-    "title": "Automated Bug Finding with Bisect",
-    "math": "Binary Search Algorithm",
-    "note": "Explains how to use Git's automated bug-finding tool. The lesson walks through starting a session with `git bisect start`, marking commits as 'good' or 'bad' with `git bisect good/bad`, and letting Git perform a binary search to find the bug-introducing commit."
-  },
-  {
-    "n": 40,
-    "title": "Managing Repositories with Submodules",
-    "math": "Nested Data Structures",
-    "note": "Covers how to include another Git repository as a subdirectory. The lesson demonstrates using `git submodule add` and `git submodule update --init --recursive` in the terminal to work with external dependencies."
-  },
-  {
-    "n": 41,
     "title": "Automating Tasks with Git Hooks",
     "math": "Event-Driven Programming",
-    "note": "Introduces Git hooks as scripts that run automatically at certain points. The lesson explains where hook scripts are located (`.git/hooks`) and provides an example of a `pre-commit` hook to run a linter. This involves working with shell scripts in the command-line environment."
-  },
-  {
-    "n": 42,
-    "title": "Handling Large Files with Git LFS",
-    "math": "Pointer-Based Storage",
-    "note": "Teaches the use of Git Large File Storage (LFS) for versioning large binary files. The lesson covers installing the LFS extension and using `git lfs track '*.psd'` in the terminal to tell Git to store pointers to large files instead of the files themselves."
-  },
-  {
-    "n": 43,
-    "title": "Working in Parallel with Worktrees",
-    "math": "Parallel Processing",
-    "note": "Explains how to work on multiple branches of the same repository simultaneously. The `git worktree add <path> <branch>` command is used in the terminal to create a new linked working directory for a separate branch."
-  },
-  {
-    "n": 44,
-    "title": "Signing Commits with GPG",
-    "math": "Public-Key Cryptography",
-    "note": "Covers how to cryptographically sign your commits to verify their authenticity. The lesson explains setting up a GPG key, configuring Git to use it, and then signing commits using the `-S` flag with `git commit -S` in the terminal."
+    "note": "Introduces Git hooks as scripts that run automatically at certain points in the Git lifecycle (e.g., pre-commit, post-commit). The lesson provides an example of a `pre-commit` hook to run a linter or formatter."
   }
 ]

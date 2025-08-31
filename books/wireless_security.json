@@ -3,120 +3,120 @@
     "n": 1,
     "title": "Introduction to Wireless Networking",
     "math": "Wireless communication",
-    "note": "This section provides a basic overview of how Wi-Fi works. It explains the roles of a Wireless Access Point (AP) and a client device, and how they communicate using radio waves based on the IEEE 802.11 family of standards. The inherent security risk of broadcasting data over the air is introduced."
+    "note": "Provides a basic overview of Wi-Fi (IEEE 802.11), explaining the roles of access points and clients. Introduces the inherent security risk of broadcasting data over the air."
   },
   {
     "n": 2,
-    "title": "Legacy Security: WEP (Wired Equivalent Privacy)",
-    "math": "Stream ciphers (RC4)",
-    "note": "This lesson covers the first widely adopted Wi-Fi security protocol, WEP. It is presented as a historical example of a failed security standard. The lesson explains the serious cryptographic flaws in its implementation of the RC4 stream cipher that make it trivial to crack with modern tools."
+    "title": "Wi-Fi Security Protocols (WEP, WPA, WPA2, WPA3)",
+    "math": "Encryption standards (RC4, TKIP, AES)",
+    "note": "Covers the evolution of Wi-Fi security. Explains why WEP (RC4) and WPA (TKIP) are deprecated and insecure, and why WPA2 (AES) is the minimum standard. Introduces WPA3's improvements, like SAE."
   },
   {
     "n": 3,
-    "title": "The First Improvement: WPA",
-    "math": "Temporal Key Integrity Protocol (TKIP)",
-    "note": "This section introduces Wi-Fi Protected Access (WPA) as a temporary, intermediate security standard designed to fix the most serious flaws in WEP. It explains that WPA introduced the Temporal Key Integrity Protocol (TKIP), which dynamically changed keys as the system was used, but it still retained some of WEP's underlying vulnerabilities."
+    "title": "WPA-Personal vs. WPA-Enterprise",
+    "math": "Authentication methods",
+    "note": "Contrasts the two main modes. WPA-Personal uses a single Pre-Shared Key (PSK) for everyone. WPA-Enterprise is for corporate environments and authenticates each user individually."
   },
   {
     "n": 4,
-    "title": "The Modern Standard: WPA2",
-    "math": "Advanced Encryption Standard (AES)",
-    "note": "This lesson introduces WPA2 as the long-time, secure standard for Wi-Fi. It explains that the major improvement in WPA2 was the mandatory use of the Advanced Encryption Standard (AES), a much stronger and more secure encryption algorithm, making it resistant to the attacks that plagued WEP and WPA."
+    "title": "WPA-Enterprise, 802.1X, and RADIUS",
+    "math": "Network access control",
+    "note": "A deeper dive into WPA-Enterprise. Explains the roles of the Supplicant (client), Authenticator (Access Point), and Authentication Server (typically RADIUS) in the 802.1X framework."
   },
   {
     "n": 5,
-    "title": "The Latest Standard: WPA3",
-    "math": "Simultaneous Authentication of Equals (SAE)",
-    "note": "This section covers the latest Wi-Fi security protocol, WPA3. It explains the key improvements over WPA2, including more robust protection against brute-force password guessing attacks (through a new handshake called Simultaneous Authentication of Equals) and individualized data encryption on open networks."
+    "title": "Extensible Authentication Protocol (EAP) Types",
+    "math": "Authentication protocols",
+    "note": "Explains that 802.1X is a framework that uses an EAP method for the actual authentication. Contrasts common types like EAP-TLS (highly secure, uses client/server certificates) and PEAP (common, uses a server certificate and username/password)."
   },
   {
     "n": 6,
-    "title": "WPA-Personal vs. WPA-Enterprise",
-    "math": "Authentication methods",
-    "note": "This lesson contrasts the two main modes of operation for WPA2/WPA3. WPA-Personal uses a Pre-Shared Key (PSK)—a single password that is shared among all users. WPA-Enterprise is designed for corporate environments and authenticates each user individually, typically by integrating with a RADIUS server."
+    "title": "Wireless Attack: Packet Sniffing",
+    "math": "Eavesdropping",
+    "note": "Explains how an attacker can capture and read all data on an open (unencrypted) Wi-Fi network using tools like Wireshark. Emphasizes the need for end-to-end encryption like HTTPS."
   },
   {
     "n": 7,
-    "title": "The WPA2-Personal Handshake",
-    "math": "Four-way handshake",
-    "note": "This section provides a high-level overview of the four-way handshake process used in WPA2-Personal. This is the process through which a client and an access point use the pre-shared key to prove to each other that they know the key, without ever revealing it, and to derive a fresh encryption key for the session."
+    "title": "Wireless Attack: The 'Evil Twin' Attack",
+    "math": "Impersonation attacks",
+    "note": "Details the 'Evil Twin' attack, where an attacker sets up a fraudulent Wi-Fi access point with a legitimate-sounding name to trick users into connecting and intercept their traffic."
   },
   {
     "n": 8,
-    "title": "Wireless Attack: Packet Sniffing",
-    "math": "Eavesdropping",
-    "note": "This lesson explains the threat of packet sniffing on wireless networks. On an open (unencrypted) Wi-Fi network, all traffic is sent 'in the clear', and an attacker on the same network can easily capture and read all the data. This emphasizes the need for encryption."
+    "title": "Wireless Attack: Deauthentication Attack",
+    "math": "Denial-of-service attacks",
+    "note": "Explains the deauthentication attack, where an attacker sends spoofed frames to disconnect a client from an access point, disrupting service or enabling other attacks."
   },
   {
     "n": 9,
-    "title": "Wireless Attack: The 'Evil Twin' Attack",
-    "math": "Impersonation attacks",
-    "note": "This section details a common and effective wireless attack. An 'Evil Twin' is a fraudulent Wi-Fi access point that appears to be a legitimate one (e.g., 'Free_Airport_Wi-Fi'). Unsuspecting users connect to it, and the attacker, who controls the access point, can then monitor and intercept all their traffic."
+    "title": "Wireless Attack: Cracking WPA/WPA2 Passwords",
+    "math": "Brute-force attacks",
+    "note": "Explains how attackers capture the WPA 4-way handshake and use offline brute-force or dictionary attacks with tools like Aircrack-ng to crack weak pre-shared keys."
   },
   {
     "n": 10,
-    "title": "Wireless Attack: Deauthentication Attack",
-    "math": "Denial-of-service attacks",
-    "note": "This lesson explains the deauthentication attack, a type of denial-of-service attack. It works by sending spoofed 'deauthentication' frames to a client, which causes it to be disconnected from the access point. This attack can be used to disrupt service or as a precursor to other attacks."
+    "title": "Overview of Wireless Hacking Tools",
+    "math": "Offensive security tools",
+    "note": "Provides a brief overview of common tools used by attackers and pentesters. Introduces the Aircrack-ng suite for cracking, Kismet for network discovery, and the Wi-Fi Pineapple as a hardware platform for rogue AP/evil twin attacks."
   },
   {
     "n": 11,
-    "title": "Wireless Attack: Cracking WPA/WPA2 Passwords",
-    "math": "Brute-force attacks",
-    "note": "This section explains how attackers can crack the pre-shared key (password) of a WPA/WPA2-Personal network. The process involves capturing the four-way handshake and then using an offline brute-force or dictionary attack with tools like Aircrack-ng to guess the password. This highlights the need for a strong passphrase."
+    "title": "Wireless Intrusion Detection and Prevention Systems (WIDS/WIPS)",
+    "math": "Threat detection",
+    "note": "Introduces WIDS/WIPS as enterprise tools that monitor the radio spectrum for malicious activity. Explains their role in detecting rogue access points, evil twins, and other wireless attacks."
   },
   {
     "n": 12,
-    "title": "Best Practice: Use WPA2 or WPA3 Encryption",
-    "math": "Security configuration",
-    "note": "This lesson provides the most important practical advice for securing a Wi-Fi network. It emphasizes that you must use a strong encryption protocol. WEP and WPA should never be used, and WPA2-AES or WPA3 should always be selected in your router's configuration."
+    "title": "Understanding Captive Portals",
+    "math": "User redirection",
+    "note": "Explains how captive portals (public Wi-Fi logins) work by intercepting web traffic and redirecting users to a login page. Highlights that they do not provide encryption for the subsequent session."
   },
   {
     "n": 13,
-    "title": "Best Practice: Choose a Strong Passphrase",
-    "math": "Password strength",
-    "note": "This section explains that for WPA-Personal, the security of the entire network depends on the strength of the one shared passphrase. It recommends using a long, complex, and unique passphrase to make offline cracking attacks infeasible."
+    "title": "Best Practice: Use WPA3 or WPA2-AES",
+    "math": "Security configuration",
+    "note": "Emphasizes the most important security setting: always select WPA3 if available, or WPA2 with AES encryption. WEP, WPA, and WPA2-TKIP should never be used."
   },
   {
     "n": 14,
-    "title": "Best Practice: Change Default Router Credentials",
-    "math": "Default password security",
-    "note": "This lesson covers a critical security step. All routers come with a default administrator username and password, which are publicly known. You must change these credentials immediately to prevent an attacker on your network from taking over your router."
+    "title": "Best Practice: Strong Passphrase and Admin Credentials",
+    "math": "Password security",
+    "note": "Highlights two critical password practices: using a long, complex passphrase for WPA-Personal, and immediately changing the default administrator password for the router's web interface."
   },
   {
     "n": 15,
     "title": "Best Practice: Disable WPS",
     "math": "Wi-Fi Protected Setup (WPS)",
-    "note": "This section advises disabling WPS. Wi-Fi Protected Setup is a feature designed to make it easy to connect devices to a router, but several design flaws in its PIN-based method make it vulnerable to brute-force attacks, which can reveal the WPA2 passphrase."
+    "note": "Advises disabling WPS, a feature designed for ease of use but whose PIN method is vulnerable to brute-force attacks that can reveal the main Wi-Fi password."
   },
   {
     "n": 16,
-    "title": "Best Practice: Keep Router Firmware Updated",
-    "math": "Patch management",
-    "note": "This lesson explains that, like any software, router firmware can have security vulnerabilities. It is crucial to regularly check for and install firmware updates from the manufacturer to protect against known exploits."
+    "title": "Best Practice: Network Segmentation",
+    "math": "Network segmentation",
+    "note": "Explains the security benefit of using a Guest Network. This isolates less-trusted guests and IoT devices from your main network that contains sensitive computers and files."
   },
   {
     "n": 17,
-    "title": "The Myth of Hiding Your SSID",
-    "math": "Security by obscurity",
-    "note": "This section debunks a common but ineffective security tip. Hiding your network name (SSID) only prevents it from being broadcast, but it can still be easily discovered by a passive attacker. This provides no real security and is an example of 'security by obscurity'."
+    "title": "Securing Wireless IoT Devices",
+    "math": "IoT security",
+    "note": "Discusses the unique challenges of securing IoT devices, which often have poor security features. Emphasizes placing them on a segmented guest network and changing default passwords."
   },
   {
     "n": 18,
-    "title": "Best Practice: Use a Guest Network",
-    "math": "Network segmentation",
-    "note": "This lesson explains the benefit of a guest network. Most modern routers allow you to create a separate guest Wi-Fi network that provides internet access but is isolated from your main internal network. This prevents guests or less secure IoT devices from accessing your trusted computers and files."
+    "title": "Bluetooth Security",
+    "math": "Bluetooth security",
+    "note": "Provides an overview of Bluetooth security. Discusses the importance of the pairing process and threats like 'Bluesnarfing' (data theft) and 'Bluejacking' (spamming)."
   },
   {
     "n": 19,
-    "title": "Bluetooth Security",
-    "math": "Bluetooth security",
-    "note": "This section provides a brief overview of security for another common wireless technology, Bluetooth. It discusses the pairing process and common threats like 'Bluesnarfing' (unauthorized access to information) and 'Bluejacking' (sending unsolicited messages)."
+    "title": "Mobile Network Security (4G/5G)",
+    "math": "Cellular network security",
+    "note": "Gives a high-level introduction to the security architecture of cellular networks. Mentions the role of the SIM card for authentication and the stronger, mutual authentication used in 4G/5G compared to older standards."
   },
   {
     "n": 20,
-    "title": "Securing Mobile Devices on Wireless Networks",
-    "math": "Mobile security",
-    "note": "This final lesson provides security tips for mobile devices. These include forgetting unused Wi-Fi networks, turning off auto-connect features, being cautious about the permissions that apps request, and using a VPN, especially when connecting to public hotspots."
+    "title": "Best Practices for Public Wi-Fi",
+    "math": "Personal security",
+    "note": "Provides actionable advice for users on public networks. Emphasizes treating all public Wi-Fi as hostile, verifying network names, and using a trusted VPN to encrypt all traffic."
   }
 ]

@@ -115,6 +115,18 @@
   },
   {
     "n": 20,
+    "title": "Admin: Creating Custom Fields",
+    "math": "Schema extension",
+    "note": "This lesson covers a key administrative task: adding custom fields to Bugzilla. It explains how to define different types of fields (e.g., text, drop-down, multiple-choice) to capture specific information required by an organization's workflow, beyond the default bug fields."
+  },
+  {
+    "n": 21,
+    "title": "Admin: Customizing Workflows",
+    "math": "State transition systems",
+    "note": "This advanced lesson for administrators explains how to modify the default bug lifecycle. It provides an overview of the workflow editor, which allows an administrator to define which bug status transitions are legal (e.g., from 'NEW' to 'ASSIGNED'), thereby enforcing a specific process."
+  },
+  {
+    "n": 22,
     "title": "Introduction to the Bugzilla API",
     "math": "RESTful APIs",
     "note": "This final lesson provides a high-level introduction to Bugzilla's web service API. It explains how external tools and scripts can use this API (typically REST-based) to automate actions like creating bugs, searching for issues, and updating bug information, enabling integration with other systems."

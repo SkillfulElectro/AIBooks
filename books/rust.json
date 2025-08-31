@@ -97,66 +97,84 @@
   },
   {
     "n": 17,
+    "title": "Closures and Iterators",
+    "math": "Functional programming, lazy evaluation",
+    "note": "Introduce closures (anonymous functions) and the powerful Iterator trait. Explain how methods like `.map()`, `.filter()`, and `.fold()` allow for expressive, efficient data processing pipelines without manual loops, embodying principles of functional programming."
+  },
+  {
+    "n": 18,
+    "title": "Smart Pointers: `Box`, `Rc`, and `RefCell`",
+    "math": "Memory management, ownership models",
+    "note": "Explore Rust's smart pointers. Cover `Box<T>` for heap allocation, `Rc<T>` for multiple ownership of data, and `RefCell<T>` for interior mutability (mutating data even when there are immutable references), a key pattern for more complex data graphs."
+  },
+  {
+    "n": 19,
     "title": "Standard Library and Cargo Crates",
     "math": "Modularity, external resource use",
     "note": "Instruct on leveraging the Rust standard library for common utilities, and adding external crates (libraries) using Cargo. Emphasize modular thinking and external resource management, analogous to mathematical reference frameworks."
   },
   {
-    "n": 18,
+    "n": 20,
     "title": "Numerical Integration and Differentiation in Rust",
     "math": "Calculus: numerical integration and differentiation",
     "note": "Teach the implementation of numerical calculus (such as the trapezoidal rule for integration and the finite difference method for differentiation) using Rust. This section bridges applied mathematics with computational practice, emphasizing accuracy, step size, and the impact of numerical techniques on results."
   },
   {
-    "n": 19,
+    "n": 21,
     "title": "Advanced Collections: HashMaps, Sets",
     "math": "Associative arrays, hashing, set operations",
     "note": "Introduce hash maps and sets as tools for storing and searching data efficiently. Teach related algorithms found in discrete mathematics, such as building frequency tables, set union/intersection, and mapping between domains."
   },
   {
-    "n": 20,
+    "n": 22,
     "title": "Project: Implementing Basic Statistical Functions",
     "math": "Statistics: mean, median, mode, variance",
     "note": "Guide students in building a simple Rust library for computing basic statistics on data sets using vectors and iterator methods. Reinforce concepts from earlier sections and integrate mathematical theory on measures of central tendency and dispersion."
   },
   {
-    "n": 21,
-    "title": "Concurrency in Rust: Threads and Message Passing",
-    "math": "Parallelism, synchronization, combinatorics",
-    "note": "Introduce basic concurrency using threads and message passing (channels), demonstrating how Rust’s safety mechanisms prevent data races. Mathematical insights include parallel task decomposition, finite state machines, and simple combinatorics for task permutations."
+    "n": 23,
+    "title": "Concurrency: Threads and Message Passing",
+    "math": "Parallelism, synchronization",
+    "note": "Introduce concurrency using threads and message passing (channels), demonstrating how Rust’s safety mechanisms prevent data races. Mathematical insights include parallel task decomposition and finite state machines for synchronization."
   },
   {
-    "n": 22,
+    "n": 24,
+    "title": "Modern Concurrency: `async/await`",
+    "math": "Asynchronous programming models",
+    "note": "Introduce modern asynchronous programming in Rust for I/O-bound tasks. Explain the `async` and `await` keywords and the role of an executor like `tokio`. Contrast this with multi-threading for CPU-bound tasks."
+  },
+  {
+    "n": 25,
     "title": "Project: CLI Calculator",
     "math": "Expression parsing, algebraic evaluation",
     "note": "Guide development of a command-line calculator capable of handling user input, parsing expressions, and evaluating results. Covers parsing trees, operator precedence, and input validation, providing a bridge between programming, algebra, and language theory."
   },
   {
-    "n": 23,
+    "n": 26,
     "title": "Working with Files and Serialization",
     "math": "Data persistence, encoding, and decoding",
-    "note": "Teach file I/O in Rust for reading and writing data, and serialization for encoding Rust data structures into formats like JSON. Explain practical applications in data analysis and archiving, with mathematical structure in the form of encoding/decoding schemes."
+    "note": "Teach file I/O in Rust for reading and writing data, and serialization for encoding Rust data structures into formats like JSON using the `serde` crate. Explain practical applications in data analysis and archiving."
   },
   {
-    "n": 24,
+    "n": 27,
     "title": "Project: Numerical Methods Library",
     "math": "Numerical methods, iterative algorithms",
     "note": "Have students design a small Rust library for solving numerical problems: root-finding (e.g., Newton’s method), approximation techniques, and custom integration routines. Emphasize iterative convergence, step size tuning, and method selection, integrating programming and numerical analysis."
   },
   {
-    "n": 25,
+    "n": 28,
     "title": "Testing and Continuous Integration with Git/GitHub",
     "math": "Automation, reproducibility, process validation",
     "note": "Instruct on setting up automated testing and continuous integration (CI) workflows using GitHub Actions. Discuss test-driven development, reproducible builds, and validation strategies, with a mathematical analogue in proof verification and reproducibility."
   },
   {
-    "n": 26,
+    "n": 29,
     "title": "Project: Rust in Embedded and Real-Time Systems",
     "math": "Timing, hardware interaction, control systems",
     "note": "Introduce Rust’s role in embedded and real-time systems, using crates like cortex-m/embedded-hal. Students build a simple blinking LED or sensor logger on a microcontroller, linking programming with timing analysis and control theory."
   },
   {
-    "n": 27,
+    "n": 30,
     "title": "Course Wrap-Up and Capstone Project",
     "math": "Integration and application of multiple principles",
     "note": "Summarize key concepts, provide guidance for independent project selection, and require learners to design and implement a complete application or library that demonstrates cumulative skills—combining Rust programming, mathematical reasoning, problem-solving, and personal interests."

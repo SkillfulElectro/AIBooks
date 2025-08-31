@@ -1,105 +1,105 @@
 [
   {
     "n": 1,
-    "title": "Introduction to RDBMS and DB2",
+    "title": "Introduction to RDBMS and IBM DB2",
     "math": "Relational model",
-    "note": "This section introduces the Relational Database Management System (RDBMS) as a system for managing data stored in tables. It then presents IBM's DB2 as a high-performance, enterprise-grade RDBMS with a long history, available on a wide range of platforms from Linux and Windows to mainframes."
+    "note": "This section introduces the Relational Database Management System (RDBMS) as a system for managing data stored in tables. It then presents IBM's DB2 as a high-performance, enterprise-grade RDBMS."
   },
   {
     "n": 2,
-    "title": "The DB2 Architecture",
-    "math": "System architecture",
-    "note": "This lesson provides a high-level overview of the DB2 architecture. It explains the key concepts of a DB2 instance (a logical database manager environment), which can manage multiple databases. It also introduces core components like buffer pools (for caching) and table spaces (for storage)."
+    "title": "DB2 Platforms: LUW vs. z/OS",
+    "math": "Platform architecture",
+    "note": "This lesson clarifies the two main DB2 families. DB2 for z/OS runs on IBM mainframes. DB2 for Linux, UNIX, and Windows (LUW) runs on distributed systems. This book focuses on DB2 LUW, which is the platform for the free Community Edition."
   },
   {
     "n": 3,
-    "title": "Setting Up a DB2 Environment",
-    "math": "Software installation",
-    "note": "This section provides a guide to installing the DB2 Community Edition, which is a free version for development and small-scale production. It covers the installation process and introduces the DB2 Command Line Processor (CLP), the primary text-based interface for interacting with DB2."
+    "title": "The DB2 LUW Architecture",
+    "math": "System architecture",
+    "note": "This lesson provides an overview of the DB2 LUW architecture. It explains the concepts of an instance (a logical database manager), databases, buffer pools (memory caching), and table spaces (storage management)."
   },
   {
     "n": 4,
-    "title": "Data Definition Language (DDL): Tables and Schemas",
-    "math": "Schema design",
-    "note": "This lesson covers the SQL DDL commands used to define the database structure. It demonstrates how to use the `CREATE TABLE` statement, how to define columns with specific DB2 data types (like `VARCHAR`, `INTEGER`, `DECIMAL`), and how to organize tables into logical groups using schemas."
+    "title": "Setting Up a DB2 Environment",
+    "math": "Software installation",
+    "note": "This section provides a guide to installing the DB2 Community Edition. It covers the installation process and introduces the DB2 Command Line Processor (CLP), the primary text-based interface for interacting with DB2."
   },
   {
     "n": 5,
-    "title": "DDL: Constraints",
-    "math": "Data integrity constraints",
-    "note": "This section explains how to enforce data integrity using constraints. It covers defining a `PRIMARY KEY` for unique row identification, a `FOREIGN KEY` to enforce relationships between tables, and other constraints like `UNIQUE`, `NOT NULL`, and `CHECK`."
+    "title": "DDL: Schemas, Tables, and Data Types",
+    "math": "Schema design",
+    "note": "This lesson covers the SQL DDL commands to define the database structure. It demonstrates `CREATE TABLE`, defining columns with DB2 data types, and organizing tables into logical groups using schemas."
   },
   {
     "n": 6,
-    "title": "DDL: Views and Indexes",
-    "math": "Database views and indexes",
-    "note": "This lesson covers two other important database objects. It explains how to create a View, which is a stored query that can be used like a virtual table to simplify complex queries. It also demonstrates how to create an Index on a table to speed up data retrieval operations."
+    "title": "DDL: Constraints for Data Integrity",
+    "math": "Data integrity constraints",
+    "note": "This section explains how to enforce data integrity using constraints. It covers defining a `PRIMARY KEY`, a `FOREIGN KEY` to enforce relationships, and other constraints like `UNIQUE`, `NOT NULL`, and `CHECK`."
   },
   {
     "n": 7,
-    "title": "Data Manipulation Language (DML): `INSERT`",
-    "math": "Create operation",
-    "note": "This section focuses on adding data to the database. It details the syntax of the `INSERT` statement, showing how to insert a single row of data into a table by providing values for its columns."
+    "title": "DDL: Views and Indexes",
+    "math": "Database views and indexes",
+    "note": "This lesson covers two other important database objects. It explains how to create a View (a stored query that acts like a virtual table) and how to create an Index on a table to speed up data retrieval."
   },
   {
     "n": 8,
-    "title": "DML: `UPDATE` and `DELETE`",
-    "math": "Update and Delete operations",
-    "note": "This lesson covers modifying and removing data. It explains the `UPDATE` statement for changing existing records, emphasizing the importance of the `WHERE` clause to specify which rows to update. It also covers the `DELETE` statement for removing records, again highlighting the `WHERE` clause."
+    "title": "DML: `INSERT`, `UPDATE`, and `DELETE`",
+    "math": "Create, Update, Delete operations",
+    "note": "This lesson covers the core Data Manipulation Language commands. It explains the `INSERT`, `UPDATE`, and `DELETE` statements, emphasizing the critical importance of the `WHERE` clause for `UPDATE` and `DELETE` to affect only the intended rows."
   },
   {
     "n": 9,
     "title": "Querying Data: The `SELECT` Statement",
     "math": "Data retrieval",
-    "note": "This section introduces the foundation of data retrieval in SQL. It covers the `SELECT` statement for specifying the columns to be returned, the `FROM` clause for specifying the table, and the `WHERE` clause for filtering the rows based on specific conditions."
+    "note": "This section introduces the foundation of data retrieval in SQL. It covers the `SELECT` statement for specifying columns, the `FROM` clause for tables, and the `WHERE` clause for filtering rows."
   },
   {
     "n": 10,
     "title": "Sorting and Limiting Results",
     "math": "Sorting and result set limiting",
-    "note": "This lesson explains how to control the output of a query. It covers the `ORDER BY` clause for sorting the results in ascending or descending order. It also demonstrates the `FETCH FIRST n ROWS ONLY` clause, which is DB2's syntax for limiting the number of rows returned."
+    "note": "This lesson explains how to control query output. It covers the `ORDER BY` clause for sorting results and the `FETCH FIRST n ROWS ONLY` clause, which is DB2's syntax for limiting the number of rows returned."
   },
   {
     "n": 11,
     "title": "Joining Tables",
     "math": "Relational joins",
-    "note": "This section explains how to combine data from multiple tables in a single query. It details the syntax for `INNER JOIN` (to get matching rows from both tables) and `LEFT JOIN` (to get all rows from the left table and any matching rows from the right table)."
+    "note": "This section explains how to combine data from multiple tables. It details the syntax for `INNER JOIN` (to get matching rows from both tables) and `LEFT JOIN` (to get all rows from the left table and any matching rows from the right)."
   },
   {
     "n": 12,
-    "title": "Aggregation with `GROUP BY`",
+    "title": "Aggregation with `GROUP BY` and `HAVING`",
     "math": "Data aggregation",
-    "note": "This lesson covers how to perform calculations on groups of rows. It introduces aggregate functions like `COUNT()`, `SUM()`, and `AVG()`. It then explains how the `GROUP BY` clause is used to group rows that have the same values in specified columns into summary rows."
+    "note": "This lesson covers aggregate functions like `COUNT()`, `SUM()`, and `AVG()`. It explains how `GROUP BY` is used to group rows for aggregation and how the `HAVING` clause is used to filter those groups."
   },
   {
     "n": 13,
-    "title": "Filtering Groups with `HAVING`",
-    "math": "Group filtering",
-    "note": "This section explains the `HAVING` clause, which is used to filter the results of a `GROUP BY` query. It clarifies the difference between `WHERE` (which filters rows before aggregation) and `HAVING` (which filters groups after aggregation)."
+    "title": "Transaction Control and Concurrency",
+    "math": "ACID properties",
+    "note": "This lesson introduces a transaction as a single logical unit of work. It explains `COMMIT` and `ROLLBACK` for transaction control. It also introduces the concept of locking and DB2's isolation levels (e.g., Read Stability) which manage how transactions interact."
   },
   {
     "n": 14,
-    "title": "Transaction Control: `COMMIT` and `ROLLBACK`",
-    "math": "ACID properties",
-    "note": "This lesson introduces the concept of a transaction as a sequence of operations performed as a single logical unit of work. It explains the `COMMIT` command to make a transaction's changes permanent and the `ROLLBACK` command to undo all changes made since the transaction began."
+    "title": "DB2 Procedural Programming with SQL PL",
+    "math": "Procedural language (SQL PL)",
+    "note": "This section introduces SQL PL (SQL Procedural Language), which allows you to write procedural code like loops and conditionals. This is used to create stored procedures, functions, and triggers that execute on the database server."
   },
   {
     "n": 15,
-    "title": "Introduction to DB2 Procedural Programming",
-    "math": "Procedural language (SQL PL)",
-    "note": "This section introduces SQL PL (SQL Procedural Language), which allows you to write procedural code like loops, conditionals, and variables directly within the database. This is used to create stored procedures, functions, and triggers."
+    "title": "Stored Procedures",
+    "math": "Database procedures",
+    "note": "This lesson defines a Stored Procedure as a set of SQL statements stored in the database. It demonstrates how to create a simple stored procedure in SQL PL and how to call it."
   },
   {
     "n": 16,
-    "title": "Stored Procedures",
-    "math": "Database procedures",
-    "note": "This lesson defines a Stored Procedure as a set of SQL statements that can be stored in the database and executed as a single unit. It demonstrates how to create a simple stored procedure in SQL PL and how to call it from the command line or an application."
+    "title": "DB2 Security: Authentication and Authorization",
+    "math": "Access control (GRANT, REVOKE)",
+    "note": "This section covers DB2 security. It explains the difference between authentication (verifying identity) and authorization (granting permissions). It introduces authorities, privileges, and the `GRANT` and `REVOKE` statements for managing access."
   },
   {
     "n": 17,
-    "title": "DB2 Administration: Security Management",
-    "math": "Access control (GRANT, REVOKE)",
-    "note": "This section for administrators covers how to manage security in DB2. It introduces the concepts of authorities (high-level permissions) and privileges (rights to perform actions on specific objects). The `GRANT` and `REVOKE` statements are demonstrated for managing these permissions."
+    "title": "DB2 Logging for Recovery",
+    "math": "Database logging",
+    "note": "This lesson covers the crucial role of transaction logs. It explains the difference between circular logging (for crash recovery only) and archival logging (which archives logs, enabling point-in-time recovery and features like HADR)."
   },
   {
     "n": 18,
@@ -109,14 +109,32 @@
   },
   {
     "n": 19,
-    "title": "Performance Tuning: The `EXPLAIN` Facility",
-    "math": "Query optimization",
-    "note": "This section introduces the concept of performance tuning. It explains how the DB2 optimizer chooses an 'access plan' to execute a query. It then demonstrates the `EXPLAIN` facility, a tool that allows you to see the access plan chosen by the optimizer, which is the first step in identifying performance bottlenecks."
+    "title": "DB2 High Availability with HADR",
+    "math": "High availability, disaster recovery",
+    "note": "This lesson introduces DB2's primary high availability feature. It explains how High Availability Disaster Recovery (HADR) works by replicating data from a primary to a standby server via transaction logs, allowing for rapid and often automatic failover."
   },
   {
     "n": 20,
+    "title": "Data Movement: `IMPORT`, `EXPORT`, and `LOAD`",
+    "math": "Bulk data operations",
+    "note": "This lesson covers DB2's utilities for moving large amounts of data. It contrasts the `IMPORT` utility (slower, uses SQL) with the `LOAD` utility (faster, direct page writes) and explains the `EXPORT` command for writing table data to a file."
+  },
+  {
+    "n": 21,
+    "title": "Performance Tuning: The `EXPLAIN` Facility",
+    "math": "Query optimization",
+    "note": "This section introduces performance tuning. It explains how the DB2 optimizer chooses an 'access plan' to execute a query and demonstrates the `EXPLAIN` facility, a tool that allows you to see the chosen plan to identify bottlenecks."
+  },
+  {
+    "n": 22,
     "title": "Performance Tuning: `RUNSTATS` and `REORG`",
     "math": "Database maintenance",
-    "note": "This final lesson covers two key maintenance commands for performance. `RUNSTATS` is used to update the statistical information about tables and indexes, which the optimizer uses to make good decisions. `REORG` is used to reorganize tables and indexes to reclaim space and improve data contiguity."
+    "note": "This lesson covers two key maintenance commands. `RUNSTATS` updates the statistics that the optimizer uses to make good decisions. `REORG` reorganizes tables and indexes to reclaim space and improve data contiguity, which can significantly improve scan performance."
+  },
+  {
+    "n": 23,
+    "title": "Performance Monitoring",
+    "math": "Database monitoring",
+    "note": "This lesson introduces how to actively monitor a DB2 database. It covers using administrative views and snapshot functions to check key performance indicators (KPIs) like the buffer pool hit ratio, lock wait times, and sort overflows."
   }
 ]

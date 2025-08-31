@@ -91,30 +91,36 @@
   },
   {
     "n": 16,
-    "title": "Introduction to OpenShift Pipelines",
-    "math": "CI/CD pipelines",
-    "note": "This lesson introduces OpenShift Pipelines, the integrated CI/CD solution based on the open-source Tekton project. It allows you to define and run your build, test, and deployment pipelines as native Kubernetes/OpenShift resources."
+    "title": "Deploying Applications with Helm",
+    "math": "Package management",
+    "note": "Introduce Helm as the de facto package manager for Kubernetes. This lesson explains what a Helm Chart is and demonstrates how to find and deploy a third-party application (like a database) from a public repository directly onto OpenShift using the `helm` CLI or the web console."
   },
   {
     "n": 17,
-    "title": "Pipeline Concepts: Tasks and Pipelines",
-    "math": "Pipeline definition",
-    "note": "This section explains the core objects in OpenShift Pipelines. A 'Task' defines a sequence of steps (e.g., build, run tests). A 'Pipeline' defines the overall structure of the CI/CD process by chaining together multiple Tasks."
+    "title": "CI with OpenShift Pipelines",
+    "math": "CI/CD pipelines (Tekton)",
+    "note": "This lesson introduces OpenShift Pipelines, the integrated Continuous Integration solution based on the Tekton project. It explains how to define `Tasks` (a sequence of steps) and `Pipelines` (a graph of tasks) to automate the build and test process for an application."
   },
   {
     "n": 18,
+    "title": "CD with OpenShift GitOps",
+    "math": "GitOps (Argo CD)",
+    "note": "This lesson covers Continuous Deployment using the GitOps model. It introduces OpenShift GitOps, which is built on Argo CD. Explain the core principle: using a Git repository as the single source of truth for declarative infrastructure and applications, which Argo CD then automatically syncs to the cluster."
+  },
+  {
+    "n": 19,
     "title": "Introduction to OpenShift Operators",
     "math": "Application lifecycle management",
     "note": "This lesson introduces Operators as a method of packaging, deploying, and managing a Kubernetes-native application. An Operator is a piece of software running in your cluster that uses the Kubernetes API to manage an application and its components on your behalf."
   },
   {
-    "n": 19,
+    "n": 20,
     "title": "OpenShift Service Mesh",
     "math": "Service mesh (Istio)",
     "note": "This section provides a high-level overview of OpenShift Service Mesh, which is based on the Istio project. It explains how a service mesh provides a dedicated infrastructure layer for making service-to-service communication safe, fast, and reliable, offering features like traffic management, observability, and security."
   },
   {
-    "n": 20,
+    "n": 21,
     "title": "OpenShift Serverless",
     "math": "Serverless platforms (Knative)",
     "note": "This final lesson introduces OpenShift Serverless, which is based on the Knative project. It allows you to run serverless, event-driven applications on your OpenShift cluster. A key feature is 'scale-to-zero', where applications can scale down to zero pods when they are not in use, saving resources."

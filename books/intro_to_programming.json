@@ -3,108 +3,114 @@
     "n": 1,
     "title": "What is Programming?",
     "math": "Logic",
-    "note": "This section provides a high-level introduction to the concept of programming. It explains that programming is the process of giving instructions to a computer to perform a specific task. The lesson uses analogies to explain the relationship between a programmer, a programming language, and a computer. The context is general computer science."
+    "note": "This section provides a high-level introduction to programming as the process of giving instructions to a computer. It explains the relationship between a programmer, a programming language, and a computer, using analogies to make the concepts accessible."
   },
   {
     "n": 2,
-    "title": "How Computers Work",
-    "math": "Computer architecture",
-    "note": "Provides a simplified overview of the basic components of a computer, including the CPU, memory (RAM), and storage. This helps in understanding where programs are stored and executed."
+    "title": "Programming Languages: Compiled vs. Interpreted",
+    "math": "Formal language theory",
+    "note": "Explains the difference between compiled languages (like C++), which are translated into machine code before execution, and interpreted languages (like Python), which are translated on the fly. The trade-offs of each approach are discussed."
   },
   {
     "n": 3,
-    "title": "Programming Languages: Compiled vs. Interpreted",
-    "math": "Formal language theory",
-    "note": "Explains the difference between compiled languages (like C++ or Java), which are translated into machine code before execution, and interpreted languages (like Python or JavaScript), which are translated on the fly. The lesson discusses the trade-offs of each approach."
+    "title": "Core Concept: Variables and Data Types",
+    "math": "Algebra",
+    "note": "Introduces variables for storing data. It covers fundamental data types found in most languages, such as integers (whole numbers), floating-point numbers (decimals), strings (text), and booleans (true/false)."
   },
   {
     "n": 4,
-    "title": "Setting Up Your First Programming Environment",
-    "math": "Logic",
-    "note": "Guides the learner through setting up a simple and beginner-friendly programming environment. This lesson will use an online editor or a simple text editor and the command line to run a 'Hello, World!' program in a language like Python."
+    "title": "Core Concept: Operators",
+    "math": "Arithmetic and Boolean algebra",
+    "note": "Covers the basic operators used in programming. This includes arithmetic operators (`+`, `-`, `*`, `/`), assignment operators (`=`), comparison operators (`==`, `!=`, `<`, `>`), and logical operators (`AND`, `OR`, `NOT`)."
   },
   {
     "n": 5,
-    "title": "Variables and Data Types",
-    "math": "Algebra",
-    "note": "Introduces the concept of variables for storing data. The lesson covers fundamental data types found in most programming languages, such as integers (whole numbers), floating-point numbers (decimals), strings (text), and booleans (true/false)."
+    "title": "Core Concept: Basic Input and Output",
+    "math": "I/O streams",
+    "note": "Explains how a program can communicate with a user. This lesson covers how to print output to the screen (the 'standard output') and how to read input from the user's keyboard (the 'standard input')."
   },
   {
     "n": 6,
-    "title": "Basic Input and Output",
-    "math": "File I/O",
-    "note": "Explains how a program can communicate with the user. This lesson covers how to print output to the screen (e.g., using `print()`) and how to read input from the user's keyboard."
+    "title": "Core Concept: Comments and Readability",
+    "math": "Documentation principles",
+    "note": "This lesson emphasizes the importance of writing clean and readable code. It explains how to use comments to document code and the importance of using meaningful variable and function names."
   },
   {
     "n": 7,
-    "title": "Comments and Code Readability",
-    "math": "Logic",
-    "note": "This lesson emphasizes the importance of writing clean and readable code. It explains how to use comments to document code and the importance of using meaningful variable names."
+    "title": "Control Flow: Conditional Logic (If/Else)",
+    "math": "Predicate logic",
+    "note": "Introduces conditional statements (`if`, `else if`, `else`) as a way to make decisions in a program. The lesson explains how to execute different blocks of code based on whether a logical condition is true or false."
   },
   {
     "n": 8,
-    "title": "Basic Operators",
-    "math": "Arithmetic",
-    "note": "Covers the basic arithmetic operators (`+`, `-`, `*`, `/`) for performing mathematical calculations, and assignment operators (`=`) for assigning values to variables."
+    "title": "Control Flow: Loops",
+    "math": "Iteration",
+    "note": "This section introduces loops as a way to repeat a block of code multiple times. The lesson covers the `for` loop (for iterating a known number of times or over a collection) and the `while` loop (for iterating as long as a condition is true)."
   },
   {
     "n": 9,
-    "title": "Conditional Logic: if/else Statements",
-    "math": "Boolean algebra",
-    "note": "Introduces conditional statements (`if`, `else if`, `else`) as a way to make decisions in a program. The lesson explains how to execute different blocks of code based on whether a condition is true or false."
+    "title": "Data Structures: Arrays and Lists",
+    "math": "Sequences",
+    "note": "Introduces the concept of a data structure for storing collections of data. The lesson focuses on the array (or list), explaining how to create one, access elements by their numeric index, and iterate over its elements."
   },
   {
     "n": 10,
-    "title": "Comparison and Logical Operators",
-    "math": "Boolean algebra",
-    "note": "Explains the operators used to create conditions for `if` statements. This includes comparison operators (`==`, `!=`, `<`, `>`) and logical operators (`AND`, `OR`, `NOT`) for combining multiple conditions."
+    "title": "Data Structures: Key-Value Stores",
+    "math": "Hash maps, dictionaries",
+    "note": "This lesson introduces the key-value store (also known as a hash map, dictionary, or associative array). It explains how this data structure is used to store and retrieve data using a unique key, which is a fundamental pattern in programming."
   },
   {
     "n": 11,
-    "title": "Loops for Repetition",
-    "math": "Iteration",
-    "note": "This section introduces loops as a way to repeat a block of code multiple times. The lesson covers the `for` loop (for iterating a known number of times) and the `while` loop (for iterating as long as a condition is true)."
+    "title": "Code Organization: Functions",
+    "math": "Function theory",
+    "note": "This lesson introduces functions as a way to group a set of instructions into a reusable and named block of code. It explains how to define a function, how to call it, and why this is crucial for organizing programs and avoiding repetition."
   },
   {
     "n": 12,
-    "title": "Data Structures: Arrays/Lists",
-    "math": "Set theory",
-    "note": "Introduces the concept of a data structure for storing collections of data. The lesson focuses on the array (or list in Python), explaining how to create a list, access elements by their index, and find its length."
+    "title": "Functions: Parameters and Return Values",
+    "math": "Function mapping (domain, codomain)",
+    "note": "Explains how to pass data into a function using parameters and how a function can send data back to the caller using a return value. This allows for the creation of flexible and powerful functions that can operate on different data."
   },
   {
     "n": 13,
-    "title": "Working with Lists",
-    "math": "Set theory",
-    "note": "Covers basic operations on lists, such as adding elements, removing elements, and iterating over all the elements in a list using a `for` loop."
+    "title": "Code Organization: Variable Scope",
+    "math": "Scope rules",
+    "note": "A dedicated lesson explaining the concept of scope. It covers the difference between local variables (defined inside a function and only accessible there) and global variables, and why managing scope is essential for avoiding bugs."
   },
   {
     "n": 14,
-    "title": "Functions",
-    "math": "Functional programming",
-    "note": "This lesson introduces functions as a way to group a set of instructions into a reusable block of code. It explains how to define a function, call it, and why this is crucial for organizing programs."
+    "title": "Advanced Control Flow: Recursion",
+    "math": "Recursion theory",
+    "note": "A conceptual introduction to recursion as an alternative to loops. It explains the core components of a recursive function: a base case (to stop the recursion) and a recursive step (where the function calls itself with a modified argument)."
   },
   {
     "n": 15,
-    "title": "Function Parameters and Return Values",
-    "math": "Functional programming",
-    "note": "Explains how to pass data into a function using parameters and how a function can send data back to the caller using a return value. This allows for the creation of flexible and powerful functions."
+    "title": "Working with the Outside World: File I/O",
+    "math": "File streams",
+    "note": "A lesson on the basics of file input/output (I/O). It conceptually covers the process of opening a file, reading data from it, writing data to it, and the importance of closing the file when finished."
   },
   {
     "n": 16,
-    "title": "Problem Solving with Programming",
-    "math": "Algorithmic thinking",
-    "note": "This section focuses on the process of breaking down a problem into smaller, manageable steps that can be translated into code. It introduces the concept of an algorithm as a step-by-step plan for solving a problem."
+    "title": "Working with Other Code: Libraries and Packages",
+    "math": "Modular programming",
+    "note": "This lesson explains that programmers rarely write everything from scratch. It introduces the concept of a code library or package as a collection of pre-written, reusable code, and explains the general process of importing and using functions from a library."
   },
   {
     "n": 17,
-    "title": "Debugging",
-    "math": "Logic",
-    "note": "Introduces the essential skill of debugging. The lesson explains common types of errors (syntax, runtime, logical) and demonstrates basic debugging techniques like using print statements to inspect the state of variables."
+    "title": "Problem Solving and Algorithms",
+    "math": "Algorithmic thinking",
+    "note": "This section focuses on the process of breaking down a problem into smaller, manageable steps that can be translated into code. It introduces the concept of an algorithm as a step-by-step recipe for solving a problem."
   },
   {
     "n": 18,
+    "title": "The Art of Debugging",
+    "math": "Logical deduction",
+    "note": "Introduces the essential skill of debugging. The lesson explains common types of errors (syntax, runtime, logical) and demonstrates basic debugging techniques like using print statements to inspect the state of variables and trace program flow."
+  },
+  {
+    "n": 19,
     "title": "Introduction to Object-Oriented Programming (OOP)",
     "math": "Object-oriented programming",
-    "note": "This final section provides a high-level introduction to Object-Oriented Programming, a popular programming paradigm. It explains the basic concepts of objects (which have data and behavior) and classes (as blueprints for objects), setting the stage for further learning."
+    "note": "This final section provides a high-level introduction to OOP. It explains the basic concepts of objects (which have data and behavior) and classes (as blueprints for objects), setting the stage for further learning in languages like Java, Python, or C++."
   }
 ]

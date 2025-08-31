@@ -1,92 +1,134 @@
 [
   {
     "n": 1,
-    "title": "Introduction to JavaScript and ES6+ Syntax",
-    "math": "Algebraic expressions and variable manipulation",
-    "note": "Teach the basics of JavaScript, focusing on ES6+ features such as let/const, arrow functions, template literals, destructuring, and classes. Integrate the concept of algebraic expressions by coding variables, expressions, and basic equation-solving in JavaScript to reinforce algebraic thinking."
+    "title": "Introduction to React Native",
+    "math": "Systems theory",
+    "note": "Introduce React Native as a framework for building native mobile apps using React. Explain its core principle: 'Learn once, write anywhere'. Briefly cover its architecture (JavaScript bridge, JSI) and how it differs from web development and other cross-platform solutions."
   },
   {
     "n": 2,
-    "title": "Functional Programming Principles in JavaScript",
-    "math": "Functions as first-class objects; set theory concepts",
-    "note": "Introduce functional programming, higher-order functions, map, reduce, filter, and pure functions in JavaScript. Emphasize the set-theoretic roots by demonstrating how array transforms mirror set operations and how functions operate on collections."
+    "title": "Setting Up: Expo vs. React Native CLI",
+    "math": "Decision theory",
+    "note": "Explain the two primary ways to set up a development environment. Describe Expo Go as a managed, beginner-friendly toolset that simplifies the build process, and the React Native CLI as a more flexible approach that gives you full control over the native code but requires Xcode and Android Studio setup."
   },
   {
     "n": 3,
-    "title": "Algebraic Foundations in Programming",
-    "math": "Variables, equations, evaluation, and algebraic manipulation",
-    "note": "Discuss variables, constants, and evaluating/solving equations programmatically. Write sample apps, such as a calculator, that implement addition, subtraction, multiplication, division, and order of operations using algebraic logic in code."
+    "title": "Creating and Running Your First App",
+    "math": "Application lifecycle",
+    "note": "Provide a practical guide to creating a new project using the Expo CLI (`npx create-expo-app`). Walk through the project file structure and demonstrate how to start the development server (`npx expo start`) and run the app on a physical device using the Expo Go app or in a simulator."
   },
   {
     "n": 4,
-    "title": "Coordinate Geometry for UI Layout",
-    "math": "Cartesian coordinates, scaling, and transformations",
-    "note": "Teach the principles of UI layout using Flexbox and the coordinate-based approach native to React Native. Demonstrate how positions and sizes of components are defined using x, y coordinates and how transformations such as translation, scaling, and rotation can be applied. Use mathematical exercises that involve placing elements at specific coordinates and resizing proportionally."
+    "title": "React Fundamentals: JSX and Components",
+    "math": "Compositional functions",
+    "note": "Cover React's core ideas. Explain JSX as a syntax extension for JavaScript that looks like HTML. Introduce the concept of a 'Component' as a reusable, self-contained piece of UI, analogous to a mathematical function that returns a UI element."
   },
   {
     "n": 5,
-    "title": "Discrete Mathematics and Data Structures",
-    "math": "Sets, lists, arrays, trees, and graphs",
-    "note": "Introduce discrete mathematics fundamentals: sets, arrays, stacks, queues, and tree structures. Relate these structures to common tasks in React Native such as managing lists, navigation stacks, and tree traversals. Teach the mathematical logic behind these data structures, including recursion and traversal algorithms."
+    "title": "React Fundamentals: Props",
+    "math": "Function parameters",
+    "note": "Explain that 'props' (properties) are how you pass data from a parent component to a child component. This is the primary way to make components configurable and reusable, similar to passing arguments to a function."
   },
   {
     "n": 6,
-    "title": "React and JSX Fundamentals",
-    "math": "Compositional functions and logic",
-    "note": "Cover React's core ideas: components, props, and JSX syntax. Incorporate mathematical concepts of function composition and logical expressions by building UI blocks programmatically and composing them using props and children, reflecting mathematical function application."
+    "title": "Core Components: `View`, `Text`, and `Image`",
+    "math": "Geometric primitives",
+    "note": "Introduce the most fundamental building blocks of a React Native UI. `View` is a container that supports layout with Flexbox. `Text` is for displaying text. `Image` is for displaying images. These are the primitive shapes from which all UIs are built."
   },
   {
     "n": 7,
-    "title": "State Management and Hooks",
-    "math": "State machines, function closures, and logic",
-    "note": "Teach the use of React hooks (useState, useEffect) and basic state management patterns. Use finite state machines to explain how state transitions occur in applications and demonstrate closures in functional programming. Relate this to logical functions and transition graphs."
+    "title": "Styling with `StyleSheet`",
+    "math": "Box model geometry",
+    "note": "Teach how to style components using the `StyleSheet` API, which is similar to CSS but written in JavaScript. Explain the Flexbox model for layout and the box model (margin, padding, border) for sizing and spacing, relating it to coordinate geometry."
   },
   {
     "n": 8,
-    "title": "Introduction to React Native Architecture",
-    "math": "Modular decomposition and systems theory",
-    "note": "Provide an overview of React Native's architecture: JavaScript bridge, JSI, TurboModules, and Fabric renderer. Explain the theoretical underpinnings of modular system design and the correspondence to modular algebra and system-of-equations thinking in mathematics."
+    "title": "Handling User Input: `TextInput` and `Button`",
+    "math": "User input handling",
+    "note": "Demonstrate how to create interactive components. `TextInput` is used for user text entry. `Button` provides a simple, platform-standard button. Explain how to get user input from these components."
   },
   {
     "n": 9,
-    "title": "React Native Core Components and Styling",
-    "math": "Box model geometry and proportional calculations",
-    "note": "Deep dive into core components such as View, Text, Image, TextInput, ScrollView, and StyleSheet. Teach how to control dimensions, positioning, and responsive layouts using geometry, proportional calculations, and CSS-like rules. Emphasize the use of arithmetic in layout and style computations."
+    "title": "Handling Touches and Gestures",
+    "math": "Event handling",
+    "note": "Introduce the various 'Touchable' components (`TouchableOpacity`, `TouchableHighlight`, etc.) for capturing user taps and gestures on any `View`. This allows for more customizable button-like behavior than the standard `Button` component."
   },
   {
     "n": 10,
-    "title": "Navigation Patterns in React Native",
-    "math": "Trees, graphs, traversal algorithms",
-    "note": "Introduce navigation principles using React Navigation: stack, tab, and drawer navigators. Explain the mathematical concepts behind managing navigation history as a stack, implementing trees/graphs for nested navigations, and using traversal algorithms."
+    "title": "State Management with the `useState` Hook",
+    "math": "State machines",
+    "note": "Introduce the concept of 'state' as data that can change over time and affect what is rendered. Teach the `useState` hook as the primary way to add state to a functional component, modeling the component as a simple state machine."
   },
   {
     "n": 11,
-    "title": "Handling User Input and Forms",
-    "math": "Regular expressions, logical conditions, and validation algorithms",
-    "note": "Teach handling of user input through TextInput, Button, and form components. Cover input validation using regular expressions, logical operations, and the formulation of validation algorithms. Emphasize discrete math concepts for form validation and error handling."
+    "title": "Side Effects with the `useEffect` Hook",
+    "math": "Function closures",
+    "note": "Explain the `useEffect` hook for handling 'side effects' in your components, such as fetching data from an API or setting up a subscription. This allows your component to interact with the world outside of its own render cycle."
   },
   {
     "n": 12,
-    "title": "Asynchronous Programming and API Integration",
-    "math": "State machines and dependency graphs",
-    "note": "Explore asynchronous programming using Promises, async/await, and Fetch/Axios. Model asynchronous control flows using state machines and dependency graphs to teach sequencing and handling of concurrent events."
+    "title": "Displaying Lists of Data with `FlatList`",
+    "math": "Algorithmic complexity (virtualization)",
+    "note": "Introduce the `FlatList` component as the performant way to display long, scrolling lists of data. Explain that it uses virtualization (windowing) to render only the items currently on screen, which is crucial for performance with large datasets."
   },
   {
     "n": 13,
-    "title": "Algorithmic Thinking and Performance Optimization",
-    "math": "Big O notation and algorithm complexity",
-    "note": "Introduce algorithmic thinking for common React Native tasks: list rendering, sorting, searching. Teach Big O notation, complexity analysis, and practical strategies for optimizing app performance. Relate this to mathematical analysis of time and space requirements."
+    "title": "Navigation with React Navigation",
+    "math": "Graph traversal (stack)",
+    "note": "Introduce the React Navigation library as the standard for handling navigation between screens. Focus on the 'Stack Navigator', which manages navigation history as a stack, allowing users to move between screens and return."
   },
   {
     "n": 14,
-    "title": "Debugging and Testing in React Native",
-    "math": "Error states, set theory, and logical assertions",
-    "note": "Present debugging tools such as React Native DevTools, LogBox, Flipper, and profilers. Train students to represent error states mathematically, use set theory to identify test coverage, and formulate logical assertions for snapshot and unit testing."
+    "title": "Tab and Drawer Navigation",
+    "math": "Graph structures",
+    "note": "Expand on React Navigation by introducing two other common patterns: Tab Navigation for a bottom tab bar (common in mobile apps) and Drawer Navigation for a side menu. Show how to combine different navigator types."
   },
   {
     "n": 15,
-    "title": "Deployment and Distribution of React Native Apps",
-    "math": "Number theory, cryptography, and digital signatures",
-    "note": "Guide learners through the deployment pipeline for React Native apps, including APK/AAB generation, signing keys, and publishing to app stores. Link this process to mathematical concepts of number theory, digital signatures, RSA cryptography, and modular arithmetic."
+    "title": "Asynchronous Programming: `async/await` and Fetch",
+    "math": "State machines",
+    "note": "Explore asynchronous programming for tasks like fetching data from a remote API. Teach the modern `async/await` syntax for handling Promises cleanly and use the `fetch` API to make network requests to a public REST API."
+  },
+  {
+    "n": 16,
+    "title": "Platform-Specific Code",
+    "math": "Conditional logic",
+    "note": "Explain how to make an app look and feel native on different platforms. Introduce the `Platform.OS` property to run different code for iOS and Android. Also, cover the file extension method (`.ios.js`, `.android.js`) for creating separate component versions."
+  },
+  {
+    "n": 17,
+    "title": "Accessing Native Device Features",
+    "math": "API integration",
+    "note": "Demonstrate how to access hardware features. This lesson uses the `expo-camera` library as an example, showing the typical workflow: 1. Install the library. 2. Request permission from the user. 3. Use the component in your app."
+  },
+  {
+    "n": 18,
+    "title": "Introduction to Global State Management",
+    "math": "State management patterns",
+    "note": "Explain why `useState` is not always sufficient for managing state that needs to be shared across many components. Introduce the concept of a global state management library and briefly mention popular options like Redux Toolkit or Zustand."
+  },
+  {
+    "n": 19,
+    "title": "Form Handling and Validation",
+    "math": "Regular expressions and validation algorithms",
+    "note": "Teach handling of complex user input with forms. Cover input validation using regular expressions and logic. Introduce a library like `Formik` or `React Hook Form` for managing form state, validation, and submission."
+  },
+  {
+    "n": 20,
+    "title": "Debugging in React Native",
+    "math": "Logical assertions",
+    "note": "Present debugging tools such as React Native DevTools, LogBox, and Flipper. Train students to represent error states, use console logs effectively, and inspect the component hierarchy to find and fix bugs."
+  },
+  {
+    "n": 21,
+    "title": "Testing Your Application",
+    "math": "Set theory and assertions",
+    "note": "Introduce the importance of testing. Explain the role of the React Native Testing Library for writing unit and integration tests that verify the behavior of your components from a user's perspective."
+  },
+  {
+    "n": 22,
+    "title": "Deployment and Distribution",
+    "math": "Cryptography and digital signatures",
+    "note": "Guide learners through the high-level process of deploying a React Native app. Cover building the standalone app binary (APK/AAB for Android, IPA for iOS) and the process of submitting to the Google Play Store and Apple App Store."
   }
 ]

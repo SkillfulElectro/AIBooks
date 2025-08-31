@@ -103,18 +103,30 @@
   },
   {
     "n": 18,
+    "title": "Remote Development (SSH & WSL)",
+    "math": "Remote interpreters",
+    "note": "A crucial feature for modern development. This lesson explains how to configure PyCharm to use a Python interpreter located on a remote server via SSH or within the Windows Subsystem for Linux (WSL). This allows you to edit code locally while it runs on a different machine."
+  },
+  {
+    "n": 19,
+    "title": "AI Assistant (Professional Edition)",
+    "math": "AI-powered development",
+    "note": "This lesson introduces the JetBrains AI Assistant. It explains how to use its features like AI Chat to ask questions about your code, in-editor code generation, and using AI to help write documentation or commit messages, all within the IDE."
+  },
+  {
+    "n": 20,
     "title": "Using Live Templates",
     "math": "Code snippets",
     "note": "This section explains Live Templates, which are a way to insert common code constructs into your code quickly. It demonstrates how to use built-in templates (e.g., typing `main` and pressing Tab to insert the `if __name__ == '__main__':` block) and how to create your own custom templates."
   },
   {
-    "n": 19,
+    "n": 21,
     "title": "Customizing the UI and Keymap",
     "math": "User customization",
     "note": "This lesson shows how to personalize the PyCharm environment. It covers how to change the UI theme (e.g., to a dark theme) and how to customize the keyboard shortcuts (the keymap) to match your preferences or emulate another editor."
   },
   {
-    "n": 20,
+    "n": 22,
     "title": "Extending PyCharm with Plugins",
     "math": "Software plugins",
     "note": "This final lesson explains how to extend PyCharm's functionality by installing plugins. It demonstrates how to browse and install plugins from the JetBrains Marketplace directly within the IDE, covering popular plugins for themes, language support, and tool integrations."

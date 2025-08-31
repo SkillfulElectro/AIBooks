@@ -3,7 +3,7 @@
     "n": 1,
     "title": "The Principle of 'Defense in Depth'",
     "math": "Layered security",
-    "note": "This section introduces the core strategy of network security: Defense in Depth. It explains this concept as a layered approach to security, where multiple, redundant defensive measures are put in place. If one layer fails, another layer is already in place to thwart an attack."
+    "note": "This section introduces the core strategy of network security: Defense in Depth. It explains this concept as a layered approach to security, where multiple, redundant defensive measures are put in place. Key tactics include network segmentation (creating isolated sub-networks for different functions) and using a Demilitarized Zone (DMZ) to host public-facing servers."
   },
   {
     "n": 2,
@@ -31,90 +31,108 @@
   },
   {
     "n": 6,
+    "title": "Web Application Firewall (WAF)",
+    "math": "Layer 7 protection",
+    "note": "This lesson introduces the Web Application Firewall (WAF), a specialized type of firewall that operates at Layer 7 (the Application Layer). A WAF is designed to protect web applications from common attacks like SQL injection, Cross-Site Scripting (XSS), and other web-based threats by inspecting HTTP traffic."
+  },
+  {
+    "n": 7,
     "title": "Intrusion Detection and Prevention Systems (IDS/IPS)",
     "math": "Threat detection",
     "note": "This lesson introduces IDS and IPS as systems that monitor network traffic for malicious activity. An Intrusion Detection System (IDS) is a passive device that detects and alerts on potential threats. An Intrusion Prevention System (IPS) is an active device that can also take action to block the threat."
   },
   {
-    "n": 7,
+    "n": 8,
     "title": "IDS/IPS: Signature-Based vs. Anomaly-Based Detection",
     "math": "Detection methods",
     "note": "This section explains the two main methods used by IDS/IPS. Signature-based detection works like antivirus software, looking for known patterns of malicious traffic. Anomaly-based detection builds a model of 'normal' network behavior and flags any deviation from that baseline as potentially malicious."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "Virtual Private Networks (VPNs)",
     "math": "Encrypted tunneling",
     "note": "This lesson explains how a VPN creates a secure, private network connection over a public network like the Internet. It works by creating an encrypted 'tunnel' between a user's device and a VPN server, protecting the traffic from eavesdropping and making it appear as if the user is on the VPN server's local network."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Securing the Network Layer: IPsec",
     "math": "IPsec protocol suite",
     "note": "This section covers IPsec, a suite of protocols that provides security at the Network Layer (Layer 3). IPsec can be used to authenticate and encrypt each IP packet in a data stream, providing a very high level of security. It is often used to implement VPNs."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Securing the Transport Layer: TLS",
     "math": "Transport Layer Security (TLS)",
     "note": "This lesson introduces Transport Layer Security (TLS), the successor to SSL, as the standard protocol for providing security at the Transport Layer. TLS is what powers HTTPS and is used to encrypt communication for a wide variety of applications, ensuring confidentiality and integrity between two communicating applications."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "The TLS Handshake",
     "math": "Cryptographic handshakes",
     "note": "This section provides a high-level overview of the TLS handshake process. This is the negotiation between a client and server at the start of a session where they agree on the cryptographic algorithms to be used, exchange a public key via a certificate, and securely generate a shared symmetric key for the rest of the session."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Securing the Application Layer: DNSSEC",
     "math": "DNS security",
     "note": "This lesson covers DNSSEC (Domain Name System Security Extensions). It is a suite of specifications for securing the DNS protocol. DNSSEC works by adding cryptographic signatures to DNS records, allowing a client to verify that the IP address it received for a domain name is authentic and has not been tampered with."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Wireless Network Security",
     "math": "Wireless security protocols",
     "note": "This section focuses on the unique security challenges of wireless networks. It explains the history and weaknesses of the old WEP protocol and details the modern standards, WPA2 and WPA3, which provide strong encryption and authentication for Wi-Fi networks."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Wireless Attacks: 'Evil Twin' Hotspots",
     "math": "Impersonation attacks",
     "note": "This lesson explains a common wireless attack. An 'Evil Twin' is a fraudulent Wi-Fi access point that appears to be a legitimate one, but is actually set up by an attacker to eavesdrop on wireless communications. The attacker can then launch man-in-the-middle attacks to steal user credentials."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Denial-of-Service (DoS) Attacks",
     "math": "Resource exhaustion attacks",
     "note": "This section defines a DoS attack as an attempt to make a machine or network resource unavailable to its intended users. It explains how this can be done by flooding the target with traffic (a volumetric attack) or by exploiting a specific vulnerability in a protocol or application."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "Distributed Denial-of-Service (DDoS) Attacks",
     "math": "Distributed attacks",
     "note": "This lesson explains that a DDoS attack is a DoS attack that originates from many different sources (often a 'botnet' of compromised computers). The distributed nature of the attack makes it much harder to block than a simple DoS attack from a single source."
   },
   {
-    "n": 17,
+    "n": 18,
     "title": "DDoS Mitigation Techniques",
     "math": "Attack mitigation",
     "note": "This section provides an overview of techniques used to defend against DDoS attacks. These include rate limiting, blackholing (dropping all traffic to a target), and using specialized cloud-based DDoS mitigation services that can absorb and filter out massive amounts of malicious traffic."
   },
   {
-    "n": 18,
+    "n": 19,
+    "title": "Network Access Control (NAC)",
+    "math": "Device authentication",
+    "note": "This lesson introduces Network Access Control (NAC), a security approach that combines endpoint security technology (like posture assessment) and user authentication to control access to the network. It covers concepts like the 802.1X standard for port-based access control."
+  },
+  {
+    "n": 20,
+    "title": "Cloud Network Security",
+    "math": "Virtual networking",
+    "note": "This lesson covers the unique security considerations of cloud environments. It introduces concepts like Virtual Private Clouds (VPCs), Security Groups, and Network Access Control Lists (NACLs) as the primary tools for controlling traffic and securing the virtual network perimeter."
+  },
+  {
+    "n": 21,
     "title": "Network Monitoring with Wireshark",
     "math": "Packet analysis",
     "note": "This lesson introduces Wireshark as a powerful, free, and open-source packet analyzer. It is used for network troubleshooting, analysis, and protocol development. It allows you to capture network traffic and inspect the contents of individual packets in detail."
   },
   {
-    "n": 19,
+    "n": 22,
     "title": "Security Information and Event Management (SIEM)",
     "math": "Log aggregation and correlation",
     "note": "This section introduces SIEM systems as a tool for providing a holistic view of an organization's security. A SIEM collects log data from various sources (like firewalls, servers, and applications), correlates the events, and generates alerts when it detects potentially malicious activity."
   },
   {
-    "n": 20,
+    "n": 23,
     "title": "The Zero Trust Security Model",
     "math": "Zero trust architecture",
     "note": "This final lesson looks at a modern approach to network security. The Zero Trust model is based on the principle of 'never trust, always verify'. It assumes that the internal network is just as hostile as the external internet and requires strict identity verification for every person and device trying to access resources on the network, regardless of their location."

@@ -3,120 +3,132 @@
     "n": 1,
     "title": "Analog vs. Digital Signals",
     "math": "Continuous vs. discrete signals",
-    "note": "This section introduces the fundamental difference between analog and digital signals. An analog signal is continuous, representing information with a continuous range of values. A digital signal is discrete, representing information with a finite set of values, typically two (0 and 1). The advantages of digital systems, such as noise immunity, are highlighted."
+    "note": "This section introduces the fundamental difference between analog (continuous) and digital (discrete) signals. It highlights the advantages of digital systems, such as noise immunity and ease of processing, which form the basis of all modern computing."
   },
   {
     "n": 2,
-    "title": "Number Systems: Binary, Octal, Hexadecimal",
+    "title": "Number Systems and Conversions",
     "math": "Base conversion",
     "note": "This lesson covers the number systems used in digital electronics. It explains the binary (base-2), octal (base-8), and hexadecimal (base-16) systems and demonstrates how to convert numbers between these bases and the decimal (base-10) system."
   },
   {
     "n": 3,
-    "title": "Binary Arithmetic",
-    "math": "Binary addition and subtraction",
-    "note": "This section explains how to perform basic arithmetic operations directly in the binary number system. It covers the rules for binary addition and subtraction, which form the basis for how a computer's Arithmetic Logic Unit (ALU) performs calculations."
+    "title": "Boolean Algebra and Logic Gates",
+    "math": "Boolean algebra",
+    "note": "This lesson introduces Boolean algebra as the mathematical foundation for digital circuits. It covers the basic operations (AND, OR, NOT) and their corresponding logic gates, which are the fundamental building blocks of all digital systems."
   },
   {
     "n": 4,
-    "title": "Introduction to Boolean Algebra",
-    "math": "Boolean algebra",
-    "note": "This lesson introduces Boolean algebra as the mathematical foundation for digital circuits. It covers the basic postulates and theorems, such as the commutative, associative, and distributive laws. Boolean variables, which can only have two values (True/1 or False/0), are defined."
+    "title": "Universal Gates: NAND and NOR",
+    "math": "Functional completeness",
+    "note": "This lesson covers the NAND (NOT-AND) and NOR (NOT-OR) gates. They are called 'universal' gates because any other logic gate can be constructed from either NAND gates alone or NOR gates alone, which has significant practical importance in circuit manufacturing."
   },
   {
     "n": 5,
-    "title": "Logic Gates: AND, OR, NOT",
-    "math": "Logical operations",
-    "note": "This section introduces the fundamental building blocks of digital circuits: logic gates. It explains the function and truth tables for the three basic gates: the AND gate (output is 1 only if all inputs are 1), the OR gate (output is 1 if any input is 1), and the NOT gate (inverts the input)."
+    "title": "Other Gates: XOR and XNOR",
+    "math": "Exclusive OR/NOR",
+    "note": "This section explains the XOR (Exclusive-OR) gate, which is true only if its inputs are different, and the XNOR (Exclusive-NOR) gate, which is true only if its inputs are the same. These are essential for building arithmetic and error-checking circuits."
   },
   {
     "n": 6,
-    "title": "Universal Gates: NAND and NOR",
-    "math": "Functional completeness",
-    "note": "This lesson covers the NAND (NOT-AND) and NOR (NOT-OR) gates. They are called 'universal' gates because any other logic gate (AND, OR, NOT) can be constructed from either NAND gates alone or NOR gates alone, which has significant practical importance in circuit manufacturing."
+    "title": "Simplification with Boolean Algebra and De Morgan's Theorems",
+    "math": "Boolean expression simplification",
+    "note": "This lesson demonstrates how to use the theorems of Boolean algebra, especially De Morgan's theorems, to simplify complex logical expressions. Simplifying an expression leads to a circuit that uses fewer gates, which is cheaper, faster, and more power-efficient."
   },
   {
     "n": 7,
-    "title": "Other Gates: XOR and XNOR",
-    "math": "Exclusive OR/NOR",
-    "note": "This section explains the XOR (Exclusive-OR) gate, which produces a 1 output only if its two inputs are different, and the XNOR (Exclusive-NOR) gate, which produces a 1 output only if its inputs are the same. These are useful for building arithmetic circuits and error-checking circuits."
+    "title": "Simplification with Karnaugh Maps (K-maps)",
+    "math": "Karnaugh maps",
+    "note": "This section introduces the Karnaugh map (K-map) as a graphical method for simplifying Boolean expressions for up to four variables. It provides a systematic and visual alternative to using algebraic theorems by grouping adjacent 1s to find the minimal logic expression."
   },
   {
     "n": 8,
-    "title": "Simplifying Logic Circuits with Boolean Algebra",
-    "math": "Boolean expression simplification",
-    "note": "This lesson demonstrates how to use the theorems of Boolean algebra (like De Morgan's theorem) to simplify complex logical expressions. Simplifying an expression leads to a simpler circuit that uses fewer logic gates, which is cheaper and faster."
-  },
-  {
-    "n": 9,
-    "title": "Gate-Level Minimization: Karnaugh Maps (K-maps)",
-    "math": "Karnaugh maps",
-    "note": "This section introduces the Karnaugh map (K-map) as a graphical method for simplifying Boolean expressions. It provides a more systematic and visual alternative to using Boolean algebra theorems. The lesson covers how to set up and read two, three, and four-variable K-maps by grouping adjacent 1s."
-  },
-  {
-    "n": 10,
     "title": "Introduction to Combinational Logic",
     "math": "Combinational logic",
     "note": "This lesson defines a combinational circuit as a type of digital circuit whose output is a pure function of its present inputs only. This means the output is determined solely by the current combination of input values and does not depend on any previous inputs (it has no memory)."
   },
   {
-    "n": 11,
-    "title": "Design of Adders: Half Adder and Full Adder",
+    "n": 9,
+    "title": "Combinational Circuit: Adders",
     "math": "Binary adders",
-    "note": "This section covers the design of basic arithmetic circuits. A Half Adder adds two single binary digits. A Full Adder adds three binary digits (including a carry-in from a previous stage). The process of deriving the logic expressions and creating the circuits from truth tables is shown."
+    "note": "This section covers the design of basic arithmetic circuits. A Half Adder adds two bits, while a Full Adder adds three bits (including a carry-in). These can be chained together to create multi-bit adders, like a ripple-carry adder."
   },
   {
-    "n": 12,
-    "title": "Design of Decoders and Encoders",
+    "n": 10,
+    "title": "Combinational Circuit: Decoders and Encoders",
     "math": "Decoders and encoders",
     "note": "This lesson explains two important combinational circuits. A Decoder converts a binary code into a single active output line (e.g., a 2-to-4 decoder). An Encoder performs the opposite function, converting a single active input line into a binary code."
   },
   {
-    "n": 13,
-    "title": "Design of Multiplexers (MUX)",
+    "n": 11,
+    "title": "Combinational Circuit: Multiplexers (MUX) and Demultiplexers (DEMUX)",
     "math": "Multiplexers",
-    "note": "This section introduces the Multiplexer (MUX), often called a data selector. A MUX is a circuit that has multiple data inputs, a set of selection lines, and a single output. It uses the binary code on the selection lines to choose which one of the data inputs is routed to the output."
+    "note": "This section introduces the Multiplexer (MUX), or data selector, which routes one of many inputs to a single output based on selection lines. The Demultiplexer (DEMUX) performs the opposite function, routing a single input to one of many outputs."
   },
   {
-    "n": 14,
+    "n": 12,
     "title": "Introduction to Sequential Logic",
-    "math": "Sequential logic, state machines",
+    "math": "Sequential logic",
     "note": "This lesson introduces sequential circuits, whose output depends not only on the present input but also on the history of the inputs. This is because sequential circuits have memory elements that store information about the past state of the system."
   },
   {
-    "n": 15,
-    "title": "Latches and Flip-Flops",
+    "n": 13,
+    "title": "Memory Elements: Latches and Flip-Flops",
     "math": "Bistable multivibrators",
-    "note": "This section covers the fundamental building blocks of memory in sequential circuits. It introduces the SR Latch as a simple memory element. It then explains the Flip-Flop as a more advanced, 'clocked' version of a latch that only changes its state on a clock signal edge. The D flip-flop is presented as the most common type."
+    "note": "This section covers the fundamental building blocks of memory. It introduces the SR Latch and then explains the Flip-Flop as a 'clocked' version that only changes state on a clock signal edge. The D flip-flop is presented as the most common and useful type."
+  },
+  {
+    "n": 14,
+    "title": "The Clock Signal and Synchronous Circuits",
+    "math": "Clock signals",
+    "note": "This lesson explains the role of a clock signal in 'synchronous' sequential circuits. The clock is a periodic square wave that acts as a metronome, synchronizing the state changes of all the flip-flops in the circuit, ensuring orderly operation."
+  },
+  {
+    "n": 15,
+    "title": "Registers",
+    "math": "Data registers",
+    "note": "This section defines a register as a group of flip-flops used to store a group of bits (a binary word). It covers basic parallel registers for temporary storage and Shift Registers, which can also shift their bits left or right, essential for serial data operations."
   },
   {
     "n": 16,
-    "title": "The Concept of a Clock Signal",
-    "math": "Clock signals",
-    "note": "This lesson explains the role of a clock signal in 'synchronous' sequential circuits. The clock is a periodic square wave that oscillates between 0 and 1. It acts as a metronome, synchronizing the state changes of all the flip-flops in the circuit, ensuring orderly operation."
+    "title": "Counters",
+    "math": "Digital counters",
+    "note": "This section introduces counters, which are sequential circuits designed to go through a predetermined sequence of states. It explains how a synchronous counter can be built from flip-flops and is used for tasks like counting events or generating timing signals."
   },
   {
     "n": 17,
-    "title": "Registers",
-    "math": "Data registers",
-    "note": "This section defines a register as a group of flip-flops used to store a group of bits (a binary word). It explains how an n-bit register is constructed from n flip-flops and is used for temporary storage of data within a digital system, such as a CPU."
+    "title": "Finite State Machine (FSM) Design",
+    "math": "State machines",
+    "note": "This lesson formalizes the design of sequential circuits using the Finite State Machine model. It covers creating state diagrams and state tables to represent circuit behavior and distinguishes between Mealy machines (output depends on state and input) and Moore machines (output depends only on state)."
   },
   {
     "n": 18,
-    "title": "Shift Registers",
-    "math": "Shift registers",
-    "note": "This lesson covers a special type of register called a Shift Register. In addition to storing data, a shift register can also shift its bits to the left or right. This capability is fundamental for operations like serial-to-parallel data conversion and multiplication."
+    "title": "Memory: RAM and ROM",
+    "math": "Computer memory",
+    "note": "This lesson provides an overview of how larger memory units are constructed. It explains the basic concepts of Random-Access Memory (RAM), which can be both read from and written to, and Read-Only Memory (ROM), which is pre-programmed with data."
   },
   {
     "n": 19,
-    "title": "Counters",
-    "math": "Digital counters",
-    "note": "This section introduces counters, which are sequential circuits designed to go through a predetermined sequence of states. It explains how a counter can be built from flip-flops and is used for tasks like counting events or generating timing signals."
+    "title": "Building an Arithmetic Logic Unit (ALU)",
+    "math": "ALU design",
+    "note": "This lesson shows how to combine fundamental components to build an ALU, the core of a CPU. It explains how combinational logic (like adders and logic gates) and multiplexers can be used to perform multiple different arithmetic and logical operations based on a set of control signals."
   },
   {
     "n": 20,
-    "title": "Memory: RAM and ROM",
-    "math": "Computer memory",
-    "note": "This final lesson provides an overview of how larger memory units are constructed. It explains the basic concepts of Random-Access Memory (RAM), which can be both read from and written to, and Read-Only Memory (ROM), which is pre-programmed with data that cannot be easily changed."
+    "title": "Introduction to Hardware Description Languages (HDLs)",
+    "math": "Hardware Description Languages",
+    "note": "This lesson introduces the modern approach to digital design. It explains that instead of drawing schematics, engineers use HDLs like Verilog or VHDL to describe circuits in code. This code can then be simulated to verify behavior and synthesized to create a physical circuit."
+  },
+  {
+    "n": 21,
+    "title": "Modeling Circuits in Verilog",
+    "math": "Verilog basics",
+    "note": "This lesson provides a brief, practical introduction to the Verilog HDL. It demonstrates how to write simple Verilog modules to describe basic combinational circuits (like an AND gate or a full adder) and simple sequential circuits (like a D flip-flop), showing the correspondence between the code and the hardware."
+  },
+  {
+    "n": 22,
+    "title": "Introduction to Programmable Logic Devices (PLDs)",
+    "math": "FPGAs",
+    "note": "This final lesson introduces the hardware that HDLs target. It explains Programmable Logic Devices, focusing on the modern Field-Programmable Gate Array (FPGA). An FPGA is an integrated circuit containing a matrix of configurable logic blocks that can be programmed in the field to implement any digital circuit."
   }
 ]

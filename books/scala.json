@@ -55,66 +55,78 @@
   },
   {
     "n": 10,
+    "title": "Idiomatic Scala: For-Comprehensions",
+    "math": "Syntactic sugar",
+    "note": "This lesson introduces for-comprehensions as a more readable, syntactic sugar for sequences of `map`, `flatMap`, and `filter` operations. It shows how a `for { ... } yield ...` block can be used to cleanly express complex data transformations on collections, Options, and Futures."
+  },
+  {
+    "n": 11,
     "title": "Object-Oriented Programming: Classes",
     "math": "Classes and objects",
     "note": "This lesson covers Scala's object-oriented side. It demonstrates how to define a class with fields and methods using the `class` keyword. The concept of a constructor for initializing an object is also explained."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "Singleton Objects and Companion Objects",
     "math": "Singleton pattern",
     "note": "This section introduces the `object` keyword, which is used to define a class that has only one instance (a singleton). It also explains the common Scala pattern of a 'Companion Object', which is a singleton object that has the same name as a class and is defined in the same file. It is often used to hold factory methods or static members."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Case Classes",
     "math": "Algebraic data types",
     "note": "This lesson introduces Case Classes as a special type of class that is optimized for functional programming. They are immutable by default, provide useful auto-generated methods (like `equals` and `hashCode`), and are ideal for use in pattern matching."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Traits",
     "math": "Traits (mixins)",
     "note": "This section covers Traits, a core feature of Scala's object model. A trait is similar to an interface in Java, but it can also contain implemented methods. Traits are used for code reuse through 'mixin' composition, allowing a class to inherit from multiple traits."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Pattern Matching",
     "math": "Pattern matching",
     "note": "This lesson introduces pattern matching as one of Scala's most powerful features. It is a more advanced version of a `switch` statement that can match on values, types, and the structure of data (especially case classes). The `match` keyword and `case` clauses are demonstrated."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Handling Absence: The `Option` Type",
     "math": "Option types",
     "note": "This section explains the 'Scala way' of handling potentially missing values, avoiding `null`. The `Option` type is an enumeration with two cases: `Some(value)` if a value is present, and `None` if it is absent. This forces the programmer to handle the 'no value' case, preventing null pointer exceptions."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "Error Handling: `Try` and `Either`",
     "math": "Error handling",
     "note": "This lesson covers functional approaches to error handling. `Try` is a type that represents a computation that can result in either a value (`Success(value)`) or an exception (`Failure(exception)`). `Either` is a more general type that can hold one of two possible values, typically a `Left(error)` or a `Right(success)`."
   },
   {
-    "n": 17,
+    "n": 18,
     "title": "Asynchronous Programming with `Future`",
     "math": "Futures and promises",
     "note": "This section introduces `Future`, Scala's construct for handling asynchronous operations. A `Future` is a placeholder object for a value that may not yet be available. It allows you to write non-blocking code by composing operations on the future value."
   },
   {
-    "n": 18,
+    "n": 19,
+    "title": "Advanced: Contextual Abstractions (`given`/`using`)",
+    "math": "Type classes, dependency injection",
+    "note": "Introduce Scala 3's modern system for term inference, which replaces the older `implicit` system. Explain how `given` instances provide canonical values for a certain type, and how a method can request them using a `using` clause. This is key for dependency injection and type classes."
+  },
+  {
+    "n": 20,
     "title": "The Scala Build Tool (sbt)",
     "math": "Build automation",
     "note": "This lesson provides an overview of `sbt`, the standard build tool for Scala. It explains the structure of a `build.sbt` file, which is used to define project settings, dependencies, and custom tasks."
   },
   {
-    "n": 19,
+    "n": 21,
     "title": "Testing with ScalaTest",
     "math": "Testing frameworks",
     "note": "This section introduces ScalaTest, a popular testing framework for Scala. It demonstrates how to write simple unit tests and assertions to verify the correctness of your code."
   },
   {
-    "n": 20,
+    "n": 22,
     "title": "The Scala Ecosystem: Akka and Spark",
     "math": "Distributed computing frameworks",
     "note": "This final lesson provides a glimpse into why Scala is so powerful in the real world. It briefly introduces Akka, a toolkit for building highly concurrent and distributed applications using the actor model, and Apache Spark, the leading framework for big data processing, which has its primary API in Scala."

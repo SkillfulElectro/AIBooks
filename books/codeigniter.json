@@ -49,78 +49,108 @@
   },
   {
     "n": 9,
+    "title": "URI Routing",
+    "math": "URL mapping",
+    "note": "This lesson covers how to define custom routing rules in `application/config/routes.php`. It demonstrates how to map custom URLs to specific controllers and methods using wildcards and regular expressions, creating clean and flexible URLs."
+  },
+  {
+    "n": 10,
     "title": "CodeIgniter Libraries",
     "math": "Software libraries",
     "note": "This section explains Libraries as pre-built classes that provide common functionality. It demonstrates how to load a library within a controller using `$this->load->library('library_name');` and then use its methods to perform tasks."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "The Form Validation Library",
     "math": "Input validation rules",
     "note": "This lesson covers one of the most important libraries. It demonstrates how to use the Form Validation library to set rules for form fields (e.g., `required`, `min_length`, `valid_email`), run the validation, and retrieve any error messages to display to the user."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "The Session Library",
     "math": "Session management",
     "note": "This section explains how to manage user state across multiple page requests using the Session library. It covers how to store data in the session, retrieve it later, and use it for features like 'flash data' (messages that persist for only one request, like 'Item successfully updated')."
   },
   {
-    "n": 12,
+    "n": 13,
+    "title": "The File Uploading Library",
+    "math": "File handling",
+    "note": "This lesson demonstrates how to handle file uploads with CodeIgniter's File Uploading class. It covers configuring the upload path and allowed types, performing the upload, and handling any potential errors."
+  },
+  {
+    "n": 14,
+    "title": "The Pagination Library",
+    "math": "Data set partitioning",
+    "note": "This section explains how to generate pagination links for large sets of data. It covers loading and configuring the Pagination library to create links for navigating between pages of results."
+  },
+  {
+    "n": 15,
     "title": "CodeIgniter Helpers",
     "math": "Procedural functions",
     "note": "This lesson introduces Helpers as collections of procedural functions that assist with specific tasks. Unlike libraries (which are classes), helpers are simple function collections. It shows how to load a helper using `$this->load->helper('helper_name');`."
   },
   {
-    "n": 13,
+    "n": 16,
     "title": "The URL Helper and Form Helper",
     "math": "Code generation",
     "note": "This section covers two essential helpers. It demonstrates the URL Helper's functions like `site_url()` and `base_url()` for creating clean, portable links. It also shows how the Form Helper's functions like `form_open()` and `form_input()` can be used to generate form elements."
   },
   {
-    "n": 14,
+    "n": 17,
     "title": "Database Configuration",
     "math": "Configuration files",
     "note": "This lesson provides a detailed guide to configuring the database connection. It walks through the `application/config/database.php` file, explaining how to set the hostname, username, password, and database name to enable CodeIgniter to connect to your database server."
   },
   {
-    "n": 15,
+    "n": 18,
     "title": "The Query Builder Class: SELECT",
     "math": "Database query language",
     "note": "This section introduces CodeIgniter's Query Builder class, which provides a simple, database-agnostic way to build SQL queries. It focuses on retrieval, demonstrating methods like `$this->db->get('table_name')` to select all records and `$this->db->where()` to add conditions to the query."
   },
   {
-    "n": 16,
+    "n": 19,
     "title": "The Query Builder Class: INSERT, UPDATE, DELETE",
     "math": "CRUD operations",
     "note": "This lesson covers data modification using the Query Builder. It demonstrates how to use `$this->db->insert()` to add a new record, `$this->db->update()` to modify an existing record (usually combined with `where`), and `$this->db->delete()` to remove a record."
   },
   {
-    "n": 17,
+    "n": 20,
     "title": "Creating a Model to Abstract Database Logic",
     "math": "Object-oriented design",
     "note": "This lesson provides a practical example of building a model class. It shows how to create a model that extends `CI_Model` and contains methods like `get_posts()` or `insert_user()`, encapsulating the Query Builder logic and providing a clean API for the controllers to use."
   },
   {
-    "n": 18,
+    "n": 21,
     "title": "Handling Forms and User Input",
     "math": "Input/Output (I/O)",
     "note": "This section details the full process of handling a form submission. It covers creating the form view, the controller method to process the POST request, and using the Input Library (`$this->input->post('field_name')`) to safely access the submitted data."
   },
   {
-    "n": 19,
+    "n": 22,
     "title": "User Authentication: Building a Login System",
     "math": "Authentication protocols",
     "note": "This lesson provides a walkthrough of building a user login system. It covers creating the login form, validating user credentials against the database, and using the Session library to store the user's logged-in state if the credentials are correct."
   },
   {
-    "n": 20,
+    "n": 23,
+    "title": "Error Handling and Logging",
+    "math": "Exception handling",
+    "note": "This lesson covers how CodeIgniter handles errors and how to configure logging. It explains the different logging thresholds and how to write custom log messages, which is essential for debugging applications."
+  },
+  {
+    "n": 24,
+    "title": "Caching for Performance",
+    "math": "Caching algorithms",
+    "note": "This section introduces CodeIgniter's caching drivers. It explains how to enable caching to store the output of pages to improve performance and reduce server load. Different caching drivers like file-based and APC are discussed."
+  },
+  {
+    "n": 25,
     "title": "Security in CodeIgniter",
     "math": "Security best practices",
     "note": "This section covers built-in security features. It explains CodeIgniter's methods for filtering user input to prevent XSS attacks, and its implementation of CSRF protection to safeguard forms from cross-site request forgery attacks."
   },
   {
-    "n": 21,
+    "n": 26,
     "title": "Project: Building a Simple Blog",
     "math": "Application architecture",
     "note": "This final lesson ties all the concepts together by outlining the steps to build a complete, simple blog application. It covers designing the database schema, creating the controllers for posts, building the models for data interaction, and writing the views to display the blog posts and forms."

@@ -19,102 +19,108 @@
   },
   {
     "n": 4,
+    "title": "Composite Data Types: Records",
+    "math": "Record types",
+    "note": "This lesson introduces PL/SQL Records as a composite data type to group related data items. It explains how to define a `TYPE ... IS RECORD` in the declaration section and then declare a variable of that record type to hold structured data, such as the fields representing an employee."
+  },
+  {
+    "n": 5,
     "title": "Conditional Control: `IF-THEN-ELSE`",
     "math": "Conditional logic",
     "note": "This lesson explains how to control the flow of a PL/SQL program based on conditions. It demonstrates the syntax for the `IF-THEN`, `IF-THEN-ELSE`, and `IF-THEN-ELSIF` statements for executing different blocks of code based on the result of a boolean expression."
   },
   {
-    "n": 5,
+    "n": 6,
     "title": "Iterative Control: Loops",
     "math": "Loop constructs",
     "note": "This section covers the different types of loops in PL/SQL. It explains the basic `LOOP` with an `EXIT WHEN` condition, the `WHILE` loop (which checks a condition at the start), and the `FOR` loop (which iterates over a range of integers)."
   },
   {
-    "n": 6,
+    "n": 7,
     "title": "Using SQL in PL/SQL",
     "math": "Embedded SQL",
     "note": "This lesson demonstrates one of the key features of PL/SQL: the seamless integration of SQL. It shows how to directly embed Data Manipulation Language (DML) statements like `INSERT`, `UPDATE`, and `DELETE` within the BEGIN section of a PL/SQL block."
   },
   {
-    "n": 7,
+    "n": 8,
     "title": "The `SELECT INTO` Statement",
     "math": "Data retrieval into variables",
     "note": "This section explains how to retrieve data from the database into PL/SQL variables. It introduces the `SELECT INTO` statement, which is used to fetch values from a single row returned by a query into a set of variables. The `NO_DATA_FOUND` exception is also introduced."
   },
   {
-    "n": 8,
+    "n": 9,
     "title": "Introduction to Cursors",
     "math": "Database cursors",
     "note": "This lesson explains what a cursor is and why it's needed. A cursor is a pointer to a private memory area that stores the results of a SQL query. Cursors are necessary for processing queries that return multiple rows, since `SELECT INTO` only works for single-row queries."
   },
   {
-    "n": 9,
+    "n": 10,
     "title": "Working with Explicit Cursors",
     "math": "Cursor lifecycle",
     "note": "This section details the four steps for working with an explicit cursor: 1. `DECLARE` the cursor with a `SELECT` statement. 2. `OPEN` the cursor to execute the query. 3. `FETCH` rows from the result set one at a time into variables. 4. `CLOSE` the cursor to release the resources."
   },
   {
-    "n": 10,
+    "n": 11,
     "title": "Cursor Attributes",
     "math": "State flags",
     "note": "This lesson covers cursor attributes, which provide status information about a cursor's state. It explains the most common attributes: `%FOUND` (true if the last fetch returned a row), `%NOTFOUND` (the opposite of `%FOUND`, often used to exit a loop), and `%ROWCOUNT` (the number of rows fetched so far)."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "The Cursor `FOR` Loop",
     "math": "Implicit cursor loops",
     "note": "This section introduces a much simpler and more concise way to work with cursors. The cursor `FOR` loop implicitly handles the `OPEN`, `FETCH`, and `CLOSE` operations, and automatically declares a record variable to hold the fetched row. This is the recommended way to process a cursor."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Exception Handling",
     "math": "Exception handling",
     "note": "This lesson explains the `EXCEPTION` section of a PL/SQL block. This section is used to handle runtime errors (exceptions) gracefully. Instead of the program crashing, control is transferred to the exception-handling block."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Handling Pre-defined and User-defined Exceptions",
     "math": "Exception types",
     "note": "This section covers different types of exceptions. It demonstrates how to handle pre-defined Oracle server errors, like `NO_DATA_FOUND`. It also shows how to declare your own custom exceptions to handle specific business rule violations."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Stored Procedures",
     "math": "Database procedures",
     "note": "This lesson defines a Stored Procedure as a named PL/SQL block that is stored in the database. It can be called from other PL/SQL blocks or applications. This promotes code reuse and modularity. The `CREATE PROCEDURE` syntax and parameter modes (`IN`, `OUT`) are explained."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Stored Functions",
     "math": "Database functions",
     "note": "This section introduces Stored Functions. A function is similar to a procedure, but it must return a single value. Because they return a value, functions can be called directly from within SQL statements, which is a key advantage."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "Packages",
     "math": "Code packages",
     "note": "This lesson covers Packages, which are schema objects that group logically related PL/SQL types, variables, and subprograms (procedures and functions). A package has two parts: the specification (the public interface) and the body (the implementation details). Packages are the cornerstone of large-scale PL/SQL development."
   },
   {
-    "n": 17,
+    "n": 18,
     "title": "Database Triggers",
     "math": "Database triggers",
     "note": "This section introduces Database Triggers, which are a special type of stored procedure that automatically executes in response to a DML event (`INSERT`, `UPDATE`, or `DELETE`) on a specific table. They are often used for auditing or enforcing complex integrity constraints."
   },
   {
-    "n": 18,
+    "n": 19,
     "title": "Row-Level vs. Statement-Level Triggers",
     "math": "Trigger granularity",
     "note": "This lesson explains the two types of DML triggers. A Statement-Level trigger fires once for the entire DML statement, regardless of how many rows are affected. A Row-Level trigger (using the `FOR EACH ROW` clause) fires once for every single row that is affected by the DML statement."
   },
   {
-    "n": 19,
+    "n": 20,
     "title": "Collections: Associative Arrays",
     "math": "Associative arrays",
     "note": "This lesson introduces PL/SQL collections. It focuses on Associative Arrays (formerly called 'index-by tables'), which are sets of key-value pairs. They are useful for storing and manipulating small lookup tables of data entirely within a PL/SQL block."
   },
   {
-    "n": 20,
+    "n": 21,
     "title": "Bulk Processing with `BULK COLLECT` and `FORALL`",
     "math": "Bulk data processing",
     "note": "This final lesson covers a crucial performance optimization technique. It explains that switching between the PL/SQL engine and the SQL engine is slow. `BULK COLLECT` allows you to fetch an entire result set into a collection in one go. `FORALL` allows you to send an entire collection of data to the SQL engine in a single DML statement, significantly improving performance."

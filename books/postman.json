@@ -55,66 +55,72 @@
   },
   {
     "n": 10,
+    "title": "Creating Mock Servers",
+    "math": "API mocking",
+    "note": "Introduce Mock Servers as a powerful feature for parallel development. This lesson explains how to create a mock server from a collection and save one or more 'example' responses (with specific status codes and bodies) for an endpoint. This allows frontend developers to test against a predictable, simulated API before the backend is ready."
+  },
+  {
+    "n": 11,
     "title": "Introduction to API Testing in Postman",
     "math": "Test automation",
     "note": "This lesson explains how Postman can be used to automate the testing of APIs. It introduces the 'Tests' tab in the request builder, where you can write JavaScript code that runs after a response is received to verify that the API is working correctly."
   },
   {
-    "n": 11,
+    "n": 12,
     "title": "Writing Your First Test",
     "math": "Test assertions",
     "note": "This section demonstrates how to write a simple test script. It introduces the `pm.test()` function for defining a test case and the Chai.js BDD syntax for writing assertions (e.g., `pm.response.to.have.status(200)`). The 'Snippets' feature for generating common tests is also shown."
   },
   {
-    "n": 12,
+    "n": 13,
     "title": "Testing the Response Body",
     "math": "JSON data validation",
     "note": "This lesson focuses on validating the data in the API response. It shows how to parse the JSON response body using `pm.response.json()` and then write tests to assert that specific properties exist and have the expected values."
   },
   {
-    "n": 13,
+    "n": 14,
     "title": "Chaining Requests: Using Variables from a Response",
     "math": "Request chaining",
     "note": "This section covers a common testing scenario: extracting a value from one API response and using it in the next request (e.g., getting an ID from a POST response and using it in a subsequent GET request). It demonstrates how to use `pm.environment.set()` in the 'Tests' tab to save a value to a variable."
   },
   {
-    "n": 14,
+    "n": 15,
     "title": "Pre-request Scripts",
     "math": "Script execution order",
     "note": "This lesson introduces the 'Pre-request Script' tab. It explains that code in this tab runs *before* the request is sent. This is useful for tasks like generating dynamic data (e.g., a random username or a current timestamp) to be used in the request body or URL."
   },
   {
-    "n": 15,
+    "n": 16,
     "title": "Handling Authentication",
     "math": "API authentication",
     "note": "This section covers how to work with secured APIs. It demonstrates the 'Authorization' tab in Postman, which provides helpers for various authentication schemes, including API Keys, Basic Auth, and setting a Bearer Token."
   },
   {
-    "n": 16,
+    "n": 17,
     "title": "The Collection Runner",
     "math": "Test suite execution",
     "note": "This lesson introduces the Collection Runner, a tool for running all the requests in a collection in a specified order. This is how you execute an entire API test suite automatically instead of running each request manually."
   },
   {
-    "n": 17,
+    "n": 18,
     "title": "Data-Driven Testing with the Collection Runner",
     "math": "Data-driven testing",
     "note": "This section explains how to run a collection multiple times with different data for each iteration. It demonstrates how to use an external data file (like a CSV or JSON file) with the Collection Runner to perform data-driven testing."
   },
   {
-    "n": 18,
+    "n": 19,
     "title": "Automating with Newman",
     "math": "Command-line execution",
     "note": "This lesson introduces Newman, the command-line companion to Postman. It is a Node.js application that allows you to run a Postman collection directly from the command line, without needing the Postman GUI. This is the key to integrating Postman tests into an automated CI/CD pipeline."
   },
   {
-    "n": 19,
+    "n": 20,
     "title": "Generating Reports with Newman",
     "math": "Test reporting",
     "note": "This section covers how to generate reports from a Newman run. It demonstrates how to use Newman 'reporters' to create output files in various formats, such as a user-friendly HTML report that can be published as a test artifact in a CI/CD system."
   },
   {
-    "n": 20,
+    "n": 21,
     "title": "Team Collaboration and Documentation",
     "math": "Collaboration and documentation",
     "note": "This final lesson provides an overview of Postman's collaboration features. It explains how to use shared Workspaces for teams to work on the same collections. It also demonstrates how Postman can automatically generate and publish beautiful, web-based API documentation directly from a collection."
