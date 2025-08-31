@@ -244,6 +244,18 @@ body {
   border-color: var(--accent-color);
 }
 
+.topic-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.topic-note {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
 .topic-buttons {
   display: flex;
   gap: 0.5rem;
