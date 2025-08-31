@@ -272,17 +272,6 @@ window.addEventListener("DOMContentLoaded", () => {
         mathEl.textContent = t.math;
         card.querySelector('.topic-card-header').after(mathEl);
       }
-      const homeBtn = document.createElement("button");
-      homeBtn.innerHTML = '<i class="fas fa-home"></i>';
-      homeBtn.title = "Go back to home";
-      homeBtn.addEventListener("click", () => {
-        bookSelectionView.style.display = "block";
-        topicView.style.display = "none";
-        currentBook = null;
-        currentPath = [];
-        renderBookButtons();
-      });
-      card.querySelector(".topic-actions").appendChild(homeBtn);
       
       const cb = card.querySelector('input[type="checkbox"]');
       cb.addEventListener("change", (e) => {
@@ -373,7 +362,8 @@ window.addEventListener("DOMContentLoaded", () => {
         bookSelectionView.style.display = "block";
         topicView.style.display = "none";
         currentBook = null;
-        resetBookButtonStyles();
+        currentPath = [];
+        renderBookButtons();
       });
       categoryBackBtn.addEventListener('click', () => {
         if (currentPath.length > 0) {
