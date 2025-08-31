@@ -266,6 +266,12 @@ window.addEventListener("DOMContentLoaded", () => {
             <button class="copy-btn"><i class="far fa-clipboard"></i></button>
         </div>
       `;
+      if (t.math) {
+        const mathEl = document.createElement('div');
+        mathEl.className = 'math';
+        mathEl.textContent = t.math;
+        card.querySelector('.topic-card-header').after(mathEl);
+      }
       
       const cb = card.querySelector('input[type="checkbox"]');
       cb.addEventListener("change", (e) => {
