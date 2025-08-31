@@ -300,3 +300,48 @@ body {
   background-color: var(--secondary-color);
   transform: scale(1.1);
 }
+
+/*- RESPONSIVE STYLES -*/
+@media (max-width: 768px) {
+  .container-wrapper {
+    padding: 0 1rem;
+  }
+
+  .main-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-btn.category {
+    grid-column: span 1;
+  }
+
+  .topic-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .topic-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .provider-selector {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
