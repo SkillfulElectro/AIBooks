@@ -99,15 +99,6 @@ body {
   color: var(--text-color);
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
 #searchBooks {
   width: 100%;
   padding: 1rem 1rem 1rem 3rem;
