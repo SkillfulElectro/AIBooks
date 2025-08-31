@@ -256,6 +256,23 @@ body {
   margin-bottom: 1rem;
 }
 
+.topic-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.math {
+  background-color: rgba(138, 43, 226, 0.2);
+  color: #c471f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
 .topic-buttons {
   display: flex;
   gap: 0.5rem;
