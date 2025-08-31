@@ -250,11 +250,13 @@ body {
   margin-top: 1rem;
 }
 
-.topic-buttons button {
+.topic-buttons button.search-btn,
+.topic-buttons button.study-btn,
+.topic-buttons button.copy-btn {
   flex-grow: 1;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  border: none;
+  border: 1px solid var(--card-border-color);
   background-color: var(--card-bg-color);
   color: var(--text-color);
   cursor: pointer;
