@@ -244,6 +244,27 @@ body {
   border-color: var(--accent-color);
 }
 
+.topic-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.topic-buttons button {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.topic-buttons button:hover {
+  background-color: var(--accent-color);
+}
+
 /*- FOOTER -*/
 .main-footer {
   text-align: center;
