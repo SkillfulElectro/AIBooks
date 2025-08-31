@@ -237,7 +237,7 @@ window.addEventListener("DOMContentLoaded", () => {
           (t.note || "").toLowerCase().includes(lowerFilter)
       );
     }
-    listEl.innerHTML = "";
+    const fragment = document.createDocumentFragment();
     if (topics.length === 0) {
       listEl.innerHTML = `<p class="no-results">No topics found.</p>`;
       return;
@@ -296,8 +296,10 @@ window.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      listEl.appendChild(card);
+      fragment.appendChild(card);
     });
+    listEl.innerHTML = "";
+    listEl.appendChild(fragment);
 
     document.getElementById("selectAll").onclick = () => {
       const p = {};
