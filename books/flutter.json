@@ -1,0 +1,290 @@
+[
+  {
+    "n": 1,
+    "title": "Module 1: Introduction - What is Flutter?",
+    "math": "N/A",
+    "note": "Introduce Flutter as a UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. Explain the role of the Dart programming language."
+  },
+  {
+    "n": 2,
+    "title": "Setting up the Flutter Development Environment",
+    "math": "N/A",
+    "note": "Guide through installing the Flutter SDK and setting up an editor like VS Code with the necessary extensions for Dart and Flutter development."
+  },
+  {
+    "n": 3,
+    "title": "Creating Your First Flutter Project",
+    "math": "N/A",
+    "note": "Show how to create a new Flutter project using `flutter create my_app` and run the default counter application on an emulator or device."
+  },
+  {
+    "n": 4,
+    "title": "Module 2: Dart Fundamentals - Variables and Types",
+    "math": "N/A",
+    "note": "Introduce Dart's basic syntax, including how to declare variables with `var`, `final`, and `const`, and cover the basic types like `int`, `double`, `String`, and `bool`."
+  },
+  {
+    "n": 5,
+    "title": "Dart Functions and Control Flow",
+    "math": "N/A",
+    "note": "Cover how to define functions in Dart, including parameters and return types. Explain control flow statements like `if/else`, `for` loops, and `switch` statements."
+  },
+  {
+    "n": 6,
+    "title": "Dart Classes and Object-Oriented Programming",
+    "math": "N/A",
+    "note": "Introduce classes in Dart. Explain constructors, methods, and properties. Cover basic OOP concepts like inheritance with `extends`."
+  },
+  {
+    "n": 7,
+    "title": "Module 3: Flutter Basics - Everything is a Widget",
+    "math": "N/A",
+    "note": "Introduce the core principle of Flutter: the UI is built from a tree of widgets. Differentiate between `StatelessWidget` and `StatefulWidget`."
+  },
+  {
+    "n": 8,
+    "title": "StatelessWidget vs. StatefulWidget",
+    "math": "State Machines",
+    "note": "Deep dive into the difference between widgets whose state cannot change (`StatelessWidget`) and widgets that can be redrawn with new internal state (`StatefulWidget`) using `setState()`."
+  },
+  {
+    "n": 9,
+    "title": "Basic Widgets: `Container`",
+    "math": "N/A",
+    "note": "Introduce the `Container` widget as a fundamental building block for layout and styling. Cover its properties like `color`, `padding`, `margin`, and `decoration`."
+  },
+  {
+    "n": 10,
+    "title": "Layout Widgets: `Row` and `Column`",
+    "math": "N/A",
+    "note": "Explain how to arrange widgets in a horizontal (`Row`) or vertical (`Column`) line. Introduce `mainAxisAlignment` and `crossAxisAlignment` for alignment."
+  },
+  {
+    "n": 11,
+    "title": "Layout Widgets: `Stack`",
+    "math": "N/A",
+    "note": "Introduce the `Stack` widget for layering widgets on top of each other. Show how to use `Positioned` to place children within the stack."
+  },
+  {
+    "n": 12,
+    "title": "Module 4: Custom Painting - The `CustomPaint` Widget",
+    "math": "N/A",
+    "note": "Introduce the `CustomPaint` widget as the entry point for all custom 2D graphics. Explain its `painter` and `foregroundPainter` properties."
+  },
+  {
+    "n": 13,
+    "title": "The `CustomPainter` Class",
+    "math": "N/A",
+    "note": "Show how to create a class that extends `CustomPainter`. Explain the two required methods: `paint(canvas, size)` and `shouldRepaint(oldDelegate)`."
+  },
+  {
+    "n": 14,
+    "title": "The `paint` Method: `Canvas` and `Size`",
+    "math": "N/A",
+    "note": "Explain the arguments of the `paint` method. `Canvas` is the drawing surface, and `Size` provides the dimensions of the available drawing area."
+  },
+  {
+    "n": 15,
+    "title": "The `shouldRepaint` Method",
+    "math": "N/A",
+    "note": "Explain the role of `shouldRepaint`. It's a performance optimization that tells Flutter whether to re-run the `paint` method when the widget rebuilds. Return `true` if the drawing depends on changing properties."
+  },
+  {
+    "n": 16,
+    "title": "The `Paint` Object",
+    "math": "N/A",
+    "note": "Introduce the `Paint` object. Explain that it's not what you draw, but *how* you draw. Cover its properties like `color`, `strokeWidth`, and `style` (`PaintingStyle.fill` vs. `PaintingStyle.stroke`)."
+  },
+  {
+    "n": 17,
+    "title": "Drawing Lines with `canvas.drawLine`",
+    "math": "Analytic Geometry (Points, Lines)",
+    "note": "Show how to draw a simple line on the canvas using `canvas.drawLine(p1, p2, paint)`, where `p1` and `p2` are `Offset` objects."
+  },
+  {
+    "n": 18,
+    "title": "Drawing Rectangles with `canvas.drawRect`",
+    "math": "N/A",
+    "note": "Show how to draw a rectangle using `canvas.drawRect(rect, paint)`, where `rect` is a `Rect` object created from points or from a center."
+  },
+  {
+    "n": 19,
+    "title": "Drawing Circles with `canvas.drawCircle`",
+    "math": "N/A",
+    "note": "Show how to draw a circle using `canvas.drawCircle(center, radius, paint)`."
+  },
+  {
+    "n": 20,
+    "title": "Drawing Ovals and Arcs",
+    "math": "N/A",
+    "note": "Introduce `canvas.drawOval` for ellipses and `canvas.drawArc` for drawing segments of a circle or oval."
+  },
+  {
+    "n": 21,
+    "title": "Module 5: Paths - Drawing Complex Shapes",
+    "math": "Vector Graphics",
+    "note": "Introduce the `Path` object as a way to describe complex, custom shapes by connecting lines and curves."
+  },
+  {
+    "n": 22,
+    "title": "Path Methods: `moveTo` and `lineTo`",
+    "math": "N/A",
+    "note": "Show how to start a new sub-path with `path.moveTo()` and draw a straight line to a new point with `path.lineTo()`."
+  },
+  {
+    "n": 23,
+    "title": "Path Methods: `close`",
+    "math": "N/A",
+    "note": "Explain that `path.close()` draws a straight line from the current point back to the starting point of the sub-path, closing the shape."
+  },
+  {
+    "n": 24,
+    "title": "Drawing a Path with `canvas.drawPath`",
+    "math": "N/A",
+    "note": "Show how to take a completed `Path` object and render it to the canvas using `canvas.drawPath(path, paint)`."
+  },
+  {
+    "n": 25,
+    "title": "Quadratic Bezier Curves",
+    "math": "Bezier Curves",
+    "note": "Introduce `path.quadraticBezierTo(x1, y1, x2, y2)` for drawing simple curves with one control point."
+  },
+  {
+    "n": 26,
+    "title": "Cubic Bezier Curves",
+    "math": "Bezier Curves",
+    "note": "Introduce `path.cubicTo(x1, y1, x2, y2, x3, y3)` for drawing more complex curves with two control points."
+  },
+  {
+    "n": 27,
+    "title": "Module 6: Canvas Transformations - Translate",
+    "math": "Linear Algebra (Translation)",
+    "note": "Explain how `canvas.translate(dx, dy)` shifts the origin (0,0) of the canvas, affecting all subsequent drawing operations."
+  },
+  {
+    "n": 28,
+    "title": "Rotate",
+    "math": "Linear Algebra (Rotation)",
+    "note": "Explain how `canvas.rotate(radians)` rotates the canvas around its current origin."
+  },
+  {
+    "n": 29,
+    "title": "Scale",
+    "math": "Linear Algebra (Scaling)",
+    "note": "Explain how `canvas.scale(sx, sy)` scales the canvas, making subsequent drawings larger or smaller."
+  },
+  {
+    "n": 30,
+    "title": "The Transformation Stack: `save` and `restore`",
+    "math": "Data Structures (Stacks)",
+    "note": "Introduce `canvas.save()` and `canvas.restore()` as the essential way to manage transformations. `save()` pushes the current transform state onto a stack, and `restore()` pops it off, undoing any transforms made in between."
+  },
+  {
+    "n": 31,
+    "title": "Module 7: Animation - The Concept",
+    "math": "N/A",
+    "note": "Introduce Flutter's animation system. Explain the core idea: an `Animation` object represents a value (like a number or color) that changes over a certain duration."
+  },
+  {
+    "n": 32,
+    "title": "The `AnimationController`",
+    "math": "N/A",
+    "note": "Introduce `AnimationController` as the 'conductor' of an animation. It manages the animation's duration, playback (`forward()`, `reverse()`, `stop()`), and produces a value from 0.0 to 1.0 over time."
+  },
+  {
+    "n": 33,
+    "title": "The `Ticker`",
+    "math": "N/A",
+    "note": "Explain that `AnimationController` needs a `TickerProvider`. Show how to add the `SingleTickerProviderStateMixin` to a `State` class to get one."
+  },
+  {
+    "n": 34,
+    "title": "The `Tween`",
+    "math": "Linear Interpolation (Lerp)",
+    "note": "Introduce `Tween` as an object that maps the `AnimationController`'s 0.0-1.0 value to a different range. For example, `Tween<double>(begin: 50.0, end: 100.0)`."
+  },
+  {
+    "n": 35,
+    "title": "Connecting a `Tween` to a Controller",
+    "math": "N/A",
+    "note": "Show how to use `tween.animate(controller)` to create a new `Animation` object that is driven by the controller but outputs values from the tween's range."
+  },
+  {
+    "n": 36,
+    "title": "The `AnimatedBuilder` Widget",
+    "math": "N/A",
+    "note": "Introduce `AnimatedBuilder` as an efficient widget for rebuilding a part of the UI tree in response to an animation's value changing, without rebuilding the entire widget."
+  },
+  {
+    "n": 37,
+    "title": "Animating Custom Paintings",
+    "math": "N/A",
+    "note": "Combine concepts: use an `AnimationController` to drive a value, pass that value to your `CustomPainter`, and use it in the `paint` method to change a shape's size, position, or color over time."
+  },
+  {
+    "n": 38,
+    "title": "Curves",
+    "math": "Easing Functions",
+    "note": "Introduce the `Curve` class. Show how to use a `CurvedAnimation` to make animations more natural with easing, such as `Curves.easeInOut` or `Curves.bounceOut`."
+  },
+  {
+    "n": 39,
+    "title": "Module 8: Final Project - 2D Game Engine",
+    "math": "N/A",
+    "note": "Outline the final project: building a very simple 2D game engine using `CustomPaint` and Flutter's animation system. The engine will have a game loop, render simple sprites, and handle user input."
+  },
+  {
+    "n": 40,
+    "title": "Final Project: The Game Loop",
+    "math": "N/A",
+    "note": "Create a game loop using an `AnimationController` set to repeat. The listener for the controller will be the main `tick` of the game, where we update and render everything."
+  },
+  {
+    "n": 41,
+    "title": "Final Project: Game Objects",
+    "math": "N/A",
+    "note": "Create a base `GameObject` class with `update()` and `render()` methods. It will have properties for position and size."
+  },
+  {
+    "n": 42,
+    "title": "Final Project: The Player Sprite",
+    "math": "N/A",
+    "note": "Create a `Player` class that extends `GameObject`. In its `render` method, use `canvas.drawRect` or `canvas.drawImage` to draw the player."
+  },
+  {
+    "n": 43,
+    "title": "Final Project: Handling Input",
+    "math": "N/A",
+    "note": "Use a `GestureDetector` widget to capture tap or pan events and update the player's position or velocity."
+  },
+  {
+    "n": 44,
+    "title": "Final Project: The Main Game Widget",
+    "math": "N/A",
+    "note": "Create a `StatefulWidget` for the game itself. It will own the list of game objects and the game loop's `AnimationController`."
+  },
+  {
+    "n": 45,
+    "title": "Final Project: The Game Painter",
+    "math": "N/A",
+    "note": "Create a `GamePainter` that extends `CustomPainter`. In its `paint` method, it will iterate through all the game objects and call their individual `render` methods, passing the canvas."
+  },
+  {
+    "n": 46,
+    "title": "Module 9: Further Reading",
+    "math": "N/A",
+    "note": "Provide links to the official Flutter documentation on animation and custom painting."
+  },
+  {
+    "n": 47,
+    "title": "Further Reading: The Flame Engine",
+    "math": "N/A",
+    "note": "Introduce the Flame engine as a full-featured, open-source 2D game engine built on top of Flutter, for those who want to build more complex games."
+  },
+  {
+    "n": 48,
+    "title": "Further Reading: Rive",
+    "math": "N/A",
+    "note": "Introduce Rive as a powerful tool for creating complex, interactive vector animations that can be easily integrated into Flutter applications, often as a more powerful alternative to building them from scratch."
+  }
+]

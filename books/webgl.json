@@ -1,0 +1,296 @@
+[
+  {
+    "n": 1,
+    "title": "Module 1: Introduction - What is WebGL?",
+    "math": "N/A",
+    "note": "Introduce WebGL as a low-level JavaScript API for rendering 2D and 3D graphics within an HTML `<canvas>` element. Explain that it's based on OpenGL ES, providing direct access to the GPU for high-performance graphics."
+  },
+  {
+    "n": 2,
+    "title": "WebGL 1 vs. WebGL 2",
+    "math": "N/A",
+    "note": "Briefly compare WebGL 1 and WebGL 2. Explain that WebGL 2 is more capable (based on OpenGL ES 3.0) but this course will focus on WebGL 1 concepts which are foundational and have wider compatibility."
+  },
+  {
+    "n": 3,
+    "title": "Module 2: Setup - The HTML Canvas",
+    "math": "N/A",
+    "note": "Show how to create a `<canvas>` element in an HTML file, giving it an ID, width, and height. This is the drawing surface for WebGL."
+  },
+  {
+    "n": 4,
+    "title": "Getting the WebGL Rendering Context",
+    "math": "N/A",
+    "note": "Show how to get the WebGL rendering context from the canvas using `canvas.getContext('webgl')`. Explain how to handle the case where the browser doesn't support WebGL."
+  },
+  {
+    "n": 5,
+    "title": "Setting the Clear Color",
+    "math": "Color Theory (RGBA)",
+    "note": "Introduce `gl.clearColor(r, g, b, a)`. Explain that this sets the color that the canvas will be wiped with. The values are floats from 0.0 to 1.0."
+  },
+  {
+    "n": 6,
+    "title": "Clearing the Color Buffer",
+    "math": "N/A",
+    "note": "Introduce `gl.clear(gl.COLOR_BUFFER_BIT)`. Explain that this command executes the actual clearing of the canvas to the color specified by `clearColor`."
+  },
+  {
+    "n": 7,
+    "title": "The Viewport",
+    "math": "N/A",
+    "note": "Introduce `gl.viewport(x, y, width, height)`. Explain that this tells WebGL how to map clip space coordinates (-1 to +1) to the pixel space of the canvas."
+  },
+  {
+    "n": 8,
+    "title": "Module 3: GLSL - Introduction to Shaders",
+    "math": "N/A",
+    "note": "Introduce the concept of shaders as small programs written in GLSL (OpenGL Shading Language) that run on the GPU. Differentiate between the Vertex Shader and the Fragment Shader."
+  },
+  {
+    "n": 9,
+    "title": "The Vertex Shader",
+    "math": "Linear Algebra (Vectors, Matrices)",
+    "note": "Explain the role of the Vertex Shader: to calculate the final clip-space position of each vertex. Introduce the special `gl_Position` variable."
+  },
+  {
+    "n": 10,
+    "title": "The Fragment Shader",
+    "math": "Color Theory (RGBA)",
+    "note": "Explain the role of the Fragment Shader: to calculate the final color of each pixel. Introduce the special `gl_FragColor` variable."
+  },
+  {
+    "n": 11,
+    "title": "Writing a Minimal Vertex Shader in GLSL",
+    "math": "N/A",
+    "note": "Write a simple vertex shader in a `<script>` tag with `type=\"x-shader/x-vertex\"`. Introduce `attribute`, `vec4`, and setting `gl_Position`."
+  },
+  {
+    "n": 12,
+    "title": "Writing a Minimal Fragment Shader in GLSL",
+    "math": "N/A",
+    "note": "Write a simple fragment shader in a `<script>` tag with `type=\"x-shader/x-fragment\"`. Show how to set `gl_FragColor` to a hardcoded `vec4` color."
+  },
+  {
+    "n": 13,
+    "title": "Module 4: Compiling Shaders - Creating Shader Objects",
+    "math": "N/A",
+    "note": "Show how to create empty shader objects using `gl.createShader(gl.VERTEX_SHADER)` and `gl.createShader(gl.FRAGMENT_SHADER)`."
+  },
+  {
+    "n": 14,
+    "title": "Attaching GLSL Source",
+    "math": "N/A",
+    "note": "Show how to get the GLSL source code from the DOM and attach it to a shader object using `gl.shaderSource()`."
+  },
+  {
+    "n": 15,
+    "title": "Compiling a Shader",
+    "math": "N/A",
+    "note": "Show how to compile a shader using `gl.compileShader()`. Explain that this is a GPU operation."
+  },
+  {
+    "n": 16,
+    "title": "Checking for Compilation Errors",
+    "math": "N/A",
+    "note": "Introduce `gl.getShaderParameter(shader, gl.COMPILE_STATUS)` and `gl.getShaderInfoLog(shader)` to check if a shader compiled successfully and get error messages."
+  },
+  {
+    "n": 17,
+    "title": "Creating a Shader Program",
+    "math": "N/A",
+    "note": "Explain that a shader program links a vertex and fragment shader together. Create one with `gl.createProgram()`."
+  },
+  {
+    "n": 18,
+    "title": "Attaching Shaders to a Program",
+    "math": "N/A",
+    "note": "Show how to attach the compiled shaders to the program object using `gl.attachShader()`."
+  },
+  {
+    "n": 19,
+    "title": "Linking the Program",
+    "math": "N/A",
+    "note": "Show how to link the program with `gl.linkProgram()`. Explain that this step connects the inputs and outputs of the shaders."
+  },
+  {
+    "n": 20,
+    "title": "Checking for Linking Errors",
+    "math": "N/A",
+    "note": "Introduce `gl.getProgramParameter(program, gl.LINK_STATUS)` and `gl.getProgramInfoLog(program)` to check for linking errors."
+  },
+  {
+    "n": 21,
+    "title": "Using the Program",
+    "math": "N/A",
+    "note": "Show how to activate a shader program for drawing using `gl.useProgram(program)`."
+  },
+  {
+    "n": 22,
+    "title": "Module 5: Buffers - The Concept",
+    "math": "N/A",
+    "note": "Explain that buffers are blocks of memory on the GPU used to store vertex data, indices, and other geometric information."
+  },
+  {
+    "n": 23,
+    "title": "Creating a Buffer",
+    "math": "N/A",
+    "note": "Show how to create a buffer object on the GPU using `gl.createBuffer()`."
+  },
+  {
+    "n": 24,
+    "title": "Binding a Buffer",
+    "math": "State Machines",
+    "note": "Introduce WebGL's state machine concept. Explain that you must 'bind' a buffer to a target like `gl.ARRAY_BUFFER` using `gl.bindBuffer()` to make it the active buffer for subsequent operations."
+  },
+  {
+    "n": 25,
+    "title": "Putting Data into a Buffer",
+    "math": "N/A",
+    "note": "Show how to upload vertex data from a JavaScript `Float32Array` into the currently bound buffer using `gl.bufferData(target, data, usage)`. Explain the `gl.STATIC_DRAW` usage hint."
+  },
+  {
+    "n": 26,
+    "title": "Module 6: Attributes - The Concept",
+    "math": "N/A",
+    "note": "Explain that attributes are inputs to a vertex shader that get their data from buffers. Each vertex gets its own value for an attribute (e.g., position, color)."
+  },
+  {
+    "n": 27,
+    "title": "Getting an Attribute Location",
+    "math": "N/A",
+    "note": "Show how to get a reference to a GLSL attribute from your JavaScript code using `gl.getAttribLocation(program, 'attributeName')`."
+  },
+  {
+    "n": 28,
+    "title": "Enabling an Attribute",
+    "math": "N/A",
+    "note": "Explain that attributes must be explicitly enabled using `gl.enableVertexAttribArray(location)`."
+  },
+  {
+    "n": 29,
+    "title": "Telling WebGL How to Read the Buffer",
+    "math": "Data Structures (Memory Layout)",
+    "note": "Introduce `gl.vertexAttribPointer(location, size, type, normalize, stride, offset)`. Explain each parameter's role in telling the GPU how to pull data out of the bound buffer for a specific attribute."
+  },
+  {
+    "n": 30,
+    "title": "The `size` Parameter",
+    "math": "N/A",
+    "note": "Explain that `size` is the number of components per vertex attribute (e.g., 2 for a 2D position, 3 for a 3D position)."
+  },
+  {
+    "n": 31,
+    "title": "The `type` Parameter",
+    "math": "N/A",
+    "note": "Explain that `type` specifies the data type of each component in the buffer, such as `gl.FLOAT` for a `Float32Array`."
+  },
+  {
+    "n": 32,
+    "title": "The `normalize` Parameter",
+    "math": "N/A",
+    "note": "Explain the `normalize` boolean, which specifies whether to normalize non-float data to a range of -1 to 1 or 0 to 1."
+  },
+  {
+    "n": 33,
+    "title": "The `stride` Parameter",
+    "math": "N/A",
+    "note": "Explain `stride` as the number of bytes to get from one vertex's data to the next. A value of 0 means the data is tightly packed."
+  },
+  {
+    "n": 34,
+    "title": "The `offset` Parameter",
+    "math": "N/A",
+    "note": "Explain `offset` as the number of bytes from the beginning of the buffer where the data for this attribute starts."
+  },
+  {
+    "n": 35,
+    "title": "Module 7: Drawing - The `drawArrays` command",
+    "math": "N/A",
+    "note": "Introduce `gl.drawArrays(mode, first, count)`. Explain how this command executes the pipeline, running the vertex shader `count` times, starting at `first`."
+  },
+  {
+    "n": 36,
+    "title": "Drawing Primitives (`gl.TRIANGLES`)",
+    "math": "N/A",
+    "note": "Explain the `mode` parameter. Show how to use `gl.TRIANGLES` to draw a simple triangle from three vertices."
+  },
+  {
+    "n": 37,
+    "title": "Putting it all together: A 2D Triangle",
+    "math": "N/A",
+    "note": "Walk through the complete code to draw a single, solid-colored 2D triangle using a vertex buffer, two shaders, and a `drawArrays` call."
+  },
+  {
+    "n": 38,
+    "title": "Module 8: From 2D to 3D - Adding a Z coordinate",
+    "math": "Analytic Geometry (3D Coordinates)",
+    "note": "Modify the vertex data and `vertexAttribPointer` to use 3 components for position (x, y, z) instead of 2."
+  },
+  {
+    "n": 39,
+    "title": "The Depth Buffer",
+    "math": "N/A",
+    "note": "Explain the need for a depth buffer to handle overlapping objects correctly. Enable it with `gl.enable(gl.DEPTH_TEST)` and clear it with `gl.clear(gl.DEPTH_BUFFER_BIT)`."
+  },
+  {
+    "n": 40,
+    "title": "Module 9: Uniforms - The Concept",
+    "math": "N/A",
+    "note": "Explain that uniforms are inputs to shaders that are constant for all vertices in a draw call. They are used for things like transformation matrices."
+  },
+  {
+    "n": 41,
+    "title": "Getting a Uniform Location",
+    "math": "N/A",
+    "note": "Show how to get a reference to a GLSL uniform from JavaScript using `gl.getUniformLocation(program, 'uniformName')`."
+  },
+  {
+    "n": 42,
+    "title": "Passing Data to Uniforms",
+    "math": "N/A",
+    "note": "Introduce the family of `gl.uniform...` functions. Show how to pass a matrix using `gl.uniformMatrix4fv(location, transpose, data)`."
+  },
+  {
+    "n": 43,
+    "title": "Module 10: Final Project - 3D Renderer",
+    "math": "N/A",
+    "note": "Outline the final project: a simple 3D renderer from scratch that can draw a colored, rotating cube."
+  },
+  {
+    "n": 44,
+    "title": "Final Project: The Cube's Vertices and Indices",
+    "math": "N/A",
+    "note": "Define the vertex positions for a cube. Introduce an index buffer (`gl.ELEMENT_ARRAY_BUFFER`) and `gl.drawElements` to draw the cube efficiently."
+  },
+  {
+    "n": 45,
+    "title": "Final Project: Varyings for Color",
+    "math": "N/A",
+    "note": "Introduce `varying` variables in GLSL to pass data, like color, from the vertex shader to the fragment shader, allowing for interpolated colors across the cube's faces."
+  },
+  {
+    "n": 46,
+    "title": "Final Project: Transformation Matrices",
+    "math": "Linear Algebra (Matrices)",
+    "note": "Introduce a simple JavaScript matrix library (or write the functions manually) to create projection and model-view matrices."
+  },
+  {
+    "n": 47,
+    "title": "Final Project: The Animation Loop",
+    "math": "N/A",
+    "note": "In a `requestAnimationFrame` loop, update the model-view matrix every frame to make the cube rotate. Upload the updated matrix to a uniform before calling `drawElements`."
+  },
+  {
+    "n": 48,
+    "title": "Module 11: Further Reading",
+    "math": "N/A",
+    "note": "Provide links to the official WebGL specification, MDN documentation, and other foundational tutorials like WebGL Fundamentals."
+  },
+  {
+    "n": 49,
+    "title": "Further Reading: High-Level Libraries",
+    "math": "N/A",
+    "note": "Introduce Three.js and Babylon.js as the next logical step for developers who want to build complex applications without managing the raw WebGL state machine directly."
+  }
+]

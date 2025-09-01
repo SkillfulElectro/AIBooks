@@ -1,0 +1,746 @@
+[
+  {
+    "n": 1,
+    "title": "Module 1: Introduction - What is WebGPU?",
+    "math": "N/A",
+    "note": "Introduce WebGPU as a modern API for graphics and compute on the web. Set the stage for the course, explaining that it provides low-level, high-performance access to GPUs. The context for this entire book is JavaScript within a modern browser like Chrome or Firefox."
+  },
+  {
+    "n": 2,
+    "title": "WebGPU vs. WebGL: Key Differences",
+    "math": "N/A",
+    "note": "Compare WebGPU to its predecessor, WebGL. Highlight key advantages: better performance by reducing driver overhead, a more modern API design that maps to Vulkan/Metal/DX12, and first-class support for general-purpose GPU (GPGPU) compute."
+  },
+  {
+    "n": 3,
+    "title": "The WebGPU Specification and Implementations",
+    "math": "N/A",
+    "note": "Briefly explain that WebGPU is a W3C standard. Mention the underlying native implementations that browsers use, such as Google's Dawn (for Chrome) and Mozilla's wgpu (for Firefox), which translate WebGPU calls to the host system's native graphics API."
+  },
+  {
+    "n": 4,
+    "title": "Checking for WebGPU Compatibility",
+    "math": "Boolean Logic",
+    "note": "Teach how to detect if a browser supports WebGPU by checking for the existence of the `gpu` object on the `navigator`. Use a simple JavaScript `if` statement: `if ('gpu' in navigator) { ... }`. This is the first step for any WebGPU application."
+  },
+  {
+    "n": 5,
+    "title": "The Asynchronous Nature of WebGPU",
+    "math": "Asynchronous Programming (Promises)",
+    "note": "Explain that many WebGPU operations are asynchronous to prevent the main browser thread from stalling. Introduce JavaScript Promises (`async`/`await`) as the primary way to handle these operations, such as requesting a device or creating a pipeline."
+  },
+  {
+    "n": 6,
+    "title": "Requesting a GPUAdapter",
+    "math": "N/A",
+    "note": "Explain that a `GPUAdapter` represents a physical piece of hardware (a GPU). Teach how to request one asynchronously using `await navigator.gpu.requestAdapter()`. Explain that this can return `null` if no suitable GPU is found."
+  },
+  {
+    "n": 7,
+    "title": "Adapter Options: `powerPreference`",
+    "math": "N/A",
+    "note": "Explain the `powerPreference` option passed to `requestAdapter()`. Differentiate between `'high-performance'` and `'low-power'`, explaining that it's a hint for which GPU to use on systems with both integrated and discrete GPUs."
+  },
+  {
+    "n": 8,
+    "title": "Adapter Options: `forceFallbackAdapter`",
+    "math": "N/A",
+    "note": "Explain the `forceFallbackAdapter` option. When set to `true`, it forces the browser to use a software-based fallback adapter if available, which is useful for testing and ensuring consistent behavior on systems without GPU support."
+  },
+  {
+    "n": 9,
+    "title": "Requesting a GPUDevice",
+    "math": "N/A",
+    "note": "Explain that a `GPUDevice` is the main logical interface used to create almost all other WebGPU objects. Teach how to request it from an adapter using `await adapter.requestDevice()`. This is the most important object in the API."
+  },
+  {
+    "n": 10,
+    "title": "Handling Device Loss",
+    "math": "Event Handling",
+    "note": "Introduce the concept of a device being 'lost' (e.g., driver crash, GPU unplugged). Show how to handle this by awaiting the `device.lost` promise, which resolves with a `GPUDeviceLostInfo` object when the device is lost, allowing the application to gracefully handle the error."
+  },
+  {
+    "n": 11,
+    "title": "Module 2: Windowing - HTML Canvas Setup",
+    "math": "2D Coordinate Systems (DOM)",
+    "note": "Show how to create a `<canvas>` element in an HTML file, giving it an ID, width, and height. This canvas is the rendering target for WebGPU."
+  },
+  {
+    "n": 12,
+    "title": "Getting the `webgpu` Canvas Context",
+    "math": "N/A",
+    "note": "Teach how to get the special context required for WebGPU from an HTML canvas element using `canvas.getContext('webgpu')`. This context object is the bridge between the canvas and the `GPUDevice`."
+  },
+  {
+    "n": 13,
+    "title": "Understanding the Swap Chain",
+    "math": "Queueing Theory",
+    "note": "Conceptually explain the swap chain managed by the canvas context. It's a queue of textures (usually two or three) used for rendering to avoid showing a partially rendered image (tearing). One texture is displayed while the next one is being drawn to."
+  },
+  {
+    "n": 14,
+    "title": "Querying the Preferred Canvas Format",
+    "math": "N/A",
+    "note": "Explain that browsers have an optimal texture format for canvases to avoid extra conversion work. Show how to query this format using `navigator.gpu.getPreferredCanvasFormat()`."
+  },
+  {
+    "n": 15,
+    "title": "Configuring the Canvas Context",
+    "math": "N/A",
+    "note": "Teach how to configure the canvas context for rendering. Use `context.configure()` and pass a descriptor object containing the `device` to use and the desired `format` (obtained from the previous lesson)."
+  },
+  {
+    "n": 16,
+    "title": "Understanding Canvas Alpha Modes",
+    "math": "Color Theory (Alpha Compositing)",
+    "note": "Explain the `alphaMode` property in the canvas configuration. Differentiate between `'opaque'` (ignores alpha, potentially faster) and `'premultiplied'` (allows the canvas to be transparent and composited with the rest of the web page)."
+  },
+  {
+    "n": 17,
+    "title": "Getting the Current Texture from the Canvas",
+    "math": "N/A",
+    "note": "In each frame of the render loop, show how to get the next available texture to draw into from the canvas context using `context.getCurrentTexture()`. This returns a `GPUTexture` object."
+  },
+  {
+    "n": 18,
+    "title": "Creating a Texture View",
+    "math": "N/A",
+    "note": "Explain that you don't render directly to a texture, but to a `GPUTextureView`. Show how to get a default view of the canvas texture using `texture.createView()`. This view is what will be used in the render pass."
+  },
+  {
+    "n": 19,
+    "title": "The Render Loop with `requestAnimationFrame`",
+    "math": "N/A",
+    "note": "Structure the application's drawing logic inside a render loop. Use JavaScript's `requestAnimationFrame(callback)` to create a function that is called by the browser before the next repaint, creating a smooth, efficient loop for continuous rendering and animation."
+  },
+  {
+    "n": 20,
+    "title": "Handling Canvas Resizing",
+    "math": "N/A",
+    "note": "Show how to handle the browser window being resized. Use a `ResizeObserver` to detect changes to the canvas's size and update its `width` and `height` attributes accordingly to prevent stretching and distortion."
+  },
+  {
+    "n": 21,
+    "title": "Module 3: WGSL - Introduction to the Shading Language",
+    "math": "Formal Language Theory",
+    "note": "Introduce the WebGPU Shading Language (WGSL). Explain its syntax, strong typing, and its role as the sole shading language for WebGPU. Store a minimal shader as a multi-line string in JavaScript."
+  },
+  {
+    "n": 22,
+    "title": "WGSL: Basic Syntax and Comments",
+    "math": "N/A",
+    "note": "Cover the C-like syntax of WGSL: semicolons to end statements, curly braces for scope, and both `//` and `/**/` for comments."
+  },
+  {
+    "n": 23,
+    "title": "WGSL: Scalar and Vector Types",
+    "math": "Linear Algebra (Scalars, Vectors)",
+    "note": "Introduce the fundamental data types in WGSL: scalar types like `f32`, `i32`, `u32`, `bool`, and vector types like `vec2<f32>`, `vec3<i32>`, `vec4<u32>`. Show how to declare variables with `var`."
+  },
+  {
+    "n": 24,
+    "title": "WGSL: Matrix Types",
+    "math": "Linear Algebra (Matrices)",
+    "note": "Introduce matrix types in WGSL, such as `mat4x4<f32>` or `mat3x2<f32>`. Explain that these are crucial for 3D transformations."
+  },
+  {
+    "n": 25,
+    "title": "WGSL: A Minimal Vertex Shader",
+    "math": "N/A",
+    "note": "Write a minimal WGSL vertex shader. Explain the `@vertex` attribute to mark the function as a vertex shader entry point. Show how to return a 4D vector for the clip-space position."
+  },
+  {
+    "n": 26,
+    "title": "WGSL: Vertex Shader Built-ins",
+    "math": "N/A",
+    "note": "Explain that WGSL uses attributes for special variables. Introduce `@builtin(position)` for the vertex shader's output position and `@builtin(vertex_index)` for getting the current vertex number."
+  },
+  {
+    "n": 27,
+    "title": "WGSL: A Minimal Fragment Shader",
+    "math": "Color Theory (RGBA)",
+    "note": "Write a minimal WGSL fragment shader. Explain the `@fragment` attribute to mark the function as a fragment shader entry point. Show how to return a `vec4<f32>` representing an RGBA color."
+  },
+  {
+    "n": 28,
+    "title": "WGSL: Varyings/Inter-stage Variables",
+    "math": "Interpolation",
+    "note": "Explain how to pass data from the vertex shader to the fragment shader. Define a `struct` for the inter-stage variables and use the `@location(n)` attribute to link the output of the vertex shader to the input of the fragment shader."
+  },
+  {
+    "n": 29,
+    "title": "WGSL: User-defined Functions",
+    "math": "N/A",
+    "note": "Show how to define and call your own functions within a WGSL module to organize code and avoid repetition, just like in other programming languages."
+  },
+  {
+    "n": 30,
+    "title": "Creating a `GPUShaderModule`",
+    "math": "N/A",
+    "note": "Show how to take the WGSL source code (stored in a JavaScript string) and create a `GPUShaderModule` using `device.createShaderModule()`. This module encapsulates the shader code for use in a pipeline."
+  },
+  {
+    "n": 31,
+    "title": "Module 4: The Render Pipeline - Introduction",
+    "math": "State Machines",
+    "note": "Explain that a `GPURenderPipeline` is a single, pre-compiled object containing most of the GPU's drawing state (shaders, vertex layout, blend modes, etc.). This makes the actual drawing commands in the render loop very fast."
+  },
+  {
+    "n": 32,
+    "title": "Asynchronous vs. Synchronous Pipeline Creation",
+    "math": "Asynchronous Programming",
+    "note": "Compare `device.createRenderPipeline()` (synchronous) and `device.createRenderPipelineAsync()` (asynchronous). Explain that the async version is preferred as it prevents stalling the main thread while the pipeline is compiled and validated."
+  },
+  {
+    "n": 33,
+    "title": "Pipeline Descriptor: The `vertex` Stage",
+    "math": "N/A",
+    "note": "Delve into the `vertex` property of the pipeline descriptor. Show how to specify the shader `module` and the `entryPoint` (the name of the vertex shader function in the WGSL code)."
+  },
+  {
+    "n": 34,
+    "title": "Pipeline Descriptor: The `fragment` Stage",
+    "math": "N/A",
+    "note": "Delve into the `fragment` property of the pipeline descriptor. Show how to specify its `module` and `entryPoint`."
+  },
+  {
+    "n": 35,
+    "title": "Pipeline Descriptor: Color Target State (`targets`)",
+    "math": "N/A",
+    "note": "Explain the `targets` array in the fragment state. This array describes the color attachments the pipeline will render to. At a minimum, you must specify the `format` of each target, which must match the canvas or texture format."
+  },
+  {
+    "n": 36,
+    "title": "Pipeline Descriptor: `primitive` State",
+    "math": "N/A",
+    "note": "Explain the `primitive` property of the pipeline descriptor, which controls how vertex data is interpreted."
+  },
+  {
+    "n": 37,
+    "title": "Primitive Topology: `triangle-list` vs. `triangle-strip`",
+    "math": "Graph Theory (Vertices and Edges)",
+    "note": "Compare the different primitive topologies. `'triangle-list'` interprets every 3 vertices as a new triangle. `'triangle-strip'` is more efficient, creating a new triangle from the previous two vertices and a new one."
+  },
+  {
+    "n": 38,
+    "title": "Primitive Topology: Lines and Points",
+    "math": "N/A",
+    "note": "Show how to use other topologies like `'line-list'`, `'line-strip'`, and `'point-list'` for drawing wireframes or particle systems."
+  },
+  {
+    "n": 39,
+    "title": "Culling and Winding Order",
+    "math": "Solid Geometry (Surface Normals)",
+    "note": "Explain the `cullMode` property of the primitive state. Differentiate between `'front'`, `'back'`, and `'none'`. Explain how `frontFace` (`'ccw'` vs `'cw'`) determines which side of a triangle is the front, which is crucial for culling."
+  },
+  {
+    "n": 40,
+    "title": "The `GPUPipelineLayout`",
+    "math": "N/A",
+    "note": "Introduce the `GPUPipelineLayout` as an object that describes the interface between a pipeline and its shader resources (bind groups). Show how to create a simple one for now with `device.createPipelineLayout()` and assign it to the pipeline's `layout` property."
+  },
+  {
+    "n": 41,
+    "title": "Module 5: Drawing - The Command Encoder",
+    "math": "Command Pattern",
+    "note": "Revisit the `GPUCommandEncoder`. Explain its role as a 'recorder' for GPU commands. Create one using `device.createCommandEncoder()`."
+  },
+  {
+    "n": 42,
+    "title": "Starting a Render Pass",
+    "math": "N/A",
+    "note": "Explain that a `GPURenderPassEncoder` is used for all drawing commands. Start one using `encoder.beginRenderPass()` and a `GPURenderPassDescriptor`."
+  },
+  {
+    "n": 43,
+    "title": "Render Pass Descriptor: `colorAttachments`",
+    "math": "N/A",
+    "note": "Focus on the `colorAttachments` array in the descriptor. Show how to specify the `view` (from the canvas's current texture), a `clearValue` (e.g., `{ r: 0, g: 0, b: 0, a: 1 }`), and the `loadOp` and `storeOp`."
+  },
+  {
+    "n": 44,
+    "title": "Understanding `loadOp` and `storeOp`",
+    "math": "N/A",
+    "note": "Differentiate between `loadOp: 'clear'` (which clears the texture at the start of the pass) and `loadOp: 'load'` (which preserves existing content). Explain `storeOp: 'store'` to save the results and `storeOp: 'discard'` to throw them away."
+  },
+  {
+    "n": 45,
+    "title": "Setting the Pipeline in a Render Pass",
+    "math": "N/A",
+    "note": "Inside a render pass, show the first command to record: `passEncoder.setPipeline()` to activate a `GPURenderPipeline`."
+  },
+  {
+    "n": 46,
+    "title": "Setting the Viewport",
+    "math": "N/A",
+    "note": "Show how to use `passEncoder.setViewport()` to define the area of the render target to draw to. Explain how this can be used for effects like split-screen rendering."
+  },
+  {
+    "n": 47,
+    "title": "Issuing a `draw()` Call",
+    "math": "N/A",
+    "note": "Use the `passEncoder.draw()` method to execute the currently bound pipeline. Explain the parameters: `vertexCount`, `instanceCount`, `firstVertex`, `firstInstance`."
+  },
+  {
+    "n": 48,
+    "title": "Ending the Pass and Finishing the Encoder",
+    "math": "N/A",
+    "note": "Show the final steps of recording: `passEncoder.end()` concludes the render pass, and `encoder.finish()` consumes the encoder and returns the finished `GPUCommandBuffer`."
+  },
+  {
+    "n": 49,
+    "title": "Submitting to the Queue",
+    "math": "N/A",
+    "note": "Teach how to execute the recorded commands by submitting an array of command buffers to the device's queue using `device.queue.submit([commandBuffer])`."
+  },
+  {
+    "n": 50,
+    "title": "Putting it all together: A Solid Color Triangle",
+    "math": "N/A",
+    "note": "Combine all concepts from the last few modules into a single, complete JavaScript example that successfully renders a hardcoded, solid-colored triangle to the canvas."
+  },
+  {
+    "n": 51,
+    "title": "Module 6: Buffers - What are Vertex Buffers?",
+    "math": "Linear Algebra (Vectors)",
+    "note": "Explain that vertex buffers are blocks of GPU memory that store per-vertex data, such as position, color, or texture coordinates. This data is fed into the vertex shader."
+  },
+  {
+    "n": 52,
+    "title": "`GPUBufferUsage` Flags",
+    "math": "Bitwise Operations (Flags)",
+    "note": "Explain the importance of `GPUBufferUsage` flags for optimization. Show how to specify a buffer's purpose, such as `GPUBufferUsage.VERTEX` or `GPUBufferUsage.INDEX`. Multiple flags can be combined with the `|` operator."
+  },
+  {
+    "n": 53,
+    "title": "Creating a `GPUBuffer`",
+    "math": "N/A",
+    "note": "Teach how to create a buffer on the GPU using `device.createBuffer()`. Explain the descriptor, focusing on the `size` (in bytes) and the `usage` flags. Introduce `mappedAtCreation` as an advanced option."
+  },
+  {
+    "n": 54,
+    "title": "Structuring Vertex Data in a `Float32Array`",
+    "math": "Data Structures (Arrays)",
+    "note": "Show how to define vertex data (e.g., the 2D positions of a square's corners) in a JavaScript `Float32Array`. Explain that typed arrays provide a raw binary data view required by the API."
+  },
+  {
+    "n": 55,
+    "title": "Uploading Data with `queue.writeBuffer`",
+    "math": "N/A",
+    "note": "Show how to upload CPU data from a `Float32Array` into a `GPUBuffer` using `device.queue.writeBuffer()`. Explain the parameters: destination buffer, buffer offset, source data, source offset, and size."
+  },
+  {
+    "n": 56,
+    "title": "`GPUVertexState`: Describing Buffer Layouts",
+    "math": "N/A",
+    "note": "Modify the pipeline's `vertex` state to describe the structure of the vertex buffer. Explain the `buffers` array in `GPUVertexState`, which is an array of `GPUVertexBufferLayout` descriptors."
+  },
+  {
+    "n": 57,
+    "title": "`GPUVertexBufferLayout`: `arrayStride`",
+    "math": "N/A",
+    "note": "Focus on the `arrayStride` property of a buffer layout. Explain that this is the total number of bytes from the start of one vertex to the start of the next."
+  },
+  {
+    "n": 58,
+    "title": "`GPUVertexBufferLayout`: `stepMode`",
+    "math": "N/A",
+    "note": "Explain the `stepMode` property. Differentiate `'vertex'` (the default, advances per vertex) from `'instance'` (advances per instance), which is used for instanced rendering."
+  },
+  {
+    "n": 59,
+    "title": "`GPUVertexAttribute`: `shaderLocation` and `offset`",
+    "math": "N/A",
+    "note": "Within the buffer layout, define the `attributes` array. Show how `shaderLocation` links to WGSL's `@location(n)` and `offset` defines where the attribute starts within the stride."
+  },
+  {
+    "n": 60,
+    "title": "`GPUVertexAttribute`: `format`",
+    "math": "N/A",
+    "note": "Explain the `format` property of a vertex attribute. List common formats like `'float32'`, `'float32x2'`, `'float32x4'`, and `'uint8x4unorm'`."
+  },
+  {
+    "n": 61,
+    "title": "Setting a Vertex Buffer with `setVertexBuffer`",
+    "math": "N/A",
+    "note": "Before drawing, use `passEncoder.setVertexBuffer(slot, buffer, offset, size)` to bind a `GPUBuffer` to a specific slot. The `slot` number corresponds to the index of the buffer layout in the pipeline's `buffers` array."
+  },
+  {
+    "n": 62,
+    "title": "Concept: What are Index Buffers?",
+    "math": "Graph Theory (Indexed Adjacency)",
+    "note": "Explain that index buffers reduce memory by allowing vertices to be reused. The buffer contains a list of integers that index into the vertex buffer, defining the order in which to draw the vertices to form triangles."
+  },
+  {
+    "n": 63,
+    "title": "Creating an Index Buffer",
+    "math": "Data Structures (Arrays)",
+    "note": "Create an index buffer using a `Uint16Array` or `Uint32Array`. Create the `GPUBuffer` with the `GPUBufferUsage.INDEX` flag and upload the data."
+  },
+  {
+    "n": 64,
+    "title": "Setting the Index Buffer",
+    "math": "N/A",
+    "note": "Use `passEncoder.setIndexBuffer(buffer, format, offset, size)` to bind the index buffer. The `format` must be either `'uint16'` or `'uint32'`, matching the typed array used."
+  },
+  {
+    "n": 65,
+    "title": "Drawing with `drawIndexed`",
+    "math": "N/A",
+    "note": "Use `passEncoder.drawIndexed(indexCount, instanceCount, firstIndex, baseVertex, firstInstance)` to draw. Explain that `indexCount` is the number of indices to draw from the buffer."
+  },
+  {
+    "n": 66,
+    "title": "Module 7: Uniforms - The Concept",
+    "math": "N/A",
+    "note": "Explain that uniforms are small amounts of data passed to shaders that are constant across all vertices/fragments in a single draw call. This is ideal for transformation matrices, colors, time values for animation, etc."
+  },
+  {
+    "n": 67,
+    "title": "Creating a Uniform Buffer",
+    "math": "N/A",
+    "note": "Create a `GPUBuffer` with the `GPUBufferUsage.UNIFORM` and `GPUBufferUsage.COPY_DST` flags. The size must accommodate the uniform data, respecting alignment rules."
+  },
+  {
+    "n": 68,
+    "title": "WGSL Data Alignment Rules for Uniforms",
+    "math": "Data Structures (Padding/Alignment)",
+    "note": "Explain that WGSL has specific memory alignment rules for structs used in uniform buffers (e.g., a `vec3` is aligned to 16 bytes, not 12). This is a common source of errors. Show how to correctly structure data in JavaScript `Float32Array`s to match this layout."
+  },
+  {
+    "n": 69,
+    "title": "Using `gl-matrix` for 3D Math",
+    "math": "Linear Algebra (Matrices)",
+    "note": "Introduce the `gl-matrix` JavaScript library as a robust, high-performance solution for vector and matrix math. Show how to create projection and model-view matrices needed for 3D graphics."
+  },
+  {
+    "n": 70,
+    "title": "Updating a Uniform Buffer Every Frame",
+    "math": "N/A",
+    "note": "In the render loop, show how to update the uniform buffer's contents with new data (like a rotated matrix) using `queue.writeBuffer()`."
+  },
+  {
+    "n": 71,
+    "title": "Bind Group Layouts: The Template",
+    "math": "Set Theory (Resource Binding)",
+    "note": "Introduce `GPUBindGroupLayout` as a template that defines the interface of shader resources. Use `device.createBindGroupLayout()` to define an array of expected `GPUBindGroupLayoutEntry` objects."
+  },
+  {
+    "n": 72,
+    "title": "Layout Entries: `binding` and `visibility`",
+    "math": "Bitwise Operations (Flags)",
+    "note": "Explain the properties of a layout entry. `binding` is the index used in WGSL (`@binding(n)`). `visibility` is a set of flags (`GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT`) indicating which shader stages can access the resource."
+  },
+  {
+    "n": 73,
+    "title": "Layout Entries: Buffer Types",
+    "math": "N/A",
+    "note": "Explain the `buffer` property of a layout entry. Differentiate the `type` property: `'uniform'`, `'storage'`, and `'read-only-storage'`."
+  },
+  {
+    "n": 74,
+    "title": "Creating the `GPUPipelineLayout`",
+    "math": "N/A",
+    "note": "Create a `GPUPipelineLayout` from one or more bind group layouts using `device.createPipelineLayout()`. Assign this layout to the `layout` property of the `GPURenderPipelineDescriptor`."
+  },
+  {
+    "n": 75,
+    "title": "Bind Groups: The Data",
+    "math": "Data Binding",
+    "note": "Explain that a `GPUBindGroup` is the object that links actual resources to the binding points defined in a layout. Create one with `device.createBindGroup()`."
+  },
+  {
+    "n": 76,
+    "title": "Bind Group Entries: Linking a `GPUBuffer`",
+    "math": "N/A",
+    "note": "Show how to create a `GPUBindGroupEntry`. Specify the `binding` number and the `resource`, which for a buffer is a JavaScript object like `{ buffer: myGPUBuffer, offset: 0, size: 64 }`."
+  },
+  {
+    "n": 77,
+    "title": "Setting a Bind Group in a Render Pass",
+    "math": "N/A",
+    "note": "Before drawing, use `passEncoder.setBindGroup(index, bindGroup)` to bind the group of resources. The `index` corresponds to the bind group's index in the `GPUPipelineLayout`."
+  },
+  {
+    "n": 78,
+    "title": "Accessing Uniforms in WGSL",
+    "math": "N/A",
+    "note": "In WGSL, define a uniform variable with `@group(n) @binding(m) var<uniform> myUniforms: MyStruct;`. The group and binding numbers must match those specified in the layouts and `setBindGroup` call."
+  },
+  {
+    "n": 79,
+    "title": "Dynamic Uniform Offsets",
+    "math": "N/A",
+    "note": "Introduce dynamic uniform offsets as an advanced technique for drawing multiple objects with different uniform data from a single buffer, by specifying a dynamic offset in `setBindGroup`."
+  },
+  {
+    "n": 80,
+    "title": "Multiple Bind Groups",
+    "math": "N/A",
+    "note": "Explain how to use multiple bind groups (e.g., group 0 for per-frame uniforms, group 1 for per-object uniforms) to organize resources efficiently."
+  },
+  {
+    "n": 81,
+    "title": "Module 8: Textures - The Concept",
+    "math": "Coordinate Systems (UV)",
+    "note": "Explain textures as images applied to the surface of 3D models. Introduce UV coordinates (a 2D coordinate system from 0.0 to 1.0) as the link between a texture's pixels and a model's vertices."
+  },
+  {
+    "n": 82,
+    "title": "Loading an Image via `HTMLImageElement`",
+    "math": "Asynchronous Programming",
+    "note": "Show the standard browser method for loading an image: create `new Image()`, set its `.src`, and wait for its `onload` event to fire."
+  },
+  {
+    "n": 83,
+    "title": "Creating an `ImageBitmap`",
+    "math": "N/A",
+    "note": "Explain that `ImageBitmap` is an object optimized for rendering. Show how to create one from an `HTMLImageElement` or other sources using the `createImageBitmap()` global function."
+  },
+  {
+    "n": 84,
+    "title": "Creating a `GPUTexture`",
+    "math": "N/A",
+    "note": "Teach how to create a `GPUTexture` object using `device.createTexture()`. Explain the descriptor properties: `size`, `format`, and `usage`."
+  },
+  {
+    "n": 85,
+    "title": "GPUTextureUsage for Textures",
+    "math": "Bitwise Operations (Flags)",
+    "note": "Explain the necessary usage flags for a texture that will be sampled: `GPUTextureUsage.TEXTURE_BINDING` (to be used in a bind group) and `GPUTextureUsage.COPY_DST` (to allow data to be copied into it)."
+  },
+  {
+    "n": 86,
+    "title": "Uploading Texture Data",
+    "math": "N/A",
+    "note": "Show how to upload the `ImageBitmap` data to the `GPUTexture` using `queue.copyExternalImageToTexture()`. Explain the parameters for source and destination."
+  },
+  {
+    "n": 87,
+    "title": "Samplers: The Concept",
+    "math": "Signal Processing (Filtering)",
+    "note": "Explain that a `GPUSampler` is a separate object that tells the shader *how* to read pixels from a texture. It controls filtering (blurry vs. pixelated) and wrapping (what happens outside the 0-1 UV range)."
+  },
+  {
+    "n": 88,
+    "title": "Creating a `GPUSampler`",
+    "math": "N/A",
+    "note": "Use `device.createSampler()` to create a sampler. Explain the descriptor and its properties."
+  },
+  {
+    "n": 89,
+    "title": "Sampler Filtering Modes",
+    "math": "N/A",
+    "note": "Explain the `magFilter` and `minFilter` properties. Differentiate between `'nearest'` (pixelated, sharp) and `'linear'` (blurry, smooth) filtering."
+  },
+  {
+    "n": 90,
+    "title": "Sampler Address Modes",
+    "math": "N/A",
+    "note": "Explain the `addressModeU` and `addressModeV` properties. Differentiate between `'clamp-to-edge'`, `'repeat'`, and `'mirror-repeat'`."
+  },
+  {
+    "n": 91,
+    "title": "Binding Textures and Samplers in a Bind Group",
+    "math": "N/A",
+    "note": "Update a `GPUBindGroupLayout` to expect a `'sampler'` and a `'texture'`. Then, update the `GPUBindGroup` to bind the `GPUSampler` and a `GPUTextureView` (created with `texture.createView()`) to the correct binding points."
+  },
+  {
+    "n": 92,
+    "title": "Using Textures and Samplers in WGSL",
+    "math": "N/A",
+    "note": "In WGSL, declare a texture and sampler: `@group(0) @binding(1) var mySampler: sampler;` and `@group(0) @binding(2) var myTexture: texture_2d<f32>;`. Use the `textureSample(texture, sampler, coords)` function to read the color."
+  },
+  {
+    "n": 93,
+    "title": "Mipmapping: The Concept",
+    "math": "Signal Processing (Downsampling)",
+    "note": "Explain mipmapping as a technique to improve rendering quality and performance for textures viewed at a distance. It involves creating a chain of pre-filtered, smaller versions of the texture."
+  },
+  {
+    "n": 94,
+    "title": "Generating Mipmaps",
+    "math": "N/A",
+    "note": "Show a simple (and imperfect) JavaScript-based method to generate mipmaps by repeatedly drawing a texture to a 2D canvas at half size and uploading each level to the `GPUTexture`."
+  },
+  {
+    "n": 95,
+    "title": "Using Mipmaps with Samplers",
+    "math": "N/A",
+    "note": "Explain the `mipmapFilter` property on a `GPUSampler` (`'nearest'` or `'linear'`) to control how the GPU blends between two mip levels for the smoothest result."
+  },
+  {
+    "n": 96,
+    "title": "Module 9: Advanced Rendering - Depth Buffering",
+    "math": "Solid Geometry (Occlusion)",
+    "note": "Explain why depth buffering is essential for correct 3D rendering to prevent objects in the back from being drawn over objects in the front. Introduce the concept of a depth test."
+  },
+  {
+    "n": 97,
+    "title": "Creating a Depth Texture",
+    "math": "N/A",
+    "note": "Create a `GPUTexture` with a depth format, such as `'depth24plus'` or `'depth32float'`. The usage flag must be `GPUTextureUsage.RENDER_ATTACHMENT`."
+  },
+  {
+    "n": 98,
+    "title": "Configuring the `depthStencil` State",
+    "math": "N/A",
+    "note": "Add a `depthStencil` property to the `GPURenderPipelineDescriptor`. Specify the `format` of the depth texture, set `depthWriteEnabled: true`, and set the `depthCompare` function (e.g., `'less'`) for the depth test."
+  },
+  {
+    "n": 99,
+    "title": "Using the Depth Texture in a Render Pass",
+    "math": "N/A",
+    "note": "Add a `depthStencilAttachment` to the `GPURenderPassDescriptor`. Provide a `view` created from the depth texture and set its `depthClearValue`, `depthLoadOp`, and `depthStoreOp`."
+  },
+  {
+    "n": 100,
+    "title": "Alpha Blending",
+    "math": "Linear Interpolation (Lerp)",
+    "note": "Explain alpha blending for rendering transparent objects. Configure the `blend` property on a pipeline's color target state to control how source and destination colors are combined, using `alpha` and `color` operations and factors."
+  },
+  {
+    "n": 101,
+    "title": "Instanced Rendering: The Concept",
+    "math": "N/A",
+    "note": "Introduce instanced rendering as a high-performance technique to draw many copies of the same mesh with different properties (like position or color) in a single draw call."
+  },
+  {
+    "n": 102,
+    "title": "Creating an Instance Buffer",
+    "math": "N/A",
+    "note": "Create a second vertex buffer containing per-instance data (e.g., an array of model matrices). In the pipeline's `GPUVertexState`, add a new buffer layout with a `stepMode` of `'instance'`."
+  },
+  {
+    "n": 103,
+    "title": "Drawing with `drawIndexed(..., instanceCount)`",
+    "math": "N/A",
+    "note": "Use the `instanceCount` parameter of a draw call to specify how many instances to render. The GPU will draw the mesh that many times, advancing the instance buffer for each one."
+  },
+  {
+    "n": 104,
+    "title": "Using Instance Data in WGSL",
+    "math": "N/A",
+    "note": "In the vertex shader, add new `@location` attributes for the per-instance data. Also, use the `@builtin(instance_index)` to get the current instance number if needed."
+  },
+  {
+    "n": 105,
+    "title": "Multisample Anti-Aliasing (MSAA)",
+    "math": "Signal Processing (Supersampling)",
+    "note": "Explain MSAA as a technique to smooth jagged edges. Configure the `multisample` state in the pipeline descriptor, setting the `count` (e.g., 4). Create a multisampled texture as a render target and 'resolve' it to a regular texture at the end of the pass."
+  },
+  {
+    "n": 106,
+    "title": "Module 10: Compute Shaders - GPGPU Concepts",
+    "math": "Parallel Computing",
+    "note": "Introduce General-Purpose GPU computing. Explain that compute shaders are programs that run on the GPU for tasks other than drawing, such as physics simulations, data processing, or machine learning. They have no vertex or fragment stages."
+  },
+  {
+    "n": 107,
+    "title": "The `GPUComputePipeline`",
+    "math": "N/A",
+    "note": "Show how to create a `GPUComputePipeline` using `device.createComputePipeline()`. This is simpler than a render pipeline, only requiring a `layout` and a `compute` stage with a shader module and entry point."
+  },
+  {
+    "n": 108,
+    "title": "A Minimal Compute Shader",
+    "math": "N/A",
+    "note": "Write a simple WGSL compute shader. Explain the `@compute` attribute and the `@workgroup_size(x, y, z)` attribute, which defines the size of a workgroup. Use `@builtin(global_invocation_id)` to get the unique ID of the current shader invocation."
+  },
+  {
+    "n": 109,
+    "title": "Storage Buffers",
+    "math": "Data Structures (Read/Write Arrays)",
+    "note": "Introduce storage buffers, which are `GPUBuffer` objects that shaders can both read from and write to. Create a buffer with the `STORAGE` usage flag and bind it in a `GPUBindGroup` with a buffer type of `'storage'`."
+  },
+  {
+    "n": 110,
+    "title": "The `GPUComputePassEncoder`",
+    "math": "N/A",
+    "note": "Explain that compute commands are recorded in a `GPUComputePassEncoder`, which is created from a `GPUCommandEncoder` using `encoder.beginComputePass()`."
+  },
+  {
+    "n": 111,
+    "title": "Dispatching Work",
+    "math": "N/A",
+    "note": "Use `pass.setPipeline()` and `pass.setBindGroup()`, then call `pass.dispatchWorkgroups(x, y, z)` to launch a grid of compute shader workgroups."
+  },
+  {
+    "n": 112,
+    "title": "Reading Data Back: The Staging Buffer",
+    "math": "N/A",
+    "note": "Explain the 'staging buffer' pattern for reading data back to the CPU. Create a buffer with `GPUBufferUsage.MAP_READ` and `GPUBufferUsage.COPY_DST`. This buffer can be mapped to CPU-accessible memory."
+  },
+  {
+    "n": 113,
+    "title": "Copying Data to the Staging Buffer",
+    "math": "N/A",
+    "note": "In a command encoder, after the compute pass is finished, use `encoder.copyBufferToBuffer()` to copy the contents of the storage buffer into the staging buffer."
+  },
+  {
+    "n": 114,
+    "title": "Mapping the Buffer with `mapAsync`",
+    "math": "Asynchronous Programming",
+    "note": "After submitting the command buffer, call `stagingBuffer.mapAsync(GPUMapMode.READ)`. `await` the returned promise. This signals that the GPU is done and the buffer is ready to be accessed on the CPU."
+  },
+  {
+    "n": 115,
+    "title": "Accessing the Mapped Data",
+    "math": "Data Structures (ArrayBuffer)",
+    "note": "Once the buffer is mapped, call `stagingBuffer.getMappedRange()` to get a JavaScript `ArrayBuffer`. You can then create a `TypedArray` view (e.g., `Float32Array`) on this `ArrayBuffer` to read the results of the GPU computation."
+  },
+  {
+    "n": 116,
+    "title": "Module 11: Final Project - Overview",
+    "math": "N/A",
+    "note": "Outline the goal of the final project: to build a simple but complete Physically-Based Rendering (PBR) model viewer that loads a glTF model and renders it with realistic lighting."
+  },
+  {
+    "n": 117,
+    "title": "Final Project: Loading a glTF Model",
+    "math": "N/A",
+    "note": "Explain that parsing glTF is complex and best left to a library. Conceptually walk through using a library like `gltf-loader-ts` to parse a `.glb` file into vertex buffers, index buffers, and material properties."
+  },
+  {
+    "n": 118,
+    "title": "Final Project: The PBR Shader",
+    "math": "Physics (Optics), Color Theory",
+    "note": "Provide a simplified WGSL PBR fragment shader. Explain the inputs: albedo, normal, metallic, roughness, and ambient occlusion. Explain how these inputs combine to produce a realistic material appearance."
+  },
+  {
+    "n": 119,
+    "title": "Final Project: Binding PBR Textures",
+    "math": "N/A",
+    "note": "Create and bind all the necessary textures for the PBR model (albedo, normal map, metallic-roughness map, etc.) into a single bind group for the material."
+  },
+  {
+    "n": 120,
+    "title": "Final Project: Implementing a Camera",
+    "math": "Linear Algebra (View/Projection Matrices)",
+    "note": "Create a simple orbit camera controller using `gl-matrix`. Listen to mouse events to update the view matrix, which is then uploaded to a uniform buffer each frame."
+  },
+  {
+    "n": 121,
+    "title": "Final Project: Adding Basic Lighting",
+    "math": "N/A",
+    "note": "Create a uniform buffer for lighting data, such as light direction and color. Pass this data to the PBR shader to calculate diffuse and specular lighting."
+  },
+  {
+    "n": 122,
+    "title": "Final Project: Adding a UI for Controls",
+    "math": "N/A",
+    "note": "Integrate a simple UI library like `dat.GUI` or `lil-gui` to add controls for rotating the model, changing light color, or modifying material properties in real-time."
+  },
+  {
+    "n": 123,
+    "title": "Module 12: Further Reading - Official Resources",
+    "math": "N/A",
+    "note": "Provide links to essential official resources for continued learning, including the W3C WebGPU Specification, the WGSL Specification, and the official WebGPU Samples repository."
+  },
+  {
+    "n": 124,
+    "title": "Further Reading: Community and Libraries",
+    "math": "N/A",
+    "note": "Provide links to community resources like the WebGPU Matrix/Discord channels, and popular libraries that build on top of WebGPU, such as `three.js` (WebGPU renderer), `Babylon.js`, and `PlayCanvas`."
+  }
+]
