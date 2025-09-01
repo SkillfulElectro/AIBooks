@@ -101,16 +101,8 @@
           "file": "./books/opencv_py.json"
         },
         {
-          "name": "Opencv Tour",
-          "file": "./books/opencv_tour.json"
-        },
-        {
           "name": "Pandas Tour",
           "file": "./books/pandas.json"
-        },
-        {
-          "name": "Python Pandas Tour",
-          "file": "./books/python_pandas.json"
         },
         {
           "name": "Pytorch Tour",
@@ -304,20 +296,8 @@
           "file": "./books/cryptography.json"
         },
         {
-          "name": "Cybersecurity Tour",
-          "file": "./books/cybersecurity.json"
-        },
-        {
-          "name": "Ethical Hacking Tour",
-          "file": "./books/ethical_hacking.json"
-        },
-        {
           "name": "Information Security Law Tour",
           "file": "./books/information_security_law.json"
-        },
-        {
-          "name": "Internet Security Tour",
-          "file": "./books/internet_security.json"
         },
         {
           "name": "LPIC-1 Tour",
@@ -370,7 +350,7 @@
         },
         {
           "name": "Microservice Architecture Tour",
-          "file": "./books/macro_service_arch.json"
+          "file": "./books/microservice_architecture.json"
         },
         {
           "name": "Opengl Tour",
