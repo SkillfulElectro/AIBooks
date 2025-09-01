@@ -1,122 +1,236 @@
 [
   {
     "n": 1,
-    "title": "What Is Unix? The Unix Philosophy",
-    "math": "Operating system philosophy",
-    "note": "Introduces Unix as a family of operating systems and its core philosophy: programs should do one thing well, work together, and use text streams as a universal interface."
+    "title": "Module 1: Introduction - What is Unix?",
+    "math": "N/A",
+    "note": "Introduce Unix as a family of multitasking, multiuser computer operating systems. Discuss its history and lineage, from Bell Labs to modern systems like Linux and macOS."
   },
   {
     "n": 2,
-    "title": "The Kernel and the Shell",
-    "math": "OS architecture",
-    "note": "Explains the two core components: the Kernel (manages system resources) and the Shell (a command-line interpreter like Bash that provides the user interface to the kernel)."
+    "title": "The Unix Philosophy",
+    "math": "N/A",
+    "note": "Explain the core tenets of the Unix philosophy: write programs that do one thing and do it well; write programs to work together; write programs to handle text streams, as that is a universal interface."
   },
   {
     "n": 3,
-    "title": "Basic Navigation and File Management",
-    "math": "File system manipulation",
-    "note": "Covers the most fundamental commands: `pwd` (print directory), `ls` (list contents), `cd` (change directory), `mkdir` (make directory), `cp` (copy), `mv` (move/rename), and `rm` (remove)."
+    "title": "The Kernel and the Shell",
+    "math": "N/A",
+    "note": "Explain the two core components: the Kernel (manages system resources) and the Shell (a command-line interpreter like Bash that provides the user interface to the kernel)."
   },
   {
     "n": 4,
-    "title": "Viewing File Contents",
-    "math": "File viewing",
-    "note": "Introduces tools for viewing text files: `cat` (concatenate/print), `less` (pager), and `head`/`tail` for viewing the beginning or end of a file."
+    "title": "Module 2: Basic Commands - `ls`",
+    "math": "N/A",
+    "note": "Introduce `ls` for listing directory contents. Cover common options like `-l` (long format), `-a` (all files), and `-h` (human-readable)."
   },
   {
     "n": 5,
-    "title": "Creating Links: Hard and Symbolic",
-    "math": "Pointers & References",
-    "note": "Explains how to create links between files. Covers hard links (another name for the same file data) and symbolic links (`ln -s`), which are pointers to a file path."
+    "title": "`cd`, `pwd`, and `mkdir`",
+    "math": "N/A",
+    "note": "Cover basic navigation: `cd` (change directory), `pwd` (print working directory), and `mkdir` (make directory)."
   },
   {
     "n": 6,
-    "title": "The Unix Permission Model",
-    "math": "File system permissions",
-    "note": "Details the standard Unix permissions: read (r), write (w), and execute (x) for the user, group, and others. Introduces `chmod` for changing permissions and `chown` for changing ownership."
+    "title": "`cp`, `mv`, and `rm`",
+    "math": "N/A",
+    "note": "Cover file manipulation: `cp` (copy), `mv` (move/rename), and `rm` (remove). Explain the `-r` (recursive) and `-i` (interactive) flags."
   },
   {
     "n": 7,
-    "title": "Standard I/O and Redirection",
-    "math": "Standard streams (stdin, stdout, stderr)",
-    "note": "Introduces the three standard streams and explains how to redirect them using `>` (overwrite), `>>` (append), and `<` (input from file)."
+    "title": "Viewing Files: `cat`, `less`, `more`",
+    "math": "N/A",
+    "note": "Introduce tools for viewing text files: `cat` (concatenate/print), `less` (a modern pager), and `more` (the original pager)."
   },
   {
     "n": 8,
-    "title": "Pipes: Chaining Commands",
-    "math": "Pipelines",
-    "note": "Introduces the pipe `|` operator, a core feature of the Unix philosophy. It connects the stdout of one command to the stdin of another, allowing you to build powerful command chains."
+    "title": "Viewing Files: `head` and `tail`",
+    "math": "N/A",
+    "note": "Show how to view the beginning (`head`) or end (`tail`) of a file. Introduce the `-n` (number of lines) and `-f` (follow) options."
   },
   {
     "n": 9,
-    "title": "Text Processing: `grep`",
-    "math": "Pattern matching (grep)",
-    "note": "Introduces `grep`, a fundamental tool for searching plain-text data for lines that match a regular expression."
+    "title": "Module 3: The Filesystem - The FHS",
+    "math": "N/A",
+    "note": "Explain the Filesystem Hierarchy Standard (FHS). Describe the purpose of key directories like `/bin`, `/etc`, `/home`, `/var`, and `/usr`."
   },
   {
     "n": 10,
-    "title": "More Text Tools: `sort`, `uniq`, `cut`, `tr`, `wc`",
-    "math": "Text manipulation",
-    "note": "Covers a suite of essential text utilities: `sort` (sorts lines), `uniq` (filters duplicate adjacent lines), `cut` (extracts sections from each line), `tr` (translates characters), and `wc` (counts lines, words, and bytes)."
+    "title": "File Types",
+    "math": "N/A",
+    "note": "Describe the different types of files in Unix: regular files, directories, symbolic links, block devices, character devices, sockets, and pipes."
   },
   {
     "n": 11,
-    "title": "Advanced Text Processing: `sed` and `awk`",
-    "math": "Stream editing & AWK language",
-    "note": "Introduces two powerful tools: `sed` (the stream editor) for find-and-replace and other text transformations, and `awk` for processing structured, column-based text data."
+    "title": "Hard and Symbolic Links",
+    "math": "Pointers",
+    "note": "Explain the difference between hard links (multiple names for the same inode) and symbolic links (pointers to a file path). Use `ln` and `ln -s` to create them."
   },
   {
     "n": 12,
-    "title": "Process Management",
-    "math": "Process control",
-    "note": "Covers how to manage running processes. Introduces `ps` (list processes), `kill` (sends signals to terminate), `&` (run in background), and `jobs` (view background jobs)."
+    "title": "Permissions: `chmod` (Symbolic)",
+    "math": "N/A",
+    "note": "Detail the Unix permissions model (read, write, execute for user, group, other). Teach how to change permissions using `chmod` with symbolic notation (e.g., `u+x`, `g-w`)."
   },
   {
     "n": 13,
-    "title": "Finding Files with `find`",
-    "math": "File searching",
-    "note": "Introduces the `find` command, a powerful utility for searching for files and directories based on criteria like name, size, modification time, or owner."
+    "title": "Permissions: `chmod` (Octal)",
+    "math": "Bitwise Operations",
+    "note": "Teach how to change permissions using `chmod` with octal notation (e.g., `755`, `644`)."
   },
   {
     "n": 14,
-    "title": "Checking Disk Usage with `df` and `du`",
-    "math": "Disk space analysis",
-    "note": "Covers two essential utilities for monitoring disk space: `df` (display free disk space for filesystems) and `du` (display disk usage for a directory and its subdirectories)."
+    "title": "Ownership: `chown` and `chgrp`",
+    "math": "N/A",
+    "note": "Explain file ownership. Teach how to change the user owner with `chown` and the group owner with `chgrp`."
   },
   {
     "n": 15,
-    "title": "Archiving and Compressing Files",
-    "math": "Archiving & Compression",
-    "note": "Covers `tar` for creating archives from files, and `gzip` for compressing files. Explains how they are often used together to create compressed archives (`.tar.gz`)."
+    "title": "Finding Files: `find`",
+    "math": "Tree Traversal",
+    "note": "Introduce the `find` command. Cover searching by name (`-name`), type (`-type`), and executing commands on found files (`-exec`)."
   },
   {
     "n": 16,
-    "title": "Remote Administration with SSH",
-    "math": "Secure Shell (SSH)",
-    "note": "Introduces `ssh` as the standard protocol for securely connecting to the command line of a remote Unix server. Covers the basic `ssh user@hostname` command."
+    "title": "Module 4: I/O and Pipes - Standard Streams",
+    "math": "N/A",
+    "note": "Introduce the three standard streams: stdin (0), stdout (1), and stderr (2)."
   },
   {
     "n": 17,
-    "title": "Secure File Transfer with `scp` and `rsync`",
-    "math": "Secure file transfer",
-    "note": "Explains how to transfer files to and from remote systems. Covers `scp` (secure copy) for simple transfers and `rsync` for more efficient, resumable, and directory-level synchronization."
+    "title": "Redirecting Output (`>` and `>>`)",
+    "math": "N/A",
+    "note": "Explain how to redirect stdout to a file, overwriting (`>`) or appending (`>>`)."
   },
   {
     "n": 18,
-    "title": "Introduction to the `vi`/`vim` Text Editor",
-    "math": "Text editing",
-    "note": "Provides a survival guide to the most ubiquitous Unix editor. Covers the basic modes (Normal, Insert), and essential commands for opening a file, editing text, saving, and quitting."
+    "title": "Redirecting Input (`<`) and Error (`2>`)",
+    "math": "N/A",
+    "note": "Explain how to redirect stdin from a file (`<`) and how to redirect stderr (`2>`)."
   },
   {
     "n": 19,
-    "title": "Introduction to Shell Scripting",
-    "math": "Shell scripting",
-    "note": "Explains how to combine Unix commands into a file to create a shell script for automating tasks. Covers making a script executable and the importance of the 'shebang' (`#!/bin/bash`)."
+    "title": "Pipes (`|`)",
+    "math": "Data Pipelines",
+    "note": "Introduce the pipe `|` operator to connect the stdout of one command to the stdin of another, forming powerful command chains."
   },
   {
     "n": 20,
-    "title": "Environment Variables and the `PATH`",
-    "math": "Environment variables",
-    "note": "Explains environment variables for configuring the shell environment. Focuses on the `PATH` variable, which tells the shell where to find executable programs."
+    "title": "The `tee` Command",
+    "math": "N/A",
+    "note": "Introduce the `tee` command to split the output of a command, sending it to both a file and to standard output."
+  },
+  {
+    "n": 21,
+    "title": "Module 5: Text Processing - `grep`",
+    "math": "Regular Expressions",
+    "note": "Introduce `grep` for searching text. Cover basic regex and common options like `-i`, `-v`, and `-r`."
+  },
+  {
+    "n": 22,
+    "title": "`sort`, `uniq`, and `wc`",
+    "math": "N/A",
+    "note": "Cover sorting lines (`sort`), filtering duplicate lines (`uniq`), and counting lines, words, and bytes (`wc`)."
+  },
+  {
+    "n": 23,
+    "title": "`cut` and `paste`",
+    "math": "N/A",
+    "note": "Teach how to extract columns of text with `cut` and merge lines of files with `paste`."
+  },
+  {
+    "n": 24,
+    "title": "`sed`, the Stream Editor",
+    "math": "N/A",
+    "note": "Introduce `sed` for performing find-and-replace and other text transformations on a stream of text."
+  },
+  {
+    "n": 25,
+    "title": "`awk`, the Pattern-Scanning Language",
+    "math": "N/A",
+    "note": "Introduce `awk` for processing structured, column-based text data with powerful scripting capabilities."
+  },
+  {
+    "n": 26,
+    "title": "Module 6: Process Management - Viewing Processes",
+    "math": "N/A",
+    "note": "Teach how to view running processes using `ps` with different options (e.g., `aux`) and `top` for a real-time view."
+  },
+  {
+    "n": 27,
+    "title": "Job Control",
+    "math": "N/A",
+    "note": "Explain how to run processes in the background (`&`), view background jobs (`jobs`), and bring them to the foreground (`fg`) or background (`bg`)."
+  },
+  {
+    "n": 28,
+    "title": "Sending Signals with `kill`",
+    "math": "N/A",
+    "note": "Introduce the `kill` command to send signals to processes, such as `SIGTERM` (terminate gracefully) and `SIGKILL` (force terminate)."
+  },
+  {
+    "n": 29,
+    "title": "Module 7: Shell Scripting - Creating a Script",
+    "math": "N/A",
+    "note": "Show how to create a basic shell script with a `#!/bin/bash` shebang and make it executable with `chmod +x`."
+  },
+  {
+    "n": 30,
+    "title": "Variables and Quoting",
+    "math": "N/A",
+    "note": "Teach how to define and use variables. Explain the critical difference between double quotes (expansion) and single quotes (no expansion)."
+  },
+  {
+    "n": 31,
+    "title": "Command Substitution",
+    "math": "N/A",
+    "note": "Show how to capture the output of a command into a variable using `$(command)`."
+  },
+  {
+    "n": 32,
+    "title": "Conditionals with `if` and `test`",
+    "math": "Boolean Logic",
+    "note": "Introduce the `if...then...else...fi` structure. Explain how to use the `test` command or `[[ ... ]]` for string and numeric comparisons."
+  },
+  {
+    "n": 33,
+    "title": "Loops: `for` and `while`",
+    "math": "N/A",
+    "note": "Show how to create `for` loops to iterate over lists and `while` loops to repeat commands as long as a condition is true."
+  },
+  {
+    "n": 34,
+    "title": "Functions",
+    "math": "N/A",
+    "note": "Teach how to define and call functions within a shell script to organize code."
+  },
+  {
+    "n": 35,
+    "title": "Module 8: Final Project - System Automation Script",
+    "math": "N/A",
+    "note": "Outline the final project: write a shell script that automates a common system administration task, such as creating a compressed backup of a user's home directory and emailing a status report."
+  },
+  {
+    "n": 36,
+    "title": "Final Project: Script Structure and Arguments",
+    "math": "N/A",
+    "note": "Design the script to accept a username as a command-line argument and include functions for each major step (backup, compress, report)."
+  },
+  {
+    "n": 37,
+    "title": "Final Project: The Backup Logic",
+    "math": "N/A",
+    "note": "Write the core logic using `tar` and `gzip` to create a timestamped, compressed archive of the specified user's home directory."
+  },
+  {
+    "n": 38,
+    "title": "Final Project: Error Handling and Reporting",
+    "math": "N/A",
+    "note": "Add checks to ensure the user exists and the backup was created successfully. Write a status report to a log file and use `mail` to send it to the administrator."
+  },
+  {
+    "n": 39,
+    "title": "Module 9: Further Reading",
+    "math": "N/A",
+    "note": "Provide links to classic Unix books (e.g., 'The UNIX Programming Environment'), advanced shell scripting guides, and resources on different shells like `zsh`."
   }
 ]

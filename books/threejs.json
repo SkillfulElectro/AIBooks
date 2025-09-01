@@ -1,0 +1,368 @@
+[
+    {
+        "n": 1,
+        "title": "Module 1: Introduction - What is Three.js?",
+        "math": "N/A",
+        "note": "Introduce Three.js as a high-level, cross-browser JavaScript library/API used to create and display animated 3D computer graphics in a web browser using WebGL. Explain its role as an abstraction layer that simplifies the complexity of raw WebGL."
+    },
+    {
+        "n": 2,
+        "title": "Setting up a Basic HTML File",
+        "math": "N/A",
+        "note": "Show how to create a minimal `index.html` file. Explain the necessary components: a `<body>` tag and a `<script>` tag where the Three.js code will go."
+    },
+    {
+        "n": 3,
+        "title": "Getting Three.js: CDN vs. NPM",
+        "math": "N/A",
+        "note": "Explain the two primary ways to include Three.js in a project: linking to a CDN for simple projects, and installing it as a package via NPM (`npm install three`) for larger, module-based projects."
+    },
+    {
+        "n": 4,
+        "title": "Importing Three.js as an ES6 Module",
+        "math": "N/A",
+        "note": "Show the modern approach for using Three.js in a project by importing it as an ES6 module: `import * as THREE from 'three';`."
+    },
+  {
+    "n": 5,
+    "title": "Module 2: Core Components - The Scene",
+    "math": "Graph Theory (Scene Graph)",
+    "note": "Introduce the `THREE.Scene` object. Explain its role as the root of the scene graph, a tree-like structure that holds all the objects, lights, and cameras you want to render."
+  },
+  {
+    "n": 6,
+    "title": "The Camera: PerspectiveCamera",
+    "math": "Linear Algebra (Projection Matrices)",
+    "note": "Introduce `THREE.PerspectiveCamera`. Explain its four main arguments: `fov` (field of view), `aspect` (width / height), `near` clipping plane, and `far` clipping plane."
+  },
+  {
+    "n": 7,
+    "title": "The Camera: OrthographicCamera",
+    "math": "N/A",
+    "note": "Introduce `THREE.OrthographicCamera`. Explain how it renders scenes without perspective, which is useful for 2D games or architectural visualizations. Explain its arguments: `left`, `right`, `top`, `bottom`, `near`, and `far`."
+  },
+  {
+    "n": 8,
+    "title": "The Renderer: WebGLRenderer",
+    "math": "N/A",
+    "note": "Introduce `THREE.WebGLRenderer`. Explain that it's the workhorse that takes the scene and camera and renders the result to an HTML `<canvas>` element."
+  },
+  {
+    "n": 9,
+    "title": "Creating and Sizing the Canvas",
+    "math": "N/A",
+    "note": "Show how to create a `WebGLRenderer` and set its size using `renderer.setSize()`. Explain how to append its DOM element (`renderer.domElement`) to the HTML body."
+  },
+  {
+    "n": 10,
+    "title": "The Render Loop",
+    "math": "N/A",
+    "note": "Explain the concept of a render loop for animation. Use `requestAnimationFrame(animate)` to create a function that calls `renderer.render(scene, camera)` on every frame."
+  },
+  {
+    "n": 11,
+    "title": "Module 3: Creating 3D Objects - Geometry",
+    "math": "Solid Geometry",
+    "note": "Introduce the concept of `Geometry` as the object that defines the shape of a mesh by storing its vertices."
+  },
+  {
+    "n": 12,
+    "title": "Built-in Geometries: `BoxGeometry`",
+    "math": "N/A",
+    "note": "Show how to create a simple cube using `new THREE.BoxGeometry(width, height, depth)`."
+  },
+  {
+    "n": 13,
+    "title": "Built-in Geometries: `SphereGeometry`",
+    "math": "N/A",
+    "note": "Show how to create a sphere using `new THREE.SphereGeometry(radius, widthSegments, heightSegments)`."
+  },
+  {
+    "n": 14,
+    "title": "Built-in Geometries: `PlaneGeometry`",
+    "math": "N/A",
+    "note": "Show how to create a flat plane using `new THREE.PlaneGeometry(width, height)`."
+  },
+  {
+    "n": 15,
+    "title": "Built-in Geometries: `TorusGeometry`",
+    "math": "N/A",
+    "note": "Show how to create a donut shape using `new THREE.TorusGeometry(radius, tube, radialSegments, tubularSegments)`."
+  },
+  {
+    "n": 16,
+    "title": "Materials: The Concept",
+    "math": "N/A",
+    "note": "Introduce `Material` as the object that defines the appearance of a mesh's surface, such as its color, texture, and how it reacts to light."
+  },
+  {
+    "n": 17,
+    "title": "Basic Materials: `MeshBasicMaterial`",
+    "math": "N/A",
+    "note": "Introduce `MeshBasicMaterial`. Explain that it's a simple material that is not affected by lights. Show how to set its `color` property."
+  },
+  {
+    "n": 18,
+    "title": "Basic Materials: `MeshNormalMaterial`",
+    "math": "N/A",
+    "note": "Introduce `MeshNormalMaterial`. Explain that it colors the mesh based on the direction of its surface normals, which is useful for debugging."
+  },
+  {
+    "n": 19,
+    "title": "The Mesh",
+    "math": "N/A",
+    "note": "Explain that a `THREE.Mesh` is the object that combines a `Geometry` (the shape) and a `Material` (the appearance) into a complete, renderable object."
+  },
+  {
+    "n": 20,
+    "title": "Creating and Adding a Mesh to the Scene",
+    "math": "N/A",
+    "note": "Show the full process: `const mesh = new THREE.Mesh(geometry, material);` and then `scene.add(mesh);`."
+  },
+  {
+    "n": 21,
+    "title": "Module 4: Transformations - Position",
+    "math": "Linear Algebra (Vectors)",
+    "note": "Explain how to change an object's position in 3D space using `mesh.position.set(x, y, z)` or by setting the `x`, `y`, and `z` properties individually."
+  },
+  {
+    "n": 22,
+    "title": "Rotation",
+    "math": "Linear Algebra (Euler Angles, Quaternions)",
+    "note": "Explain how to rotate an object using `mesh.rotation`. Describe how to set the rotation in radians for the `x`, `y`, and `z` axes."
+  },
+  {
+    "n": 23,
+    "title": "Scale",
+    "math": "Linear Algebra (Vectors)",
+    "note": "Explain how to scale an object using `mesh.scale.set(x, y, z)`."
+  },
+  {
+    "n": 24,
+    "title": "Animating Transformations",
+    "math": "N/A",
+    "note": "Show how to create simple animations by updating an object's position, rotation, or scale properties inside the render loop."
+  },
+  {
+    "n": 25,
+    "title": "The Scene Graph",
+    "math": "Graph Theory (Trees)",
+    "note": "Explain the scene graph in more detail. Show how to create parent-child relationships by using `parent.add(child)`. Explain that transformations on the parent object also apply to its children."
+  },
+  {
+    "n": 26,
+    "title": "Module 5: Lights - The Concept",
+    "math": "N/A",
+    "note": "Explain why lights are necessary for most materials to be visible. Introduce the concept of different light types that simulate different real-world light sources."
+  },
+  {
+    "n": 27,
+    "title": "Light-Reactive Materials",
+    "math": "N/A",
+    "note": "Introduce `MeshStandardMaterial` and `MeshLambertMaterial` as common materials that react to lights in the scene."
+  },
+  {
+    "n": 28,
+    "title": "Ambient Light",
+    "math": "N/A",
+    "note": "Introduce `THREE.AmbientLight`. Explain that it provides a basic, global illumination to the entire scene, preventing shadows from being completely black."
+  },
+  {
+    "n": 29,
+    "title": "Directional Light",
+    "math": "N/A",
+    "note": "Introduce `THREE.DirectionalLight`. Explain that it simulates a distant light source like the sun, where all light rays are parallel."
+  },
+  {
+    "n": 30,
+    "title": "Point Light",
+    "math": "N/A",
+    "note": "Introduce `THREE.PointLight`. Explain that it simulates a light bulb, emitting light in all directions from a single point."
+  },
+  {
+    "n": 31,
+    "title": "Spot Light",
+    "math": "N/A",
+    "note": "Introduce `THREE.SpotLight`. Explain that it simulates a spotlight, emitting light from a point in a cone shape."
+  },
+  {
+    "n": 32,
+    "title": "Helpers for Lights",
+    "math": "N/A",
+    "note": "Show how to use helpers like `DirectionalLightHelper` and `PointLightHelper` to visualize the position and direction of lights in the scene, which is useful for debugging."
+  },
+  {
+    "n": 33,
+    "title": "Module 6: Shadows - The Concept",
+    "math": "N/A",
+    "note": "Explain how shadows work in Three.js. It's a multi-step process involving special shadow-casting lights and shadow-receiving surfaces."
+  },
+  {
+    "n": 34,
+    "title": "Enabling Shadows on the Renderer",
+    "math": "N/A",
+    "note": "Show the first step: setting `renderer.shadowMap.enabled = true;`."
+  },
+  {
+    "n": 35,
+    "title": "Enabling Shadows on Lights",
+    "math": "N/A",
+    "note": "Show the second step: setting `light.castShadow = true;` on a `DirectionalLight` or `SpotLight`."
+  },
+  {
+    "n": 36,
+    "title": "Enabling Shadows on Objects",
+    "math": "N/A",
+    "note": "Show the final steps: setting `mesh.castShadow = true;` on objects that should cast shadows, and `mesh.receiveShadow = true;` on objects that should have shadows cast upon them (like a floor plane)."
+  },
+  {
+    "n": 37,
+    "title": "Configuring Shadow Maps",
+    "math": "N/A",
+    "note": "Briefly explain how to configure the shadow camera on a light to control the quality and area of the shadow map, which affects performance and appearance."
+  },
+  {
+    "n": 38,
+    "title": "Module 7: Textures - The Concept",
+    "math": "Coordinate Systems (UV)",
+    "note": "Introduce textures as images that are applied to the surface of a mesh. Explain UV coordinates as the 2D mapping from the texture to the 3D model's vertices."
+  },
+  {
+    "n": 39,
+    "title": "Loading a Texture",
+    "math": "N/A",
+    "note": "Introduce the `THREE.TextureLoader`. Show how to use `loader.load('path/to/texture.jpg')` to load an image."
+  },
+  {
+    "n": 40,
+    "title": "Applying a Texture to a Material",
+    "math": "N/A",
+    "note": "Show how to apply a loaded texture to a material's `map` property, for example: `new THREE.MeshBasicMaterial({ map: myTexture });`."
+  },
+  {
+    "n": 41,
+    "title": "Texture Wrapping",
+    "math": "N/A",
+    "note": "Explain the `wrapS` and `wrapT` properties of a texture. Show how to set them to `THREE.RepeatWrapping` to make a texture repeat."
+  },
+  {
+    "n": 42,
+    "title": "Texture Filtering",
+    "math": "N/A",
+    "note": "Explain the `minFilter` and `magFilter` properties for controlling how textures look when they are scaled up or down."
+  },
+  {
+    "n": 43,
+    "title": "Mipmapping",
+    "math": "Signal Processing (Downsampling)",
+    "note": "Explain the concept of mipmapping for improving texture quality at a distance. Explain that Three.js can generate mipmaps automatically for power-of-two sized textures."
+  },
+  {
+    "n": 44,
+    "title": "Module 8: Advanced Materials - PBR",
+    "math": "Physics (Optics)",
+    "note": "Introduce Physically-Based Rendering (PBR) as a more realistic approach to materials. Introduce `MeshStandardMaterial` as Three.js's primary PBR material."
+  },
+  {
+    "n": 45,
+    "title": "`MeshStandardMaterial`: `metalness` and `roughness`",
+    "math": "N/A",
+    "note": "Explain the two key properties of `MeshStandardMaterial`: `metalness` (how metallic a surface is) and `roughness` (how rough/matte a surface is)."
+  },
+  {
+    "n": 46,
+    "title": "Normal Maps",
+    "math": "N/A",
+    "note": "Explain normal maps as textures that add fake surface detail without adding more polygons. Show how to apply a normal map texture to a material's `normalMap` property."
+  },
+  {
+    "n": 47,
+    "title": "Environment Maps",
+    "math": "N/A",
+    "note": "Introduce environment maps (using `CubeTextureLoader`) for creating realistic reflections on metallic surfaces. Show how to set the `scene.background` and `material.envMap`."
+  },
+  {
+    "n": 48,
+    "title": "Module 9: Interactivity - OrbitControls",
+    "math": "N/A",
+    "note": "Introduce `OrbitControls` as a simple, pre-built camera controller. Show how to import it from the `three/examples/jsm/controls/` directory and use it to add mouse-based orbit, pan, and zoom controls."
+  },
+  {
+    "n": 49,
+    "title": "Raycasting for Mouse Picking",
+    "math": "Vector Geometry (Ray-Plane Intersection)",
+    "note": "Introduce `THREE.Raycaster`. Explain how to use it to detect which 3D object the mouse is hovering over by casting a ray from the camera through the mouse's position."
+  },
+  {
+    "n": 50,
+    "title": "Handling Mouse Events",
+    "math": "N/A",
+    "note": "Show how to listen for `mousemove` or `click` events on the canvas to trigger the raycasting logic."
+  },
+  {
+    "n": 51,
+    "title": "Module 10: Model Loading - The `GLTFLoader`",
+    "math": "N/A",
+    "note": "Introduce glTF as the modern, standard format for 3D models. Introduce the `GLTFLoader` from the `three/examples/jsm/loaders/` directory."
+  },
+  {
+    "n": 52,
+    "title": "Loading a `.glb` or `.gltf` file",
+    "math": "N/A",
+    "note": "Show how to use `loader.load('path/to/model.glb', (gltf) => { ... })`. Explain that the loaded object contains the `gltf.scene`, which should be added to your main scene."
+  },
+  {
+    "n": 53,
+    "title": "The `.obj` format and `OBJLoader`",
+    "math": "N/A",
+    "note": "Briefly introduce the older `.obj` format and its corresponding `OBJLoader` as an alternative for simpler models."
+  },
+  {
+    "n": 54,
+    "title": "Module 11: Final Project - 3D Scene Viewer",
+    "math": "N/A",
+    "note": "Outline the final project: a complete 3D scene viewer that loads a glTF model, sets up a realistic PBR material with an environment map, includes lighting with shadows, and allows for camera control."
+  },
+  {
+    "n": 55,
+    "title": "Final Project: Setting up the Scene",
+    "math": "N/A",
+    "note": "Create the HTML and JavaScript boilerplate. Set up the scene, camera, renderer, and a floor plane to receive shadows."
+  },
+  {
+    "n": 56,
+    "title": "Final Project: Lighting and Shadows",
+    "math": "N/A",
+    "note": "Add a `DirectionalLight` that casts shadows and an `AmbientLight` for fill light."
+  },
+  {
+    "n": 57,
+    "title": "Final Project: Environment and Background",
+    "math": "N/A",
+    "note": "Use a `CubeTextureLoader` to load an HDRI environment map and set it as both the scene's background and the PBR material's environment map for reflections."
+  },
+  {
+    "n": 58,
+    "title": "Final Project: Loading the Model",
+    "math": "N/A",
+    "note": "Use the `GLTFLoader` to load a model. Traverse the loaded scene to ensure all meshes cast and receive shadows correctly."
+  },
+  {
+    "n": 59,
+    "title": "Final Project: Adding Controls",
+    "math": "N/A",
+    "note": "Add `OrbitControls` to allow the user to inspect the model from all angles."
+  },
+  {
+    "n": 60,
+    "title": "Module 12: Further Reading",
+    "math": "N/A",
+    "note": "Provide links to the official Three.js documentation, examples, and community forums."
+  },
+  {
+    "n": 61,
+    "title": "Further Reading: `react-three-fiber`",
+    "math": "N/A",
+    "note": "Introduce `react-three-fiber` as a popular library for using Three.js in a declarative, component-based way within React applications."
+  }
+]

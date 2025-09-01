@@ -1,152 +1,272 @@
 [
   {
     "n": 1,
-    "title": "Python Programming & Environment (PyTorch on Google Colab)",
-    "math": "Basic algebra",
-    "note": "Teach Python fundamentals (variables, data types, control flow) and use of the PyTorch library. Instruct on setting up Google Colab (browser-based, GPU support). Include hands-on exercises: importing PyTorch, running simple tensor computations, and using libraries like NumPy and pandas."
+    "title": "Module 1: Introduction - What is AI, ML, and Deep Learning?",
+    "math": "N/A",
+    "note": "Define and differentiate between Artificial Intelligence, Machine Learning, and Deep Learning. Provide a high-level overview of the course structure, emphasizing the progression from fundamentals to state-of-the-art models."
   },
   {
     "n": 2,
-    "title": "Linear Algebra Foundations",
-    "math": "Algebra",
-    "note": "Cover vectors, matrices, and matrix operations (addition, multiplication). Teach eigenvalues/eigenvectors and singular value decomposition (SVD). Emphasize applications to ML (e.g., Principal Component Analysis for dimensionality reduction) and how linear systems and transformations appear in models (e.g. weights in neural nets)."
+    "title": "Setting up Your Environment: Google Colab and PyTorch",
+    "math": "N/A",
+    "note": "Introduce Google Colab as a browser-based Python environment with free access to GPUs. Guide through creating a new notebook, basic navigation, and enabling GPU acceleration. Confirm PyTorch is installed."
   },
   {
     "n": 3,
-    "title": "Calculus (Single & Multivariate)",
-    "math": "Algebra, trigonometry",
-    "note": "Teach derivatives and integrals for single-variable functions, then extend to multivariable calculus (partial derivatives, gradients). Explain how gradients are used to optimize ML models (gradient descent) and the chain rule for backpropagation in neural networks. Use examples of differentiating functions and optimizing loss functions."
+    "title": "Module 2: Core Libraries - Intro to NumPy",
+    "math": "N/A",
+    "note": "Introduce NumPy as the fundamental package for numerical computing in Python. Explain the `ndarray` object."
   },
   {
     "n": 4,
-    "title": "Probability and Statistics",
-    "math": "Algebra, basic combinatorics",
-    "note": "Cover probability theory (discrete and continuous distributions, Bayes’ theorem) and basic statistics (mean, variance, standard deviation). Teach common distributions (Gaussian, Bernoulli, etc.) and Bayesian reasoning. Emphasize statistical inference and likelihood (hypothesis testing, confidence intervals) used in ML models."
+    "title": "NumPy: Array Creation and Indexing",
+    "math": "N/A",
+    "note": "Show how to create NumPy arrays from lists, using `np.zeros`, `np.ones`, and `np.arange`. Cover basic indexing and slicing."
   },
   {
     "n": 5,
-    "title": "Data Structures & Algorithms",
-    "math": "Basic logic",
-    "note": "Introduce core data structures (arrays, lists, dictionaries/hash maps, trees, graphs) and basic algorithms (searching, sorting, recursion, graph traversal). Explain algorithmic complexity (Big O notation). This ensures efficient implementation of ML algorithms and understanding of data handling."
+    "title": "NumPy: Array Math and Broadcasting",
+    "math": "Linear Algebra",
+    "note": "Teach element-wise operations and the concept of broadcasting for performing math on arrays of different shapes."
   },
   {
     "n": 6,
-    "title": "Data Analysis and Visualization",
-    "math": "Statistics",
-    "note": "Teach data loading (CSV, databases) and preprocessing (cleaning missing data, normalization, encoding categorical features). Use NumPy and pandas for data manipulation. Cover exploratory data analysis and visualization (histograms, scatter plots, heatmaps) with Matplotlib/Seaborn. Emphasize understanding data distributions before modeling."
+    "title": "Intro to Pandas",
+    "math": "N/A",
+    "note": "Introduce pandas as the primary library for data manipulation and analysis. Explain the `Series` and `DataFrame` objects."
   },
   {
     "n": 7,
-    "title": "Supervised Learning: Regression",
-    "math": "Linear algebra, statistics",
-    "note": "Cover linear regression models (simple and multiple). Teach least squares and cost functions, and how to minimize them (analytically or with gradient descent). Include polynomial regression. Emphasize model evaluation (R², residual plots) and overfitting prevention (regularization)."
+    "title": "Pandas: Loading Data from CSV",
+    "math": "N/A",
+    "note": "Show how to load a dataset from a CSV file into a pandas DataFrame using `pd.read_csv()`."
   },
   {
     "n": 8,
-    "title": "Supervised Learning: Classification",
-    "math": "Statistics, linear algebra",
-    "note": "Teach classification algorithms such as logistic regression (binary and multiclass), k-nearest neighbors, and support vector machines. Explain decision boundaries, activation functions (sigmoid), and cross-entropy loss. Cover evaluation metrics (confusion matrix, accuracy, precision/recall, ROC curve, AUC)."
+    "title": "Pandas: Data Inspection",
+    "math": "Statistics",
+    "note": "Teach how to inspect a DataFrame using `.head()`, `.tail()`, `.info()`, and `.describe()`."
   },
   {
     "n": 9,
-    "title": "Unsupervised Learning: Clustering & PCA",
-    "math": "Linear algebra, statistics",
-    "note": "Cover clustering methods (k-means, hierarchical clustering, DBSCAN). Teach Principal Component Analysis (PCA) using eigenvectors/SVD for dimensionality reduction. Explain how to preprocess data (scaling) and interpret clusters or principal components."
+    "title": "Pandas: Selection and Filtering",
+    "math": "Boolean Algebra",
+    "note": "Cover how to select columns and rows using `[]`, `.loc`, and `.iloc`. Show how to filter data based on conditions."
   },
   {
     "n": 10,
-    "title": "Decision Trees & Ensemble Methods",
-    "math": "Statistics, probability",
-    "note": "Cover decision tree learning (e.g. ID3, CART) and splitting criteria (information gain/entropy, Gini index). Teach ensemble methods: random forests (bagging) and boosting (AdaBoost, gradient boosting, XGBoost). Explain how ensembles reduce variance and improve accuracy. Include hands-on examples of building and tuning these models."
+    "title": "Intro to Matplotlib and Seaborn",
+    "math": "N/A",
+    "note": "Introduce Matplotlib as the foundational plotting library and Seaborn as a high-level interface for creating attractive statistical plots."
   },
   {
     "n": 11,
-    "title": "Neural Networks (Multilayer Perceptrons)",
-    "math": "Linear algebra, calculus",
-    "note": "Introduce the artificial neuron model and feedforward MLPs. Teach activation functions (sigmoid, ReLU, etc.) and network architectures. Explain backpropagation algorithm and stochastic gradient descent for training. Discuss hyperparameters (learning rate, epochs, batch size) and regularization (dropout, weight decay). Include PyTorch examples training a simple MLP on classification or regression tasks."
+    "title": "Creating Basic Plots: Histograms and Scatter Plots",
+    "math": "Statistics",
+    "note": "Show how to create a histogram to view data distribution and a scatter plot to investigate relationships between two variables."
   },
   {
     "n": 12,
-    "title": "Convolutional Neural Networks (CNNs)",
-    "math": "Linear algebra",
-    "note": "Teach convolution and pooling operations for image data. Cover popular CNN architectures (e.g. LeNet, AlexNet, ResNet). Explain how CNNs exploit spatial hierarchy in images. Include hands-on: build and train CNNs on image datasets (e.g. MNIST, CIFAR-10) using PyTorch."
+    "title": "Intro to PyTorch",
+    "math": "N/A",
+    "note": "Introduce PyTorch as a powerful deep learning framework. Explain the concept of Tensors."
   },
   {
     "n": 13,
-    "title": "Recurrent Networks & Transformers (RNNs/Transformers)",
-    "math": "Linear algebra, probability",
-    "note": "Cover sequence models: RNNs, LSTMs, and GRUs for time-series/text. Teach gradient issues (vanishing/exploding). Then introduce attention mechanisms and Transformer architectures (e.g. BERT, GPT). Emphasize state-of-the-art performance on NLP tasks. Include projects using PyTorch or Hugging Face Transformers (e.g. text classification, translation)."
+    "title": "PyTorch: Creating Tensors",
+    "math": "N/A",
+    "note": "Show how to create PyTorch tensors and perform basic operations. Explain the importance of `torch.device` for moving tensors to the GPU."
   },
   {
     "n": 14,
-    "title": "Probabilistic Graphical Models",
-    "math": "Probability, statistics",
-    "note": "Teach Bayesian networks and Markov random fields. Explain how to represent joint distributions with graphs, and how to perform inference (exact and approximate). Cover algorithms like belief propagation and Gibbs sampling. Use examples (e.g. Hidden Markov Models) to illustrate parameter learning and inference."
+    "title": "Module 3: Mathematical Foundations - Vectors and Matrices",
+    "math": "Linear Algebra",
+    "note": "Cover vectors, matrices, dot products, and matrix multiplication. Implement these operations using PyTorch tensors."
   },
   {
     "n": 15,
-    "title": "Reinforcement Learning",
-    "math": "Probability, statistics, calculus",
-    "note": "Introduce RL fundamentals: agents, environments, rewards, and Markov Decision Processes. Teach dynamic programming (value iteration), temporal-difference learning (Q-learning, SARSA), and policy gradient methods. Include deep RL (DQN, PPO) and projects with OpenAI Gym. Discuss exploration vs. exploitation."
+    "title": "Derivatives and Gradients",
+    "math": "Calculus",
+    "note": "Introduce derivatives as a measure of change and the gradient as a vector of partial derivatives. Explain their role in optimization."
   },
   {
     "n": 16,
-    "title": "Generative Models (GANs, VAEs, Diffusion)",
-    "math": "Probability, linear algebra",
-    "note": "Cover generative modeling: Variational Autoencoders (VAEs) and Generative Adversarial Networks (GANs). Explain encoder-decoder architecture and latent spaces. Describe GAN training (generator/discriminator). Introduce recent diffusion models for image/text generation. Include examples generating images from models."
+    "title": "The Chain Rule and Autograd",
+    "math": "Calculus",
+    "note": "Explain the chain rule for differentiating composite functions. Introduce PyTorch's `autograd` engine and the `.backward()` method for automatic gradient computation."
   },
   {
     "n": 17,
-    "title": "Graph Neural Networks (GNNs)",
-    "math": "Graph theory, linear algebra",
-    "note": "Teach graph-based deep learning: graph convolutions and message passing networks. Explain how to represent relational data (e.g. social networks, molecules). Cover tasks like node classification and link prediction. Include hands-on with libraries (e.g. PyTorch Geometric, DGL)."
+    "title": "Probability and Statistics Fundamentals",
+    "math": "Probability, Statistics",
+    "note": "Cover basic probability theory, random variables, and key statistical measures like mean, variance, and standard deviation."
   },
   {
     "n": 18,
-    "title": "Optimization for Machine Learning",
-    "math": "Calculus, linear algebra",
-    "note": "Deepen understanding of optimization: discuss gradient descent variants (momentum, Adam, RMSprop) and convergence. Cover convex optimization basics and examples of convex cost functions. Explain techniques for hyperparameter tuning (grid search, random search, Bayesian optimization). Include practice tuning models on validation sets."
+    "title": "Module 4: Machine Learning Fundamentals - Data Preprocessing",
+    "math": "N/A",
+    "note": "Cover essential data preprocessing steps: handling missing data, encoding categorical variables (One-Hot), and feature scaling (Standardization)."
   },
   {
     "n": 19,
-    "title": "Ethics, Fairness, and Responsible AI",
-    "math": "Statistics",
-    "note": "Discuss ethical considerations in AI: algorithmic bias, fairness metrics, and data privacy. Introduce concepts of transparency and accountability. Teach techniques to mitigate bias (e.g. reweighting, adversarial debiasing). Cover legal and societal implications (GDPR, data security)."
+    "title": "Training, Validation, and Test Sets",
+    "math": "N/A",
+    "note": "Explain the importance of splitting data to evaluate model generalization. Use scikit-learn's `train_test_split`."
   },
   {
     "n": 20,
-    "title": "AI Systems and MLOps",
-    "math": "Statistics",
-    "note": "Cover end-to-end ML system development: version control (Git), containerization (Docker), and cloud deployment. Teach continuous integration/continuous deployment (CI/CD) for ML pipelines. Introduce monitoring and maintenance of models in production, as well as tools like MLflow or Kubeflow."
+    "title": "Linear Regression",
+    "math": "Linear Algebra",
+    "note": "Introduce linear regression. Implement a simple model from scratch using PyTorch, defining the model, MSE loss, and an optimizer."
   },
   {
     "n": 21,
-    "title": "Natural Language Processing (NLP) Applications",
-    "math": "Statistics, probability",
-    "note": "Teach text preprocessing (tokenization, stemming), word embeddings (Word2Vec, GloVe), and transformer-based models for language. Cover NLP tasks: sentiment analysis, machine translation, text summarization. Include hands-on projects with state-of-the-art libraries (e.g. Hugging Face Transformers)."
+    "title": "Gradient Descent",
+    "math": "Calculus",
+    "note": "Explain the gradient descent algorithm. Manually implement a training loop to update model weights based on calculated gradients."
   },
   {
     "n": 22,
-    "title": "Computer Vision (CV) Applications",
-    "math": "Linear algebra",
-    "note": "Cover computer vision tasks: object detection (e.g. YOLO, SSD), image segmentation (e.g. U-Net), and image generation (GANs). Teach feature extraction techniques (SIFT, HOG) and how to use pretrained CNNs for transfer learning (e.g. for facial recognition or medical imaging). Include OpenCV or PIL for image processing pipelines."
+    "title": "Logistic Regression for Classification",
+    "math": "Probability",
+    "note": "Introduce logistic regression for binary classification. Explain the sigmoid function and binary cross-entropy loss."
   },
   {
     "n": 23,
-    "title": "Classical AI Methods (Search & Planning)",
-    "math": "Discrete math, logic",
-    "note": "Introduce traditional AI techniques: state-space search (BFS, DFS, A*), adversarial search (minimax for games), and constraint satisfaction. Teach knowledge representation and reasoning with logic (propositional, predicate logic). Discuss planning algorithms (STRIPS, PDDL) and compare symbolic AI vs. statistical learning."
+    "title": "Overfitting and Regularization",
+    "math": "N/A",
+    "note": "Explain overfitting. Introduce L1 and L2 regularization as techniques to penalize large weights and improve model generalization."
   },
   {
     "n": 24,
-    "title": "Robotics and Autonomous Systems",
-    "math": "Geometry, calculus",
-    "note": "Cover robotics fundamentals: robot kinematics, dynamics, and control theory. Teach sensor integration (e.g. cameras, LIDAR) and perception (SLAM). Include projects with robot simulators or platforms (e.g. ROS) to apply machine learning in autonomous navigation or manipulation."
+    "title": "Module 5: Deep Learning - Neural Networks",
+    "math": "N/A",
+    "note": "Introduce the feedforward neural network (MLP). Explain layers, neurons, weights, biases, and activation functions (ReLU)."
   },
   {
     "n": 25,
-    "title": "Research Methods & Emerging Topics",
-    "math": "Mathematical reasoning",
-    "note": "Teach how to read and interpret AI/ML research papers and perform literature reviews. Cover experimental design, evaluation methodology, and reproducibility in research. Discuss emerging topics (AutoML, meta-learning, quantum ML, causal inference, etc.) and critical thinking about future trends."
+    "title": "Building an MLP with PyTorch",
+    "math": "N/A",
+    "note": "Show how to define a neural network in PyTorch using `nn.Module` and `nn.Linear` layers."
+  },
+  {
+    "n": 26,
+    "title": "Training a Neural Network",
+    "math": "N/A",
+    "note": "Write a complete training loop for a PyTorch neural network, including the forward pass, loss calculation, backpropagation, and weight updates."
+  },
+  {
+    "n": 27,
+    "title": "Convolutional Neural Networks (CNNs)",
+    "math": "Linear Algebra",
+    "note": "Introduce CNNs for image data. Explain the convolution operation (`nn.Conv2d`) and pooling (`nn.MaxPool2d`)."
+  },
+  {
+    "n": 28,
+    "title": "Building a CNN for Image Classification",
+    "math": "N/A",
+    "note": "Build and train a CNN on a dataset like MNIST or CIFAR-10 using PyTorch, including data loading with `torchvision`."
+  },
+  {
+    "n": 29,
+    "title": "Module 6: Transformers - The Attention Mechanism",
+    "math": "Linear Algebra",
+    "note": "Introduce the concept of attention as a mechanism to weigh the importance of different parts of an input sequence. Explain Query, Key, and Value vectors."
+  },
+  {
+    "n": 30,
+    "title": "Scaled Dot-Product Attention",
+    "math": "N/A",
+    "note": "Implement the scaled dot-product attention formula from scratch using PyTorch."
+  },
+  {
+    "n": 31,
+    "title": "Multi-Head Attention",
+    "math": "N/A",
+    "note": "Explain how multi-head attention allows the model to jointly attend to information from different representation subspaces. Implement a `MultiHeadAttention` module."
+  },
+  {
+    "n": 32,
+    "title": "Positional Encodings",
+    "math": "Trigonometry",
+    "note": "Explain why positional encodings are necessary for transformers to understand sequence order. Implement sinusoidal positional encodings."
+  },
+  {
+    "n": 33,
+    "title": "The Transformer Encoder Block",
+    "math": "N/A",
+    "note": "Build a complete Transformer encoder block, combining multi-head attention with feed-forward layers, residual connections, and layer normalization."
+  },
+  {
+    "n": 34,
+    "title": "The Transformer Decoder Block",
+    "math": "N/A",
+    "note": "Build a Transformer decoder block, explaining the masked multi-head attention mechanism used to prevent attending to future tokens."
+  },
+  {
+    "n": 35,
+    "title": "Module 7: Generative Models - GANs",
+    "math": "Game Theory",
+    "note": "Introduce Generative Adversarial Networks (GANs). Explain the two-player game between the Generator and the Discriminator."
+  },
+  {
+    "n": 36,
+    "title": "StyleGAN",
+    "math": "N/A",
+    "note": "Introduce the StyleGAN architecture. Focus on the Mapping Network that transforms latent codes into a style vector `w` and the Synthesis Network that uses AdaIN to control the image features."
+  },
+  {
+    "n": 37,
+    "title": "Diffusion Models",
+    "math": "N/A",
+    "note": "Introduce Diffusion Models. Explain the forward process (gradually adding noise) and the reverse process (learning to denoise)."
+  },
+  {
+    "n": 38,
+    "title": "Module 8: Multimodal AI - The Concept",
+    "math": "N/A",
+    "note": "Introduce multimodal AI as models that can process and relate information from multiple data types, such as images and text."
+  },
+  {
+    "n": 39,
+    "title": "CLIP: The Architecture",
+    "math": "N/A",
+    "note": "Explain the architecture of OpenAI's CLIP model: an image encoder and a text encoder that are trained to map images and their captions to the same point in a latent space."
+  },
+  {
+    "n": 40,
+    "title": "CLIP: Contrastive Loss",
+    "math": "Linear Algebra (Cosine Similarity)",
+    "note": "Explain the contrastive learning objective used to train CLIP, which maximizes the similarity of correct image-text pairs and minimizes the similarity of incorrect pairs."
+  },
+  {
+    "n": 41,
+    "title": "Module 9: Final Projects - Overview",
+    "math": "N/A",
+    "note": "Outline the three advanced final projects: an image generation model, a chat model, and a multimodal search model."
+  },
+  {
+    "n": 42,
+    "title": "Final Project 1: Image Generation with Diffusion Models",
+    "math": "N/A",
+    "note": "Guide through training a simple diffusion model on a dataset like Fashion-MNIST to generate new clothing items."
+  },
+  {
+    "n": 43,
+    "title": "Final Project 2: Building a Transformer Chat Model",
+    "math": "N/A",
+    "note": "Guide through building and training a character-level transformer model from scratch on a small text corpus to generate new text."
+  },
+  {
+    "n": 44,
+    "title": "Final Project 3: Image Search with a CLIP-like Model",
+    "math": "N/A",
+    "note": "Guide through training a simplified CLIP model on a dataset of image-caption pairs to enable natural language image search."
+  },
+  {
+    "n": 45,
+    "title": "Module 10: Further Reading",
+    "math": "N/A",
+    "note": "Provide links to key papers ('Attention Is All You Need', 'Denoising Diffusion Probabilistic Models'), popular libraries (Hugging Face), and advanced deep learning courses."
   }
 ]

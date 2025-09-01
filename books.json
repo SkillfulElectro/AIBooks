@@ -632,6 +632,43 @@
           "file": "./books/xml.json"
         }
       ]
+    },
+    {
+      "name": "Graphics Programming",
+      "children": [
+        {
+          "name": "WebGL Tour",
+          "file": "./books/webgl.json"
+        },
+        {
+          "name": "Three.js Tour",
+          "file": "./books/threejs.json"
+        },
+        {
+          "name": "Flutter Graphics Tour",
+          "file": "./books/flutter.json"
+        },
+        {
+          "name": "Vulkan Tour",
+          "file": "./books/vulkan.json"
+        },
+        {
+          "name": "WebGPU (JavaScript) Tour",
+          "file": "./books/webgpu_javascript.json"
+        },
+        {
+          "name": "WGPU (Rust) Tour",
+          "file": "./books/wgpu_rust.json"
+        },
+        {
+          "name": "WebGPU (C/C++) Tour",
+          "file": "./books/webgpu_cpp.json"
+        },
+        {
+          "name": "WGPU (Native) Tour",
+          "file": "./books/wgpu_native.json"
+        }
+      ]
     }
   ]
 }

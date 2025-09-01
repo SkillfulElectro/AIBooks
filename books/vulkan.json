@@ -1,0 +1,428 @@
+[
+  {
+    "n": 1,
+    "title": "Module 1: Introduction - What is Vulkan?",
+    "math": "N/A",
+    "note": "Introduce Vulkan as a low-level, cross-platform graphics and compute API. Explain its advantages: high performance, low driver overhead, and explicit control over the GPU. Contrast it with older APIs like OpenGL."
+  },
+  {
+    "n": 2,
+    "title": "Vulkan's Verbosity: The 'Why'",
+    "math": "N/A",
+    "note": "Explain why the Vulkan API is so verbose. Discuss how making all states and operations explicit allows for extensive validation, predictable performance, and multi-threaded command generation."
+  },
+  {
+    "n": 3,
+    "title": "Module 2: Setup - Installing the Vulkan SDK",
+    "math": "N/A",
+    "note": "Guide through downloading and installing the official Vulkan SDK from LunarG. Explain the components it includes: headers, validation layers, and tools like `glslc`."
+  },
+  {
+    "n": 4,
+    "title": "Project Setup with CMake",
+    "math": "N/A",
+    "note": "Show how to set up a C++ project using CMake. Use `find_package(Vulkan REQUIRED)` to locate the Vulkan SDK on the system."
+  },
+  {
+    "n": 5,
+    "title": "Windowing with GLFW",
+    "math": "N/A",
+    "note": "Introduce GLFW and show how to add it to the CMake project. Create a basic window with `glfwCreateWindow` and hint that it will be used for Vulkan with `glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API)`."
+  },
+  {
+    "n": 6,
+    "title": "Module 3: Instance and Validation - The `VkInstance`",
+    "math": "N/A",
+    "note": "Explain the `VkInstance` as the connection between the application and the Vulkan library. Show how to fill out the `VkApplicationInfo` and `VkInstanceCreateInfo` structs."
+  },
+  {
+    "n": 7,
+    "title": "Querying for Extensions",
+    "math": "N/A",
+    "note": "Show how to use `vkEnumerateInstanceExtensionProperties` to see available extensions. Explain that windowing libraries like GLFW require specific extensions (e.g., `VK_KHR_surface`)."
+  },
+  {
+    "n": 8,
+    "title": "Enabling Required Extensions",
+    "math": "N/A",
+    "note": "Show how to get the required extensions from GLFW using `glfwGetRequiredInstanceExtensions` and enable them in `VkInstanceCreateInfo`."
+  },
+  {
+    "n": 9,
+    "title": "Validation Layers",
+    "math": "N/A",
+    "note": "Explain the critical role of validation layers for catching API misuse. Introduce the standard `VK_LAYER_KHRONOS_validation` layer."
+  },
+  {
+    "n": 10,
+    "title": "Enabling Validation Layers",
+    "math": "N/A",
+    "note": "Show how to check for validation layer support and enable the desired layers in `VkInstanceCreateInfo`."
+  },
+  {
+    "n": 11,
+    "title": "Creating the Instance",
+    "math": "N/A",
+    "note": "Call `vkCreateInstance()` with the completed create info struct. Explain how to check the returned `VkResult` for success."
+  },
+  {
+    "n": 12,
+    "title": "Destroying the Instance",
+    "math": "N/A",
+    "note": "Show how to clean up at the end of the application by calling `vkDestroyInstance()`."
+  },
+  {
+    "n": 13,
+    "title": "Module 4: Devices - Physical Devices",
+    "math": "N/A",
+    "note": "Explain `VkPhysicalDevice` as an object representing a single GPU. Show how to query for all available physical devices with `vkEnumeratePhysicalDevices`."
+  },
+  {
+    "n": 14,
+    "title": "Rating and Selecting a Physical Device",
+    "math": "N/A",
+    "note": "Show how to iterate through the available devices, check their properties (`vkGetPhysicalDeviceProperties`) and features (`vkGetPhysicalDeviceFeatures`), and select the most suitable one (e.g., preferring a discrete GPU)."
+  },
+  {
+    "n": 15,
+    "title": "Queue Families",
+    "math": "Queueing Theory",
+    "note": "Introduce queue families. Explain that all operations submitted to a GPU are through a queue, and different queue families support different types of operations (graphics, compute, transfer)."
+  },
+  {
+    "n": 16,
+    "title": "Finding Queue Families",
+    "math": "N/A",
+    "note": "Show how to find the indices of queue families that support the required operations, such as graphics and presentation, using `vkGetPhysicalDeviceQueueFamilyProperties`."
+  },
+  {
+    "n": 17,
+    "title": "Logical Devices",
+    "math": "N/A",
+    "note": "Explain the `VkDevice` as the logical device that represents the application's view of the GPU. It's the primary interface for most Vulkan operations."
+  },
+  {
+    "n": 18,
+    "title": "Creating the Logical Device",
+    "math": "N/A",
+    "note": "Fill out the `VkDeviceQueueCreateInfo` and `VkDeviceCreateInfo` structs, specifying the queue families to use and the device features to enable. Call `vkCreateDevice()`."
+  },
+  {
+    "n": 19,
+    "title": "Getting a Device Queue",
+    "math": "N/A",
+    "note": "After creating the logical device, show how to get a handle to the actual `VkQueue` using `vkGetDeviceQueue()`."
+  },
+  {
+    "n": 20,
+    "title": "Module 5: Swap Chain - The `VkSurfaceKHR`",
+    "math": "N/A",
+    "note": "Explain the `VkSurfaceKHR` as an abstraction for a native window surface that Vulkan can render to. Show how to create one using GLFW's `glfwCreateWindowSurface()`."
+  },
+  {
+    "n": 21,
+    "title": "Swap Chain Support Details",
+    "math": "N/A",
+    "note": "Show how to query for swap chain support details: capabilities (`vkGetPhysicalDeviceSurfaceCapabilitiesKHR`), formats (`vkGetPhysicalDeviceSurfaceFormatsKHR`), and present modes (`vkGetPhysicalDeviceSurfacePresentModesKHR`)."
+  },
+  {
+    "n": 22,
+    "title": "Choosing a Surface Format",
+    "math": "N/A",
+    "note": "Show how to choose the best surface format from the available list, looking for a format like `VK_FORMAT_B8G8R8A8_SRGB` and a color space like `VK_COLOR_SPACE_SRGB_NONLINEAR_KHR`."
+  },
+  {
+    "n": 23,
+    "title": "Choosing a Present Mode",
+    "math": "N/A",
+    "note": "Explain the different present modes. Compare `VK_PRESENT_MODE_IMMEDIATE_KHR`, `VK_PRESENT_MODE_FIFO_KHR` (vsync), and `VK_PRESENT_MODE_MAILBOX_KHR` (low-latency)."
+  },
+  {
+    "n": 24,
+    "title": "Choosing the Swap Extent",
+    "math": "N/A",
+    "note": "Explain the swap extent as the resolution of the swap chain images. Show how to choose the correct resolution based on the window size and the surface capabilities."
+  },
+  {
+    "n": 25,
+    "title": "Creating the Swap Chain",
+    "math": "N/A",
+    "note": "Fill out the `VkSwapchainCreateInfoKHR` struct with all the chosen settings (format, present mode, extent, image count, etc.). Call `vkCreateSwapchainKHR()`."
+  },
+  {
+    "n": 26,
+    "title": "Retrieving Swap Chain Images",
+    "math": "N/A",
+    "note": "After creating the swap chain, show how to get the handles to the `VkImage`s it created using `vkGetSwapchainImagesKHR`."
+  },
+  {
+    "n": 27,
+    "title": "Module 6: Image Views and Framebuffers",
+    "math": "N/A",
+    "note": "Explain that an image cannot be used directly; it must be accessed through a `VkImageView`, which describes how to interpret the image."
+  },
+  {
+    "n": 28,
+    "title": "Creating an Image View",
+    "math": "N/A",
+    "note": "For each swap chain image, fill out a `VkImageViewCreateInfo` struct and call `vkCreateImageView()`."
+  },
+  {
+    "n": 29,
+    "title": "Framebuffers",
+    "math": "N/A",
+    "note": "Explain that a `VkFramebuffer` is a collection of attachments (like color, depth, stencil buffers) that a render pass will render into."
+  },
+  {
+    "n": 30,
+    "title": "Creating a Framebuffer",
+    "math": "N/A",
+    "note": "For each image view, create a `VkFramebuffer` that references it by filling out `VkFramebufferCreateInfo` and calling `vkCreateFramebuffer()`."
+  },
+  {
+    "n": 31,
+    "title": "Module 7: Render Passes",
+    "math": "N/A",
+    "note": "Introduce `VkRenderPass` as a blueprint that tells Vulkan how rendering operations will be structured, including the attachments used and how they are treated."
+  },
+  {
+    "n": 32,
+    "title": "Color Attachment Description",
+    "math": "N/A",
+    "note": "Fill out a `VkAttachmentDescription` for the color buffer. Specify its `format`, `samples`, `loadOp`, `storeOp`, and initial/final layouts."
+  },
+  {
+    "n": 33,
+    "title": "Attachment References",
+    "math": "N/A",
+    "note": "Create a `VkAttachmentReference` that refers to the color attachment by its index."
+  },
+  {
+    "n": 34,
+    "title": "Subpasses",
+    "math": "N/A",
+    "note": "Explain the concept of subpasses for more advanced rendering techniques. For now, create a single `VkSubpassDescription` that uses the color attachment reference."
+  },
+  {
+    "n": 35,
+    "title": "Creating the Render Pass",
+    "math": "N/A",
+    "note": "Fill out the `VkRenderPassCreateInfo` struct with the attachment and subpass descriptions and call `vkCreateRenderPass()`."
+  },
+  {
+    "n": 36,
+    "title": "Module 8: The Graphics Pipeline",
+    "math": "N/A",
+    "note": "Explain that the `VkPipeline` is a single, monolithic object that bakes in almost all the state needed for rendering, making it very performant."
+  },
+  {
+    "n": 37,
+    "title": "Loading SPIR-V Shaders",
+    "math": "N/A",
+    "note": "Explain that GLSL shaders must be compiled to the SPIR-V binary format. Show how to use the `glslc` tool from the SDK to do this. Read the resulting `.spv` file into a buffer."
+  },
+  {
+    "n": 38,
+    "title": "Creating Shader Modules",
+    "math": "N/A",
+    "note": "Create a `VkShaderModule` from the SPIR-V code buffer by filling out `VkShaderModuleCreateInfo` and calling `vkCreateShaderModule()`."
+  },
+  {
+    "n": 39,
+    "title": "Shader Stage Creation",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineShaderStageCreateInfo` structs for the vertex and fragment shaders, linking the shader modules and entry point names (`main`)."
+  },
+  {
+    "n": 40,
+    "title": "Vertex Input State",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineVertexInputStateCreateInfo`. For now, it will be empty as we will hardcode vertices in the shader."
+  },
+  {
+    "n": 41,
+    "title": "Input Assembly State",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineInputAssemblyStateCreateInfo`, specifying the primitive topology (e.g., `VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST`)."
+  },
+  {
+    "n": 42,
+    "title": "Viewport and Scissor State",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineViewportStateCreateInfo`. Explain that viewports and scissors can be dynamic, so we only need to specify the count here."
+  },
+  {
+    "n": 43,
+    "title": "Rasterization State",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineRasterizationStateCreateInfo`, configuring depth clamping, polygon mode, line width, and culling."
+  },
+  {
+    "n": 44,
+    "title": "Multisample State",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineMultisampleStateCreateInfo` to configure MSAA (disabled for now)."
+  },
+  {
+    "n": 45,
+    "title": "Color Blend State",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineColorBlendStateCreateInfo` and the associated `VkPipelineColorBlendAttachmentState` to configure how the fragment shader's output blends with the framebuffer."
+  },
+  {
+    "n": 46,
+    "title": "Dynamic State",
+    "math": "N/A",
+    "note": "Fill out `VkPipelineDynamicStateCreateInfo` to specify which parts of the pipeline can be changed at draw time without recreating the whole pipeline (e.g., viewport and scissor)."
+  },
+  {
+    "n": 47,
+    "title": "Pipeline Layout",
+    "math": "N/A",
+    "note": "Create a `VkPipelineLayout` by filling out `VkPipelineLayoutCreateInfo`. For now, it will be empty as we have no uniforms."
+  },
+  {
+    "n": 48,
+    "title": "Creating the Graphics Pipeline",
+    "math": "N/A",
+    "note": "Combine all the previous state objects into the main `VkGraphicsPipelineCreateInfo` struct and call `vkCreateGraphicsPipelines()`."
+  },
+  {
+    "n": 49,
+    "title": "Module 9: Drawing - Command Pools and Buffers",
+    "math": "N/A",
+    "note": "Explain that commands are recorded into `VkCommandBuffer`s, which are allocated from a `VkCommandPool`. Create a command pool."
+  },
+  {
+    "n": 50,
+    "title": "Allocating a Command Buffer",
+    "math": "N/A",
+    "note": "Allocate a command buffer from the pool using `vkAllocateCommandBuffers()`."
+  },
+  {
+    "n": 51,
+    "title": "Beginning Command Buffer Recording",
+    "math": "N/A",
+    "note": "Start recording commands into the buffer with `vkBeginCommandBuffer()`."
+  },
+  {
+    "n": 52,
+    "title": "Beginning a Render Pass",
+    "math": "N/A",
+    "note": "Start a render pass with `vkCmdBeginRenderPass()`, providing the render pass object, the specific framebuffer to render to, and the clear color."
+  },
+  {
+    "n": 53,
+    "title": "Binding the Pipeline",
+    "math": "N/A",
+    "note": "Bind the graphics pipeline to be used with `vkCmdBindPipeline()`."
+  },
+  {
+    "n": 54,
+    "title": "Setting Dynamic State",
+    "math": "N/A",
+    "note": "Set the dynamic viewport and scissor rectangles with `vkCmdSetViewport()` and `vkCmdSetScissor()`."
+  },
+  {
+    "n": 55,
+    "title": "Issuing a Draw Call",
+    "math": "N/A",
+    "note": "Issue a draw command with `vkCmdDraw()`, specifying the vertex count."
+  },
+  {
+    "n": 56,
+    "title": "Ending the Render Pass and Recording",
+    "math": "N/A",
+    "note": "End the render pass with `vkCmdEndRenderPass()` and finish recording with `vkEndCommandBuffer()`."
+  },
+  {
+    "n": 57,
+    "title": "Module 10: Synchronization - Fences and Semaphores",
+    "math": "Concurrency Theory",
+    "note": "Introduce Vulkan's explicit synchronization. Differentiate between `VkFence` (for CPU-GPU sync) and `VkSemaphore` (for GPU-GPU sync)."
+  },
+  {
+    "n": 58,
+    "title": "Creating Synchronization Objects",
+    "math": "N/A",
+    "note": "Create fences and semaphores for each frame in flight using `vkCreateFence()` and `vkCreateSemaphore()`."
+  },
+  {
+    "n": 59,
+    "title": "The Main Render Loop",
+    "math": "N/A",
+    "note": "Outline the structure of the main `drawFrame` function, which will acquire an image, record a command buffer, and submit it."
+  },
+  {
+    "n": 60,
+    "title": "Acquiring an Image from the Swap Chain",
+    "math": "N/A",
+    "note": "Use `vkAcquireNextImageKHR()` to get the index of the next available swap chain image to render to. Use a semaphore to signal when the image is available."
+  },
+  {
+    "n": 61,
+    "title": "Submitting the Command Buffer",
+    "math": "N/A",
+    "note": "Fill out a `VkSubmitInfo` struct. Specify which semaphores to wait on (the image available semaphore), which command buffer to execute, and which semaphore to signal when rendering is complete."
+  },
+  {
+    "n": 62,
+    "title": "Submitting to the Queue",
+    "math": "N/A",
+    "note": "Submit the command buffer to the graphics queue with `vkQueueSubmit()`. Use a fence to signal the CPU when the command buffer has finished executing."
+  },
+  {
+    "n": 63,
+    "title": "Presentation",
+    "math": "N/A",
+    "note": "Fill out a `VkPresentInfoKHR` struct. Specify which semaphore to wait on (the render finished semaphore) and which swap chain image to present. Call `vkQueuePresentKHR()`."
+  },
+  {
+    "n": 64,
+    "title": "Waiting for Fences",
+    "math": "N/A",
+    "note": "At the beginning of the `drawFrame` loop, use `vkWaitForFences()` to make the CPU wait until the previous frame has finished rendering, preventing us from using resources that are still in use."
+  },
+  {
+    "n": 65,
+    "title": "Module 11: Final Project - Basic Vulkan Renderer",
+    "math": "N/A",
+    "note": "Outline the final project: a C++ class-based renderer that encapsulates all the Vulkan setup and can render a single, textured 3D model."
+  },
+  {
+    "n": 66,
+    "title": "Final Project: The `VulkanRenderer` Class",
+    "math": "Object-Oriented Programming",
+    "note": "Design a C++ class to hold all the core Vulkan objects (`VkInstance`, `VkDevice`, etc.). The constructor will perform all initialization, and the destructor will call all the `vkDestroy...` functions."
+  },
+  {
+    "n": 67,
+    "title": "Final Project: Vertex Buffers",
+    "math": "N/A",
+    "note": "Add functionality to create a `VkBuffer`, allocate `VkDeviceMemory` for it, and upload vertex data."
+  },
+  {
+    "n": 68,
+    "title": "Final Project: Uniform Buffers",
+    "math": "N/A",
+    "note": "Add functionality to create and update uniform buffers for transformation matrices."
+  },
+  {
+    "n": 69,
+    "title": "Final Project: Texture Mapping",
+    "math": "N/A",
+    "note": "Add functionality to create a `VkImage`, `VkImageView`, and `VkSampler` from an image file loaded with a library like `stb_image.h`."
+  },
+  {
+    "n": 70,
+    "title": "Final Project: Model Loading",
+    "math": "N/A",
+    "note": "Use a library like `tinyobjloader` to load a 3D model's vertices and indices into the vertex/index buffers."
+  },
+  {
+    "n": 71,
+    "title": "Module 12: Further Reading (Vulkan)",
+    "math": "N/A",
+    "note": "Provide links to the official Vulkan Specification, the Khronos Group's sample repository, and other advanced tutorials."
+  }
+]

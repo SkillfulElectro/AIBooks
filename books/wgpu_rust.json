@@ -1,0 +1,560 @@
+[
+  {
+    "n": 1,
+    "title": "Module 1: Setup - What is WGPU?",
+    "math": "N/A",
+    "note": "Introduce `wgpu` as a safe, idiomatic Rust library implementing the WebGPU API. Emphasize its cross-platform nature, targeting Vulkan, Metal, DX12, OpenGL, and WebAssembly from a single Rust codebase. The context is a Rust project managed with Cargo."
+  },
+  {
+    "n": 2,
+    "title": "Project Setup with `cargo new`",
+    "math": "N/A",
+    "note": "Guide through creating a new Rust binary project using `cargo new my_wgpu_app`."
+  },
+  {
+    "n": 3,
+    "title": "Dependency: Adding `wgpu`",
+    "math": "N/A",
+    "note": "Add the core `wgpu` crate to `Cargo.toml`. Explain its role as the primary library for all graphics and compute operations."
+  },
+  {
+    "n": 4,
+    "title": "Dependency: Adding `winit` for Windowing",
+    "math": "N/A",
+    "note": "Add the `winit` crate. Explain that `winit` is the de-facto standard for creating native windows and handling their event loops in the Rust ecosystem."
+  },
+  {
+    "n": 5,
+    "title": "Dependency: Handling `async` with `pollster`",
+    "math": "N/A",
+    "note": "Add the `pollster` crate. Explain that `wgpu`'s setup functions are `async` and require an executor. `pollster::block_on` provides the simplest way to run an `async` main function synchronously."
+  },
+  {
+    "n": 6,
+    "title": "Dependency: Logging with `env_logger`",
+    "math": "N/A",
+    "note": "Add the `env_logger` and `log` crates. Show how to initialize logging to get valuable debug output from `wgpu`, which is crucial for debugging."
+  },
+  {
+    "n": 7,
+    "title": "Application Structure: `async fn run()`",
+    "math": "Asynchronous Programming (Futures)",
+    "note": "Create an `async fn run()` to hold the application's main logic. In the `main` function, call `pollster::block_on(run())`."
+  },
+  {
+    "n": 8,
+    "title": "Module 2: Core WGPU Objects - The `Instance`",
+    "math": "N/A",
+    "note": "Explain that `wgpu::Instance` is the entry point, representing a connection to the system's graphics drivers. Create one with `wgpu::Instance::new()` and a `wgpu::InstanceDescriptor`."
+  },
+  {
+    "n": 9,
+    "title": "Instance Backends",
+    "math": "N/A",
+    "note": "Explain the `backends` field of `InstanceDescriptor`. Show how to specify which graphics backends to use, such as `wgpu::Backends::PRIMARY` (Vulkan, Metal, DX12) or `wgpu::Backends::GL` for OpenGL."
+  },
+  {
+    "n": 10,
+    "title": "The `Adapter`",
+    "math": "N/A",
+    "note": "Explain that a `wgpu::Adapter` represents a physical GPU. Asynchronously request one from the instance using `instance.request_adapter()`."
+  },
+  {
+    "n": 11,
+    "title": "`RequestAdapterOptions`",
+    "math": "N/A",
+    "note": "Show how to use `RequestAdapterOptions` to specify `power_preference` (`HighPerformance` vs. `LowPower`) and a `compatible_surface`."
+  },
+  {
+    "n": 12,
+    "title": "The `Device` and `Queue`",
+    "math": "N/A",
+    "note": "Explain that `wgpu::Device` is the logical GPU interface and `wgpu::Queue` is for command submission. Asynchronously request them from an adapter using `adapter.request_device()`."
+  },
+  {
+    "n": 13,
+    "title": "Requesting `Features`",
+    "math": "Bitwise Operations (Flags)",
+    "note": "Explain the `features` field of `DeviceDescriptor`. Show how to enable non-standard features by combining `wgpu::Features` flags, like `Features::POLYGON_MODE_LINE`."
+  },
+  {
+    "n": 14,
+    "title": "Requesting `Limits`",
+    "math": "N/A",
+    "note": "Explain the `limits` field of `DeviceDescriptor`. Show how to request higher limits than the default, such as `Limits::downlevel_webgl2_defaults()` for web compatibility."
+  },
+  {
+    "n": 15,
+    "title": "Module 3: Window & Surface - Creating a `winit` Window",
+    "math": "Event-Driven Programming",
+    "note": "Show how to create an `EventLoop` and a `Window` using `winit`."
+  },
+  {
+    "n": 16,
+    "title": "Creating a `wgpu::Surface`",
+    "math": "N/A",
+    "note": "Explain that a `wgpu::Surface` is a renderable area. Create one from the `winit` window. Explain that this requires an `unsafe` block because the raw window handle is passed to the instance."
+  },
+  {
+    "n": 17,
+    "title": "The `SurfaceConfiguration` Struct",
+    "math": "N/A",
+    "note": "Introduce the `wgpu::SurfaceConfiguration` struct, which holds all the properties for a surface, such as usage, format, dimensions, and present mode."
+  },
+  {
+    "n": 18,
+    "title": "Querying Surface Capabilities",
+    "math": "N/A",
+    "note": "Show how to get the surface's capabilities with `surface.get_capabilities(&adapter)`. This provides the supported formats, present modes, and alpha modes."
+  },
+  {
+    "n": 19,
+    "title": "Choosing a `TextureFormat`",
+    "math": "Color Theory (sRGB)",
+    "note": "Explain how to iterate through the supported formats to find a suitable one, preferably an sRGB format like `Bgra8UnormSrgb` for correct colors."
+  },
+  {
+    "n": 20,
+    "title": "Choosing a `PresentMode`",
+    "math": "Queueing Theory",
+    "note": "Explain `PresentMode` options. Compare `Fifo` (vsync), `Immediate` (no vsync), and `Mailbox`."
+  },
+  {
+    "n": 21,
+    "title": "Configuring the Surface",
+    "math": "N/A",
+    "note": "Call `surface.configure()` with the device and the complete configuration struct."
+  },
+  {
+    "n": 22,
+    "title": "The `winit` Event Loop",
+    "math": "N/A",
+    "note": "Structure the application around `event_loop.run()`. Show how to handle window events inside the closure."
+  },
+  {
+    "n": 23,
+    "title": "Handling Resize Events",
+    "math": "N/A",
+    "note": "In the event loop, show how to handle `WindowEvent::Resized` by updating the `SurfaceConfiguration` and re-configuring the surface."
+  },
+  {
+    "n": 24,
+    "title": "Handling `RedrawRequested` Events",
+    "math": "N/A",
+    "note": "Explain that all rendering logic should be placed inside the handler for the `Event::RedrawRequested` event."
+  },
+  {
+    "n": 25,
+    "title": "Module 4: Shaders & Pipeline - Loading WGSL",
+    "math": "N/A",
+    "note": "Create a `.wgsl` file and load it at compile time using `include_str!(\"shader.wgsl\")`."
+  },
+  {
+    "n": 26,
+    "title": "Creating the `ShaderModule`",
+    "math": "N/A",
+    "note": "Create a `wgpu::ShaderModule` using `device.create_shader_module()`."
+  },
+  {
+    "n": 27,
+    "title": "The `RenderPipeline`",
+    "math": "N/A",
+    "note": "Introduce the `wgpu::RenderPipeline` and the `RenderPipelineDescriptor` struct used to create it."
+  },
+  {
+    "n": 28,
+    "title": "The `PipelineLayout`",
+    "math": "N/A",
+    "note": "Create a `wgpu::PipelineLayout` with `device.create_pipeline_layout()`. Explain that it describes the bind groups the pipeline will use."
+  },
+  {
+    "n": 29,
+    "title": "Configuring `VertexState`",
+    "math": "N/A",
+    "note": "Configure the `vertex` field of the pipeline descriptor, setting the `module`, `entry_point`, and `buffers`."
+  },
+  {
+    "n": 30,
+    "title": "Configuring `FragmentState`",
+    "math": "N/A",
+    "note": "Configure the `fragment` field, setting the `module`, `entry_point`, and `targets`."
+  },
+  {
+    "n": 31,
+    "title": "Configuring `ColorTargetState`",
+    "math": "N/A",
+    "note": "Configure a `ColorTargetState`, setting its `format`. Introduce the `blend` state and `write_mask`."
+  },
+  {
+    "n": 32,
+    "title": "Configuring `BlendState`",
+    "math": "Color Theory (Alpha Compositing)",
+    "note": "Explain the `BlendState` struct. Differentiate between the `color` and `alpha` blend operations. Show how to set up standard alpha blending."
+  },
+  {
+    "n": 33,
+    "title": "Configuring `PrimitiveState`",
+    "math": "N/A",
+    "note": "Configure the `primitive` field, setting `topology`, `cull_mode`, etc."
+  },
+  {
+    "n": 34,
+    "title": "Module 5: Drawing - The Render Loop",
+    "math": "N/A",
+    "note": "Revisit the `RedrawRequested` handler where all drawing commands will be issued for each frame."
+  },
+  {
+    "n": 35,
+    "title": "Getting the `SurfaceTexture`",
+    "math": "N/A",
+    "note": "Get the `SurfaceTexture` to draw on using `surface.get_current_texture()`. Handle the potential `SurfaceError`."
+  },
+  {
+    "n": 36,
+    "title": "Creating the `TextureView`",
+    "math": "N/A",
+    "note": "Create a `wgpu::TextureView` from the `SurfaceTexture`."
+  },
+  {
+    "n": 37,
+    "title": "Creating the `CommandEncoder`",
+    "math": "N/A",
+    "note": "Create a `wgpu::CommandEncoder` with `device.create_command_encoder()`."
+  },
+  {
+    "n": 38,
+    "title": "The `RenderPass` and RAII",
+    "math": "Ownership and Borrowing",
+    "note": "Start a `RenderPass` with `encoder.begin_render_pass()`. Explain how the `RenderPass` object's lifetime is managed by its scope due to RAII."
+  },
+  {
+    "n": 39,
+    "title": "Configuring the `RenderPassDescriptor`",
+    "math": "N/A",
+    "note": "Fill out the `wgpu::RenderPassDescriptor`, focusing on the `color_attachments` slice."
+  },
+  {
+    "n": 40,
+    "title": "Setting `load` and `store` `Operations`",
+    "math": "N/A",
+    "note": "Explain `wgpu::Operations`. Set `load` to `LoadOp::Clear` with a `wgpu::Color`, and `store` to `StoreOp::Store`."
+  },
+  {
+    "n": 41,
+    "title": "Setting the Pipeline",
+    "math": "N/A",
+    "note": "Inside the `RenderPass`'s scope, call `render_pass.set_pipeline()`."
+  },
+  {
+    "n": 42,
+    "title": "Issuing a Draw Call",
+    "math": "N/A",
+    "note": "Call `render_pass.draw()` with a range (e.g., `0..3`) to draw a single triangle."
+  },
+  {
+    "n": 43,
+    "title": "Submitting Commands",
+    "math": "N/A",
+    "note": "Finish the encoder with `encoder.finish()` to get a `CommandBuffer`. Submit it with `queue.submit()`."
+  },
+  {
+    "n": 44,
+    "title": "Presenting the Frame",
+    "math": "N/A",
+    "note": "Call `surface_texture.present()` to queue the frame for display."
+  },
+  {
+    "n": 45,
+    "title": "Module 6: Buffers - Introducing `bytemuck`",
+    "math": "N/A",
+    "note": "Introduce `bytemuck` for safe, zero-copy casting of Rust structs to raw byte slices (`&[u8]`)."
+  },
+  {
+    "n": 46,
+    "title": "Defining a Vertex Struct",
+    "math": "Data Structures (Memory Layout)",
+    "note": "Define a `Vertex` struct. Add `#[repr(C)]` and derive `bytemuck::Pod` and `bytemuck::Zeroable`."
+  },
+  {
+    "n": 47,
+    "title": "Creating a Vertex Buffer",
+    "math": "N/A",
+    "note": "Add the `wgpu::util::DeviceExt` trait. Use `device.create_buffer_init()` to create and upload vertex data from a slice of `Vertex` structs."
+  },
+  {
+    "n": 48,
+    "title": "Creating a `VertexBufferLayout`",
+    "math": "N/A",
+    "note": "Implement a `desc()` method on your `Vertex` struct that returns a `wgpu::VertexBufferLayout`."
+  },
+  {
+    "n": 49,
+    "title": "Using `wgpu::vertex_attr_array!`",
+    "math": "N/A",
+    "note": "Inside the `desc()` method, use the `wgpu::vertex_attr_array!` macro to conveniently define the `attributes`."
+  },
+  {
+    "n": 50,
+    "title": "Using the Layout in the Pipeline",
+    "math": "N/A",
+    "note": "In the `VertexState` of the pipeline descriptor, set the `buffers` field to `&[Vertex::desc()]`."
+  },
+  {
+    "n": 51,
+    "title": "Setting the Vertex Buffer",
+    "math": "N/A",
+    "note": "Use `render_pass.set_vertex_buffer(slot, buffer_slice)` to bind your vertex buffer."
+  },
+  {
+    "n": 52,
+    "title": "Creating an Index Buffer",
+    "math": "N/A",
+    "note": "Create an index buffer from a slice of `u16` or `u32` using `create_buffer_init`."
+  },
+  {
+    "n": 53,
+    "title": "Setting the Index Buffer",
+    "math": "N/A",
+    "note": "Use `render_pass.set_index_buffer(buffer_slice, wgpu::IndexFormat::Uint16)`."
+  },
+  {
+    "n": 54,
+    "title": "Drawing with `draw_indexed`",
+    "math": "N/A",
+    "note": "Use `render_pass.draw_indexed()` with a range for the indices."
+  },
+  {
+    "n": 55,
+    "title": "Module 7: Uniforms - Defining the Uniform Struct",
+    "math": "N/A",
+    "note": "Define a uniform struct, deriving `bytemuck` traits. Be mindful of WGSL's 16-byte alignment rules."
+  },
+  {
+    "n": 56,
+    "title": "Using a Math Crate (`cgmath` or `glam`)",
+    "math": "Linear Algebra",
+    "note": "Add a math crate like `cgmath` or `glam` to handle matrix and vector operations for the camera."
+  },
+  {
+    "n": 57,
+    "title": "Creating the Uniform Buffer",
+    "math": "N/A",
+    "note": "Create a `wgpu::Buffer` with `BufferUsages::UNIFORM` and `BufferUsages::COPY_DST`."
+  },
+  {
+    "n": 58,
+    "title": "Updating the Uniform Buffer",
+    "math": "N/A",
+    "note": "Use `queue.write_buffer()` to update the uniform data each frame, passing a byte slice of your uniform struct."
+  },
+  {
+    "n": 59,
+    "title": "Creating the `BindGroupLayout`",
+    "math": "N/A",
+    "note": "Use `device.create_bind_group_layout()` to define the uniform binding."
+  },
+  {
+    "n": 60,
+    "title": "Creating the `BindGroup`",
+    "math": "N/A",
+    "note": "Use `device.create_bind_group()` to link the actual uniform buffer to the layout's binding point."
+  },
+  {
+    "n": 61,
+    "title": "Setting the Bind Group",
+    "math": "N/A",
+    "note": "Use `render_pass.set_bind_group()` to make the uniforms available to the shaders."
+  },
+  {
+    "n": 62,
+    "title": "Module 8: Textures - The `image` Crate",
+    "math": "N/A",
+    "note": "Introduce the `image` crate. Show how to use `image::open()` and `img.to_rgba8()` to load a texture file and get its data."
+  },
+  {
+    "n": 63,
+    "title": "Creating the `Texture`",
+    "math": "N/A",
+    "note": "Create a `wgpu::Texture` using `device.create_texture()` and a `TextureDescriptor`."
+  },
+  {
+    "n": 64,
+    "title": "Uploading Texture Data",
+    "math": "N/A",
+    "note": "Use `queue.write_texture()` to upload the image data, creating `ImageCopyTexture` and `ImageDataLayout` structs to describe the copy."
+  },
+  {
+    "n": 65,
+    "title": "Creating the `TextureView` and `Sampler`",
+    "math": "N/A",
+    "note": "Create a `wgpu::TextureView` and a `wgpu::Sampler`."
+  },
+  {
+    "n": 66,
+    "title": "Binding Textures and Samplers",
+    "math": "N/A",
+    "note": "Update the `BindGroupLayout` and `BindGroup` to include the `TextureView` and `Sampler`."
+  },
+  {
+    "n": 67,
+    "title": "Module 9: Advanced Rendering - Depth Buffering",
+    "math": "N/A",
+    "note": "Create a depth texture with a `wgpu::TextureFormat::Depth32Float` format."
+  },
+  {
+    "n": 68,
+    "title": "Configuring `DepthStencilState`",
+    "math": "N/A",
+    "note": "Add a `depth_stencil` field to the `RenderPipelineDescriptor`."
+  },
+  {
+    "n": 69,
+    "title": "Using the Depth Texture",
+    "math": "N/A",
+    "note": "Add a `depth_stencil_attachment` to the `RenderPassDescriptor`."
+  },
+  {
+    "n": 70,
+    "title": "Model Loading with `tobj`",
+    "math": "N/A",
+    "note": "Introduce the `tobj` crate to parse `.obj` model files and load their mesh data into vectors."
+  },
+  {
+    "n": 71,
+    "title": "Instancing",
+    "math": "N/A",
+    "note": "Explain how to use instancing to draw many objects efficiently by creating a per-instance vertex buffer and using `draw_indexed(..., instance_count)`."
+  },
+  {
+    "n": 72,
+    "title": "Lighting: The Blinn-Phong Model",
+    "math": "Linear Algebra (Dot Product)",
+    "note": "Introduce a basic lighting model. Create a light uniform buffer and add it to a bind group. Implement ambient, diffuse, and specular lighting calculations in the fragment shader."
+  },
+  {
+    "n": 73,
+    "title": "Normal Mapping",
+    "math": "Linear Algebra (Tangent, Bitangent, Normal)",
+    "note": "Explain how to use a normal map texture to add surface detail without increasing polygon count. This requires passing tangent and bitangent vectors to the vertex shader and transforming the light direction into tangent space."
+  },
+  {
+    "n": 74,
+    "title": "Module 10: Final Project - Game Engine Architecture",
+    "math": "Software Architecture",
+    "note": "Outline the architecture for a basic game engine. Introduce key concepts: the main loop, the renderer, a scene representation (ECS), and a material system."
+  },
+  {
+    "n": 75,
+    "title": "Final Project: The Renderer Struct",
+    "math": "N/A",
+    "note": "Create a `Renderer` struct to encapsulate the core `wgpu` objects like the `Device`, `Queue`, `Surface`, and `SurfaceConfiguration`."
+  },
+  {
+    "n": 76,
+    "title": "Final Project: The Entity-Component-System (ECS)",
+    "math": "Data Structures",
+    "note": "Introduce the ECS pattern for managing game objects. Add a crate like `hecs` or `specs` to the project. Define components for `Position`, `Rotation`, and `Mesh`. Define entities as simple IDs."
+  },
+  {
+    "n": 77,
+    "title": "Final Project: The Scene Graph",
+    "math": "Graph Theory (Trees)",
+    "note": "Implement a simple scene graph. Create a `Node` struct with a transform and children. The renderer will traverse this tree to draw objects."
+  },
+  {
+    "n": 78,
+    "title": "Final Project: A Material System",
+    "math": "N/A",
+    "note": "Create a `Material` trait and concrete structs like `PhongMaterial`. The material will be responsible for its own `BindGroupLayout` and `BindGroup`, and for creating a suitable `RenderPipeline`."
+  },
+  {
+    "n": 79,
+    "title": "Final Project: The Main Render Pass",
+    "math": "N/A",
+    "note": "The renderer's main function will iterate through the scene, get the objects to draw, and for each one, set the correct pipeline and bind groups based on its material before issuing the draw call."
+  },
+  {
+    "n": 80,
+    "title": "Final Project: Loading glTF Models",
+    "math": "N/A",
+    "note": "Use a crate like `gltf` to parse `.gltf` or `.glb` files. Create entities in the ECS from the loaded nodes, meshes, and materials."
+  },
+  {
+    "n": 81,
+    "title": "Module 11: Compiling to WebAssembly - `Cargo.toml` Setup",
+    "math": "N/A",
+    "note": "Explain the necessary `Cargo.toml` configuration for a Wasm build. Set `crate-type = [\"cdylib\", \"rlib\"]`. Add a `[target.'cfg(target_arch = \"wasm32\")'.dependencies]` section."
+  },
+  {
+    "n": 82,
+    "title": "Wasm Dependency: `wasm-bindgen`",
+    "math": "N/A",
+    "note": "Add `wasm-bindgen` as a dependency. Explain its role in generating the JavaScript bindings and boilerplate needed for interop."
+  },
+  {
+    "n": 83,
+    "title": "Wasm Dependency: `web-sys`",
+    "math": "N/A",
+    "note": "Add `web-sys`. Explain that it provides raw bindings to all the Web APIs, such as `window`, `document`, and `HtmlCanvasElement`."
+  },
+  {
+    "n": 84,
+    "title": "Wasm Dependency: `console_error_panic_hook`",
+    "math": "N/A",
+    "note": "Add `console_error_panic_hook`. Explain its utility for routing Rust `panic!` messages to the browser's JavaScript console for easier debugging."
+  },
+  {
+    "n": 85,
+    "title": "Platform-Specific Code with `#[cfg]`",
+    "math": "N/A",
+    "note": "Show how to use `#[cfg(target_arch = \"wasm32\")]` and `#[cfg(not(target_arch = \"wasm32\"))]` to write code that only compiles for Wasm or for native targets, respectively."
+  },
+  {
+    "n": 86,
+    "title": "Creating a Wasm Entry Point",
+    "math": "N/A",
+    "note": "Create a new public function (e.g., `run_wasm()`) and mark it with `#[wasm_bindgen(start)]`. This attribute designates it as the main entry point for the Wasm module."
+  },
+  {
+    "n": 87,
+    "title": "Attaching to a Canvas in Wasm",
+    "math": "N/A",
+    "note": "Inside the Wasm entry point, use `web-sys` to get a reference to the browser's `window` and `document`, find a `<canvas>` element by its ID, and attach the `winit` window to it."
+  },
+  {
+    "n": 88,
+    "title": "The `wasm-pack` build tool",
+    "math": "N/A",
+    "note": "Introduce `wasm-pack` as the primary tool for building, optimizing, and packaging Rust-generated WebAssembly. Show the basic build command: `wasm-pack build --target web`."
+  },
+  {
+    "n": 89,
+    "title": "Creating the Host `index.html`",
+    "math": "N/A",
+    "note": "Create a simple `index.html` file that includes a `<canvas>` element and a `<script>` tag with `type=\"module\"` to load the JavaScript glue code."
+  },
+  {
+    "n": 90,
+    "title": "The JavaScript 'Glue' Code",
+    "math": "N/A",
+    "note": "Write the small amount of JavaScript needed to load the Wasm module. Use `import init from './pkg/my_wgpu_app.js';` and then call `init()` to run the Wasm entry point."
+  },
+  {
+    "n": 91,
+    "title": "Serving the Wasm Application",
+    "math": "N/A",
+    "note": "Explain that Wasm modules must be served over HTTP(S). Show how to use a simple local web server, like `python -m http.server`, to run the application locally."
+  },
+  {
+    "n": 92,
+    "title": "Module 12: Further Reading (Rust)",
+    "math": "N/A",
+    "note": "Provide links to the official `wgpu` repository, its examples, and the `learn-wgpu` tutorial website."
+  },
+  {
+    "n": 93,
+    "title": "Further Reading: The Rust Graphics Ecosystem",
+    "math": "N/A",
+    "note": "List other useful crates like `glam` for math, `egui` for UI overlays, and high-level game engines like `bevy` that use `wgpu`."
+  }
+]

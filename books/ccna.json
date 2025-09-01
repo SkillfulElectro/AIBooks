@@ -1,152 +1,302 @@
 [
   {
     "n": 1,
-    "title": "Role and Function of Network Components",
-    "math": "Network topology",
-    "note": "This lesson introduces the core hardware components of a network. It explains the function of routers (Layer 3), switches (Layer 2 and Layer 3), next-generation firewalls (NGFW), access points (APs), and endpoints. The context is a typical enterprise network environment."
+    "title": "Module 1: Networking Today - What is a Network?",
+    "math": "N/A",
+    "note": "Introduce the concept of a network, its purpose, and the different types of networks (LAN, WAN, SOHO)."
   },
   {
     "n": 2,
-    "title": "Network Topology Architectures",
-    "math": "Graph theory",
-    "note": "This section covers common network design blueprints. It compares and contrasts the traditional three-tier (core, distribution, access) and two-tier hierarchical architectures with the modern spine-leaf architecture used in data centers. WAN and SOHO (Small Office/Home Office) topologies are also discussed."
+    "title": "Role of Routers and Switches",
+    "math": "N/A",
+    "note": "Explain the fundamental roles of routers (forwarding packets between different networks, Layer 3) and switches (forwarding frames within a single network, Layer 2)."
   },
   {
     "n": 3,
-    "title": "Cabling and Physical Interfaces",
-    "math": "Signal propagation",
-    "note": "This lesson details the physical layer of networking. It covers different cabling types, including copper (e.g., Cat 5e, Cat 6) and fiber optic (single-mode, multi-mode), and explains their use cases. It also covers identifying and troubleshooting common cable issues like collisions, errors, and duplex mismatches."
+    "title": "Next-Generation Firewalls and Access Points",
+    "math": "N/A",
+    "note": "Introduce other key network components: Next-Generation Firewalls (NGFW) for security and Access Points (APs) for wireless connectivity."
   },
   {
     "n": 4,
-    "title": "TCP vs. UDP",
-    "math": "Transport protocols",
-    "note": "This section compares the two primary transport layer protocols. It explains the key characteristics of TCP (connection-oriented, reliable, ordered delivery) and UDP (connectionless, best-effort delivery) and provides examples of applications that use each protocol. The concept of a three-way handshake for TCP is introduced."
+    "title": "Two-Tier and Three-Tier Architectures",
+    "math": "Graph Theory",
+    "note": "Compare and contrast the traditional three-tier (core, distribution, access) and two-tier (collapsed core) hierarchical network design models."
   },
   {
     "n": 5,
-    "title": "Binary and Hexadecimal Numbering",
-    "math": "Base conversion",
-    "note": "This lesson provides the mathematical foundation for IP addressing. It teaches how to convert between decimal, binary, and hexadecimal number systems, which is a critical skill for working with IPv4, IPv6, and MAC addresses."
+    "title": "Spine-Leaf Architecture",
+    "math": "N/A",
+    "note": "Introduce the modern spine-leaf architecture used in data centers, explaining its advantages for scalability and low latency."
   },
   {
     "n": 6,
-    "title": "IPv4 Addressing and Subnetting",
-    "math": "Boolean algebra, IP subnetting",
-    "note": "This section provides a deep dive into IPv4 addressing. It covers the structure of an IPv4 address, the concept of a subnet mask, and the process of subnetting to create smaller networks. Students will learn to calculate network addresses, host ranges, and broadcast addresses for a given subnet."
+    "title": "Cabling: Copper (Cat5e, Cat6)",
+    "math": "N/A",
+    "note": "Cover twisted-pair copper cabling standards. Explain the differences between Cat 5e and Cat 6, and concepts like straight-through vs. crossover cables."
   },
   {
     "n": 7,
-    "title": "IPv6 Addressing Fundamentals",
-    "math": "Hexadecimal arithmetic",
-    "note": "This lesson introduces IPv6. It explains the 128-bit address format, hexadecimal notation, and rules for abbreviation. It also covers IPv6 address types, including global unicast, unique local, and link-local, and the process of configuring an address on a client OS."
+    "title": "Cabling: Fiber Optic",
+    "math": "N/A",
+    "note": "Explain fiber optic cabling. Differentiate between single-mode (long distance) and multi-mode (shorter distance) fiber."
   },
   {
     "n": 8,
-    "title": "Introduction to VLANs",
-    "math": "Set theory (segmentation)",
-    "note": "This lesson introduces Virtual LANs (VLANs) as a mechanism to logically segment a physical network. It explains how VLANs can improve security and traffic management by creating separate broadcast domains on a single switch. The standard VLAN ranges are also covered."
+    "title": "Troubleshooting Physical Layer Issues",
+    "math": "N/A",
+    "note": "Discuss how to identify and troubleshoot common physical layer issues, such as duplex mismatches, collisions, and speed negotiation problems."
   },
   {
     "n": 9,
-    "title": "VLAN Trunking with 802.1Q",
-    "math": "Frame tagging",
-    "note": "This section explains how to pass traffic for multiple VLANs between switches. It introduces the IEEE 802.1Q trunking protocol, which adds a VLAN tag to Ethernet frames. The configuration of trunk ports on Cisco switches is demonstrated."
+    "title": "Module 2: TCP/IP - The TCP/IP Model",
+    "math": "N/A",
+    "note": "Introduce the four-layer TCP/IP model (Application, Transport, Internet, Network Access) and compare it to the seven-layer OSI model."
   },
   {
     "n": 10,
-    "title": "EtherChannel (LACP and PAgP)",
-    "math": "Link aggregation",
-    "note": "This lesson covers EtherChannel, a technology for bundling multiple physical switch ports into a single logical link to increase bandwidth and provide redundancy. It explains the two negotiation protocols used: LACP (Link Aggregation Control Protocol, open standard) and PAgP (Port Aggregation Protocol, Cisco proprietary)."
+    "title": "TCP vs. UDP",
+    "math": "N/A",
+    "note": "Compare TCP (connection-oriented, reliable) and UDP (connectionless, best-effort). Explain the TCP three-way handshake."
   },
   {
     "n": 11,
-    "title": "Wireless LAN (WLAN) Concepts",
-    "math": "Radio frequency (RF) principles",
-    "note": "This section introduces the fundamentals of wireless networking. It covers the roles of Access Points (APs) and Wireless LAN Controllers (WLCs). Key concepts like SSIDs (Service Set Identifiers), RF channels, and the basic principles of Wi-Fi communication are explained."
+    "title": "Binary Numbering",
+    "math": "Base Conversion",
+    "note": "Teach how to convert decimal numbers to binary and back, a foundational skill for IP addressing."
   },
   {
     "n": 12,
-    "title": "Routing Table Fundamentals",
-    "math": "Graph traversal algorithms",
-    "note": "This lesson explains how a router makes forwarding decisions based on its routing table. It covers how to read a routing table, including the meaning of route source codes, administrative distance (trustworthiness of the route source), and the metric (cost of the route)."
+    "title": "Hexadecimal Numbering",
+    "math": "Base Conversion",
+    "note": "Teach how to convert between binary, hexadecimal, and decimal, focusing on its use in IPv6 and MAC addresses."
   },
   {
     "n": 13,
-    "title": "Static Routing",
-    "math": "Manual route configuration",
-    "note": "This section covers how to manually configure routes on a router. It demonstrates the configuration of both IPv4 and IPv6 static routes, including default routes (the 'gateway of last resort'). The use cases and limitations of static routing are discussed."
+    "title": "IPv4 Address Structure",
+    "math": "N/A",
+    "note": "Break down the 32-bit IPv4 address into its network and host portions. Explain the concept of the subnet mask."
   },
   {
     "n": 14,
-    "title": "Introduction to OSPFv2",
-    "math": "Shortest path first algorithms (Dijkstra)",
-    "note": "This lesson introduces OSPF (Open Shortest Path First) as a dynamic routing protocol. It explains the concepts of neighbor adjacencies, router IDs, and areas. It also covers the OSPF cost metric calculation (based on bandwidth) and how it is used to find the shortest path to a destination."
+    "title": "IPv4 Address Classes and Private Ranges",
+    "math": "N/A",
+    "note": "Explain the historical IP address classes (A, B, C) and define the private IP address ranges specified in RFC 1918."
   },
   {
     "n": 15,
-    "title": "Configuring Single-Area OSPFv2",
-    "math": "Network configuration",
-    "note": "This lesson provides a practical guide to configuring and verifying single-area OSPFv2 in a lab environment. It covers the necessary commands to enable OSPF, configure network statements, and verify neighbor relationships and routing table entries using `show` commands."
+    "title": "IPv4 Subnetting",
+    "math": "Boolean Algebra",
+    "note": "Provide a step-by-step guide to subnetting an IPv4 network to create smaller, more manageable subnets."
   },
   {
     "n": 16,
-    "title": "Network Address Translation (NAT)",
-    "math": "Address mapping",
-    "note": "This section explains the purpose and function of NAT for translating private IPv4 addresses to public IPv4 addresses. It covers the different types of NAT: static NAT (one-to-one mapping), dynamic NAT (many-to-many), and Port Address Translation (PAT) (many-to-one), which is the most common type."
+    "title": "Variable Length Subnet Masking (VLSM)",
+    "math": "N/A",
+    "note": "Introduce VLSM as a technique to use different subnet masks for different subnets, which conserves IP address space."
   },
   {
     "n": 17,
-    "title": "Network Time Protocol (NTP)",
-    "math": "Time synchronization",
-    "note": "This lesson covers NTP, a protocol used to synchronize the clocks of computer systems over a network. It explains the importance of accurate time for logging and security purposes and demonstrates how to configure a Cisco device to act as an NTP client."
+    "title": "IPv6 Address Structure and Types",
+    "math": "N/A",
+    "note": "Explain the 128-bit IPv6 address format, hexadecimal notation, and abbreviation rules. Cover address types like global unicast, unique local, and link-local."
   },
   {
     "n": 18,
-    "title": "Dynamic Host Configuration Protocol (DHCP)",
-    "math": "IP address leasing",
-    "note": "This section explains how DHCP is used to automatically assign IP addresses and other network configuration information to clients. It covers the DHCP process (Discover, Offer, Request, Acknowledge - DORA) and demonstrates how to configure a Cisco router to act as a DHCP server."
+    "title": "IPv6 Address Configuration (SLAAC and DHCPv6)",
+    "math": "N/A",
+    "note": "Explain the two main methods for IPv6 address autoconfiguration: SLAAC (Stateless Address Autoconfiguration) and stateful DHCPv6."
   },
   {
     "n": 19,
-    "title": "Domain Name System (DNS) and SNMP",
-    "math": "Hierarchical naming systems, Management Information Base (MIB)",
-    "note": "This lesson covers two critical IP services. It explains the role of DNS in translating human-readable domain names into IP addresses. It also provides an overview of SNMP (Simple Network Management Protocol) for collecting and organizing information about managed devices on IP networks."
+    "title": "Module 3: Switching - MAC Addresses",
+    "math": "N/A",
+    "note": "Explain the structure and purpose of a MAC address. Describe how switches use MAC addresses to forward frames at Layer 2."
   },
   {
     "n": 20,
-    "title": "Access Control Lists (ACLs)",
-    "math": "Set theory, Boolean logic",
-    "note": "This lesson introduces ACLs as a tool for filtering traffic. It explains the difference between standard ACLs (which filter based on source IP) and extended ACLs (which filter based on source/destination IP, protocol, and port). The concept of an implicit 'deny any' at the end of an ACL is emphasized."
+    "title": "The MAC Address Table",
+    "math": "N/A",
+    "note": "Explain how a switch builds its MAC address table by learning the source MAC addresses of frames that enter its ports."
   },
   {
     "n": 21,
-    "title": "Layer 2 Security Features",
-    "math": "Access control",
-    "note": "This section covers security features implemented on switches to protect the network at Layer 2. It explains DHCP Snooping to prevent rogue DHCP servers, Dynamic ARP Inspection to prevent ARP spoofing, and Port Security to limit the number of MAC addresses allowed on a port."
+    "title": "Introduction to VLANs",
+    "math": "Set Theory",
+    "note": "Introduce Virtual LANs (VLANs) as a mechanism to logically segment a physical network into separate broadcast domains."
   },
   {
     "n": 22,
-    "title": "Wireless LAN Security Protocols",
-    "math": "Encryption standards",
-    "note": "This lesson focuses on securing wireless networks. It covers the different security protocols available, including WPA2 and the modern WPA3 standard. The configuration of Pre-Shared Key (PSK) authentication for a SOHO environment is demonstrated."
+    "title": "Configuring VLANs and Access Ports",
+    "math": "N/A",
+    "note": "Demonstrate how to create VLANs on a Cisco switch and assign switch ports to a specific VLAN as access ports."
   },
   {
     "n": 23,
-    "title": "Introduction to Network Automation",
-    "math": "API principles",
-    "note": "This section introduces the modern shift towards network automation and programmability. It explains how automation can improve efficiency and reduce errors. The lesson contrasts traditional manual configuration with modern approaches using APIs and configuration management tools."
+    "title": "VLAN Trunking with 802.1Q",
+    "math": "N/A",
+    "note": "Explain the IEEE 802.1Q trunking protocol for passing traffic for multiple VLANs between switches. Demonstrate trunk port configuration."
   },
   {
     "n": 24,
-    "title": "REST APIs and JSON",
-    "math": "RESTful architecture, JSON data structures",
-    "note": "This lesson provides an overview of REST APIs as a common way for applications to communicate over HTTP. It explains the basic principles of REST. It also introduces JSON (JavaScript Object Notation) as a lightweight, human-readable data format used for data exchange in modern APIs."
+    "title": "Dynamic Trunking Protocol (DTP)",
+    "math": "N/A",
+    "note": "Introduce DTP as a Cisco-proprietary protocol for automatically negotiating trunk links. Discuss its different modes."
   },
   {
     "n": 25,
+    "title": "EtherChannel (LACP and PAgP)",
+    "math": "N/A",
+    "note": "Cover EtherChannel for bundling multiple physical links into a single logical link. Explain the LACP (open standard) and PAgP (Cisco proprietary) negotiation protocols."
+  },
+  {
+    "n": 26,
+    "title": "Spanning Tree Protocol (STP)",
+    "math": "Graph Theory",
+    "note": "Introduce STP (802.1D) as a protocol that prevents Layer 2 loops in networks with redundant switch links. Explain the election of a root bridge and port roles."
+  },
+  {
+    "n": 27,
+    "title": "Module 4: Routing - The Routing Table",
+    "math": "N/A",
+    "note": "Explain how a router makes forwarding decisions. Cover how to read a routing table, including route source, administrative distance, and metric."
+  },
+  {
+    "n": 28,
+    "title": "Static Routing",
+    "math": "N/A",
+    "note": "Demonstrate the configuration of IPv4 and IPv6 static routes, including default routes ('gateway of last resort')."
+  },
+  {
+    "n": 29,
+    "title": "Inter-VLAN Routing",
+    "math": "N/A",
+    "note": "Explain the need for a router or Layer 3 switch to enable communication between different VLANs. Introduce the 'Router on a Stick' configuration."
+  },
+  {
+    "n": 30,
+    "title": "Introduction to OSPFv2",
+    "math": "Shortest Path First Algorithms",
+    "note": "Introduce OSPF as a dynamic routing protocol. Explain neighbor adjacencies, router IDs, areas, and the cost metric."
+  },
+  {
+    "n": 31,
+    "title": "Configuring Single-Area OSPFv2",
+    "math": "N/A",
+    "note": "Provide a practical guide to configuring and verifying single-area OSPFv2, including network statements and `show` commands."
+  },
+  {
+    "n": 32,
+    "title": "Module 5: IP Services - Network Address Translation (NAT)",
+    "math": "N/A",
+    "note": "Explain the purpose of NAT. Differentiate between static NAT, dynamic NAT, and Port Address Translation (PAT)."
+  },
+  {
+    "n": 33,
+    "title": "Network Time Protocol (NTP)",
+    "math": "N/A",
+    "note": "Cover NTP for synchronizing clocks. Demonstrate how to configure a Cisco device as an NTP client."
+  },
+  {
+    "n": 34,
+    "title": "Dynamic Host Configuration Protocol (DHCP)",
+    "math": "N/A",
+    "note": "Explain the DORA process. Demonstrate how to configure a Cisco router to act as a DHCP server."
+  },
+  {
+    "n": 35,
+    "title": "Domain Name System (DNS)",
+    "math": "N/A",
+    "note": "Explain the role of DNS in translating domain names to IP addresses. Cover how to configure DNS servers on a client device."
+  },
+  {
+    "n": 36,
+    "title": "Simple Network Management Protocol (SNMP)",
+    "math": "N/A",
+    "note": "Provide an overview of SNMP for collecting information about managed devices on a network."
+  },
+  {
+    "n": 37,
+    "title": "Module 6: Security - Access Control Lists (ACLs)",
+    "math": "Boolean Logic",
+    "note": "Introduce ACLs for filtering traffic. Explain the difference between standard and extended ACLs and the implicit 'deny any'."
+  },
+  {
+    "n": 38,
+    "title": "Configuring Standard and Extended ACLs",
+    "math": "N/A",
+    "note": "Demonstrate how to configure numbered and named ACLs and apply them to router interfaces."
+  },
+  {
+    "n": 39,
+    "title": "Port Security",
+    "math": "N/A",
+    "note": "Teach how to configure Port Security on a Cisco switch to limit the number of MAC addresses allowed on a port and prevent MAC address flooding."
+  },
+  {
+    "n": 40,
+    "title": "DHCP Snooping",
+    "math": "N/A",
+    "note": "Explain how DHCP Snooping is used to prevent rogue DHCP servers from operating on the network."
+  },
+  {
+    "n": 41,
+    "title": "Wireless LAN Security (WPA2/WPA3)",
+    "math": "N/A",
+    "note": "Cover securing wireless networks with WPA2 and WPA3. Demonstrate configuring Pre-Shared Key (PSK) authentication."
+  },
+  {
+    "n": 42,
+    "title": "Module 7: Automation - REST APIs and JSON",
+    "math": "N/A",
+    "note": "Provide an overview of REST APIs and JSON as foundational technologies for modern network automation."
+  },
+  {
+    "n": 43,
     "title": "Configuration Management Tools",
-    "math": "Declarative configuration",
-    "note": "This final lesson provides a high-level overview of popular configuration management tools like Ansible, Puppet, and Chef. It explains how these tools allow network administrators to define the desired state of their network devices in code, and the tool then automatically enforces that state."
+    "math": "N/A",
+    "note": "Provide a high-level overview of Ansible, Puppet, and Chef and their role in declarative network configuration."
+  },
+  {
+    "n": 44,
+    "title": "Module 8: Final Project - Small Office Network",
+    "math": "N/A",
+    "note": "Outline the final project: design and configure a small office network in Cisco Packet Tracer, including a router, two switches, two VLANs, and basic security."
+  },
+  {
+    "n": 45,
+    "title": "Final Project: Network Design and IP Addressing",
+    "math": "N/A",
+    "note": "Create a network diagram and an IP addressing scheme for the final project network."
+  },
+  {
+    "n": 46,
+    "title": "Final Project: Basic Device Configuration",
+    "math": "N/A",
+    "note": "Perform initial device configuration, including hostnames, passwords, and management IP addresses."
+  },
+  {
+    "n": 47,
+    "title": "Final Project: VLANs and Trunking",
+    "math": "N/A",
+    "note": "Configure two VLANs (e.g., Sales and Engineering) and set up an 802.1Q trunk between the two switches."
+  },
+  {
+    "n": 48,
+    "title": "Final Project: Inter-VLAN Routing",
+    "math": "N/A",
+    "note": "Configure 'Router on a Stick' on the router to enable communication between the two VLANs."
+  },
+  {
+    "n": 49,
+    "title": "Final Project: Security Configuration",
+    "math": "N/A",
+    "note": "Implement a basic ACL to restrict traffic between the VLANs and configure Port Security on the switches."
+  },
+  {
+    "n": 50,
+    "title": "Module 9: Further Reading",
+    "math": "N/A",
+    "note": "Provide links to the official Cisco CCNA exam topics, recommended study guides, and online lab resources."
   }
 ]

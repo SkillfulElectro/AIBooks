@@ -1,182 +1,224 @@
 [
   {
     "n": 1,
-    "title": "Enterprise Network Design Principles",
-    "math": "Network topology, graph theory",
-    "note": "This lesson covers enterprise network design principles, including the 2-tier, 3-tier, and spine-leaf architectures. It also introduces modern concepts like SD-WAN and SD-Access for building intelligent and automated wide-area and campus networks. The context is the CCNP ENCOR exam blueprint."
+    "title": "Module 1: Enterprise Architecture - Hierarchical Design",
+    "math": "N/A",
+    "note": "Review the two-tier (collapsed core) and three-tier (core, distribution, access) hierarchical network design models. Discuss scalability, redundancy, and performance implications of each. The context is the CCNP ENCOR exam blueprint."
   },
   {
     "n": 2,
-    "title": "Spanning Tree Protocol (STP) Deep Dive",
-    "math": "Graph algorithms (spanning tree)",
-    "note": "A deep dive into STP and its variants (RSTP, MSTP). This lesson covers the election of the root bridge, port roles (root, designated, alternate), and how to manipulate STP behavior using priority values and port costs to build a resilient, loop-free Layer 2 topology."
+    "title": "Spine-Leaf Architecture",
+    "math": "Graph Theory",
+    "note": "Deep dive into the spine-leaf architecture for modern data centers. Explain how it provides high bandwidth, low latency, and predictable performance for east-west traffic flows."
   },
   {
     "n": 3,
-    "title": "Advanced VLANs and Trunking",
-    "math": "Set theory, tagging protocols",
-    "note": "This section moves beyond basic VLANs to cover advanced topics like VLAN Trunking Protocol (VTP) for centralized VLAN management and Dynamic Trunking Protocol (DTP) for negotiating trunk links. The security implications and best practices for each are discussed."
+    "title": "SD-WAN and SD-Access",
+    "math": "N/A",
+    "note": "Introduce Cisco's Software-Defined Networking (SDN) solutions. Explain the concepts of SD-WAN for intelligent wide-area networking and SD-Access for policy-based automation in campus networks."
   },
   {
     "n": 4,
-    "title": "Configuring EtherChannel",
-    "math": "Link aggregation, hashing algorithms",
-    "note": "This lesson provides a detailed guide to configuring link aggregation with EtherChannel. It covers both the Cisco-proprietary PAgP and the industry-standard LACP negotiation protocols, and explains the different load-balancing algorithms that can be used."
+    "title": "Module 2: Advanced Switching - STP Deep Dive",
+    "math": "Graph Algorithms",
+    "note": "Go beyond basic STP. Cover the mechanics of RSTP (802.1w) for faster convergence and MSTP (802.1s) for load balancing across multiple VLANs."
   },
   {
     "n": 5,
-    "title": "First Hop Redundancy Protocols (FHRP)",
-    "math": "Failover logic, priority algorithms",
-    "note": "This section covers protocols for providing default gateway redundancy. It details the configuration and operation of HSRP (Hot Standby Router Protocol), VRRP (Virtual Router Redundancy Protocol), and GLBP (Gateway Load Balancing Protocol)."
+    "title": "STP Security and Optimization",
+    "math": "N/A",
+    "note": "Teach how to secure the STP topology using features like BPDU Guard, Root Guard, and Loop Guard. Discuss optimization techniques."
   },
   {
     "n": 6,
-    "title": "Advanced EIGRP: Path Calculation",
-    "math": "Composite metrics, finite state machines",
-    "note": "A deep dive into the EIGRP routing protocol. This lesson focuses on the DUAL (Diffusing Update Algorithm) finite state machine and how EIGRP calculates its composite metric using bandwidth and delay. The concepts of Feasible Distance and Reported Distance are explained."
+    "title": "VTP and DTP",
+    "math": "N/A",
+    "note": "Cover VLAN Trunking Protocol (VTP) for centralized VLAN management and Dynamic Trunking Protocol (DTP) for trunk negotiation. Discuss best practices and security risks."
   },
   {
     "n": 7,
-    "title": "Advanced EIGRP: Optimization",
-    "math": "Route summarization",
-    "note": "This lesson covers techniques for optimizing EIGRP. It includes manual route summarization to reduce the size of routing tables, configuring unequal-cost load balancing with the 'variance' command, and managing EIGRP neighbor relationships."
+    "title": "EtherChannel Configuration",
+    "math": "N/A",
+    "note": "Provide a detailed guide to configuring link aggregation with EtherChannel, covering both LACP and PAgP negotiation protocols and load-balancing algorithms."
   },
   {
     "n": 8,
-    "title": "Advanced OSPF: LSA Types and Areas",
-    "math": "Graph theory, area-based segmentation",
-    "note": "This section provides a deep dive into OSPF. It details the different OSPF LSA (Link-State Advertisement) types and explains the concept of a multi-area OSPF design, including backbone, standard, stub, and NSSA areas."
+    "title": "First Hop Redundancy Protocols (FHRP)",
+    "math": "N/A",
+    "note": "Detail the configuration and operation of HSRP, VRRP, and GLBP for providing default gateway redundancy."
   },
   {
     "n": 9,
-    "title": "Advanced OSPF: Configuration and Verification",
-    "math": "Dijkstra's algorithm",
-    "note": "This lesson covers the practical implementation of multi-area OSPF. It demonstrates how to configure OSPF areas, summarization, and other advanced features. It also covers the `show` commands used to verify OSPF neighbor states, the database, and the routing table."
+    "title": "Module 3: Advanced Routing - EIGRP",
+    "math": "Finite State Machines",
+    "note": "Deep dive into EIGRP's DUAL algorithm. Explain Feasible Distance, Reported Distance, and the concepts of successor and feasible successor."
   },
   {
     "n": 10,
-    "title": "Route Redistribution",
-    "math": "Routing protocol interaction",
-    "note": "This lesson explains how to configure route redistribution, the process of exchanging routing information between different routing protocols (e.g., between EIGRP and OSPF). It covers the challenges of redistribution, such as routing loops and metric manipulation."
+    "title": "EIGRP Optimization",
+    "math": "N/A",
+    "note": "Cover manual route summarization, unequal-cost load balancing with `variance`, and stub routing."
   },
   {
     "n": 11,
-    "title": "Controlling Redistribution with Route Maps",
-    "math": "Policy-based routing, boolean logic",
-    "note": "This section introduces route maps as a powerful tool for controlling routing policy. It demonstrates how to use route maps with `match` and `set` commands to filter which routes are redistributed and to modify their metrics."
+    "title": "OSPF: LSA Types",
+    "math": "N/A",
+    "note": "Provide a detailed breakdown of the common OSPF LSA types (1, 2, 3, 4, 5, 7) and the information they carry."
   },
   {
     "n": 12,
-    "title": "Introduction to BGP",
-    "math": "Path-vector protocol theory",
-    "note": "This lesson introduces BGP (Border Gateway Protocol) as the routing protocol of the internet. It explains the difference between Internal BGP (iBGP) and External BGP (eBGP) and covers the fundamental concepts of Autonomous Systems (AS) and path attributes."
+    "title": "OSPF: Area Types",
+    "math": "N/A",
+    "note": "Explain OSPF area types: backbone, standard, stub, totally stubby, and Not-So-Stubby-Areas (NSSA)."
   },
   {
     "n": 13,
-    "title": "BGP Path Selection",
-    "math": "Best-path algorithm",
-    "note": "This section details the BGP best-path selection algorithm. It covers the sequence of path attributes that BGP uses to select the best route to a destination, including Weight, Local Preference, AS_PATH, and MED (Multi-Exit Discriminator)."
+    "title": "OSPF: Multi-Area Configuration",
+    "math": "N/A",
+    "note": "Demonstrate how to configure a multi-area OSPF network, including summarization between areas."
   },
   {
     "n": 14,
-    "title": "Configuring eBGP and iBGP",
-    "math": "Peer session configuration",
-    "note": "This lesson provides a practical guide to configuring BGP. It demonstrates how to establish eBGP peerings between different Autonomous Systems and iBGP peerings within the same AS. Verification commands for checking neighbor status and received routes are covered."
+    "title": "Route Redistribution",
+    "math": "N/A",
+    "note": "Explain how to configure route redistribution between different routing protocols. Discuss seed metrics and administrative distance manipulation."
   },
   {
     "n": 15,
-    "title": "Virtualization with VRF-Lite",
-    "math": "Routing table virtualization",
-    "note": "This lesson introduces VRF (Virtual Routing and Forwarding) as a technology to create multiple virtual routers within a single physical router. It demonstrates how to configure VRF-Lite to segment routing tables and create isolated network paths."
+    "title": "Controlling Redistribution with Route Maps",
+    "math": "Policy-Based Routing",
+    "note": "Introduce route maps to filter routes and modify their attributes during redistribution using `match` and `set` commands."
   },
   {
     "n": 16,
-    "title": "GRE Tunneling",
-    "math": "Encapsulation",
-    "note": "This section covers Generic Routing Encapsulation (GRE), a simple tunneling protocol for encapsulating a wide variety of network layer protocols inside virtual point-to-point links over an IP network."
+    "title": "Introduction to BGP",
+    "math": "N/A",
+    "note": "Introduce BGP as the routing protocol of the internet. Explain Autonomous Systems (AS), eBGP vs. iBGP, and the concept of path attributes."
   },
   {
     "n": 17,
-    "title": "Introduction to MPLS",
-    "math": "Label switching",
-    "note": "This lesson provides an overview of MPLS (Multiprotocol Label Switching). It explains how MPLS works by adding labels to packets and making forwarding decisions based on those labels, creating a high-speed and flexible core network."
+    "title": "BGP Path Selection Algorithm",
+    "math": "N/A",
+    "note": "Detail the BGP best-path selection algorithm, covering Weight, Local Preference, AS_PATH, Origin, and MED."
   },
   {
     "n": 18,
-    "title": "Dynamic Multipoint VPN (DMVPN)",
-    "math": "Hub-and-spoke topology",
-    "note": "This section introduces DMVPN as a scalable solution for building VPNs. It explains the components of DMVPN: mGRE (multipoint GRE) tunnels, NHRP (Next Hop Resolution Protocol), and IPsec for encryption, allowing for dynamic spoke-to-spoke communication."
+    "title": "Configuring BGP",
+    "math": "N/A",
+    "note": "Demonstrate how to configure eBGP and iBGP peerings and advertise networks into BGP."
   },
   {
     "n": 19,
-    "title": "Infrastructure Security: AAA",
-    "math": "Authentication, Authorization, and Accounting",
-    "note": "This lesson covers how to secure device management access using the AAA framework. It demonstrates how to configure local authentication and how to use RADIUS or TACACS+ for centralized authentication with a server."
+    "title": "Module 4: VPN Technologies - VRF-Lite",
+    "math": "N/A",
+    "note": "Introduce VRF (Virtual Routing and Forwarding) to create multiple virtual routers within a single physical router for network segmentation."
   },
   {
     "n": 20,
-    "title": "Infrastructure Security: CoPP",
-    "math": "Rate limiting",
-    "note": "This section introduces Control Plane Policing (CoPP), a mechanism to protect the router's CPU from denial-of-service attacks by rate-limiting traffic destined for the control plane."
+    "title": "GRE Tunneling",
+    "math": "Encapsulation",
+    "note": "Cover Generic Routing Encapsulation (GRE) for creating simple, unencrypted tunnels over an IP network."
   },
   {
     "n": 21,
-    "title": "Infrastructure Services: Advanced NAT",
-    "math": "Address translation",
-    "note": "This lesson covers more advanced Network Address Translation scenarios, including policy-based NAT and configuring NAT for different VRFs, which is essential in complex enterprise networks."
+    "title": "DMVPN",
+    "math": "N/A",
+    "note": "Introduce Dynamic Multipoint VPN (DMVPN) as a scalable VPN solution using mGRE, NHRP, and IPsec."
   },
   {
     "n": 22,
-    "title": "Network Assurance: Syslog and SNMP",
-    "math": "Logging levels and MIBs",
-    "note": "This section covers key network monitoring protocols. It explains how to configure devices to send log messages to a central Syslog server and how to use SNMP (Simple Network Management Protocol) to poll devices for performance data and receive traps for important events."
+    "title": "IPsec Fundamentals",
+    "math": "Cryptography",
+    "note": "Explain the IPsec framework, including the roles of IKE, ESP, and AH for creating secure VPN tunnels."
   },
   {
     "n": 23,
-    "title": "Network Assurance: NetFlow",
-    "math": "Data flow analysis",
-    "note": "This lesson introduces NetFlow as a technology for collecting and analyzing IP traffic information. It explains how NetFlow data can be used for network monitoring, security analysis, and traffic profiling."
+    "title": "Module 5: Infrastructure Security - AAA",
+    "math": "N/A",
+    "note": "Cover securing device management using the AAA framework with local authentication and centralized RADIUS/TACACS+."
   },
   {
     "n": 24,
-    "title": "Network Assurance: SPAN/RSPAN",
-    "math": "Traffic mirroring",
-    "note": "This section covers Switched Port Analyzer (SPAN) and Remote SPAN (RSPAN) as tools for traffic analysis. It demonstrates how to configure a switch to mirror traffic from source ports or VLANs to a destination port connected to a network analyzer."
+    "title": "Control Plane Policing (CoPP)",
+    "math": "N/A",
+    "note": "Introduce CoPP to protect the router's CPU from denial-of-service attacks by rate-limiting traffic."
   },
   {
     "n": 25,
-    "title": "Advanced Wireless LANs",
-    "math": "RF design",
-    "note": "This lesson expands on wireless topics, covering advanced concepts such as RF design principles, roaming between access points, and the configuration of multiple SSIDs on a Wireless LAN Controller (WLC)."
+    "title": "Module 6: Network Assurance - Syslog and SNMP",
+    "math": "N/A",
+    "note": "Cover configuring devices to send logs to a Syslog server and using SNMP to poll devices for performance data."
   },
   {
     "n": 26,
-    "title": "Wireless Security",
-    "math": "Encryption standards",
-    "note": "This section provides a deep dive into securing wireless networks. It covers the configuration of WPA2 and WPA3 security protocols, and demonstrates how to set up Enterprise authentication using 802.1X and a RADIUS server."
+    "title": "NetFlow",
+    "math": "Data Flow Analysis",
+    "note": "Introduce NetFlow for collecting and analyzing IP traffic information for monitoring and security analysis."
   },
   {
     "n": 27,
-    "title": "Introduction to Network Automation",
-    "math": "API principles",
-    "note": "This section introduces the modern approach to network management through automation. It explains the benefits of programmability and covers the foundational concepts of using scripts and APIs to configure and monitor network devices."
+    "title": "SPAN/RSPAN",
+    "math": "N/A",
+    "note": "Cover Switched Port Analyzer (SPAN) and Remote SPAN (RSPAN) for mirroring traffic to a network analyzer."
   },
   {
     "n": 28,
-    "title": "Working with Data Formats: JSON and YANG",
-    "math": "Data modeling",
-    "note": "This lesson covers the data formats used in network automation. It explains the structure of JSON and introduces YANG as a data modeling language for network device configuration. The relationship between these formats is discussed."
+    "title": "Module 7: Wireless - Advanced WLANs",
+    "math": "N/A",
+    "note": "Cover advanced wireless concepts such as RF design, roaming, and configuring multiple SSIDs on a Wireless LAN Controller (WLC)."
   },
   {
     "n": 29,
-    "title": "REST APIs and NETCONF/RESTCONF",
-    "math": "API protocols",
-    "note": "This section introduces the primary protocols for interacting with network devices programmatically. It covers the principles of REST APIs and introduces NETCONF and RESTCONF as standardized protocols for network configuration and management."
+    "title": "Wireless Security",
+    "math": "N/A",
+    "note": "Deep dive into securing wireless networks with WPA2/WPA3 and Enterprise authentication using 802.1X and a RADIUS server."
   },
   {
     "n": 30,
+    "title": "Module 8: Automation - Data Formats",
+    "math": "N/A",
+    "note": "Cover the data formats used in network automation: JSON for data exchange and YANG as a data modeling language."
+  },
+  {
+    "n": 31,
+    "title": "APIs: REST and NETCONF/RESTCONF",
+    "math": "N/A",
+    "note": "Introduce the primary protocols for programmatic device interaction: REST APIs and the standardized NETCONF and RESTCONF protocols."
+  },
+  {
+    "n": 32,
     "title": "Configuration Management Tools",
-    "math": "Declarative configuration",
-    "note": "This lesson provides an overview of popular configuration management tools like Ansible, Puppet, and Chef, explaining how they can be used to automate the deployment and management of network infrastructure in a declarative, scalable way."
+    "math": "N/A",
+    "note": "Provide an overview of Ansible, Puppet, and Chef for automating network infrastructure deployment and management."
+  },
+  {
+    "n": 33,
+    "title": "Module 9: Final Project - Enterprise Network",
+    "math": "N/A",
+    "note": "Outline the final project: design and configure a multi-site enterprise network with redundant links, multiple routing protocols (EIGRP, OSPF, BGP), and advanced services in a simulator."
+  },
+  {
+    "n": 34,
+    "title": "Final Project: Designing the Topology",
+    "math": "N/A",
+    "note": "Create a detailed network diagram and IP addressing plan for a headquarters site and two branch offices."
+  },
+  {
+    "n": 35,
+    "title": "Final Project: IGP Configuration",
+    "math": "N/A",
+    "note": "Configure EIGRP and OSPF as the Interior Gateway Protocols within the different sites."
+  },
+  {
+    "n": 36,
+    "title": "Final Project: BGP Configuration and Redistribution",
+    "math": "N/A",
+    "note": "Configure eBGP between the sites and redistribute the IGP routes into BGP, using route maps to control the process."
+  },
+  {
+    "n": 37,
+    "title": "Module 10: Further Reading",
+    "math": "N/A",
+    "note": "Provide links to official Cisco documentation, white papers, and study resources for the CCNP concentration exams like ENARSI."
   }
 ]

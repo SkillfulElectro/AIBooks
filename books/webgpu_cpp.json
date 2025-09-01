@@ -1,0 +1,350 @@
+[
+  {
+    "n": 1,
+    "title": "Module 1: C++ Setup - `webgpu.h`",
+    "math": "N/A",
+    "note": "Introduce `webgpu.h` as the standard C header that defines the WebGPU API for native applications. Explain its C-style, object-based API where all entities are opaque handles (`WGPU...`). The context is a C++17 project."
+  },
+  {
+    "n": 2,
+    "title": "Choosing a WebGPU Implementation",
+    "math": "N/A",
+    "note": "Explain that `webgpu.h` requires a backing implementation. Introduce the main options: Google's Dawn (used in Chromium) and `wgpu-native` (from the Rust wgpu project). This course will use `wgpu-native`."
+  },
+  {
+    "n": 3,
+    "title": "Project Setup with CMake",
+    "math": "N/A",
+    "note": "Guide through setting up a C++ project using CMake. Create a `CMakeLists.txt` with `cmake_minimum_required`, `project`, `add_executable`, and `target_include_directories`."
+  },
+  {
+    "n": 4,
+    "title": "Fetching and Linking an Implementation",
+    "math": "N/A",
+    "note": "Show how to use CMake to download pre-compiled `wgpu-native` binaries from GitHub. Use `find_path` and `find_library` to locate the header and library files."
+  },
+  {
+    "n": 5,
+    "title": "Module 2: Core Concepts - Manual Resource Management",
+    "math": "Reference Counting",
+    "note": "Introduce the most critical concept: manual resource management. Explain that every `WGPU...` handle is a reference-counted object and must be explicitly released with its corresponding `wgpu...Release()` function to prevent memory leaks."
+  },
+  {
+    "n": 6,
+    "title": "RAII Wrappers for WGPU Handles",
+    "math": "Object-Oriented Programming",
+    "note": "Introduce a C++ best practice: creating simple RAII wrapper classes (e.g., `WgpuDeviceWrapper`) that call the appropriate `wgpu...Release()` function in their destructor (`~WgpuDeviceWrapper()`) to ensure resources are always cleaned up."
+  },
+  {
+    "n": 7,
+    "title": "The Asynchronous C API: Callbacks",
+    "math": "Asynchronous Programming (Callbacks), Function Pointers",
+    "note": "Explain that async operations in the C API are handled with callbacks. This involves passing a C function pointer and a `void* userdata` pointer to the async call."
+  },
+  {
+    "n": 8,
+    "title": "Using `userdata` to Pass `this`",
+    "math": "N/A",
+    "note": "Show the common C++ pattern for callbacks: define a static member function as the callback, and pass the `this` pointer of your class instance as the `userdata`. Inside the static function, cast `userdata` back to your class type to call member functions."
+  },
+  {
+    "n": 9,
+    "title": "Creating the `WGPUInstance`",
+    "math": "N/A",
+    "note": "Show how to create a `WGPUInstance` with `wgpuCreateInstance()`. This is the synchronous entry point to the library."
+  },
+  {
+    "n": 10,
+    "title": "Requesting a `WGPUAdapter`",
+    "math": "N/A",
+    "note": "Define a static callback for adapter requests. Call `wgpuInstanceRequestAdapter()` with the instance, options, the callback function pointer, and a pointer to your application class as `userdata`."
+  },
+  {
+    "n": 11,
+    "title": "Polling for Async Events",
+    "math": "N/A",
+    "note": "Explain that the application must call `wgpuInstanceProcessEvents` (or `wgpuDeviceTick`) in a loop to allow the implementation to process events and fire pending callbacks."
+  },
+  {
+    "n": 12,
+    "title": "Requesting a `WGPUDevice`",
+    "math": "N/A",
+    "note": "Inside the adapter callback, show how to request a `WGPUDevice`. This follows the same pattern: define a device callback and call `wgpuAdapterRequestDevice()`."
+  },
+  {
+    "n": 13,
+    "title": "Setting an Error Callback",
+    "math": "N/A",
+    "note": "Show how to use `wgpuDeviceSetUncapturedErrorCallback()` to register a callback that will be fired for any API misuse, which is essential for debugging."
+  },
+  {
+    "n": 14,
+    "title": "Getting the `WGPUQueue`",
+    "math": "N/A",
+    "note": "Once the device is available, get its default `WGPUQueue` using `wgpuDeviceGetQueue()`."
+  },
+  {
+    "n": 15,
+    "title": "Module 3: Windowing - Setup with GLFW",
+    "math": "N/A",
+    "note": "Introduce GLFW as a simple library for creating windows in C++. Show how to initialize it, create a `GLFWwindow`, and set up a basic application loop (`while (!glfwWindowShouldClose(window))`)."
+  },
+  {
+    "n": 16,
+    "title": "Creating a `WGPUSurface` (Platform-Specific)",
+    "math": "Platform-Specific APIs",
+    "note": "Explain that creating a `WGPUSurface` requires native window handles. Show a helper function using preprocessor directives (`#if defined(_WIN32)`, etc.) and GLFW's functions (`glfwGetWin32Window`) to create the surface."
+  },
+  {
+    "n": 17,
+    "title": "Configuring the Surface",
+    "math": "N/A",
+    "note": "Call `wgpuSurfaceConfigure()` with a `WGPUSurfaceConfiguration` C struct. You must specify the `device`, `format`, `usage`, `width`, and `height`."
+  },
+  {
+    "n": 18,
+    "title": "Module 4: Shaders & Pipeline - Loading WGSL",
+    "math": "N/A",
+    "note": "Show how to load a `.wgsl` file from disk into a `std::string` using C++ `<fstream>`."
+  },
+  {
+    "n": 19,
+    "title": "Creating the `WGPUShaderModule`",
+    "math": "N/A",
+    "note": "Create a `WGPUShaderModule` from the loaded WGSL string. This involves creating a `WGPUShaderModuleWGSLDescriptor`, chaining it into a `WGPUShaderModuleDescriptor`, and passing that to `wgpuDeviceCreateShaderModule()`."
+  },
+  {
+    "n": 20,
+    "title": "The `WGPURenderPipelineDescriptor`",
+    "math": "N/A",
+    "note": "Explain that creating a `WGPURenderPipeline` requires meticulously filling out a large `WGPURenderPipelineDescriptor` C struct. Stress the importance of zero-initializing it first."
+  },
+  {
+    "n": 21,
+    "title": "Chained Structs with `nextInChain`",
+    "math": "Data Structures (Linked Lists)",
+    "note": "Introduce the `nextInChain` member of descriptor structs. Explain how it's used to pass extension-specific or optional information, forming a linked list of structs."
+  },
+  {
+    "n": 22,
+    "title": "Configuring `WGPUVertexState`",
+    "math": "N/A",
+    "note": "Fill out the `WGPUVertexState` struct, providing the `module` handle, `entryPoint` name, and a pointer to the `WGPUVertexBufferLayout` array."
+  },
+  {
+    "n": 23,
+    "title": "Configuring `WGPUFragmentState`",
+    "math": "N/A",
+    "note": "Fill out the `WGPUFragmentState` struct, providing the `module`, `entryPoint`, and a pointer to the `WGPUColorTargetState` array."
+  },
+  {
+    "n": 24,
+    "title": "Configuring `WGPUColorTargetState`",
+    "math": "N/A",
+    "note": "Fill out the `WGPUColorTargetState` struct, specifying the `format` and optionally the `blend` state and `writeMask`."
+  },
+  {
+    "n": 25,
+    "title": "Configuring `WGPUPrimitiveState`",
+    "math": "N/A",
+    "note": "Fill out the `WGPUPrimitiveState` struct, setting `topology`, `cullMode`, etc."
+  },
+  {
+    "n": 26,
+    "title": "Configuring `WGPUDepthStencilState`",
+    "math": "N/A",
+    "note": "Explain how to configure the `depthStencil` field of the pipeline descriptor by pointing it to a `WGPUDepthStencilState` struct to enable depth testing."
+  },
+  {
+    "n": 27,
+    "title": "Configuring `WGPUMultisampleState`",
+    "math": "N/A",
+    "note": "Explain the `WGPUMultisampleState` struct for configuring MSAA, setting the `count` and `mask`."
+  },
+  {
+    "n": 28,
+    "title": "Creating the `WGPUPipelineLayout`",
+    "math": "N/A",
+    "note": "Create a `WGPUPipelineLayout` with `wgpuDeviceCreatePipelineLayout()`, providing a descriptor that points to an array of `WGPUBindGroupLayout` handles."
+  },
+  {
+    "n": 29,
+    "title": "Creating the `WGPURenderPipeline`",
+    "math": "N/A",
+    "note": "Call `wgpuDeviceCreateRenderPipeline()` with the complete descriptor."
+  },
+  {
+    "n": 30,
+    "title": "Module 5: Drawing - The Main Loop",
+    "math": "N/A",
+    "note": "Inside the `while (!glfwWindowShouldClose(window))` loop, get the current texture, create an encoder, begin a render pass, record commands, submit, and present."
+  },
+  {
+    "n": 31,
+    "title": "Getting the `WGPUSurfaceTexture`",
+    "math": "N/A",
+    "note": "Get the `WGPUSurfaceTexture` with `wgpuSurfaceGetCurrentTexture()`. Check for a valid texture."
+  },
+  {
+    "n": 32,
+    "title": "Creating the `WGPUTextureView`",
+    "math": "N/A",
+    "note": "Create a `WGPUTextureView` from the surface texture with `wgpuTextureCreateView()`. This view is the render target."
+  },
+  {
+    "n": 33,
+    "title": "Configuring the `WGPURenderPassDescriptor`",
+    "math": "N/A",
+    "note": "Fill out the `WGPURenderPassDescriptor`. Its `colorAttachments` field is a pointer to a `WGPURenderPassColorAttachment` struct."
+  },
+  {
+    "n": 34,
+    "title": "Setting the Render Pass `view` and `loadOp`",
+    "math": "N/A",
+    "note": "In the color attachment, set the `view` to the texture view, `loadOp` to `WGPULoadOp_Clear`, `storeOp` to `WGPUStoreOp_Store`, and `clearValue`."
+  },
+  {
+    "n": 35,
+    "title": "Setting Pipeline and Drawing",
+    "math": "N/A",
+    "note": "Use `wgpuRenderPassEncoderSetPipeline()` and `wgpuRenderPassEncoderDraw()`."
+  },
+  {
+    "n": 36,
+    "title": "Submitting the `WGPUCommandBuffer`",
+    "math": "N/A",
+    "note": "Finish the encoder to get a `WGPUCommandBuffer`, then submit it with `wgpuQueueSubmit()`."
+  },
+  {
+    "n": 37,
+    "title": "Presenting with `wgpuSurfacePresent`",
+    "math": "N/A",
+    "note": "Call `wgpuSurfacePresent()` to display the frame."
+  },
+  {
+    "n": 38,
+    "title": "Releasing Frame Resources",
+    "math": "N/A",
+    "note": "Show how to properly release the `WGPUTextureView` and `WGPUSurfaceTexture` handles at the end of the frame."
+  },
+  {
+    "n": 39,
+    "title": "Module 6: Buffers in C++",
+    "math": "N/A",
+    "note": "Explain creating and managing buffers in C++."
+  },
+  {
+    "n": 40,
+    "title": "Creating a `WGPUBuffer`",
+    "math": "N/A",
+    "note": "Use `wgpuDeviceCreateBuffer()` with a `WGPUBufferDescriptor`, specifying `size` and `usage`."
+  },
+  {
+    "n": 41,
+    "title": "Uploading Data with `wgpuQueueWriteBuffer`",
+    "math": "N/A",
+    "note": "Upload data from a `std::vector` or C-style array using a `void*` pointer and the size in bytes."
+  },
+  {
+    "n": 42,
+    "title": "Describing `WGPUVertexBufferLayout`",
+    "math": "N/A",
+    "note": "Fill out a `WGPUVertexBufferLayout` struct, providing `arrayStride` and a pointer to an array of `WGPUVertexAttribute` structs."
+  },
+  {
+    "n": 43,
+    "title": "Setting Vertex and Index Buffers",
+    "math": "N/A",
+    "note": "Use `wgpuRenderPassEncoderSetVertexBuffer()` and `wgpuRenderPassEncoderSetIndexBuffer()`."
+  },
+  {
+    "n": 44,
+    "title": "Module 7: Uniforms and Bind Groups in C++",
+    "math": "N/A",
+    "note": "Define uniform data in a C++ `struct`, being careful with `alignas` to match WGSL's memory layout rules."
+  },
+  {
+    "n": 45,
+    "title": "Creating a `WGPUBindGroupLayout`",
+    "math": "N/A",
+    "note": "Fill out a `WGPUBindGroupLayoutDescriptor`, providing a pointer to an array of `WGPUBindGroupLayoutEntry` structs."
+  },
+  {
+    "n": 46,
+    "title": "Creating a `WGPUBindGroup`",
+    "math": "N/A",
+    "note": "Fill out a `WGPUBindGroupDescriptor`, providing the layout and a pointer to an array of `WGPUBindGroupEntry` structs that link the actual buffer resource."
+  },
+  {
+    "n": 47,
+    "title": "Module 8: Textures in C++",
+    "math": "N/A",
+    "note": "Introduce a C++ image loading library like `stb_image.h`."
+  },
+  {
+    "n": 48,
+    "title": "Creating and Uploading `WGPUTexture`",
+    "math": "N/A",
+    "note": "Create a `WGPUTexture` and upload the raw image data to it using `wgpuQueueWriteTexture()`."
+  },
+  {
+    "n": 49,
+    "title": "Creating a `WGPUSampler`",
+    "math": "N/A",
+    "note": "Use `wgpuDeviceCreateSampler()` with a `WGPUSamplerDescriptor`."
+  },
+  {
+    "n": 50,
+    "title": "Module 9: Compute Shaders in C++",
+    "math": "N/A",
+    "note": "Introduce the `WGPUComputePipeline` and `WGPUComputePassEncoder`."
+  },
+  {
+    "n": 51,
+    "title": "Reading Data Back with Callbacks",
+    "math": "N/A",
+    "note": "Show how to use a staging buffer and `wgpuBufferMapAsync()` with a callback to read data back from the GPU to the CPU."
+  },
+  {
+    "n": 52,
+    "title": "Module 10: Final Project - Game Engine Architecture",
+    "math": "Software Architecture",
+    "note": "Outline the architecture for a basic game engine in C++. Introduce key concepts: an `Application` class, a `Renderer` class, a simple component system, and a scene manager."
+  },
+  {
+    "n": 53,
+    "title": "Final Project: The `Renderer` Class",
+    "math": "Object-Oriented Programming",
+    "note": "Design a C++ `Renderer` class to encapsulate all core WGPU handles (`WGPUDevice`, `WGPUQueue`, etc.). The constructor will handle initialization, and the destructor will be responsible for releasing all resources, demonstrating RAII."
+  },
+  {
+    "n": 54,
+    "title": "Final Project: A Simple Component System",
+    "math": "Data Structures",
+    "note": "Design a basic component system without external libraries. Create a base `Component` class and derive specific components like `TransformComponent` and `MeshComponent`. Game objects will be simple structs or classes owning a vector of components."
+  },
+  {
+    "n": 55,
+    "title": "Final Project: A Scene Manager",
+    "math": "N/A",
+    "note": "Create a `Scene` class that owns a list of game objects. The `Renderer` will take a `Scene` as input to its `render` method."
+  },
+  {
+    "n": 56,
+    "title": "Final Project: A Material System",
+    "math": "N/A",
+    "note": "Design a simple material system. Create a base `Material` class that holds a `WGPURenderPipeline` and `WGPUBindGroup`s. Create subclasses like `BasicMaterial` for specific shaders."
+  },
+  {
+    "n": 57,
+    "title": "Final Project: Loading `.obj` Models",
+    "math": "N/A",
+    "note": "Use a C++ library like `tinyobjloader` to parse `.obj` files and create `MeshComponent`s from the data."
+  },
+  {
+    "n": 58,
+    "title": "Module 11: Further Reading (C++)",
+    "math": "N/A",
+    "note": "Provide links to native WebGPU resources, including the `webgpu.h` header itself, the documentation for Google's Dawn, the `wgpu-native` project, and other C++ specific resources and tutorials."
+  }
+]
