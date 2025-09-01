@@ -107,8 +107,8 @@ window.addEventListener("DOMContentLoaded", () => {
         if (!isSearch) {
             btn.addEventListener("click", () => {
                 state.currentPath.push(item.name);
-                scrollToTop();
                 renderBookButtons();
+                scrollToTop();
             });
         }
     } else {
@@ -233,6 +233,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const bookData = await fetchJsonSafe(filePath);
       state.currentBook = { name: book.name, file: filePath, data: bookData };
       renderTopics();
+      setupTopicControls();
       searchTopicsInput.value = "";
 
       // Scroll to last completed topic or top of view
@@ -243,7 +244,7 @@ window.addEventListener("DOMContentLoaded", () => {
         } else {
           topicView.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 100);
+      }, 200);
 
     } catch (err) {
       showError(`Unable to load book: ${err.message || ""}`);
