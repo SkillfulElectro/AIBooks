@@ -82,7 +82,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function makeQueryUrl(topic, provider, bookName) {
     const title = topic.title || "";
     const note = topic.note || "";
-    const query = `You are a teacher and going to teach '${title}' in context of ${bookName}. Here is a note describing exactly what you have to teach and focus on: "${note}"`;
+    const query = `You are a teacher and going to teach '${title}' step by step in context of ${bookName} book . Here is a note describing exactly what you have to teach and focus on : "${note}"`;
     const q = encodeURIComponent(query);
     switch (provider) {
       case "perplexity":
