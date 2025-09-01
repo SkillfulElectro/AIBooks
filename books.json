@@ -45,7 +45,7 @@
       "name": "Data Science",
       "children": [
         {
-          "name": "AI and ML Tour",
+          "name": "AI and ML with PyTorch",
           "file": "./books/ai_ml_tour.json"
         },
         {
