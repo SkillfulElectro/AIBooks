@@ -82,7 +82,15 @@ window.addEventListener("DOMContentLoaded", () => {
   function makeQueryUrl(topic, provider, bookName) {
     const title = topic.title || "";
     const note = topic.note || "";
-    const query = `You are a teacher and going to teach '${title}' step by step in context of ${bookName} book . Here is a note describing exactly what you have to teach and focus on : "${note}"`;
+    const query =
+    `You are a teacher and going to teach '${title}' in context of ${bookName} . 
+    you have to follow these rules :
+    1. if at start of the session there is any confusion about the topic you must ask the user .
+    2. you must create a complete and detailed content table before starting to teach which only focuses on '${title}' .
+    3. you must teach each part of content table with up to date information about it .
+    4. you must check if user learned everything before moving to next content in your content table .
+    5. after you finished teaching everything in the content table , you have to congrats to user and tell them about it .
+    6. fulfill what this note mentions to teach : "${note}"`;
     const q = encodeURIComponent(query);
     switch (provider) {
       case "perplexity":
