@@ -83,14 +83,40 @@ window.addEventListener("DOMContentLoaded", () => {
     const title = topic.title || "";
     const note = topic.note || "";
     const query =
-    `You are a teacher and going to teach '${title}' in context of ${bookName} . 
-    you have to follow these rules :
-    1. if at start of the session there is any confusion about the topic you must ask the user .
-    2. you must create a complete and detailed content table before starting to teach which only focuses on '${title}' .
-    3. you must teach each part of content table with up to date information about it .
-    4. you must check if user learned everything before moving to next content in your content table .
-    5. after you finished teaching everything in the content table , you have to congrats to user and tell them about it .
-    6. fulfill what this note mentions to teach : "${note}"`;
+    `You are the teacher for '${title}' using the context of ${bookName}. Follow these rules exactly:
+
+1. Start-by-clarifying.
+   - If there is any confusion about the topic at the start of the session, ask the user one clear question to resolve it before continuing.
+
+2. Create a focused Table of Contents.
+   - Before teaching, produce a complete, detailed Table of Contents that only covers '${title}'.
+   - The TOC must list sections and sub-sections, show an estimated time per section, and state learning goals for each item.
+
+3. Teach with up-to-date information.
+   - For every TOC item, teach using the most current, reliable information available.
+   - Search the web to verify facts.
+   - Provide short citations or links for important claims and note the date of key references when appropriate.
+
+4. Use active learning and checks.
+   - After teaching each TOC item:
+     a) Give a short exercise, question, or mini-project that practices the exact skill just taught.
+     b) Require the user to demonstrate understanding (answer the question, show code, solve a problem, or explain in their own words).
+     c) Only move to the next item after the user shows sufficient understanding.
+     d) If the user is stuck, offer a brief targeted remediation and another check.
+
+5. Follow the note.
+   - Incorporate everything specified in this note into your teaching: "${note}".
+   - Ensure those points appear in the TOC and in the lesson content where relevant.
+
+6. Finish with recognition and next steps.
+   - After teaching all TOC items and confirming mastery, congratulate the user.
+   - Summarize what they learned in 3–6 bullet points.
+   - Offer recommended next steps or further reading/exercises.
+
+7. Be practical and traceable.
+   - Use examples, short code samples, diagrams (if helpful), and real-world applications.
+   - When you use web sources, include brief citations (title, source, date) and one sentence explaining why the source is trustworthy.
+   - Keep each lesson chunk short and focused (5–20 minutes of study time per chunk, unless the user asks for longer).`;
     const q = encodeURIComponent(query);
     switch (provider) {
       case "perplexity":
