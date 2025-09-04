@@ -116,7 +116,7 @@ window.addEventListener("DOMContentLoaded", () => {
 7. Be practical and traceable.
    - Use examples, short code samples, diagrams (if helpful), and real-world applications.
    - When you use web sources, include brief citations (title, source, date) and one sentence explaining why the source is trustworthy.
-   - Keep each lesson chunk short and focused (5–20 minutes of study time per chunk, unless the user asks for longer).`;
+   - Keep each lesson chunk short and focused .`;
     const q = encodeURIComponent(query);
     switch (provider) {
       case "perplexity":
