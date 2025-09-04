@@ -70,7 +70,8 @@
     "title": "Grids in CUDA",
     "math": "N/A",
     "note": "Explore the concept of a grid, a collection of thread blocks that execute a kernel, and how it maps to the GPU's SMs. Context: CUDA programming model."
-  },\n  {
+  },
+  {
     "n": 13,
     "title": "Vector Add: Host Code",
     "math": "Array initialization",
