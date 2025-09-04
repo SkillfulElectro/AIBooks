@@ -1,0 +1,310 @@
+[
+{
+"n": 1,
+"title": "Introduction to Physics and Inquiry",
+"math": "Basic Algebra, Arithmetic",
+"note": "Introduce physics and the scientific method: definitions of physical quantities, units (SI), and measurement techniques. Students learn to collect and plot simple data (e.g., free-fall motion) using computational tools (Python, spreadsheets). Real-world context: designing and analyzing a drop experiment with distance/time data. Interactive simulations (e.g., PhET) can visually demonstrate these early concepts en.wikipedia.org ."
+},
+{
+"n": 2,
+"title": "Ancient Physics: Early Ideas of Matter",
+"math": "Geometry, Basic Algebra",
+"note": "Survey historical concepts of matter and motion from ancient civilizations (Greek atomism, geocentric cosmology, Archimedes' laws of levers and buoyancy). Discuss early experimental observations (pendulums, simple machines). Tools: visual history timeline and simple geometry software (e.g., GeoGebra) to model ancient experiments. Contextual examples: Archimedes’ buoyant force experiments and orbits of planets."
+},
+{
+"n": 3,
+"title": "Algebra and Functions",
+"math": "Algebra, Functions",
+"note": "Reinforce algebraic skills by solving equations and working with functions (linear, quadratic). Physics applications: distance = speed×time, or projectile motion formulas. Tools: Python or graphing calculators to solve equations symbolically and plot functions. Real example: modeling distance vs time for uniform motion. This approach is consistent with physics coding classes where students solve equations and analyze data using Python physics.berkeley.edu ."
+},
+{
+"n": 4,
+"title": "Geometry and Trigonometry",
+"math": "Geometry, Trigonometry",
+"note": "Cover geometric shapes, Pythagorean theorem, and trigonometric functions (sine, cosine) to analyze physical situations. Applications include using right triangle relations for inclines and pendulums. Tools: unit-circle and GeoGebra for visualizing angles; Python to compute trig functions. Real-world: use triangulation to calculate heights (angle of elevation) and describe oscillatory motion with sine waves."
+},
+{
+"n": 5,
+"title": "Vector Algebra and Coordinates",
+"math": "Vector Algebra",
+"note": "Learn vector quantities: representation, components, addition, and scalar/cross products. Apply vectors to physics contexts: displacements, forces, velocities. Tools: Python (NumPy) to compute vector sums and Matplotlib to visualize arrows. Real example: combining multiple force vectors on an object. Many physics quantities are vectors, so analytic vector methods (resultants) are essential openstax.org ."
+},
+{
+"n": 6,
+"title": "Computational Tools: Python and Jupyter",
+"math": "Basic Algebra",
+"note": "Introduce programming in physics: Python basics and Jupyter notebooks for computation. Students will write simple code to calculate physics quantities, plot graphs, and run simulations. Tools: Python libraries (NumPy for math, Matplotlib for plotting). Example projects: coding a spring oscillator or analyzing experimental data. This aligns with courses teaching students to solve equations and model systems numerically in Python physics.berkeley.edu ."
+},
+{
+"n": 7,
+"title": "Kinematics: Motion in One Dimension",
+"math": "Algebra, Functions",
+"note": "Study motion in a straight line: displacement, velocity, and acceleration. Derive and use kinematic equations for constant acceleration. Tools: Python or spreadsheets to plot position-time and velocity-time graphs and simulate motion. Real example: free-fall or a rolling car. Lab integration: motion sensors to collect real data and verify equations."
+},
+{
+"n": 8,
+"title": "Kinematics: Motion in Two Dimensions",
+"math": "Trigonometry, Algebra",
+"note": "Extend motion to two dimensions: projectile motion and vector components of velocity/acceleration. Students resolve motion into perpendicular axes. Tools: Python to calculate 2D trajectories and Matplotlib to plot paths. Real-world context: launching a ball or a rocket, predicting range and height. Interactive simulation (PhET projectile motion) can illustrate these principles."
+},
+{
+"n": 9,
+"title": "Newton's Laws of Motion",
+"math": "Calculus (basic), Algebra",
+"note": "Cover Newton’s three laws: inertia, F=ma, and action-reaction, with free-body diagrams. Demonstrate how forces determine motion. Tools: dynamics labs (gliders, carts) and Python to numerically solve F=ma differential equations. Example: simulating a block on an incline or a falling object. Often solving Newton’s laws requires numerical methods or simplifications: as OpenStax notes, differential equations from F=ma may need simulations to solve
+openstax.org
+."
+},
+{
+"n": 10,
+"title": "Work, Energy, and Power",
+"math": "Calculus, Algebra",
+"note": "Define work done by a force and kinetic/potential energy. Derive the work–energy theorem and conservation of energy. Tools: Python to integrate force over distance; simulate objects gaining and losing energy (e.g., a roller coaster model). Real example: compute work done on a spring (F=kx). Emphasize energy conservation. As noted by OpenStax, energy methods can simplify analysis of motion compared to directly solving forces
+openstax.org
+."
+},
+{
+"n": 11,
+"title": "Momentum and Collisions",
+"math": "Calculus (derivatives), Algebra",
+"note": "Introduce linear momentum (p=mv), impulse, and conservation of momentum. Analyze elastic and inelastic collisions in one and two dimensions. Tools: Python or simulations to model collisions between objects. Real-world example: analyzing billiard-ball or Newton’s cradle experiments, using lab carts to measure pre- and post-collision velocities."
+},
+{
+"n": 12,
+"title": "Circular Motion and Gravitation",
+"math": "Trigonometry, Calculus",
+"note": "Study motion in circular paths: centripetal acceleration and force. Introduce Newton’s universal law of gravitation. Tools: Python to simulate orbits (planets, satellites) using iterative methods. Example: calculate the force and velocity for a satellite orbit. Lab demos: rotating platform showing centripetal force effects."
+},
+{
+"n": 13,
+"title": "Oscillations and Simple Harmonic Motion",
+"math": "Trigonometry, Differential Equations",
+"note": "Explore periodic motion: springs and pendulums, defining amplitude, period, and angular frequency. Tools: Python or Jupyter to model SHM (y=A cos(ωt)) and animate motion. Real examples: mass-spring system in lab, visualizing phase and amplitude. Educators often use notebooks to vary sine functions and observe changes in wave properties
+teachengineering.org
+."
+},
+{
+"n": 14,
+"title": "Wave Phenomena: Sound and Light",
+"math": "Trigonometry, Fourier Analysis",
+"note": "Cover wave basics: amplitude, wavelength, frequency, and types (transverse, longitudinal). Examine sound waves and basic light waves. Tools: Python to generate and analyze waveforms (e.g., sound signals) and perform Fourier transforms. Real example: using a microphone and computer to record sounds and analyze frequency spectrum. Interactive notebooks can help students alter wave parameters and see effects on plotted waves
+teachengineering.org
+."
+},
+{
+"n": 15,
+"title": "Introduction to Thermodynamics",
+"math": "Algebra, Basic Calculus",
+"note": "Define temperature, heat, and internal energy. Discuss thermal expansion and heat capacity. Tools: experiments (heating metal rods to measure expansion) and Python to calculate heat flow (Q=mcΔT). Example: analyze heating curves of water. Emphasize the quantitative aspect of heat transfer in physical processes."
+},
+{
+"n": 16,
+"title": "Laws of Thermodynamics",
+"math": "Calculus, Statistics (entropy)",
+"note": "Study the zeroth through third laws of thermodynamics: thermal equilibrium, energy conservation, entropy, and absolute zero. Tools: simulate heat engines in Python or MATLAB to illustrate efficiency limits. Example: calculate Carnot engine efficiency and explore concept of entropy statistically."
+},
+{
+"n": 17,
+"title": "Kinetic Theory of Gases",
+"math": "Statistics, Probability, Calculus",
+"note": "Explain gas pressure and temperature from molecular motion (ideal gas law and kinetic theory). Discuss Maxwell-Boltzmann distribution of speeds. Tools: Monte Carlo simulation of gas particles and Python to plot velocity distributions. Example: simulate particle collisions in a box to see pressure emerge from random motion."
+},
+{
+"n": 18,
+"title": "Heat Engines and Entropy",
+"math": "Calculus, Statistics",
+"note": "Analyze heat engines, refrigerators, and efficiency (Carnot cycle). Reinforce entropy increase in irreversible processes. Tools: model thermodynamic cycles using Python (pressure-volume diagrams) and analyze efficiency vs. ideal case. Example: compare ideal vs. real engine performance, illustrating the second law of thermodynamics."
+},
+{
+"n": 19,
+"title": "Geometric Optics: Lenses and Mirrors",
+"math": "Geometry, Algebra",
+"note": "Study ray optics: reflection, refraction, and optical formulas (mirror and lens equations). Tools: ray-tracing software or Python to simulate light paths through lenses. Example: design a simple camera lens system using lab or simulation to form images, applying lens formula (1/f=1/do+1/di)."
+},
+{
+"n": 20,
+"title": "Wave Optics: Interference and Diffraction",
+"math": "Trigonometry, Calculus",
+"note": "Explore interference (Young's double-slit) and diffraction of waves. Demonstrate superposition of light waves through slits. Tools: Python to simulate interference patterns; ripple tank or PhET wave simulation in lab. Example: measure fringe spacing to relate to wavelength; observe diffraction through slits or gratings."
+},
+{
+"n": 21,
+"title": "Nature of Light: Particle and Wave",
+"math": "Algebra",
+"note": "Discuss dual nature of light: photons and wave behavior. Cover speed of light, electromagnetic spectrum, and basic quantum interpretation. Tools: spectrometer experiments or online apps; Python to analyze spectra. Example: decompose white light through a prism or diffraction grating and interpret line spectra of elements."
+},
+{
+"n": 22,
+"title": "Electrostatics: Charges and Fields",
+"math": "Vector Algebra, Calculus",
+"note": "Introduce electric charge, Coulomb’s law, and electric field. Explain superposition of fields from multiple charges. Tools: PhET charge and field simulation or Python to compute field vectors of point charges. Example: map electric field lines around two charges (dipole) and verify with simulation."
+},
+{
+"n": 23,
+"title": "Electric Potential and Energy",
+"math": "Calculus",
+"note": "Define electric potential (voltage) and potential energy per charge. Explore relationship between electric field and potential gradient. Tools: experiments measuring voltage with multimeters and Python integration of E·dr to find potential differences. Example: compute potential of point charges and illustrate equipotential surfaces."
+},
+{
+"n": 24,
+"title": "Electric Circuits and Ohm's Law",
+"math": "Algebra, Calculus",
+"note": "Study basic circuits: voltage, current, resistance, and Ohm’s Law (V=IR). Introduce series and parallel resistor networks. Tools: breadboard circuits or circuit simulation software; Python to solve Kirchhoff’s circuit equations. Example: build a resistor network and predict currents, then measure to verify theory."
+},
+{
+"n": 25,
+"title": "Magnetism and Magnetic Fields",
+"math": "Vector Algebra, Calculus",
+"note": "Cover magnetic fields and forces on moving charges/currents (Lorentz force, Biot–Savart law). Tools: use bar magnets and iron filings to visualize field lines; Python to compute magnetic field of a current loop or magnet. Example: analyze deflection of charged particles in a magnetic field or Earth’s magnetosphere effects on compasses."
+},
+{
+"n": 26,
+"title": "Electromagnetic Induction",
+"math": "Calculus",
+"note": "Explain Faraday’s Law of induction (changing magnetic flux induces EMF) and Lenz’s Law. Tools: coil-and-magnet experiments or Python simulation of an induced current in a loop. Example: build a simple generator or transformer model and calculate the induced voltage as a function of magnetic flux change."
+},
+{
+"n": 27,
+"title": "Maxwell's Equations and EM Waves",
+"math": "Vector Calculus, Differential Equations",
+"note": "Introduce Maxwell’s four equations conceptually and show how they predict electromagnetic waves. Derive the wave equation from Maxwell’s equations. Tools: Python or MATLAB to simulate electromagnetic wave propagation in free space; visualize oscillating E and B fields. Example: calculate the speed of light from permittivity/permeability (c=1/√(ε₀μ₀))."
+},
+{
+"n": 28,
+"title": "Special Relativity: Time and Space",
+"math": "Algebra",
+"note": "Cover Einstein’s postulates of relativity, leading to time dilation and length contraction formulas. Tools: spacetime diagram software or Python to compute relativistic effects. Example: explain the twin paradox or calculate time dilation for fast-moving muons. Discuss real-world effect on GPS satellite clocks."
+},
+{
+"n": 29,
+"title": "General Relativity: Gravity and Spacetime",
+"math": "Calculus, Differential Geometry",
+"note": "Discuss equivalence principle and curvature of spacetime by mass. Explain E=mc^2 for mass-energy equivalence. Tools: simulation of gravity wells or Python to solve geodesic equations numerically. Example: analyze gravitational lensing or frame-dragging near rotating masses."
+},
+{
+"n": 30,
+"title": "Quantum Concepts: Photoelectric Effect",
+"math": "Algebra",
+"note": "Introduce quantization of light: Planck’s blackbody radiation and Einstein’s photoelectric effect experiment. Tools: simulation of photons ejecting electrons from a metal surface; Python to plot kinetic energy vs. frequency of light. Example: calculate photon energy (E=hf) and stopping potential for photoelectrons, showing the threshold frequency concept."
+},
+{
+"n": 31,
+"title": "Quantum Mechanics: Wavefunctions",
+"math": "Calculus, Linear Algebra",
+"note": "Explain the Schrödinger equation in simple one-dimensional cases (particle in a box, quantum oscillator). Tools: solve differential equations in Python to plot wavefunctions and energy eigenvalues. Example: compute probability distributions of an electron in a 1D well and discuss quantization of energy levels."
+},
+{
+"n": 32,
+"title": "Atomic and Molecular Physics",
+"math": "Linear Algebra, Calculus",
+"note": "Apply quantum concepts to atoms and molecules. Discuss atomic orbitals and spectra. Tools: Python or chemistry modeling software (e.g., Avogadro) to visualize molecular structures and orbital shapes. Example: calculate hydrogen atom energy levels and compare to experimental spectral lines."
+},
+{
+"n": 33,
+"title": "Radioactivity and Nuclear Decay",
+"math": "Statistics (Exponential Decay)",
+"note": "Cover radioactive decay law, half-life, and types of radiation (alpha, beta, gamma). Tools: use random number generators in Python to simulate decay processes and fit exponential curves. Example: analyze sample decay data to determine half-life and predict remaining quantity over time."
+},
+{
+"n": 34,
+"title": "Nuclear Reactions: Fission and Fusion",
+"math": "Algebra",
+"note": "Explain nuclear fission and fusion processes, binding energy, and mass-energy conversion (E=mc^2). Tools: Python to calculate energy release from given masses; simulate neutron-induced fission chain reaction probabilities. Example: compute the energy yield of splitting U-235 and compare to fusion of hydrogen isotopes (like in the Sun)."
+},
+{
+"n": 35,
+"title": "Particle Physics: Fundamental Particles",
+"math": "Group Theory (conceptual)",
+"note": "Introduce the Standard Model: quarks, leptons, gauge bosons, and fundamental interactions. Tools: online particle physics resources (e.g., CERN interactive guides); Python to analyze particle collision data. Example: discuss discovery of Higgs boson at LHC and how data analysis confirmed its existence."
+},
+{
+"n": 36,
+"title": "Particle Physics: Experiments",
+"math": "Statistics",
+"note": "Overview of particle accelerators and detectors (LHC, detectors, etc.). Tools: use open data from particle physics experiments; Python (or ROOT) to analyze events and identify particle signatures. Example: reconstruct invariant mass of known particles (like the Z boson) from collision data and evaluate statistical significance."
+},
+{
+"n": 37,
+"title": "Astrophysics: Stars and Galaxies",
+"math": "Calculus, Statistics",
+"note": "Study stellar evolution and galaxy classification. Tools: astronomical data analysis (e.g., star catalogs, H-R diagrams); Python to fit models of stellar properties. Example: calculate lifetime of a star from mass, or use parallax data to determine distance to nearby stars."
+},
+{
+"n": 38,
+"title": "Cosmology: Big Bang and Universe",
+"math": "Calculus",
+"note": "Discuss expanding universe, cosmic microwave background (CMB), and Big Bang theory basics. Tools: Python to model Hubble’s law and calculate universe expansion; analyze CMB maps. Example: compute universe age from Hubble constant; simulate redshift vs distance for galaxies."
+},
+{
+"n": 39,
+"title": "Black Holes and Gravitational Waves",
+"math": "Calculus, Differential Geometry",
+"note": "Explore black hole physics (event horizon, singularity) and gravitational waves. Tools: simulations of black hole mergers and detection; Python to analyze LIGO strain data. Example: extract masses and energies from gravitational wave signals of merging black holes."
+},
+{
+"n": 40,
+"title": "Condensed Matter: Crystal Structures",
+"math": "Linear Algebra, Geometry",
+"note": "Examine crystal lattices and solid-state structure. Tools: 3D modeling of crystal lattices; Python to simulate X-ray diffraction patterns. Example: apply Bragg’s law to calculate lattice spacing from diffraction data."
+},
+{
+"n": 41,
+"title": "Condensed Matter: Semiconductors",
+"math": "Algebra, Calculus",
+"note": "Introduce semiconductor physics: band theory, doping, and p–n junctions. Tools: circuit simulation software and Python to model semiconductor behavior. Example: simulate diode I–V curves and basic operation of solar cells."
+},
+{
+"n": 42,
+"title": "Condensed Matter: Superconductivity",
+"math": "Calculus, Quantum (conceptual)",
+"note": "Cover superconductivity (zero resistance, Meissner effect) and applications. Tools: experiments with superconducting coils or magnetic levitation; Python to simulate phase transitions. Example: demonstrate levitation of a magnet above a superconductor at low temperatures."
+},
+{
+"n": 43,
+"title": "Statistical Mechanics",
+"math": "Statistics, Calculus",
+"note": "Apply statistics to many-particle systems to derive thermodynamic properties. Tools: Monte Carlo simulations (Ising model for magnetism) and Python to calculate partition functions. Example: use random sampling to explore phase transitions and calculate thermodynamic quantities like entropy."
+},
+{
+"n": 44,
+"title": "Computational Physics: Simulation Methods",
+"math": "Numerical Methods, Linear Algebra",
+"note": "Teach numerical techniques (Euler, Runge–Kutta, matrix solvers) for physics problems. Tools: Python (SciPy) or MATLAB to implement algorithms and run simulations. Example: numerically integrate a pendulum or planetary orbit. As MathWorks notes, these tools allow interactive simulations and solving physics problems computationally mathworks.com ."
+},
+{
+"n": 45,
+"title": "Data Analysis and Visualization",
+"math": "Statistics, Data Analysis",
+"note": "Focus on processing and interpreting experimental data: error analysis, curve fitting, and visualization. Tools: Python (pandas, matplotlib) or MATLAB for analyzing data sets. Example: fit lab data (e.g., Hooke’s law) and plot with error bars, demonstrating statistical concepts in measurement."
+},
+  {
+    "n": 46,
+    "title": "Earth and Climate Physics",
+    "math": "Calculus, Statistics",
+    "note": "Study Earth’s energy balance, greenhouse effect, and basic climate models. Tools: analysis of climate data and Python models of radiative balance. Example: model the effect of CO2 on global temperature using simplified equations; use simulations to explore feedback effects."
+  },
+  {
+    "n": 47,
+    "title": "Biophysics and Complex Systems",
+    "math": "Statistics, Differential Equations",
+    "note": "Explore physics in biological and complex systems (chaos, fractals). Tools: simulate population models or chaotic pendulums in Python. Example: analyze heartbeat patterns or logistic growth, illustrating how physics principles apply to life sciences."
+  },
+  {
+    "n": 48,
+    "title": "Instrumentation and Experimental Techniques",
+    "math": "Various",
+    "note": "Overview of modern experimental tools (particle detectors, telescopes, microscopes). Discuss data acquisition and signal processing. Tools: virtual labs and software for instrument simulation. Example: reconstruct a particle track from detector data or simulate imaging with a telescope."
+  },
+  {
+    "n": 49,
+    "title": "Quantum Information and Computing",
+    "math": "Linear Algebra, Computer Science",
+    "note": "Introduce qubits, superposition, and entanglement. Cover basic quantum gates and algorithms. Tools: quantum simulators (IBM Qiskit, Microsoft QDK) to build simple circuits. Example: create and run a quantum teleportation circuit on a simulator, illustrating quantum logic principles."
+  },
+  {
+    "n": 50,
+    "title": "Frontiers in Physics: Emerging Topics",
+    "math": "Various",
+    "note": "Discuss current research directions (dark matter, string theory, metamaterials, quantum tech). Encourage project-based exploration of open questions. Tools: interactive simulations and review of research literature. Example: simulate properties of a metamaterial or explore data from frontier experiments, giving advanced learners context beyond the standard curriculum."
+  }
+]
