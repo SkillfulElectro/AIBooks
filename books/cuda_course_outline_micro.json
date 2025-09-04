@@ -1,0 +1,368 @@
+[
+  {
+    "n": 1,
+    "title": "Why Parallel Computing?",
+    "math": "N/A",
+    "note": "This micro-lesson introduces the fundamental need for parallel computing in modern computational tasks, highlighting limitations of sequential processing. Context: General computing concepts."
+  },
+  {
+    "n": 2,
+    "title": "CPU vs. GPU: Architecture",
+    "math": "N/A",
+    "note": "Compare and contrast the architectural differences between Central Processing Units (CPUs) and Graphics Processing Units (GPUs), focusing on their design philosophies for different workloads. Context: Computer architecture."
+  },
+  {
+    "n": 3,
+    "title": "Amdahl's Law Explained",
+    "math": "Amdahl's Law formula",
+    "note": "Understand Amdahl's Law, a model for the speedup of parallelization, and its implications for performance gains in parallel systems. Context: Parallel computing theory."
+  },
+  {
+    "n": 4,
+    "title": "Gustafson's Law Explained",
+    "math": "Gustafson's Law formula",
+    "note": "Explore Gustafson's Law, an alternative model for parallel speedup that considers scaled problem sizes, and its relevance in modern parallel computing. Context: Parallel computing theory."
+  },
+  {
+    "n": 5,
+    "title": "Introduction to CUDA",
+    "math": "N/A",
+    "note": "This micro-lesson introduces CUDA as NVIDIA's parallel computing platform and programming model, explaining its purpose and advantages for GPU programming. Context: NVIDIA CUDA platform."
+  },
+  {
+    "n": 6,
+    "title": "CUDA Hardware Model: SMs",
+    "math": "N/A",
+    "note": "Delve into the concept of Streaming Multiprocessors (SMs) within NVIDIA GPUs, explaining their role as the core processing units for parallel execution. Context: NVIDIA GPU architecture."
+  },
+  {
+    "n": 7,
+    "title": "CUDA Hardware Model: Cores",
+    "math": "N/A",
+    "note": "Understand the function of CUDA Cores, the fundamental processing elements within SMs, responsible for executing individual threads. Context: NVIDIA GPU architecture."
+  },
+  {
+    "n": 8,
+    "title": "Host vs. Device in CUDA",
+    "math": "N/A",
+    "note": "Distinguish between the host (CPU) and device (GPU) in CUDA programming, explaining their respective roles in a CUDA application. Context: CUDA programming model."
+  },
+  {
+    "n": 9,
+    "title": "CUDA Kernels: Basics",
+    "math": "N/A",
+    "note": "Introduce CUDA kernels as functions executed on the GPU by many threads in parallel, covering their declaration and basic invocation. Context: CUDA C/C++ programming."
+  },
+  {
+    "n": 10,
+    "title": "Threads in CUDA",
+    "math": "N/A",
+    "note": "Understand the concept of threads in CUDA, the smallest unit of execution, and how they are organized for parallel computation. Context: CUDA programming model."
+  },
+  {
+    "n": 11,
+    "title": "Thread Blocks in CUDA",
+    "math": "N/A",
+    "note": "Learn about thread blocks, groups of threads that can cooperate via shared memory and synchronization, and their organization within a grid. Context: CUDA programming model."
+  },
+  {
+    "n": 12,
+    "title": "Grids in CUDA",
+    "math": "N/A",
+    "note": "Explore the concept of a grid, a collection of thread blocks that execute a kernel, and how it maps to the GPU's SMs. Context: CUDA programming model."
+  },\n  {
+    "n": 13,
+    "title": "Vector Add: Host Code",
+    "math": "Array initialization",
+    "note": "Implement the host-side (CPU) code for a vector addition program, including memory allocation and data transfer setup. Context: CUDA C/C++ programming."
+  },
+  {
+    "n": 14,
+    "title": "Vector Add: Device Kernel",
+    "math": "Parallel array access",
+    "note": "Write the device-side (GPU) kernel for vector addition, focusing on how individual threads process elements in parallel. Context: CUDA C/C++ programming."
+  },
+  {
+    "n": 15,
+    "title": "Compiling CUDA Programs",
+    "math": "N/A",
+    "note": "Learn the process of compiling CUDA C/C++ programs using the nvcc compiler, including common compilation flags. Context: CUDA development environment."
+  },
+  {
+    "n": 16,
+    "title": "Global Memory: Basics",
+    "math": "Memory access latency",
+    "note": "Introduce global memory, the largest and slowest memory on the GPU, accessible by all threads. Discuss its characteristics and typical use cases. Context: CUDA memory hierarchy."
+  },
+  {
+    "n": 17,
+    "title": "Shared Memory: Basics",
+    "math": "On-chip memory",
+    "note": "Understand shared memory, a fast, on-chip memory shared by threads within the same block, and its role in inter-thread communication. Context: CUDA memory hierarchy."
+  },
+  {
+    "n": 18,
+    "title": "Local Memory: Basics",
+    "math": "Register spilling",
+    "note": "Explore local memory, private to each thread and stored in global memory, often used for large automatic variables. Context: CUDA memory hierarchy."
+  },
+  {
+    "n": 19,
+    "title": "Constant Memory: Basics",
+    "math": "Broadcast access",
+    "note": "Learn about constant memory, a read-only memory optimized for broadcast access to all threads. Context: CUDA memory hierarchy."
+  },
+  {
+    "n": 20,
+    "title": "Texture Memory: Basics",
+    "math": "Spatial locality",
+    "note": "Introduce texture memory, optimized for 2D spatial locality, commonly used in graphics and image processing. Context: CUDA memory hierarchy."
+  },
+  {
+    "n": 21,
+    "title": "Memory Coalescing",
+    "math": "Memory access patterns",
+    "note": "Understand memory coalescing, an optimization technique for global memory accesses that groups individual thread requests into a single transaction. Context: CUDA performance optimization."
+  },
+  {
+    "n": 22,
+    "title": "Bank Conflicts in Shared Memory",
+    "math": "Memory access patterns",
+    "note": "Learn about bank conflicts in shared memory and how to avoid them to maximize shared memory bandwidth. Context: CUDA performance optimization."
+  },
+  {
+    "n": 23,
+    "title": "Shared Memory for Reduction",
+    "math": "Parallel reduction algorithm",
+    "note": "Apply shared memory to implement efficient parallel reduction algorithms, demonstrating significant performance gains over global memory alternatives. Context: CUDA C/C++ programming."
+  },
+  {
+    "n": 24,
+    "title": "__syncthreads() Explained",
+    "math": "Thread synchronization",
+    "note": "Understand the purpose and usage of the __syncthreads() barrier, which synchronizes all threads within a block. Context: CUDA C/C++ programming."
+  },
+  {
+    "n": 25,
+    "title": "CUDA Error Checking",
+    "math": "Exception handling",
+    "note": "Implement robust error checking in CUDA applications using cudaError_t and cudaGetErrorString() to identify and handle API call failures. Context: CUDA C/C++ development."
+  },
+  {
+    "n": 26,
+    "title": "Basic CUDA Debugging",
+    "math": "Debugging principles",
+    "note": "Introduce fundamental debugging techniques for CUDA kernels, including print statements and basic use of debugging tools. Context: CUDA development environment."
+  },
+  {
+    "n": 27,
+    "title": "CUDA Streams: Introduction",
+    "math": "Concurrency",
+    "note": "Understand CUDA streams as sequences of operations that execute on the device in issue-order, enabling concurrency. Context: CUDA asynchronous programming."
+  },
+  {
+    "n": 28,
+    "title": "Asynchronous Data Transfer",
+    "math": "Overlap computation and communication",
+    "note": "Learn how to overlap data transfers between host and device with kernel execution using CUDA streams for improved performance. Context: CUDA asynchronous programming."
+  },
+  {
+    "n": 29,
+    "title": "Multi-GPU: Device Enumeration",
+    "math": "N/A",
+    "note": "Discover how to enumerate and select available GPUs in a multi-GPU system for targeted computation. Context: CUDA multi-GPU programming."
+  },
+  {
+    "n": 30,
+    "title": "Multi-GPU: Data Distribution",
+    "math": "Distributed memory management",
+    "note": "Explore strategies for distributing data and workloads across multiple GPUs to maximize computational throughput. Context: CUDA multi-GPU programming."
+  },
+  {
+    "n": 31,
+    "title": "cuBLAS: Matrix Multiplication",
+    "math": "Linear algebra, matrix multiplication",
+    "note": "Utilize the cuBLAS library to perform high-performance matrix multiplication on the GPU, demonstrating its ease of use and efficiency. Context: CUDA libraries."
+  },
+  {
+    "n": 32,
+    "title": "cuFFT: Fast Fourier Transform",
+    "math": "Fourier transforms",
+    "note": "Learn to use the cuFFT library for computing Fast Fourier Transforms on the GPU, a common operation in signal processing. Context: CUDA libraries."
+  },
+  {
+    "n": 33,
+    "title": "Kernel Optimization: Divergence",
+    "math": "Control flow",
+    "note": "Understand thread divergence in CUDA kernels and techniques to minimize its impact on performance. Context: CUDA performance optimization."
+  },
+  {
+    "n": 34,
+    "title": "Kernel Optimization: Occupancy",
+    "math": "Resource utilization",
+    "note": "Explore the concept of GPU occupancy and how to optimize kernel launch parameters to achieve higher occupancy for better performance. Context: CUDA performance optimization."
+  },
+  {
+    "n": 35,
+    "title": "NVIDIA Nsight Systems: Profiling",
+    "math": "Performance analysis",
+    "note": "Introduction to NVIDIA Nsight Systems for system-wide performance profiling of CUDA applications, identifying bottlenecks and optimization opportunities. Context: CUDA profiling tools."
+  },
+  {
+    "n": 36,
+    "title": "Atomic Operations: Use Cases",
+    "math": "Concurrency control",
+    "note": "Learn about atomic operations in CUDA for safe, concurrent updates to shared memory locations, preventing race conditions. Context: CUDA concurrent programming."
+  },
+  {
+    "n": 37,
+    "title": "Race Conditions: Identification & Prevention",
+    "math": "Concurrency issues",
+    "note": "Understand how to identify and prevent race conditions in parallel CUDA code, emphasizing proper synchronization and atomic operations. Context: CUDA concurrent programming."
+  },
+  {
+    "n": 38,
+    "title": "Dynamic Parallelism: Concepts",
+    "math": "Nested execution",
+    "note": "Introduce dynamic parallelism, allowing GPU kernels to launch child kernels directly on the device, enabling more flexible parallel algorithms. Context: CUDA advanced programming."
+  },
+  {
+    "n": 39,
+    "title": "Nested Kernels: Implementation",
+    "math": "Recursive algorithms",
+    "note": "Implement simple examples of nested kernels using dynamic parallelism, demonstrating their utility for hierarchical parallel tasks. Context: CUDA advanced programming."
+  },
+  {
+    "n": 40,
+    "title": "CUDA-OpenGL Interoperability",
+    "math": "Graphics pipelines",
+    "note": "Learn to share data efficiently between CUDA and OpenGL contexts for applications requiring both high-performance computation and real-time visualization. Context: CUDA and graphics APIs."
+  },
+  {
+    "n": 41,
+    "title": "Unified Memory: Concepts",
+    "math": "Virtual memory",
+    "note": "Understand the concept of Unified Memory in CUDA, which provides a single, coherent memory address space accessible by both CPU and GPU. Context: CUDA memory management."
+  },
+  {
+    "n": 42,
+    "title": "Managed Memory: Usage",
+    "math": "Page migration",
+    "note": "Explore how to use managed memory in CUDA C/C++ to simplify memory management, allowing the CUDA driver to handle data movement between host and device. Context: CUDA memory management."
+  },
+  {
+    "n": 43,
+    "title": "Nsight Compute: Deep Dive",
+    "math": "Performance metrics",
+    "note": "A detailed exploration of NVIDIA Nsight Compute for in-depth analysis of CUDA kernel performance, including detailed metrics and visualizations. Context: CUDA profiling tools."
+  },
+  {
+    "n": 44,
+    "title": "Advanced CUDA Debugging with Nsight",
+    "math": "Debugging techniques",
+    "note": "Learn advanced debugging techniques for CUDA applications using NVIDIA Nsight Visual Studio Edition or GDB with CUDA extensions. Context: CUDA development tools."
+  },
+  {
+    "n": 45,
+    "title": "CUDA C++: Classes & Objects",
+    "math": "Object-oriented programming",
+    "note": "Explore how to use C++ classes and objects within CUDA kernels and device code for better code organization and reusability. Context: CUDA C++ language features."
+  },
+  {
+    "n": 46,
+    "title": "CUDA C++: Templates & Lambdas",
+    "math": "Generic programming",
+    "note": "Understand the application of C++ templates and lambdas in CUDA for writing generic and flexible GPU code. Context: CUDA C++ language features."
+  },
+  {
+    "n": 47,
+    "title": "Case Study: Image Filtering",
+    "math": "Image convolution",
+    "note": "Implement a common image processing filter (e.g., Gaussian blur) using CUDA, demonstrating parallel processing of image data. Context: CUDA for image processing."
+  },
+  {
+    "n": 48,
+    "title": "Case Study: Particle Simulation",
+    "math": "Numerical integration",
+    "note": "Develop a basic particle simulation (e.g., N-body) on the GPU, focusing on parallelizing force calculations and updates. Context: CUDA for scientific computing."
+  },
+  {
+    "n": 49,
+    "title": "Tensor Cores: Architecture",
+    "math": "Matrix multiplication",
+    "note": "Deep dive into the architecture of Tensor Cores, specialized hardware units designed for accelerating matrix operations crucial for deep learning. Context: NVIDIA GPU architecture."
+  },
+  {
+    "n": 50,
+    "title": "Mixed-Precision Computing: FP16/FP32",
+    "math": "Numerical precision",
+    "note": "Understand the benefits and challenges of using mixed-precision (FP16 and FP32) arithmetic in CUDA for deep learning, focusing on performance and numerical stability. Context: CUDA for deep learning."
+  },
+  {
+    "n": 51,
+    "title": "CUDA Graphs: Concepts",
+    "math": "Directed Acyclic Graphs (DAGs)",
+    "note": "Introduce CUDA Graphs as a way to capture and replay sequences of CUDA operations, reducing CPU overhead for repetitive workloads. Context: CUDA advanced performance."
+  },
+  {
+    "n": 52,
+    "title": "CUDA Graphs: Implementation",
+    "math": "Graph execution",
+    "note": "Implement and execute simple CUDA Graphs, demonstrating how to define and launch a graph for optimized performance. Context: CUDA advanced performance."
+  },
+  {
+    "n": 53,
+    "title": "Advanced Streams: Events & Callbacks",
+    "math": "Event-driven programming",
+    "note": "Explore advanced stream synchronization using events and stream callbacks for complex asynchronous workflows in CUDA. Context: CUDA asynchronous programming."
+  },
+  {
+    "n": 54,
+    "title": "Neural Network: Introduction",
+    "math": "Linear algebra, activation functions",
+    "note": "Introduce the fundamental concepts of neural networks, including neurons, layers, and activation functions, as a prelude to implementation. Context: Machine learning basics."
+  },
+  {
+    "n": 55,
+    "title": "Neural Network: Forward Pass",
+    "math": "Matrix multiplication",
+    "note": "Implement the forward propagation step of a simple neural network using CUDA, focusing on parallelizing matrix multiplications. Context: CUDA for machine learning."
+  },
+  {
+    "n": 56,
+    "title": "Neural Network: Backpropagation",
+    "math": "Calculus, chain rule",
+    "note": "Implement the backpropagation algorithm for training a neural network on the GPU, parallelizing gradient calculations. Context: CUDA for machine learning."
+  },
+  {
+    "n": 57,
+    "title": "Neural Network: Training Loop",
+    "math": "Optimization algorithms",
+    "note": "Construct the complete training loop for a neural network in CUDA, integrating forward and backward passes with weight updates. Context: CUDA for machine learning."
+  },
+  {
+    "n": 58,
+    "title": "Further Reading: NVIDIA Docs",
+    "math": "N/A",
+    "note": "Direct students to official NVIDIA CUDA documentation, programming guides, and best practices for in-depth technical details. Context: Learning resources."
+  },
+  {
+    "n": 59,
+    "title": "Further Reading: Research Papers",
+    "math": "N/A",
+    "note": "Suggest key research papers and academic publications on advanced CUDA topics and GPU computing for deeper theoretical understanding. Context: Learning resources."
+  },
+  {
+    "n": 60,
+    "title": "Further Reading: Online Courses",
+    "math": "N/A",
+    "note": "Recommend reputable online courses and tutorials for continued practical learning and skill development in CUDA. Context: Learning resources."
+  },
+  {
+    "n": 61,
+    "title": "Further Reading: Community Forums",
+    "math": "N/A",
+    "note": "Encourage engagement with the CUDA developer community through forums and discussion groups for problem-solving and knowledge sharing. Context: Learning resources."
+  }
+]
+
