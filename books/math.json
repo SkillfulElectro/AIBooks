@@ -1,0 +1,464 @@
+[
+{
+"n": 1,
+"title": "Number Systems",
+"math": "Natural, integer, rational, real, complex numbers",
+"note": "Introduce and define natural numbers, integers, rational numbers, real numbers, and complex numbers; explain relationships and basic examples for each system so students can identify which system a number belongs to. Context: classroom (pen-and-paper and whiteboard); optional exercises in Python (Jupyter Notebook)."
+},
+{
+"n": 2,
+"title": "Basic Arithmetic Operations",
+"math": "Addition, subtraction, multiplication, division",
+"note": "Teach how to perform addition, subtraction, multiplication, and division with whole numbers, fractions, and decimals using step-by-step algorithms and worked examples; include practice problems and real-world examples (money, measurement). Context: classroom (pen-and-paper); optional use of a basic calculator or Python for verification."
+},
+{
+"n": 3,
+"title": "Properties of Operations",
+"math": "Commutative, associative, distributive properties",
+"note": "Explain and demonstrate commutative and associative properties for addition and multiplication and the distributive property of multiplication over addition; show how these properties simplify calculations and algebraic manipulation with examples. Context: classroom (pen-and-paper and whiteboard); optional illustrative code in Jupyter."
+},
+{
+"n": 4,
+"title": "Order of Operations",
+"math": "PEMDAS/BODMAS rules",
+"note": "Teach the standard order of operations and how to evaluate expressions correctly using parentheses, exponents, multiplication/division (left-to-right), and addition/subtraction (left-to-right); include many practice expressions and common mistakes. Context: classroom (pen-and-paper); optional use of a calculator or Jupyter to check results."
+},
+{
+"n": 5,
+"title": "Fractions and Decimals",
+"math": "Operations with fractions and decimals, conversions, percentages",
+"note": "Show how to convert between fractions, decimals, and percentages; teach addition, subtraction, multiplication, and division of fractions (including mixed numbers) and decimals with examples and word problems. Context: classroom (pen-and-paper); optional spreadsheet or Python (pandas) for bulk practice."
+},
+{
+"n": 6,
+"title": "Ratios and Proportions",
+"math": "Ratios, proportions, direct and inverse variation",
+"note": "Teach how to form and solve ratios and proportions, use cross-multiplication, and recognize direct and inverse variation with practical applications (scaling recipes, maps). Context: classroom (pen-and-paper); optional use of Jupyter for proportional scaling demonstrations."
+},
+{
+"n": 7,
+"title": "Exponents and Roots",
+"math": "Integer exponents, roots (square, cube)",
+"note": "Cover integer exponents (positive, zero, negative), basic fractional exponents, square and cube roots, and exponent rules (product, power, quotient). Include simplifying examples and applications. Context: classroom (pen-and-paper); optional practice with a scientific calculator or Python (math module)."
+},
+{
+"n": 8,
+"title": "Number Theory Basics",
+"math": "Prime and composite numbers, factors, GCD, LCM, divisibility",
+"note": "Introduce primes and composites, prime factorization, divisibility rules, greatest common divisor (GCD) and least common multiple (LCM); show applications like simplifying fractions and solving integer problems. Context: classroom (pen-and-paper); optional use of Python for prime tests and GCD/LCM functions."
+},
+{
+"n": 9,
+"title": "Variables and Expressions",
+"math": "Algebraic variables, expression evaluation",
+"note": "Introduce variables as symbols for numbers, teach how to form, evaluate, and simplify algebraic expressions, including combining like terms with multiple worked examples. Context: classroom (pen-and-paper); optional use of Jupyter for symbolic checks (SymPy) or numeric substitution."
+},
+{
+"n": 10,
+"title": "Linear Equations and Inequalities",
+"math": "One-step equations, inequalities, number line solutions",
+"note": "Teach solving one-step and simple multi-step linear equations and inequalities, using inverse operations and representing solutions on the number line; include checking solutions with substitution. Context: classroom (pen-and-paper); optional verification using Python."
+},
+{
+"n": 11,
+"title": "Introduction to Functions",
+"math": "Input-output relationships, function tables, basic notation",
+"note": "Define functions as input-output rules, show function notation (f(x)), create and interpret function tables, and compute outputs for given inputs with examples. Context: classroom (pen-and-paper); optional practice in a Jupyter notebook to plot input-output pairs."
+},
+{
+"n": 12,
+"title": "Coordinate Plane and Graphing",
+"math": "Cartesian plane, plotting points, graphing lines",
+"note": "Teach the Cartesian coordinate plane, plotting ordered pairs, identifying quadrants, and graphing linear equations using tables or slope-intercept form with practice problems. Context: classroom (graph paper and whiteboard); optional use of graphing calculators or Python (matplotlib)."
+},
+{
+"n": 13,
+"title": "Geometric Fundamentals",
+"math": "Points, lines, planes, angles",
+"note": "Introduce basic geometric elements: points, lines, line segments, rays, planes, and angles; teach how to draw and measure angles and identify basic relationships (adjacent, vertical, supplementary). Context: classroom (ruler and protractor); optional interactive geometry software or Jupyter visualizations."
+},
+{
+"n": 14,
+"title": "Two-Dimensional Shapes",
+"math": "Polygons (triangles, quadrilaterals, etc.), circles",
+"note": "Teach properties of common 2D shapes (triangles, quadrilaterals, polygons) and parts of a circle (radius, diameter, circumference); include perimeter and area formulas with worked examples. Context: classroom (pen-and-paper and drawing tools); optional use of geometry apps or Python for area calculations."
+},
+{
+"n": 15,
+"title": "Three-Dimensional Solids",
+"math": "Prisms, pyramids, cylinders, cones, spheres",
+"note": "Introduce 3D solids, their faces/edges/vertices, and practice computing surface area and volume for prisms, pyramids, cylinders, cones, and spheres with real-world examples. Context: classroom (physical models, pen-and-paper); optional use of Python or CAD viewers for visualization."
+},
+{
+"n": 16,
+"title": "Measurement of Shapes",
+"math": "Perimeter, area, volume, surface area",
+"note": "Teach how to compute perimeter, area, volume, and surface area for a variety of shapes, emphasizing consistent units and conversions with practical measurement problems. Context: classroom (ruler, measuring tools); optional spreadsheet or Python for batch calculations."
+},
+{
+"n": 17,
+"title": "Symmetry and Transformations",
+"math": "Reflection, rotation, translation, symmetry lines",
+"note": "Explain line and rotational symmetry, and demonstrate geometric transformations (translation, rotation, reflection, dilation) on shapes, using grid paper or software to show effects. Context: classroom (graph paper and mirror/drawing tools); optional use of interactive geometry software."
+},
+{
+"n": 18,
+"title": "Units of Measurement",
+"math": "Length, area, volume units, conversions",
+"note": "Cover units for length, area, and volume and teach conversion between units (metric and imperial), stressing dimensional consistency in calculations. Context: classroom (pen-and-paper); optional use of calculators or Python for conversions."
+},
+{
+"n": 19,
+"title": "Linear Algebra Fundamentals",
+"math": "Vectors, matrices, linear systems, vector spaces",
+"note": "Introduce vectors and operations (addition, scalar multiplication), matrices and matrix operations, solving systems of linear equations via row reduction, and the idea of vector spaces and linear transformations. Context: classroom with linear algebra notation; optional computational practice using Python (NumPy)."
+},
+{
+"n": 20,
+"title": "Abstract Algebra Concepts",
+"math": "Groups, rings, fields, algebraic structures",
+"note": "Present basic abstract algebra concepts: define groups, rings, and fields with examples, state closure/associativity/identity/inverse properties, and show simple examples like integers under addition. Context: classroom lecture and proofs; optional symbolic examples in a notebook."
+},
+{
+"n": 21,
+"title": "Boolean Algebra and Logic",
+"math": "Logical operations, truth tables, set operations",
+"note": "Teach Boolean operations (AND, OR, NOT), building and evaluating truth tables, and the relationship between Boolean logic and set operations, with applications to simple logic circuits. Context: classroom (pen-and-paper), optional simulation using digital logic tools or Python."
+},
+{
+"n": 22,
+"title": "Polynomials and Factoring",
+"math": "Polynomial operations, factoring, roots",
+"note": "Explain polynomial addition, subtraction, multiplication, factoring techniques (GCF, quadratics), and finding polynomial roots with worked examples and exercises. Context: classroom (pen-and-paper); optional symbolic practice in SymPy or similar tools."
+},
+{
+"n": 23,
+"title": "Rational and Radical Expressions",
+"math": "Algebraic fractions, simplifying roots, solving equations",
+"note": "Teach simplifying rational expressions, performing arithmetic with algebraic fractions, simplifying radicals, rationalizing denominators, and solving equations that include these expressions. Context: classroom (pen-and-paper); optional verification using a CAS or Python."
+},
+{
+"n": 24,
+"title": "Quadratic Equations and Parabolas",
+"math": "Quadratic formula, completing the square, graphing parabolas",
+"note": "Cover methods to solve quadratic equations (factoring, completing the square, quadratic formula), analyze discriminant cases, and graph parabolas showing vertex and axis of symmetry. Context: classroom (graph paper and algebraic work); optional graphing calculator or Python plotting."
+},
+{
+"n": 25,
+"title": "Functions and Transformations",
+"math": "Domain and range, inverse functions, composite functions",
+"note": "Teach domain and range concepts, how to find inverse functions and compose functions, and how transformations (shifts, stretches, reflections) change graphs of common function families. Context: classroom (pen-and-paper); optional plotting in Jupyter for visualization."
+},
+{
+"n": 26,
+"title": "Systems of Equations and Inequalities",
+"math": "Graphing, substitution, elimination methods",
+"note": "Teach methods to solve systems of linear equations (graphing, substitution, elimination), and solving and graphing systems of inequalities to find feasible regions. Context: classroom (graph paper); optional use of Python or linear algebra tools for larger systems."
+},
+{
+"n": 27,
+"title": "Sequences and Series",
+"math": "Arithmetic and geometric sequences, series sums, convergence",
+"note": "Introduce arithmetic and geometric sequences and their nth-term formulas, compute finite and infinite series sums, and discuss basic convergence examples like geometric series. Context: classroom (pen-and-paper); optional computation in Jupyter for examples."
+},
+{
+"n": 28,
+"title": "Euclidean Geometry Basics",
+"math": "Axioms, theorems, proofs, congruence, similarity",
+"note": "Teach Euclidean postulates, how to write simple geometric proofs, and concepts of congruence and similarity for triangles and polygons with stepwise proof examples. Context: classroom (whiteboard and compass/ruler); optional dynamic geometry software."
+},
+{
+"n": 29,
+"title": "Analytic Geometry",
+"math": "Coordinate geometry, lines, circles, conic sections",
+"note": "Bridge algebra and geometry by representing geometric objects on the coordinate plane; derive equations for lines, circles, and conic sections and graph them. Context: classroom (graph paper or software); optional plotting with Python (matplotlib)."
+},
+{
+"n": 30,
+"title": "Trigonometry I: Right Triangles",
+"math": "Trigonometric ratios, unit circle, basic identities",
+"note": "Teach sine, cosine, and tangent as ratios in right triangles (SOHCAHTOA), use the unit circle to extend to general angles, and prove basic identities like sin^2 + cos^2 = 1. Context: classroom (unit circle diagrams and calculator); optional plotting in Jupyter."
+},
+{
+"n": 31,
+"title": "Trigonometry II: Identities and Graphs",
+"math": "Graphs of trig functions, identities, laws of sines/cosines",
+"note": "Cover graphs of sine, cosine, and tangent (period, amplitude, shift), prove angle-sum/double-angle identities, and teach Law of Sines and Law of Cosines for oblique triangles. Context: classroom (graphs and worked problems); optional visualization with Python."
+},
+{
+"n": 32,
+"title": "Non-Euclidean Geometry",
+"math": "Hyperbolic and elliptic geometry, parallel postulate",
+"note": "Introduce the idea of geometries that alter Euclid's parallel postulate, give conceptual examples of hyperbolic and elliptic geometry, and compare angle sum behavior in triangles. Context: classroom lecture and diagrams; optional geometric visualization tools."
+},
+{
+"n": 33,
+"title": "Solid Geometry",
+"math": "Properties of 3D shapes, surface area, volume",
+"note": "Teach properties and formulas for volumes and surface areas of common solids (prisms, cylinders, cones, spheres) with applied examples for measurement. Context: classroom with physical models or drawings; optional 3D viewers or Python visualization."
+},
+{
+"n": 34,
+"title": "Transformational Geometry",
+"math": "Isometries, dilations, reflections, rotations",
+"note": "Demonstrate plane transformations—translations, rotations, reflections, and dilations—showing how coordinates change and how these preserve or alter shape properties. Context: classroom (graph paper and geometric tools); optional interactive geometry software."
+},
+{
+"n": 35,
+"title": "Pre-Calculus Review",
+"math": "Functions, graphing, trigonometry, analytic geometry",
+"note": "Review key pre-calculus concepts: function types and graphs, trigonometric basics, and analytic geometry tools to prepare for calculus topics. Context: classroom review session; optional Jupyter notebooks for practice plotting."
+},
+{
+"n": 36,
+"title": "Limits and Continuity",
+"math": "Limits of functions, continuity, indeterminate forms",
+"note": "Introduce limits formally and via intuition, evaluate limits algebraically and graphically, define continuity using limits, and discuss indeterminate forms with simple resolution techniques. Context: classroom (lecture and problem-solving); optional calculation checks in Python or symbolic tools."
+},
+{
+"n": 37,
+"title": "Differentiation and Derivatives",
+"math": "Derivative rules, implicit differentiation, applications",
+"note": "Teach derivative definition as instantaneous rate of change, apply power/product/quotient/chain rules, perform implicit differentiation, and compute derivatives of common functions with examples. Context: classroom (pen-and-paper calculus); optional symbolic differentiation in Jupyter (SymPy)."
+},
+{
+"n": 38,
+"title": "Applications of Derivatives",
+"math": "Optimization, related rates, curve analysis",
+"note": "Apply derivatives to optimization problems (maximize/minimize quantities), related rates (linked changing quantities), and curve analysis (critical points, concavity, inflection) with step-by-step problem solving. Context: classroom problem sessions; optional numeric checks in Python."
+},
+{
+"n": 39,
+"title": "Integration and Antiderivatives",
+"math": "Definite and indefinite integrals, Fundamental Theorem of Calculus",
+"note": "Teach antiderivatives, indefinite integrals, definite integrals as areas, and the Fundamental Theorem of Calculus linking differentiation and integration with practical examples. Context: classroom (integral computation by hand); optional numerical integration in Python."
+},
+{
+"n": 40,
+"title": "Techniques of Integration",
+"math": "Integration by substitution, parts, partial fractions",
+"note": "Introduce common integration methods—substitution, integration by parts, partial fraction decomposition, and trig-substitution—through representative examples and practice. Context: classroom (worked examples on board); optional symbolic integration with SymPy for verification."
+},
+{
+"n": 41,
+"title": "Applications of Integration",
+"math": "Area between curves, volumes, arc length",
+"note": "Use definite integrals to compute areas between curves, volumes of solids of revolution (washers/shells), and arc length/surface area problems with applied examples. Context: classroom (graphical setup of integrals); optional plotting and numeric integration in Python."
+},
+{
+"n": 42,
+"title": "Multivariable Calculus",
+"math": "Partial derivatives, multiple integrals, vector calculus",
+"note": "Introduce functions of several variables, compute partial derivatives, evaluate double and triple integrals for volume/area, and present basic vector calculus concepts like gradient, divergence, and curl. Context: classroom (multivariable notation and calculus); optional computations using Python (NumPy) or symbolic tools."
+},
+{
+"n": 43,
+"title": "Differential Equations Introduction",
+"math": "Ordinary differential equations, initial value problems",
+"note": "Introduce ordinary differential equations (ODEs), solve simple first-order separable ODEs and basic linear second-order ODEs with constant coefficients, and set up initial value problems with interpretation. Context: classroom (analytic solution techniques); optional numerical solving using Python (SciPy)."
+},
+{
+"n": 44,
+"title": "Set Theory Basics",
+"math": "Sets, subsets, union, intersection, complements",
+"note": "Define sets and basic operations (union, intersection, complement), interpret Venn diagrams, and use set notation and examples to solve classification problems. Context: classroom (pen-and-paper and diagrams); optional use of Python sets for demonstrations."
+},
+{
+"n": 45,
+"title": "Logic and Proof",
+"math": "Propositional logic, truth tables, predicates",
+"note": "Teach propositional logic with truth tables, predicate logic with quantifiers, and basic proof methods (direct proof, contradiction) with sample proofs to build formal reasoning skills. Context: classroom (lecture and proof-writing); optional checking using logic tools or Python demonstrations."
+},
+{
+"n": 46,
+"title": "Counting and Combinatorics",
+"math": "Permutations, combinations, binomial theorem",
+"note": "Introduce counting principles, compute permutations and combinations, and apply the binomial theorem to expand (a+b)^n; include combinatorial examples and problem solving. Context: classroom (pen-and-paper); optional numeric demonstrations in Jupyter."
+},
+{
+"n": 47,
+"title": "Graph Theory",
+"math": "Graphs, trees, paths, cycles, connectivity",
+"note": "Define graphs (vertices and edges), study paths, cycles, trees, and connectivity; include basic algorithms like breadth-first search conceptually and applications in networks. Context: classroom diagrams and examples; optional implementations in Python (networkx)."
+},
+{
+"n": 48,
+"title": "Number Theory Applications",
+"math": "Modular arithmetic, Diophantine equations, cryptography",
+"note": "Teach modular arithmetic (remainders, congruences), methods for simple Diophantine equations (integer solutions), and basic cryptography concepts that use primes and modular exponentiation. Context: classroom (number theory exercises); optional Python experiments for modular operations."
+},
+{
+"n": 49,
+"title": "Probability Foundations",
+"math": "Sample spaces, events, conditional probability, Bayes",
+"note": "Introduce sample spaces and events, define probability axioms, teach conditional probability and independence, and present Bayes' Theorem with practical examples like medical testing or games. Context: classroom examples and calculations; optional simulation in Python to estimate probabilities."
+},
+{
+"n": 50,
+"title": "Random Variables and Distributions",
+"math": "Discrete and continuous distributions, expected value, variance",
+"note": "Define random variables (discrete and continuous), teach common distributions (binomial, Poisson, normal), and compute expected value and variance with examples. Context: classroom lecture with tables and graphs; optional computation and plotting in Python."
+},
+{
+"n": 51,
+"title": "Descriptive Statistics",
+"math": "Mean, median, mode, variance, data visualization",
+"note": "Teach measures of central tendency and dispersion (mean, median, mode, variance, standard deviation) and how to visualize data using histograms and box plots to describe distributions. Context: classroom (pen-and-paper and charts); optional use of spreadsheets or Python (pandas, matplotlib)."
+},
+{
+"n": 52,
+"title": "Inferential Statistics",
+"math": "Sampling distributions, confidence intervals, hypothesis testing",
+"note": "Introduce sampling distributions, construct confidence intervals for means/proportions, and perform basic hypothesis tests (z-test, t-test, chi-square) with interpretation of p-values and significance. Context: classroom examples and stepwise calculations; optional statistical computing in Python (SciPy, statsmodels)."
+},
+{
+"n": 53,
+"title": "Regression and Correlation",
+"math": "Linear regression, multiple regression, correlation coefficient",
+"note": "Teach simple linear regression (least squares), interpret slope/intercept, compute and interpret correlation coefficients, and introduce multiple regression conceptually for multiple predictors. Context: classroom with worked examples; optional fitting and plotting in Python (scikit-learn or statsmodels)."
+},
+{
+"n": 54,
+"title": "Stochastic Processes",
+"math": "Markov chains, random walks, Poisson processes",
+"note": "Introduce basic stochastic processes: Markov chains (state transitions), random walks (sequences of random steps), and Poisson processes (random events over time) with simple examples and interpretations. Context: classroom conceptual explanations and simple calculations; optional simulation in Python."
+},
+{
+"n": 55,
+"title": "Set Theory Essentials",
+"math": "Sets, power sets, unions, intersections",
+"note": "Present foundational set theory topics including power sets and standard set operations, with examples and notation practice to build rigorous set thinking. Context: classroom (pen-and-paper); optional demonstrations in Python."
+},
+{
+"n": 56,
+"title": "Propositional and Predicate Logic",
+"math": "Logical operators, quantifiers, truth tables",
+"note": "Teach propositional logic operators, build truth tables, introduce predicate logic with quantifiers (forall, exists), and show how to formalize mathematical statements in this language. Context: classroom (proof-writing exercises); optional use of logic checkers or Python demonstrations."
+},
+{
+"n": 57,
+"title": "Axiomatic Systems and Gödel",
+"math": "Axioms, consistency, incompleteness",
+"note": "Explain what axiomatic systems are, define consistency and completeness, and present the conceptual meaning of Gödel's incompleteness theorems and their implications for formal systems. Context: classroom lecture with conceptual discussion; optional reading materials for deeper study."
+},
+{
+"n": 58,
+"title": "Proof Theory and Models",
+"math": "Proof systems, models, soundness",
+"note": "Introduce proof theory (formal proof systems) and model theory (structures satisfying sentences), discuss soundness and completeness at a high level, and give simple illustrative examples. Context: classroom (theory and examples); optional formal proof assistants for interested students."
+},
+{
+"n": 59,
+"title": "Cardinality of Sets",
+"math": "Countable vs uncountable sets, continuum",
+"note": "Teach the concept of cardinality to compare sizes of infinite sets, explain countable versus uncountable sets, and present Cantor's diagonal argument to show the reals are uncountable. Context: classroom (pen-and-paper proofs and diagrams); optional visual aids or readings."
+},
+{
+"n": 60,
+"title": "Topological Spaces",
+"math": "Open sets, basis, continuity",
+"note": "Define topological spaces and bases, explain open sets and the topological definition of continuity (inverse images of open sets), and present simple examples like the real line and discrete topology. Context: classroom (abstract definitions and examples); optional topology visualization tools."
+},
+{
+"n": 61,
+"title": "Compactness and Connectedness",
+"math": "Compact sets, connected spaces, Heine-Borel",
+"note": "Teach compactness (every open cover has a finite subcover), connectedness (cannot be split into two disjoint open sets), and state the Heine-Borel theorem for real intervals with examples. Context: classroom (proof sketches and examples); optional further readings."
+},
+{
+"n": 62,
+"title": "Homotopy and Fundamental Group",
+"math": "Path-connectedness, loops, fundamental group",
+"note": "Introduce homotopy of paths, path-connectedness, and the fundamental group as the set of loop classes under homotopy; give the circle as the primary example and compute its fundamental group. Context: classroom (diagrams and algebraic argument); optional computational topology demos."
+},
+{
+"n": 63,
+"title": "Homology Theory",
+"math": "Simplicial complexes, cycles, boundaries",
+"note": "Give an overview of homology by constructing simplicial complexes, defining chains/cycles/boundaries, and explaining homology groups as measures of holes in spaces at a conceptual level. Context: classroom (conceptual overview and examples); optional software for algebraic topology."
+},
+{
+"n": 64,
+"title": "Applications of Topology",
+"math": "Möbius strip, Euler characteristic, networking",
+"note": "Present topological examples (Möbius strip, torus), compute Euler characteristic for polyhedra, and explain applications of topology in networks and robotics path planning. Context: classroom demonstrations and small projects; optional use of visualization tools."
+},
+{
+"n": 65,
+"title": "Numerical Methods",
+"math": "Root finding, interpolation, numerical integration",
+"note": "Teach numerical algorithms like bisection and Newton's method for root finding, interpolation methods (polynomial and spline), and numerical integration (trapezoid and Simpson rules); discuss error and convergence. Context: classroom (algorithm explanation) with mandatory computational practice in Python (NumPy/SciPy)."
+},
+{
+"n": 66,
+"title": "Optimization Techniques",
+"math": "Linear programming, Lagrange multipliers, convex optimization",
+"note": "Introduce linear programming and graphical/simplex intuition, Lagrange multipliers for constrained optimization, and basic ideas of convex optimization with practical examples. Context: classroom (theory and worked examples); optional solver practice in Python (cvxpy or SciPy)."
+},
+{
+"n": 67,
+"title": "Mathematical Modeling",
+"math": "Differential equations, simulations, system modeling",
+"note": "Teach the steps of mathematical modeling: define variables, derive equations (often differential), and validate models with data; include simple simulation examples (population growth, mixing problems). Context: classroom (model derivation) with simulation practice in Python."
+},
+{
+"n": 68,
+"title": "Game Theory",
+"math": "Strategic games, Nash equilibrium, payoff matrices",
+"note": "Introduce strategic games using payoff matrices, explain dominant strategies and Nash equilibrium with examples (Prisoner's Dilemma), and solve small games for equilibria. Context: classroom (concepts and examples); optional matrix computation in Python."
+},
+{
+"n": 69,
+"title": "Financial Mathematics",
+"math": "Interest rates, annuities, present/future value, risk",
+"note": "Teach simple and compound interest, annuity formulas for regular payments, present and future value computations, and basic measures of financial risk with examples like loan schedules. Context: classroom (financial examples) with optional spreadsheet or Python calculations."
+},
+{
+"n": 70,
+"title": "Cryptography",
+"math": "Modular arithmetic, encryption algorithms, public-key cryptography",
+"note": "Explain modular arithmetic fundamentals, show how it underpins basic encryption, and present a conceptual overview of public-key cryptography (use of large primes and modular exponentiation). Context: classroom (conceptual and worked number examples); optional hands-on experiments in Python."
+},
+{
+"n": 71,
+"title": "Computational Mathematics",
+"math": "Algorithms, complexity, numerical simulations",
+"note": "Cover algorithmic thinking and complexity (Big O notation), numerical algorithms for linear systems and eigenproblems, and running simulations to approximate solutions; emphasize computational considerations. Context: classroom (theory) with required programming exercises in Python."
+},
+{
+"n": 72,
+"title": "Data Science and Machine Learning",
+"math": "Statistical learning, neural networks, big data analysis",
+"note": "Introduce data processing, supervised and unsupervised learning basics, model training/validation, and simple neural network concepts; include hands-on examples of regression and classification using datasets. Context: practical labs in Python (Jupyter Notebook) using NumPy, pandas, scikit-learn, and beginner-friendly neural libraries (e.g., TensorFlow/Keras for demos)."
+},
+{
+"n": 73,
+"title": "Quantum Computing",
+"math": "Quantum bits, superposition, quantum algorithms",
+"note": "Provide a conceptual introduction to qubits, superposition, entanglement, and quantum gates; explain how linear algebra represents quantum states and outline famous quantum algorithms at a high level. Context: classroom lecture plus optional simulations in Qiskit or other quantum SDKs for hands-on experiments."
+},
+{
+"n": 74,
+"title": "Mathematical Biology",
+"math": "Population models, epidemiology, biological data analysis",
+"note": "Teach constructing differential-equation models for populations (exponential/logistic growth) and disease spread (SIR models), fit simple models to data, and interpret results for biology applications. Context: classroom model derivation and simulation; optional use of Python for simulation and data fitting."
+},
+{
+"n": 75,
+"title": "Network Science",
+"math": "Graph theory, network models, social networks",
+"note": "Introduce mathematical models of complex networks, analyze degree distributions, clustering, and connectivity, and study models like random and scale-free networks with real-world examples. Context: classroom (concepts and examples) with optional network analysis using Python (networkx)."
+},
+{
+"n": 76,
+"title": "Chaos Theory and Fractals",
+"math": "Nonlinear dynamics, chaotic systems, fractal geometry",
+"note": "Explain nonlinear dynamical systems and sensitive dependence on initial conditions (chaos), introduce simple chaotic maps (like the logistic map), and explore fractal geometry and self-similarity with visual examples. Context: classroom (concepts and simple proofs) with optional visualization in Python for fractals and dynamics."
+},
+{
+"n": 77,
+"title": "Category Theory Introduction",
+"math": "Objects, morphisms, functors, natural transformations",
+"note": "Give a concise introduction to categories, morphisms (arrows), functors between categories, and natural transformations as a unifying abstract language across mathematics, with simple examples. Context: classroom (theoretical exposition) and recommended optional readings; advanced students may use category theory examples in Python or Haskell for demonstration."
+}
+]
