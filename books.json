@@ -28,12 +28,20 @@
           "file": "./books/discrete_mathematics.json"
         },
         {
+          "name": "Math Tour",
+          "file": "./books/math.json"
+        },
+        {
           "name": "Microprocessor Tour",
           "file": "./books/microprocessor.json"
         },
         {
           "name": "Operating System Tour",
           "file": "./books/operating_system.json"
+        },
+        {
+          "name": "Physics Tour",
+          "file": "./books/physics.json"
         },
         {
           "name": "Software Engineering Tour",
@@ -207,12 +215,12 @@
           "file": "./books/chef.json"
         },
         {
-          "name": "Cmake Tour",
-          "file": "./books/cmake.json"
-        },
-        {
           "name": "Cloud Computing Tour",
           "file": "./books/cloud_computing.json"
+        },
+        {
+          "name": "Cmake Tour",
+          "file": "./books/cmake.json"
         },
         {
           "name": "Docker Tour",
@@ -265,6 +273,47 @@
         {
           "name": "Vim Tour",
           "file": "./books/vim.json"
+        }
+      ]
+    },
+    {
+      "name": "Graphics Programming",
+      "children": [
+        {
+          "name": "Flutter Graphics Tour",
+          "file": "./books/flutter.json"
+        },
+        {
+          "name": "Opengl Tour",
+          "file": "./books/opengl.json"
+        },
+        {
+          "name": "Three.js Tour",
+          "file": "./books/threejs.json"
+        },
+        {
+          "name": "Vulkan Tour",
+          "file": "./books/vulkan.json"
+        },
+        {
+          "name": "WGPU (Native) Tour",
+          "file": "./books/wgpu_native.json"
+        },
+        {
+          "name": "WGPU (Rust) Tour",
+          "file": "./books/wgpu_rust.json"
+        },
+        {
+          "name": "WebGL Tour",
+          "file": "./books/webgl.json"
+        },
+        {
+          "name": "WebGPU (C/C++) Tour",
+          "file": "./books/webgpu_cpp.json"
+        },
+        {
+          "name": "WebGPU (JavaScript) Tour",
+          "file": "./books/webgpu_javascript.json"
         }
       ]
     },
@@ -347,18 +396,6 @@
         {
           "name": "Excel Tour",
           "file": "./books/excel.json"
-        },
-        {
-          "name": "Microservice Architecture Tour",
-          "file": "./books/microservice_architecture.json"
-        },
-        {
-          "name": "Opengl Tour",
-          "file": "./books/opengl.json"
-        },
-        {
-          "name": "Seo Tour",
-          "file": "./books/seo.json"
         }
       ]
     },
@@ -377,6 +414,22 @@
               "file": "./books/x86asm.json"
             }
           ]
+        },
+        {
+          "name": "CUDA C/C++",
+          "file": "./books/cuda_course_outline_micro.json"
+        },
+        {
+          "name": "DSA Tour",
+          "file": "./books/dsa.json"
+        },
+        {
+          "name": "Embedded Systems Tour",
+          "file": "./books/embedded_systems.json"
+        },
+        {
+          "name": "Introduction to Programming Tour",
+          "file": "./books/intro_to_programming.json"
         },
         {
           "name": "Languages",
@@ -460,18 +513,6 @@
           ]
         },
         {
-          "name": "DSA Tour",
-          "file": "./books/dsa.json"
-        },
-        {
-          "name": "Embedded Systems Tour",
-          "file": "./books/embedded_systems.json"
-        },
-        {
-          "name": "Introduction to Programming Tour",
-          "file": "./books/intro_to_programming.json"
-        },
-        {
           "name": "Pillow Tour",
           "file": "./books/pillow.json"
         },
@@ -509,6 +550,10 @@
           "file": "./books/jmeter.json"
         },
         {
+          "name": "Microservice Architecture Tour",
+          "file": "./books/microservice_architecture.json"
+        },
+        {
           "name": "Postman Tour",
           "file": "./books/postman.json"
         },
@@ -534,6 +579,14 @@
       "name": "Web Development",
       "children": [
         {
+          "name": "Ajax Tour",
+          "file": "./books/ajax.json"
+        },
+        {
+          "name": "Appml Tour",
+          "file": "./books/appml.json"
+        },
+        {
           "name": "Backend",
           "children": [
             {
@@ -557,6 +610,10 @@
               "file": "./books/nodejs.json"
             }
           ]
+        },
+        {
+          "name": "Css Tour",
+          "file": "./books/css.json"
         },
         {
           "name": "Frontend",
@@ -600,24 +657,16 @@
           ]
         },
         {
-          "name": "Ajax Tour",
-          "file": "./books/ajax.json"
-        },
-        {
-          "name": "Appml Tour",
-          "file": "./books/appml.json"
-        },
-        {
-          "name": "Css Tour",
-          "file": "./books/css.json"
-        },
-        {
           "name": "Html Tour",
           "file": "./books/html.json"
         },
         {
           "name": "Json Tour",
           "file": "./books/json.json"
+        },
+        {
+          "name": "Seo Tour",
+          "file": "./books/seo.json"
         },
         {
           "name": "Web Dev Tour",
@@ -630,43 +679,6 @@
         {
           "name": "Xml Tour",
           "file": "./books/xml.json"
-        }
-      ]
-    },
-    {
-      "name": "Graphics Programming",
-      "children": [
-        {
-          "name": "WebGL Tour",
-          "file": "./books/webgl.json"
-        },
-        {
-          "name": "Three.js Tour",
-          "file": "./books/threejs.json"
-        },
-        {
-          "name": "Flutter Graphics Tour",
-          "file": "./books/flutter.json"
-        },
-        {
-          "name": "Vulkan Tour",
-          "file": "./books/vulkan.json"
-        },
-        {
-          "name": "WebGPU (JavaScript) Tour",
-          "file": "./books/webgpu_javascript.json"
-        },
-        {
-          "name": "WGPU (Rust) Tour",
-          "file": "./books/wgpu_rust.json"
-        },
-        {
-          "name": "WebGPU (C/C++) Tour",
-          "file": "./books/webgpu_cpp.json"
-        },
-        {
-          "name": "WGPU (Native) Tour",
-          "file": "./books/wgpu_native.json"
         }
       ]
     }
