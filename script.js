@@ -54,6 +54,18 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function sortAlphabetically(items) {
+    // Sort items by name
+    items.sort((a, b) => a.name.localeCompare(b.name));
+  
+    // Recursively sort children
+    items.forEach(item => {
+      if (item.children) {
+        sortAlphabetically(item.children);
+      }
+    });
+  }
+
   // --- Data Access Helpers ---
   const getBookFilePath = (book) => book.file || book.path || book.filename || "";
   const getTopicsFromBook = (bookData) => (Array.isArray(bookData) ? bookData : bookData.topics || bookData.items || []);
@@ -414,6 +426,7 @@ window.addEventListener("DOMContentLoaded", () => {
       
       const idx = await fetchJsonSafe(BOOKS_INDEX_URL);
       state.booksIndex = Array.isArray(idx) ? idx : idx.books || idx.items || [];
+      sortAlphabetically(state.booksIndex);
       
       if (state.booksIndex.length === 0) {
         booksArea.innerHTML = '<p class="no-results">No books found.</p>';
