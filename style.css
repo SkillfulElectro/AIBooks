@@ -234,19 +234,35 @@ body {
 
 .provider-selector {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0;
 }
 
 .provider-btn {
-  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* 12px */
+  padding: 0.5rem 1rem;
   border-radius: 9999px;
   border: 1px solid var(--card-border-color);
   background-color: transparent;
   color: var(--text-color);
   font-size: 1rem;
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.provider-favicon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--card-bg-color);
+    /* Hide broken image alt text */
+    font-size: 0;
+    color: transparent;
 }
 
 .provider-btn.active {
@@ -444,7 +460,6 @@ body {
   }
 
   .provider-selector {
-    flex-direction: column;
     gap: 0.5rem;
   }
 }
