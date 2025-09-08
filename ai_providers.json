@@ -13,5 +13,15 @@
     "name": "Copilot",
     "url": "https://www.bing.com/chat",
     "search_template": "https://www.bing.com/search?q={query}&showconv=1"
+  },
+  {
+    "name": "Phind",
+    "url": "https://www.phind.com/",
+    "search_template": "https://www.phind.com/search?q={query}"
+  },
+  {
+    "name": "You.com",
+    "url": "https://you.com/",
+    "search_template": "https://you.com/search?q={query}"
   }
 ]
