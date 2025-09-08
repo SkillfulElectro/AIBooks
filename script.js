@@ -434,7 +434,7 @@ window.addEventListener("DOMContentLoaded", () => {
         btn.title = `Use ${provider.name}`;
 
         const img = document.createElement("img");
-        img.src = `https://www.google.com/s2/favicons?sz=64&domain_url=${provider.url}`;
+        img.src = `https://www.google.com/s2/favicons?sz=24&domain_url=${provider.url}`;
         img.alt = `${provider.name} logo`;
         img.className = "provider-favicon";
 
