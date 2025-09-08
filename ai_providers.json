@@ -23,5 +23,10 @@
     "name": "You.com",
     "url": "https://you.com/",
     "search_template": "https://you.com/search?q={query}"
+  },
+  {
+    "name": "Claude AI",
+    "url": "https://claude.ai/",
+    "search_template": "https://claude.ai/new?q={query}"
   }
 ]
