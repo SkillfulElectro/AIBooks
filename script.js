@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // --- State ---
   const state = {
     booksIndex: [],
+    aiProviders: [],
     currentBook: null,
     currentPath: [],
     pathBeforeSearch: [],
@@ -26,6 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // --- Constants ---
   const BOOKS_INDEX_URL = "./books.json";
+  const AI_PROVIDERS_URL = "./ai_providers.json";
 
   // --- Utility Functions ---
   const showLoader = () => loader.classList.remove("hidden");
@@ -91,7 +93,7 @@ window.addEventListener("DOMContentLoaded", () => {
     return selector ? selector.dataset.provider : "chatgpt";
   }
 
-  function makeQueryUrl(topic, provider, bookName) {
+  function makeQueryUrl(topic, providerName, bookName) {
     const title = topic.title || "";
     const note = topic.note || "";
     const query =
@@ -130,15 +132,15 @@ window.addEventListener("DOMContentLoaded", () => {
    - When you use web sources, include brief citations (title, source, date) and one sentence explaining why the source is trustworthy.
    - Keep each lesson chunk short and focused .`;
     const q = encodeURIComponent(query);
-    switch (provider) {
-      case "perplexity":
-        return `https://www.perplexity.ai/search?q=${q}`;
-      case "copilot":
-        return `https://www.bing.com/search?q=${q}&showconv=1`;
-      case "chatgpt":
-      default:
-        return `https://chatgpt.com/?q=${q}&ref=ext`;
+    
+    const provider = state.aiProviders.find(p => p.name.toLowerCase() === providerName);
+
+    if (provider && provider.search_template) {
+        return provider.search_template.replace('{query}', q);
     }
+
+    // Fallback to the default if provider not found or template is missing
+    return `https://chatgpt.com/?q=${q}&ref=ext`;
   }
   
   // --- Rendering ---
@@ -418,16 +420,63 @@ window.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  function renderAiProviders() {
+    const providerSelector = document.getElementById("search-provider-selector");
+    if (!providerSelector) return;
+
+    providerSelector.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+
+    state.aiProviders.forEach(provider => {
+        const btn = document.createElement("button");
+        btn.className = "provider-btn";
+        btn.dataset.provider = provider.name.toLowerCase();
+        btn.title = `Use ${provider.name}`;
+
+        const img = document.createElement("img");
+        img.src = `https://www.google.com/s2/favicons?sz=64&domain_url=${provider.url}`;
+        img.alt = `${provider.name} logo`;
+        img.className = "provider-favicon";
+
+        const nameSpan = document.createElement("span");
+        nameSpan.textContent = provider.name;
+
+        btn.appendChild(img);
+        btn.appendChild(nameSpan);
+
+        btn.addEventListener("click", () => {
+            document.querySelectorAll(".provider-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            if (state.currentBook) {
+                renderTopics(searchTopicsInput.value);
+            }
+        });
+        fragment.appendChild(btn);
+    });
+
+    providerSelector.appendChild(fragment);
+    if (providerSelector.firstChild) {
+        providerSelector.firstChild.classList.add("active");
+    }
+  }
+
   // --- Initialization ---
   async function init() {
     try {
       clearError();
       showLoader();
       
-      const idx = await fetchJsonSafe(BOOKS_INDEX_URL);
+      const [idx, providers] = await Promise.all([
+          fetchJsonSafe(BOOKS_INDEX_URL),
+          fetchJsonSafe(AI_PROVIDERS_URL)
+      ]);
+
       state.booksIndex = Array.isArray(idx) ? idx : idx.books || idx.items || [];
       sortAlphabetically(state.booksIndex);
       
+      state.aiProviders = providers;
+      renderAiProviders();
+
       if (state.booksIndex.length === 0) {
         booksArea.innerHTML = '<p class="no-results">No books found.</p>';
         return;
@@ -469,17 +518,6 @@ window.addEventListener("DOMContentLoaded", () => {
             renderBookButtons();
         }
       });
-
-      document.querySelectorAll(".provider-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document.querySelectorAll(".provider-btn").forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-          if (state.currentBook) {
-            renderTopics(searchTopicsInput.value);
-          }
-        });
-      });
-      document.querySelector('.provider-btn[data-provider="chatgpt"]').classList.add('active');
 
       window.addEventListener("scroll", handleScroll);
       scrollTopBtn.addEventListener("click", scrollToTop);
