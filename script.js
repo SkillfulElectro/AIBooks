@@ -379,12 +379,14 @@ window.addEventListener("DOMContentLoaded", () => {
       
       // --- Event Listeners for Topic Card ---
       const checkbox = card.querySelector('input[type="checkbox"]');
-      checkbox.addEventListener("change", (e) => {
-        const p = loadProgress(bookName);
-        p[topicKey] = e.target.checked;
-        saveProgress(p, bookName);
-        card.classList.toggle("completed", e.target.checked);
-      });
+      if (checkbox) {
+        checkbox.addEventListener("change", (e) => {
+          const p = loadProgress(bookName);
+          p[topicKey] = e.target.checked;
+          saveProgress(p, bookName);
+          card.classList.toggle("completed", e.target.checked);
+        });
+      }
 
       const openAndCheck = async (topic, providerName) => {
           const url = await makeQueryUrl(topic, providerName, bookName);
@@ -393,20 +395,25 @@ window.addEventListener("DOMContentLoaded", () => {
           const p = loadProgress(bookName);
           p[topicKey] = true;
           saveProgress(p, bookName);
-          checkbox.checked = true;
+          if (checkbox) checkbox.checked = true;
           card.classList.add("completed");
           window.open(url, "_blank", "noopener");
       };
 
       const provider = getSelectedProvider();
-      card.querySelector('.search-btn').addEventListener('click', () => openAndCheck(t, provider));
+      const searchBtn = card.querySelector('.search-btn');
+      if (searchBtn) {
+        searchBtn.addEventListener('click', () => openAndCheck(t, provider));
+      }
       
       const copyBtn = card.querySelector('.copy-btn');
-      copyBtn.addEventListener('click', () => {
-        navigator.clipboard.writeText(t.note || "").then(() => {
-            showToast("Note copied to clipboard!");
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(t.note || "").then(() => {
+              showToast("Note copied to clipboard!");
+          });
         });
-      });
+      }
 
       fragment.appendChild(card);
     });
