@@ -475,6 +475,7 @@ window.addEventListener("DOMContentLoaded", () => {
       sortAlphabetically(state.booksIndex);
       
       state.aiProviders = providers;
+      state.aiProviders.sort((a, b) => a.name.localeCompare(b.name));
       renderAiProviders();
 
       if (state.booksIndex.length === 0) {
