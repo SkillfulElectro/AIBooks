@@ -23,6 +23,7 @@ window.addEventListener("DOMContentLoaded", () => {
     currentPath: [],
     pathBeforeSearch: [],
     isSearching: false,
+    promptTemplate: null,
   };
 
   // --- Constants ---
@@ -33,14 +34,39 @@ window.addEventListener("DOMContentLoaded", () => {
   const showLoader = () => loader.classList.remove("hidden");
   const hideLoader = () => loader.classList.add("hidden");
 
+  function showToast(message) {
+    const container = document.getElementById("toast-container");
+    if (!container) return;
+
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+    container.appendChild(toast);
+
+    setTimeout(() => {
+      toast.classList.add("show");
+    }, 10); // Delay to allow CSS transition
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+      toast.addEventListener("transitionend", () => {
+        toast.remove();
+      });
+    }, 3000);
+  }
+
   function showError(msg) {
-    jsError.style.display = "block";
-    jsError.textContent = msg;
+    jsError.style.display = "flex"; // Changed from 'block'
+    jsError.innerHTML = `
+        <span>${msg}</span>
+        <button id="closeErrorBtn">&times;</button>
+    `;
+    document.getElementById("closeErrorBtn").addEventListener("click", clearError);
   }
 
   function clearError() {
     jsError.style.display = "none";
-    jsError.textContent = "";
+    jsError.innerHTML = ""; // Changed from textContent
   }
 
   async function fetchJsonSafe(url) {
@@ -50,6 +76,19 @@ window.addEventListener("DOMContentLoaded", () => {
         throw new Error(`Failed to fetch ${url} — ${res.status} ${res.statusText}`);
       }
       return res.json();
+    } catch (error) {
+      console.error("Fetch error:", error);
+      throw error;
+    }
+  }
+
+  async function fetchTextSafe(url) {
+    try {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) {
+        throw new Error(`Failed to fetch ${url} — ${res.status} ${res.statusText}`);
+      }
+      return res.text();
     } catch (error) {
       console.error("Fetch error:", error);
       throw error;
@@ -93,44 +132,24 @@ window.addEventListener("DOMContentLoaded", () => {
     return selector ? selector.dataset.provider : "chatgpt";
   }
 
-  function makeQueryUrl(topic, providerName, bookName) {
+  async function makeQueryUrl(topic, providerName, bookName) {
     const title = topic.title || "";
     const note = topic.note || "";
-    const query =
-    `You are the teacher for '${title}' using the context of ${bookName}. Follow these rules exactly:
 
-1. Start-by-clarifying.
-   - If there is any confusion about the topic at the start of the session, ask the user one clear question to resolve it before continuing.
+    if (!state.promptTemplate) {
+        try {
+            state.promptTemplate = await fetchTextSafe('./prompt.txt');
+        } catch (error) {
+            showError("Could not load prompt template.");
+            return "#"; // Return a safe value
+        }
+    }
 
-2. Create a focused Table of Contents.
-   - Before teaching, produce a complete, detailed Table of Contents that only covers '${title}'.
-   - The TOC must list sections and sub-sections, show an estimated time per section, and state learning goals for each item.
+    const query = state.promptTemplate
+        .replace(/{title}/g, title)
+        .replace(/{bookName}/g, bookName)
+        .replace(/{note}/g, note);
 
-3. Teach with up-to-date information.
-   - For every TOC item, teach using the most current, reliable information available.
-   - Search the web to verify facts.
-   - Provide short citations or links for important claims and note the date of key references when appropriate.
-
-4. Use active learning and checks.
-   - After teaching each TOC item:
-     a) Give a short exercise, question, or mini-project that practices the exact skill just taught.
-     b) Require the user to demonstrate understanding (answer the question, show code, solve a problem, or explain in their own words).
-     c) Only move to the next item after the user shows sufficient understanding.
-     d) If the user is stuck, offer a brief targeted remediation and another check.
-
-5. Follow the note.
-   - Incorporate everything specified in this note into your teaching: "${note}".
-   - Ensure those points appear in the TOC and in the lesson content where relevant.
-
-6. Finish with recognition and next steps.
-   - After teaching all TOC items and confirming mastery, congratulate the user.
-   - Summarize what they learned in 3–6 bullet points.
-   - Offer recommended next steps or further reading/exercises.
-
-7. Be practical and traceable.
-   - Use examples, short code samples, diagrams (if helpful), and real-world applications.
-   - When you use web sources, include brief citations (title, source, date) and one sentence explaining why the source is trustworthy.
-   - Keep each lesson chunk short and focused .`;
     const q = encodeURIComponent(query);
     
     const provider = state.aiProviders.find(p => p.name.toLowerCase() === providerName);
@@ -347,8 +366,7 @@ window.addEventListener("DOMContentLoaded", () => {
         <p class="topic-note">${t.note || ""}</p>
         <div class="topic-buttons">
             <button class="search-btn"><i class="fas fa-search"></i> Search</button>
-            <button class="study-btn"><i class="fas fa-book-open"></i> Study</button>
-            <button class="copy-btn"><i class="far fa-clipboard"></i></button>
+            <button class="copy-btn"><i class="far fa-clipboard"></i> Copy Note</button>
         </div>
       `;
 
@@ -368,7 +386,10 @@ window.addEventListener("DOMContentLoaded", () => {
         card.classList.toggle("completed", e.target.checked);
       });
 
-      const openAndCheck = (url) => {
+      const openAndCheck = async (topic, providerName) => {
+          const url = await makeQueryUrl(topic, providerName, bookName);
+          if (url === "#") return;
+
           const p = loadProgress(bookName);
           p[topicKey] = true;
           saveProgress(p, bookName);
@@ -378,14 +399,12 @@ window.addEventListener("DOMContentLoaded", () => {
       };
 
       const provider = getSelectedProvider();
-      card.querySelector('.search-btn').addEventListener('click', () => openAndCheck(makeQueryUrl(t, provider, bookName)));
-      card.querySelector('.study-btn').addEventListener('click', () => openAndCheck(makeQueryUrl(t, provider, bookName)));
+      card.querySelector('.search-btn').addEventListener('click', () => openAndCheck(t, provider));
       
       const copyBtn = card.querySelector('.copy-btn');
       copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(t.note || "").then(() => {
-            copyBtn.innerHTML = `<i class="fas fa-check"></i>`;
-            setTimeout(() => { copyBtn.innerHTML = `<i class="far fa-clipboard"></i>`; }, 1500);
+            showToast("Note copied to clipboard!");
         });
       });
 
@@ -434,7 +453,13 @@ window.addEventListener("DOMContentLoaded", () => {
         btn.title = `Use ${provider.name}`;
 
         const img = document.createElement("img");
-        img.src = `https://www.google.com/s2/favicons?sz=24&domain_url=${provider.url}`;
+        try {
+            const domain = new URL(provider.url).hostname;
+            img.src = `https://icons.duckduckgo.com/ip3/${domain}.ico`;
+        } catch (e) {
+            // fallback to a default icon if URL is invalid
+            img.src = 'Logos/favicon.ico';
+        }
         img.alt = `${provider.name} logo`;
         img.className = "provider-favicon";
 
@@ -509,8 +534,10 @@ window.addEventListener("DOMContentLoaded", () => {
         bookSelectionView.style.display = "block";
         topicView.style.display = "none";
         state.currentBook = null;
-        state.currentPath = [];
-        renderBookButtons();
+        const activeButton = document.querySelector('.book-btn.active');
+        if (activeButton) {
+            activeButton.classList.remove('active');
+        }
       });
 
       categoryBackBtn.addEventListener('click', () => {
