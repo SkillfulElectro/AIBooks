@@ -35,8 +35,8 @@
     "search_template" : "https://grok.com/?q={query}"
   },
   {
-    "name": "Google AI Mode",
-    "url": "https://www.google.com/",
+    "name" : "Google AI Mode",
+    "url" : "https://www.google.com/",
     "search_template" : "https://www.google.com/search?q={query}&udm=50",
   }
 ]
