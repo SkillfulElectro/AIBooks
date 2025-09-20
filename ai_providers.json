@@ -37,6 +37,6 @@
   {
     "name" : "Google AI Mode",
     "url" : "https://www.google.com/",
-    "search_template" : "https://www.google.com/search?q={query}&udm=50",
+    "search_template" : "https://www.google.com/search?q={query}&udm=50"
   }
 ]
