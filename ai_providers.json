@@ -2,7 +2,7 @@
   {
     "name": "ChatGPT",
     "url": "https://chatgpt.com/",
-    "search_template": "https://chatgpt.com/?q={query}"
+    "search_template": "https://chatgpt.com/?q={query}&hints=search&ref=ext"
   },
   {
     "name": "Perplexity",
